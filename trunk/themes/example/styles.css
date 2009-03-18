@@ -1,0 +1,27 @@
+/*
+Theme Name: Example
+Theme URI: 
+Description: Example Constructor Theme, see it and build your own theme, PSD source is available
+Version: 0.1.2
+Author: Anton Shevchuk
+Author URI: http://anton.shevchuk.name/
+*/
+
+.post .footer .line {
+	height:64px;
+	background: url(line.png) 50% top no-repeat
+}
+* html .post .footer .line {
+    height:2px;
+    background: none
+}
+.navigation div a{
+    text-indent:-9999%;
+    display:block;
+    width:220px;
+    height:64px;
+    margin:0 20px
+}
+.navigation .alignleft a{background: url(prev.png) 0 0 no-repeat}
+.navigation .alignright a{background: url(next.png) 0 0 no-repeat}
+.navigation a:hover {background-position: 100% 100%}

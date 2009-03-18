@@ -1,0 +1,606 @@
+/*  
+Theme Name: Constructor
+Theme URI: http://anton.shevchuk.name/wordpress/theme-constructor-for-wordpress/
+Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.7+
+Version: 0.2.3
+Author: Anton Shevchuk
+Author URI: http://anton.shevchuk.name/
+Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
+
+	This theme was designed and built by Anton Shevchuk,
+	whose blog you will find at http://anton.shevchuk.name/
+
+*/
+html, body {
+    margin:0;
+    padding:0;
+}
+
+body {
+    min-width:1000px;
+    line-height:1.5em;
+}
+
+div, ul, ol, li, p, img {
+    margin:0;
+    padding:0;
+}
+
+li ul, li ol {
+    padding-left:20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+}
+
+h1 {font-size:2.0em }
+h2 {font-size:1.8em }
+h3 {font-size:1.6em; margin:12px 0}
+h4 {font-size:1.4em; margin:8px  0}
+h5 {font-size:1.2em; margin:6px  0}
+h6 {font-size:1.2em; margin:4px  0}
+
+pre {
+    font-size:1.0em;
+    line-height:1.4em;
+    white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+blockquote{ padding-left:6px }
+
+a {
+    outline:none;
+    text-decoration:none;
+}
+
+.aligncenter,
+div.aligncenter {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+.alignleft, .left { float: left }
+.alignright, .right { float: right }
+.clear { clear:both }
+
+/*Box*/
+.box {
+    border-style:solid;
+    border-width:1px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    -webkit-border-radius: 6px
+}
+/*/Box*/
+
+/*Layout*/
+#body {
+    width:1024px;
+    margin:0 auto
+}
+#wrapper {
+    float:left;
+    width:100%
+}
+#container {
+    margin:0;
+    min-height:600px
+}
+
+    .container-full {
+        width:1024px !important;
+    }
+/* Right Sidebar */
+#sidebar {
+    float:left;
+    width:220px; /* minus border and padding */
+}
+/* Left Sidebar */
+#extra {
+    float:left;
+    width:220px;
+}
+/*/Layout*/
+
+/*Theme*/
+/*Header*/
+#header {
+    height:140px;
+    position: relative
+}
+    #header .logo {
+        height:80px;
+    	text-transform: uppercase;
+        margin:0 auto
+    }
+        #header h1 {
+        	font: bold 600%/100% Verdana,Tahoma,sans-serif;
+        	letter-spacing: -6px;
+            margin:0;
+            padding:0;
+        }
+        #header h2 {
+            display:block;
+            font-size:1.2em;
+            margin:0;
+            padding:0 8px;
+        }
+
+#header-slideshow {
+    padding:2px;
+    margin: 0;
+}
+
+#header-links {
+    margin: 0 0 6px 0;
+    padding: 0 10px;
+    z-index:300;
+    overflow:visible !important;
+    -moz-border-radius: 0 0 6px 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	-khtml-border-bottom-left-radius: 6px;
+	-khtml-border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+    border-style:solid;
+    border-width:1px;
+    border-top:0;
+}
+    #header-links ul,
+    #header-links li{
+        padding:0;
+        margin:0;
+        list-style:none;
+    }
+    #header-links ul {
+        height:40px;
+        border-style:none none none dotted;
+        border-width:0 0 0 1px;
+    }
+    #header-links li {
+        position:relative;
+        float: left;
+        border-style:none dotted none none;
+        border-width:0 1px 0 0;
+    }
+
+    #header-links ul ul {
+        z-index:301;
+        float:none;
+        position:absolute;
+        display:none;
+        margin-left:-1px;
+        border-style:dotted none none none;
+        border-width:1px 0 0 0;
+    }
+    #header-links ul ul ul {
+        z-index:302;
+        float:left;
+        position:absolute;
+        top:20px;
+        left:116px;
+        display:none;
+        margin-left:-1px;
+    }
+    #header-links li li {
+        float:none;
+        height:40px;
+        width: auto;
+        border-style:none dotted dotted dotted;
+        border-width:0 1px 1px 1px;
+    }
+        * html #header-links li li {
+            width:120px
+        }
+
+    #header-links li a{
+        text-align:center;
+		white-space: nowrap;
+        display:block;
+        padding:0 16px;
+        font-weight:700;
+        width: 70px;
+        height:40px;
+        line-height:40px
+    }
+    /* 2-th level reset */
+    #header-links li ul li a {
+        text-align:left;
+        width: auto;
+        border:0
+    }
+
+    #rss a {
+        text-indent:16px;
+        background-image:url('images/feed-icon-16x16.png');
+        background-repeat:no-repeat;
+        background-position:8px 50%;
+    }
+
+    #size {
+        width:96px;
+        border-style:none dotted none dotted !important;
+        border-width:0 1px 0 1px !important;
+        float:right !important;
+    }
+        #size a {
+            width:24px !important;
+            padding:0 4px !important;
+            height:40px;
+            line-height:40px;
+            float:left;
+        }
+        #size a.big {
+            font-size:16px
+        }
+        #size a.normal {
+            line-height:44px;
+            font-size:12px
+        }
+        #size a.small {
+
+            line-height:48px;
+            font-size:8px
+        }
+/*/Header*/
+/*Sidebar*/
+.sidebar {
+    padding:0 0 6px 6px
+}
+    .sidebar h3{
+        padding:4px
+    }    
+    .sidebar a {
+        font-size:1.2em;
+        line-height:1.2em
+    }
+    .sidebar a:hover {
+        text-decoration:underline
+    }
+    .sidebar .tagcloud {
+        padding:0px 16px
+    }
+    .sidebar ul {
+        padding:0;
+        list-style:none
+    }
+    .sidebar ul li {
+        padding:4px 0 0 2px
+    }
+    .sidebar li ul {
+        padding-left:20px;
+    }
+    .sidebar li ul li {
+        padding:4px 0 2px 0
+    }
+    .sidebar li ul li:hover{
+        list-style-position:outside;
+        list-style-type:disc
+    }
+    .sidebar li ul li a:hover{
+        text-decoration:underline
+    }
+/*/Sidebar*/
+
+/*Post*/
+#posts {
+    padding:10px;
+}
+.post {
+    position:relative;
+    width:100%;
+    margin:4px auto
+}
+    .post .title h2 {
+        margin:0;
+        font-weight:bold;
+        font-size:1.8em
+    }
+    .post .title, .pagetitle {
+        padding:10px 0 14px 12px;
+        margin-bottom: 12px
+    }
+
+    .post .entry h1,
+    .post .entry h2,
+    .post .entry h3,
+    .post .entry h4,
+    .post .entry h5,
+    .post .entry h6,
+    .post .entry ul,
+    .post .entry ol {
+        margin-left:12px;
+    } 
+    .post .entry p{
+        font-size:1.2em;
+        line-height:1.4em;
+	    text-indent:12px;
+	    margin-bottom:4px
+	}
+	.post .entry p:first-letter {
+	    font-weight:700
+	}    
+
+    .post .entry img {
+        padding:4px;
+        border-style:solid;
+        border-width:1px;
+    	border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	-khtml-border-radius: 4px;
+    	-webkit-border-radius: 4px
+    }
+
+    .post .entry ol, .post .entry ul {
+        padding-left:20px
+    }
+    .post .entry ul {
+        list-style:bullet
+    }
+    .post .pages {
+        font-size:1.4em
+    }
+    .post .footer .line {
+        
+    }
+/*/Post*/
+/*Navigation*/
+.navigation {
+    font-size:1.4em
+}
+
+.navigation div a{
+    display:block;
+    width:auto;
+    height:40px;
+    margin:0 20px
+}
+/*/Navigation*/
+/*Search*/
+#searchform {
+    padding: 0px;
+    width:200px;
+    margin:12px auto
+}
+    #s {
+        width:140px;
+        height:18px;
+    }
+    #searchsubmit {
+        cursor:pointer;
+        text-indent:-9999%;
+        width:28px;
+        height:28px;
+        background: url(images/lens.png) 2px 2px no-repeat;
+    }
+
+/*/Search*/
+/*Form*/
+input, select, textarea {
+    font-size:1.3em;
+    padding: 4px;
+    border-width:1px;
+    border-style:solid;
+	border-radius:4px;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+fieldset{
+    border-width:1px;
+    border-style:solid;
+    padding: 8px
+}
+textarea {width: 98%}
+
+#commentform {
+	margin: 5px 10px 0 0
+	}
+	#commentform input {
+    	width: 170px;
+    	padding: 2px;
+    	margin: 5px 5px 1px 0
+	}
+    #commentform textarea {
+    	width: 100%;
+    	padding: 2px
+    	}
+    #commentform #submit {
+    	margin: 0 0 5px auto;
+    	float: right;
+    	cursor:pointer
+    	}
+    #commentform p {
+    	margin: 5px 0
+    	}
+/*/Form*/
+
+/*/Table*/
+table {
+    border-collapse:collapse
+}
+
+th {
+    font-size:1.2em;
+    padding:4px 6px;
+    border-width:1px;
+    border-style:solid
+}
+td {
+    padding:4px;
+    border-width:1px;
+    border-style:solid
+}
+/*/Table*/
+/*Comments*/
+#respond {
+    clear:both;
+    margin-bottom:24px
+}
+#comments {
+    padding:0 8px;
+    margin:8px 0
+}
+#comments h3 {
+    padding:8px
+}
+.commentlist {
+	padding: 0;
+	text-align: justify
+}
+    
+    .commentlist li {
+    	margin: 15px 0 10px;
+    	padding: 5px 5px 10px 10px;
+    	list-style: none;    
+    	clear:both;
+    	border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	-khtml-border-radius: 4px;
+    	-webkit-border-radius: 4px
+    }
+    
+    .commentlist ul {
+    	clear:both
+    }
+    	
+    .commentlist li ul li { 
+    	margin-right: -4px;
+    	margin-left: 10px
+    }
+
+    .commentlist li .avatar { 
+    	float: right;
+    	padding: 2px;
+    	background: #fff;
+        border-width:1px;
+        border-style:solid;
+    	border-radius: 2px;
+    	-moz-border-radius: 2px;
+    	-khtml-border-radius: 2px;
+    	-webkit-border-radius: 2px
+    	}
+    .commentlist p {
+        font-size:1.2em;
+    	margin: 10px 5px 10px 0
+    }
+.children { padding: 0 }
+
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0
+	}
+.comment-author{
+    font-size:1.2em
+}
+.comment-meta a,
+.comment-meta a:hover{
+    border:0 !important
+	}
+/*/Comments*/
+
+/*Footer*/
+#footer {
+    clear:both;
+    width:824px;
+    padding: 20px 80px;
+    margin: 0 auto;
+    /*border-top:3px #222 dotted;*/
+    /*background: url(images/footer.jpg) left bottom no-repeat    */
+}
+
+#footer div {
+    width:200px;
+    float:left;
+    margin: 0 0 12px 0
+}
+
+#footer h3 {
+    padding:0 4px 0px 8px;
+    line-height:2em
+}
+#footer ul{
+    list-style:none;
+    padding:0;
+    padding-left:20px;
+    margin:0
+}
+#footer li{
+    line-height:1.6em;
+    font-size:1.2em;
+    padding:2px 0;
+    margin:0
+}
+#footer li:hover{
+    list-style-position:outside;
+    list-style-type:disc
+}
+#footer li a:hover{
+    text-decoration:underline
+}
+#footer .copy{
+    padding:4px 0 0 0;
+    /*border-top:1px solid #999;*/
+    text-align:center
+}
+/*/Footer*/
+
+/*Caption*/
+.wp-caption {
+   text-align: center;
+   padding-top: 4px;
+   margin: 10px;
+   /* optional rounded corners for browsers that support it */
+   border-radius: 3px;
+   -moz-border-radius: 3px;
+   -khtml-border-radius: 3px;
+   -webkit-border-radius: 3px;
+}
+.wp-caption img {
+   margin: 0 !important;
+   padding: 0 !important;
+   border: 0 none !important;
+}
+.wp-caption p.wp-caption-text {
+   font-size: 11px;
+   line-height: 17px;
+   padding: 0 4px 5px;
+   margin: 0
+}
+/*/Caption*/
+/*Calendar*/
+#wp-calendar {
+    border-collapse: collapse;
+    margin-left:6px
+}
+#wp-calendar th {
+    border:0;
+}
+#wp-calendar td {
+    text-align:center;
+    padding:4px 2px;
+    border:0 !important
+}
+#wp-calendar tbody {
+    font-size:1.2em !important;
+}
+#wp-calendar tbody a{
+    display:block;
+    font-weight:700;
+    text-decoration:underline
+}
+#wp-calendar tbody a:hover{
+    text-decoration:none
+}
+/*/Calendar*/
+/*/Theme*/

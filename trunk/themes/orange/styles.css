@@ -1,0 +1,27 @@
+/*
+Theme Name: Orange
+Theme URI: 
+Description: Orange Constructor Theme
+Version: 0.1.2
+Author: Anton Shevchuk
+Author URI: http://anton.shevchuk.name/
+*/
+.post .footer .line {
+	height:64px;
+	background: url(line.png) 50% top no-repeat
+}
+* html .post .footer .line {
+    height:2px;
+    background: none
+}
+	
+.navigation div a{
+    text-indent:-9999%;
+    display:block;
+    width:64px;
+    height:40px;
+    margin:0 20px
+}
+.navigation .alignleft a{background: url(prev.jpg) 0 0 no-repeat}
+.navigation .alignright a{background: url(next.jpg) 0 0 no-repeat}
+.navigation a:hover {background-position: 100% 100%}
