@@ -39,7 +39,9 @@ function constructor_theme_page_add()
             $files = $_FILES['constructor'];
             $data  = $_REQUEST['constructor'];
 
+
             if (isset ($data['theme-reload']) && $data['theme-reload'] != 0) {
+                // loading theme and forgot all changes
                 $theme = $data['theme'];
                 $data  = require $directory.'/themes/'.$theme.'/config.php';
                 $data['theme'] = $theme;
@@ -53,7 +55,7 @@ function constructor_theme_page_add()
                     if (isset($image['src']) && is_uploaded_file($files['tmp_name']['images'][$name]['src'])) {
 
                         if (!preg_match('/\.(jpe?g|png|gif)$/i', $image['src'])) {
-                            $errors[] = sprintf(__('File "%s" is not a image','constructor'), $image['src']);
+                            $errors[] = sprintf(__('File "%s" is not a image (jpeg, png, gif)','constructor'), $image['src']);
                             continue;
                         }
 
@@ -128,6 +130,20 @@ function constructor_theme_page()
         $constructor['theme'] = 'default';
     }
 
+    // modules list - change list manualy only
+    $modules = array(
+                'themes',
+                'sidebar',
+                'layout',
+                'header',
+                'footer',
+                'colors',
+                'fonts',
+                'css',
+                'images',
+                'slideshow',
+                'export',
+                );
     ?>
 
     <div class='wrap'>
@@ -147,93 +163,19 @@ function constructor_theme_page()
        <div class="constructor">
             <form method="post" id="constructor-form" action="<?php echo attribute_escape($_SERVER['REQUEST_URI']); ?>" enctype="multipart/form-data">
                 <?php wp_nonce_field('constructor'); ?>
-                <input type="hidden" id="constructor-sidebar" name="constructor[sidebar]" value="<?php echo $constructor['sidebar']?>"/>
-                <input type="hidden" id="constructor-theme" name="constructor[theme]" value="<?php echo $constructor['theme']?>"/>
-                <input type="hidden" id="constructor-theme-reload" name="constructor[theme-reload]" value="0"/>
-
-                <input type="hidden" id="constructor-slideshow" name="constructor[slideshow][id]" value="<?php echo $constructor['slideshow']['id']?>"/>
-
-
-                <input type="hidden" id="constructor-opacity" name="constructor[opacity]" value="<?php echo $constructor['opacity']?>"/>
-
-                <input type="hidden" id="constructor-title-pos" name="constructor[title][pos]" value="<?php echo $constructor['title']['pos']?>"/>
-
-                <input type="hidden" id="constructor-color_title" name="constructor[color][title]" value="<?php echo $constructor['color']['title']?>"/>
-                <input type="hidden" id="constructor-color_title2" name="constructor[color][title2]" value="<?php echo $constructor['color']['title2']?>"/>
-
-                <input type="hidden" id="constructor-color_bg" name="constructor[color][bg]" value="<?php echo $constructor['color']['bg']?>"/>
-                <input type="hidden" id="constructor-color_bg2" name="constructor[color][bg2]" value="<?php echo $constructor['color']['bg2']?>"/>
-
-                <input type="hidden" id="constructor-color_text" name="constructor[color][text]" value="<?php echo $constructor['color']['text']?>"/>
-                <input type="hidden" id="constructor-color_text2" name="constructor[color][text2]" value="<?php echo $constructor['color']['text2']?>"/>
-
-                <input type="hidden" id="constructor-color_border" name="constructor[color][border]" value="<?php echo $constructor['color']['border']?>"/>
-                <input type="hidden" id="constructor-color_border2" name="constructor[color][border2]" value="<?php echo $constructor['color']['border2']?>"/>
-
-                <input type="hidden" id="constructor-color_header1" name="constructor[color][header1]" value="<?php echo $constructor['color']['header1']?>"/>
-                <input type="hidden" id="constructor-color_header2" name="constructor[color][header2]" value="<?php echo $constructor['color']['header2']?>"/>
-                <input type="hidden" id="constructor-color_header3" name="constructor[color][header3]" value="<?php echo $constructor['color']['header3']?>"/>
-                <input type="hidden" id="constructor-color_alt" name="constructor[color][alt]" value="<?php echo $constructor['color']['alt']?>"/>
-
-                <input type="hidden" id="constructor-images-wrap-pos" name="constructor[images][wrap][pos]" value="<?php echo $constructor['images']['wrap']['pos']?>"/>
-                <input type="hidden" id="constructor-images-sidebar-pos" name="constructor[images][sidebar][pos]" value="<?php echo $constructor['images']['sidebar']['pos']?>"/>
-                <input type="hidden" id="constructor-images-footer-pos" name="constructor[images][footer][pos]" value="<?php echo $constructor['images']['footer']['pos']?>"/>
-
                 <input type="hidden" name="action" value="save" />
 
-
                 <ul id="tabs">
-                    <li><a href="#constr-themes"><?php _e('Themes', 'constructor'); ?></a></li>
-                    <li><a href="#constr-layout"><?php _e('Layout', 'constructor'); ?></a></li>
-                    <li><a href="#constr-header"><?php _e('Header', 'constructor'); ?></a></li>
-                    <li><a href="#constr-footer"><?php _e('Footer', 'constructor'); ?></a></li>
-                    <li><a href="#constr-colors"><?php _e('Colors', 'constructor'); ?></a></li>
-                    <li><a href="#constr-fonts"><?php _e('Fonts', 'constructor'); ?></a></li>
-                    <li><a href="#constr-css"><?php _e('CSS', 'constructor'); ?></a></li>
-                    <li><a href="#constr-images"><?php _e('Images', 'constructor'); ?></a></li>
-                    <li><a href="#constr-gallery"><?php _e('Slideshow', 'constructor'); ?></a></li>
-                    <li><a href="#constr-export"><?php _e('Export', 'constructor'); ?></a></li>
+                    <?php foreach ($modules as $module) : ?>
+                    <li><a href="#constr-<?php echo $module ?>"><?php _e(ucfirst($module), 'constructor'); ?></a></li>
+                    <?php endforeach; ?>
                 </ul>
 
-                <div id="constr-themes">
-                    <?php require_once 'settings/themes.php' ?>
+                <?php foreach ($modules as $module) : ?>
+                <div id="constr-<?php echo $module ?>">
+                    <?php require_once "settings/$module.php" ?>
                 </div>
-                
-                <div id="constr-layout">
-                    <?php require_once 'settings/layout.php' ?>
-                </div>
-
-                <div id="constr-header">
-                    <?php require_once 'settings/header.php' ?>
-                </div>
-
-                <div id="constr-footer">
-                    <?php require_once 'settings/footer.php' ?>
-                </div>
-
-                <div id="constr-colors">
-                    <?php require_once 'settings/colors.php' ?>
-                </div>
-
-                <div id="constr-fonts">
-                    <?php require_once 'settings/fonts.php' ?>
-                </div>
-
-                <div id="constr-css">
-                    <?php require_once 'settings/css.php' ?>
-                </div>
-
-                <div id="constr-images">
-                    <?php require_once 'settings/images.php' ?>
-                </div>
-
-                <div id="constr-gallery">
-                    <?php require_once 'settings/gallery.php' ?>
-                </div>
-
-                <div id="constr-export">
-                    <?php require_once 'settings/export.php' ?>
-                </div>
+                <?php endforeach; ?>
                 
                 <p class="submit">
                     <input type="submit" name="Submit" class="button-primary" value="<?php _e('Save Changes', 'constructor')?>" />

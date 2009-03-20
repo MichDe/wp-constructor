@@ -44,7 +44,7 @@ foreach ($AllPosts as $Post) {
 <?php get_header(); ?>
 <div id="wrapper" class="box shadow opacity">
     <div id="container" >
-    <?php get_constructor_header() ?>
+    <?php get_constructor_slideshow() ?>
 
         <div id="posts">
         <?php while (have_posts()) : the_post(); ?>

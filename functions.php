@@ -71,12 +71,12 @@ if (!is_admin()) {
     }
 
     /**
-     * get_constructor_header
+     * get_constructor_slideshow
      *
      * @access  public
      * @return  rettype  return
      */
-    function get_constructor_header()
+    function get_constructor_slideshow()
     {
         global $constructor;
 
@@ -106,6 +106,29 @@ if (!is_admin()) {
     }
 
     /**
+     * get_constructor_layout
+     *
+     * @return string
+     */
+    function get_constructor_layout()
+    {
+        global $constructor;
+
+        if (!isset($constructor['layout'])) return include_once 'layout-index.php';
+
+        switch ($constructor['layout']) {
+            case 'tile':
+                include_once 'layout-tile.php';
+                break;
+
+            default:
+                include_once 'layout-index.php';
+                break;
+        }
+        return true;
+    }
+
+    /**
      * get_constructor_links
      *
      * @return string
@@ -123,7 +146,7 @@ if (!is_admin()) {
             $params = 'depth=3&title_li=';
         }
 
-        echo '<div id="header-links" class="opacity"><ul class="opacity">';
+        echo '<div id="header-links" class="opacity shadow"><ul class="opacity">';
         if ($constructor['menu']['home']) echo '<li id="home"><a href="'.get_option('home').'/" title="'.get_bloginfo('name').'">'.__('Home', 'constructor').'</a></li>';
         wp_list_pages($params);
         if ($constructor['menu']['rss'])  echo '<li id="rss"><a href="'.get_bloginfo('rss2_url').'"  title="'.__('RSS Feed', 'constructor').'">'. __('RSS Feed', 'constructor').'</a></li>';
@@ -162,6 +185,7 @@ if (!is_admin()) {
         }
     }
 
+
     /**
      * get_constructor_footer
      *
@@ -180,6 +204,40 @@ if (!is_admin()) {
         }
     }
 
+    /**
+     * get_constructor_tile_image
+     *
+     * @return string
+     */
+    function get_constructor_tile_image()
+    {
+        global $template_uri;
+        if ($img = _get_post_image()) {
+            echo '<img src="' .$template_uri. "/timthumb.php?src=".urlencode($img).'&amp;h=312&amp;w=312&amp;zc=1&amp;q=95" alt="' .get_the_title(). '"/>';
+        } else {
+            echo '<img src="' .$template_uri. '/images/noimage.png" alt="' .__('No Image', 'constructor'). '"/>';
+        }
+    }
+
+    /**
+     * _get_post_image
+     *
+     * @see    wordpress loop
+     * @return string
+     */
+    function _get_post_image()
+    {
+        global $post;
+        $home = addcslashes(get_bloginfo('siteurl'), '.-/');
+        $pattern = "/\<\s*img.*src\s*=\s*[\"\']?(?:$home|\/)([^\"\'\ >]*)[\"\']?.*\/\>/i";
+        preg_match_all($pattern, $post->post_content, $images);
+
+        if (!isset($images[1][0])) {
+            return false;
+        } else {
+            return $images[1][0];
+        }
+    }
 
 } else {
     require_once 'admin/settings.php';

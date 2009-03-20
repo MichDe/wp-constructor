@@ -1,3 +1,7 @@
+<?php __('Images', 'constructor'); // requeried for correct translation ?>
+<input type="hidden" id="constructor-images-wrap-pos" name="constructor[images][wrap][pos]" value="<?php echo $constructor['images']['wrap']['pos']?>"/>
+<input type="hidden" id="constructor-images-sidebar-pos" name="constructor[images][sidebar][pos]" value="<?php echo $constructor['images']['sidebar']['pos']?>"/>
+<input type="hidden" id="constructor-images-footer-pos" name="constructor[images][footer][pos]" value="<?php echo $constructor['images']['footer']['pos']?>"/>
 <table class="form-table">
     <?php if (!is_writable($directory.'/images/')) : ?>
     <tr>

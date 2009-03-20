@@ -2,7 +2,7 @@
 Theme Name: Constructor
 Theme URI: http://anton.shevchuk.name/wordpress/theme-constructor-for-wordpress/
 Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.7+
-Version: 0.2.3
+Version: 0.2.4
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -68,6 +68,7 @@ div.aligncenter {
 .alignleft, .left { float: left }
 .alignright, .right { float: right }
 .clear { clear:both }
+.hide  { display:none }
 
 /*Box*/
 .box {
@@ -96,6 +97,9 @@ div.aligncenter {
 
     .container-full {
         width:1024px !important;
+        margin:0 !important;
+        padding:0 !important;
+        border: 0 !important;
     }
 /* Right Sidebar */
 #sidebar {
@@ -294,42 +298,42 @@ div.aligncenter {
 #posts {
     padding:10px;
 }
-.post {
+.hentry {
     position:relative;
     width:100%;
     margin:4px auto
 }
-    .post .title h2 {
+    .hentry .title h2 {
         margin:0;
         font-weight:bold;
         font-size:1.8em
     }
-    .post .title, .pagetitle {
+    .hentry .title, .pagetitle {
         padding:10px 0 14px 12px;
         margin-bottom: 12px
     }
 
-    .post .entry h1,
-    .post .entry h2,
-    .post .entry h3,
-    .post .entry h4,
-    .post .entry h5,
-    .post .entry h6,
-    .post .entry ul,
-    .post .entry ol {
+    .hentry .entry h1,
+    .hentry .entry h2,
+    .hentry .entry h3,
+    .hentry .entry h4,
+    .hentry .entry h5,
+    .hentry .entry h6,
+    .hentry .entry ul,
+    .hentry .entry ol {
         margin-left:12px;
     } 
-    .post .entry p{
+    .hentry .entry p{
         font-size:1.2em;
         line-height:1.4em;
 	    text-indent:12px;
 	    margin-bottom:4px
 	}
-	.post .entry p:first-letter {
+	.hentry .entry p:first-letter {
 	    font-weight:700
 	}    
 
-    .post .entry img {
+    .hentry .entry img {
         padding:4px;
         border-style:solid;
         border-width:1px;
@@ -339,19 +343,89 @@ div.aligncenter {
     	-webkit-border-radius: 4px
     }
 
-    .post .entry ol, .post .entry ul {
+    .hentry .entry img.alignleft {
+        margin: 0 4px 4px 0
+    }
+
+    .hentry .entry img.alignright {
+        margin: 0 4px 0 4px
+    }
+
+    .hentry .entry ol, .hentry .entry ul {
         padding-left:20px
     }
-    .post .entry ul {
+    .hentry .entry ul {
         list-style:bullet
     }
-    .post .pages {
+    .hentry .pages {
         font-size:1.4em
     }
-    .post .footer .line {
+    .hentry .footer .line {
         
     }
 /*/Post*/
+/*Tile*/
+.tile {
+    position:relative;
+    width:320px;
+    height:300px;
+    float:left;
+    margin:0 6px 10px 6px;
+}
+
+    .tile .title{
+        width:306px;
+        z-index:10;
+        position:absolute;
+        top:2px;
+        left:2px;
+        text-align:left;
+        padding:0 6px;
+        margin:0;
+    }
+
+    .tile a {
+        display:block;
+        border:0 !important;
+    }
+
+    .tile .thumb {
+        z-index:0;
+        position:absolute;
+        top:2px;
+        left:4px;
+        width:312px;
+        margin:2px auto;
+    }
+
+    .tile .links {
+        z-index:10;
+        position:absolute;
+        bottom:0;
+        left:0;
+        height:32px;
+        width:100%;
+    }
+    .tile .links .date{
+        padding:0 8px;
+        float:left;
+        width:260px;
+        line-height:32px;
+    }
+    .tile .links .comments {
+        float:right;
+    }
+    .tile .links .comments a{
+        margin:0 2px 2px 0;
+        padding: 2px 0;
+        text-align:center;
+        width:32px;
+        height:32px;
+        background:url(images/comments.png) no-repeat 3px 1px;
+    }
+
+
+/*/Tile*/
 /*Navigation*/
 .navigation {
     font-size:1.4em
@@ -360,8 +434,12 @@ div.aligncenter {
 .navigation div a{
     display:block;
     width:auto;
-    height:40px;
+    height:32px;
     margin:0 20px
+}
+
+.navigation div.clear{
+    height:0;
 }
 /*/Navigation*/
 /*Search*/

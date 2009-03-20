@@ -237,7 +237,7 @@ fieldset{
     border-color: {$color_border}
 }
 .shadow {
-    -webkit-box-shadow: 5px 5px 7px {$color_bg2}
+    -webkit-box-shadow: 3px 3px 3px {$color_border}
 }
 {$opacity}
 /*/CSS3*/
@@ -287,22 +287,22 @@ fieldset{
 }
 /*/Calendar*/
 /*Post*/
-.post .title a,
-.post .title span{
+.hentry .title a,
+.hentry .title span{
     border-bottom:3px dotted {$color3}
 }
-.post .entry a,
-.post .footer a{
+.hentry .entry a,
+.hentry .footer a{
     border-bottom:1px dotted {$color_text}
 }
-.post .entry a:hover,
-.post .footer a:hover{
+.hentry .entry a:hover,
+.hentry .footer a:hover{
     border-bottom:1px solid {$color1}
 }
-.post .entry p:first-letter {
+.hentry .entry p:first-letter {
     color:{$color1}
 }
-.post .entry img {
+.hentry .entry img {
     border-color:{$color_border}
 }
 /*/Post*/

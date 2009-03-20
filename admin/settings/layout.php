@@ -1,26 +1,16 @@
+<?php __('Layout', 'constructor'); // requeried for correct translation ?>
+<input type="hidden" id="constructor-layout" name="constructor[layout]" value="<?php echo $constructor['layout']?>"/>
 <table class="form-table">
 <tr>
-    <th scope="row" valign="top"><?php _e('Sidebar', 'constructor'); ?></th>
-    <td class="select" id="sidebar">
-        <a href="#" title="<?php echo attribute_escape(__('Left', 'constructor')); ?>" name="left" <?php if($constructor['sidebar'] == 'left') echo 'class="selected"'; ?>>
-            <img src="<?php echo $directory_uri ?>/admin/images/sidebar-left.png" alt="<?php echo attribute_escape(__('Left', 'constructor')); ?>" />
+    <td class="select td-full" id="layout">
+        <a href="#" title="<?php echo attribute_escape(__('Default', 'constructor')); ?>" name="default" <?php if($constructor['layout'] == 'default') echo 'class="selected"'; ?>>
+            <img src="<?php echo $directory_uri ?>/admin/images/layout-default.png" alt="<?php echo attribute_escape(__('Default', 'constructor')); ?>" />
         </a>
-        <a href="#" title="<?php echo attribute_escape(__('Right', 'constructor')); ?>" name="right" <?php if($constructor['sidebar'] == 'right') echo 'class="selected"'; ?>>
-            <img src="<?php echo $directory_uri ?>/admin/images/sidebar-right.png" alt="<?php echo attribute_escape(__('Right', 'constructor')); ?>" />
+        <a href="#" title="<?php echo attribute_escape(__('Tile', 'constructor')); ?>" name="tile" <?php if($constructor['layout'] == 'tile') echo 'class="selected"'; ?>>
+            <img src="<?php echo $directory_uri ?>/admin/images/layout-tile.png" alt="<?php echo attribute_escape(__('Tile', 'constructor')); ?>" />
         </a>
-        <br class="clear"/>
-        <a href="#" title="<?php echo attribute_escape(__('Two', 'constructor')); ?>" name="two" <?php if($constructor['sidebar'] == 'two') echo 'class="selected"'; ?>>
-            <img src="<?php echo $directory_uri ?>/admin/images/sidebar-two.png" alt="<?php echo attribute_escape(__('Two', 'constructor')); ?>" />
-        </a>
-        <a href="#" title="<?php echo attribute_escape(__('None', 'constructor')); ?>" name="none" <?php if($constructor['sidebar'] == 'none') echo 'class="selected"'; ?>>
-            <img src="<?php echo $directory_uri ?>/admin/images/sidebar-none.png" alt="<?php echo attribute_escape(__('None', 'constructor')); ?>" />
-        </a>
-        <br class="clear"/>
-        <a href="#" title="<?php echo attribute_escape(__('Two Right', 'constructor')); ?>" name="two-right" <?php if($constructor['sidebar'] == 'two-right') echo 'class="selected"'; ?>>
-            <img src="<?php echo $directory_uri ?>/admin/images/sidebar-two-right.png" alt="<?php echo attribute_escape(__('Two Right', 'constructor')); ?>" />
-        </a>
-        <a href="#" title="<?php echo attribute_escape(__('Two Left', 'constructor')); ?>" name="two-left" <?php if($constructor['sidebar'] == 'two-left') echo 'class="selected"'; ?>>
-            <img src="<?php echo $directory_uri ?>/admin/images/sidebar-two-left.png" alt="<?php echo attribute_escape(__('Two Left', 'constructor')); ?>" />
+        <a href="#" title="<?php echo attribute_escape(__('List', 'constructor')); ?>" name="list" <?php if($constructor['layout'] == 'list') echo 'class="selected"'; ?>>
+            <img src="<?php echo $directory_uri ?>/admin/images/layout-list.png" alt="<?php echo attribute_escape(__('List', 'constructor')); ?>" />
         </a>
     </td>
 </tr>

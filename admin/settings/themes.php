@@ -1,8 +1,33 @@
+<?php __('Themes', 'constructor'); // requeried for correct translation ?>
+<script type="text/javascript">
+(function($){
+$(document).ready(function(){
+    $("#constr-themes div").hover(function(){
+        $(this).toggleClass('hover');
+    },function(){
+        $(this).toggleClass('hover');
+    });
+
+    $("#constr-themes div:not(.selected)").click(function(){
+        if (confirm('All data was reloaded from theme config. Continue?..')) {
+            $('#constructor-theme').val($(this).attr('title'));
+            $('#constructor-theme-reload').val(1);
+            $("#constructor-form").submit();
+        }
+    });
+});
+})(jQuery);
+</script>
+
+<input type="hidden" id="constructor-theme" name="constructor[theme]" value="<?php echo $constructor['theme']?>"/>
+<input type="hidden" id="constructor-theme-reload" name="constructor[theme-reload]" value="0"/>
+
 <?php
 // load themes
 $themes = scandir($directory.'/themes/');
 unset($themes[array_search('.', $themes)]);
 unset($themes[array_search('..', $themes)]);
+unset($themes[array_search('.svn', $themes)]);
 
 foreach ($themes as $theme) :
       $img = null;

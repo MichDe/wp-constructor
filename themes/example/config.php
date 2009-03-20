@@ -4,6 +4,7 @@
  */
 return array(
             "sidebar"   => 'right',          // sidebar position
+            "layout"    => 'tile',           // layout of homepage
             "title"     => array(            // title
                         "pos" => 'left'      // - position
                     ),

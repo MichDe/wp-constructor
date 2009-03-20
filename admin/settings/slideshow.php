@@ -1,7 +1,8 @@
- <?php
+<?php __('Slideshow', 'constructor'); // requeried for correct translation 
     global $nggdb;
 ?>
- <table class="form-table">
+<input type="hidden" id="constructor-slideshow" name="constructor[slideshow][id]" value="<?php echo $constructor['slideshow']['id']?>"/>
+<table class="form-table">
     <?php
     if ($nggdb) :
         $gallerylist = $nggdb->find_all_galleries();
