@@ -2,11 +2,11 @@
 Theme Name: Black Urban
 Theme URI: 
 Description: Black Urban Constructor Theme based on <a href="http://wordpress.org/extend/themes/black-urban">Black Urban WP Theme</a>
-Version: 0.1.1
+Version: 0.1.2
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 */
-.post .footer .line {
+.hentry .footer .line {
         height:64px !important;
         border: 0;
         background: url(barbed-wire.jpg) 50% top no-repeat;

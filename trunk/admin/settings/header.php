@@ -1,3 +1,5 @@
+<?php __('Header', 'constructor'); // requeried for correct translation ?>
+<input type="hidden" id="constructor-title-pos" name="constructor[title][pos]" value="<?php echo $constructor['title']['pos']?>"/>
 <table class="form-table">
 <tr>
     <th scope="row" valign="top"><?php _e('Title position', 'constructor'); ?></th>

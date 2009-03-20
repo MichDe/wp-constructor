@@ -9,7 +9,7 @@ wp_enqueue_script( 'comment-reply' );
 <?php get_header(); ?>
 <div id="wrapper" class="box shadow opacity">
     <div id="container">
-    <?php get_constructor_header() ?>
+    <?php get_constructor_slideshow() ?>
 
     <?php if (have_posts()) : ?>
         <div id="posts">
@@ -36,13 +36,7 @@ wp_enqueue_script( 'comment-reply' );
         <div id='comments'>
            <?php comments_template(); ?>
         </div>
-        <div class="navigation">
-            <div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'constructor')) ?></div>
-            <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'constructor')) ?></div>
-            <div class="clear">&nbsp;</div>
-        </div>
     <?php endif; ?>
-
     </div><!-- id='container' -->
 </div><!-- id='wrapper' -->
 <?php get_constructor_sidebar(); ?>

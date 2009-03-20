@@ -11,7 +11,7 @@ Template Name: Sitemap
 <?php get_header(); ?>
 <div id="wrapper" class="box shadow opacity">
     <div id="container" class="container-sitemap">
-    <?php get_constructor_header() ?>
+    <?php get_constructor_slideshow() ?>
 
         <div id="posts">
         <?php while (have_posts()) : the_post(); ?>
@@ -35,7 +35,18 @@ Template Name: Sitemap
                     <h3><?php _e('Archives', 'constructor') ?></h3>
                     <ul>
                         <?php wp_get_archives('type=monthly&show_post_count=1'); ?>
-                    </ul>                    
+                    </ul>
+
+                    <?php foreach (get_categories() as $cat) :
+                          query_posts('cat='.$cat->cat_ID);
+                    ?>
+                    <h3><?php echo $cat->cat_name; ?></h3>
+                    <ul>
+                            <?php while (have_posts()) : the_post(); ?>
+                            <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+                            <?php endwhile;  ?>
+                    </ul>
+					<?php endforeach; ?>
                 </div>
                 <div class="footer">
                     <div class="links right">

@@ -7,11 +7,11 @@ Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 */
 
-.post .footer .line {
+.hentry .footer .line {
 	height:64px;
 	background: url(line.png) 50% top no-repeat
 }
-* html .post .footer .line {
+* html .hentry .footer .line {
     height:2px;
     background: none
 }
