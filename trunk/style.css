@@ -54,6 +54,18 @@ pre {
 
 blockquote{ padding-left:6px }
 
+dl {
+    font-size:1.2em;
+}
+dt {
+    width:120px;
+    font-weight:700 !important;
+}
+dd {
+    
+}
+
+
 a {
     outline:none;
     text-decoration:none;
@@ -210,7 +222,7 @@ div.aligncenter {
 		white-space: nowrap;
         display:block;
         padding:0 16px;
-        font-weight:700;
+        font-weight:700 !important;
         width: 70px;
         height:40px;
         line-height:40px
@@ -285,10 +297,10 @@ div.aligncenter {
     .sidebar li ul li {
         padding:4px 0 2px 0
     }
-    .sidebar li ul li:hover{
+    /*.sidebar li ul li:hover{
         list-style-position:outside;
         list-style-type:disc
-    }
+    }*/
     .sidebar li ul li a:hover{
         text-decoration:underline
     }
@@ -299,20 +311,23 @@ div.aligncenter {
     padding:10px;
 }
 .hentry {
+    clear:both;
     position:relative;
     width:100%;
     margin:4px auto
 }
     .hentry .title h2 {
         margin:0;
-        font-weight:bold;
+        font-weight:700 !important;
         font-size:1.8em
     }
     .hentry .title, .pagetitle {
         padding:10px 0 14px 12px;
         margin-bottom: 12px
     }
-
+    .hentry .entry {
+        padding:0 4px;
+    }
     .hentry .entry h1,
     .hentry .entry h2,
     .hentry .entry h3,
@@ -330,7 +345,7 @@ div.aligncenter {
 	    margin-bottom:4px
 	}
 	.hentry .entry p:first-letter {
-	    font-weight:700
+	    font-weight:700 !important
 	}    
 
     .hentry .entry img {
@@ -360,12 +375,17 @@ div.aligncenter {
     .hentry .pages {
         font-size:1.4em
     }
+
+    .hentry .footer {
+        clear:both
+    }
     .hentry .footer .line {
         
     }
 /*/Post*/
 /*Tile*/
 .tile {
+    clear:none;
     position:relative;
     width:320px;
     height:300px;
@@ -423,9 +443,25 @@ div.aligncenter {
         height:32px;
         background:url(images/comments.png) no-repeat 3px 1px;
     }
-
-
 /*/Tile*/
+/*List*/
+.list {
+
+}
+    .list .title {
+        padding:8px 0 8px 12px;
+        margin:0
+    }
+    .list .date {
+        position:absolute;
+        top:12px;
+        right:16px;
+        font-size:0.6em;
+    }
+    .list .thumb {
+        margin:4px 8px 4px 0px;
+    }
+/*/List*/
 /*Navigation*/
 .navigation {
     font-size:1.4em
@@ -619,10 +655,10 @@ td {
     padding:2px 0;
     margin:0
 }
-#footer li:hover{
+/*#footer li:hover{
     list-style-position:outside;
     list-style-type:disc
-}
+}*/
 #footer li a:hover{
     text-decoration:underline
 }
@@ -632,7 +668,24 @@ td {
     text-align:center
 }
 /*/Footer*/
-
+/*Feed*/
+.feed-icon {
+    position:absolute;
+    top:18px;
+    right:16px;
+    padding-right:18px;
+    display:block;
+    font-size:0.6em;
+    background:url('images/feed-icon-16x16.png') no-repeat 100% 50%;
+    border:0 !important;
+}
+/*/Feed*/
+/*Smiles*/
+.wp-smiley {
+    border:0 !important;
+    padding:0 !important;
+}
+/*/Smiles*/
 /*Caption*/
 .wp-caption {
    text-align: center;

@@ -21,6 +21,7 @@
                 <div class="footer">
                     <div class="links right">
                     <?php the_time(__('F jS, Y', 'construtor')) ?> |
+                    <?php get_constructor_author('', ' |') ?>
                     <?php the_tags(__('Tags', 'construtor') . ': ', ', ', '|'); ?>
                     <?php edit_post_link(__('Edit', 'construtor'), '', ' | '); ?>
                     <?php comments_popup_link(__('No Comments &#187;', 'construtor'), __('1 Comment &#187;', 'construtor'), __('% Comments &#187;', 'construtor'), '', __('Comments Closed', 'construtor') ); ?>                    </div>
@@ -30,20 +31,9 @@
         <?php endwhile; ?>
         </div>
         <div class="navigation">
-            <div class="alignleft"><?php previous_posts_link(__('Newer Entries &raquo;', 'construtor')) ?></div>
-            <div class="alignright"><?php next_posts_link(__('&laquo; Older Entries', 'construtor')) ?></div>
+            <div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'construtor')) ?></div>
+            <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'construtor')) ?></div>
             <div class="clear">&nbsp;</div>
-        </div>
-	<?php else : ?>
-        <div id="posts">
-            <div class="post">
-            <div class="post-title opacity box">
-        		<h2 class="center"><?php _e('Error 404 - Not Found', 'construtor'); ?></h2>
-		    </div>
-		    <div class="post-entry">
-        		<p class="center"><?php _e('Sorry, but you are looking for something that isn&#8217;t here.', 'construtor'); ?></p>
-		    </div>
-		    </div>
         </div>
     <?php endif; ?>
 

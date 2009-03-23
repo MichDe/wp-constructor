@@ -1,19 +1,3 @@
 <?php
-if (!function_exists('scandir')) {
-    /**
-     * scandir for PHP4
-     *
-     * @param string $dir
-     * @return array $files
-     */
-    function scandir($dir) {
-        $dh  = opendir($dir);
-
-        $files = array();
-        while (false !== ($filename = readdir($dh))) {
-            $files[] = $filename;
-        }
-
-        return $files;
-    }
-}
+require_once 'compatibility/scandir.php';
+require_once 'compatibility/file_put_contents.php';
