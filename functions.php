@@ -108,21 +108,24 @@ if (!is_admin()) {
     /**
      * get_constructor_layout
      *
+     * @param  string $where
      * @return string
      */
-    function get_constructor_layout()
+    function get_constructor_layout($where = 'default')
     {
         global $constructor;
 
-        if (!isset($constructor['layout'])) return include_once 'layout-index.php';
+        if (!isset($constructor['layout'][$where])) return include_once 'layout-default.php';
 
-        switch ($constructor['layout']) {
+        switch ($constructor['layout'][$where]) {
             case 'tile':
                 include_once 'layout-tile.php';
                 break;
-
+            case 'list':
+                include_once 'layout-list.php';
+                break;
             default:
-                include_once 'layout-index.php';
+                include_once 'layout-default.php';
                 break;
         }
         return true;
@@ -185,6 +188,19 @@ if (!is_admin()) {
         }
     }
 
+    /**
+     * get_constructor_author
+     *
+     * @param  string $before
+     * @param  string $after
+     * @return string
+     */
+    function get_constructor_author($before = '', $after = '')
+    {
+        global $constructor;
+        if (isset($constructor['author']) && $constructor['author'])
+            echo $before . the_author_posts_link() . $after;
+    }
 
     /**
      * get_constructor_footer
@@ -205,17 +221,17 @@ if (!is_admin()) {
     }
 
     /**
-     * get_constructor_tile_image
+     * get_constructor_post_image
      *
      * @return string
      */
-    function get_constructor_tile_image()
+    function get_constructor_post_image($size = 312)
     {
         global $template_uri;
         if ($img = _get_post_image()) {
-            echo '<img src="' .$template_uri. "/timthumb.php?src=".urlencode($img).'&amp;h=312&amp;w=312&amp;zc=1&amp;q=95" alt="' .get_the_title(). '"/>';
+            echo '<img src="' .$template_uri. "/timthumb.php?src=".urlencode($img).'&amp;h='.$size.'&amp;w='.$size.'&amp;zc=1&amp;q=95" alt="' .get_the_title(). '"/>';
         } else {
-            echo '<img src="' .$template_uri. '/images/noimage.png" alt="' .__('No Image', 'constructor'). '"/>';
+            echo '<img src="' .$template_uri. '/images/noimage.png" width="'.$size.'px" height="'.$size.'px" alt="' .__('No Image', 'constructor'). '"/>';
         }
     }
 

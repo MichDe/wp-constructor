@@ -136,6 +136,7 @@ function constructor_theme_page()
                 'sidebar',
                 'layout',
                 'header',
+                'content',
                 'footer',
                 'colors',
                 'fonts',

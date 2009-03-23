@@ -4,7 +4,7 @@
     </tr>
     <tr>
         <td class="td-full">
-            <textarea name="constructor[footer][text]" rows="5"><?php echo $constructor['footer']['text'] ?></textarea>
+            <textarea name="constructor[footer][text]" rows="5"><?php echo stripslashes($constructor['footer']['text']) ?></textarea>
         </td>
     </tr>
 </table>
