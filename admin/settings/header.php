@@ -44,6 +44,9 @@
         <br/>
         <input type="checkbox" id="constructor-menu-size" name="constructor[menu][size]" value="1" <?php if ($constructor['menu']['size']) echo 'checked="checked"'; ?>/>
         <label for="constructor-menu-size"><?php _e('Show font resizer', 'constructor'); ?></label>
+        <br/>
+        <input type="checkbox" id="constructor-menu-theme" name="constructor[menu][theme]" value="1" <?php if ($constructor['menu']['theme']) echo 'checked="checked"'; ?>/>
+        <label for="constructor-menu-theme"><?php _e('Theme switcher', 'constructor'); ?></label>
     </td>
 </tr>
 </table>

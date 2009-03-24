@@ -3,7 +3,10 @@
 <input type="hidden" id="constructor-images-sidebar-pos" name="constructor[images][sidebar][pos]" value="<?php echo $constructor['images']['sidebar']['pos']?>"/>
 <input type="hidden" id="constructor-images-footer-pos" name="constructor[images][footer][pos]" value="<?php echo $constructor['images']['footer']['pos']?>"/>
 <table class="form-table">
-    <?php if (!is_writable($directory.'/images/')) : ?>
+    <?php
+    $upload = true;
+    if (!is_writable($directory.'/images/')) : $upload = false;
+    ?>
     <tr>
         <th scope="row" valign="top" colspan="2" class="th-full updated"><?php printf(__('<font color="red"><b>Warning!</b></font>: Directory "%s" is not writable.', 'constructor'), $directory.'/images/'); ?></th>
     </tr>
@@ -15,7 +18,7 @@
             <?php if($constructor['images']['body']['src']) : ?>
             (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['body']['src']; ?>"><?php _e('preview', 'constructor'); ?></a>)
             <?php endif; ?>
-            <input type="file" name="constructor[images][body][src]"/>
+            <?php if ($upload) : ?><input type="file" name="constructor[images][body][src]"/><?php endif; ?>
         </td>
     </tr>
     <tr>
@@ -25,7 +28,7 @@
             <?php if($constructor['images']['wrap']['src']) : ?>
             (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['wrap']['src']; ?>"><?php _e('preview', 'constructor'); ?></a>)
             <?php endif; ?>
-            <input type="file" name="constructor[images][wrap][src]"/>
+            <?php if ($upload) : ?><input type="file" name="constructor[images][wrap][src]"/><?php endif; ?>
         </td>
     </tr>
     <tr>
@@ -55,7 +58,7 @@
             <?php if($constructor['images']['wrapper']['src']) : ?>
             (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['wrapper']['src']; ?>"><?php _e('preview', 'constructor'); ?></a>)
             <?php endif; ?>
-            <input type="file" name="constructor[images][wrapper][src]"/>
+            <?php if ($upload) : ?><input type="file" name="constructor[images][wrapper][src]"/><?php endif; ?>
         </td>
     </tr>
     <tr>
@@ -65,7 +68,7 @@
             <?php if($constructor['images']['sidebar']['src']) : ?>
             (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['sidebar']['src']; ?>"><?php _e('preview', 'constructor'); ?></a>)
             <?php endif; ?>
-            <input type="file" name="constructor[images][sidebar][src]"/>
+            <?php if ($upload) : ?><input type="file" name="constructor[images][sidebar][src]"/><?php endif; ?>
         </td>
     </tr>
     <tr>
@@ -96,7 +99,7 @@
             <?php if($constructor['images']['footer']['src']) : ?>
             (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['footer']['src']; ?>"><?php _e('preview', 'constructor'); ?></a>)
             <?php endif; ?>
-            <input type="file" name="constructor[images][footer][src]"/>
+            <?php if ($upload) : ?><input type="file" name="constructor[images][footer][src]"/><?php endif; ?>
         </td>
     </tr>
     <tr>

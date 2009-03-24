@@ -1,3 +1,4 @@
+<?php __('CSS', 'constructor'); // requeried for correct translation ?>
 <table class="form-table">
 <?php if (!is_writable($directory .'/themes/'.$constructor['theme'].'/styles.css')) : ?>
     <tr>

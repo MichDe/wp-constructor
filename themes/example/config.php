@@ -4,7 +4,12 @@
  */
 return array(
             "sidebar"   => 'right',          // sidebar position
-            "layout"    => 'tile',           // layout of homepage
+            'layout'    =>  array(           // layouts styles
+                        'home'    => 'tile',
+                        'archive' => 'default',
+                        'search'  => 'list',
+                        'index'   => 'default',
+                                 ),
             "title"     => array(            // title
                         "pos" => 'left'      // - position
                     ),

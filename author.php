@@ -25,7 +25,7 @@ endif;
                 <div class="entry">
                     <div class="wp-caption alignleft" style="width: 128px">
                         <?php echo get_avatar(get_the_author_email(), 120)?>
-                        <p class="wp-caption-text"><?php printf(__('%s %s', 'constructor'), get_the_author_firstname(), get_the_author_lastname())?></p>
+                        <p class="wp-caption-text"><?php printf(__('%1$s %2$s', 'constructor'), get_the_author_firstname(), get_the_author_lastname())?></p>
                     </div>
                     <dl class="left">
                         <dt><?php _e('Full Name', 'constructor') ?></dt>

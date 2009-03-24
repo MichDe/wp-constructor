@@ -4,6 +4,12 @@
  */
 return array(
             "sidebar"   => 'right',
+            'layout'    =>  array(           // layouts styles
+                        'home'    => 'default',
+                        'archive' => 'default',
+                        'search'  => 'default',
+                        'index'   => 'default',
+                                 ),
             "title"     => array(
                         "pos" => 'center'
                     ),

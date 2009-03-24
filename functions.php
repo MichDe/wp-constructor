@@ -92,7 +92,7 @@ if (!is_admin()) {
                 echo nggShowSlideshow((int)$constructor['slideshow'], '1020' , $constructor['slideshow']['height']);
                 break;
             case 'two':
-                echo nggShowSlideshow((int)$constructor['slideshow'], '543' , $constructor['slideshow']['height']);
+                echo nggShowSlideshow((int)$constructor['slideshow'], '538' , $constructor['slideshow']['height']);
                 break;
             case 'two-right':
             case 'two-left':
@@ -154,6 +154,7 @@ if (!is_admin()) {
         wp_list_pages($params);
         if ($constructor['menu']['rss'])  echo '<li id="rss"><a href="'.get_bloginfo('rss2_url').'"  title="'.__('RSS Feed', 'constructor').'">'. __('RSS Feed', 'constructor').'</a></li>';
         if ($constructor['menu']['size']) echo '<li id="size"><a href="#" class="big">A</a><a href="#" class="normal">A</a><a href="#" class="small">A</a></li>';
+        if ($constructor['menu']['theme']) echo '<li id="theme"><a href="#">'.__('Theme', 'constructor').'</a></li>';
         echo '</ul></div>';
     }
 

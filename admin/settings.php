@@ -48,23 +48,24 @@ function constructor_theme_page_add()
             } else {
                 $upload = $directory.'/images/';
 
-                if ($files && is_writable($directory.'/images/'))
+                if ($files && is_writable($directory.'/images/')) {
 
-                $errors = array();
-                foreach ($files['name']['images'] as $name => $image) {
-                    if (isset($image['src']) && is_uploaded_file($files['tmp_name']['images'][$name]['src'])) {
+                    $errors = array();
+                    foreach ($files['name']['images'] as $name => $image) {
+                        if (isset($image['src']) && is_uploaded_file($files['tmp_name']['images'][$name]['src'])) {
 
-                        if (!preg_match('/\.(jpe?g|png|gif)$/i', $image['src'])) {
-                            $errors[] = sprintf(__('File "%s" is not a image (jpeg, png, gif)','constructor'), $image['src']);
-                            continue;
-                        }
+                            if (!preg_match('/\.(jpe?g|png|gif)$/i', $image['src'])) {
+                                $errors[] = sprintf(__('File "%s" is not a image (jpeg, png, gif)','constructor'), $image['src']);
+                                continue;
+                            }
 
-                        if (move_uploaded_file($files['tmp_name']['images'][$name]['src'], $upload . $image['src'])) {
-                            $data['images'][$name]['src'] = 'images/'.$image['src'];
+                            if (move_uploaded_file($files['tmp_name']['images'][$name]['src'], $upload . $image['src'])) {
+                                $data['images'][$name]['src'] = 'images/'.$image['src'];
+                            }
                         }
                     }
+                    $_SESSION['constructor-errors'] = $errors;
                 }
-                $_SESSION['constructor-errors'] = $errors;
 
                 /**
                  * CSS changes

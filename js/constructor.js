@@ -34,11 +34,11 @@
         // Sidebar Resizer
         if ($('.sidebar').length > 0) {
             if ($('#sidebar').length > 0 && $('#sidebar').height() > $('#container').height()) {
-                $('#container').css('height', $('#sidebar').height() + 'px');
+                $('#container').css('height', $('#sidebar').height() + 6 +'px');
             }
             
             if ($('#extra').length > 0 && $('#extra').height() > $('#container').height()) {
-                $('#container').css('height', $('#extra').height() + 'px');
+                $('#container').css('height', $('#extra').height() + 6 +'px');
             }
         }
     });

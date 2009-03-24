@@ -1,4 +1,4 @@
-<?php
+<?php __('Fonts', 'constructor'); // requeried for correct translation 
     $fonts = require dirname(__FILE__) . '/../fonts.php';
 ?>
 <table class="form-table">
