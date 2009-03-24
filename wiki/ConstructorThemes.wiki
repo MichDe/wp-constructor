@@ -1,0 +1,18 @@
+#summary Themes list
+
+= Black Urban =
+http://wp-constructor.googlecode.com/svn/trunk/themes/black-urban/screenshot.png
+
+= Default =
+http://wp-constructor.googlecode.com/svn/trunk/themes/default/screenshot.png
+
+= Example =
+PSD source is [http://wp-constructor.googlecode.com/svn/trunk/themes/example/design.psd aviable]
+
+http://wp-constructor.googlecode.com/svn/trunk/themes/example/screenshot.png
+
+= Lime =
+http://wp-constructor.googlecode.com/svn/trunk/themes/lime/screenshot.png
+
+= Orange =
+http://wp-constructor.googlecode.com/svn/trunk/themes/orange/screenshot.png
