@@ -1,3 +1,4 @@
+<?php __('Content', 'constructor'); // requeried for correct translation ?>
 <table class="form-table">
 <tr>
     <th scope="row" valign="top"><?php _e('Posts', 'constructor'); ?></th>

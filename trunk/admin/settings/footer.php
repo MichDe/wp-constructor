@@ -1,3 +1,4 @@
+<?php __('Footer', 'constructor'); // requeried for correct translation ?>
 <table class="form-table">
     <tr>
         <th scope="row" valign="top" class="th-full"><?php _e('Footer Text', 'constructor'); ?></th>

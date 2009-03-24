@@ -7,13 +7,23 @@
  */
 header('Content-type: text/css');
 
-if (file_exists(dirname(__FILE__) . '/../../../wp-load.php')) {
-    include_once dirname(__FILE__) . '/../../../wp-load.php';
-    // load from DB
-    $constructor = get_option('constructor');
+// config is null
+$constructor = null;
+
+// load custom theme (using theme switcher)
+if (isset($_GET['theme'])) {
+    $theme = $_GET['theme'];
+    $theme = preg_replace('/[^a-z0-9\-\_]+/i', '', $theme);
+    if (file_exists(dirname(__FILE__) . '/themes/'.$theme.'/config.php')) {
+       $constructor = include dirname(__FILE__) . '/themes/'.$theme.'/config.php';
+    }
 } else {
-    // load from default config
-    $constructor = null;
+    // attemp load data from DB
+    if (file_exists(dirname(__FILE__) . '/../../../wp-load.php')) {
+        include_once dirname(__FILE__) . '/../../../wp-load.php';
+        // load from DB
+        $constructor = get_option('constructor');
+    }
 }
 
 if (!$constructor) {
@@ -63,19 +73,19 @@ switch ($constructor['sidebar']) {
     case 'left':
 $layout = <<<CSS
 #container {
-    width:787px;
+    width:783px;
     margin-left:240px;
     border-left:1px dotted {$color_border};
 }
 #sidebar {
-    margin-left:-1024px !important;
+    margin-left:-1014px !important;
 }
 CSS;
         break;
     case 'two':
 $layout = <<<CSS
 #container {
-    width:547px;
+    width:542px;
     margin-left:240px;
     border-left:1px dotted {$color_border};
 
@@ -103,7 +113,7 @@ $layout = <<<CSS
     border-right:1px dotted {$color_border};
 }
 #extra {
-    margin-left:-226px;
+    margin-left:-228px;
 }
 CSS;
         break;
@@ -129,7 +139,7 @@ CSS;
     default:
 $layout = <<<CSS
 #container {
-    width:787px;
+    width:783px;
     margin-right:240px;
     border-right:1px dotted {$color_border};
 }
