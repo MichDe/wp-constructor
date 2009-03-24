@@ -4,7 +4,7 @@
  */
 return array(
             "sidebar"   => 'right',          // sidebar position
-            'layout'    =>  array(
+            'layout'    =>  array(           // layouts styles
                         'home'    => 'default',
                         'archive' => 'default',
                         'search'  => 'default',
