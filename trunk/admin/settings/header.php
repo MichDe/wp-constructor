@@ -41,11 +41,15 @@
         <br/>
         <input type="checkbox" id="constructor-menu-rss" name="constructor[menu][rss]" value="1" <?php if ($constructor['menu']['rss']) echo 'checked="checked"'; ?>/>
         <label for="constructor-menu-rss"><?php _e('Show link to RSS feed', 'constructor'); ?></label>
+        <?php
+        /*
+        // TODO: Requeried cookie support in constructor.js
         <br/>
         <input type="checkbox" id="constructor-menu-size" name="constructor[menu][size]" value="1" <?php if ($constructor['menu']['size']) echo 'checked="checked"'; ?>/>
         <label for="constructor-menu-size"><?php _e('Show font resizer', 'constructor'); ?></label>
+        */ ?>
         <?php
-         /*
+        /*
         // TODO: Theme switcher
         <br/>
         <input type="checkbox" id="constructor-menu-theme" name="constructor[menu][theme]" value="1" <?php if ($constructor['menu']['theme']) echo 'checked="checked"'; ?>/>
