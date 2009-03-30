@@ -1,0 +1,7 @@
+#summary Admin features
+
+= Many themes =
+All aviable themes see on Themes page
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/themes.png
+
