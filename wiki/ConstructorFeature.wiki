@@ -1,7 +1,59 @@
 #summary Admin features
+#labels Featured
 
 = Many themes =
 All aviable themes see on Themes page
 
 http://wp-constructor.googlecode.com/svn/wiki/screenshot/themes.png
 
+= Six sidebar positions =
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/sidebar.png
+
+= Three layouts =
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/layout.png
+
+= Header Settings =
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/header.png
+
+= Content Settings =
+Constructor theme has custom author homepage, and you can enable links to author homepage
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/content.png
+
+= Footer Settings =
+User can change text in footer
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/footer.png
+
+= Colors =
+Change colors of theme
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/colors.png
+
+= Fonts =
+You can change fonts for content or(and) header
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/fonts.png
+
+= CSS =
+You can change CSS file of any Constructor Themes (writable permissions is requried)
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/css.png
+
+= Images =
+Upload new images for your theme
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/images.png
+
+= Slideshow =
+Add slideshow from Nextgen Gallery plugin
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/slideshow.png
+
+= Export =
+Export your custom theme
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/export.png
