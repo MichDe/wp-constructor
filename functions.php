@@ -226,13 +226,17 @@ if (!is_admin()) {
      *
      * @return string
      */
-    function get_constructor_post_image($size = 312)
+    function get_constructor_post_image($width = 312, $height = 292)
     {
         global $template_uri;
         if ($img = _get_post_image()) {
-            echo '<img src="' .$template_uri. "/timthumb.php?src=".urlencode($img).'&amp;h='.$size.'&amp;w='.$size.'&amp;zc=1&amp;q=95" alt="' .get_the_title(). '"/>';
+            echo '<img src="' .$template_uri. "/timthumb.php?src=".urlencode($img).'&amp;h='.$height.'&amp;w='.$width.'&amp;zc=1&amp;q=95" alt="' .get_the_title(). '"/>';
         } else {
-            echo '<img src="' .$template_uri. '/images/noimage.png" width="'.$size.'px" height="'.$size.'px" alt="' .__('No Image', 'constructor'). '"/>';
+            if ($img = _get_post_image(false)) {
+                echo '<div class="crop" style="width:'.$width.'px;height:'.$height.'px;"><img src="'.$img.'" height="'.$height.'px" alt="' .get_the_title(). '"/></div>';
+            } else {
+                echo '<img src="' .$template_uri. '/images/noimage.png" width="'.$width.'px" height="'.$height.'px" alt="' .__('No Image', 'constructor'). '"/>';
+            }
         }
     }
 
@@ -240,13 +244,20 @@ if (!is_admin()) {
      * _get_post_image
      *
      * @see    wordpress loop
+     * @param  bool $local search only local images
      * @return string
      */
-    function _get_post_image()
+    function _get_post_image($local = true)
     {
         global $post;
-        $home = addcslashes(get_bloginfo('siteurl'), '.-/');
-        $pattern = "/\<\s*img.*src\s*=\s*[\"\']?(?:$home|\/)([^\"\'\ >]*)[\"\']?.*\/\>/i";
+
+        if ($local) {
+            $home = addcslashes(get_bloginfo('siteurl'), '.-/');
+            $pattern = "/\<\s*img.*src\s*=\s*[\"\']?(?:$home|\/)([^\"\'\ >]*)[\"\']?.*\/\>/i";
+        } else {
+            $pattern = "/\<\s*img.*src\s*=\s*[\"\']?([^\"\'\ >]*)[\"\']?.*\/\>/i";
+        }
+
         preg_match_all($pattern, $post->post_content, $images);
 
         if (!isset($images[1][0])) {

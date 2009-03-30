@@ -33,7 +33,7 @@ return array(
                         "onsingle" => false  // - show slideshow on single post
                     ),
             "images"   => array(             // background images
-                        "body" => array('src'=>''),
+                        "body" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'repeat'),
                         "wrap" => array('src'=>'themes/default/header.png','pos'=>'center top'),
                         "wrapper" => array('src'=>''),
                         "sidebar" => array('src'=>'','pos'=>'right bottom'),

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-24 12:50+0200\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2009-03-30 13:25+0200\n"
+"PO-Revision-Date: 2009-03-30 13:26+0200\n"
 "Last-Translator: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-archives.php:53
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-default.php:16
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/single.php:19
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:20
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:18
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:77
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-tile.php:16
 #, php-format
@@ -40,7 +40,7 @@ msgstr "j F Y"
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-archives.php:56
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-default.php:19
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/single.php:22
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:24
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:22
 msgid "Read the rest of this entry &raquo;"
 msgstr "Читать запись полностью &raquo;"
 
@@ -78,21 +78,21 @@ msgstr "Редактировать"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/404.php:13
 msgid "Error 404 - Not Found"
-msgstr "Ошибка 404 - Не найдено"
+msgstr "Ошибка 404 &mdash; Не найдено"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/404.php:16
 msgid "Sorry, but you are looking for something that isn&#8217;t here."
-msgstr "Извините, но то, что вы ищете, здесь нет"
+msgstr "Извините, но того, что вы ищете, здесь нет"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/sidebar.php:18
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:183
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:184
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/single.php:23
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:25
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:23
 msgid "Pages"
 msgstr "Страницы"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/sidebar.php:20
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:30
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:28
 msgid "Categories"
 msgstr "Рубрики"
 
@@ -115,31 +115,35 @@ msgstr "Домой"
 msgid "RSS Feed"
 msgstr "Лента RSS"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:217
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:157
+msgid "Theme"
+msgstr "Тема"
+
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:218
 #, php-format
 msgid "%1$s is proudly powered by %2$s"
 msgstr "%1$s работает на %2$s"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:218
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:219
 msgid "Constructor Theme"
 msgstr "Конструктор"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:219
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:220
 #, php-format
 msgid "%1$s and %2$s."
 msgstr "%1$s и %2$s."
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:219
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:220
 msgid "Entries (RSS)"
 msgstr "Записи (RSS)"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:219
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:220
 msgid "Comments (RSS)"
 msgstr "Комментарии (RSS)"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:234
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:238
 msgid "No Image"
-msgstr "Нет Изображения"
+msgstr "Без Изображения"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:12
 msgid "This post is password protected. Enter the password to view comments."
@@ -240,27 +244,23 @@ msgstr "% комментариев &#187;"
 msgid "Comments Closed"
 msgstr "Комментарии закрыты"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:35
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:33
 msgid "Archives"
-msgstr "Архивы"
+msgstr "Архив"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:22
 msgid "Author RSS Feed"
 msgstr "Лента RSS"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:28
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:32
 #, php-format
 msgid "%1$s %2$s"
 msgstr "%1$s %2$s"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:31
 msgid "Full Name"
-msgstr "Имя и Фамилия"
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:32
-#, php-format
-msgid "%s %s"
-msgstr "%s %s"
+msgstr "Ф.И.О"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:35
 msgid "Nickname"
@@ -268,7 +268,7 @@ msgstr "Никнейм"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:41
 msgid "Visit author website"
-msgstr "Посетить сайт автора"
+msgstr "Посетить "
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:45
 msgid "ICQ"
@@ -288,16 +288,16 @@ msgstr "MSN"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:65
 msgid "About Me"
-msgstr "Немного о себе"
+msgstr "Обо мне"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:70
 #, php-format
 msgid "Last posts by %s"
-msgstr "Последние записи пользователя %s"
+msgstr "Последнии записи пользователя %s"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:81
 msgid "No posts by this author."
-msgstr "У автора нет записей"
+msgstr "Записи данного автора отсутствуют"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/footer.php:25
 msgid "Blogroll"
@@ -306,26 +306,26 @@ msgstr "Ссылки"
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:58
 #, php-format
 msgid "File \"%s\" is not a image (jpeg, png, gif)"
-msgstr "Файл &laquo;%s&raquo; не является изображением (jpeg, png, gif)"
+msgstr "Файл &laquo;%s&raquo; не является изображением"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:114
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:151
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:115
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:152
 msgid "Customize Theme"
 msgstr "Настройки темы"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:114
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:115
 msgid "Customize"
 msgstr "Настройки"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:152
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:153
 msgid "Options saved."
 msgstr "Настройки сохранены."
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:156
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:157
 msgid "Errors"
 msgstr "Ошибки"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:182
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:183
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
@@ -335,7 +335,7 @@ msgstr "Макет"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:8
 msgid "Homepage"
-msgstr "Главная"
+msgstr "Домашняя страница"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:10
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:11
@@ -346,7 +346,7 @@ msgstr "Главная"
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:52
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:53
 msgid "Default"
-msgstr "По Умолчанию"
+msgstr "По умолчанию"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:13
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:14
@@ -357,7 +357,7 @@ msgstr "По Умолчанию"
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:55
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:56
 msgid "Tile"
-msgstr "Плитка"
+msgstr "Плиткой"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:16
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:17
@@ -368,11 +368,11 @@ msgstr "Плитка"
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:58
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:59
 msgid "List"
-msgstr "Лист"
+msgstr "Списком"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:22
 msgid "Archive"
-msgstr "Архивы"
+msgstr "Архив"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:36
 msgid "Search"
@@ -568,110 +568,132 @@ msgstr "нажмите и сохраните файл"
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/export.php:12
 #, php-format
 msgid "For import theme - use your FTP access and create new folder in folder <code>%s/themes</code> and upload <code>config.php</code>"
-msgstr "Для импортирования изменений используйте FTP доступ - создайте новую директорию в каталоге <code>%s/themes</code> и залейте туда сохраненный <code>config.php</code>"
+msgstr "Для импортирования изменений используйте FTP доступ &mdash; создайте новую директорию в каталоге <code>%s/themes</code> и залейте туда сохраненный <code>config.php</code>"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:1
 msgid "Images"
 msgstr "Изображения"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:8
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:13
 #, php-format
 msgid "<font color=\"red\"><b>Warning!</b></font>: Directory \"%s\" is not writable."
 msgstr "<font color=\"red\"><b>Внимание!</b></font>: Директория  &laquo;%s&raquo; имеет атрибут только для чтения."
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:12
-msgid "Background Gradient"
-msgstr "Фоновый градиент"
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:12
-msgid "repeat by X"
-msgstr "будет повторяться по горизонтали"
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:16
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:26
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:56
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:66
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:97
-msgid "preview"
-msgstr "предпросмотр"
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:22
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:17
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:69
 msgid "Background Image"
 msgstr "Фоновое изображение"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:32
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:72
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:21
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:73
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:103
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:113
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:144
+msgid "preview"
+msgstr "предпросмотр"
+
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:27
+msgid "Image Repeat"
+msgstr "Повторять изображение"
+
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:29
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:30
+msgid "No Repeat"
+msgstr "Без повторения"
+
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:33
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:34
+msgid "Repeat Horizontal"
+msgstr "Повторять по горизонтали"
+
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:37
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:38
+msgid "Repeat Vertical"
+msgstr "Повторять по вертикали"
+
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:48
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:79
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:119
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:150
 msgid "Image Position"
 msgstr "Позиция изображения"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:34
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:74
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:105
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:50
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:81
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:121
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:152
 msgid "Top Left"
 msgstr "Вверху Слева"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:35
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:75
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:106
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:51
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:82
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:122
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:153
 msgid "Top Center"
 msgstr "Вверху По центру"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:36
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:76
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:107
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:52
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:83
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:123
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:154
 msgid "Top Right"
 msgstr "Вверху Справа"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:40
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:80
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:111
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:56
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:87
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:127
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:158
 msgid "Center Left"
 msgstr "По центру Слева"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:41
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:81
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:112
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:57
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:88
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:128
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:159
 msgid "Center Center"
 msgstr "По центру"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:42
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:82
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:113
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:58
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:89
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:129
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:160
 msgid "Center Right"
 msgstr "По центру Справа"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:46
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:86
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:117
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:62
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:93
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:133
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:164
 msgid "Bottom Left"
 msgstr "Внизу Слева"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:47
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:87
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:118
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:63
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:94
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:134
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:165
 msgid "Bottom Center"
 msgstr "Внизу По центру"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:48
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:88
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:119
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:64
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:95
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:135
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:166
 msgid "Bottom Right"
 msgstr "Внизу Справа"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:52
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:99
 msgid "Content Image"
-msgstr "Изображение под контентом"
+msgstr "Изображение под контентом "
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:52
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:99
 msgid "repeat by Y and w/out opacity"
 msgstr "будет повторяться по вертикали и затирает полупрозрачность"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:62
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:109
 msgid "Sidebar Image"
 msgstr "Изображения в боковой панели"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:93
+#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:140
 msgid "Footer Image"
 msgstr "Изображение в &laquo;подвале&raquo;"
 
@@ -735,10 +757,6 @@ msgstr "Отображать ссылку на главную"
 msgid "Show link to RSS feed"
 msgstr "Отображать ссылку на RSS-ленту"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/header.php:46
-msgid "Show font resizer"
-msgstr "Отображать кнопки изменения размеров шрифта"
-
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/content.php:1
 msgid "Content"
 msgstr "Контент"
@@ -749,8 +767,5 @@ msgstr "Записи"
 
 #: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/content.php:7
 msgid "Show author link"
-msgstr "Показывать ссылку на страницу автора"
-
-#~ msgid "hightlight color"
-#~ msgstr "цвет подсвеченных элементов"
+msgstr "Отображать ссылку на страницу автора"
 

@@ -159,8 +159,8 @@ $fonts_body = $fonts[$constructor['fonts']['body']];
 /* Background images */
 if (isset($constructor['images']['body']['src']) && !empty($constructor['images']['body']['src'])) {
     $body_bg = "background-image: url({$constructor['images']['body']['src']});\n"
-              ."background-repeat: repeat-x;\n"
-              ."background-position: center top;\n";
+              ."background-repeat: {$constructor['images']['body']['repeat']};\n"
+              ."background-position: {$constructor['images']['body']['pos']};\n";
 } else { $body_bg = null; }
 
 if (isset($constructor['images']['wrap']['src']) && !empty($constructor['images']['wrap']['src'])) {
@@ -215,10 +215,10 @@ a:hover { color:{$color1} }
 th {
     color:{$color_text};
     background-color:{$color3};
-    border-color:1px solid {$color_border}
+    border-color: {$color_border}
 }
 td {
-    border-color:1px solid {$color_border}
+    border-color: {$color_border}
 }
 
 /*Form*/
