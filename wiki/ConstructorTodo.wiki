@@ -1,7 +1,10 @@
 #summary TODO List of project
+#labels Featured
 
+  # Slideshow with post content (like in some _premium_ themes)
+  # Change content width
+  # Change sidebar and extrabar width
   # Cache for css.php
   # Export theme as ZIP archive (with all images)
-  # Slideshow with post content (like in some _premium_ themes)
-  # Ukrainian localization (update) - thx to Baziak
-  # Polish localization (update) - thx to mummle
+  # Ukrainian localization (need update) - thx to Baziak
+  # Polish localization (need update) - thx to mummle
