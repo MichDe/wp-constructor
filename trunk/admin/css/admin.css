@@ -17,7 +17,6 @@
 	height: 28px;
 	background: url(../images/select2.png) center;
 }
-
 .constructor .select a {
     width:300px;
     float:left;
@@ -45,6 +44,11 @@
 .constructor .position a.selected {
     background-color: #21759B
 }
+.constructor .repeat a {
+    width:249px !important;;
+    height:190px
+}
+
 
 .constructor #slideshow a{
     width:auto !important;
@@ -115,13 +119,13 @@
 }
 
 
-#constr-opacity a {
+#opacity a {
     background:url(../images/patern.png) !important;
     width:220px !important;
     height:80px !important;
 }
 
-#constr-opacity div {
+#opacity div {
     text-align:center;
     font-size:1.4em;
     font-weight:700;
@@ -138,14 +142,14 @@
     -webkit-border-radius: 6px
 }
 
-#constr-opacity .dark {
+#opacity .dark {
     color:#fff;
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYmBgaAAIMAAAjwCD5Hc2/AAAAABJRU5ErkJggg==);
     background:rgba(0, 0, 0, 0.5);
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#85333333, endColorstr=#85000000);
 }
 
-#constr-opacity .light {
+#opacity .light {
     color:#000;
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/v//fyxAgAEACWgDXjXePfkAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.5);

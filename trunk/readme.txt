@@ -2,7 +2,7 @@
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 
-Theme URI: http://anton.shevchuk.name/wordpress/theme-constructor-for-wordpress/
+Theme URI: http://code.google.com/p/wp-constructor/
 
 == Description ==
 
@@ -24,7 +24,18 @@ For Wordpress version 2.7+
 2. Make a folders `images` and `cache` writable
 3. Activate the theme through the 'Themes' menu in WordPress
 
-== Make Theme ==
+== F.A.Q ==
+
+= Using Tile and List Layouts with images =
+
+1. Open settings page of constructor theme `/wp-admin/themes.php?page=functions.php`
+2. Open tab `Layout`
+3. Change layout to `tile` or `list`
+4. System use first local image in your post for create thumbnail
+5. If not exist - using first external image - fullsize, without thumbnail - only resize to height and crop
+6. If not exists any image - show `constructor/images/noimage.png`
+
+= Make Theme =
 
 1. Change current theme (upload images, change position, set layout etc).
 2. Go to export tab and click on export button, save file as `config.php`
@@ -33,7 +44,7 @@ For Wordpress version 2.7+
    and upload `config.php`, `styles` and all used images to it
 5. Change path to images in `config.php` (see `images` section)
 
-== Make Images ==
+= Make Images =
 
 1. Open `constructor/themes/example/design.psd` in Photoshop
 2. Click on `slice` tool - you can see current slice for example theme

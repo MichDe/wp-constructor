@@ -29,7 +29,7 @@ endif;
                     </div>
                     <dl class="left">
                         <dt><?php _e('Full Name', 'constructor') ?></dt>
-                        <dd><?php printf(__('%s %s', 'constructor'), get_the_author_firstname(), get_the_author_lastname())?></dd>
+                        <dd><?php printf(__('%1$s %2$s', 'constructor'), get_the_author_firstname(), get_the_author_lastname())?></dd>
 
                         <?php if (get_the_author_nickname()) : ?>
                             <dt><?php _e('Nickname', 'constructor') ?></dt>
