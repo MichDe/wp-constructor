@@ -1,0 +1,7 @@
+#summary TODO List of project
+
+  # Cache for css.php
+  # Export theme as ZIP archive (with all images)
+  # Slideshow with post content (like in some _premium_ themes)
+  # Ukrainian localization (update) - thx to Baziak
+  # Polish localization (update) - thx to mummle
