@@ -11,6 +11,9 @@ $(document).ready(function(){
 
     // Admin Tabs
     $('#tabs').tabs({ fxFade: true, fxSpeed: 'fast' });
+
+    
+
 });
 
 })(jQuery);

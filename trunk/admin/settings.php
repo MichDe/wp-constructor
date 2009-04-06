@@ -8,17 +8,24 @@ add_action('admin_menu', 'constructor_theme_page_add');
 
 $directory_uri = get_template_directory_uri();
 
-wp_enqueue_script('jquery');
-wp_enqueue_script('jquery-ui-tabs');
 wp_enqueue_script('thickbox');
+//wp_enqueue_script('jquery');
+//wp_enqueue_script('jquery-ui-tabs');
+//wp_enqueue_script('jquery-ui-slider');
+
+wp_deregister_script('jquery');
+wp_deregister_script('jquery-ui');
+
+wp_enqueue_script('jquery',                  $directory_uri .'/admin/js/jquery.js');
+wp_enqueue_script('jquery-ui',               $directory_uri .'/admin/js/jquery-ui.js');
+
 wp_enqueue_script('constructor-colorpicker', $directory_uri .'/admin/js/colorpicker.js', 'jquery');
 wp_enqueue_script('constructor-settings',    $directory_uri .'/admin/js/settings.js', 'jquery');
 
 wp_enqueue_style('thickbox');
 wp_enqueue_style('constructor-admin',       $directory_uri .'/admin/css/admin.css');
 wp_enqueue_style('constructor-colorpicker', $directory_uri .'/admin/css/colorpicker.css');
-wp_enqueue_style('jquery.ui.tabs',          $directory_uri .'/admin/css/jquery.ui.tabs.css');
-
+wp_enqueue_style('jquery.ui',               $directory_uri .'/admin/css/jquery-ui.css');
 
 if (version_compare(phpversion(), '5.0.0', '<')) {
     require_once 'compatibility.php';
@@ -166,19 +173,20 @@ function constructor_theme_page()
             <form method="post" id="constructor-form" action="<?php echo attribute_escape($_SERVER['REQUEST_URI']); ?>" enctype="multipart/form-data">
                 <?php wp_nonce_field('constructor'); ?>
                 <input type="hidden" name="action" value="save" />
+                <div id="tabs">
+                    <ul>
+                        <?php foreach ($modules as $module) : ?>
+                        <li><a href="#constr-<?php echo $module ?>"><?php _e(ucfirst($module), 'constructor'); ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
 
-                <ul id="tabs">
                     <?php foreach ($modules as $module) : ?>
-                    <li><a href="#constr-<?php echo $module ?>"><?php _e(ucfirst($module), 'constructor'); ?></a></li>
+                    <div id="constr-<?php echo $module ?>">
+                        <?php require_once "settings/$module.php" ?>
+                    </div>
                     <?php endforeach; ?>
-                </ul>
 
-                <?php foreach ($modules as $module) : ?>
-                <div id="constr-<?php echo $module ?>">
-                    <?php require_once "settings/$module.php" ?>
                 </div>
-                <?php endforeach; ?>
-                
                 <p class="submit">
                     <input type="submit" name="Submit" class="button-primary" value="<?php _e('Save Changes', 'constructor')?>" />
                 </p>

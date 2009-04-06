@@ -3,13 +3,14 @@
  * @package WordPress
  * @subpackage Constructor
  */
-
 wp_enqueue_script( 'comment-reply' );
+
+get_header();
+get_constructor_slideshow()
 ?>
-<?php get_header(); ?>
 <div id="wrapper" class="box shadow opacity">
     <div id="container">
-    <?php get_constructor_slideshow() ?>
+    <?php get_constructor_slideshow(true) ?>
 
     <?php if (have_posts()) : ?>
         <div id="posts">

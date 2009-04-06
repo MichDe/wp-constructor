@@ -7,12 +7,10 @@ Template Name: Authors
  * @package WordPress
  * @subpackage Constructor
  */
-?>
-<?php get_header(); ?>
+
+get_header(); ?>
 <div id="wrapper" class="box shadow opacity">
     <div id="container" class="container-authors">
-    <?php get_constructor_slideshow() ?>
-
         <div id="posts">
         <?php while (have_posts()) : the_post(); ?>
             <div <?php post_class(); ?> id="post-<?php the_ID() ?>">

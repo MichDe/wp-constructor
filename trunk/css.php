@@ -7,6 +7,8 @@
  */
 header('Content-type: text/css');
 
+error_reporting(E_ALL);
+
 // config is null
 $constructor = null;
 
@@ -30,6 +32,10 @@ if (!$constructor) {
     $constructor = include dirname(__FILE__) . '/themes/default/config.php';
 }
 
+$width    = isset($constructor['layout']['width'])?$constructor['layout']['width']:1024;
+$sidebar  = isset($constructor['layout']['sidebar'])?$constructor['layout']['sidebar']:240;
+$extra    = isset($constructor['layout']['extra'])?$constructor['layout']['extra']:240;
+
 $color1   = $constructor['color']['header1'];
 $color2   = $constructor['color']['header2'];
 $color3   = $constructor['color']['header3'];
@@ -42,10 +48,21 @@ $color_text    = $constructor['color']['text'];
 $color_text2   = $constructor['color']['text2'];
 $color_border  = $constructor['color']['border'];
 $color_border2 = $constructor['color']['border2'];
+$color_opacity = isset($constructor['color']['opacity'])?$constructor['color']['opacity']:'#ffffff';
 
 /* Opacity */
 // switch statement for $constructor['opacity']
 switch ($constructor['opacity']) {
+    case 'none':
+        $opacity = '';
+        break;
+    case 'color':
+        $opacity = <<<CSS
+.opacity {
+    background-color:{$color_opacity}
+}
+CSS;
+        break;
     case 'dark':
         $opacity = <<<CSS
 .opacity {
@@ -68,68 +85,83 @@ CSS;
 }
 
 /* Layout */
+
+// width changes
+$sidebar2 = $sidebar - 20;
+$extra2   = $extra   - 20;
+
 // switch statement for $sidebar
 switch ($constructor['sidebar']) {
     case 'left':
+$width2 = $width - ($sidebar + 1); // 1 is border width
+
 $layout = <<<CSS
 #container {
-    width:783px;
-    margin-left:240px;
+    width:{$width2}px;
+    margin-left:{$sidebar}px;
     border-left:1px dotted {$color_border};
 }
 #sidebar {
-    margin-left:-1014px !important;
+    margin-left:-{$width}px !important;
 }
 CSS;
         break;
     case 'two':
+$width2 = $width - ($sidebar + $extra + 2); // 2 is borders width
 $layout = <<<CSS
 #container {
-    width:542px;
-    margin-left:240px;
+    width:{$width2}px;
+    margin-left:{$extra}px;
     border-left:1px dotted {$color_border};
 
-    margin-right:240px;
+    margin-right:{$sidebar}px;
     border-right:1px dotted {$color_border};
 }
 #sidebar {
-    margin-left:-240px;
+    margin-left:-{$sidebar}px;
 }
 #extra {
-    margin-left:-1024px;
+    margin-left:-{$width}px;
 }
 CSS;
         break;
     case 'two-right':
+$margin = $sidebar + $extra + 2;
+$width2 = $width - $margin;
+
 $layout = <<<CSS
 #container {
-    width:562px;
+    width:{$width2}px;
 
-    margin-right:460px;
+    margin-right:{$margin}px;
     border-right:1px dotted {$color_border};
 }
 #sidebar {
-    margin-left:-458px;
+    margin-left:-{$margin}px;
     border-right:1px dotted {$color_border};
 }
 #extra {
-    margin-left:-228px;
+    margin-left:-{$extra}px;
 }
 CSS;
         break;
     case 'two-left':
+$margin  = $sidebar + $extra + 2;
+$margin2 = $width - $sidebar;
+$width2  = $width - $margin;
+
 $layout = <<<CSS
 #container {
-    width:562px;
-    margin-left:460px;
+    width:{$width2}px;
+    margin-left:{$margin}px;
     border-left:1px dotted {$color_border};
 }
 #sidebar {
-    margin-left:-1024px;
+    margin-left:-{$width}px;
     border-right:1px dotted {$color_border};
 }
 #extra {
-    margin-left:-794px;
+    margin-left:-{$margin2}px;
 }
 CSS;
         break;
@@ -137,14 +169,15 @@ CSS;
         break;
     case 'right':
     default:
+$width2  = $width - $sidebar;
 $layout = <<<CSS
 #container {
-    width:783px;
-    margin-right:240px;
+    width:{$width2}px;
+    margin-right:{$sidebar}px;
     border-right:1px dotted {$color_border};
 }
 #sidebar {
-    margin-left:-240px;
+    margin-left:-{$sidebar}px;
 }
 CSS;
         break;
@@ -252,6 +285,10 @@ fieldset{
 {$opacity}
 /*/CSS3*/
 /*Layout*/
+#body {
+    width:{$width}px;
+}
+
 #wrap {
     {$wrap_bg}
 }
@@ -261,9 +298,16 @@ fieldset{
 }
 
 {$layout}
-
+    .container-full {
+        width:{$width}px !important;
+    }
 #sidebar{
-    $sidebar_bg
+    {$sidebar_bg};
+    width:{$sidebar2}px;
+}
+
+#extra {
+    width:{$extra2}px;
 }
 
 #footer{

@@ -40,12 +40,9 @@ foreach ($AllPosts as $Post) {
     $Archive[$Post->year][$Post->month][] = array('ID'=>$Post->ID, 'title'=>$Post->post_title);
 }
 
-?>
-<?php get_header(); ?>
+get_header(); ?>
 <div id="wrapper" class="box shadow opacity">
     <div id="container" >
-    <?php get_constructor_slideshow() ?>
-
         <div id="posts">
         <?php while (have_posts()) : the_post(); ?>
             <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
