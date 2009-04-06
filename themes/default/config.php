@@ -5,6 +5,9 @@
 return array(
             "sidebar"   => 'right',          // sidebar position
             'layout'    =>  array(           // layouts styles
+                        'width'   => 1024,   // container width
+                        'sidebar' => 240,    // sidebar width
+                        'extra'   => 240,    // extrabar  width
                         'home'    => 'default',
                         'archive' => 'default',
                         'search'  => 'default',
@@ -27,6 +30,7 @@ return array(
                         "size" => false,     // - font resizer
                     ),
             "slideshow" => array(            // NextGen gallery options
+                        "layout" => 'in',    // - slideshow "in" main container or "over"
                         "id" => null,        // - slideshow ID
                         "height" => 200,     // - height in px
                         "onpage" => false,   // - show slideshow on page
@@ -43,6 +47,7 @@ return array(
             "color"   => array(              // theme colors
                         "bg"      => '#fff',
                         "bg2"     => '#fff5c5',
+                        "opacity" => '#fff',
                         "title"   => '#333',
                         "title2"  => '#555',
                         "text"    => '#333',

@@ -7,11 +7,12 @@ Template Name: Monocolumn
  * @package WordPress
  * @subpackage Constructor
  */
-?>
-<?php get_header(); ?>
+
+wp_enqueue_script( 'comment-reply' );
+
+get_header(); ?>
 <div id="wrapper" class="box shadow opacity">
     <div id="container" class="container-full" >
-
         <div id="posts">
         <?php while (have_posts()) : the_post(); ?>
             <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
@@ -20,14 +21,14 @@ Template Name: Monocolumn
                 </div>
                 <div class="entry">                
                     <?php the_content(__('Read the rest of this entry &raquo;', 'constructor')) ?>
-                    <ul>
-                       <?php wp_get_archives('type=monthly&show_post_count=1'); ?>
-                    </ul>
+                    <?php wp_link_pages(array('before' => '<p class="pages"><strong>'.__('Pages', 'constructor').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
                 </div>
                 <div class="footer">
                     <div class="links right">
+                    <?php the_time(__('F jS, Y', 'constructor')) ?> |
+                    <?php the_tags(__('Tags', 'constructor') . ': ', ', ', '|'); ?>
                     <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
-                    </div>
+                    <?php comments_popup_link(__('No Comments &#187;', 'constructor'), __('1 Comment &#187;', 'constructor'), __('% Comments &#187;', 'constructor'), '', __('Comments Closed', 'constructor') ); ?>                    </div>
                     <div class="line clear"></div>
                 </div>
             </div>

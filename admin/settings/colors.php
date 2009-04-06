@@ -22,10 +22,15 @@ $(document).ready(function(){
 
     initColorPicker('color_bg');
     initColorPicker('color_bg2');
+    
+    initColorPicker('color_opacity');
+
     initColorPicker('color_title');
     initColorPicker('color_title2');
+
     initColorPicker('color_text');
     initColorPicker('color_text2');
+
     initColorPicker('color_border');
     initColorPicker('color_border2');
 });
@@ -39,6 +44,8 @@ $(document).ready(function(){
 
 <input type="hidden" id="constructor-color_bg" name="constructor[color][bg]" value="<?php echo $constructor['color']['bg']?>"/>
 <input type="hidden" id="constructor-color_bg2" name="constructor[color][bg2]" value="<?php echo $constructor['color']['bg2']?>"/>
+
+<input type="hidden" id="constructor-color_opacity" name="constructor[color][opacity]" value="<?php echo $constructor['color']['opacity']?>"/>
 
 <input type="hidden" id="constructor-color_text" name="constructor[color][text]" value="<?php echo $constructor['color']['text']?>"/>
 <input type="hidden" id="constructor-color_text2" name="constructor[color][text2]" value="<?php echo $constructor['color']['text2']?>"/>
@@ -55,6 +62,12 @@ $(document).ready(function(){
 <tr>
     <th scope="row" valign="top"><?php _e('Opacity', 'constructor'); ?></th>
     <td class="select" id="opacity" >
+        <a href="#" title="<?php echo attribute_escape(__('None', 'constructor')); ?>" name="none" <?php if($constructor['opacity'] == 'none') echo 'class="selected"'; ?>>
+            <div class="none"><?php echo attribute_escape(__('None', 'constructor')); ?></div>
+        </a>
+        <a href="#" title="<?php echo attribute_escape(__('Color', 'constructor')); ?>" name="color" <?php if($constructor['opacity'] == 'color') echo 'class="selected"'; ?>>
+            <div style="background-color: <?php echo $constructor['color']['opacity'] ?>"><?php echo attribute_escape(__('Color', 'constructor')); ?></div>
+        </a>
         <a href="#" title="<?php echo attribute_escape(__('Dark', 'constructor')); ?>" name="dark" <?php if($constructor['opacity'] == 'dark') echo 'class="selected"'; ?>>
             <div class="dark"><?php echo attribute_escape(__('Dark', 'constructor')); ?></div>
         </a>
@@ -71,6 +84,9 @@ $(document).ready(function(){
         <br class="clear"/>
         <div id="color_bg2" class="color"><div style="background-color: <?php echo $constructor['color']['bg2'] ?>"></div></div>
         - <?php echo attribute_escape(__('background alternative', 'constructor')); ?>
+        <br class="clear"/>
+        <div id="color_opacity" class="color"><div style="background-color: <?php echo $constructor['color']['opacity'] ?>"></div></div>
+        - <?php echo attribute_escape(__('opacity style color', 'constructor')); ?>
         <br class="clear"/>
         <div id="color_text" class="color"><div style="background-color: <?php echo $constructor['color']['text'] ?>"></div></div>
         - <?php echo attribute_escape(__('text', 'constructor')); ?>

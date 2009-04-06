@@ -76,31 +76,40 @@ if (!is_admin()) {
      * @access  public
      * @return  rettype  return
      */
-    function get_constructor_slideshow()
+    function get_constructor_slideshow($in = false)
     {
         global $constructor;
 
-        if (!isset($constructor['slideshow']['id']) or $constructor['slideshow']['id'] == '' or !function_exists('nggShowSlideshow')) return false;
+        if (!isset($constructor['slideshow']['id']) or $constructor['slideshow']['id'] == '' or !function_exists('nggShowSlideshow')) {
+            return false;
+        }
 
         if (is_page()   && !$constructor['slideshow']['onpage'])   return false;
         if (is_single() && !$constructor['slideshow']['onsingle']) return false;
 
-        echo '<div id="header-slideshow" style="height:'.$constructor['slideshow']['height'].'px;">';
-        // switch statement for $constructor['sidebar']
-        switch ($constructor['sidebar']) {
-            case 'none':
-                echo nggShowSlideshow((int)$constructor['slideshow'], '1020' , $constructor['slideshow']['height']);
-                break;
-            case 'two':
-                echo nggShowSlideshow((int)$constructor['slideshow'], '538' , $constructor['slideshow']['height']);
-                break;
-            case 'two-right':
-            case 'two-left':
-                echo nggShowSlideshow((int)$constructor['slideshow'], '558' , $constructor['slideshow']['height']);
-                break;
-            default:
-                echo nggShowSlideshow((int)$constructor['slideshow'], '774' , $constructor['slideshow']['height']);
-                break;
+        if ( $in && $constructor['slideshow']['layout'] == 'over') return false;
+        if (!$in && $constructor['slideshow']['layout'] == 'in')   return false;
+
+        echo '<div id="header-slideshow" style="height:'.$constructor['slideshow']['height'].'px">';
+
+        if (!$in) {
+
+            echo nggShowSlideshow((int)$constructor['slideshow'], $constructor['layout']['width'] - 2 , $constructor['slideshow']['height']);
+        } else {
+            // switch statement for $constructor['sidebar']
+            switch ($constructor['sidebar']) {
+                case 'none':
+                    echo nggShowSlideshow((int)$constructor['slideshow'], ($constructor['layout']['width'] - 4) , $constructor['slideshow']['height']);
+                    break;
+                case 'two':
+                case 'two-right':
+                case 'two-left':
+                    echo nggShowSlideshow((int)$constructor['slideshow'], ($constructor['layout']['width'] - $constructor['layout']['sidebar'] - $constructor['layout']['extra'] - 6) , $constructor['slideshow']['height']);
+                    break;
+                default:
+                    echo nggShowSlideshow((int)$constructor['slideshow'], ($constructor['layout']['width'] - $constructor['layout']['sidebar'] - 4) , $constructor['slideshow']['height']);
+                    break;
+            }
         }
         echo '</div>';
     }
@@ -155,7 +164,7 @@ if (!is_admin()) {
         if ($constructor['menu']['rss'])  echo '<li id="rss"><a href="'.get_bloginfo('rss2_url').'"  title="'.__('RSS Feed', 'constructor').'">'. __('RSS Feed', 'constructor').'</a></li>';
         if ($constructor['menu']['size']) echo '<li id="size"><a href="#" class="big">A</a><a href="#" class="normal">A</a><a href="#" class="small">A</a></li>';
         if ($constructor['menu']['theme']) echo '<li id="theme"><a href="#">'.__('Theme', 'constructor').'</a></li>';
-        echo '</ul></div>';
+        echo '</ul><div class="clear"></div></div>';
     }
 
     /**

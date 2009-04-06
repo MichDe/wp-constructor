@@ -45,8 +45,8 @@
     background-color: #21759B
 }
 .constructor .repeat a {
-    width:249px !important;;
-    height:190px
+    width:140px !important;
+    height:107px
 }
 
 
@@ -140,6 +140,10 @@
     -moz-border-radius: 6px;
     -khtml-border-radius: 6px;
     -webkit-border-radius: 6px
+}
+
+#opacity .none {
+    color:#fff;
 }
 
 #opacity .dark {

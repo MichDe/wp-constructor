@@ -5,6 +5,9 @@
 return array(
             "sidebar"   => 'right',
             'layout'    =>  array(           // layouts styles
+                        'width'   => 1024,   // container width
+                        'sidebar' => 240,    // sidebar width
+                        'extra'   => 240,    // extrabar  width
                         'home'    => 'default',
                         'archive' => 'default',
                         'search'  => 'default',
@@ -27,6 +30,7 @@ return array(
                         "size" => false,
                     ),
             "slideshow" => array(
+                        "layout" => 'in',
                         "id" => null,
                         "height" => 200,
                         "onpage" => false,    // show slideshow on page
@@ -42,6 +46,7 @@ return array(
             "color"   => array(
                         "bg"      => '#000',
                         "bg2"     => '#333',
+                        "opacity" => '#000',
                         "title"   => '#fff',
                         "title2"  => '#ccc',
                         "text"    => '#fff',

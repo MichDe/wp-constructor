@@ -7,8 +7,8 @@ Template Name: Sitemap
  * @package WordPress
  * @subpackage Constructor
  */
-?>
-<?php get_header(); ?>
+
+get_header(); ?>
 <div id="wrapper" class="box shadow opacity">
     <div id="container" class="container-sitemap">
         <div id="posts">
