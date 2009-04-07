@@ -1,0 +1,9 @@
+#summary Listing of aviable page templates
+
+= Introduction =
+
+Some wordpress themes have custom templates you can use for certain pages that might have additional features or custom layouts.
+
+In constructor theme aviable four templates.
+
+= Templates =
