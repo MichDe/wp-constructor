@@ -40,9 +40,10 @@ return array(
             "images"   => array(             // background images
                         "body" => array('src'=>'themes/example/gradient.png', 'pos'=>'left top', 'repeat'=>'repeat-x'),
                         "wrap" => array('src'=>'themes/example/header.png','pos'=>'center top'),
-                        "wrapper" => array('src'=>'themes/example/wrapper.png'),
-                        "sidebar" => array('src'=>'themes/example/sidebar.png','pos'=>'right bottom'),
-                        "footer"  => array('src'=>'themes/example/footer.png','pos'=>'right bottom'),
+                        "wrapper"  => array('src'=>'themes/example/wrapper.png'),
+                        "sidebar"  => array('src'=>'themes/example/sidebar.png','pos'=>'right bottom'),
+                        "extrabar" => array('src'=>'','pos'=>'right bottom'),
+                        "footer"   => array('src'=>'themes/example/footer.png','pos'=>'right bottom'),
                     ),
             "opacity"   => 'light',          // type of opacity
             "color"   => array(              // theme colors

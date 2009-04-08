@@ -328,6 +328,8 @@ div.aligncenter {
         margin-bottom: 12px
     }
     .hentry .entry {
+        font-size:1.2em;
+        line-height:1.4em;
         padding:0 4px;
     }
     .hentry .entry h1,
@@ -341,8 +343,6 @@ div.aligncenter {
         margin-left:12px;
     } 
     .hentry .entry p{
-        font-size:1.2em;
-        line-height:1.4em;
 	    text-indent:12px;
 	    margin-bottom:4px
 	}
@@ -505,7 +505,7 @@ div.aligncenter {
 /*/Search*/
 /*Form*/
 input, select, textarea {
-    font-size:1.3em;
+    font-size:1.4em;
     padding: 4px;
     border-width:1px;
     border-style:solid;

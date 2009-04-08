@@ -39,8 +39,9 @@ return array(
             "images"   => array(
                         "body" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'repeat'),
                         "wrap" => array('src'=>'themes/lime/header.jpg','pos'=>'center top'),
-                        "sidebar" => array('src'=>'','pos'=>'right bottom'),
-                        "footer"  => array('src'=>'','pos'=>'left bottom'),
+                        "sidebar"  => array('src'=>'','pos'=>'right bottom'),
+                        "extrabar" => array('src'=>'','pos'=>'right bottom'),
+                        "footer"   => array('src'=>'','pos'=>'left bottom'),
                     ),
             "opacity"   => 'light',
             "color"   => array(
