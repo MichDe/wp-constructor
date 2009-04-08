@@ -4,17 +4,6 @@
  * @subpackage Constructor
  */
 
-/**
- * @todo:
- *      - remove images from disk (use AJAX)
- *      - translate to Ukrainian
- *
- *      - slideshow based on jquery (use feed as source? feedburner cheat?)
- *
- *      - export curent theme to zip
- *      - preview (live?)
- */
-
 if ( function_exists('register_sidebar') ) {
     register_sidebar(array(
         'name'=>'sidebar',

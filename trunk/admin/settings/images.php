@@ -3,6 +3,7 @@
 <input type="hidden" id="constructor-images-body-pos" name="constructor[images][body][pos]" value="<?php echo $constructor['images']['body']['pos']?>"/>
 <input type="hidden" id="constructor-images-wrap-pos" name="constructor[images][wrap][pos]" value="<?php echo $constructor['images']['wrap']['pos']?>"/>
 <input type="hidden" id="constructor-images-sidebar-pos" name="constructor[images][sidebar][pos]" value="<?php echo $constructor['images']['sidebar']['pos']?>"/>
+<input type="hidden" id="constructor-images-extrabar-pos" name="constructor[images][extrabar][pos]" value="<?php echo $constructor['images']['extrabar']['pos']?>"/>
 <input type="hidden" id="constructor-images-footer-pos" name="constructor[images][footer][pos]" value="<?php echo $constructor['images']['footer']['pos']?>"/>
 <table class="form-table">
     <?php
@@ -14,7 +15,7 @@
     </tr>
     <?php endif; ?>
     <tr>
-        <th scope="row" valign="top"><?php _e('Background Image', 'constructor'); ?></th>
+        <th scope="row" valign="top" rowspan="3"><?php _e('Body Image', 'constructor'); ?></th>
         <td>
             <input type="text" name="constructor[images][body][src]" value="<?php echo $constructor['images']['body']['src']?>"/>
             <?php if ($upload) : ?><input type="file" name="constructor[images][body][src]"/><?php endif; ?>
@@ -24,8 +25,8 @@
         </td>
     </tr>
     <tr>
-        <th scope="row" valign="top"><?php _e('Image Repeat', 'constructor'); ?></th>
         <td class="repeat select" id="images-body-repeat">
+            <p><?php _e('Image Repeat', 'constructor'); ?></p>
             <a href="#" title="<?php _e('No Repeat', 'constructor'); ?>" name="no-repeat" <?php if($constructor['images']['body']['repeat'] == 'no-repeat') echo 'class="selected"'; ?>>
                 <img src="<?php echo $directory_uri ?>/admin/images/no-repeat.png" alt="<?php echo attribute_escape(__('No Repeat', 'constructor')); ?>" />
             </a>
@@ -45,8 +46,8 @@
         </td>
     </tr>
     <tr>
-        <th scope="row" valign="top"><?php _e('Image Position', 'constructor'); ?></th>
         <td class="position select" id="images-body-pos">
+            <p><?php _e('Image Position', 'constructor'); ?></p>
             <a href="#" title="<?php _e('Top Left', 'constructor'); ?>" name="left top" <?php if($constructor['images']['body']['pos'] == 'left top') echo 'class="selected"'; ?>> </a>
             <a href="#" title="<?php _e('Top Center', 'constructor'); ?>" name="center top" <?php if($constructor['images']['body']['pos'] == 'center top') echo 'class="selected"'; ?>> </a>
             <a href="#" title="<?php _e('Top Right', 'constructor'); ?>" name="right top" <?php if($constructor['images']['body']['pos'] == 'right top') echo 'class="selected"'; ?>> </a>
@@ -66,7 +67,7 @@
     </tr>
 
     <tr>
-        <th scope="row" valign="top"><?php _e('Background Image', 'constructor'); ?></th>
+        <th scope="row" valign="top" rowspan="2"><?php _e('Background Image', 'constructor'); ?></th>
         <td>
             <input type="text" name="constructor[images][wrap][src]" value="<?php echo $constructor['images']['wrap']['src']?>"/>
             <?php if ($upload) : ?><input type="file" name="constructor[images][wrap][src]"/><?php endif; ?>
@@ -76,8 +77,8 @@
         </td>
     </tr>
     <tr>
-        <th scope="row" valign="top"><?php _e('Image Position', 'constructor'); ?></th>
         <td class="position select" id="images-wrap-pos">
+            <p><?php _e('Image Position', 'constructor'); ?></p>
             <a href="#" title="<?php _e('Top Left', 'constructor'); ?>" name="left top" <?php if($constructor['images']['wrap']['pos'] == 'left top') echo 'class="selected"'; ?>> </a>
             <a href="#" title="<?php _e('Top Center', 'constructor'); ?>" name="center top" <?php if($constructor['images']['wrap']['pos'] == 'center top') echo 'class="selected"'; ?>> </a>
             <a href="#" title="<?php _e('Top Right', 'constructor'); ?>" name="right top" <?php if($constructor['images']['wrap']['pos'] == 'right top') echo 'class="selected"'; ?>> </a>
@@ -95,6 +96,8 @@
             <a href="#" title="<?php _e('Bottom Right', 'constructor'); ?>" name="right bottom" <?php if($constructor['images']['wrap']['pos'] == 'right bottom') echo 'class="selected"'; ?>> </a>
         </td>
     </tr>
+
+
     <tr>
         <th scope="row" valign="top"><?php _e('Content Image', 'constructor'); ?> <br/><small><?php _e('repeat by Y and w/out opacity', 'constructor'); ?></small></th>
         <td>
@@ -106,7 +109,7 @@
         </td>
     </tr>
     <tr>
-        <th scope="row" valign="top"><?php _e('Sidebar Image', 'constructor'); ?></th>
+        <th scope="row" valign="top" rowspan="2"><?php _e('Sidebar Image', 'constructor'); ?></th>
         <td>
             <input type="text" name="constructor[images][sidebar][src]" value="<?php echo $constructor['images']['sidebar']['src']?>"/>
             <?php if ($upload) : ?><input type="file" name="constructor[images][sidebar][src]"/><?php endif; ?>
@@ -116,8 +119,8 @@
         </td>
     </tr>
     <tr>
-        <th scope="row" valign="top"><?php _e('Image Position', 'constructor'); ?></th>
         <td class="position select" id="images-sidebar-pos">
+            <p><?php _e('Image Position', 'constructor'); ?></p>
             <a href="#" title="<?php _e('Top Left', 'constructor'); ?>" name="left top" <?php if($constructor['images']['sidebar']['pos'] == 'left top') echo 'class="selected"'; ?>> </a>
             <a href="#" title="<?php _e('Top Center', 'constructor'); ?>" name="center top" <?php if($constructor['images']['sidebar']['pos'] == 'center top') echo 'class="selected"'; ?>> </a>
             <a href="#" title="<?php _e('Top Right', 'constructor'); ?>" name="right top" <?php if($constructor['images']['sidebar']['pos'] == 'right top') echo 'class="selected"'; ?>> </a>
@@ -137,7 +140,38 @@
         </td>
     </tr>
     <tr>
-        <th scope="row" valign="top"><?php _e('Footer Image', 'constructor'); ?></th>
+        <th scope="row" valign="top" rowspan="2"><?php _e('Extrabar Image', 'constructor'); ?></th>
+        <td>
+            <input type="text" name="constructor[images][extrabar][src]" value="<?php echo $constructor['images']['extrabar']['src']?>"/>
+            <?php if ($upload) : ?><input type="file" name="constructor[images][extrabar][src]"/><?php endif; ?>
+            <?php if($constructor['images']['extrabar']['src']) : ?>
+                (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['extrabar']['src']; ?>"><?php _e('preview', 'constructor'); ?></a>)
+            <?php endif; ?>
+        </td>
+    </tr>
+    <tr>
+        <td class="position select" id="images-extrabar-pos">
+            <p><?php _e('Image Position', 'constructor'); ?></p>
+            <a href="#" title="<?php _e('Top Left', 'constructor'); ?>" name="left top" <?php if($constructor['images']['extrabar']['pos'] == 'left top') echo 'class="selected"'; ?>> </a>
+            <a href="#" title="<?php _e('Top Center', 'constructor'); ?>" name="center top" <?php if($constructor['images']['extrabar']['pos'] == 'center top') echo 'class="selected"'; ?>> </a>
+            <a href="#" title="<?php _e('Top Right', 'constructor'); ?>" name="right top" <?php if($constructor['images']['extrabar']['pos'] == 'right top') echo 'class="selected"'; ?>> </a>
+
+            <br class="clear"/>
+
+            <a href="#" title="<?php _e('Center Left', 'constructor'); ?>" name="left center" <?php if($constructor['images']['extrabar']['pos'] == 'left center') echo 'class="selected"'; ?>> </a>
+            <a href="#" title="<?php _e('Center Center', 'constructor'); ?>" name="center center" <?php if($constructor['images']['extrabar']['pos'] == 'center center') echo 'class="selected"'; ?>> </a>
+            <a href="#" title="<?php _e('Center Right', 'constructor'); ?>" name="right center" <?php if($constructor['images']['extrabar']['pos'] == 'right center') echo 'class="selected"'; ?>> </a>
+
+            <br class="clear"/>
+
+            <a href="#" title="<?php _e('Bottom Left', 'constructor'); ?>" name="left bottom" <?php if($constructor['images']['extrabar']['pos'] == 'left bottom') echo 'class="selected"'; ?>> </a>
+            <a href="#" title="<?php _e('Bottom Center', 'constructor'); ?>" name="center bottom" <?php if($constructor['images']['extrabar']['pos'] == 'center bottom') echo 'class="selected"'; ?>> </a>
+            <a href="#" title="<?php _e('Bottom Right', 'constructor'); ?>" name="right bottom" <?php if($constructor['images']['extrabar']['pos'] == 'right bottom') echo 'class="selected"'; ?>> </a>
+
+        </td>
+    </tr>
+    <tr>
+        <th scope="row" valign="top" rowspan="2"><?php _e('Footer Image', 'constructor'); ?></th>
         <td>
             <input type="text" name="constructor[images][footer][src]" value="<?php echo $constructor['images']['footer']['src']?>"/>
             <?php if ($upload) : ?><input type="file" name="constructor[images][footer][src]"/><?php endif; ?>
@@ -147,8 +181,8 @@
         </td>
     </tr>
     <tr>
-        <th scope="row" valign="top"><?php _e('Image Position', 'constructor'); ?></th>
         <td class="position select" id="images-footer-pos">
+            <p><?php _e('Image Position', 'constructor'); ?></p>
             <a href="#" title="<?php _e('Top Left', 'constructor'); ?>" name="left top" <?php if($constructor['images']['footer']['pos'] == 'left top') echo 'class="selected"'; ?>> </a>
             <a href="#" title="<?php _e('Top Center', 'constructor'); ?>" name="center top" <?php if($constructor['images']['footer']['pos'] == 'center top') echo 'class="selected"'; ?>> </a>
             <a href="#" title="<?php _e('Top Right', 'constructor'); ?>" name="right top" <?php if($constructor['images']['footer']['pos'] == 'right top') echo 'class="selected"'; ?>> </a>

@@ -213,6 +213,12 @@ if (isset($constructor['images']['sidebar']['src']) && !empty($constructor['imag
               ."background-position: {$constructor['images']['sidebar']['pos']};\n";
 } else { $sidebar_bg = null; }
 
+if (isset($constructor['images']['extrabar']['src']) && !empty($constructor['images']['extrabar']['src'])) {
+    $extrabar_bg = "background-image: url({$constructor['images']['extrabar']['src']});\n"
+              ."background-repeat: no-repeat;\n"
+              ."background-position: {$constructor['images']['extrabar']['pos']};\n";
+} else { $extrabar_bg = null; }
+
 if (isset($constructor['images']['footer']['src']) && !empty($constructor['images']['footer']['src'])) {
     $footer_bg = "background-image: url({$constructor['images']['footer']['src']});\n"
               ."background-repeat: no-repeat;\n"
@@ -294,19 +300,22 @@ fieldset{
 }
 
 #wrapper {
-{$wrapper_bg}
+    {$wrapper_bg}
 }
 
+
 {$layout}
+
     .container-full {
         width:{$width}px !important;
     }
+
 #sidebar{
     {$sidebar_bg};
     width:{$sidebar2}px;
 }
-
 #extra {
+    {$extrabar_bg};
     width:{$extra2}px;
 }
 
