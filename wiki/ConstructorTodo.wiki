@@ -2,8 +2,6 @@
 #labels Featured
 
   # Slideshow with post content (like in some _premium_ themes)
-  # Change content width
-  # Change sidebar and extrabar width
   # Cache for css.php
   # Export theme as ZIP archive (with all images)
   # Ukrainian localization (need update) - thx to Baziak
