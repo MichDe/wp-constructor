@@ -15,27 +15,30 @@ return array(
                                  ),
             "title"     => array(            // title
                         "pos" => 'left'      // - position
-                    ),
+                        ),
+            "content"   => array(            // content
+                        "author" => 0        // - link to author page
+                        ),
             "footer"    => array(            // footer text
                         "text" => null,
-                                ),
+                        ),
             "fonts"     => array(            // fonts
                         'header' => 0,       // - for title
                         'body'   => 0,       // - for content
-                    ),
+                        ),
             "menu"     => array(             // menu with links
                         "type" => 3,         // - menu levels
                         "home" => true,      // - link to home page
                         "rss"  => true,      // - link to RSS
                         "size" => false,     // - font resizer
-                    ),
+                        ),
             "slideshow" => array(            // NextGen gallery options
                         "layout" => 'in',    // - slideshow "in" main container or "over"
                         "id" => null,        // - slideshow ID
                         "height" => 200,     // - height in px
                         "onpage" => false,   // - show slideshow on page
                         "onsingle" => false  // - show slideshow on single post
-                    ),
+                        ),
             "images"   => array(             // background images
                         "body" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'repeat'),
                         "wrap" => array('src'=>'themes/default/header.png','pos'=>'center top'),
@@ -43,9 +46,9 @@ return array(
                         "sidebar"  => array('src'=>'','pos'=>'right bottom'),
                         "extrabar" => array('src'=>'','pos'=>'right bottom'),
                         "footer"   => array('src'=>'themes/default/footer.png','pos'=>'right bottom'),
-                    ),
+                        ),
             "opacity"   => 'light',          // type of opacity
-            "color"   => array(              // theme colors
+            "color"     => array(              // theme colors
                         "bg"      => '#fff',
                         "bg2"     => '#fff5c5',
                         "opacity" => '#fff',
@@ -59,5 +62,5 @@ return array(
                         "header1"   => '#ff6600',
                         "header2"   => '#ff7711',
                         "header3"   => '#ff9933',
-                    )
+                        )
             );

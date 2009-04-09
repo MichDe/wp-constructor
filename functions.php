@@ -3,7 +3,8 @@
  * @package WordPress
  * @subpackage Constructor
  */
-
+// debug only current theme
+// error_reporting(E_ALL);
 if ( function_exists('register_sidebar') ) {
     register_sidebar(array(
         'name'=>'sidebar',
@@ -151,8 +152,8 @@ if (!is_admin()) {
         if ($constructor['menu']['home']) echo '<li id="home"><a href="'.get_option('home').'/" title="'.get_bloginfo('name').'">'.__('Home', 'constructor').'</a></li>';
         wp_list_pages($params);
         if ($constructor['menu']['rss'])  echo '<li id="rss"><a href="'.get_bloginfo('rss2_url').'"  title="'.__('RSS Feed', 'constructor').'">'. __('RSS Feed', 'constructor').'</a></li>';
-        if ($constructor['menu']['size']) echo '<li id="size"><a href="#" class="big">A</a><a href="#" class="normal">A</a><a href="#" class="small">A</a></li>';
-        if ($constructor['menu']['theme']) echo '<li id="theme"><a href="#">'.__('Theme', 'constructor').'</a></li>';
+        //if ($constructor['menu']['size']) echo '<li id="size"><a href="#" class="big">A</a><a href="#" class="normal">A</a><a href="#" class="small">A</a></li>';
+        //if ($constructor['menu']['theme']) echo '<li id="theme"><a href="#">'.__('Theme', 'constructor').'</a></li>';
         echo '</ul><div class="clear"></div></div>';
     }
 
@@ -197,7 +198,7 @@ if (!is_admin()) {
     function get_constructor_author($before = '', $after = '')
     {
         global $constructor;
-        if (isset($constructor['author']) && $constructor['author'])
+        if (isset($constructor['content']['author']) && $constructor['content']['author'])
             echo $before . the_author_posts_link() . $after;
     }
 

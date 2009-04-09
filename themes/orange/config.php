@@ -16,6 +16,9 @@ return array(
             "title"     => array(
                         "pos" => 'center'
                     ),
+            "content"   => array(            // content
+                        "author" => 0        // - link to author page
+                        ),
             "footer"    => array(            // footer text
                         "text" => null
                     ),
