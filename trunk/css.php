@@ -7,7 +7,8 @@
  */
 header('Content-type: text/css');
 
-error_reporting(E_ALL);
+// debug only current theme
+// error_reporting(E_ALL);
 
 // config is null
 $constructor = null;
@@ -397,7 +398,7 @@ fieldset{
 }
 
 .commentlist li .avatar {
-    	border-color: {$color_border2};
+    border-color: {$color_border2};
 }
 
 .commentlist a {

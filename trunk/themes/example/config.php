@@ -16,6 +16,9 @@ return array(
             "title"     => array(            // title
                         "pos" => 'left'      // - position
                     ),
+            "content"   => array(            // content
+                        "author" => 0        // - link to author page
+                        ),
             "footer"    => array(            // footer text
                         "text" => '&copy; '.date('Y') .' '. sprintf(__('%1$s is proudly powered by %2$s', 'constructor'), get_bloginfo('name'), '<a href="http://wordpress.org/">WordPress</a>') .
                                   ' | <a href="http://anton.shevchuk.name/">'. __('Constructor Theme', 'constructor') .'</a>'
