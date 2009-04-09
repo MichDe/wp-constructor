@@ -259,7 +259,16 @@ th {
 td {
     border-color: {$color_border}
 }
-
+/*Autogenerate*/
+.current-cat a{
+    font-weight:900;
+    border-color:{$color_text}
+}
+.current-cat li a{
+    font-weight:500;
+    border-color:transparent
+}
+/*/Autogenerate*/
 /*Form*/
 input, select, textarea {
     color:{$color_text};
@@ -311,15 +320,16 @@ fieldset{
     }
 
 #sidebar{
-    {$sidebar_bg};
     width:{$sidebar2}px;
+    {$sidebar_bg};
 }
 #extra {
-    {$extrabar_bg};
     width:{$extra2}px;
+    {$extrabar_bg};
 }
 
 #footer{
+    width:{$width}px;
     $footer_bg
 }
 /*/Layout*/

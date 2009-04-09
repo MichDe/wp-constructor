@@ -25,6 +25,9 @@ get_constructor_slideshow()
                 </div>
                 <div class="footer">
                     <div class="links right">
+                    <?php if($post->post_parent) : $parent_link = get_permalink($post->post_parent); ?>
+                    <a href="<?php echo $parent_link; ?>"><?php _e('Back to Parent Page', 'constructor');?></a> |
+                    <?php endif; ?>
                     <?php the_time(__('F jS, Y', 'constructor')) ?> |
                     <?php the_tags(__('Tags', 'constructor') . ': ', ', ', '|'); ?>
                     <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>

@@ -2,7 +2,6 @@
 /*
 Template Name: Sitemap
 */
-
 /**
  * @package WordPress
  * @subpackage Constructor
@@ -50,6 +49,9 @@ get_header(); ?>
                 </div>
                 <div class="footer">
                     <div class="links right">
+                    <?php if($post->post_parent) : $parent_link = get_permalink($post->post_parent); ?>
+                    <a href="<?php echo $parent_link; ?>"><?php _e('Back to Parent Page', 'constructor');?></a> |
+                    <?php endif; ?>
                     <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
                     </div>
                     <div class="line clear"></div>
