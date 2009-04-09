@@ -82,6 +82,24 @@ div.aligncenter {
 .clear { clear:both }
 .hide  { display:none }
 
+/*Autogenerate styles*/
+.categories {}
+.cat-item {}
+.current-cat{}
+    .current-cat a{
+        border-width:0 0 1px 0;
+        border-style:solid
+    }
+.current-cat-parent {}
+.pagenav {}
+.page_item {}
+.current_page_item {}
+.current_page_parent {}
+.widget {}
+.widget_text {}
+.blogroll {}
+.linkcat{}
+/*/Autogenerate styles*/
 /*Box*/
 .box {
     border-style:solid;
@@ -271,14 +289,15 @@ div.aligncenter {
 /*/Header*/
 /*Sidebar*/
 .sidebar {
-    padding:0 0 6px 6px
+    padding:0 0 6px 6px;
+    font-size:1.2em;
+    /*line-height:1.2em*/
 }
     .sidebar h3{
         padding:4px
     }    
     .sidebar a {
-        font-size:1.2em;
-        line-height:1.2em
+        padding:0;
     }
     .sidebar a:hover {
         text-decoration:underline
@@ -287,24 +306,16 @@ div.aligncenter {
         padding:0px 16px
     }
     .sidebar ul {
-        padding:0;
-        list-style:none
+        padding:0 0 0 4px;
+        margin:0;
     }
-    .sidebar ul li {
-        padding:4px 0 0 2px
+    .sidebar li {
+        padding:2px;
+        list-style:none;
     }
-    .sidebar li ul {
-        padding-left:20px;
-    }
-    .sidebar li ul li {
-        padding:4px 0 2px 0
-    }
-    /*.sidebar li ul li:hover{
-        list-style-position:outside;
-        list-style-type:disc
-    }*/
-    .sidebar li ul li a:hover{
-        text-decoration:underline
+    .sidebar li li li {
+        padding:2px 2px 2px 6px;
+        list-style:circle inside;
     }
 /*/Sidebar*/
 
@@ -371,6 +382,11 @@ div.aligncenter {
     .hentry .entry ol, .hentry .entry ul {
         padding-left:20px
     }
+
+    .hentry .entry li ol, .hentry .entry li ul {
+        padding-left:6px
+    }
+
     .hentry .entry ul {
         list-style:circle
     }
@@ -632,41 +648,33 @@ td {
 /*Footer*/
 #footer {
     clear:both;
-    width:824px;
     padding: 20px 80px;
     margin: 0 auto;
-    /*border-top:3px #222 dotted;*/
-    /*background: url(images/footer.jpg) left bottom no-repeat    */
+    font-size:1.2em;
 }
-
 #footer div {
     width:200px;
     float:left;
     margin: 0 0 12px 0
 }
-
 #footer h3 {
     padding:0 4px 0px 8px;
     line-height:2em
 }
-#footer ul{
-    list-style:none;
-    padding:0;
-    padding-left:20px;
-    margin:0
-}
-#footer li{
-    line-height:1.6em;
-    font-size:1.2em;
-    padding:2px 0;
-    margin:0
-}
-/*#footer li:hover{
-    list-style-position:outside;
-    list-style-type:disc
-}*/
-#footer li a:hover{
+#footer a:hover{
     text-decoration:underline
+}
+#footer ul {
+    padding:0 0 0 4px;
+    margin:0;
+}
+#footer li {
+    padding:2px;
+    list-style:none;
+}
+#footer li li {
+    padding:2px 2px 2px 6px;
+    list-style:circle inside;
 }
 #footer .copy{
     padding:4px 0 0 0;
@@ -730,7 +738,7 @@ td {
     border:0 !important
 }
 #wp-calendar tbody {
-    font-size:1.2em !important;
+    
 }
 #wp-calendar tbody a{
     display:block;

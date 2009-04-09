@@ -141,8 +141,8 @@ function constructor_theme_page()
     // modules list - change list manualy only
     $modules = array(
                 'themes',
-                'sidebar',
                 'layout',
+                'sidebar',
                 'header',
                 'content',
                 'footer',

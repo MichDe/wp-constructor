@@ -1,17 +1,15 @@
 <?php
 /*
-Template Name: Monocolumn
+Template Name: Parent Page
 */
 /**
  * @package WordPress
  * @subpackage Constructor
  */
 
-wp_enqueue_script( 'comment-reply' );
-
 get_header(); ?>
 <div id="wrapper" class="box shadow opacity">
-    <div id="container" class="container-full" >
+    <div id="container" class="container-sitemap">
         <div id="posts">
         <?php while (have_posts()) : the_post(); ?>
             <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
@@ -19,8 +17,10 @@ get_header(); ?>
                     <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
                 </div>
                 <div class="entry">
-   
                     <?php the_content(__('Read the rest of this entry &raquo;', 'constructor')) ?>
+                    <ul>
+                        <?php wp_list_pages('title_li=&child_of='.$post->ID); ?>
+                    </ul>
                     <?php wp_link_pages(array('before' => '<p class="pages"><strong>'.__('Pages', 'constructor').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
                 </div>
                 <div class="footer">
@@ -40,6 +40,7 @@ get_header(); ?>
 
     </div><!-- id='container' -->
 </div><!-- id='wrapper' -->
+<?php get_constructor_sidebar(); ?>
 <?php get_footer(); ?>
 
                     
