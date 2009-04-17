@@ -6,3 +6,4 @@
   # Export theme as ZIP archive (with all images)
   # Ukrainian localization (need update) - thx to Baziak
   # Polish localization (need update) - thx to mummle
+  # Ready to use widgets (with thumbnail's)
