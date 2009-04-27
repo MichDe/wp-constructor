@@ -77,8 +77,8 @@ function constructor_theme_page_add()
                 /**
                  * CSS changes
                  */
-                if (isset($data['css']) && is_writable($directory.'/themes/'.$data['theme'].'/styles.css')) {
-                    file_put_contents($directory.'/themes/'.$data['theme'].'/styles.css', $data['css']);
+                if (isset($data['css']) && is_writable($directory.'/themes/'.$data['theme'].'/style.css')) {
+                    file_put_contents($directory.'/themes/'.$data['theme'].'/style.css', $data['css']);
                     unset($data['css']);
                 }
 
@@ -193,6 +193,6 @@ function constructor_theme_page()
             </form>
        </div>
     </div>
-    <?
+    <?php
 }
 ?>

@@ -47,6 +47,7 @@ return array(
                         "footer"   => array('src'=>'','pos'=>'left bottom'),
                     ),
             "opacity"   => 'light',
+            "shadow"    => true,             // create shadow
             "color"   => array(
                         "bg"      => '#fff',
                         "bg2"     => '#DFA',

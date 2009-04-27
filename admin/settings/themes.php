@@ -25,14 +25,13 @@ $(document).ready(function(){
 <?php
 // load themes
 $themes = scandir($directory.'/themes/');
-unset($themes[array_search('.', $themes)]);
-unset($themes[array_search('..', $themes)]);
-unset($themes[array_search('.svn', $themes)]);
+
+$themes = array_diff($themes, array( '.','..','.svn','.htaccess','readme.txt'));
 
 foreach ($themes as $theme) :
       $img = null;
-      if (file_exists($directory.'/themes/'.$theme.'/styles.css')) {
-          $data = get_theme_data($directory.'/themes/'.$theme.'/styles.css');
+      if (file_exists($directory.'/themes/'.$theme.'/style.css')) {
+          $data = get_theme_data($directory.'/themes/'.$theme.'/style.css');
 
           if (file_exists($directory.'/themes/'.$theme.'/screenshot.png')) {
               $img = $directory_uri .'/themes/'.$theme.'/screenshot.png';
@@ -40,7 +39,7 @@ foreach ($themes as $theme) :
       } else {
           $data = array(
               'Title' => $theme,
-              'Description' => __('File "styles.css" is not exists','constructor'),
+              'Description' => __('File "style.css" is not exists','constructor'),
               'Author' => __('Anonymous','constructor'),
               'Version' => '0.0',
           );

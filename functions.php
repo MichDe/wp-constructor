@@ -46,10 +46,10 @@ if (!is_admin()) {
     
     if (!$constructor) {
         $constructor = require 'themes/default/config.php';
-        wp_enqueue_style( 'constructor-theme', $template_uri.'/themes/default/styles.css');
+        wp_enqueue_style( 'constructor-theme', $template_uri.'/themes/default/style.css');
     } else {
-        if (file_exists(get_template_directory() .'/themes/'.$constructor['theme'].'/styles.css'))
-            wp_enqueue_style( 'constructor-theme', $template_uri.'/themes/'.$constructor['theme'].'/styles.css');
+        if (file_exists(get_template_directory() .'/themes/'.$constructor['theme'].'/style.css'))
+            wp_enqueue_style( 'constructor-theme', $template_uri.'/themes/'.$constructor['theme'].'/style.css');
     }
 
     if ($constructor['menu']['type'] > 2) {
