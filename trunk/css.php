@@ -8,7 +8,7 @@
 header('Content-type: text/css');
 
 // debug only current theme
-// error_reporting(E_ALL);
+ error_reporting(E_ALL);
 
 // config is null
 $constructor = null;
@@ -24,6 +24,10 @@ if (isset($_GET['theme'])) {
     // attemp load data from DB
     if (file_exists(dirname(__FILE__) . '/../../../wp-load.php')) {
         include_once dirname(__FILE__) . '/../../../wp-load.php';
+        // load from DB
+        $constructor = get_option('constructor');
+    } elseif (file_exists(dirname(__FILE__) . '/../../../../wp-load.php')) {
+        include_once dirname(__FILE__) . '/../../../../wp-load.php';
         // load from DB
         $constructor = get_option('constructor');
     }
@@ -83,6 +87,17 @@ CSS;
 }
 CSS;
         break;
+}
+
+/* Shadow */
+if ($constructor['shadow']) {
+    $shadow = <<<CSS
+.shadow {
+    -webkit-box-shadow: 3px 3px 3px {$color_border}
+}
+CSS;
+} else {
+    $shadow = '';
 }
 
 /* Layout */
@@ -295,10 +310,9 @@ fieldset{
 .box {
     border-color: {$color_border}
 }
-.shadow {
-    -webkit-box-shadow: 3px 3px 3px {$color_border}
-}
+
 {$opacity}
+{$shadow}
 /*/CSS3*/
 /*Layout*/
 #body {

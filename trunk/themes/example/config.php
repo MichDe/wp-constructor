@@ -49,6 +49,7 @@ return array(
                         "footer"   => array('src'=>'themes/example/footer.png','pos'=>'right bottom'),
                     ),
             "opacity"   => 'light',          // type of opacity
+            "shadow"    => true,             // create shadow
             "color"   => array(              // theme colors
                         "bg"      => '#fff',
                         "bg2"     => '#fff5c5',

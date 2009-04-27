@@ -47,6 +47,7 @@ return array(
                         "footer"  => array('src'=>'themes/black-urban/footer.jpg','pos'=>'left bottom'),
                     ),
             "opacity"   => 'dark',
+            "shadow"    => false,             // create shadow
             "color"   => array(
                         "bg"      => '#000',
                         "bg2"     => '#333',
