@@ -56,7 +56,6 @@ $(document).ready(function(){
 <input type="hidden" id="constructor-color_header1" name="constructor[color][header1]" value="<?php echo $constructor['color']['header1']?>"/>
 <input type="hidden" id="constructor-color_header2" name="constructor[color][header2]" value="<?php echo $constructor['color']['header2']?>"/>
 <input type="hidden" id="constructor-color_header3" name="constructor[color][header3]" value="<?php echo $constructor['color']['header3']?>"/>
-<input type="hidden" id="constructor-color_alt" name="constructor[color][alt]" value="<?php echo $constructor['color']['alt']?>"/>
 
 <table class="form-table">
 <tr>
@@ -80,7 +79,7 @@ $(document).ready(function(){
     <th scope="row" valign="top"><?php _e('Shadow', 'constructor'); ?></th>
     <td>
         <input type="checkbox" id="constructor-shadow" name="constructor[shadow]" value="1" <?php if ($constructor['shadow']) echo 'checked="checked"'; ?>/>
-         <label for="constructor-shadow"><?php _e('Only for Safari and Chrome', 'constructor')?></label>
+        <label for="constructor-shadow"><?php _e('Only for Safari and Chrome', 'constructor')?></label>
     </td>
 </tr>
 <tr>

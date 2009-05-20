@@ -93,7 +93,9 @@ CSS;
 if ($constructor['shadow']) {
     $shadow = <<<CSS
 .shadow {
-    -webkit-box-shadow: 3px 3px 3px {$color_border}
+    box-shadow: 0 0 3px {$color_border};
+    -moz-box-shadow: 0 0 3px {$color_border};
+    -webkit-box-shadow: 0 0 3px {$color_border}
 }
 CSS;
 } else {
@@ -327,7 +329,6 @@ fieldset{
     {$wrapper_bg}
 }
 
-
 {$layout}
 
     .container-full {
@@ -396,19 +397,19 @@ fieldset{
 /*/Post*/
 /*Comments*/
 .thread-even, .even {
-	background-color: {$color_bg};
+    background-color: {$color_bg};
     border: 1px solid {$color_border}
 }
 .alt {
-	background-color: {$color_bg};
+    background-color: {$color_bg};
 }
 
 .thread-odd, .odd {
-	background-color: {$color_bg2};
+    background-color: {$color_bg2};
     border: 1px solid {$color_border2}
 }
 .depth-2, .depth-4 {
-	border-left:3px dotted {$color_border}
+    border-left:3px dotted {$color_border}
 }
 
 .commentlist li .avatar {

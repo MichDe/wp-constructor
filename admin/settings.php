@@ -46,7 +46,6 @@ function constructor_theme_page_add()
             $files = $_FILES['constructor'];
             $data  = $_REQUEST['constructor'];
 
-
             if (isset ($data['theme-reload']) && $data['theme-reload'] != 0) {
                 // loading theme and forgot all changes
                 $theme = $data['theme'];
@@ -73,6 +72,10 @@ function constructor_theme_page_add()
                     }
                     $_SESSION['constructor-errors'] = $errors;
                 }
+                /**
+                 * Shadow
+                 */
+                if (isset($data['shadow'])) $data['shadow'] = true;
 
                 /**
                  * CSS changes
