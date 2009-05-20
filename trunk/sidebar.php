@@ -19,7 +19,7 @@
 
 		<?php wp_list_categories('show_count=1&title_li=<h3>'.__('Categories', 'constructor').'</h3>'); ?>
 		
-        <li><h3><?php _e('Tags')?></h3>
+        <li><h3><?php _e('Tags', 'constructor')?></h3>
     	    <?php if(function_exists('wp_tag_cloud')) { wp_tag_cloud('smallest=8&largest=18&number=40'); } ?>
 	    </li>
 
