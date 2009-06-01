@@ -38,7 +38,7 @@ load_theme_textdomain('constructor', get_template_directory().'/lang');
 
 if (!is_admin()) {    
     wp_enqueue_script( 'constructor-theme',     $template_uri.'/js/constructor.js', array('jquery'));
-    wp_enqueue_script( 'constructor-slideshow', $template_uri.'/js/jquery.wp-slideshow.js', array('jquery'));
+//    wp_enqueue_script( 'constructor-slideshow', $template_uri.'/js/jquery.wp-slideshow.js', array('jquery'));
     
     wp_enqueue_style( 'constructor-style', $template_uri.'/css.php');
     
