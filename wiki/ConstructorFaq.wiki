@@ -1,0 +1,53 @@
+#summary FAQ
+#labels Featured
+
+= CSS hacks =
+*How can i remove the border around the post title?*
+{{{
+.hentry .title {
+    border:0 !important;
+}
+}}}
+
+*How do I remove the dotted line underneath the entry post title?*
+{{{
+.hentry .title a, .hentry .title span {
+    border:0 !important;
+}
+}}}
+
+*How do I remove the border between the sidebar and the content?*
+{{{
+#container {
+    border:0 !important;
+}
+}}}
+
+
+*How can i remove the border surrounding the whole post area? (so there are no borders around at all)*
+{{{
+#wrapper {
+    border:0 !important;
+}
+}}}
+
+*I'd like to remove the automatic color highlighting of the first letter in each paragraph. How do I do that?*
+{{{
+.hentry .entry p:first-letter {
+    color:black !important;
+}
+}}}
+
+*How do I remove the auto-indent at the beginning of the paragraph?*
+{{{
+.hentry .entry p{
+    text-indent:0px !important;
+}
+}}}
+
+*How can I remove the border around inserted photographs*
+{{{
+.hentry .entry img {
+    border-style: none !important;
+}
+}}}
