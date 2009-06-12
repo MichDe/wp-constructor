@@ -38,7 +38,6 @@ load_theme_textdomain('constructor', get_template_directory().'/lang');
 
 if (!is_admin()) {    
     wp_enqueue_script( 'constructor-theme',     $template_uri.'/js/constructor.js', array('jquery'));
-//    wp_enqueue_script( 'constructor-slideshow', $template_uri.'/js/jquery.wp-slideshow.js', array('jquery'));
     
     wp_enqueue_style( 'constructor-style', $template_uri.'/css.php');
     
@@ -68,9 +67,9 @@ if (!is_admin()) {
      */
     function get_constructor_slideshow($in = false)
     {
-        global $constructor;
+        global $constructor, $template_uri;
 
-        if (!isset($constructor['slideshow']['id']) or $constructor['slideshow']['id'] == '' or !function_exists('nggShowSlideshow')) {
+        if (!isset($constructor['slideshow']['flag']) or $constructor['slideshow']['flag'] == '') {
             return false;
         }
 
@@ -82,25 +81,37 @@ if (!is_admin()) {
 
         echo '<div id="header-slideshow" style="height:'.$constructor['slideshow']['height'].'px">';
 
-        if (!$in) {
-
-            echo nggShowSlideshow((int)$constructor['slideshow'], $constructor['layout']['width'] - 2 , $constructor['slideshow']['height']);
-        } else {
-            // switch statement for $constructor['sidebar']
-            switch ($constructor['sidebar']) {
-                case 'none':
-                    echo nggShowSlideshow((int)$constructor['slideshow'], ($constructor['layout']['width'] - 4) , $constructor['slideshow']['height']);
-                    break;
-                case 'two':
-                case 'two-right':
-                case 'two-left':
-                    echo nggShowSlideshow((int)$constructor['slideshow'], ($constructor['layout']['width'] - $constructor['layout']['sidebar'] - $constructor['layout']['extra'] - 6) , $constructor['slideshow']['height']);
-                    break;
-                default:
-                    echo nggShowSlideshow((int)$constructor['slideshow'], ($constructor['layout']['width'] - $constructor['layout']['sidebar'] - 4) , $constructor['slideshow']['height']);
-                    break;
-            }
+        // switch statement for true
+        switch (true) {
+        	case (isset($constructor['slideshow']['id']) && $constructor['slideshow']['id']!='' && function_exists('nggShowSlideshow')):
+        		if (!$in) {
+                    echo nggShowSlideshow((int)$constructor['slideshow'], $constructor['layout']['width'] - 2 , $constructor['slideshow']['height']);
+                } else {
+                    // switch statement for $constructor['sidebar']
+                    switch ($constructor['sidebar']) {
+                        case 'none':
+                            echo nggShowSlideshow((int)$constructor['slideshow'], ($constructor['layout']['width'] - 4) , $constructor['slideshow']['height']);
+                            break;
+                        case 'two':
+                        case 'two-right':
+                        case 'two-left':
+                            echo nggShowSlideshow((int)$constructor['slideshow'], ($constructor['layout']['width'] - $constructor['layout']['sidebar'] - $constructor['layout']['extra'] - 6) , $constructor['slideshow']['height']);
+                            break;
+                        default:
+                            echo nggShowSlideshow((int)$constructor['slideshow'], ($constructor['layout']['width'] - $constructor['layout']['sidebar'] - 4) , $constructor['slideshow']['height']);
+                            break;
+                    }
+                }
+        		break;
+        
+        	default:
+        	    echo '<div class="wp-sl"></div>';
+                wp_enqueue_script('constructor-slideshow', $template_uri.'/js/jquery.wp-slideshow.js', array('jquery'));
+                wp_print_scripts('constructor-slideshow');
+        		break;
         }
+        
+        
         echo '</div>';
     }
 

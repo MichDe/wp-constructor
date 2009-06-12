@@ -23,6 +23,12 @@ $(document).ready(function(){
 <input type="hidden" id="constructor-slideshow-layout" name="constructor[slideshow][layout]" value="<?php echo $constructor['slideshow']['layout']?>"/>
 <table class="form-table">
     <tr>
+        <th scope="row" valign="top"><?php _e('Enable slideshow', 'constructor'); ?></th>
+        <td>
+            <input type="checkbox" id="constructor-slideshow" name="constructor[slideshow][flag]" value="1"/> (<em><small><?php _e('by default use images from posts on current page', 'constructor');?></small></em>)
+        </td>
+    </tr>
+    <tr>
         <th scope="row" valign="top" rowspan="3"><?php _e('Options', 'constructor'); ?></th>
         <td>
             <input type="checkbox" id="constructor-slideshow-onpage" name="constructor[slideshow][onpage]" value="1" <?php if (isset($constructor['slideshow']['onpage']) && $constructor['slideshow']['onpage']) echo 'checked="checked"'; ?> />
@@ -75,7 +81,7 @@ $(document).ready(function(){
     else :
     ?>
     <tr>
-        <th scope="row" valign="top" colspan="2" class="th-full"><?php _e('If you want to display slideshow on homepage, please install <a href="http://wordpress.org/extend/plugins/nextgen-gallery/">NextGEN-Gallery</a> plugin', 'constructor'); ?></th>
+        <th scope="row" valign="top" colspan="2" class="th-full"><?php _e('You can use <a href="http://wordpress.org/extend/plugins/nextgen-gallery/">NextGEN-Gallery</a> plugin for build custom slideshow', 'constructor'); ?></th>
     </tr>
     <?php
     endif;
