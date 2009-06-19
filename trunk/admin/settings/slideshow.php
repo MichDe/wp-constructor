@@ -25,7 +25,7 @@ $(document).ready(function(){
     <tr>
         <th scope="row" valign="top"><?php _e('Enable slideshow', 'constructor'); ?></th>
         <td>
-            <input type="checkbox" id="constructor-slideshow" name="constructor[slideshow][flag]" value="1"/> (<em><small><?php _e('by default use images from posts on current page', 'constructor');?></small></em>)
+            <input type="checkbox" id="constructor-slideshow" name="constructor[slideshow][flag]" value="1" <?php if (isset($constructor['slideshow']['flag']) && $constructor['slideshow']['flag']) echo 'checked="checked"'; ?>/> (<em><small><?php _e('by default use images from posts on current page', 'constructor');?></small></em>)
         </td>
     </tr>
     <tr>

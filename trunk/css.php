@@ -360,6 +360,14 @@ fieldset{
     #header-links li li a { background-color:{$color_bg}  }
     #header-links li a:hover { background-color:{$color_bg2} }
 /*/Header*/
+/*Slideshow*/
+.wp-sl{
+   background-color: {$color_bg2};
+}
+.wp-sl img{
+    border-color: {$color_border};
+}
+/*/Slideshow*/
 /*Images*/
 .wp-caption {
    color:{$color_text};
