@@ -108,6 +108,33 @@ if (!is_admin()) {
         	    echo '<div class="wp-sl"></div>';
                 wp_enqueue_script('constructor-slideshow', $template_uri.'/js/jquery.wp-slideshow.js', array('jquery'));
                 wp_print_scripts('constructor-slideshow');
+                echo <<<JS
+                <script type='text/javascript'>
+                /* <![CDATA[ */
+                jQuery(document).ready(function(){
+                    var sl = jQuery('.wp-sl').wpslideshow({
+                        thumb:true,
+                        thumbPath:'$template_uri/timthumb.php?src=',
+                        limit:480,
+                        effectTime:700,
+                        timeout:5000,
+                        play:true
+                    });
+                    
+                    jQuery('.hentry').each(function(){
+                        
+                        var text  = jQuery(this).find('.entry').text();            
+                        var title = jQuery(this).find('.title a').text();
+                        var url   = jQuery(this).find('.title a').attr('href');
+                        var img   = jQuery(this).find('.entry img:first').attr('src');
+                        
+                        if (img)
+                            sl.addSlide(title,url,img,text);
+                    });
+                });
+                /* ]]> */
+                </script>
+JS;
         		break;
         }
         

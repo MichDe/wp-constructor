@@ -9,16 +9,16 @@ add_action('admin_menu', 'constructor_theme_page_add');
 $directory_uri = get_template_directory_uri();
 
 wp_enqueue_script('thickbox');
-//wp_enqueue_script('jquery');
-//wp_enqueue_script('jquery-ui-tabs');
-//wp_enqueue_script('jquery-ui-slider');
 
-wp_deregister_script('jquery');
-wp_deregister_script('jquery-ui');
+if (version_compare($wp_version, '2.8', '<')) {
+    wp_deregister_script('jquery');
+    wp_deregister_script('jquery-ui');
+    
+    wp_enqueue_script('jquery',                  $directory_uri .'/admin/js/jquery.js');
+}
 
-wp_enqueue_script('jquery',                  $directory_uri .'/admin/js/jquery.js');
-wp_enqueue_script('jquery-ui',               $directory_uri .'/admin/js/jquery-ui.js');
-
+wp_enqueue_script('jquery-ui',               $directory_uri .'/admin/js/jquery-ui.js', 'jquery');
+    
 wp_enqueue_script('constructor-colorpicker', $directory_uri .'/admin/js/colorpicker.js', 'jquery');
 wp_enqueue_script('constructor-settings',    $directory_uri .'/admin/js/settings.js', 'jquery');
 

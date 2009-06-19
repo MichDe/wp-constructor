@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-05-20 13:36+0200\n"
+"POT-Creation-Date: 2009-06-19 16:40+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
@@ -15,825 +15,834 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11) ? 0 : ((n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20)) ? 1 : 2);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-SearchPath-0: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor\n"
+"X-Poedit-SearchPath-0: W:/wordpress/wp-content/themes/constructor\n"
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-list.php:18
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-archive.php:49
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-parent.php:17
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-default.php:17
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/single.php:21
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:17
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:77
+#: W:/wordpress/wp-content/themes/constructor/sidebar.php:18
+#: W:/wordpress/wp-content/themes/constructor/single.php:25
+#: W:/wordpress/wp-content/themes/constructor/template-monocolumn.php:24
+#: W:/wordpress/wp-content/themes/constructor/page.php:24
+msgid "Pages"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/sidebar.php:20
+msgid "Categories"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/sidebar.php:22
+#: W:/wordpress/wp-content/themes/constructor/single.php:30
+#: W:/wordpress/wp-content/themes/constructor/template-monocolumn.php:32
+#: W:/wordpress/wp-content/themes/constructor/page.php:32
+msgid "Tags"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/sidebar.php:27
+msgid "Meta"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/single.php:21
+#: W:/wordpress/wp-content/themes/constructor/template-authors.php:17
+#: W:/wordpress/wp-content/themes/constructor/layout-tile.php:17
+#: W:/wordpress/wp-content/themes/constructor/template-monocolumn.php:19
+#: W:/wordpress/wp-content/themes/constructor/page.php:20
+#: W:/wordpress/wp-content/themes/constructor/template-archive.php:49
+#: W:/wordpress/wp-content/themes/constructor/layout-list.php:18
 #, php-format
 msgid "Permanent Link to %s"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-list.php:19
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-parent.php:31
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-default.php:24
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/single.php:29
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:78
-msgid "F jS, Y"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-list.php:25
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-archive.php:52
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-parent.php:20
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-default.php:20
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/single.php:24
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:21
+#: W:/wordpress/wp-content/themes/constructor/single.php:24
+#: W:/wordpress/wp-content/themes/constructor/template-authors.php:21
+#: W:/wordpress/wp-content/themes/constructor/template-monocolumn.php:23
+#: W:/wordpress/wp-content/themes/constructor/page.php:23
+#: W:/wordpress/wp-content/themes/constructor/template-archive.php:52
+#: W:/wordpress/wp-content/themes/constructor/layout-list.php:25
 msgid "Read the rest of this entry &raquo;"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-list.php:37
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-default.php:35
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:91
-msgid "&laquo; Older Entries"
+#: W:/wordpress/wp-content/themes/constructor/single.php:29
+#: W:/wordpress/wp-content/themes/constructor/layout-tile.php:23
+#: W:/wordpress/wp-content/themes/constructor/template-monocolumn.php:31
+#: W:/wordpress/wp-content/themes/constructor/page.php:31
+#: W:/wordpress/wp-content/themes/constructor/layout-list.php:19
+msgid "F jS, Y"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-list.php:38
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-default.php:36
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:90
-msgid "Newer Entries &raquo;"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/404.php:13
-msgid "Error 404 - Not Found"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/404.php:16
-msgid "Sorry, but you are looking for something that isn&#8217;t here."
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/sidebar.php:18
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:183
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-parent.php:24
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/single.php:25
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:22
-msgid "Pages"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/sidebar.php:20
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:27
-msgid "Categories"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/sidebar.php:22
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-parent.php:32
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-default.php:26
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/single.php:30
-msgid "Tags"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/sidebar.php:27
-msgid "Meta"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-archive.php:30
-#, php-format
-msgid "%b"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-archive.php:31
-msgid "%B"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-archive.php:84
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-parent.php:29
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:53
-msgid "Back to Parent Page"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-archive.php:86
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-parent.php:33
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-default.php:27
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/single.php:31
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:55
+#: W:/wordpress/wp-content/themes/constructor/single.php:31
+#: W:/wordpress/wp-content/themes/constructor/template-authors.php:31
+#: W:/wordpress/wp-content/themes/constructor/template-monocolumn.php:33
+#: W:/wordpress/wp-content/themes/constructor/page.php:33
+#: W:/wordpress/wp-content/themes/constructor/template-archive.php:86
 msgid "Edit"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:152
-msgid "Home"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:154
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:22
-msgid "RSS Feed"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:217
-#, php-format
-msgid "%1$s is proudly powered by %2$s"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:218
-msgid "Constructor Theme"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:219
-#, php-format
-msgid "%1$s and %2$s."
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:219
-msgid "Entries (RSS)"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:219
-msgid "Comments (RSS)"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:223
-#, php-format
-msgid "%d queries. %s seconds."
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/functions.php:241
-msgid "No Image"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-parent.php:34
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-default.php:28
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/single.php:32
+#: W:/wordpress/wp-content/themes/constructor/single.php:32
+#: W:/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
+#: W:/wordpress/wp-content/themes/constructor/page.php:34
 msgid "No Comments &#187;"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-parent.php:34
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-default.php:28
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/single.php:32
+#: W:/wordpress/wp-content/themes/constructor/single.php:32
+#: W:/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
+#: W:/wordpress/wp-content/themes/constructor/page.php:34
 msgid "1 Comment &#187;"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-parent.php:34
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-default.php:28
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/single.php:32
+#: W:/wordpress/wp-content/themes/constructor/single.php:32
+#: W:/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
+#: W:/wordpress/wp-content/themes/constructor/page.php:34
 msgid "% Comments &#187;"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-parent.php:34
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/layout-default.php:28
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/single.php:32
+#: W:/wordpress/wp-content/themes/constructor/single.php:32
+#: W:/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
+#: W:/wordpress/wp-content/themes/constructor/page.php:34
 msgid "Comments Closed"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:12
+#: W:/wordpress/wp-content/themes/constructor/template-authors.php:29
+#: W:/wordpress/wp-content/themes/constructor/template-monocolumn.php:29
+#: W:/wordpress/wp-content/themes/constructor/page.php:29
+#: W:/wordpress/wp-content/themes/constructor/template-archive.php:84
+msgid "Back to Parent Page"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/layout-tile.php:30
+#: W:/wordpress/wp-content/themes/constructor/layout-list.php:37
+msgid "&laquo; Older Entries"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/layout-tile.php:31
+#: W:/wordpress/wp-content/themes/constructor/layout-list.php:38
+msgid "Newer Entries &raquo;"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/comments.php:12
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:21
+#: W:/wordpress/wp-content/themes/constructor/comments.php:21
 msgid "No Responses"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:21
+#: W:/wordpress/wp-content/themes/constructor/comments.php:21
 msgid "One Response"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:21
+#: W:/wordpress/wp-content/themes/constructor/comments.php:21
 msgid "% Responses"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:21
+#: W:/wordpress/wp-content/themes/constructor/comments.php:21
 #, php-format
 msgid "to &#8220;%s&#8221;"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:39
+#: W:/wordpress/wp-content/themes/constructor/comments.php:39
 msgid "Comments are closed."
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:49
+#: W:/wordpress/wp-content/themes/constructor/comments.php:49
 msgid "Leave a Reply"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:49
+#: W:/wordpress/wp-content/themes/constructor/comments.php:49
 #, php-format
 msgid "Leave a Reply for %s"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:56
+#: W:/wordpress/wp-content/themes/constructor/comments.php:56
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:63
+#: W:/wordpress/wp-content/themes/constructor/comments.php:63
 #, php-format
 msgid "Logged in as <a href=\"%1$s\">%2$s</a>."
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:63
+#: W:/wordpress/wp-content/themes/constructor/comments.php:63
 msgid "Log out of this account"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:63
+#: W:/wordpress/wp-content/themes/constructor/comments.php:63
 msgid "Log out &raquo;"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:68
+#: W:/wordpress/wp-content/themes/constructor/comments.php:68
 msgid "Name"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:68
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:71
+#: W:/wordpress/wp-content/themes/constructor/comments.php:68
+#: W:/wordpress/wp-content/themes/constructor/comments.php:71
 msgid "(required)"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:71
+#: W:/wordpress/wp-content/themes/constructor/comments.php:71
 msgid "Mail (will not be published)"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:74
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:40
+#: W:/wordpress/wp-content/themes/constructor/comments.php:74
 msgid "Website"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:78
+#: W:/wordpress/wp-content/themes/constructor/comments.php:78
 #, php-format
 msgid "<strong>XHTML:</strong> You can use these tags: <code>%s</code>"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/comments.php:82
+#: W:/wordpress/wp-content/themes/constructor/comments.php:82
 msgid "Submit Comment"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/template-sitemap.php:32
-msgid "Archives"
+#: W:/wordpress/wp-content/themes/constructor/template-archive.php:30
+#, php-format
+msgid "%b"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:22
+#: W:/wordpress/wp-content/themes/constructor/template-archive.php:31
+msgid "%B"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/404.php:13
+msgid "Error 404 - Not Found"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/404.php:16
+msgid "Sorry, but you are looking for something that isn&#8217;t here."
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/functions.php:190
+msgid "Home"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/functions.php:192
+#: W:/wordpress/wp-content/themes/constructor/author.php:22
+msgid "RSS Feed"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/functions.php:255
+#: W:/wordpress/wp-content/themes/constructor/themes/example/config.php:23
+#, php-format
+msgid "%1$s is proudly powered by %2$s"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/functions.php:256
+#: W:/wordpress/wp-content/themes/constructor/themes/example/config.php:24
+msgid "Constructor Theme"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/functions.php:257
+#, php-format
+msgid "%1$s and %2$s."
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/functions.php:257
+msgid "Entries (RSS)"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/functions.php:257
+msgid "Comments (RSS)"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/functions.php:261
+#, php-format
+msgid "%d queries. %s seconds."
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/functions.php:279
+msgid "No Image"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/author.php:22
 msgid "Author RSS Feed"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:28
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:32
+#: W:/wordpress/wp-content/themes/constructor/author.php:28
+#: W:/wordpress/wp-content/themes/constructor/author.php:32
 #, php-format
 msgid "%1$s %2$s"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:31
+#: W:/wordpress/wp-content/themes/constructor/author.php:31
 msgid "Full Name"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:35
+#: W:/wordpress/wp-content/themes/constructor/author.php:35
 msgid "Nickname"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:41
+#: W:/wordpress/wp-content/themes/constructor/author.php:41
 msgid "Visit author website"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:45
+#: W:/wordpress/wp-content/themes/constructor/author.php:45
 msgid "ICQ"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:50
+#: W:/wordpress/wp-content/themes/constructor/author.php:50
 msgid "AIM"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:55
+#: W:/wordpress/wp-content/themes/constructor/author.php:55
 msgid "Yahoo IM"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:60
+#: W:/wordpress/wp-content/themes/constructor/author.php:60
 msgid "MSN"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:65
+#: W:/wordpress/wp-content/themes/constructor/author.php:65
 msgid "About Me"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:70
+#: W:/wordpress/wp-content/themes/constructor/author.php:70
 #, php-format
 msgid "Last posts by %s"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/author.php:81
+#: W:/wordpress/wp-content/themes/constructor/author.php:81
 msgid "No posts by this author."
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/footer.php:25
-msgid "Blogroll"
+#: W:/wordpress/wp-content/themes/constructor/template-sitemap.php:32
+msgid "Archives"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:64
+#: W:/wordpress/wp-content/themes/constructor/admin/settings.php:61
 #, php-format
 msgid "File \"%s\" is not a image (jpeg, png, gif)"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:125
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:162
+#: W:/wordpress/wp-content/themes/constructor/admin/settings.php:122
+#: W:/wordpress/wp-content/themes/constructor/admin/settings.php:159
 msgid "Customize Theme"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:125
+#: W:/wordpress/wp-content/themes/constructor/admin/settings.php:122
 msgid "Customize"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:163
+#: W:/wordpress/wp-content/themes/constructor/admin/settings.php:160
 msgid "Options saved."
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:167
+#: W:/wordpress/wp-content/themes/constructor/admin/settings.php:164
 msgid "Errors"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings.php:194
+#: W:/wordpress/wp-content/themes/constructor/admin/settings.php:191
 msgid "Save Changes"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:1
-msgid "Layout"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/fonts.php:1
+msgid "Fonts"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:50
-msgid "Options"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/fonts.php:6
+msgid "Header Font"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:53
-msgid "Container Width"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/fonts.php:13
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/fonts.php:25
+msgid "The quick brown fox jumps over the lazy dog"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:62
-msgid "Sidebar Width"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/fonts.php:18
+msgid "Body Font"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:71
-msgid "Extra Bar Width"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:1
+msgid "Colors"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:78
-msgid "Homepage"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:62
+msgid "Opacity"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:80
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:81
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:94
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:95
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:108
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:109
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:122
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:123
-msgid "Default"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:64
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:65
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:17
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:18
+msgid "None"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:83
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:84
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:97
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:98
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:111
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:112
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:125
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:126
-msgid "Tile"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:67
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:68
+msgid "Color"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:86
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:87
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:100
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:101
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:114
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:115
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:128
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:129
-msgid "List"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:70
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:71
+msgid "Dark"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:92
-msgid "Archive"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:73
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:74
+msgid "Light"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:106
-msgid "Search"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:79
+msgid "Shadow"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/layout.php:120
-msgid "Index"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:82
+msgid "Only for Safari and Chrome"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/css.php:1
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:86
+msgid "Elements Colors"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:89
+msgid "background"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:92
+msgid "background alternative"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:95
+msgid "opacity style color"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:98
+msgid "text"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:101
+msgid "text alternative"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:104
+msgid "border"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:107
+msgid "border alternative"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:110
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:113
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/colors.php:116
+msgid "tags"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:1
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:5
+msgid "Sidebar"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:7
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:8
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:7
+msgid "Left"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:10
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:11
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:9
+msgid "Right"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:14
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:15
+msgid "Two"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:21
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:22
+msgid "Two Right"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:24
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:25
+msgid "Two Left"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/css.php:1
 msgid "CSS"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/css.php:5
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/css.php:5
 #, php-format
 msgid "<font color=\"red\"><b>Warning!</b></font>: File \"%s\" is not writable."
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/fonts.php:1
-msgid "Fonts"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/fonts.php:6
-msgid "Header Font"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/fonts.php:13
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/fonts.php:25
-msgid "The quick brown fox jumps over the lazy dog"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/fonts.php:18
-msgid "Body Font"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/sidebar.php:1
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/sidebar.php:5
-msgid "Sidebar"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/sidebar.php:7
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/sidebar.php:8
-msgid "Left"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/sidebar.php:10
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/sidebar.php:11
-msgid "Right"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/sidebar.php:14
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/sidebar.php:15
-msgid "Two"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/sidebar.php:17
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/sidebar.php:18
-msgid "None"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/sidebar.php:21
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/sidebar.php:22
-msgid "Two Right"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/sidebar.php:24
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/sidebar.php:25
-msgid "Two Left"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/themes.php:1
-msgid "Themes"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/themes.php:42
-msgid "File \"style.css\" is not exists"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/themes.php:43
-msgid "Anonymous"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/themes.php:55
-msgid "version"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:1
-msgid "Colors"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:62
-msgid "Opacity"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:67
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:68
-msgid "Color"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:70
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:71
-msgid "Dark"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:73
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:74
-msgid "Light"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:79
-msgid "Shadow"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:82
-msgid "Only for Safari and Chrome"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:86
-msgid "Elements Colors"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:89
-msgid "background"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:92
-msgid "background alternative"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:95
-msgid "opacity style color"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:98
-msgid "text"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:101
-msgid "text alternative"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:104
-msgid "border"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:107
-msgid "border alternative"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:110
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:113
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/colors.php:116
-msgid "tags"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/slideshow.php:2
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/slideshow.php:61
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:2
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:67
 msgid "Slideshow"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/slideshow.php:29
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:26
+msgid "Enable slideshow"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:28
+msgid "by default use images from posts on current page"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:32
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:50
+msgid "Options"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:35
 msgid "Show on page"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/slideshow.php:32
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:38
 msgid "Show on single post"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/slideshow.php:37
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/slideshow.php:38
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:43
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:44
 msgid "In Content"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/slideshow.php:41
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/slideshow.php:42
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:47
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:48
 msgid "Over Content"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/slideshow.php:49
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:55
 msgid "Height"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/slideshow.php:61
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:67
 msgid "use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a>"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/slideshow.php:63
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/slideshow.php:64
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:69
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:70
 msgid "Disable"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/slideshow.php:78
-msgid "If you want to display slideshow on homepage, please install <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a> plugin"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:84
+msgid "You can use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a> plugin for build custom slideshow"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/export.php:1
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:1
+msgid "Layout"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:53
+msgid "Container Width"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:62
+msgid "Sidebar Width"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:71
+msgid "Extra Bar Width"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:78
+msgid "Homepage"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:80
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:81
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:94
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:95
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:108
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:109
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:122
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:123
+msgid "Default"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:83
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:84
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:97
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:98
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:111
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:112
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:125
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:126
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:43
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:44
+msgid "Tile"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:86
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:87
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:100
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:101
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:114
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:115
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:128
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:129
+msgid "List"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:92
+msgid "Archive"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:106
+msgid "Search"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/layout.php:120
+msgid "Index"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/export.php:1
 msgid "Export"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/export.php:2
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/export.php:2
 msgid "Export Current Theme"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/export.php:3
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/export.php:3
 msgid "Use this is options for export your changes"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/export.php:3
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/export.php:3
 msgid "save changes before export"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/export.php:6
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/export.php:6
 msgid "click here and save file"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/export.php:12
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/export.php:12
 #, php-format
 msgid "For import theme - use your FTP access and create new folder in folder <code>%s/themes</code> and upload <code>config.php</code>"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:1
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/content.php:1
+msgid "Content"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/content.php:4
+msgid "Posts"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/content.php:7
+msgid "Show author link"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/footer.php:1
+msgid "Footer"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/footer.php:4
+msgid "Footer Text"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:1
 msgid "Images"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:14
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:14
 #, php-format
 msgid "<font color=\"red\"><b>Warning!</b></font>: Directory \"%s\" is not writable."
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:18
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:18
 msgid "Body Image"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:23
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:75
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:107
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:117
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:148
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:179
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:23
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:75
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:107
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:117
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:148
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:179
 msgid "preview"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:29
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:29
 msgid "Image Repeat"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:30
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:31
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:30
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:31
 msgid "No Repeat"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:34
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:35
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:34
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:35
 msgid "Repeat Horizontal"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:38
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:39
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:38
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:39
 msgid "Repeat Vertical"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:50
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:81
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:123
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:154
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:185
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:50
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:81
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:123
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:154
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:185
 msgid "Image Position"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:51
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:82
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:124
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:155
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:186
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:51
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:82
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:124
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:155
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:186
 msgid "Top Left"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:52
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:83
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:125
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:156
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:187
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:52
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:83
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:125
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:156
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:187
 msgid "Top Center"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:53
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:84
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:126
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:157
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:188
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:53
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:84
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:126
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:157
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:188
 msgid "Top Right"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:57
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:88
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:130
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:161
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:192
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:57
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:88
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:130
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:161
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:192
 msgid "Center Left"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:58
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:89
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:131
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:162
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:193
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:58
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:89
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:131
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:162
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:193
 msgid "Center Center"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:59
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:90
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:132
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:163
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:194
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:59
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:90
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:132
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:163
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:194
 msgid "Center Right"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:63
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:94
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:136
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:167
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:198
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:63
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:94
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:136
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:167
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:198
 msgid "Bottom Left"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:64
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:95
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:137
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:168
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:199
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:64
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:95
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:137
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:168
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:199
 msgid "Bottom Center"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:65
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:96
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:138
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:169
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:200
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:65
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:96
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:138
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:169
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:200
 msgid "Bottom Right"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:70
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:70
 msgid "Background Image"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:102
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:102
 msgid "Content Image"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:102
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:102
 msgid "repeat by Y and w/out opacity"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:112
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:112
 msgid "Sidebar Image"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:143
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:143
 msgid "Extrabar Image"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/images.php:174
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/images.php:174
 msgid "Footer Image"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/footer.php:1
-msgid "Footer"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/footer.php:4
-msgid "Footer Text"
-msgstr ""
-
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/header.php:1
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:1
 msgid "Header"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/header.php:5
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:5
 msgid "Title position"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/header.php:8
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:8
 msgid "Center"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/header.php:14
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:14
 msgid "Title colors"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/header.php:17
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:17
 msgid "title"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/header.php:20
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:20
 msgid "description"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/header.php:25
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:25
 msgid "Header menu"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/header.php:28
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:28
 msgid "Don't show menu"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/header.php:31
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:31
 msgid "Show first-level pages"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/header.php:34
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:34
 msgid "Show pages in drop-down menu"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/header.php:37
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:37
 msgid "Show pages in drop-down menu (2-levels)"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/header.php:40
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:40
 msgid "Show link to home page"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/header.php:43
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/header.php:43
 msgid "Show link to RSS feed"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/content.php:1
-msgid "Content"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/themes.php:1
+msgid "Themes"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/content.php:4
-msgid "Posts"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/themes.php:42
+msgid "File \"style.css\" is not exists"
 msgstr ""
 
-#: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor/admin/settings/content.php:7
-msgid "Show author link"
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/themes.php:43
+msgid "Anonymous"
+msgstr ""
+
+#: W:/wordpress/wp-content/themes/constructor/admin/settings/themes.php:55
+msgid "version"
 msgstr ""
 

@@ -35,6 +35,8 @@
         if ($('.sidebar').length > 0) {
             if ($('#sidebar').length > 0 && $('#sidebar').height() > $('#container').height()) {
                 $('#container').css('height', $('#sidebar').height() + 6 +'px');
+            } else if ($('#sidebar').length > 0 && $('#sidebar').height() < $('#container').height()) {
+                $('#sidebar').css('height', $('#container').height() - 6);
             }
             
             if ($('#extra').length > 0 && $('#extra').height() > $('#container').height()) {
