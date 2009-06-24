@@ -8,7 +8,10 @@
 header('Content-type: text/css');
 
 // debug only current theme
- error_reporting(E_ALL);
+error_reporting(E_ALL);
+
+// template directory
+$template_uri = get_template_directory_uri();
 
 // config is null
 $constructor = null;
@@ -21,16 +24,7 @@ if (isset($_GET['theme'])) {
        $constructor = include dirname(__FILE__) . '/themes/'.$theme.'/config.php';
     }
 } else {
-    // attemp load data from DB
-    if (file_exists(dirname(__FILE__) . '/../../../wp-load.php')) {
-        include_once dirname(__FILE__) . '/../../../wp-load.php';
-        // load from DB
-        $constructor = get_option('constructor');
-    } elseif (file_exists(dirname(__FILE__) . '/../../../../wp-load.php')) {
-        include_once dirname(__FILE__) . '/../../../../wp-load.php';
-        // load from DB
-        $constructor = get_option('constructor');
-    }
+    $constructor = get_option('constructor');
 }
 
 if (!$constructor) {
@@ -209,36 +203,36 @@ $fonts_body = $fonts[$constructor['fonts']['body']];
 
 /* Background images */
 if (isset($constructor['images']['body']['src']) && !empty($constructor['images']['body']['src'])) {
-    $body_bg = "background-image: url({$constructor['images']['body']['src']});\n"
+    $body_bg = "background-image: url({$template_uri}/{$constructor['images']['body']['src']});\n"
               ."background-repeat: {$constructor['images']['body']['repeat']};\n"
               ."background-position: {$constructor['images']['body']['pos']};\n";
 } else { $body_bg = null; }
 
 if (isset($constructor['images']['wrap']['src']) && !empty($constructor['images']['wrap']['src'])) {
-    $wrap_bg = "background-image: url({$constructor['images']['wrap']['src']});\n"
+    $wrap_bg = "background-image: url({$template_uri}/{$constructor['images']['wrap']['src']});\n"
               ."background-repeat: no-repeat;\n"
               ."background-position: {$constructor['images']['wrap']['pos']};\n";
 } else { $wrap_bg = null; }
 
 if (isset($constructor['images']['wrapper']['src']) && !empty($constructor['images']['wrapper']['src'])) {
-    $wrapper_bg = "background-image: url({$constructor['images']['wrapper']['src']});\n"
+    $wrapper_bg = "background-image: url({$template_uri}/{$constructor['images']['wrapper']['src']});\n"
                  ."background-repeat: repeat-y;\n";
 } else { $wrapper_bg = null; }
 
 if (isset($constructor['images']['sidebar']['src']) && !empty($constructor['images']['sidebar']['src'])) {
-    $sidebar_bg = "background-image: url({$constructor['images']['sidebar']['src']});\n"
+    $sidebar_bg = "background-image: url({$template_uri}/{$constructor['images']['sidebar']['src']});\n"
               ."background-repeat: no-repeat;\n"
               ."background-position: {$constructor['images']['sidebar']['pos']};\n";
 } else { $sidebar_bg = null; }
 
 if (isset($constructor['images']['extrabar']['src']) && !empty($constructor['images']['extrabar']['src'])) {
-    $extrabar_bg = "background-image: url({$constructor['images']['extrabar']['src']});\n"
+    $extrabar_bg = "background-image: url({$template_uri}/{$constructor['images']['extrabar']['src']});\n"
               ."background-repeat: no-repeat;\n"
               ."background-position: {$constructor['images']['extrabar']['pos']};\n";
 } else { $extrabar_bg = null; }
 
 if (isset($constructor['images']['footer']['src']) && !empty($constructor['images']['footer']['src'])) {
-    $footer_bg = "background-image: url({$constructor['images']['footer']['src']});\n"
+    $footer_bg = "background-image: url({$template_uri}/{$constructor['images']['footer']['src']});\n"
               ."background-repeat: no-repeat;\n"
               ."background-position: {$constructor['images']['footer']['pos']};\n";
 } else { $footer_bg = null; }
