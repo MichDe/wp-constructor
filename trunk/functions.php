@@ -39,7 +39,34 @@ load_theme_textdomain('constructor', get_template_directory().'/lang');
 if (!is_admin()) {    
     wp_enqueue_script( 'constructor-theme',     $template_uri.'/js/constructor.js', array('jquery'));
     
-    wp_enqueue_style( 'constructor-style', $template_uri.'/css.php');
+    /**
+     * Parse request
+     *
+     * @param unknown_type $wp
+     */
+    function constructor_parse_request($wp) {
+        // only process requests with "my-plugin=ajax-handler"
+        if (array_key_exists('theme-constructor', $wp->query_vars) 
+                && $wp->query_vars['theme-constructor'] == 'css') {
+            require_once 'css.php';
+            die();
+        }
+    }
+    add_action('wp', 'constructor_parse_request');
+    
+    /**
+     * register query vars
+     *
+     * @param array $vars
+     * @return array
+     */
+    function constructor_query_vars($vars) {
+        $vars[] = 'theme-constructor';
+        return $vars;
+    }
+    add_filter('query_vars', 'constructor_query_vars');
+    
+    wp_enqueue_style( 'constructor-style', get_option('home').'/?theme-constructor=css');
     
     $constructor = get_option('constructor');
     
