@@ -3,12 +3,12 @@
 
 = Localization =
 Available following localizations:
-* English (default)
-* Russian (it's my native language)
-* Ukrainian - thx to Baziak
-* Polish - thx to mummle
-* Danish - thx to Georg S. Adamsen (http://wordpress.blogos.dk/s%C3%B8g-efter-downloads/?did=171)
-* Italian - thx to gio gio (http://people.unica.it/)
+ * English (default)
+ * Russian (it's my native language)
+ * Ukrainian - thx to Baziak
+ * Polish - thx to mummle
+ * Danish - thx to Georg S. Adamsen (http://wordpress.blogos.dk/s%C3%B8g-efter-downloads/?did=171)
+ * Italian - thx to gio gio (http://people.unica.it/)
 
 
 = Many themes =
