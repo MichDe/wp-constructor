@@ -78,14 +78,6 @@ if (!is_admin()) {
             wp_enqueue_style( 'constructor-theme', $template_uri.'/themes/'.$constructor['theme'].'/style.css');
     }
 
-    if ($constructor['menu']['type'] > 2) {
-        wp_enqueue_script( 'constructor-hover',     $template_uri.'/js/hoverIntent.js', array('jquery'));
-        wp_enqueue_script( 'constructor-bgiframe',  $template_uri.'/js/jquery.bgiframe.min.js', array('jquery'));
-        wp_enqueue_script( 'constructor-superfish', $template_uri.'/js/superfish.js', array('jquery'));
-        
-        wp_enqueue_style( 'constructor-superfish', $template_uri.'/css/superfish.css');
-    }
-
     /**
      * get_constructor_slideshow
      *
@@ -294,45 +286,16 @@ JS;
      *
      * @return string
      */
-    function get_constructor_post_image($width = 312, $height = 292)
+    function get_constructor_post_image($width = 312, $height = 292, $key = 'thumb')
     {
-        global $template_uri;
-        if ($img = _get_post_image()) {
-            echo '<img src="' .$template_uri. "/timthumb.php?src=".urlencode($img).'&amp;h='.$height.'&amp;w='.$width.'&amp;zc=1&amp;q=95" alt="' .get_the_title(). '"/>';
-        } else {
-            if ($img = _get_post_image(false)) {
-                echo '<div class="crop" style="width:'.$width.'px;height:'.$height.'px;"><img src="'.$img.'" height="'.$height.'px" alt="' .get_the_title(). '"/></div>';
-            } else {
-                echo '<img src="' .$template_uri. '/images/noimage.png" width="'.$width.'px" height="'.$height.'px" alt="' .__('No Image', 'constructor'). '"/>';
-            }
-        }
-    }
-
-    /**
-     * _get_post_image
-     *
-     * @see    wordpress loop
-     * @param  bool $local search only local images
-     * @return string
-     */
-    function _get_post_image($local = true)
-    {
-        global $post;
-
-        if ($local) {
-            $home = addcslashes(get_bloginfo('siteurl'), '.-/');
-            $pattern = "/\<\s*img.*src\s*=\s*[\"\']?(?:$home|\/)([^\"\'\ >]*)[\"\']?.*\/\>/i";
-        } else {
-            $pattern = "/\<\s*img.*src\s*=\s*[\"\']?([^\"\'\ >]*)[\"\']?.*\/\>/i";
-        }
-
-        preg_match_all($pattern, $post->post_content, $images);
-
-        if (!isset($images[1][0])) {
-            return false;
-        } else {
-            return $images[1][0];
-        }
+    	global $post,$template_uri;
+		$thumbs = get_post_custom_values($key);
+		if (sizeof($thumbs) == 0) {
+			echo '<img src="' .$template_uri. '/images/noimage.png" width="'.$width.'px" height="'.$height.'px" alt="' .__('No Image', 'constructor'). '"/>';
+		} else {
+			$img = $thumbs[0];
+			echo '<img src="' .$img.'" width="'.$width.'px" height="'.$height.'px" alt="' .get_the_title(). '"/>';
+		}
     }
 
 } else {

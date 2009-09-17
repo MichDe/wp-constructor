@@ -351,8 +351,8 @@ fieldset{
 #header-links {    border-color: {$color_border} }
     #header-links ul { border-color: {$color_border} }
     #header-links li { border-color: {$color_border} }
-    #header-links li li a { background-color:{$color_bg}  }
-    #header-links li a:hover { background-color:{$color_bg2} }
+    #header-links li li { background-color:{$color_bg}  }
+    #header-links li:hover { background-color:{$color_bg2} }
 /*/Header*/
 /*Slideshow*/
 .wp-sl{

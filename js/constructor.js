@@ -7,40 +7,40 @@
 
         // Header Drop-Down Menu
         if ($("#header-links > ul ul").length > 0) {
-            $("#header-links > ul").superfish().find('ul').bgIframe({opacity:false});
-        }
-
-        // Header Font Resizer
-        if ($("#size").length > 0) {
-
-            $("#size a.big").click(function(){
-                $('body').css('font-size', '0.72em');
-                return false;
-            });
-
-            $("#size a.normal").click(function(){
-                $('body').css('font-size', '0.625em');
-                return false;
-            });
-
-            $("#size a.small").click(function(){
-                $('body').css('font-size', '0.56em');
-                return false;
-            });
+			
+			$("#header-links li:has(ul)").addClass('indicator');
+			
+			$("#header-links li:has(ul)").hover(function(){
+				$(this).stop(true,true)
+					.addClass('hover')
+					.children('ul').show();
+			}, function(){
+				$(this).stop(true,true)
+					.removeClass('hover')
+					.children('ul').hide();
+			});
         }
 
         // Header Slideshow
 
         // Sidebar Resizer
         if ($('.sidebar').length > 0) {
-            if ($('#sidebar').length > 0 && $('#sidebar').height() > $('#container').height()) {
-                $('#container').css('height', $('#sidebar').height() + 6 +'px');
-            } else if ($('#sidebar').length > 0 && $('#sidebar').height() < $('#container').height()) {
-                $('#sidebar').css('height', $('#container').height() - 6);
+			
+            if ($('#sidebar').length > 0 && $('#sidebar').outerHeight() > $('#container').outerHeight()) {
+                $('#container').css('height', $('#sidebar').outerHeight() + 6
+											 -  parseInt($('#container').css('padding-top'))
+											 -  parseInt($('#container').css('padding-bottom')));
+            } else if ($('#sidebar').length > 0 && $('#sidebar').outerHeight() < $('#container').outerHeight()) {
+				
+                $('#sidebar').css('height', $('#container').outerHeight() - 6
+											 -  parseInt($('#sidebar').css('padding-top'))
+											 -  parseInt($('#sidebar').css('padding-bottom')));
             }
             
-            if ($('#extra').length > 0 && $('#extra').height() > $('#container').height()) {
-                $('#container').css('height', $('#extra').height() + 6 +'px');
+            if ($('#extra').length > 0 && $('#extra').outerHeight() > $('#container').outerHeight()) {
+                $('#container').css('height', $('#extra').outerHeight() + 6
+											 -  parseInt($('#container').css('padding-top'))
+											 -  parseInt($('#container').css('padding-bottom')));
             }
         }
     });
