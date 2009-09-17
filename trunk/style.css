@@ -2,7 +2,7 @@
 Theme Name: Constructor
 Theme URI: http://code.google.com/p/wp-constructor/
 Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.7+ (include 2.8)
-Version: 0.5.2
+Version: 0.6.0
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -206,6 +206,15 @@ div.aligncenter {
     border-width:0 1px 0 0;
 }
 
+#header-links li.indicator {
+	background-image: url('images/arrows.png');
+	background-repeat: no-repeat;
+	background-position: 106px -106px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+	#header-links li:hover.indicator    { background-position: 106px -161px }
+	#header-links li li.indicator       { background-position: 106px    6px }
+	#header-links li li:hover.indicator { background-position: 106px  -49px }
+
 #header-links ul ul {
     z-index:301;
     float:none;
@@ -219,9 +228,9 @@ div.aligncenter {
     z-index:302;
     float:left;
     position:absolute;
-    top:20px;
-    left:116px;
-    display:none;
+    top:10px;
+    left:118px;
+    /*display:none;*/
     margin-left:-1px;
 }
 #header-links li li {
@@ -239,18 +248,18 @@ div.aligncenter {
     text-align:center;
     white-space: nowrap;
     display:block;
-    padding:0 16px;
+    padding:0;
     font-weight:700 !important;
-    min-width:70px;
+    min-width:120px;
     width:auto !important;
-    width:70px;
+    width:120px;
     height:40px;
     line-height:40px
 }
 /* 2-th level reset */
-#header-links li ul li a {
+#header-links li li a {
     text-align:left;
-    width: auto;
+	text-indent:16px;
     border:0
 }
 
@@ -259,32 +268,6 @@ div.aligncenter {
     background-image:url('images/feed-icon-16x16.png');
     background-repeat:no-repeat;
     background-position:8px 50%;
-}
-
-#size {
-    width:96px;
-    border-style:none dotted none dotted !important;
-    border-width:0 1px 0 1px !important;
-    float:right !important;
-}
-#size a {
-    width:24px !important;
-    padding:0 4px !important;
-    height:40px;
-    line-height:40px;
-    float:left;
-}
-#size a.big {
-    font-size:16px
-}
-#size a.normal {
-    line-height:44px;
-    font-size:12px
-}
-#size a.small {
-
-    line-height:48px;
-    font-size:8px
 }
 /*/Header*/
 /*Sidebar*/
@@ -379,11 +362,13 @@ div.aligncenter {
     margin: 0 4px 0 4px
 }
 
-.hentry .entry ol, .hentry .entry ul {
+.hentry .entry ol,
+.hentry .entry ul {
     padding-left:20px
 }
 
-.hentry .entry li ol, .hentry .entry li ul {
+.hentry .entry li ol,
+.hentry .entry li ul {
     padding-left:6px
 }
 
@@ -488,14 +473,12 @@ div.aligncenter {
 .navigation {
     font-size:1.4em
 }
-
 .navigation div a{
     display:block;
     width:auto;
     height:32px;
     margin:0 20px
 }
-
 .navigation div.clear{
     height:0;
 }

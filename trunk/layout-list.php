@@ -20,7 +20,7 @@
                     </h2>
                 </div>                
                 <div class="entry clear">
-                    <div class="thumb alignleft"><?php get_constructor_post_image(128, 128) ?></div>
+                    <div class="thumb alignleft"><?php get_constructor_post_image(128, 128, 'thumb-list') ?></div>
                     <?php
                     $content = apply_filters('the_content', get_the_content(__('Read the rest of this entry &raquo;', 'construtor')));
                     $content = preg_replace('/(\<script.*\>.*\<\/script\>)/si', '', $content);
