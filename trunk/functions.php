@@ -2,6 +2,9 @@
 /**
  * @package WordPress
  * @subpackage Constructor
+ * 
+ * @author   Anton Shevchuk <AntonShevchuk@gmail.com>
+ * @link     http://anton.shevchuk.name
  */
 // debug only current theme
 // error_reporting(E_ALL);
@@ -35,6 +38,7 @@ $template_uri = get_template_directory_uri();
 
 load_theme_textdomain('constructor', get_template_directory().'/lang');
 
+require_once 'widgets/many-in-one.php';
 
 if (!is_admin()) {    
     wp_enqueue_script( 'constructor-theme',     $template_uri.'/js/constructor.js', array('jquery'));
@@ -46,9 +50,16 @@ if (!is_admin()) {
      */
     function constructor_parse_request($wp) {
         // only process requests with "my-plugin=ajax-handler"
-        if (array_key_exists('theme-constructor', $wp->query_vars) 
-                && $wp->query_vars['theme-constructor'] == 'css') {
-            require_once 'css.php';
+        if (array_key_exists('theme-constructor', $wp->query_vars)){
+            switch ($wp->query_vars['theme-constructor']) {
+            	case 'css':
+					require_once 'css.php';
+					break;
+            	case 'slideshow':
+					require_once 'slideshow.php';
+					break;
+			}
+			// die after return data
             die();
         }
     }
@@ -91,7 +102,6 @@ if (!is_admin()) {
         if (!isset($constructor['slideshow']['flag']) or $constructor['slideshow']['flag'] == '') {
             return false;
         }
-
         if (is_page()   && !$constructor['slideshow']['onpage'])   return false;
         if (is_single() && !$constructor['slideshow']['onsingle']) return false;
 
@@ -124,6 +134,7 @@ if (!is_admin()) {
         		break;
         
         	default:
+				$slideshow = get_option('home').'/?theme-constructor=slideshow';
         	    echo '<div class="wp-sl"></div>';
                 wp_enqueue_script('constructor-slideshow', $template_uri.'/js/jquery.wp-slideshow.js', array('jquery'));
                 wp_print_scripts('constructor-slideshow');
@@ -132,23 +143,29 @@ if (!is_admin()) {
                 /* <![CDATA[ */
                 jQuery(document).ready(function(){
                     var sl = jQuery('.wp-sl').wpslideshow({
-                        thumb:true,
+                        thumb:false,
                         thumbPath:'$template_uri/timthumb.php?src=',
                         limit:480,
-                        effectTime:700,
-                        timeout:5000,
+                        effectTime:1000,
+                        timeout:10000,
                         play:true
                     });
-                    
-                    jQuery('.hentry').each(function(){
-                        
-                        var text  = jQuery(this).find('.entry').text();            
-                        var title = jQuery(this).find('.title a').text();
-                        var url   = jQuery(this).find('.title a').attr('href');
-                        var img   = jQuery(this).find('.entry img:first').attr('src');
-                        
-                        if (img)
-                            sl.addSlide(title,url,img,text);
+                    jQuery.ajax({
+                    	type: "GET",
+						url: "$slideshow",
+						dataType: "xml",
+					    success: function(data){
+					    	if (jQuery('post',data).length == 0) {
+					    		jQuery('#header-slideshow').hide();
+					    	};
+					    	jQuery('post',data).each(function(){
+					    		var _self = jQuery(this);
+					    		sl.addSlide(_self.children('title').text(),
+											_self.find('permalink').text(),
+											_self.find('image').text(),
+											_self.find('content').text());
+					    	});
+					    }						
                     });
                 });
                 /* ]]> */
@@ -297,6 +314,50 @@ JS;
 			echo '<img src="' .$img.'" width="'.$width.'px" height="'.$height.'px" alt="' .get_the_title(). '"/>';
 		}
     }
+	
+	/**
+	 * get constructor category
+	 * 
+	 * @return string
+	 */
+	function get_constructor_category()
+	{
+		global $wp_query;
+
+		$category = array();
+
+		if (is_single()) {
+			$cat = get_the_category($wp_query->post->ID);
+			$category = split('/', rtrim(get_category_parents($cat[0], false, '/', true), '/'));
+		} elseif (is_page()) {
+			$category = get_post_custom_values('category_name', $wp_query->post->ID);
+		} elseif (is_category()) {
+			$cat = get_category(get_query_var('cat'));
+			$category = split('/', rtrim(get_category_parents($cat, false, '/', true), '/'));
+		}
+		return $category;
+	}
+	
+	/**
+	 * get constructor category classname
+	 * 
+	 * @return string
+	 */
+	function get_constructor_category_class()
+	{
+		global $category_class;
+		
+		if ($category_class) {
+			// nothing
+		} elseif ($category = get_constructor_category()) {
+			if (sizeof($category) > 0)
+				$category_class =  'category-' .join(' category-', $category);
+		} else {
+			$category_class = '';
+		}
+		
+		return $category_class;
+	}
 
 } else {
     require_once 'admin/settings.php';

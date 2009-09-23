@@ -5,6 +5,7 @@
 return array(
             "sidebar"   => 'right',          // sidebar position
             'layout'    =>  array(           // layouts styles
+            			'header'  => 140,    // header height
                         'width'   => 1024,   // container width
                         'sidebar' => 240,    // sidebar width
                         'extra'   => 240,    // extrabar  width
@@ -41,8 +42,8 @@ return array(
                         "onsingle" => false  // - show slideshow on single post
                     ),
             "images"   => array(             // background images
-                        "body" => array('src'=>'themes/example/gradient.png', 'pos'=>'left top', 'repeat'=>'repeat-x'),
-                        "wrap" => array('src'=>'themes/example/header.png','pos'=>'center top'),
+                        "body" => array('src'=>'themes/example/gradient.png', 'pos'=>'left top', 'repeat'=>'repeat-x', 'fixed'=>false),
+                        "wrap" => array('src'=>'themes/example/header.png','pos'=>'center top', 'fixed'=>false),
                         "wrapper"  => array('src'=>'themes/example/wrapper.png'),
                         "sidebar"  => array('src'=>'themes/example/sidebar.png','pos'=>'right bottom'),
                         "extrabar" => array('src'=>'','pos'=>'right bottom'),

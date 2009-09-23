@@ -15,13 +15,19 @@
     </tr>
     <?php endif; ?>
     <tr>
-        <th scope="row" valign="top" rowspan="3"><?php _e('Body Image', 'constructor'); ?></th>
+        <th scope="row" valign="top" rowspan="4"><?php _e('Body Image', 'constructor'); ?></th>
         <td>
             <input type="text" name="constructor[images][body][src]" value="<?php echo $constructor['images']['body']['src']?>"/>
             <?php if ($upload) : ?><input type="file" name="constructor[images][body][src]"/><?php endif; ?>
             <?php if($constructor['images']['body']['src']) : ?>
                 (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['body']['src']; ?>"><?php _e('preview', 'constructor'); ?></a>)
             <?php endif; ?>
+        </td>
+    </tr>
+    <tr>
+        <td>
+			<input type="checkbox" id="constructor-images-body-fixed" name="constructor[images][body][fixed]" value="1" <?php if($constructor['images']['body']['fixed']) : ?>checked="checked" <?php endif; ?>/>
+			<label for="constructor-images-body-fixed"><?php _e('Fixed position', 'constructor')?></label>
         </td>
     </tr>
     <tr>
@@ -67,13 +73,19 @@
     </tr>
 
     <tr>
-        <th scope="row" valign="top" rowspan="2"><?php _e('Background Image', 'constructor'); ?></th>
+        <th scope="row" valign="top" rowspan="3"><?php _e('Background Image', 'constructor'); ?></th>
         <td>
             <input type="text" name="constructor[images][wrap][src]" value="<?php echo $constructor['images']['wrap']['src']?>"/>
             <?php if ($upload) : ?><input type="file" name="constructor[images][wrap][src]"/><?php endif; ?>
             <?php if($constructor['images']['wrap']['src']) : ?>
                 (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['wrap']['src']; ?>"><?php _e('preview', 'constructor'); ?></a>)
             <?php endif; ?>
+        </td>
+    </tr>
+    <tr>
+        <td>
+			<input type="checkbox" id="constructor-images-wrap-fixed" name="constructor[images][wrap][fixed]" value="1" <?php if($constructor['images']['wrap']['fixed']) : ?>checked="checked" <?php endif; ?>/>
+			<label for="constructor-images-wrap-fixed"><?php _e('Fixed position', 'constructor')?></label>
         </td>
     </tr>
     <tr>

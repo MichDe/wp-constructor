@@ -1,6 +1,11 @@
 /**
  * @package WordPress
  * @subpackage Constructor
+ * 
+ * @author   Anton Shevchuk <AntonShevchuk@gmail.com>
+ * @link     http://anton.shevchuk.name
+ * 
+ * @version 0.2
  */
 (function($){
     /**
@@ -13,7 +18,7 @@
      */
     $.fn.wpslideshow = function(options) {
         var defaults = {
-            thumb:true,
+            thumb:false,
             thumbPath:'/wp-content/themes/constructor/timthumb.php?src=',
             effectTime:300,
             timeout:3000,
@@ -84,7 +89,7 @@
                 if (options.thumb && relocal.test(img))
                     img = options.thumbPath + escape(img) + '&h=' + $this.height() + '&w=' + Math.round($this.width()/2) + '&zc=1&q=95';
                 
-                $this.append('<div><a href="'+url+'" title="'+title+'" class="opacity shadow">'+title+'</a><img src="'+img+'" alt="'+title+'"/><p>'+text+'<span></span></p></div>');
+                $this.append('<div><a href="'+url+'" title="'+title+'" class="title opacity shadow">'+title+'</a><img src="'+img+'" alt="'+title+'"/><p class="box shadow opacity">'+text+'</p></div>');
                 
                 var div = $this.find('> div:last');
                 
@@ -112,6 +117,9 @@
                 current.css({});
                 next.css({left:$this.width()}).show();
                 
+				current.stop(true, true);
+				next.stop(true, true);
+				
                 current.animate({left:-$this.width()}, options.effectTime, function(){ $(this).hide()});
                 next.animate({left:0}, options.effectTime);
                 
@@ -135,6 +143,9 @@
                 current.css({});
                 prev.css({left:-$this.width()}).show();
                 
+				current.stop(true, true);
+				prev.stop(true, true);
+				
                 current.animate({left:$this.width()}, options.effectTime, function(){ $(this).hide()});
                 prev.animate({left:0}, options.effectTime);
                 

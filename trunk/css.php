@@ -206,12 +206,18 @@ if (isset($constructor['images']['body']['src']) && !empty($constructor['images'
     $body_bg = "background-image: url({$template_uri}/{$constructor['images']['body']['src']});\n"
               ."background-repeat: {$constructor['images']['body']['repeat']};\n"
               ."background-position: {$constructor['images']['body']['pos']};\n";
+	if (isset($constructor['images']['body']['fixed']) && $constructor['images']['body']['fixed']) {
+    	$body_bg .= "background-attachment:fixed;\n";
+    }
 } else { $body_bg = null; }
 
 if (isset($constructor['images']['wrap']['src']) && !empty($constructor['images']['wrap']['src'])) {
     $wrap_bg = "background-image: url({$template_uri}/{$constructor['images']['wrap']['src']});\n"
               ."background-repeat: no-repeat;\n"
               ."background-position: {$constructor['images']['wrap']['pos']};\n";
+    if (isset($constructor['images']['wrap']['fixed']) && $constructor['images']['wrap']['fixed']) {
+    	$wrap_bg .= "background-attachment:fixed;\n";
+    }
 } else { $wrap_bg = null; }
 
 if (isset($constructor['images']['wrapper']['src']) && !empty($constructor['images']['wrapper']['src'])) {
@@ -344,7 +350,10 @@ fieldset{
 }
 /*/Layout*/
 /*Header*/
-#header { text-align: {$constructor['title']['pos']}}
+#header {
+	height: {$constructor['layout']['header']}px;
+	text-align: {$constructor['title']['pos']}
+}
 #header h1 { font: bold 600%/100% {$fonts_header}; }
 #header h1 a { color: {$color_title}}
 #header h2 { color: {$color_title2}}

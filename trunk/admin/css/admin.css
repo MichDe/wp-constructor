@@ -49,7 +49,6 @@
     height:107px
 }
 
-
 .constructor #slideshow a{
     width:auto !important;
 }
@@ -72,6 +71,13 @@
 
 .constructor th small {
     color:#777;
+}
+
+.constructor .slider input {
+	border:0;
+	color:#21759B;
+	font-weight:bold;
+	width:42px	
 }
 
 #constr-themes div {

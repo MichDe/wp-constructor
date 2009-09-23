@@ -5,6 +5,7 @@
 return array(
             "sidebar"   => 'right',
             'layout'    =>  array(           // layouts styles
+            			'header'  => 140,    // header height
                         'width'   => 1024,   // container width
                         'sidebar' => 240,    // sidebar width
                         'extra'   => 240,    // extrabar  width
@@ -40,8 +41,8 @@ return array(
                         "onsingle" => false   // show slideshow on single post
                     ),
             "images"   => array(
-                        "body" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'repeat'),
-                        "wrap" => array('src'=>'themes/black-urban/header.jpg','pos'=>'center top'),
+                        "body" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'repeat', 'fixed'=>false),
+                        "wrap" => array('src'=>'themes/black-urban/header.jpg','pos'=>'center top', 'fixed'=>false),
                         "sidebar" => array('src'=>'themes/black-urban/sidebar.jpg','pos'=>'right bottom'),
                         "extrabar" => array('src'=>'','pos'=>'right bottom'),
                         "footer"  => array('src'=>'themes/black-urban/footer.jpg','pos'=>'left bottom'),

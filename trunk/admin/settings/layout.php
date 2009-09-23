@@ -3,6 +3,17 @@
 /* <![CDATA[ */
 (function($){
 $(document).ready(function(){
+    $("#constructor-layout-header-slider").slider({
+        range: "min",
+        value: <?php echo (int)($constructor['layout']['header'])?>,
+        min: 80,
+        max: 320,
+        step:5,
+        slide: function(event, ui) {
+            $("#constructor-layout-header").val(ui.value);
+        }
+    });
+	
     $("#constructor-layout-width-slider").slider({
         range: "min",
         value: <?php echo (int)$constructor['layout']['width']?>,
@@ -47,7 +58,16 @@ $(document).ready(function(){
 <input type="hidden" id="constructor-layout-index" name="constructor[layout][index]" value="<?php echo $constructor['layout']['index']?>"/>
 <table class="form-table">
 <tr>
-    <th rowspan="3"><?php _e('Options', 'constructor')?></th>
+    <th rowspan="4"><?php _e('Options', 'constructor')?></th>
+    <td class="slider">
+        <p>
+            <label for="constructor-layout-header"><?php _e('Header Height', 'constructor'); ?>:</label>
+            <input type="text" id="constructor-layout-header" name="constructor[layout][header]" value="<?php echo $constructor['layout']['header']?>" /> px
+        </p>
+        <div id="constructor-layout-header-slider"  style="width:600px;"></div>
+    </td>
+</tr>
+<tr>
     <td class="slider">
         <p>
             <label for="constructor-layout-width"><?php _e('Container Width', 'constructor'); ?>:</label>
