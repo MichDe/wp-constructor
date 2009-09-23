@@ -10,7 +10,7 @@
   * added `header` height option
   * IE6 isn't support now, please update your browser to modern
 
-== Theme Changes ==
+=== Theme Changes ===
   * add header height option:
   `"layout" => array("header" => 140, ...)` 
   * add fixed option:
