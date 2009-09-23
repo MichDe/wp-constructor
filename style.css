@@ -65,7 +65,6 @@ dd {
 
 }
 
-
 a {
     outline:none;
     text-decoration:none;
@@ -150,7 +149,7 @@ div.aligncenter {
     position: relative
 }
 #header .logo {
-    height:80px;
+    height:60%;
     text-transform: uppercase;
     margin:0 auto
 }
@@ -489,6 +488,9 @@ div.aligncenter {
     padding:0;
     margin:12px auto
 }
+#searchform label {
+	display:block;
+}
 #s {
     width:140px;
     height:18px;
@@ -504,7 +506,6 @@ div.aligncenter {
     padding:0;
     margin:0
 }
-
 /*/Search*/
 /*Form*/
 input, select, textarea {
@@ -774,7 +775,7 @@ td {
     height:100%;
 }
 
-.wp-sl a {
+.wp-sl a.title {
     top:8px;
     position:absolute;
     z-index:10;
@@ -792,14 +793,14 @@ td {
     left:0;
     position:absolute;
     z-index:5;
-    width:50%;
     border-width:0 1px 0 0;
     border-style:solid;    
 }
 .wp-sl p {
-    top:40px;    
+    bottom:6px;    
     right:4px;
-    width:48%;
+	padding:6px;
+    width:64%;
     position:absolute;
     z-index:10;
     text-indent:8px;

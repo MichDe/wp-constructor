@@ -1,6 +1,9 @@
 /**
  * @package WordPress
  * @subpackage Constructor
+ * 
+ * @author   Anton Shevchuk <AntonShevchuk@gmail.com>
+ * @link     http://anton.shevchuk.name
  */
 (function($){
     $(document).ready(function(){
