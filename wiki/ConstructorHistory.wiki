@@ -9,3 +9,12 @@
   * added `fixed` options for `body` and `background` images
   * added `header` height option
   * IE6 isn't support now, please update your browser to modern
+
+== Theme Changes ==
+  * add header height option:
+  `"layout" => array("header" => 140, ...)` 
+  * add fixed option:
+  `"images" => array(
+                    "body" => array(..., 'fixed'=>false),
+                    "wrap" => array(..., 'fixed'=>false),
+ ...)`
