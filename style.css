@@ -339,9 +339,6 @@ div.aligncenter {
     text-indent:12px;
     margin-bottom:4px
 }
-.hentry .entry p:first-letter {
-    font-weight:700 !important
-}    
 
 .hentry .entry img {
     padding:4px;

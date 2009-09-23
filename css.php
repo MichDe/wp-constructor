@@ -399,9 +399,7 @@ fieldset{
 .hentry .footer a:hover{
     border-bottom:1px solid {$color1}
 }
-.hentry .entry p:first-letter {
-    color:{$color1}
-}
+
 .hentry .entry img {
     border-color:{$color_border}
 }
