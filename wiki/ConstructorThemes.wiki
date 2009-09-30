@@ -14,3 +14,6 @@ http://wp-constructor.googlecode.com/svn/trunk/themes/lime/screenshot.png
 
 = Orange =
 http://wp-constructor.googlecode.com/svn/trunk/themes/orange/screenshot.png
+
+= Ukraine =
+http://wp-constructor.googlecode.com/svn/trunk/themes/ukraine/screenshot.png
