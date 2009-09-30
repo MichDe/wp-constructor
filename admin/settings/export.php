@@ -13,3 +13,20 @@
         $theme_loc
         ) ?>
 </p>
+<p>
+	<?php _e('Create <code>style.css</code> with follow text (change text in UPPERCASE)', 'constructor');?><br/>
+	<code>
+/*<br/>
+Theme Name: MY THEME<br/>
+Theme URI: http://MY.THEME.COM/<br/>
+Description: MY THEME DESCRIPTION<br/>
+Version: 0.0.1<br/>
+Author: MY NAME<br/>
+Author URI: http://MY.SITE.COM/<br/>
+*/
+	</code>	
+</p>
+
+<p>
+	<?php _e('Create <code>screenshot.png</code> with screen of your theme and resolution 300x225 and upload too (isn\'t requried)', 'constructor');?>
+</p>

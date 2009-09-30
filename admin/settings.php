@@ -52,9 +52,23 @@ function constructor_theme_page_add()
                 $data  = require $directory.'/themes/'.$theme.'/config.php';
                 $data['theme'] = $theme;
             } else {
-                $upload = $directory.'/images/';
+            	global $blog_id;
+				// is MU WP
+				if ($blog_id && $blog_id != 1) {
+					$upload = $directory.'/images/'.$blog_id.'/';
+					$path   = 'images/'.$blog_id.'/';
+					
+					if (!is_dir($upload)) {
+						if (!@mkdir($upload)) {
+							$errors[] = sprintf(__('System can\'t create "%s" directory','constructor'), $upload);
+						}
+					}
+				} else {
+					$upload = $directory.'/images/';
+					$path   = 'images/';
+				}
 
-                if ($files && is_writable($directory.'/images/')) {
+                if ($files && is_writable($upload)) {
 
                     $errors = array();
                     foreach ($files['name']['images'] as $name => $image) {
@@ -66,7 +80,7 @@ function constructor_theme_page_add()
                             }
 
                             if (move_uploaded_file($files['tmp_name']['images'][$name]['src'], $upload . $image['src'])) {
-                                $data['images'][$name]['src'] = 'images/'.$image['src'];
+                                $data['images'][$name]['src'] = $path.$image['src'];
                             }
                         }
                     }

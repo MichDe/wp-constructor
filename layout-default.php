@@ -31,7 +31,7 @@
             </div>
         <?php endwhile; ?>
         </div>
-        <div class="navigation">
+        <div class="navigation clear">
             <div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'construtor')) ?></div>
             <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'construtor')) ?></div>
             <div class="clear">&nbsp;</div>

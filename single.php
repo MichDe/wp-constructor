@@ -38,7 +38,7 @@ get_constructor_slideshow()
         <div id='comments'>
            <?php comments_template(); ?>
         </div>
-        <div class="navigation">
+        <div class="navigation clear">
             <div class="alignleft"><?php next_post_link('%link') ?></div>
             <div class="alignright"><?php previous_post_link('%link') ?></div>
             <div class="clear">&nbsp;</div>
