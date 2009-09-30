@@ -67,11 +67,25 @@ $(document).ready(function(){
         <a href="#" title="<?php echo attribute_escape(__('Color', 'constructor')); ?>" name="color" <?php if($constructor['opacity'] == 'color') echo 'class="selected"'; ?>>
             <div style="background-color: <?php echo $constructor['color']['opacity'] ?>"><?php echo attribute_escape(__('Color', 'constructor')); ?></div>
         </a>
+		<br class="clear"/>
+        <a href="#" title="<?php echo attribute_escape(__('Dark Low', 'constructor')); ?>" name="darklow" <?php if($constructor['opacity'] == 'darklow') echo 'class="selected"'; ?>>
+            <div class="darklow"><?php echo attribute_escape(__('Dark Low', 'constructor')); ?></div>
+        </a>
         <a href="#" title="<?php echo attribute_escape(__('Dark', 'constructor')); ?>" name="dark" <?php if($constructor['opacity'] == 'dark') echo 'class="selected"'; ?>>
             <div class="dark"><?php echo attribute_escape(__('Dark', 'constructor')); ?></div>
         </a>
+        <a href="#" title="<?php echo attribute_escape(__('Dark High', 'constructor')); ?>" name="darkhigh" <?php if($constructor['opacity'] == 'darkhigh') echo 'class="selected"'; ?>>
+            <div class="darkhigh"><?php echo attribute_escape(__('Dark High', 'constructor')); ?></div>
+        </a>
+		<br class="clear"/>
+        <a href="#" title="<?php echo attribute_escape(__('Light Low', 'constructor')); ?>" name="lightlow" <?php if($constructor['opacity'] == 'lightlow') echo 'class="selected"'; ?>>
+            <div class="lightlow"><?php echo attribute_escape(__('Light Low', 'constructor')); ?></div>
+        </a>
         <a href="#" title="<?php echo attribute_escape(__('Light', 'constructor')); ?>" name="light" <?php if($constructor['opacity'] == 'light') echo 'class="selected"'; ?>>
             <div class="light"><?php echo attribute_escape(__('Light', 'constructor')); ?></div>
+        </a>
+        <a href="#" title="<?php echo attribute_escape(__('Light High', 'constructor')); ?>" name="lighthigh" <?php if($constructor['opacity'] == 'lighthigh') echo 'class="selected"'; ?>>
+            <div class="lighthigh"><?php echo attribute_escape(__('Light High', 'constructor')); ?></div>
         </a>
     </td>
 </tr>
