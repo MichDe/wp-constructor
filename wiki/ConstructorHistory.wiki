@@ -8,6 +8,7 @@
   * added support `category_name` custom field for pages
   * added `fixed` options for `body` and `background` images
   * added `header` height option
+  * added four opacity types
   * IE6 isn't support now, please update your browser to modern
 
 === Theme Changes ===
