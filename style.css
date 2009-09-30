@@ -371,6 +371,10 @@ div.aligncenter {
 .hentry .entry ul {
     list-style:circle
 }
+
+.hentry .entry li {
+    padding:2px;
+}
 .hentry .pages {
     font-size:1.4em
 }
@@ -672,9 +676,10 @@ td {
     position:absolute;
     top:18px;
     right:16px;
-    padding-right:18px;
+    padding-right:20px;
     display:block;
     font-size:0.6em;
+	line-height:18px;
     background:url('images/feed-icon-16x16.png') no-repeat 100% 50%;
     border:0 !important;
 }
