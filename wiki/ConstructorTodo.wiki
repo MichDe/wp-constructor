@@ -1,10 +1,8 @@
 #summary TODO List of project
 #labels Featured
 
-  # Slideshow with post content (like in some _premium_ themes)
+  # ~~Slideshow with post content (like in some _premium_ themes)~~
+  # Ready to use widgets (with thumbnail's)
+  # Need update localizations files
   # Cache for css.php
   # Export theme as ZIP archive (with all images)
-  # Integrate sIFR for any custom fonts
-  # Ukrainian localization (need update) - thx to Baziak
-  # Polish localization (need update) - thx to mummle
-  # Ready to use widgets (with thumbnail's)
