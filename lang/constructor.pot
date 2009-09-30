@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-23 16:46+0200\n"
+"POT-Creation-Date: 2009-09-30 18:54+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
@@ -317,29 +317,34 @@ msgstr ""
 msgid "Many In One"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:64
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:63
+#, php-format
+msgid "System can't create \"%s\" directory"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:78
 #, php-format
 msgid "File \"%s\" is not a image (jpeg, png, gif)"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:125
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:162
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:139
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:176
 msgid "Customize Theme"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:125
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:139
 msgid "Customize"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:163
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:177
 msgid "Options saved."
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:167
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:181
 msgid "Errors"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:194
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:208
 msgid "Save Changes"
 msgstr ""
 
@@ -380,59 +385,79 @@ msgstr ""
 msgid "Color"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:70
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:71
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:72
+msgid "Dark Low"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:74
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:75
 msgid "Dark"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:73
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:74
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:77
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:78
+msgid "Dark High"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:81
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:82
+msgid "Light Low"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:84
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:85
 msgid "Light"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:79
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:87
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:88
+msgid "Light High"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:93
 msgid "Shadow"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:82
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:96
 msgid "Only for Safari and Chrome"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:86
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:100
 msgid "Elements Colors"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:89
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:103
 msgid "background"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:92
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:106
 msgid "background alternative"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:95
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:109
 msgid "opacity style color"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:98
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:112
 msgid "text"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:101
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:115
 msgid "text alternative"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:104
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:118
 msgid "border"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:107
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:121
 msgid "border alternative"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:110
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:113
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:116
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:124
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:127
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:130
 msgid "tags"
 msgstr ""
 
@@ -624,6 +649,14 @@ msgstr ""
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/export.php:12
 #, php-format
 msgid "For import theme - use your FTP access and create new folder in folder <code>%s/themes</code> and upload <code>config.php</code>"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/export.php:17
+msgid "Create <code>style.css</code> with follow text (change text in UPPERCASE)"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/export.php:31
+msgid "Create <code>screenshot.png</code> with screen of your theme and resolution 300x225 and upload too (isn't requried)"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:1
