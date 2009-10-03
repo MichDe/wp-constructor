@@ -2,6 +2,11 @@
 #labels Featured
 
 = CSS hacks =
+
+*What is CSS?*
+
+CSS is Cascading Style Sheets - read manual for beginners http://www.w3schools.com/css/, but you can use follows hacks w/out knowledge about CSS.
+
 *How can i remove the border around the post title?*
 {{{
 .hentry .title {
@@ -9,10 +14,15 @@
 }
 }}}
 
-*How do I remove the dotted line underneath the entry post title?*
+*How do I remove/change the dotted line underneath the entry post title?*
 {{{
+# remove line
 .hentry .title a, .hentry .title span {
-    border:0 !important;
+    border-bottom:0 !important;
+}
+# change to small black line
+.hentry .title a, .hentry .title span {
+    border-bottom:1px solid #000000 !important;
 }
 }}}
 
@@ -24,7 +34,7 @@
 }}}
 
 
-*How can i remove the border surrounding the whole post area? (so there are no borders around at all)*
+*How can I remove the border surrounding the whole post area? (so there are no borders around at all)*
 {{{
 #wrapper {
     border:0 !important;
