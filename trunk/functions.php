@@ -38,7 +38,7 @@ $template_uri = get_template_directory_uri();
 
 load_theme_textdomain('constructor', get_template_directory().'/lang');
 
-require_once 'widgets/many-in-one.php';
+//require_once 'widgets/many-in-one.php';
 
 if (!is_admin()) {	
     wp_enqueue_script( 'constructor-theme',     $template_uri.'/js/constructor.js', array('jquery'));

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-06 17:19+0200\n"
+"POT-Creation-Date: 2009-10-06 18:04+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
@@ -328,7 +328,7 @@ msgid "File \"%s\" is not a image (jpeg, png, gif)"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:139
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:176
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:177
 msgid "Customize Theme"
 msgstr ""
 
@@ -336,15 +336,15 @@ msgstr ""
 msgid "Customize"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:177
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:178
 msgid "Options saved."
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:181
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:182
 msgid "Errors"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:208
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:209
 msgid "Save Changes"
 msgstr ""
 
@@ -907,6 +907,26 @@ msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:56
 msgid "Show search form"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:1
+msgid "Help"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:4
+msgid "Constructor Wordpress Theme"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:6
+msgid "Project Homepage"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:7
+msgid "Author Homepage"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:10
+msgid "Related Links"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/themes.php:1

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-06 17:19+0200\n"
-"PO-Revision-Date: 2009-10-06 17:21+0200\n"
+"POT-Creation-Date: 2009-10-06 18:04+0200\n"
+"PO-Revision-Date: 2009-10-06 18:05+0200\n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -328,7 +328,7 @@ msgid "File \"%s\" is not a image (jpeg, png, gif)"
 msgstr "Файл &laquo;%s&raquo; не является изображением"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:139
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:176
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:177
 msgid "Customize Theme"
 msgstr "Настройки темы"
 
@@ -336,15 +336,15 @@ msgstr "Настройки темы"
 msgid "Customize"
 msgstr "Настройки"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:177
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:178
 msgid "Options saved."
 msgstr "Настройки сохранены."
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:181
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:182
 msgid "Errors"
 msgstr "Ошибки"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:208
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:209
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
@@ -908,6 +908,26 @@ msgstr "Отображать ссылку на RSS-ленту"
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:56
 msgid "Show search form"
 msgstr "Отображать форму поиска"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:1
+msgid "Help"
+msgstr "Помощь"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:4
+msgid "Constructor Wordpress Theme"
+msgstr "Конструктор"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:6
+msgid "Project Homepage"
+msgstr "Домашняя страница проекта"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:7
+msgid "Author Homepage"
+msgstr "Домашняя страница автора"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:10
+msgid "Related Links"
+msgstr "Ссылки по теме"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/themes.php:1
 msgid "Themes"
