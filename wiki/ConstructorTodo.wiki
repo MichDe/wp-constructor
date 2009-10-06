@@ -10,5 +10,5 @@
   # Export theme as ZIP archive (with all images)
 
   # Create videocast "How To?"
-  # Create page with constructor themes (separately from wordpress repository)
+  # ~~Create page with constructor themes (separately from wordpress repository)~~
   # Create list with themes examples
