@@ -169,6 +169,7 @@ function constructor_theme_page()
                 'images',
                 'slideshow',
                 'export',
+				'help'
                 );
     ?>
 
