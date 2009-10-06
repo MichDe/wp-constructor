@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-30 18:54+0200\n"
-"PO-Revision-Date: 2009-09-30 18:58+0200\n"
+"POT-Creation-Date: 2009-10-06 17:19+0200\n"
+"PO-Revision-Date: 2009-10-06 17:21+0200\n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -212,45 +212,45 @@ msgstr "Ошибка 404 &mdash; Не найдено"
 msgid "Sorry, but you are looking for something that isn&#8217;t here."
 msgstr "Извините, но того, что вы ищете, здесь нет"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:226
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:207
 msgid "Home"
 msgstr "Домой"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:228
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:234
 #: W:/www/wordpress/wp-content/themes/constructor/author.php:22
 msgid "RSS Feed"
 msgstr "Лента RSS"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:291
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:298
 #: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:24
 #, php-format
 msgid "%1$s is proudly powered by %2$s"
 msgstr "%1$s работает на %2$s"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:292
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:299
 #: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:25
 msgid "Constructor Theme"
 msgstr "Конструктор"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:293
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
 #, php-format
 msgid "%1$s and %2$s."
 msgstr "%1$s и %2$s."
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:293
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
 msgid "Entries (RSS)"
 msgstr "Записи (RSS)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:293
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
 msgid "Comments (RSS)"
 msgstr "Комментарии (RSS)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:297
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
 #, php-format
 msgid "%d queries. %s seconds."
 msgstr "%d запросов. %s секунд."
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:311
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:318
 msgid "No Image"
 msgstr "Без Изображения"
 
@@ -858,10 +858,14 @@ msgid "Header menu"
 msgstr "Меню в шапке сайта"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:28
-msgid "Don't show menu"
-msgstr "Не отображать меню"
+msgid "Show top menu"
+msgstr "Отображать верхнее меню"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:31
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:32
+msgid "Disable pages"
+msgstr "Отключить отображение страниц"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:33
 msgid "Show first-level pages"
 msgstr "Отображать только страницы первого уровня"
 
@@ -869,17 +873,41 @@ msgstr "Отображать только страницы первого уро
 msgid "Show pages in drop-down menu"
 msgstr "Отображать в виде выпадающего меню"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:37
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:35
 msgid "Show pages in drop-down menu (2-levels)"
 msgstr "Отображать в виде выпадающего меню (два уровня)"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:40
+msgid "Disable categories"
+msgstr "Отключить отображение категорий"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:41
+msgid "Show first-level categories"
+msgstr "Отображать только категории первого уровня"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:42
+msgid "Show categories in drop-down menu"
+msgstr "Отображать категории в виде выпадающего меню"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:43
+msgid "Show categories in drop-down menu (2-levels)"
+msgstr "Отображать категории в виде выпадающего меню (два уровня)"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:46
+msgid "Group categories in one menu item"
+msgstr "Группировать категории в одном элементе меню"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:50
 msgid "Show link to home page"
 msgstr "Отображать ссылку на главную"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:43
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:53
 msgid "Show link to RSS feed"
 msgstr "Отображать ссылку на RSS-ленту"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:56
+msgid "Show search form"
+msgstr "Отображать форму поиска"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/themes.php:1
 msgid "Themes"
@@ -897,6 +925,8 @@ msgstr "Аноним"
 msgid "version"
 msgstr "версия"
 
+#~ msgid "Don't show menu"
+#~ msgstr "Не отображать меню"
 #~ msgid "Blogroll"
 #~ msgstr "Ссылки"
 #~ msgid ""

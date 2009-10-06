@@ -27,13 +27,16 @@ return array(
                         'header' => 0,
                         'body'   => 0,
                     ),
-            "menu"     => array(
-                        "type" => 1,
-                        "home" => false,
-                        "rss"  => false,
-                        "size" => false,
-                    ),
-            "slideshow" => array(
+            "menu"     => array(             // menu with links
+                        "flag" => 1,         // - enable/disable
+                        "home" => false,     // - link to home page
+                        "rss"  => false,     // - link to RSS
+                        "search" => true,    // - search form
+                        "pages"      => array('depth'=>1),
+                        "categories" => array('depth'=>1, 'group'=>1)
+                        ),
+            "slideshow" => array(            // Slideshow options
+                        "flag" => 1,         // - enable/disable
                         "layout" => 'in',
                         "id" => null,
                         "height" => 200,

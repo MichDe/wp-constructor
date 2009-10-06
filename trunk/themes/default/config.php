@@ -28,14 +28,17 @@ return array(
                         'body'   => 0,       // - for content
                         ),
             "menu"     => array(             // menu with links
-                        "type" => 3,         // - menu levels
-                        "home" => true,      // - link to home page
-                        "rss"  => true,      // - link to RSS
-                        "size" => false,     // - font resizer
+                        "flag" => 1,         // - enable/disable
+                        "home" => false,     // - link to home page
+                        "rss"  => false,     // - link to RSS
+                        "search" => true,    // - search form
+                        "pages"      => array('depth'=>1),
+						"categories" => array('depth'=>1, 'group'=>1)
                         ),
-            "slideshow" => array(            // NextGen gallery options
+            "slideshow" => array(            // Slideshow options
+                        "flag" => 1,         // - enable/disable
                         "layout" => 'in',    // - slideshow "in" main container or "over"
-                        "id" => null,        // - slideshow ID
+                        "id" => null,        // - slideshow ID - for NextGenGallery
                         "height" => 200,     // - height in px
                         "onpage" => false,   // - show slideshow on page
                         "onsingle" => false  // - show slideshow on single post

@@ -1,0 +1,19 @@
+/*
+Theme Name: Sunrise
+Theme URI: 
+Description: Sunrise, theme based on my photo (<em>see more on <a href="http://photo.hohli.com/">http://photo.hohli.com/</a></em>) 
+Version: 0.0.2
+Author: Anton Shevchuk
+Author URI: http://anton.shevchuk.name/
+*/
+/*disable circles*/
+.sidebar li {
+	list-style-type:none !important
+}
+.sidebar li a {
+	padding-left:4px;
+	border-left:6px solid #333;
+}
+.sidebar li a:hover {
+	border-left:6px solid #FF7711;
+}

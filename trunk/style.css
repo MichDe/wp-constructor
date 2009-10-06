@@ -2,7 +2,7 @@
 Theme Name: Constructor
 Theme URI: http://code.google.com/p/wp-constructor/
 Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.7+ (include 2.8)
-Version: 0.6.0
+Version: 0.6.1
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -125,7 +125,6 @@ div.aligncenter {
 }
 
 .container-full {
-    /*width:1024px !important;*/
     margin:0 !important;
     padding:0 !important;
     border: 0 !important;
@@ -133,12 +132,10 @@ div.aligncenter {
 /* Right Sidebar */
 #sidebar {
     float:left;
-    /*width:220px;  minus border and padding */
 }
 /* Left Sidebar */
 #extra {
     float:left;
-    /*width:220px;*/
 }
 /*/Layout*/
 
@@ -148,23 +145,23 @@ div.aligncenter {
     height:140px;
     position: relative
 }
-#header .logo {
-    height:60%;
-    text-transform: uppercase;
-    margin:0 auto
-}
-#header h1 {
-    font: bold 600%/100% Verdana,Tahoma,sans-serif;
-    letter-spacing: -6px;
-    margin:0;
-    padding:0;
-}
-#header h2 {
-    display:block;
-    font-size:1.2em;
-    margin:0;
-    padding:0 8px;
-}
+	#header .logo {
+	    height:60%;
+	    text-transform: uppercase;
+	    margin:0 auto
+	}
+	#header h1 {
+	    font: bold 600%/100% Verdana,Tahoma,sans-serif;
+	    letter-spacing: -6px;
+	    margin:0;
+	    padding:0;
+	}
+	#header h2 {
+	    display:block;
+	    font-size:1.2em;
+	    margin:0;
+	    padding:0 8px;
+	}
 
 #header-slideshow {
     padding:2px;
@@ -203,6 +200,7 @@ div.aligncenter {
     float: left;
     border-style:none dotted none none;
     border-width:0 1px 0 0;
+    height:40px;
 }
 
 #header-links li.indicator {
@@ -216,25 +214,21 @@ div.aligncenter {
 
 #header-links ul ul {
     z-index:301;
-    float:none;
     position:absolute;
-    display:none;
+	display:none;
+	height:auto;
+    width:122px;
     margin-left:-1px;
     border-style:dotted none none none;
     border-width:1px 0 0 0;
 }
 #header-links ul ul ul {
     z-index:302;
-    float:left;
-    position:absolute;
     top:10px;
     left:118px;
-    /*display:none;*/
-    margin-left:-1px;
 }
 #header-links li li {
     float:none;
-    height:40px;
     width: auto;
     border-style:none dotted dotted dotted;
     border-width:0 1px 1px 1px;
@@ -494,18 +488,34 @@ div.aligncenter {
 }
 #s {
     width:140px;
-    height:18px;
 }
 #searchsubmit {
     cursor:pointer;
-    width:28px;
-    height:28px;
-    background: url(images/lens.png) 2px 2px no-repeat;
+    width:30px;
+    height:30px;
+    background: url(images/lens.png) 3px 3px no-repeat;
     text-indent:-1000px;
     display:inline;
     line-height:0px;
     padding:0;
     margin:0
+}
+
+#menusearchform {
+    width: 134px;
+}
+#menusearchform .s {
+	z-index:301;
+	position:absolute;
+	top:0;
+	left:2px;
+	height: 30px;
+	font-size: 24px;
+	padding-left:26px;
+	width: 98px;
+    background-image: url(images/lens.png);
+	background-position: 4px 8px;
+	background-repeat: no-repeat;
 }
 /*/Search*/
 /*Form*/
@@ -745,9 +755,7 @@ td {
     overflow:hidden;
     width:100%;
     height:100%;
-    border-width:0 0 1px 0;
-    border-style:solid;
-    border-color:#999;
+    border:0;
 }
 
 .wp-sl span.prev, .wp-sl span.next {    

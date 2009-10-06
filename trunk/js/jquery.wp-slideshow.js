@@ -58,7 +58,7 @@
             var counter = 0;
             var playId = null;
             
-            
+            $this.addClass('opacity');
             $this.append('<span class="prev opacity">&laquo;</span>');
             $this.append('<span class="next opacity">&raquo;</span>');
             $this.find('> span.prev').click(function(){
