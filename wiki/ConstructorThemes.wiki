@@ -7,8 +7,9 @@ http://wp-constructor.googlecode.com/svn/trunk/themes/black-urban/screenshot.png
 = Default =
 http://wp-constructor.googlecode.com/svn/trunk/themes/default/screenshot.png
 
-= Example =
+= Example (<a href="http://code.google.com/p/wp-constructor/downloads/list">Download</a>) =
 http://wp-constructor.googlecode.com/svn/trunk/themes/example/screenshot.png
+
 
 = Lime =
 http://wp-constructor.googlecode.com/svn/trunk/themes/lime/screenshot.png
@@ -16,8 +17,9 @@ http://wp-constructor.googlecode.com/svn/trunk/themes/lime/screenshot.png
 = Orange =
 http://wp-constructor.googlecode.com/svn/trunk/themes/orange/screenshot.png
 
-= Sunrise =
+= Sunrise (<a href="http://code.google.com/p/wp-constructor/downloads/list">Download</a>) =
 http://wp-constructor.googlecode.com/svn/trunk/themes/sunrise/screenshot.png
+
 
 = Ukraine =
 http://wp-constructor.googlecode.com/svn/trunk/themes/ukraine/screenshot.png
