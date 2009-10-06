@@ -1,4 +1,5 @@
 #summary Themes list
+#labels Featured
 
 = Black Urban =
 http://wp-constructor.googlecode.com/svn/trunk/themes/black-urban/screenshot.png
@@ -14,6 +15,9 @@ http://wp-constructor.googlecode.com/svn/trunk/themes/lime/screenshot.png
 
 = Orange =
 http://wp-constructor.googlecode.com/svn/trunk/themes/orange/screenshot.png
+
+= Sunrise =
+http://wp-constructor.googlecode.com/svn/trunk/themes/sunrise/screenshot.png
 
 = Ukraine =
 http://wp-constructor.googlecode.com/svn/trunk/themes/ukraine/screenshot.png
