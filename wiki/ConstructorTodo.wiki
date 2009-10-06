@@ -2,7 +2,13 @@
 #labels Featured
 
   # ~~Slideshow with post content (like in some _premium_ themes)~~
-  # Ready to use widgets (with thumbnail's)
+  # Add categories to top menu (optional)
+  # Add search form to top menu (optional)
+  # Include ready to use widgets (with thumbnail's)
   # Need update localizations files
   # Cache for css.php
   # Export theme as ZIP archive (with all images)
+
+  # Create videocast "How To?"
+  # Create page with constructor themes (separately from wordpress repository)
+  # Create list with themes examples
