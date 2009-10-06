@@ -11,11 +11,30 @@
   * added four opacity types
   * IE6 isn't support now, please update your browser to modern
 
-=== Theme Changes ===
+==== Theme Changes ====
   * add header height option:
   `"layout" => array("header" => 140, ...)` 
   * add fixed option:
   `"images" => array(
-                    "body" => array(..., 'fixed'=>false),
+                    "body" => array(..., 'fixed'=>false), <br/>
                     "wrap" => array(..., 'fixed'=>false),
  ...)`
+
+== 0.6.1 ==
+
+  * added categories to head menu (optional)
+  * added search form to head menu (optional)
+  * remove Example theme from release (moved to Downloads Page)
+  * small fixes in slideshow and drop-down menu
+
+
+==== Theme Changes ====
+  * changes in menu section, option `type` is depricated
+  `"menu"     => array(             // menu with links <br/>
+        "flag" => 1,         // - enable/disable <br/>
+        "home" => true,     // - link to home page <br/>
+        "rss"  => true,     // - link to RSS <br/>
+        "search" => true,    // - search form <br/>
+        "pages"      => array('depth'=>0), <br/>
+        "categories" => array('depth'=>3, 'group'=>1) <br/>
+   ),`
