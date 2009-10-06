@@ -28,13 +28,16 @@ return array(
                         'header' => 0,       // - for title
                         'body'   => 0,       // - for content
                     ),
-            "menu"     => array(            // menu with links
-                        "type" => 3,         // - menu levels
-                        "home" => true,      // - link to home page
-                        "rss"  => true,      // - link to RSS
-                        "size" => false,     // - font resizer
-                    ),
-            "slideshow" => array(            // NextGen gallery options
+            "menu"     => array(             // menu with links
+                        "flag" => 1,         // - enable/disable
+                        "home" => true,     // - link to home page
+                        "rss"  => true,     // - link to RSS
+                        "search" => true,    // - search form
+                        "pages"      => array('depth'=>3),
+                        "categories" => array('depth'=>3, 'group'=>1)
+                        ),
+            "slideshow" => array(
+                        "flag" => 1,         // - enable/disable
                         "layout" => 'in',    // - slideshow "in" main container or "over"
                         "id" => null,        // - slideshow ID
                         "height" => 200,     // - height in px

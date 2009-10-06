@@ -1,11 +1,9 @@
-<?php
-/**
- * Don't change this is file
- */
-return array(
-            "sidebar"   => 'right',
-            'layout'    =>  array(           // layouts styles
-            			'header'  => 140,    // header height
+<?php 
+/* Export on 2009-09-30 20:44 */ 
+return array (
+            "sidebar"   => 'two-right',
+            "layout"    =>  array(           // layouts styles
+                        'header'  => 140,    // header height
                         'width'   => 1024,   // container width
                         'sidebar' => 240,    // sidebar width
                         'extra'   => 240,    // extrabar  width
@@ -15,7 +13,7 @@ return array(
                         'index'   => 'default',
                                  ),
             "title"     => array(
-                        "pos" => 'center'
+                        "pos" => 'right'
                     ),
             "content"   => array(            // content
                         "author" => 0        // - link to author page
@@ -24,16 +22,16 @@ return array(
                         "text" => null
                     ),
             "fonts"     => array(
-                        'header' => 0,
-                        'body'   => 0,
+                        'header' => 2,
+                        'body'   => 2,
                     ),
             "menu"     => array(             // menu with links
                         "flag" => 1,         // - enable/disable
                         "home" => true,     // - link to home page
                         "rss"  => true,     // - link to RSS
-                        "search" => false,    // - search form
-                        "pages"      => array('depth'=>2),
-                        "categories" => array('depth'=>0, 'group'=>1)
+                        "search" => true,    // - search form
+                        "pages"      => array('depth'=>0),
+                        "categories" => array('depth'=>3, 'group'=>1)
                         ),
             "slideshow" => array(            // Slideshow options
                         "flag" => 1,         // - enable/disable
@@ -44,27 +42,27 @@ return array(
                         "onsingle" => false   // show slideshow on single post
                     ),
             "images"   => array(
-                        "body" => array('src'=>'themes/ukraine/body.png', 'pos'=>'left top', 'repeat'=>'repeat-y', 'fixed'=>true),
+                        "body" => array('src'=>'themes/sunrise/sunrise.jpg', 'pos'=>'left bottom', 'repeat'=>'repeat-x', 'fixed'=>1),
                         "wrap" => array('src'=>'','pos'=>'center top', 'fixed'=>false),
                         "sidebar"  => array('src'=>'','pos'=>'right bottom'),
                         "extrabar" => array('src'=>'','pos'=>'right bottom'),
                         "footer"   => array('src'=>'','pos'=>'left bottom'),
                     ),
-            "opacity"   => 'lighthigh',
+            "opacity"   => 'darkhigh',
             "shadow"    => true,             // create shadow
             "color"   => array(
-                        "bg"      => '#fff',
-                        "bg2"     => '#fff5c5',
-                        "opacity" => '#fff',
-                        "title"   => '#333',
-                        "title2"  => '#e60000',
-                        "text"    => '#333',
-                        "text2"   => '#aaa',
-                        "border"  => '#aaa',
-                        "border2" => '#999',
-
-					    'header1' => '#ff0000',
-					    'header2' => '#ff1212',
-					    'header3' => '#ff3333',
+					    'title' => '#000000',
+					    'title2' => '#404040',
+					    'bg' => '#000',
+					    'bg2' => '#333',
+					    'opacity' => '#000',
+					    'text' => '#fff',
+					    'text2' => '#ccc',
+					    'border' => '#555',
+					    'border2' => '#999',
+					    'header1' => '#ff6600',
+					    'header2' => '#ff7711',
+					    'header3' => '#ff9933',
                     ),
-            );
+)
+ ?>

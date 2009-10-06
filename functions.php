@@ -40,9 +40,9 @@ load_theme_textdomain('constructor', get_template_directory().'/lang');
 
 require_once 'widgets/many-in-one.php';
 
-if (!is_admin()) {    
+if (!is_admin()) {	
     wp_enqueue_script( 'constructor-theme',     $template_uri.'/js/constructor.js', array('jquery'));
-    
+
     /**
      * Parse request
      *
@@ -61,6 +61,9 @@ if (!is_admin()) {
 			}
 			// die after return data
             die();
+        } elseif (array_key_exists('preview', $wp->query_vars)) {
+        	global $postfix;
+			
         }
     }
     add_action('wp', 'constructor_parse_request');
@@ -76,8 +79,8 @@ if (!is_admin()) {
         return $vars;
     }
     add_filter('query_vars', 'constructor_query_vars');
-    
-    wp_enqueue_style( 'constructor-style', get_option('home').'/?theme-constructor=css');
+	
+    wp_enqueue_style( 'constructor-custom-style', get_option('home').'/?theme-constructor=css');
     
     $constructor = get_option('constructor');
     
@@ -114,20 +117,28 @@ if (!is_admin()) {
         switch (true) {
         	case (isset($constructor['slideshow']['id']) && $constructor['slideshow']['id']!='' && function_exists('nggShowSlideshow')):
         		if (!$in) {
-                    echo nggShowSlideshow((int)$constructor['slideshow'], $constructor['layout']['width'] - 2 , $constructor['slideshow']['height']);
+                    echo nggShowSlideshow((int)$constructor['slideshow'],
+										  $constructor['layout']['width'] - 2 ,
+										  $constructor['slideshow']['height']);
                 } else {
                     // switch statement for $constructor['sidebar']
                     switch ($constructor['sidebar']) {
                         case 'none':
-                            echo nggShowSlideshow((int)$constructor['slideshow'], ($constructor['layout']['width'] - 4) , $constructor['slideshow']['height']);
+                            echo nggShowSlideshow((int)$constructor['slideshow'],
+												  $constructor['layout']['width'] - 4,
+												  $constructor['slideshow']['height']);
                             break;
                         case 'two':
                         case 'two-right':
                         case 'two-left':
-                            echo nggShowSlideshow((int)$constructor['slideshow'], ($constructor['layout']['width'] - $constructor['layout']['sidebar'] - $constructor['layout']['extra'] - 6) , $constructor['slideshow']['height']);
+                            echo nggShowSlideshow((int)$constructor['slideshow'],
+												  $constructor['layout']['width'] - $constructor['layout']['sidebar'] - $constructor['layout']['extra'] - 6,
+												  $constructor['slideshow']['height']);
                             break;
                         default:
-                            echo nggShowSlideshow((int)$constructor['slideshow'], ($constructor['layout']['width'] - $constructor['layout']['sidebar'] - 4) , $constructor['slideshow']['height']);
+                            echo nggShowSlideshow((int)$constructor['slideshow'],
+												  $constructor['layout']['width'] - $constructor['layout']['sidebar'] - 4,
+												  $constructor['slideshow']['height']);
                             break;
                     }
                 }
@@ -141,33 +152,8 @@ if (!is_admin()) {
                 echo <<<JS
                 <script type='text/javascript'>
                 /* <![CDATA[ */
-                jQuery(document).ready(function(){
-                    var sl = jQuery('.wp-sl').wpslideshow({
-                        thumb:false,
-                        thumbPath:'$template_uri/timthumb.php?src=',
-                        limit:480,
-                        effectTime:1000,
-                        timeout:10000,
-                        play:true
-                    });
-                    jQuery.ajax({
-                    	type: "GET",
-						url: "$slideshow",
-						dataType: "xml",
-					    success: function(data){
-					    	if (jQuery('post',data).length == 0) {
-					    		jQuery('#header-slideshow').hide();
-					    	};
-					    	jQuery('post',data).each(function(){
-					    		var _self = jQuery(this);
-					    		sl.addSlide(_self.children('title').text(),
-											_self.find('permalink').text(),
-											_self.find('image').text(),
-											_self.find('content').text());
-					    	});
-					    }						
-                    });
-                });
+					var wpSl = {thumbPath:'$template_uri/timthumb.php?src=',
+								slideshow:'$slideshow'};
                 /* ]]> */
                 </script>
 JS;
@@ -213,19 +199,40 @@ JS;
     {
         global $constructor;
 
-        if (!isset($constructor['menu']['type']) or $constructor['menu']['type'] == 1) return false;
-        if ($constructor['menu']['type'] == 2) {
-            $params = 'depth=1&title_li=';
-        } elseif ($constructor['menu']['type'] == 3) {
-            $params = 'depth=2&title_li=';
-        } elseif ($constructor['menu']['type'] == 4) {
-            $params = 'depth=3&title_li=';
-        }
+        if (!isset($constructor['menu']['flag']) or !$constructor['menu']['flag']) return false;
+		
 
         echo '<div id="header-links" class="opacity shadow"><ul class="opacity">';
-        if ($constructor['menu']['home']) echo '<li id="home"><a href="'.get_option('home').'/" title="'.get_bloginfo('name').'">'.__('Home', 'constructor').'</a></li>';
-        wp_list_pages($params);
-        if ($constructor['menu']['rss'])  echo '<li id="rss"><a href="'.get_bloginfo('rss2_url').'"  title="'.__('RSS Feed', 'constructor').'">'. __('RSS Feed', 'constructor').'</a></li>';
+        if (isset($constructor['menu']['home']) && $constructor['menu']['home']) {
+        	echo '<li id="home"><a href="'.get_option('home').'/" title="'.get_bloginfo('name').'">'.__('Home', 'constructor').'</a></li>';
+		}
+		
+		if (isset($constructor['menu']['pages']['depth']) && $constructor['menu']['pages']['depth']) {
+			wp_list_pages('title_li=&depth='.$constructor['menu']['pages']['depth']);
+		}
+        
+		if (isset($constructor['menu']['categories']['depth']) && $constructor['menu']['categories']['depth']) {			
+			if (isset($constructor['menu']['categories']['group']) && $constructor['menu']['categories']['group']) {
+				echo '<li><a href="#" title="'.__('Categories','constructor').'">'.__('Categories','constructor').'</a><ul>';
+				wp_list_categories('title_li=&depth='.$constructor['menu']['categories']['depth']);
+				echo '</ul></li>';
+			} else {
+				wp_list_categories('title_li=&depth='.$constructor['menu']['categories']['depth']);
+			}
+		}
+		
+		if (isset($constructor['menu']['search']) && $constructor['menu']['search'])  {
+			echo '<li id="menusearchform">
+					  <form role="search" method="get" action="' . get_option('home') . '/" >
+					  <input class="s" type="text" value="' . esc_attr(apply_filters('the_search_query', get_search_query())) . '" name="s"/>
+					  
+					  </form>
+				  </li>';
+		}
+		
+        if (isset($constructor['menu']['rss']) && $constructor['menu']['rss'])  {
+			echo '<li id="rss"><a href="'.get_bloginfo('rss2_url').'"  title="'.__('RSS Feed', 'constructor').'">'. __('RSS Feed', 'constructor').'</a></li>';
+		}
         //if ($constructor['menu']['size']) echo '<li id="size"><a href="#" class="big">A</a><a href="#" class="normal">A</a><a href="#" class="small">A</a></li>';
         //if ($constructor['menu']['theme']) echo '<li id="theme"><a href="#">'.__('Theme', 'constructor').'</a></li>';
         echo '</ul><div class="clear"></div></div>';

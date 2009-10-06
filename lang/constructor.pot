@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-30 18:54+0200\n"
+"POT-Creation-Date: 2009-10-06 17:19+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
@@ -212,45 +212,45 @@ msgstr ""
 msgid "Sorry, but you are looking for something that isn&#8217;t here."
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:226
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:207
 msgid "Home"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:228
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:234
 #: W:/www/wordpress/wp-content/themes/constructor/author.php:22
 msgid "RSS Feed"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:291
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:298
 #: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:24
 #, php-format
 msgid "%1$s is proudly powered by %2$s"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:292
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:299
 #: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:25
 msgid "Constructor Theme"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:293
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
 #, php-format
 msgid "%1$s and %2$s."
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:293
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
 msgid "Entries (RSS)"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:293
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
 msgid "Comments (RSS)"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:297
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
 #, php-format
 msgid "%d queries. %s seconds."
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:311
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:318
 msgid "No Image"
 msgstr ""
 
@@ -858,10 +858,14 @@ msgid "Header menu"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:28
-msgid "Don't show menu"
+msgid "Show top menu"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:31
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:32
+msgid "Disable pages"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:33
 msgid "Show first-level pages"
 msgstr ""
 
@@ -869,16 +873,40 @@ msgstr ""
 msgid "Show pages in drop-down menu"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:37
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:35
 msgid "Show pages in drop-down menu (2-levels)"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:40
-msgid "Show link to home page"
+msgid "Disable categories"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:41
+msgid "Show first-level categories"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:42
+msgid "Show categories in drop-down menu"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:43
+msgid "Show categories in drop-down menu (2-levels)"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:46
+msgid "Group categories in one menu item"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:50
+msgid "Show link to home page"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:53
 msgid "Show link to RSS feed"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:56
+msgid "Show search form"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/themes.php:1

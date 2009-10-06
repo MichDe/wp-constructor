@@ -400,11 +400,13 @@ fieldset{
     #header-links li:hover { background-color:{$color_bg2} }
 /*/Header*/
 /*Slideshow*/
-.wp-sl{
-   background-color: {$color_bg2};
-}
 .wp-sl img{
     border-color: {$color_border};
+}
+#wrapper .wp-sl {
+    border-width:0 0 1px 0;
+    border-style:solid;
+    border-color:{$color_border};
 }
 /*/Slideshow*/
 /*Images*/
