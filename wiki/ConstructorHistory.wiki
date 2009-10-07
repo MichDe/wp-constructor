@@ -38,3 +38,8 @@
         "pages"      => array('depth'=>0), <br/>
         "categories" => array('depth'=>3, 'group'=>1) <br/>
    ),`
+
+== 0.6.2 ==
+
+  * added French localization
+  * small bug fixes in layout
