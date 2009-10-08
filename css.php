@@ -313,6 +313,7 @@ th {
 td {
     border-color: {$color_border}
 }
+
 /*Autogenerate*/
 .current-cat a{
     font-weight:900;
@@ -348,7 +349,14 @@ fieldset{
 .box {
     border-color: {$color_border}
 }
-
+::selection {
+    background: {$color1};
+    color:{$color_bg};
+}
+::-moz-selection {
+    background: {$color1};
+    color:{$color_bg};
+}
 {$opacity}
 {$shadow}
 /*/CSS3*/

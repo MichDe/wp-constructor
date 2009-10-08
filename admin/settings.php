@@ -45,7 +45,7 @@ function constructor_theme_page_add()
 
             $files = $_FILES['constructor'];
             $data  = $_REQUEST['constructor'];
-
+			
             if (isset ($data['theme-reload']) && $data['theme-reload'] != 0) {
                 // loading theme and forgot all changes
                 $theme = $data['theme'];
@@ -102,10 +102,27 @@ function constructor_theme_page_add()
                 /**
                  * Slideshow
                  */
-                $data['slideshow']['id'] = (int)$data['slideshow']['id'];
+                $data['slideshow']['id']        = (int)$data['slideshow']['id'];
+                $data['slideshow']['showposts'] = (int)$data['slideshow']['showposts'];
 
-                if (isset($data['slideshow']['onpage']))   $data['slideshow']['onpage'] = true;
-                if (isset($data['slideshow']['onsingle'])) $data['slideshow']['onsingle'] = true;
+                /**
+                 * Flags changes
+                 */
+                $data['menu']['flag']   = isset($data['menu']['flag'])?true:false;
+                $data['menu']['home']   = isset($data['menu']['home'])?true:false;
+                $data['menu']['rss']    = isset($data['menu']['rss'])?true:false;
+                $data['menu']['search'] = isset($data['menu']['search'])?true:false;
+				
+				$data['content']['author'] = isset($data['menu']['search'])?true:false;
+				
+                $data['shadow'] = isset($data['shadow'])?true:false;
+				
+				$data['images']['body']['fixed'] = isset($data['images']['body']['fixed'])?true:false;
+                $data['images']['wrap']['fixed'] = isset($data['images']['wrap']['fixed'])?true:false;
+				
+                $data['slideshow']['flag']     = isset($data['slideshow']['flag'])?true:false;
+                $data['slideshow']['onpage']   = isset($data['slideshow']['onpage'])?true:false;
+				$data['slideshow']['onsingle'] = isset($data['slideshow']['onsingle'])?true:false;
 
                 /**
                  * Merge Configuration
