@@ -37,6 +37,6 @@ get_header(); ?>
         </div>
 
     </div><!-- id='container' -->
+    <?php get_constructor_sidebar(); ?>
 </div><!-- id='wrapper' -->
-<?php get_constructor_sidebar(); ?>
 <?php get_footer(); ?>

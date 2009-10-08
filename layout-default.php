@@ -39,5 +39,5 @@
     <?php endif; ?>
 
     </div><!-- id='container' -->
+    <?php get_constructor_sidebar(); ?>
 </div><!-- id='wrapper' -->
-<?php get_constructor_sidebar(); ?>

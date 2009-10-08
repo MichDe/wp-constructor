@@ -69,19 +69,21 @@
         // Sidebar Resizer
         if ($('.sidebar').length > 0) {
 			
+			console.log($('#sidebar').outerHeight(), $('#container').outerHeight(), $('#wrapper').outerHeight(), $('#extra').outerHeight());
+			
             if ($('#sidebar').length > 0 && $('#sidebar').outerHeight() > $('#container').outerHeight()) {
-                $('#container').css('height', $('#sidebar').outerHeight() + 6
+                $('#container').css('min-height', $('#sidebar').outerHeight()
 											 -  parseInt($('#container').css('padding-top'))
 											 -  parseInt($('#container').css('padding-bottom')));
             } else if ($('#sidebar').length > 0 && $('#sidebar').outerHeight() < $('#container').outerHeight()) {
 				
-                $('#sidebar').css('height', $('#container').outerHeight() - 6
+                $('#sidebar').css('min-height', $('#container').outerHeight()
 											 -  parseInt($('#sidebar').css('padding-top'))
 											 -  parseInt($('#sidebar').css('padding-bottom')));
             }
             
             if ($('#extra').length > 0 && $('#extra').outerHeight() > $('#container').outerHeight()) {
-                $('#container').css('height', $('#extra').outerHeight() + 6
+                $('#container').css('min-height', $('#extra').outerHeight()
 											 -  parseInt($('#container').css('padding-top'))
 											 -  parseInt($('#container').css('padding-bottom')));
             }

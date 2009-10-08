@@ -135,8 +135,8 @@ CSS;
 /* Layout */
 
 // width changes
-$sidebar2 = $sidebar - 20;
-$extra2   = $extra   - 20;
+$sidebar2 = $sidebar - 8; // 8px - it's padding and border width
+$extra2   = $extra   - 8;
 
 // switch statement for $sidebar
 switch ($constructor['sidebar']) {

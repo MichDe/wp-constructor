@@ -46,6 +46,6 @@ get_constructor_slideshow()
     <?php endif; ?>
 
     </div><!-- id='container' -->
+    <?php get_constructor_sidebar(); ?>
 </div><!-- id='wrapper' -->
-<?php get_constructor_sidebar(); ?>
 <?php get_footer(); ?>
