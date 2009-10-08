@@ -36,6 +36,8 @@ return array (
             "slideshow" => array(            // Slideshow options
                         "flag" => 1,         // - enable/disable
                         "layout" => 'in',
+                        "showposts" => 10,   // - show last N slides
+                        "metakey" => 'thumb-slideshow', // - custom field name
                         "id" => null,
                         "height" => 200,
                         "onpage" => false,    // show slideshow on page

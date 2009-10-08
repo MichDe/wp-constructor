@@ -24,44 +24,53 @@
 <tr>
     <th scope="row" valign="top"><?php _e('Header menu', 'constructor'); ?></th>
     <td>
-		<input type="radio" id="constructor-menu-flag" name="constructor[menu][flag]" value="1" <?php if ($constructor['menu']['flag'] == 1) echo 'checked="checked"'; ?> />
-        <label for="constructor-menu-flag"><?php _e('Show top menu', 'constructor'); ?></label>
-        <br/>
-		
-		<select name="constructor[menu][pages][depth]" id="constructor-menu-pages">
-			<option value="0" <?php if ($constructor['menu']['pages']['depth'] == 0) echo 'selected="selected"'; ?>><?php _e('Disable pages', 'constructor'); ?></option>
-			<option value="1" <?php if ($constructor['menu']['pages']['depth'] == 1) echo 'selected="selected"'; ?>><?php _e('Show first-level pages', 'constructor'); ?></option>
-			<option value="2" <?php if ($constructor['menu']['pages']['depth'] == 2) echo 'selected="selected"'; ?>><?php _e('Show pages in drop-down menu', 'constructor'); ?></option>
-			<option value="3" <?php if ($constructor['menu']['pages']['depth'] == 3) echo 'selected="selected"'; ?>><?php _e('Show pages in drop-down menu (2-levels)', 'constructor'); ?></option>			
-		</select>
-        <br/>
-		
-		<select name="constructor[menu][categories][depth]" id="constructor-menu-categories">
-			<option value="0" <?php if ($constructor['menu']['categories']['depth'] == 0) echo 'selected="selected"'; ?>><?php _e('Disable categories', 'constructor'); ?></option>
-			<option value="1" <?php if ($constructor['menu']['categories']['depth'] == 1) echo 'selected="selected"'; ?>><?php _e('Show first-level categories', 'constructor'); ?></option>
-			<option value="2" <?php if ($constructor['menu']['categories']['depth'] == 2) echo 'selected="selected"'; ?>><?php _e('Show categories in drop-down menu', 'constructor'); ?></option>
-			<option value="3" <?php if ($constructor['menu']['categories']['depth'] == 3) echo 'selected="selected"'; ?>><?php _e('Show categories in drop-down menu (2-levels)', 'constructor'); ?></option>
-		</select>
-        <input type="checkbox" id="constructor-menu-categories-group" name="constructor[menu][categories][group]" value="1" <?php if ($constructor['menu']['categories']['group']) echo 'checked="checked"'; ?>/>
-        <label for="constructor-menu-categories-group"><?php _e('Group categories in one menu item', 'constructor'); ?></label>
-        <br/>
-		
-        <input type="checkbox" id="constructor-menu-home" name="constructor[menu][home]" value="1" <?php if ($constructor['menu']['home']) echo 'checked="checked"'; ?>/>
-        <label for="constructor-menu-home"><?php _e('Show link to home page', 'constructor'); ?></label>
-        <br/>
-        <input type="checkbox" id="constructor-menu-rss" name="constructor[menu][rss]" value="1" <?php if ($constructor['menu']['rss']) echo 'checked="checked"'; ?>/>
-        <label for="constructor-menu-rss"><?php _e('Show link to RSS feed', 'constructor'); ?></label>
-        <br/>
-        <input type="checkbox" id="constructor-menu-search" name="constructor[menu][search]" value="1" <?php if ($constructor['menu']['search']) echo 'checked="checked"'; ?>/>
-        <label for="constructor-menu-rss"><?php _e('Show search form', 'constructor'); ?></label>
+		<fieldset>
+			<legend>
+				<input type="checkbox" id="constructor-menu-flag" name="constructor[menu][flag]" value="1" <?php if ($constructor['menu']['flag'] == 1) echo 'checked="checked"'; ?> />
+                <label for="constructor-menu-flag"><?php _e('Show top menu', 'constructor'); ?></label>
+			</legend>
+			<dl>
+				<dt><?php _e('Pages', 'constructor'); ?></dt>
+				<dd><select name="constructor[menu][pages][depth]" id="constructor-menu-pages">
+		                <option value="0" <?php if ($constructor['menu']['pages']['depth'] == 0) echo 'selected="selected"'; ?>><?php _e('Disable pages', 'constructor'); ?></option>
+		                <option value="1" <?php if ($constructor['menu']['pages']['depth'] == 1) echo 'selected="selected"'; ?>><?php _e('Show first-level pages', 'constructor'); ?></option>
+		                <option value="2" <?php if ($constructor['menu']['pages']['depth'] == 2) echo 'selected="selected"'; ?>><?php _e('Show pages in drop-down menu', 'constructor'); ?></option>
+		                <option value="3" <?php if ($constructor['menu']['pages']['depth'] == 3) echo 'selected="selected"'; ?>><?php _e('Show pages in drop-down menu (2-levels)', 'constructor'); ?></option>         
+		            </select></dd>
+                <dt><?php _e('Categories', 'constructor'); ?></dt>
+				<dd>
+					<input type="checkbox" id="constructor-menu-categories-group" name="constructor[menu][categories][group]" value="1" <?php if ($constructor['menu']['categories']['group']) echo 'checked="checked"'; ?>/>
+                    <label for="constructor-menu-categories-group"><?php _e('Group categories in one menu item', 'constructor'); ?></label>
+					<br/>
+			        <select name="constructor[menu][categories][depth]" id="constructor-menu-categories">
+		                <option value="0" <?php if ($constructor['menu']['categories']['depth'] == 0) echo 'selected="selected"'; ?>><?php _e('Disable categories', 'constructor'); ?></option>
+		                <option value="1" <?php if ($constructor['menu']['categories']['depth'] == 1) echo 'selected="selected"'; ?>><?php _e('Show first-level categories', 'constructor'); ?></option>
+		                <option value="2" <?php if ($constructor['menu']['categories']['depth'] == 2) echo 'selected="selected"'; ?>><?php _e('Show categories in drop-down menu', 'constructor'); ?></option>
+		                <option value="3" <?php if ($constructor['menu']['categories']['depth'] == 3) echo 'selected="selected"'; ?>><?php _e('Show categories in drop-down menu (2-levels)', 'constructor'); ?></option>
+		            </select>
+			    </dd>
+                <dt><?php _e('Links', 'constructor'); ?></dt>
+				<dd>
+					<input type="checkbox" id="constructor-menu-home" name="constructor[menu][home]" value="1" <?php if ($constructor['menu']['home']) echo 'checked="checked"'; ?>/>
+			        <label for="constructor-menu-home"><?php _e('Show link to home page', 'constructor'); ?></label>
+			        <br/>
+			        <input type="checkbox" id="constructor-menu-rss" name="constructor[menu][rss]" value="1" <?php if ($constructor['menu']['rss']) echo 'checked="checked"'; ?>/>
+                    <label for="constructor-menu-rss"><?php _e('Show link to RSS feed', 'constructor'); ?></label>
+				</dd>
+				<dt><?php _e('Tools', 'constructor'); ?></dt>
+				<dd>
+				   <input type="checkbox" id="constructor-menu-search" name="constructor[menu][search]" value="1" <?php if ($constructor['menu']['search']) echo 'checked="checked"'; ?>/>
+                   <label for="constructor-menu-rss"><?php _e('Show search form', 'constructor'); ?></label>
+			   </dd>
+			</dl>
+		</fieldset>
         <?php
         /*
         // TODO: Requeried cookie support in constructor.js
         <br/>
         <input type="checkbox" id="constructor-menu-size" name="constructor[menu][size]" value="1" <?php if ($constructor['menu']['size']) echo 'checked="checked"'; ?>/>
         <label for="constructor-menu-size"><?php _e('Show font resizer', 'constructor'); ?></label>
-        */ ?>
-        <?php
+        */ 
         /*
         // TODO: Theme switcher
         <br/>

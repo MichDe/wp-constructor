@@ -38,6 +38,8 @@ return array(
             "slideshow" => array(            // Slideshow options
                         "flag" => 1,         // - enable/disable
                         "layout" => 'in',    // - slideshow "in" main container or "over"
+                        "showposts" => 10,   // - show last N slides
+                        "metakey" => 'thumb-slideshow', // - custom field name
                         "id" => null,        // - slideshow ID - for NextGenGallery
                         "height" => 200,     // - height in px
                         "onpage" => false,   // - show slideshow on page

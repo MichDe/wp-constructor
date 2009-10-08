@@ -69,10 +69,37 @@
     -webkit-box-shadow: 5px 5px 7px #aaa
 }
 
+.constructor fieldset {
+	padding:8px;
+    border:1px solid #ddd;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -webkit-border-radius: 4px
+}
+
+.constructor fieldset legend {
+	padding:0 4px;
+}
+
+.constructor fieldset.disabled,
+.constructor fieldset.disabled th,
+.constructor fieldset.disabled a {
+	color:#aaa !important;
+	border-color:#aaa !important;
+}
+
 .constructor th small {
     color:#777;
 }
 
+.constructor dl dt {
+	padding:4px;
+	font-weight:600
+}
+.constructor dl dd {
+    padding:2px;
+}
 .constructor .slider input {
 	border:0;
 	color:#21759B;
