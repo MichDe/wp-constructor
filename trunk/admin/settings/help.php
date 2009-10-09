@@ -6,6 +6,22 @@
     <li><?php _e('Author Homepage', 'constructor'); ?>: <a href="http://anton.shevchuk.name">Anton Shevchuk</a></li>
 </ul>
 
+<h3><?php _e('Tile layout', 'constructor'); ?></h3>
+<p>
+	<?php _e('For "tile" layout using images from custom fields with key <code>thumb</code>', 'constructor'); ?>
+</p>
+
+<h3><?php _e('List layout', 'constructor'); ?></h3>
+<p>
+    <?php _e('For "list" layout using images from custom fields with key <code>thumb-list</code>', 'constructor'); ?>		
+</p>
+
+<h3><?php _e('Slideshow', 'constructor'); ?></h3>
+<p>
+    <?php _e('For slideshow using images from custom fields with key <code>thumb-slideshow</code> (by default, your can change it on slideshow tab)', 'constructor'); ?>       
+</p>
+
+
 <h3><?php _e('Related Links', 'constructor'); ?></h3>
 <ul>  
     <li><a href="http://wordpress.org/tags/constructor">Forum Topics on Wordpress.org</a></li>
@@ -16,17 +32,18 @@
 </ul>
 
 <h3><?php _e('Author works', 'constructor'); ?></h3>
-<h4><?php _e('CheatSheets', 'constructor'); ?></h4>
-<ul>
-    <li><a href="http://anton.shevchuk.name/wp-content/uploads/2008/09/wordpress_-_template_designer_cheatsheet_en.pdf">Wordpress Template Designer CheatSheet (PDF)</a></li>
-    <li><a href="http://anton.shevchuk.name/wp-content/uploads/2008/07/seo-cheatsheet.pdf">SEO CheatSheet (PDF)</a></li>
-</ul>
 
-<h4><?php _e('Wordpress', 'constructor'); ?></h4>
+<h4>Wordpress</h4>
 <ul>
 	<li><a href="http://wordpress.org/extend/themes/black-urban">Black Urban Theme</a></li>
 	<li><a href="http://wordpress.org/extend/plugins/a-slideshow/">(a) Slideshow Plugin</a></li>
 	<li><a href="http://wordpress.org/extend/plugins/a-qr-code-gcapi/">(a) QR Code Google Plugin</a></li>
+</ul>
+
+<h4>CheatSheets</h4>
+<ul>
+    <li><a href="http://anton.shevchuk.name/wp-content/uploads/2008/09/wordpress_-_template_designer_cheatsheet_en.pdf">Wordpress Template Designer CheatSheet (PDF)</a></li>
+    <li><a href="http://anton.shevchuk.name/wp-content/uploads/2008/07/seo-cheatsheet.pdf">SEO CheatSheet (PDF)</a></li>
 </ul>
 
 <h4>jQuery</h4>

@@ -48,10 +48,10 @@ return array(
             "images"   => array(             // background images
                         "body" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'repeat', 'fixed'=>false),
                         "wrap" => array('src'=>'themes/default/header.png','pos'=>'center top', 'fixed'=>false),
-                        "wrapper"  => array('src'=>''),
-                        "sidebar"  => array('src'=>'','pos'=>'right bottom'),
-                        "extrabar" => array('src'=>'','pos'=>'right bottom'),
-                        "footer"   => array('src'=>'themes/default/footer.png','pos'=>'right bottom'),
+                        "wrapper"  => array('src'=>'','pos'=>'left top', 'repeat'=>'no-repeat'),
+                        "sidebar"  => array('src'=>'','pos'=>'right bottom', 'repeat'=>'no-repeat'),
+                        "extrabar" => array('src'=>'','pos'=>'right bottom', 'repeat'=>'no-repeat'),
+                        "footer"   => array('src'=>'themes/default/footer.png','pos'=>'right bottom', 'repeat'=>'no-repeat'),
                         ),
             "opacity"   => 'light',          // type of opacity
             "shadow"    => true,             // create shadow

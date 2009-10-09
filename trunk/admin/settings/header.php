@@ -1,4 +1,22 @@
 <?php __('Header', 'constructor'); // requeried for correct translation ?>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function($){
+$(document).ready(function(){
+    $("#constructor-layout-header-slider").slider({
+        range: "min",
+        value: <?php echo (int)($constructor['layout']['header'])?>,
+        min: 80,
+        max: 320,
+        step:5,
+        slide: function(event, ui) {
+            $("#constructor-layout-header").val(ui.value);
+        }
+    });
+});
+})(jQuery);
+/* ]]> */
+</script>
 <input type="hidden" id="constructor-title-pos" name="constructor[title][pos]" value="<?php echo $constructor['title']['pos']?>"/>
 <table class="form-table">
 <tr>
@@ -19,6 +37,16 @@
         <div id="color_title2" class="color"><div style="background-color: <?php echo $constructor['color']['title2'] ?>"></div></div>
         - <?php echo attribute_escape(__('description', 'constructor')); ?>
         <br class="clear"/>
+    </td>
+</tr>
+<tr>
+    <th class="slider">
+    	<?php _e('Header height', 'constructor')?>: 
+	    <input type="text" id="constructor-layout-header" name="constructor[layout][header]" value="<?php echo $constructor['layout']['header']?>" />px
+	</th>
+    <td class="slider">
+    	<br/>
+        <div id="constructor-layout-header-slider"  style="width:200px;"></div>
     </td>
 </tr>
 <tr>

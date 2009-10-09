@@ -1,7 +1,76 @@
 <?php __('Sidebar', 'constructor'); // requeried for correct translation ?>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function($){
+$(document).ready(function(){
+    $("#constructor-layout-width-slider").slider({
+        range: "min",
+        value: <?php echo (int)$constructor['layout']['width']?>,
+        min: 712,
+        max: 1280,
+        step:8,
+        slide: function(event, ui) {
+            $("#constructor-layout-width").val(ui.value);
+        }
+    });
+
+    $("#constructor-layout-sidebar-slider").slider({
+        range: "min",
+        value: <?php echo (int)$constructor['layout']['sidebar']?>,
+        min: 160,
+        max: 320,
+        step:8,
+        slide: function(event, ui) {
+            $("#constructor-layout-sidebar").val(ui.value);
+        }
+    });
+
+
+    $("#constructor-layout-extra-slider").slider({
+        range: "min",
+        value: <?php echo (int)$constructor['layout']['extra']?>,
+        min: 160,
+        max: 320,
+        step:8,
+        slide: function(event, ui) {
+            $("#constructor-layout-extra").val(ui.value);
+        }
+    });
+});
+})(jQuery);
+/* ]]> */
+</script>
 <input type="hidden" id="constructor-sidebar" name="constructor[sidebar]" value="<?php echo $constructor['sidebar']?>"/>
 <table class="form-table">
 <tr>
+	<tr>
+	    <th rowspan="3"><?php _e('Width', 'constructor')?></th>
+        <td class="slider">
+            <p>
+                <label for="constructor-layout-width"><?php _e('Container Width', 'constructor'); ?>:</label>
+                <input type="text" id="constructor-layout-width" name="constructor[layout][width]" value="<?php echo $constructor['layout']['width']?>" style="border:0; color:#21759B; font-weight:bold; width:42px" /> px
+            </p>
+            <div id="constructor-layout-width-slider"  style="width:600px;"></div>
+        </td>
+	</tr>
+	<tr>
+	    <td class="slider">
+	        <p>
+	            <label for="constructor-layout-sidebar"><?php _e('Sidebar Width', 'constructor'); ?>:</label>
+	            <input type="text" id="constructor-layout-sidebar" name="constructor[layout][sidebar]" value="<?php echo $constructor['layout']['sidebar']?>" style="border:0; color:#21759B; font-weight:bold; width:42px" /> px
+	        </p>
+	        <div id="constructor-layout-sidebar-slider"  style="width:600px;"></div>
+	    </td>
+	</tr>
+	<tr>
+	    <td class="slider">
+	        <p>
+	            <label for="constructor-layout-extra"><?php _e('Extra Bar Width', 'constructor'); ?>:</label>
+	            <input type="text" id="constructor-layout-extra" name="constructor[layout][extra]" value="<?php echo $constructor['layout']['extra']?>" style="border:0; color:#21759B; font-weight:bold; width:42px" /> px
+	        </p>
+	        <div id="constructor-layout-extra-slider"  style="width:600px;"></div>
+	    </td>
+	</tr>
     <th scope="row" valign="top"><?php _e('Sidebar', 'constructor'); ?></th>
     <td class="select" id="sidebar">
         <a href="#" title="<?php echo attribute_escape(__('Left', 'constructor')); ?>" name="left" <?php if($constructor['sidebar'] == 'left') echo 'class="selected"'; ?>>
