@@ -31,7 +31,7 @@ $(document).ready(function(){
 <table class="form-table">
     <tr>
         <th colspan="2">
-			<?php _e('By default use images from posts on current page', 'constructor');?>
+			<?php _e('By default use images from posts with custom field <code>thumb-slideshow</code>', 'constructor');?>
         </th>
     </tr>
     <tr>

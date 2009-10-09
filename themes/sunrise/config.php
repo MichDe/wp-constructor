@@ -45,10 +45,11 @@ return array (
                     ),
             "images"   => array(
                         "body" => array('src'=>'themes/sunrise/sunrise.jpg', 'pos'=>'left bottom', 'repeat'=>'repeat-x', 'fixed'=>1),
-                        "wrap" => array('src'=>'','pos'=>'center top', 'fixed'=>false),
-                        "sidebar"  => array('src'=>'','pos'=>'right bottom'),
-                        "extrabar" => array('src'=>'','pos'=>'right bottom'),
-                        "footer"   => array('src'=>'','pos'=>'left bottom'),
+                        "wrap" => array('src'=>'', 'pos'=>'center top', 'repeat'=>'no-repeat', 'fixed'=>false),
+                        "wrapper"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
+                        "sidebar"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
+                        "extrabar" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
+                        "footer"   => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                     ),
             "opacity"   => 'darkhigh',
             "shadow"    => true,             // create shadow

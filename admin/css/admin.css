@@ -45,9 +45,21 @@
     background-color: #21759B
 }
 .constructor .repeat a {
-    width:140px !important;
-    height:107px
+    width:30px !important;
+    height:30px;
+	background-image:url(../images/repeat.png);
+	background-position:0 0;
 }
+	.constructor .repeat a.repeatx {
+	    background-position:100% 0;
+	}
+	.constructor .repeat a.repeaty {
+	    background-position:0 100%;
+	}
+	.constructor .repeat a.repeat {
+	    background-position:100% 100%;
+	}
+
 
 .constructor #slideshow a{
     width:auto !important;

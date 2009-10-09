@@ -48,11 +48,11 @@ return array(
                     ),
             "images"   => array(             // background images
                         "body" => array('src'=>'themes/example/gradient.png', 'pos'=>'left top', 'repeat'=>'repeat-x', 'fixed'=>false),
-                        "wrap" => array('src'=>'themes/example/header.png','pos'=>'center top', 'fixed'=>false),
-                        "wrapper"  => array('src'=>'themes/example/wrapper.png'),
-                        "sidebar"  => array('src'=>'themes/example/sidebar.png','pos'=>'right bottom'),
-                        "extrabar" => array('src'=>'','pos'=>'right bottom'),
-                        "footer"   => array('src'=>'themes/example/footer.png','pos'=>'right bottom'),
+                        "wrap" => array('src'=>'themes/example/header.png', 'pos'=>'center top', 'repeat'=>'no-repeat', 'fixed'=>false),
+                        "wrapper"  => array('src'=>'themes/example/wrapper.png', 'pos'=>'left top', 'repeat'=>'repeat-y'),
+                        "sidebar"  => array('src'=>'themes/example/sidebar.png', 'pos'=>'right bottom', 'repeat'=>'no-repeat'),
+                        "extrabar" => array('src'=>'', 'pos'=>'right bottom', 'repeat'=>'no-repeat'),
+                        "footer"   => array('src'=>'themes/example/footer.png', 'pos'=>'right bottom', 'repeat'=>'no-repeat'),
                     ),
             "opacity"   => 'light',          // type of opacity
             "shadow"    => true,             // create shadow
