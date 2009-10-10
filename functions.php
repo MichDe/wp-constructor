@@ -38,6 +38,10 @@ $template_uri = get_template_directory_uri();
 
 load_theme_textdomain('constructor', get_template_directory().'/lang');
 
+if ( version_compare( $wp_version, '2.8', '<=' ) ) {
+    require_once 'admin/compatibility/body_class.php';
+}
+
 //require_once 'widgets/many-in-one.php';
 
 if (!is_admin()) {	
@@ -332,15 +336,19 @@ JS;
 		global $wp_query;
 
 		$category = array();
-
-		if (is_single()) {
+        
+        if (is_single()) {
 			$cat = get_the_category($wp_query->post->ID);
-			$category = split('/', rtrim(get_category_parents($cat[0], false, '/', true), '/'));
+			if ($cat) {
+                $category = split('/', rtrim(get_category_parents($cat[0], false, '/', true), '/'));
+            }
 		} elseif (is_page()) {
 			$category = get_post_custom_values('category_name', $wp_query->post->ID);
 		} elseif (is_category()) {
 			$cat = get_category(get_query_var('cat'));
-			$category = split('/', rtrim(get_category_parents($cat, false, '/', true), '/'));
+			if ($cat) {
+                $category = split('/', rtrim(get_category_parents($cat, false, '/', true), '/'));
+            }
 		}
 		return $category;
 	}
