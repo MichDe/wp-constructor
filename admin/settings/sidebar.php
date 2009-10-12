@@ -18,7 +18,7 @@ $(document).ready(function(){
         range: "min",
         value: <?php echo (int)$constructor['layout']['sidebar']?>,
         min: 160,
-        max: 320,
+        max: 420,
         step:8,
         slide: function(event, ui) {
             $("#constructor-layout-sidebar").val(ui.value);
@@ -30,7 +30,7 @@ $(document).ready(function(){
         range: "min",
         value: <?php echo (int)$constructor['layout']['extra']?>,
         min: 160,
-        max: 320,
+        max: 420,
         step:8,
         slide: function(event, ui) {
             $("#constructor-layout-extra").val(ui.value);

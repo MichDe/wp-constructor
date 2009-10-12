@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-09 16:58+0200\n"
+"POT-Creation-Date: 2009-10-12 17:35+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
@@ -212,45 +212,46 @@ msgstr ""
 msgid "Sorry, but you are looking for something that isn&#8217;t here."
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:207
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:211
 msgid "Home"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:234
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:238
 #: W:/www/wordpress/wp-content/themes/constructor/author.php:22
 msgid "RSS Feed"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:298
-#: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:24
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:302
+#: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:25
 #, php-format
 msgid "%1$s is proudly powered by %2$s"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:299
-#: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:25
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:303
+#: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:26
 msgid "Constructor Theme"
-msgstr ""
-
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
-#, php-format
-msgid "%1$s and %2$s."
-msgstr ""
-
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
-msgid "Entries (RSS)"
-msgstr ""
-
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
-msgid "Comments (RSS)"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
 #, php-format
+msgid "%1$s and %2$s."
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
+msgid "Entries (RSS)"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
+msgid "Comments (RSS)"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:308
+#, php-format
 msgid "%d queries. %s seconds."
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:318
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:328
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:337
 msgid "No Image"
 msgstr ""
 
@@ -327,24 +328,24 @@ msgstr ""
 msgid "File \"%s\" is not a image (jpeg, png, gif)"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:156
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:194
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:157
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:195
 msgid "Customize Theme"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:156
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:157
 msgid "Customize"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:195
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:196
 msgid "Options saved."
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:199
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:200
 msgid "Errors"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:226
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:227
 msgid "Save Changes"
 msgstr ""
 
@@ -520,7 +521,6 @@ msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:2
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:88
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:19
 msgid "Slideshow"
 msgstr ""
 
@@ -692,6 +692,20 @@ msgstr ""
 msgid "Show author link"
 msgstr ""
 
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:11
+msgid "Thumbnails"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:14
+msgid "Autogenerate thumbnails"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:22
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/images.php:20
+#, php-format
+msgid "<font color=\"red\"><b>Warning!</b></font>: Directory \"%s\" is not writable."
+msgstr ""
+
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/footer.php:1
 msgid "Footer"
 msgstr ""
@@ -702,11 +716,6 @@ msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/images.php:1
 msgid "Images"
-msgstr ""
-
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/images.php:20
-#, php-format
-msgid "<font color=\"red\"><b>Warning!</b></font>: Directory \"%s\" is not writable."
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/images.php:24
@@ -986,7 +995,7 @@ msgid "Tile layout"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:11
-msgid "For \"tile\" layout using images from custom fields with key <code>thumb</code>"
+msgid "For \"tile\" layout using images from custom fields with key <code>thumb</code> (or use autogenerate option on content tab)"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:14
@@ -994,7 +1003,7 @@ msgid "List layout"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:16
-msgid "For \"list\" layout using images from custom fields with key <code>thumb-list</code>"
+msgid "For \"list\" layout using images from custom fields with key <code>thumb-list</code> (or use autogenerate option on content tab)"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:21

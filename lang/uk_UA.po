@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-09 16:58+0200\n"
-"PO-Revision-Date: 2009-10-09 17:21+0200\n"
+"POT-Creation-Date: 2009-10-12 17:35+0200\n"
+"PO-Revision-Date: 2009-10-12 17:43+0200\n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -212,45 +212,46 @@ msgstr "Помилка 404 &mdash; Сторінку не знайдено"
 msgid "Sorry, but you are looking for something that isn&#8217;t here."
 msgstr "Пробачте, але тут немає того, що ви шукаєте."
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:207
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:211
 msgid "Home"
 msgstr "Додому"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:234
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:238
 #: W:/www/wordpress/wp-content/themes/constructor/author.php:22
 msgid "RSS Feed"
 msgstr "RSS-стрічка"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:298
-#: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:24
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:302
+#: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:25
 #, php-format
 msgid "%1$s is proudly powered by %2$s"
 msgstr "%1$s працює на %2$s"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:299
-#: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:25
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:303
+#: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:26
 msgid "Constructor Theme"
 msgstr "Конструктор"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
 #, php-format
 msgid "%1$s and %2$s."
 msgstr "%1$s і %2$s."
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
 msgid "Entries (RSS)"
 msgstr "Записи (RSS)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
 msgid "Comments (RSS)"
 msgstr "Коментарі (RSS)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:308
 #, php-format
 msgid "%d queries. %s seconds."
 msgstr "%d запитів. %s секунд."
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:318
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:328
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:337
 msgid "No Image"
 msgstr "Нема зображення"
 
@@ -327,24 +328,24 @@ msgstr "Система не в змозі створити папку \"%s\" "
 msgid "File \"%s\" is not a image (jpeg, png, gif)"
 msgstr "Файл &laquo;%s&raquo; не є зображенням"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:156
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:194
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:157
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:195
 msgid "Customize Theme"
 msgstr "Налаштування теми"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:156
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:157
 msgid "Customize"
 msgstr "Налаштування"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:195
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:196
 msgid "Options saved."
 msgstr "Налаштування збережені."
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:199
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:200
 msgid "Errors"
 msgstr "Помилки"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:226
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:227
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 
@@ -520,7 +521,6 @@ msgstr "<font color=\"red\"><b>Увага!</b></font>: Файл  &laquo;%s&raquo
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:2
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:88
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:19
 msgid "Slideshow"
 msgstr "Слайдшоу"
 
@@ -692,6 +692,20 @@ msgstr "Статті"
 msgid "Show author link"
 msgstr "Відображати посилання на сторінку автора"
 
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:11
+msgid "Thumbnails"
+msgstr "Мініатюри"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:14
+msgid "Autogenerate thumbnails"
+msgstr "Сгенеровані мініатюри"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:22
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/images.php:20
+#, php-format
+msgid "<font color=\"red\"><b>Warning!</b></font>: Directory \"%s\" is not writable."
+msgstr "<font color=\"red\"><b>Увага!</b></font>: Тека &laquo;%s&raquo; має атрибут тілько для читання."
+
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/footer.php:1
 msgid "Footer"
 msgstr "&laquo;Низ сторінки&raquo;"
@@ -703,11 +717,6 @@ msgstr "Текст внизу сторінки"
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/images.php:1
 msgid "Images"
 msgstr "Зображення"
-
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/images.php:20
-#, php-format
-msgid "<font color=\"red\"><b>Warning!</b></font>: Directory \"%s\" is not writable."
-msgstr "<font color=\"red\"><b>Увага!</b></font>: Тека &laquo;%s&raquo; має атрибут тілько для читання."
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/images.php:24
 msgid "Body Image"
@@ -986,16 +995,16 @@ msgid "Tile layout"
 msgstr "Макет &laquo;плитка&raquo;"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:11
-msgid "For \"tile\" layout using images from custom fields with key <code>thumb</code>"
-msgstr "Для макету &laquo;плитка&raquo; викорустовуються зображення з власного поля записів з ім'ям <code>thumb</code>"
+msgid "For \"tile\" layout using images from custom fields with key <code>thumb</code> (or use autogenerate option on content tab)"
+msgstr "Для макету &laquo;плитка&raquo; викорустовуються зображення з власного поля записів з ім'ям <code>thumb</code> (або використовуйте автоматично сгенеровані мініатюри)"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:14
 msgid "List layout"
 msgstr "Макет &laquo;перелік&raquo;"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:16
-msgid "For \"list\" layout using images from custom fields with key <code>thumb-list</code>"
-msgstr "Для макету &laquo;перелік&raquo; викорустовуються зображення з власного поля записів з ім'ям <code>thumb-list</code>"
+msgid "For \"list\" layout using images from custom fields with key <code>thumb-list</code> (or use autogenerate option on content tab)"
+msgstr "Для макету &laquo;перелік&raquo; викорустовуються зображення з власного поля записів з ім'ям <code>thumb-list</code> (або використовуйте автоматично сгенеровані мініатюри)"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:21
 msgid "For slideshow using images from custom fields with key <code>thumb-slideshow</code> (by default, your can change it on slideshow tab)"

@@ -1,11 +1,11 @@
 <?php 
 /* Export on 2009-09-30 20:44 */ 
 return array (
-            "sidebar"   => 'two-right',
+            "sidebar"   => 'right',
             "layout"    =>  array(           // layouts styles
-                        'header'  => 140,    // header height
+                        'header'  => 300,    // header height
                         'width'   => 1024,   // container width
-                        'sidebar' => 240,    // sidebar width
+                        'sidebar' => 340,    // sidebar width
                         'extra'   => 240,    // extrabar  width
                         'home'    => 'default',
                         'archive' => 'default',
@@ -13,12 +13,12 @@ return array (
                         'index'   => 'default',
                                  ),
             "title"     => array(
-                        "pos" => 'right'
+                        'pos' => 'left'
                     ),
             "content"   => array(            // content
-                        "author" => 0,       // - link to author page
-                        'thumb' =>  array ('auto' => false)
-                        ),
+                        'author' => true,    // - link to author page
+					    'thumb' =>  array ('auto' => true)
+						),
             "footer"    => array(            // footer text
                         "text" => null
                     ),
@@ -27,7 +27,7 @@ return array (
                         'body'   => 2,
                     ),
             "menu"     => array(             // menu with links
-                        "flag" => 1,         // - enable/disable
+                        "flag" => false,         // - enable/disable
                         "home" => true,     // - link to home page
                         "rss"  => true,     // - link to RSS
                         "search" => true,    // - search form
@@ -35,7 +35,7 @@ return array (
                         "categories" => array('depth'=>3, 'group'=>1)
                         ),
             "slideshow" => array(            // Slideshow options
-                        "flag" => 1,         // - enable/disable
+                        "flag" => false,         // - enable/disable
                         "layout" => 'in',
                         "showposts" => 10,   // - show last N slides
                         "metakey" => 'thumb-slideshow', // - custom field name
@@ -45,18 +45,18 @@ return array (
                         "onsingle" => false   // show slideshow on single post
                     ),
             "images"   => array(
-                        "body" => array('src'=>'themes/sunrise/sunrise.jpg', 'pos'=>'left bottom', 'repeat'=>'repeat-x', 'fixed'=>1),
+                        "body" => array('src'=>'themes/naruto/naruto.jpg', 'pos'=>'top center', 'repeat'=>'no-repeat', 'fixed'=>false),
                         "wrap" => array('src'=>'', 'pos'=>'center top', 'repeat'=>'no-repeat', 'fixed'=>false),
                         "wrapper"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
-                        "sidebar"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
+                        "sidebar"  => array('src'=>'themes/naruto/fox.jpg', 'pos'=>'right bottom', 'repeat'=>'no-repeat'),
                         "extrabar" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                         "footer"   => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                     ),
             "opacity"   => 'darkhigh',
             "shadow"    => true,             // create shadow
             "color"   => array(
-					    'title' => '#000000',
-					    'title2' => '#404040',
+					    'title' => '#ffffff',
+					    'title2' => '#d93103',
 					    'bg' => '#000',
 					    'bg2' => '#333',
 					    'opacity' => '#000',
@@ -64,9 +64,9 @@ return array (
 					    'text2' => '#ccc',
 					    'border' => '#555',
 					    'border2' => '#999',
-					    'header1' => '#ff6600',
-					    'header2' => '#ff7711',
-					    'header3' => '#ff9933',
+					    'header1' => '#ff3700',
+					    'header2' => '#ff3d12',
+					    'header3' => '#ff5f33',
                     ),
 )
  ?>

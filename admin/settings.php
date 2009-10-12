@@ -113,7 +113,8 @@ function constructor_theme_page_add()
                 $data['menu']['rss']    = isset($data['menu']['rss'])?true:false;
                 $data['menu']['search'] = isset($data['menu']['search'])?true:false;
 				
-				$data['content']['author'] = isset($data['menu']['search'])?true:false;
+				$data['content']['author'] = isset($data['content']['author'])?true:false;
+                $data['content']['thumb']['auto'] = isset($data['content']['thumb']['auto'])?true:false;
 				
                 $data['shadow'] = isset($data['shadow'])?true:false;
 				

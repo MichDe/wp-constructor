@@ -206,17 +206,19 @@ div.aligncenter {
 #header-links li.indicator {
 	background-image: url('images/arrows.png');
 	background-repeat: no-repeat;
-	background-position: 106px -106px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+	background-position: 98% -106px; /* 8-bit indexed alpha png. IE6 gets solid image only */
 }
-	#header-links li:hover.indicator    { background-position: 106px -161px }
-	#header-links li li.indicator       { background-position: 106px    6px }
-	#header-links li li:hover.indicator { background-position: 106px  -49px }
+	#header-links li:hover.indicator    { background-position: 98% -161px }
+	#header-links li li.indicator       { background-position: 98%    6px }
+	#header-links li li:hover.indicator { background-position: 98%  -49px }
 
 #header-links ul ul {
     z-index:301;
     position:absolute;
 	display:none;
 	height:auto;
+    min-width:122px;
+    width:auto !important;
     width:122px;
     margin-left:-1px;
     border-style:dotted none none none;
@@ -225,7 +227,7 @@ div.aligncenter {
 #header-links ul ul ul {
     z-index:302;
     top:10px;
-    left:118px;
+    left: 98%;
 }
 #header-links li li {
     float:none;
@@ -252,7 +254,10 @@ div.aligncenter {
 /* 2-th level reset */
 #header-links li li a {
     text-align:left;
-	text-indent:16px;
+    padding:0 24px 0 16px;
+	min-width:80px;
+    width:auto !important;
+    width:80px;
     border:0
 }
 
@@ -265,7 +270,8 @@ div.aligncenter {
 /*/Header*/
 /*Sidebar*/
 .sidebar {
-    padding:0 0 6px 6px;
+    /*padding:0 0 6px 6px;*/
+	padding:1px;
     font-size:1.2em;
     /*line-height:1.2em*/
 }
@@ -282,8 +288,10 @@ div.aligncenter {
     padding:0px 16px
 }
 .sidebar ul {
-    padding:0 0 0 4px;
     margin:0;
+}
+.sidebar ul ul{
+    padding:0 0 0 4px;
 }
 .sidebar li {
     padding:2px;
@@ -333,7 +341,7 @@ div.aligncenter {
     text-indent:12px;
     margin-bottom:4px
 }
-
+.hentry .entry .crop,
 .hentry .entry img {
     padding:4px;
     border-style:solid;
@@ -381,7 +389,13 @@ div.aligncenter {
 }
 /* for big external images */
 .hentry .crop {
+	position:relative;
     overflow:hidden;
+}
+.hentry .crop img {
+    position:absolute;
+	border:0;
+	padding:0;
 }
 /*/Post*/
 /*Tile*/
@@ -710,6 +724,9 @@ td {
     -moz-border-radius: 3px;
     -khtml-border-radius: 3px;
     -webkit-border-radius: 3px;
+}
+.wp-caption a {
+    border: 0 none !important;
 }
 .wp-caption img {
     margin: 0 !important;
