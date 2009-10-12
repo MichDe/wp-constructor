@@ -135,8 +135,8 @@ CSS;
 /* Layout */
 
 // width changes
-$sidebar2 = $sidebar - 8; // 8px - it's padding and border width
-$extra2   = $extra   - 8;
+$sidebar2 = $sidebar - 4; // 2px - it's border width
+$extra2   = $extra   - 4;
 
 // switch statement for $sidebar
 switch ($constructor['sidebar']) {
@@ -422,7 +422,7 @@ fieldset{
 .wp-caption {
    color:{$color_text};
    border: 1px solid {$color_border};
-   background-color: {$color_bg};
+   background-color: {$color_bg2};
 }
 /*/Images*/
 /*Calendar*/
@@ -446,7 +446,7 @@ fieldset{
 .hentry .footer a:hover{
     border-bottom:1px solid {$color1}
 }
-
+.hentry .entry .crop,
 .hentry .entry img {
     border-color:{$color_border}
 }

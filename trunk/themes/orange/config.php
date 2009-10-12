@@ -18,7 +18,8 @@ return array(
                         "pos" => 'center'
                     ),
             "content"   => array(            // content
-                        "author" => 0        // - link to author page
+                        "author" => 0,       // - link to author page
+                        'thumb' =>  array ('auto' => false)
                         ),
             "footer"    => array(            // footer text
                         "text" => null

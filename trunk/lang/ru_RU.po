@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-09 16:58+0200\n"
-"PO-Revision-Date: 2009-10-09 17:13+0200\n"
+"POT-Creation-Date: 2009-10-12 17:35+0200\n"
+"PO-Revision-Date: 2009-10-12 17:39+0200\n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -212,45 +212,46 @@ msgstr "Ошибка 404 &mdash; Не найдено"
 msgid "Sorry, but you are looking for something that isn&#8217;t here."
 msgstr "Извините, но того, что вы ищете, здесь нет"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:207
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:211
 msgid "Home"
 msgstr "Домой"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:234
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:238
 #: W:/www/wordpress/wp-content/themes/constructor/author.php:22
 msgid "RSS Feed"
 msgstr "Лента RSS"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:298
-#: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:24
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:302
+#: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:25
 #, php-format
 msgid "%1$s is proudly powered by %2$s"
 msgstr "%1$s работает на %2$s"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:299
-#: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:25
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:303
+#: W:/www/wordpress/wp-content/themes/constructor/themes/example/config.php:26
 msgid "Constructor Theme"
 msgstr "Конструктор"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
 #, php-format
 msgid "%1$s and %2$s."
 msgstr "%1$s и %2$s."
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
 msgid "Entries (RSS)"
 msgstr "Записи (RSS)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
 msgid "Comments (RSS)"
 msgstr "Комментарии (RSS)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:308
 #, php-format
 msgid "%d queries. %s seconds."
 msgstr "%d запросов. %s секунд."
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:318
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:328
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:337
 msgid "No Image"
 msgstr "Без Изображения"
 
@@ -327,24 +328,24 @@ msgstr "Система не смогла создать директорию \"%
 msgid "File \"%s\" is not a image (jpeg, png, gif)"
 msgstr "Файл &laquo;%s&raquo; не является изображением"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:156
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:194
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:157
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:195
 msgid "Customize Theme"
 msgstr "Настройки темы"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:156
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:157
 msgid "Customize"
 msgstr "Настройки"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:195
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:196
 msgid "Options saved."
 msgstr "Настройки сохранены."
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:199
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:200
 msgid "Errors"
 msgstr "Ошибки"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:226
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings.php:227
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
@@ -520,7 +521,6 @@ msgstr "<font color=\"red\"><b>Внимание!</b></font>: Файл  &laquo;%s
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:2
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:88
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:19
 msgid "Slideshow"
 msgstr "Слайдшоу"
 
@@ -692,6 +692,20 @@ msgstr "Записи"
 msgid "Show author link"
 msgstr "Отображать ссылку на страницу автора"
 
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:11
+msgid "Thumbnails"
+msgstr "Миниатюра"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:14
+msgid "Autogenerate thumbnails"
+msgstr "Автогенерация миниатюр"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:22
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/images.php:20
+#, php-format
+msgid "<font color=\"red\"><b>Warning!</b></font>: Directory \"%s\" is not writable."
+msgstr "<font color=\"red\"><b>Внимание!</b></font>: Директория  &laquo;%s&raquo; имеет атрибут только для чтения."
+
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/footer.php:1
 msgid "Footer"
 msgstr "&laquo;Подвал&raquo;"
@@ -703,11 +717,6 @@ msgstr "Текст в &laquo;подвале&raquo;"
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/images.php:1
 msgid "Images"
 msgstr "Изображения"
-
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/images.php:20
-#, php-format
-msgid "<font color=\"red\"><b>Warning!</b></font>: Directory \"%s\" is not writable."
-msgstr "<font color=\"red\"><b>Внимание!</b></font>: Директория  &laquo;%s&raquo; имеет атрибут только для чтения."
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/images.php:24
 msgid "Body Image"
@@ -986,16 +995,16 @@ msgid "Tile layout"
 msgstr "Макет &laquo;плитка&raquo;"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:11
-msgid "For \"tile\" layout using images from custom fields with key <code>thumb</code>"
-msgstr "Для &laquo;плитки&raquo; используются картинки указанные в произвольном поле записей с ключом <code>thumb</code>"
+msgid "For \"tile\" layout using images from custom fields with key <code>thumb</code> (or use autogenerate option on content tab)"
+msgstr "Для &laquo;плитки&raquo; используются картинки указанные в произвольном поле записей с ключом <code>thumb</code> (или используйте автоматически сгенерируемые, см. вкладку &laquo;Контент&raquo;)"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:14
 msgid "List layout"
 msgstr "Макет &laquo;список&raquo;"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:16
-msgid "For \"list\" layout using images from custom fields with key <code>thumb-list</code>"
-msgstr "Для &laquo;списка&raquo; используются картинки указанные в произвольном поле записей с ключом <code>thumb-list</code>"
+msgid "For \"list\" layout using images from custom fields with key <code>thumb-list</code> (or use autogenerate option on content tab)"
+msgstr "Для &laquo;списка&raquo; используются картинки указанные в произвольном поле записей с ключом <code>thumb-list</code> (или используйте автоматически сгенерируемые, см. вкладку &laquo;Контент&raquo;)"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/help.php:21
 msgid "For slideshow using images from custom fields with key <code>thumb-slideshow</code> (by default, your can change it on slideshow tab)"

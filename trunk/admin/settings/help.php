@@ -8,12 +8,12 @@
 
 <h3><?php _e('Tile layout', 'constructor'); ?></h3>
 <p>
-	<?php _e('For "tile" layout using images from custom fields with key <code>thumb</code>', 'constructor'); ?>
+	<?php _e('For "tile" layout using images from custom fields with key <code>thumb</code> (or use autogenerate option on content tab)', 'constructor'); ?>
 </p>
 
 <h3><?php _e('List layout', 'constructor'); ?></h3>
 <p>
-    <?php _e('For "list" layout using images from custom fields with key <code>thumb-list</code>', 'constructor'); ?>		
+    <?php _e('For "list" layout using images from custom fields with key <code>thumb-list</code> (or use autogenerate option on content tab)', 'constructor'); ?>		
 </p>
 
 <h3><?php _e('Slideshow', 'constructor'); ?></h3>
