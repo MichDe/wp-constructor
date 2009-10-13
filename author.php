@@ -75,7 +75,7 @@ endif;
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                       <li>
                         <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'construtor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a>,
-                        | <?php the_time(__('F jS, Y', 'construtor')) ?>
+                        | <?php the_date() ?>
                       </li>
                     <?php endwhile; else: ?>
                          <p><?php _e('No posts by this author.', 'constructor'); ?></p>

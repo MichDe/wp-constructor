@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-13 15:46+0200\n"
-"PO-Revision-Date: 2009-10-13 15:56+0200\n"
+"POT-Creation-Date: 2009-10-13 16:14+0200\n"
+"PO-Revision-Date: 2009-10-13 16:15+0200\n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -58,14 +58,6 @@ msgstr "Постійне посилання на %s"
 #: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:52
 msgid "Read the rest of this entry &raquo;"
 msgstr "Читати далі &raquo;"
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:29
-#: W:/www/wordpress/wp-content/themes/constructor/layout-tile.php:23
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:31
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:31
-#: W:/www/wordpress/wp-content/themes/constructor/layout-list.php:19
-msgid "F jS, Y"
-msgstr "j F Y"
 
 #: W:/www/wordpress/wp-content/themes/constructor/single.php:32
 #: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:31
@@ -1054,32 +1046,4 @@ msgstr "Анонім"
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/themes.php:55
 msgid "version"
 msgstr "версія"
-
-#~ msgid "repeat by Y and w/out opacity"
-#~ msgstr "повторюватиметься по вертикалі та затиратиме напівпрозорість"
-#~ msgid "Disable"
-#~ msgstr "Вимкнути"
-#~ msgid "Don't show menu"
-#~ msgstr "Не відображати меню"
-#~ msgid "Blogroll"
-#~ msgstr "Посилання"
-#~ msgid "Slideshow height"
-#~ msgstr "Висота слайдів"
-#~ msgid "in px"
-#~ msgstr "в px"
-#~ msgid ""
-#~ "If you want to display slideshow on homepage, please install <a href="
-#~ "\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</"
-#~ "a> plugin"
-#~ msgstr ""
-#~ "Якщо Ви бажаете показувати слайди, то встановіть плаґін <a href=\"http://"
-#~ "wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a>"
-#~ msgid "Background Gradient"
-#~ msgstr "Фоновий градієнт"
-#~ msgid "repeat by X"
-#~ msgstr "повторюватиметься по горизонталі"
-#~ msgid "Show font resizer"
-#~ msgstr "Відображати кнопки для зміни розміру шрифта"
-#~ msgid "hightlight color"
-#~ msgstr "цвет подсвеченных элементов"
 
