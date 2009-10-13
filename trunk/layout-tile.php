@@ -20,7 +20,7 @@
                     <?php get_constructor_content('tile') ?>
                 </div>
                 <div class="links opacity">
-                    <div class="date"><?php the_time(__('F jS, Y', 'construtor')) ?></div>
+                    <div class="date"><?php the_date() ?></div>
                     <div class="comments"><?php comments_popup_link('0', '1', '%', '', '' ); ?></div>
                 </div>
             </div>

@@ -21,7 +21,7 @@
                 </div>
                 <div class="footer">
                     <div class="links right">
-                    <?php the_time(__('F jS, Y', 'construtor')) ?> |
+                    <?php the_date() ?> |
                     <?php get_constructor_author('', ' |') ?>
                     <?php the_tags(__('Tags', 'construtor') . ': ', ', ', '|'); ?>
                     <?php edit_post_link(__('Edit', 'construtor'), '', ' | '); ?>
