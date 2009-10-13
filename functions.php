@@ -354,7 +354,7 @@ JS;
     {
     	global $constructor, $post, $template_uri;
 		
-		if (isset($constructor['content']['thumb']['auto'])) {
+		if (isset($constructor['content']['thumb']['auto']) && $constructor['content']['thumb']['auto']) {
 	        if ($img = _get_post_image()) {
 	            echo '<img class="thumb align'.$align.'" src="' .$template_uri. "/timthumb.php?src=".urlencode($img).'&amp;h='.$height.'&amp;w='.$width.'&amp;zc=1&amp;q=95" alt="' .get_the_title(). '"/>';
 	        } else {
