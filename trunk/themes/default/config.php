@@ -19,7 +19,11 @@ return array(
                         ),
             "content"   => array(            // content
                         "author" => 0,       // - link to author page
-                        'thumb' =>  array ('auto' => false)
+                        'thumb' =>  array ('auto'   => false), // - autogenerate thumbnails
+						'list'  =>  array (                    // list layout
+						                   'filter' => false,  // - strip HTML tags
+                                           'thumb'  => array ( 'pos' => 'left', 'noimage' => false, ), // - thumbnail position and "No Image" option
+                                          ),
                         ),
             "footer"    => array(            // footer text
                         "text" => null,
