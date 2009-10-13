@@ -43,6 +43,9 @@
 
   * added French localization
   * added more options for images (repeat option available for all images)
+  * auto-generated thumbnails is back
+  * added options for "List" layout
+  * added global WP date format settings
   * small bug fixes in layout
   * small UI changes
 
@@ -55,3 +58,11 @@
         "sidebar"  => array('src'=>'', 'pos'=>'right bottom', 'repeat'=>'no-repeat'), <br/>
         "footer"   => array('src'=>'', 'pos'=>'right bottom', 'repeat'=>'no-repeat'), <br/>
     )`
+  * changes in content section
+  `"content"   => array(    // content
+       "author" => 0,       // - link to author page <br/>
+       'thumb' =>  array ('auto'   => false), // - autogenerate thumbnails <br/>
+       'list'  =>  array (                    // list layout <br/>
+              'filter' => false,  // - strip HTML tags <br/>
+              'thumb'  => array ( 'pos' => 'left', 'noimage' => false, ), // - thumbnail position and "No Image" option <br/>
+                         )),`
