@@ -6,7 +6,7 @@
 ?>
 <?php get_constructor_slideshow() ?>
 <div id="wrapper" class="box shadow opacity">
-    <div id="container" >
+    <div id="container">
     <?php get_constructor_slideshow(true) ?>
 
     <?php if (have_posts()) : ?>
@@ -20,12 +20,7 @@
                     </h2>
                 </div>                
                 <div class="entry clear">
-                    <div class="thumb alignleft"><?php get_constructor_post_image(128, 128, 'thumb-list') ?></div>
-                    <?php
-                    $content = apply_filters('the_content', get_the_content(__('Read the rest of this entry &raquo;', 'construtor')));
-                    $content = preg_replace('/(\<script.*\>.*\<\/script\>)/si', '', $content);
-                    echo strip_tags($content, '<p><br><a><hr>');
-                    ?>
+					<?php get_constructor_content('list') ?>
                 </div>
                 <div class="footer">
                     

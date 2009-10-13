@@ -17,9 +17,7 @@
                     <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'construtor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
                 </div>
                 <div class="thumb">
-                    <?php 
-					get_constructor_post_image() 
-					?>
+                    <?php get_constructor_content('tile') ?>
                 </div>
                 <div class="links opacity">
                     <div class="date"><?php the_time(__('F jS, Y', 'construtor')) ?></div>
