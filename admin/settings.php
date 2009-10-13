@@ -116,6 +116,9 @@ function constructor_theme_page_add()
 				$data['content']['author'] = isset($data['content']['author'])?true:false;
                 $data['content']['thumb']['auto'] = isset($data['content']['thumb']['auto'])?true:false;
 				
+                $data['content']['list']['filter'] = isset($data['content']['list']['filter'])?true:false;
+				$data['content']['list']['thumb']['noimage'] = isset($data['content']['list']['thumb']['noimage'])?true:false;
+				
                 $data['shadow'] = isset($data['shadow'])?true:false;
 				
 				$data['images']['body']['fixed'] = isset($data['images']['body']['fixed'])?true:false;

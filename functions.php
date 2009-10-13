@@ -288,6 +288,36 @@ JS;
     }
 
     /**
+     * get constructor content
+     * 
+     * @param string $layout [optional]
+     * @return 
+     */
+	function get_constructor_content($layout = 'default') {
+		 global $constructor;
+		 switch ($layout) {
+		 	case 'list':
+				get_constructor_post_image(128, 128, 'thumb-list',
+				                           $constructor['content']['list']['thumb']['pos'],
+										   $constructor['content']['list']['thumb']['noimage']);
+				if (!isset($constructor['content']['list']['filter']) or !$constructor['content']['list']['filter']) {
+					the_content(__('Read the rest of this entry &raquo;', 'construtor'));
+				} else {
+					$content = apply_filters('the_content', get_the_content(__('Read the rest of this entry &raquo;', 'construtor')));
+                    $content = preg_replace('/(\<script.*\>.*\<\/script\>)/si', '', $content);
+                    echo strip_tags($content, '<p><br><a><hr><i><em><b><strong><ul><ol><li>');
+				}
+				break;
+			case 'tile';
+			    get_constructor_post_image();
+			    break;
+			default:
+                the_content(__('Read the rest of this entry &raquo;', 'construtor'));
+                break;
+		 }
+	}
+
+    /**
      * get_constructor_footer
      *
      * @access public
@@ -309,32 +339,42 @@ JS;
         }
     }
 
+
     /**
-     * get_constructor_post_image
-     *
+     * Generate HTML code for images
+     * 
+     * @param integer $width [optional]
+     * @param integer $height [optional]
+     * @param string $key [optional]
+     * @param string $align [optional]
+     * @param bool $noimage [optional]
      * @return string
      */
-    function get_constructor_post_image($width = 312, $height = 292, $key = 'thumb')
+    function get_constructor_post_image($width = 312, $height = 292, $key = 'thumb', $align = 'none', $noimage = true)
     {
     	global $constructor, $post, $template_uri;
 		
 		if (isset($constructor['content']['thumb']['auto'])) {
 	        if ($img = _get_post_image()) {
-	            echo '<img src="' .$template_uri. "/timthumb.php?src=".urlencode($img).'&amp;h='.$height.'&amp;w='.$width.'&amp;zc=1&amp;q=95" alt="' .get_the_title(). '"/>';
+	            echo '<img class="thumb align'.$align.'" src="' .$template_uri. "/timthumb.php?src=".urlencode($img).'&amp;h='.$height.'&amp;w='.$width.'&amp;zc=1&amp;q=95" alt="' .get_the_title(). '"/>';
 	        } else {
 	            if ($img = _get_post_image(false)) {
-	                echo '<div class="crop" style="width:'.$width.'px;height:'.$height.'px;"><img src="'.$img.'" height="'.$height.'px" alt="' .get_the_title(). '"/></div>';
+	                echo '<div class="crop thumb align'.$align.'" style="width:'.$width.'px;height:'.$height.'px;"><img src="'.$img.'" height="'.$height.'px" alt="' .get_the_title(). '"/></div>';
 	            } else {
-	                echo '<img src="' .$template_uri. '/images/noimage.png" width="'.$width.'px" height="'.$height.'px" alt="' .__('No Image', 'constructor'). '"/>';
+	            	if ($noimage) {
+	            		echo '<img class="thumb align'.$align.'" src="' .$template_uri. '/images/noimage.png" width="'.$width.'px" height="'.$height.'px" alt="' .__('No Image', 'constructor'). '"/>';
+	            	}  
 	            }
 	        }
 		} else {
 		    $thumbs = get_post_custom_values($key);
 	        if (sizeof($thumbs) > 0) {
                 $img = $thumbs[0];
-                echo '<img src="' .$img.'" width="'.$width.'px" height="'.$height.'px" alt="' .get_the_title(). '"/>';
+                echo '<img class="thumb align'.$align.'" src="' .$img.'" width="'.$width.'px" height="'.$height.'px" alt="' .get_the_title(). '"/>';
 	        } else {
-	        	echo '<img src="' .$template_uri. '/images/noimage.png" width="'.$width.'px" height="'.$height.'px" alt="' .__('No Image', 'constructor'). '"/>';
+                if ($noimage) {
+                    echo '<img class="thumb align'.$align.'" src="' .$template_uri. '/images/noimage.png" width="'.$width.'px" height="'.$height.'px" alt="' .__('No Image', 'constructor'). '"/>';
+                }
 	        }
 		}
     }

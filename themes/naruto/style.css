@@ -35,3 +35,7 @@ Author URI: http://anton.shevchuk.name/
     border:0 !important;
 	font-size:1.2em;
 }
+
+.tile .title {
+    padding-left:12px !important;
+}
