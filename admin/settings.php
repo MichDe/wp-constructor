@@ -107,7 +107,13 @@ function constructor_theme_page_add()
 
                 /**
                  * Flags changes
+                 * @todo Need check follows code
                  */
+				/*
+			    $arr_false = array_keys(array_diff_key($constructor, $data));
+			    $arr_false = array_fill_keys($arr_false, false);
+			    $data      = array_merge($constructor, $arr_false);
+				*/
                 $data['menu']['flag']   = isset($data['menu']['flag'])?true:false;
                 $data['menu']['home']   = isset($data['menu']['home'])?true:false;
                 $data['menu']['rss']    = isset($data['menu']['rss'])?true:false;

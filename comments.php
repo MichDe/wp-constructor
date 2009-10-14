@@ -65,13 +65,13 @@
 <?php else : ?>
 
 <p><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-<label for="author"><small><?php _e('Name', 'constructor'); ?> <?php if ($req) _e("(required)", "constructor"); ?></small></label></p>
+<label for="author"><?php _e('Name', 'constructor'); ?> <?php if ($req) _e("(required)", "constructor"); ?></label></p>
 
 <p><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-<label for="email"><small><?php _e('Mail (will not be published)', 'constructor'); ?> <?php if ($req) _e("(required)", "constructor"); ?></small></label></p>
+<label for="email"><?php _e('Mail (will not be published)', 'constructor'); ?> <?php if ($req) _e("(required)", "constructor"); ?></label></p>
 
 <p><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-<label for="url"><small><?php _e('Website', 'constructor'); ?></small></label></p>
+<label for="url"><?php _e('Website', 'constructor'); ?></label></p>
 
 <?php endif; ?>
 
