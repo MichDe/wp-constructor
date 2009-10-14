@@ -179,18 +179,14 @@ JS;
         global $constructor;
 
         if (!isset($constructor['layout'][$where])) return include_once 'layout-default.php';
-
-        switch ($constructor['layout'][$where]) {
-            case 'tile':
-                include_once 'layout-tile.php';
-                break;
-            case 'list':
-                include_once 'layout-list.php';
-                break;
-            default:
-                include_once 'layout-default.php';
-                break;
-        }
+        
+		$layout = $constructor['layout'][$where];
+		
+		if (is_file(get_template_directory() .'/layout-'.$layout.'.php')) {
+			include_once 'layout-'.$layout.'.php';
+		} else {
+			include_once 'layout-default.php';
+		}
         return true;
     }
 

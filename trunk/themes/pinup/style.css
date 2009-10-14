@@ -1,0 +1,52 @@
+/*
+Theme Name: Pinup
+Theme URI: 
+Description: Pinup. Thx for images to <a href="http://http://dominic-marco.deviantart.com//">Dominic Marco</a>
+Version: 0.0.1
+Author: Anton Shevchuk
+Author URI: http://anton.shevchuk.name/
+*/
+
+#header h1 {
+    letter-spacing: -2px;
+}
+/*disable circles*/
+.sidebar li {
+	list-style-type:none !important
+}
+.sidebar li a {
+	padding-left:4px;
+	border-left:6px solid #ddd;
+}
+.sidebar li a:hover {
+	border-left:6px solid #f700d6;
+}
+.sidebar h3 {
+	border-bottom:1px solid #f700d6
+	
+}
+#sidebar {
+    min-height:500px;
+    padding-bottom:400px;
+}
+
+#respond {
+    background:#fff url(comments.jpg) 0 0 no-repeat;
+	min-height:380px;
+	margin-bottom:0 !important;
+    border:solid 1px #fff;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    -webkit-border-radius: 6px
+}
+#commentform {
+    margin:5px 10px 0 250px;
+}
+#commentform textarea {
+	width:98%;
+}
+#commentform #submit {
+	float:none !important;
+	
+}

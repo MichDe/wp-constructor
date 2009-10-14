@@ -79,7 +79,7 @@ msgstr "A mon propos"
 #: ../author.php:70
 #, php-format
 msgid "Last posts by %s"
-msgstr "Dernier post par %s"
+msgstr "Dernier article par %s"
 
 #: ../author.php:77
 #: ../layout-default.php:17
@@ -100,7 +100,7 @@ msgstr "j F Y"
 
 #: ../author.php:81
 msgid "No posts by this author."
-msgstr "Aucun article par cet auteur"
+msgstr "Aucun article de cet auteur"
 
 #: ../author.php:90
 #: ../layout-default.php:36
@@ -118,7 +118,7 @@ msgstr "&laquo; Anciennes entrées"
 
 #: ../comments.php:12
 msgid "This post is password protected. Enter the password to view comments."
-msgstr "Ceta article est protégé par mot de passe. Entrez le mot de passe pour voir les commentaires"
+msgstr "Cet article est protégé par mot de passe. Entrez le mot de passe pour voir les commentaires"
 
 #: ../comments.php:21
 msgid "No Responses"
@@ -135,7 +135,7 @@ msgstr "% Réponses"
 #: ../comments.php:21
 #, php-format
 msgid "to &#8220;%s&#8221;"
-msgstr "a &#8220;%s&#8221;"
+msgstr "à &#8220;%s&#8221;"
 
 #: ../comments.php:39
 msgid "Comments are closed."
@@ -188,7 +188,7 @@ msgstr "<strong>XHTML:</strong> Vous pouvez utiliser ces tags: <code>%s</code>"
 
 #: ../comments.php:82
 msgid "Submit Comment"
-msgstr "Soumettre commentaire"
+msgstr "Envoyer"
 
 #: ../functions.php:226
 msgid "Home"
@@ -235,7 +235,7 @@ msgstr "Aucune image"
 #: ../layout-list.php:25
 #: ../page.php:23
 msgid "Read the rest of this entry &raquo;"
-msgstr "Lisez le reste de cette article &raquo;"
+msgstr "Lisez le reste de cet article &raquo;"
 
 #: ../layout-default.php:26
 #: ../page.php:32
@@ -251,17 +251,17 @@ msgstr "Editer"
 #: ../layout-default.php:28
 #: ../page.php:34
 msgid "No Comments &#187;"
-msgstr "Aucun Commentaire &#187;"
+msgstr "Aucun commentaire &#187;"
 
 #: ../layout-default.php:28
 #: ../page.php:34
 msgid "1 Comment &#187;"
-msgstr "1 Commentaire &#187;"
+msgstr "1 commentaire &#187;"
 
 #: ../layout-default.php:28
 #: ../page.php:34
 msgid "% Comments &#187;"
-msgstr "% Commentaires &#187;"
+msgstr "% commentaires &#187;"
 
 #: ../layout-default.php:28
 #: ../page.php:34
@@ -270,7 +270,7 @@ msgstr "Commentaires fermés"
 
 #: ../page.php:29
 msgid "Back to Parent Page"
-msgstr "Retour vers la Page Parente"
+msgstr "Retour vers la page parente"
 
 #: ../sidebar.php:20
 msgid "Categories"
@@ -296,7 +296,7 @@ msgstr "Archives"
 #: ../admin/settings.php:63
 #, php-format
 msgid "System can't create \"%s\" directory"
-msgstr "Le système ne peut créér le repertoire \"%s\" "
+msgstr "Le système ne peut créer le repertoire \"%s\" "
 
 #: ../admin/settings.php:78
 #, php-format
@@ -314,7 +314,7 @@ msgstr "Personnaliser"
 
 #: ../admin/settings.php:177
 msgid "Options saved."
-msgstr "Options sauvés"
+msgstr "Options enregistrées"
 
 #: ../admin/settings.php:181
 msgid "Errors"
@@ -322,7 +322,7 @@ msgstr "Erreurs"
 
 #: ../admin/settings.php:208
 msgid "Save Changes"
-msgstr "Sauver les changements"
+msgstr "Enregistrer les modifications"
 
 #: ../admin/settings/colors.php:1
 msgid "Colors"
@@ -370,7 +370,7 @@ msgstr "Clair"
 #: ../admin/settings/colors.php:87
 #: ../admin/settings/colors.php:88
 msgid "Light High"
-msgstr "Très Clair"
+msgstr "Très clair"
 
 #: ../admin/settings/colors.php:93
 msgid "Shadow"
@@ -453,24 +453,24 @@ msgstr "Utiliser cette option pour exporter vos changements"
 
 #: ../admin/settings/export.php:3
 msgid "save changes before export"
-msgstr "sauver les changements avant l'export"
+msgstr "enregistrer les modifications avant l'export"
 
 #: ../admin/settings/export.php:6
 msgid "click here and save file"
-msgstr "cliquez ici et sauvez le fichier"
+msgstr "cliquez ici et enregistrez le fichier"
 
 #: ../admin/settings/export.php:12
 #, php-format
 msgid "For import theme - use your FTP access and create new folder in folder <code>%s/themes</code> and upload <code>config.php</code>"
-msgstr "Pour importer ce thème, utilisez votre accès FTP et créer un nouveau répertoire dans le repertoire<code>%s/themes</code> et uploader <code>config.php</code>"
+msgstr "Pour importer ce thème, utilisez votre accès FTP, créez un nouveau répertoire dans le repertoire<code>%s/themes</code> et uploadez <code>config.php</code>"
 
 #: ../admin/settings/export.php:17
 msgid "Create <code>style.css</code> with follow text (change text in UPPERCASE)"
-msgstr "Créér le fichier <code>style.css</code> avec le texte suivant (les changements sont en MAJUSCULE)"
+msgstr "Créez le fichier <code>style.css</code> avec le texte suivant (les changements sont en MAJUSCULE)"
 
 #: ../admin/settings/export.php:31
-msgid "Create <code>screenshot.png</code> with screen of your theme and resolution 300x225 and upload too (isn't requried)"
-msgstr "Créér le fichier <code>screenshot.png</code> avec un aperçu de votre thème et une résolution de 300x225 et uploader le (ce n'est pas requis)"
+msgid "Create <code>screenshot.png</code> with screen of your theme and resolution 300x225 and upload too (isn't required)"
+msgstr "Créez le fichier <code>screenshot.png</code> avec un aperçu de votre thème et une résolution de 300x225 et uploadez le (ce n'est pas requis)"
 
 #: ../admin/settings/fonts.php:1
 msgid "Fonts"
@@ -568,7 +568,7 @@ msgstr "Images"
 #: ../admin/settings/images.php:14
 #, php-format
 msgid "<font color=\"red\"><b>Warning!</b></font>: Directory \"%s\" is not writable."
-msgstr "<font color=\"red\"><b>Attention!</b></font>: Le répertoire \"%s\" n'est pas permis à l'écriture."
+msgstr "<font color=\"red\"><b>Attention!</b></font>: Le répertoire \"%s\" n'a pas les droits d'écriture."
 
 #: ../admin/settings/images.php:18
 msgid "Body Image"
@@ -618,7 +618,7 @@ msgstr "Répéter verticalement"
 #: ../admin/settings/layout.php:145
 #: ../admin/settings/layout.php:146
 msgid "Tile"
-msgstr "Titre"
+msgstr "Pavé"
 
 #: ../admin/settings/images.php:56
 #: ../admin/settings/images.php:93
@@ -650,7 +650,7 @@ msgstr "En haut au centre"
 #: ../admin/settings/images.php:169
 #: ../admin/settings/images.php:200
 msgid "Top Right"
-msgstr "Enhaut à droite"
+msgstr "En haut à droite"
 
 #: ../admin/settings/images.php:63
 #: ../admin/settings/images.php:100
@@ -857,7 +857,7 @@ msgstr "Vous pouvez utiliser le plugin <a href=\"http://wordpress.org/extend/plu
 
 #: ../admin/settings/themes.php:1
 msgid "Themes"
-msgstr "Themes"
+msgstr "Thèmes"
 
 #: ../admin/settings/themes.php:42
 msgid "File \"style.css\" is not exists"

@@ -315,6 +315,19 @@ td {
     border-color: {$color_border}
 }
 
+.color1 { color:{$color1} }
+.color2 { color:{$color2} }
+.color3 { color:{$color3} }
+
+.color-text  { color:{$color_text} }
+.color-text2 { color:{$color_text2} }
+
+.color-bg  { background-color:{$color_bg}  }
+.color-bg2 { background-color:{$color_bg2} }
+
+.color_border  { border-color: {$color_border}  }
+.color_border2 { border-color: {$color_border2} }
+
 /*Autogenerate*/
 .current-cat a{
     font-weight:900;

@@ -16,8 +16,8 @@
                 <div class="title">
                     <h2>
                         <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'construtor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a>
-                        <div class="date"><?php the_date() ?></div>
                     </h2>
+					<div class="date color2"><?php the_date() ?></div>
                 </div>                
                 <div class="entry clear">
 					<?php get_constructor_content('list') ?>

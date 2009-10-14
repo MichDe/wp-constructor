@@ -311,7 +311,7 @@ div.aligncenter {
     clear:both;
     position:relative;
     width:100%;
-    margin:4px auto
+    margin:0 0 10px 0
 }
 .hentry .title h2 {
     margin:0;
@@ -469,9 +469,10 @@ div.aligncenter {
 }
 .list .date {
     position:absolute;
-    top:12px;
-    right:16px;
-    font-size:0.6em;
+    top:8px;
+    right:12px;
+	font-size:1.2em;
+	font-weight:600;
 }
 
 .list .thumb.alignleft {
@@ -564,7 +565,6 @@ textarea {width: 98%}
 }
 #commentform textarea {
     width: 100%;
-    padding: 2px
 }
 #commentform #submit {
     margin: 0 0 5px auto;
@@ -611,7 +611,7 @@ td {
 }
 
 .commentlist li {
-    margin: 15px 0 10px;
+    margin: 0 0 10px 0;
     padding: 5px 5px 10px 10px;
     list-style: none;
     clear:both;

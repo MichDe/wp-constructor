@@ -1,5 +1,4 @@
 (function($){
-
 $(document).ready(function(){
 	// Select based on images
     $('.constructor .select a').click(function(){
@@ -28,5 +27,15 @@ $(document).ready(function(){
     $('#tabs').tabs({ fxFade: true, fxSpeed: 'fast' });
 
 });
-
 })(jQuery);
+
+/**
+ * Get Id element by name
+ * @param {String} name
+ */
+function name2id(name) {
+    var name = name.replace(/\]\[/,'-');
+        name = name.replace(/\[/,'-');
+        name = name.replace(/\]/,'');
+    return name;  
+}
