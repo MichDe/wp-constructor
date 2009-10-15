@@ -567,12 +567,14 @@ textarea {width: 98%}
     width: 100%;
 }
 #commentform #submit {
-    margin: 0 0 5px auto;
-    float: right;
     cursor:pointer
 }
 #commentform p {
     margin: 5px 0
+}
+#commentform p.submit {
+    margin: 5px 0 0 0;
+	text-align:right;
 }
 /*/Form*/
 

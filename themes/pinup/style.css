@@ -1,7 +1,7 @@
 /*
 Theme Name: Pinup
 Theme URI: 
-Description: Pinup. Thx for images to <a href="http://http://dominic-marco.deviantart.com//">Dominic Marco</a>
+Description: Pinup. Thx for images to <a href="http://dominic-marco.deviantart.com/">Dominic Marco</a>
 Version: 0.0.1
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
@@ -46,7 +46,22 @@ Author URI: http://anton.shevchuk.name/
 #commentform textarea {
 	width:98%;
 }
-#commentform #submit {
-	float:none !important;
-	
+#commentform p.submit {
+	text-align:left;	
+}
+.navigation div {
+    margin:0 0 8px;
+}
+.navigation div a {
+    height:24px;
+}
+.navigation .alignright a {
+    border-left: 4px solid #FC6DFA;
+    margin:0 16px 0 0;
+    padding-left:8px;
+}
+.navigation .alignleft a {
+    border-right: 4px solid #FC6DFA;
+    margin:0 0 0 16px;
+    padding-right:8px;
 }
