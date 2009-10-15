@@ -57,7 +57,7 @@
 <?php else : ?>
 
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
-
+<?php comment_id_fields(); ?> 
 <?php if ( $user_ID ) : ?>
 
 <p><?php printf(__('Logged in as <a href="%1$s">%2$s</a>.', 'constructor'), get_option('siteurl') . '/wp-admin/profile.php', $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e('Log out of this account', 'constructor'); ?>"><?php _e('Log out &raquo;', 'constructor'); ?></a></p>
@@ -79,9 +79,7 @@
 
 <p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
 
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e('Submit Comment', 'constructor'); ?>" />
-<?php comment_id_fields(); ?> 
-</p>
+<p class="submit"><input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e('Submit Comment', 'constructor'); ?>" /></p>
 <?php do_action('comment_form', $post->ID); ?>
 
 </form>

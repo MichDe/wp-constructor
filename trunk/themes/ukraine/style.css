@@ -6,3 +6,19 @@ Version: 0.0.3
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 */
+.navigation div {
+    margin:0 0 8px;
+}
+.navigation div a {
+	height:24px;
+}
+.navigation .alignright a {
+	border-left: 4px solid #FF1212;
+    margin:0 16px 0 0;
+	padding-left:8px;
+}
+.navigation .alignleft a {
+    border-right: 4px solid #FF1212;
+    margin:0 0 0 16px;
+    padding-right:8px;
+}
