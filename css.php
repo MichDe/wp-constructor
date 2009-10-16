@@ -328,16 +328,7 @@ td {
 .color_border  { border-color: {$color_border}  }
 .color_border2 { border-color: {$color_border2} }
 
-/*Autogenerate*/
-.current-cat a{
-    font-weight:900;
-    border-color:{$color_text}
-}
-.current-cat li a{
-    font-weight:500;
-    border-color:transparent
-}
-/*/Autogenerate*/
+
 /*Form*/
 input, select, textarea {
     color:{$color_text};
@@ -420,6 +411,15 @@ fieldset{
     #header-links li { border-color: {$color_border} }
     #header-links li li { background-color:{$color_bg}  }
     #header-links li:hover { background-color:{$color_bg2} }
+    
+    #header-links .current_page_item a,
+    #header-links .current-cat a{
+        color:{$color1}
+    }
+    #header-links .current_page_item li a,
+    #header-links .current-cat li a {
+        color: {$color_text}
+    }
 /*/Header*/
 /*Slideshow*/
 .wp-sl img{
@@ -464,6 +464,18 @@ fieldset{
     border-color:{$color_border}
 }
 /*/Post*/
+/*Sidebar*/    
+.sidebar .current_page_item a,
+.sidebar .current-cat a{
+    font-weight:900;
+    border-color:{$color_text}
+}
+.sidebar .current_page_item li a,
+.sidebar .current-cat li a{
+    font-weight:500;
+    border-color:{$color_border}
+}
+/*/Sidebar*/
 /*Comments*/
 .thread-even, .even {
     background-color: {$color_bg};

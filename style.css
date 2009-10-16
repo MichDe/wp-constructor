@@ -85,10 +85,6 @@ div.aligncenter {
 .categories {}
 .cat-item {}
 .current-cat{}
-.current-cat a{
-    border-width:0 0 1px 0;
-    border-style:solid
-}
 .current-cat-parent {}
 .pagenav {}
 .page_item {}
@@ -238,8 +234,8 @@ div.aligncenter {
 * html #header-links li li {
     width:120px
 }
-
-#header-links li a{
+#header-links li a,
+#header-links li span{
     text-align:center;
     white-space: nowrap;
     display:block;
