@@ -9,6 +9,7 @@
 // debug only current theme
 // error_reporting(E_ALL);
 if ( function_exists('register_sidebar') ) {
+
     register_sidebar(array(
         'name'=>'sidebar',
         'before_widget' => '<li>',
@@ -31,7 +32,15 @@ if ( function_exists('register_sidebar') ) {
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>',
-    ));    
+    ));  
+      
+    register_sidebar(array(
+        'name'=>'header',
+        'before_widget' => '<li>',
+        'after_widget' => '</li>',
+        'before_title' => '<span>',
+        'after_title' => '</span>',
+    )); 
 }
 
 $template_uri = get_template_directory_uri();
@@ -206,11 +215,16 @@ JS;
         if (isset($constructor['menu']['home']) && $constructor['menu']['home']) {
         	echo '<li id="home"><a href="'.get_option('home').'/" title="'.get_bloginfo('name').'">'.__('Home', 'constructor').'</a></li>';
 		}
-		
+		 
 		if (isset($constructor['menu']['pages']['depth']) && $constructor['menu']['pages']['depth']) {
 			wp_list_pages('title_li=&depth='.$constructor['menu']['pages']['depth']);
 		}
         
+		
+		if ( function_exists('dynamic_sidebar')) {
+		    dynamic_sidebar('header');
+		}
+		
 		if (isset($constructor['menu']['categories']['depth']) && $constructor['menu']['categories']['depth']) {			
 			if (isset($constructor['menu']['categories']['group']) && $constructor['menu']['categories']['group']) {
 				echo '<li><a href="#" title="'.__('Categories','constructor').'">'.__('Categories','constructor').'</a><ul>';

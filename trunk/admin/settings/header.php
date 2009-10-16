@@ -50,7 +50,10 @@ $(document).ready(function(){
     </td>
 </tr>
 <tr>
-    <th scope="row" valign="top"><?php _e('Header menu', 'constructor'); ?></th>
+    <th scope="row" valign="top">
+        <?php _e('Header menu', 'constructor'); ?><br/>
+        <small><em><?php _e('menu can configured with <a href="widgets.php">widgets</a>, use "header" sidebar', 'constructor'); ?></em></small>
+    </th>
     <td>
 		<fieldset>
 			<legend>
