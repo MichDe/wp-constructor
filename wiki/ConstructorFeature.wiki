@@ -9,27 +9,29 @@ Available following localizations:
  * Polish - thx to mummle (http://chomikuj.pl/mummle/)
  * Danish - thx to Georg S. Adamsen (http://wordpress.blogos.dk/s%C3%B8g-efter-downloads/?did=171)
  * Italian - thx to gio gio (http://people.unica.it/)
+ * French - thx to Nicolas Loeuillet
 
 
 = Many themes =
-All aviable themes see on Themes page
+All aviable themes see on ConstructorThemes page
 
 http://wp-constructor.googlecode.com/svn/wiki/screenshot/themes.png
 
 = Six sidebar positions =
-
+And user can change width of sidebars and main container
 http://wp-constructor.googlecode.com/svn/wiki/screenshot/sidebar.png
 
 = Three layouts =
-
+Three layouts for home/posts/archive/search pages
 http://wp-constructor.googlecode.com/svn/wiki/screenshot/layout.png
 
 = Header Settings =
+Header menu is supported widgets - see "header" sidebar on widgets page
 
 http://wp-constructor.googlecode.com/svn/wiki/screenshot/header.png
 
 = Content Settings =
-Constructor theme has custom author homepage, and you can enable links to author homepage
+Constructor theme has custom author homepage, and you can enable links to author homepage.
 
 http://wp-constructor.googlecode.com/svn/wiki/screenshot/content.png
 
@@ -59,7 +61,7 @@ Upload new images for your theme
 http://wp-constructor.googlecode.com/svn/wiki/screenshot/images.png
 
 = Slideshow =
-Add slideshow from Nextgen Gallery plugin
+Add slideshow from Nextgen Gallery plugin or images from posts
 
 http://wp-constructor.googlecode.com/svn/wiki/screenshot/slideshow.png
 
