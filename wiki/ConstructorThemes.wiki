@@ -24,7 +24,7 @@ http://wp-constructor.googlecode.com/svn/trunk/themes/orange/screenshot.png
 = Pinup (<a href="http://code.google.com/p/wp-constructor/downloads/list">Download</a>) =
 http://wp-constructor.googlecode.com/svn/trunk/themes/pinup/screenshot.png
 
-Thx for images to <a href="http://http://dominic-marco.deviantart.com//">Dominic Marco</a>
+Thx for images to <a href="http://dominic-marco.deviantart.com/">Dominic Marco</a>
 
 = Sunrise (<a href="http://code.google.com/p/wp-constructor/downloads/list">Download</a>) =
 http://wp-constructor.googlecode.com/svn/trunk/themes/sunrise/screenshot.png
