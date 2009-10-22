@@ -82,6 +82,20 @@ if (!is_admin()) {
     add_action('wp', 'constructor_parse_request');
     
     /**
+     * Preview filter
+     *
+     * @param string $content
+     */
+    function constructor_preview($content) {
+        $link = add_query_arg(array('preview' => 1, 'template' => get_template()), '?theme-constructor=css');
+        
+        $content = str_replace('?theme-constructor=css', $link, $content);
+        return $content;
+    }
+    
+    add_filter('preview_theme_ob_filter', 'constructor_preview');
+    
+    /**
      * register query vars
      *
      * @param array $vars
@@ -109,6 +123,7 @@ if (!is_admin()) {
      * get_constructor_slideshow
      *
      * @access  public
+     * @param   boolean  $in In or Out of content container
      * @return  rettype  return
      */
     function get_constructor_slideshow($in = false)
@@ -158,23 +173,38 @@ if (!is_admin()) {
         		break;
         
         	default:
-				$slideshow = get_option('home').'/?theme-constructor=slideshow';
-        	    echo '<div class="wp-sl"></div>';
-                wp_enqueue_script('constructor-slideshow', $template_uri.'/js/jquery.wp-slideshow.js', array('jquery'));
-                wp_print_scripts('constructor-slideshow');
-                echo <<<JS
-                <script type='text/javascript'>
-                /* <![CDATA[ */
-					var wpSl = {thumbPath:'$template_uri/timthumb.php?src=',
-								slideshow:'$slideshow'};
-                /* ]]> */
-                </script>
-JS;
+				get_constructor_default_slideshow();
         		break;
         }
         
         
         echo '</div>';
+    }
+    
+    /**
+     * get_constructor_default_slideshow
+     *
+     * generate code for embedded slideshow
+     *
+     * @return  string
+     */
+    function get_constructor_default_slideshow() 
+    {
+        global $constructor, $template_uri;
+        
+        $slideshow = get_option('home').'/?theme-constructor=slideshow';
+        
+	    echo '<div class="wp-sl"></div>';
+        wp_enqueue_script('constructor-slideshow', $template_uri.'/js/jquery.wp-slideshow.js', array('jquery'));
+        wp_print_scripts('constructor-slideshow');
+        echo "
+        <script type='text/javascript'>
+        /* <![CDATA[ */
+			var wpSl = {thumbPath:'$template_uri/timthumb.php?src=',
+						slideshow:'$slideshow'};
+        /* ]]> */
+        </script>";
+        
     }
 
     /**

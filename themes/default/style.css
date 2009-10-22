@@ -6,3 +6,6 @@ Version: 0.1.7
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 */
+#footer {
+    min-height:300px;
+}

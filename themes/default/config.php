@@ -41,7 +41,7 @@ return array(
 						"categories" => array('depth'=>1, 'group'=>1)
                         ),
             "slideshow" => array(            // Slideshow options
-                        "flag" => 1,         // - enable/disable
+                        "flag" => 0,         // - enable/disable
                         "layout" => 'in',    // - slideshow "in" main container or "over"
                         "showposts" => 10,   // - show last N slides
                         "metakey" => 'thumb-slideshow', // - custom field name
