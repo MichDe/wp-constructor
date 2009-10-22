@@ -1,4 +1,5 @@
 #summary Version history
+#labels Featured
 
 = 0.6.0 =
 
@@ -66,3 +67,8 @@
               'filter' => false,  // - strip HTML tags <br/>
               'thumb'  => array ( 'pos' => 'left', 'noimage' => false, ), // - thumbnail position and "No Image" option <br/>
                          )),`
+
+== 0.6.3 ==
+  * added 'header'  widget sidebar
+  * small fixes in default theme
+  * small fixes in main style.css
