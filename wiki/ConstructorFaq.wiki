@@ -72,6 +72,24 @@ CSS is Cascading Style Sheets - read manual for beginners http://www.w3schools.c
 }
 }}}
 
+*How can I hide title in header
+{{{
+#header h1 { /*title*/
+    text-indent: -9999% !important;
+}
+#header h2 { /*description*/
+    text-indent: -9999% !important;
+}
+}}}
+
+*How can I hide title in header, but leave link
+{{{
+#header h1 a{
+    text-indent: -9999% !important;
+    display:block;
+}
+}}}
+
 *How can I change style for footer line
 {{{
 /* Example from Black Urban Theme */
