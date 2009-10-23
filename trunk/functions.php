@@ -367,7 +367,7 @@ if (!is_admin()) {
     {
         global $constructor;
         if ($constructor['footer']['text']) {
-            echo $constructor['footer']['text'];
+            echo stripslashes($constructor['footer']['text']);
         } else {
             echo '&copy; '.date('Y') .' '. sprintf(__('%1$s is proudly powered by %2$s', 'constructor'), get_bloginfo('name'), '<a href="http://wordpress.org/">WordPress</a>') .
                  ' | <a href="http://anton.shevchuk.name/">'. __('Constructor Theme', 'constructor') .'</a><br />'.
