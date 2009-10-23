@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage construtor
+ * @subpackage constructor
  */
 // Stupid Parser This is Theme support the Gravatar Service
 // get_avatar();

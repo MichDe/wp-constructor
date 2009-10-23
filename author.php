@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage construtor
+ * @subpackage constructor
  */
 // load header.php
 get_header();
@@ -74,7 +74,7 @@ endif;
                     <!-- The Loop -->
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                       <li>
-                        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'construtor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a>,
+                        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a>,
                         | <?php the_date() ?>
                       </li>
                     <?php endwhile; else: ?>
@@ -87,8 +87,8 @@ endif;
             </div>        
         </div>
         <div class="navigation">
-            <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'construtor')) ?></div>
-            <div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'construtor')) ?></div>
+            <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'constructor')) ?></div>
+            <div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'constructor')) ?></div>
             <div class="clear">&nbsp;</div>
         </div>
     </div><!-- id='container' -->

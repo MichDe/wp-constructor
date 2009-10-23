@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage construtor
+ * @subpackage constructor
  */
 ?>
 <?php get_constructor_slideshow() ?>
@@ -14,7 +14,7 @@
         <?php while (have_posts()) : the_post(); ?>
             <div <?php post_class('tile opacity shadow box'); ?> id="post-<?php the_ID() ?>">
                 <div class="title opacity">
-                    <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'construtor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
+                    <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
                 </div>
                 <div class="thumb">
                     <?php get_constructor_content('tile') ?>
@@ -27,8 +27,8 @@
         <?php endwhile; ?>
         </div>
         <div class="navigation clear">
-            <div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'construtor')) ?></div>
-            <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'construtor')) ?></div>
+            <div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'constructor')) ?></div>
+            <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'constructor')) ?></div>
             <div class="clear">&nbsp;</div>
         </div>
     <?php endif; ?>
