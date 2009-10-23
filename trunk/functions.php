@@ -213,7 +213,7 @@ if (!is_admin()) {
      * @param  string $where
      * @return string
      */
-    function get_constructor_layout($where = 'default')
+    function get_constructor_layout($where = 'index')
     {
         global $constructor;
 
