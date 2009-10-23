@@ -341,9 +341,9 @@ if (!is_admin()) {
 				                           $constructor['content']['list']['thumb']['pos'],
 										   $constructor['content']['list']['thumb']['noimage']);
 				if (!isset($constructor['content']['list']['filter']) or !$constructor['content']['list']['filter']) {
-					the_content(__('Read the rest of this entry &raquo;', 'construtor'));
+					the_content(__('Read the rest of this entry &raquo;', 'constructor'));
 				} else {
-					$content = apply_filters('the_content', get_the_content(__('Read the rest of this entry &raquo;', 'construtor')));
+					$content = apply_filters('the_content', get_the_content(__('Read the rest of this entry &raquo;', 'constructor')));
                     $content = preg_replace('/(\<script.*\>.*\<\/script\>)/si', '', $content);
                     echo strip_tags($content, '<p><br><a><hr><i><em><b><strong><ul><ol><li>');
 				}
@@ -352,7 +352,7 @@ if (!is_admin()) {
 			    get_constructor_post_image();
 			    break;
 			default:
-                the_content(__('Read the rest of this entry &raquo;', 'construtor'));
+                the_content(__('Read the rest of this entry &raquo;', 'constructor'));
                 break;
 		 }
 	}

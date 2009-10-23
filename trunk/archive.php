@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage construtor
+ * @subpackage constructor
  */
 
 // load header.php
