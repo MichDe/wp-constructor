@@ -1,4 +1,5 @@
 #summary Listing of aviable page templates
+#labels Featured
 
 = Introduction =
 
