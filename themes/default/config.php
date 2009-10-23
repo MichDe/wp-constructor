@@ -5,7 +5,7 @@
 return array(
             "sidebar"   => 'right',          // sidebar position
             'layout'    =>  array(           // layouts styles
-            			'header'  => 140,    // header height
+                        'header'  => 140,    // header height
                         'width'   => 1024,   // container width
                         'sidebar' => 240,    // sidebar width
                         'extra'   => 240,    // extrabar  width
@@ -20,8 +20,8 @@ return array(
             "content"   => array(            // content
                         "author" => 0,       // - link to author page
                         'thumb' =>  array ('auto'   => false), // - autogenerate thumbnails
-						'list'  =>  array (                    // list layout
-						                   'filter' => false,  // - strip HTML tags
+                        'list'  =>  array (                    // list layout
+                                           'filter' => false,  // - strip HTML tags
                                            'thumb'  => array ( 'pos' => 'left', 'noimage' => false, ), // - thumbnail position and "No Image" option
                                           ),
                         ),
@@ -38,7 +38,7 @@ return array(
                         "rss"  => false,     // - link to RSS
                         "search" => true,    // - search form
                         "pages"      => array('depth'=>1),
-						"categories" => array('depth'=>1, 'group'=>1)
+                        "categories" => array('depth'=>1, 'group'=>1)
                         ),
             "slideshow" => array(            // Slideshow options
                         "flag" => 0,         // - enable/disable

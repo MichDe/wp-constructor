@@ -593,8 +593,7 @@ td {
 /*/Table*/
 /*Comments*/
 #respond {
-    clear:both;
-    margin-bottom:24px
+    clear:both
 }
 #comments {
     padding:0 8px;
@@ -622,10 +621,12 @@ td {
 .commentlist ul {
     clear:both
 }
+.commentlist ul.children{
+    margin-top:10px;
+}
 
-.commentlist li ul li { 
-    margin-right: -4px;
-    margin-left: 10px
+.commentlist li li { 
+    margin: 0 -4px 0 0
 }
 
 .commentlist li .avatar { 

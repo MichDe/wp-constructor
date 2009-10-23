@@ -484,19 +484,18 @@ fieldset{
 .alt {
     background-color: {$color_bg};
 }
-
 .thread-odd, .odd {
     background-color: {$color_bg2};
     border: 1px solid {$color_border2}
 }
+/*
 .depth-2, .depth-4 {
     border-left:3px dotted {$color_border}
 }
-
+*/
 .commentlist li .avatar {
     border-color: {$color_border2};
 }
-
 .commentlist a {
     border-bottom:1px dotted {$color_text}
 }
