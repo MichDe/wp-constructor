@@ -4,6 +4,8 @@
   # ~~Slideshow with post content (like in some _premium_ themes)~~ - 0.6.0
   # ~~Add categories to top menu (optional)~~ - 0.6.1
   # ~~Add search form to top menu (optional)~~ - 0.6.1
+  # "Header" tab -> Header font size options
+  # "Content" tab -> Show "comments closed" message option
   # Include ready to use widgets (with thumbnail's)
   # Need update localizations files
   # Cache for css.php
