@@ -7,12 +7,22 @@
 
 CSS is Cascading Style Sheets - read manual for beginners http://www.w3schools.com/css/, but you can use follows hacks w/out knowledge about CSS.
 
-*How can i remove the border around the post title?*
+*How can I remove the border around the post title?*
 {{{
 .hentry .title {
     border:0 !important;
 }
 }}}
+
+*How can I use header image as clickable logo*
+{{{
+#header h1 a{
+    display:block;
+    width:100%; /*width of logo*/
+    height:180px; /*height of logo*/
+    text-indent: -99999% !important; /*hide text of logo*/
+}
+}}} 
 
 *How do I remove/change the dotted line underneath the entry post title?*
 {{{
