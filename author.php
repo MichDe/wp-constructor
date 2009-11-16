@@ -22,8 +22,8 @@ endif;
                         <a class="feed-icon right" href="<?php echo get_author_feed_link(get_the_author_ID()) ?>" title="<?php _e("Author RSS Feed", 'constructor') ?>"><?php _e("RSS Feed", 'constructor') ?></a>
                     </h2>
                 </div>
-                <div class="entry">
-                    <div class="wp-caption alignleft" style="width: 128px">
+                <div class="entry opacity box">
+                    <div class="wp-caption alignleft persona" style="width: 128px">
                         <?php echo get_avatar(get_the_author_email(), 120)?>
                         <p class="wp-caption-text"><?php printf(__('%1$s %2$s', 'constructor'), get_the_author_firstname(), get_the_author_lastname())?></p>
                     </div>
@@ -66,9 +66,15 @@ endif;
                             <dd><?php the_author_description() ?></dd>
                         <?php endif; ?>
                     </dl>
+                    <br class="clear"/>
                 </div>
-                <h2 class="clear"><?php printf(__('Last posts by %s', 'constructor'), get_the_author_nickname()) ?></h2>
-                <div class="clear entry">
+            </div>
+            <div <?php post_class(); ?>>
+                <div class="title opacity box">
+                    <h2><?php printf(__('Last posts by %s', 'constructor'), get_the_author_nickname()); ?></h2>
+                    
+                </div>
+                <div class="entry">
 
                     <ul>
                     <!-- The Loop -->
