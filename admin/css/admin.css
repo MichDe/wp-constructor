@@ -138,6 +138,17 @@
 	font-weight:bold;
 	width:42px	
 }
+
+.constructor .quick-links h3{
+    border-bottom:1px solid #E6DB55;
+}
+.constructor .quick-links h4{
+    padding:2px 0;
+}
+.constructor .quick-links ul{
+    list-style:square;
+    list-style-position:inside;
+}
 /*Themes Tab*/
 #constr-themes div {
     cursor:pointer;

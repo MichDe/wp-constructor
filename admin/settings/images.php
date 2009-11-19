@@ -26,7 +26,8 @@
             <input type="text" name="constructor[images][body][src]" value="<?php echo $constructor['images']['body']['src']?>"/>
             <?php if ($upload) : ?><input type="file" name="constructor[images][body][src]"/><?php endif; ?>
             <?php if($constructor['images']['body']['src']) : ?>
-                (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['body']['src']; ?>"><?php _e('preview', 'constructor'); ?></a>)
+                (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['body']['src']; ?>" title="<?php _e('Preview image', 'constructor'); ?>"><?php _e('preview', 'constructor'); ?></a>, 
+                 <a href="#" class="clear-link" title="<?php _e('Remove image (only from theme)', 'constructor'); ?>"><?php _e('clear', 'constructor'); ?></a>)
             <?php endif; ?>
         </td>
     </tr>
@@ -71,7 +72,8 @@
             <input type="text" name="constructor[images][wrap][src]" value="<?php echo $constructor['images']['wrap']['src']?>"/>
             <?php if ($upload) : ?><input type="file" name="constructor[images][wrap][src]"/><?php endif; ?>
             <?php if($constructor['images']['wrap']['src']) : ?>
-                (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['wrap']['src']; ?>"><?php _e('preview', 'constructor'); ?></a>)
+                (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['wrap']['src']; ?>" title="<?php _e('Preview image', 'constructor'); ?>"><?php _e('preview', 'constructor'); ?></a>, 
+                 <a href="#" class="clear-link" title="<?php _e('Remove image (only from theme)', 'constructor'); ?>"><?php _e('clear', 'constructor'); ?></a>)
             <?php endif; ?>
         </td>
     </tr>
@@ -117,7 +119,8 @@
             <input type="text" name="constructor[images][wrapper][src]" value="<?php echo $constructor['images']['wrapper']['src']?>"/>
             <?php if ($upload) : ?><input type="file" name="constructor[images][wrapper][src]"/><?php endif; ?>
             <?php if($constructor['images']['wrapper']['src']) : ?>
-                (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['wrapper']['src']; ?>"><?php _e('preview', 'constructor'); ?></a>)
+                (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['wrapper']['src']; ?>" title="<?php _e('Preview image', 'constructor'); ?>"><?php _e('preview', 'constructor'); ?></a>, 
+                 <a href="#" class="clear-link" title="<?php _e('Remove image (only from theme)', 'constructor'); ?>"><?php _e('clear', 'constructor'); ?></a>)
             <?php endif; ?>
         </td>
     </tr>
@@ -156,7 +159,8 @@
             <input type="text" name="constructor[images][sidebar][src]" value="<?php echo $constructor['images']['sidebar']['src']?>"/>
             <?php if ($upload) : ?><input type="file" name="constructor[images][sidebar][src]"/><?php endif; ?>
             <?php if($constructor['images']['sidebar']['src']) : ?>
-                (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['sidebar']['src']; ?>"><?php _e('preview', 'constructor'); ?></a>)
+                (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['sidebar']['src']; ?>" title="<?php _e('Preview image', 'constructor'); ?>"><?php _e('preview', 'constructor'); ?></a>, 
+                 <a href="#" class="clear-link" title="<?php _e('Remove image (only from theme)', 'constructor'); ?>"><?php _e('clear', 'constructor'); ?></a>)
             <?php endif; ?>
         </td>
     </tr>
@@ -195,7 +199,8 @@
             <input type="text" name="constructor[images][extrabar][src]" value="<?php echo $constructor['images']['extrabar']['src']?>"/>
             <?php if ($upload) : ?><input type="file" name="constructor[images][extrabar][src]"/><?php endif; ?>
             <?php if($constructor['images']['extrabar']['src']) : ?>
-                (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['extrabar']['src']; ?>"><?php _e('preview', 'constructor'); ?></a>)
+                (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['extrabar']['src']; ?>" title="<?php _e('Preview image', 'constructor'); ?>"><?php _e('preview', 'constructor'); ?></a>, 
+                 <a href="#" class="clear-link" title="<?php _e('Remove image (only from theme)', 'constructor'); ?>"><?php _e('clear', 'constructor'); ?></a>)
             <?php endif; ?>
         </td>
     </tr>
@@ -234,7 +239,8 @@
             <input type="text" name="constructor[images][footer][src]" value="<?php echo $constructor['images']['footer']['src']?>"/>
             <?php if ($upload) : ?><input type="file" name="constructor[images][footer][src]"/><?php endif; ?>
             <?php if($constructor['images']['footer']['src']) : ?>
-                (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['footer']['src']; ?>"><?php _e('preview', 'constructor'); ?></a>)
+                (<a class="thickbox" href="<?php echo $directory_uri .'/'.$constructor['images']['footer']['src']; ?>" title="<?php _e('Preview image', 'constructor'); ?>"><?php _e('preview', 'constructor'); ?></a>, 
+                 <a href="#" class="clear-link" title="<?php _e('Remove image (only from theme)', 'constructor'); ?>"><?php _e('clear', 'constructor'); ?></a>)
             <?php endif; ?>
         </td>
     </tr>

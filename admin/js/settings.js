@@ -25,6 +25,12 @@ $(document).ready(function(){
 	
     // Admin Tabs
     $('#tabs').tabs({ fxFade: true, fxSpeed: 'fast' });
+    
+    // Clear input fields values
+    $('.clear-link').click(function(){
+       $(this).parent().find('input').val('');
+       return false;
+    });
 
 });
 })(jQuery);
