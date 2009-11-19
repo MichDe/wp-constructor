@@ -36,13 +36,10 @@ if (version_compare(phpversion(), '5.0.0', '<')) {
  */
 function constructor_theme_page_add()
 {
-    // receive "function.php" by default
-    global $page;
-    
     session_start();
     $directory = get_template_directory();
     
-    if ( isset( $_GET['page'] ) && $_GET['page'] == $page ) {
+    if ( isset( $_GET['page'] ) && $_GET['page'] == "functions.php" ) {
         if ( isset( $_REQUEST['action'] ) && 'save' == $_REQUEST['action'] ) {
             check_admin_referer('constructor');
             if (isset($_REQUEST['constructor'])) {
