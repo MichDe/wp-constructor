@@ -495,6 +495,5 @@ if (!is_admin()) {
 	}
 
 } else {
-    $page = basename(__FILE__);
     require_once 'admin/settings.php';
 }
