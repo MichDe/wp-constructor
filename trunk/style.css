@@ -435,7 +435,7 @@ div.aligncenter {
     border:0 !important;
 }
 
-.tile .thumb {
+.tile .thumbnail {
     z-index:0;
     position:absolute;
     top:2px;

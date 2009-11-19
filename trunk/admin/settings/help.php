@@ -34,15 +34,29 @@
 		    <li><a href="http://code.google.com/p/wp-constructor/issues/list">Constructor Issues</a></li> 
 		</ul>
 	</td>
-	<td valign="top" class="updated">
+	<td valign="top" class="updated quick-links">
         <h3><?php _e('Donate', 'constructor'); ?></h3>
+        <h4>PayPal</h4>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="9824022">
+            <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" style="border:0;" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypal.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        
+        <h4>WebMoney</h4>
         <ul>
         	<li>WME: <tt>E119370261590</tt></li>
 			<li>WMZ: <tt>Z454864056905</tt></li>
 			<li>WMU: <tt>U278559603576</tt></li>
 			<li>WMR: <tt>R258034622442</tt></li>
-			<li>Yandex.Money: <a href="https://money.yandex.ru/donate.xml?to=41001362542875" rel="nofollow">41001362542875</a> </li>
 		</ul>
+		
+		<h4>Yandex.Money</h4>
+        <ul>
+			<li><a href="https://money.yandex.ru/donate.xml?to=41001362542875" rel="nofollow">41001362542875</a> </li>
+		</ul>
+		
 		
 		<h3><?php _e('Author works', 'constructor'); ?></h3>
 
