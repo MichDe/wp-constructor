@@ -36,132 +36,137 @@ if (version_compare(phpversion(), '5.0.0', '<')) {
  */
 function constructor_theme_page_add()
 {
+    // receive "function.php" by default
+    global $page;
+    
     session_start();
     $directory = get_template_directory();
-
-    if ( isset( $_REQUEST['action'] ) && 'save' == $_REQUEST['action'] ) {
-        check_admin_referer('constructor');
-        if (isset($_REQUEST['constructor'])) {
-
-            $files = $_FILES['constructor'];
-            $data  = $_REQUEST['constructor'];
-			
-            if (isset ($data['theme-reload']) && $data['theme-reload'] != 0) {
-                // loading theme and forgot all changes
-                $theme = $data['theme'];
-                $data  = require $directory.'/themes/'.$theme.'/config.php';
-                $data['theme'] = $theme;
-            } else {
-            	global $blog_id;
-				// is MU WP
-				if ($blog_id && $blog_id != 1) {
-					$upload = $directory.'/images/'.$blog_id.'/';
-					$path   = 'images/'.$blog_id.'/';
-					
-					if (!is_dir($upload)) {
-						if (!@mkdir($upload)) {
-							$errors[] = sprintf(__('System can\'t create "%s" directory','constructor'), $upload);
-						}
-					}
-				} else {
-					$upload = $directory.'/images/';
-					$path   = 'images/';
-				}
-
-                if ($files && is_writable($upload)) {
-
-                    $errors = array();
-                    foreach ($files['name']['images'] as $name => $image) {
-                        if (isset($image['src']) && is_uploaded_file($files['tmp_name']['images'][$name]['src'])) {
-
-                            if (!preg_match('/\.(jpe?g|png|gif)$/i', $image['src'])) {
-                                $errors[] = sprintf(__('File "%s" is not a image (jpeg, png, gif)','constructor'), $image['src']);
-                                continue;
-                            }
-
-                            if (move_uploaded_file($files['tmp_name']['images'][$name]['src'], $upload . $image['src'])) {
-                                $data['images'][$name]['src'] = $path.$image['src'];
+    
+    if ( isset( $_GET['page'] ) && $_GET['page'] == $page ) {
+        if ( isset( $_REQUEST['action'] ) && 'save' == $_REQUEST['action'] ) {
+            check_admin_referer('constructor');
+            if (isset($_REQUEST['constructor'])) {
+    
+                $files = $_FILES['constructor'];
+                $data  = $_REQUEST['constructor'];
+    			
+                if (isset ($data['theme-reload']) && $data['theme-reload'] != 0) {
+                    // loading theme and forgot all changes
+                    $theme = $data['theme'];
+                    $data  = require $directory.'/themes/'.$theme.'/config.php';
+                    $data['theme'] = $theme;
+                } else {
+                	global $blog_id;
+    				// is MU WP
+    				if ($blog_id && $blog_id != 1) {
+    					$upload = $directory.'/images/'.$blog_id.'/';
+    					$path   = 'images/'.$blog_id.'/';
+    					
+    					if (!is_dir($upload)) {
+    						if (!@mkdir($upload)) {
+    							$errors[] = sprintf(__('System can\'t create "%s" directory','constructor'), $upload);
+    						}
+    					}
+    				} else {
+    					$upload = $directory.'/images/';
+    					$path   = 'images/';
+    				}
+    
+                    if ($files && is_writable($upload)) {
+    
+                        $errors = array();
+                        foreach ($files['name']['images'] as $name => $image) {
+                            if (isset($image['src']) && is_uploaded_file($files['tmp_name']['images'][$name]['src'])) {
+    
+                                if (!preg_match('/\.(jpe?g|png|gif)$/i', $image['src'])) {
+                                    $errors[] = sprintf(__('File "%s" is not a image (jpeg, png, gif)','constructor'), $image['src']);
+                                    continue;
+                                }
+    
+                                if (move_uploaded_file($files['tmp_name']['images'][$name]['src'], $upload . $image['src'])) {
+                                    $data['images'][$name]['src'] = $path.$image['src'];
+                                }
                             }
                         }
+                        $_SESSION['constructor-errors'] = $errors;
                     }
-                    $_SESSION['constructor-errors'] = $errors;
+                    /**
+                     * Shadow
+                     */
+                    if (isset($data['shadow'])) $data['shadow'] = true;
+    
+                    /**
+                     * CSS changes
+                     */
+                    if (isset($data['css']) && is_writable($directory.'/themes/'.$data['theme'].'/style.css')) {
+                        file_put_contents($directory.'/themes/'.$data['theme'].'/style.css', $data['css']);
+                        unset($data['css']);
+                    }
+    
+                    /**
+                     * Slideshow
+                     */
+                    $data['slideshow']['id']        = (int)$data['slideshow']['id'];
+                    $data['slideshow']['showposts'] = (int)$data['slideshow']['showposts'];
+    
+                    /**
+                     * Flags changes
+                     * @todo Need check follows code
+                     */
+    				/*
+    			    $arr_false = array_keys(array_diff_key($constructor, $data));
+    			    $arr_false = array_fill_keys($arr_false, false);
+    			    $data      = array_merge($constructor, $arr_false);
+    				*/
+                    $data['menu']['flag']   = isset($data['menu']['flag'])?true:false;
+                    $data['menu']['home']   = isset($data['menu']['home'])?true:false;
+                    $data['menu']['rss']    = isset($data['menu']['rss'])?true:false;
+                    $data['menu']['search'] = isset($data['menu']['search'])?true:false;
+    				
+    				$data['content']['author'] = isset($data['content']['author'])?true:false;
+                    $data['content']['thumb']['auto'] = isset($data['content']['thumb']['auto'])?true:false;
+    				
+                    $data['content']['list']['filter'] = isset($data['content']['list']['filter'])?true:false;
+    				$data['content']['list']['thumb']['noimage'] = isset($data['content']['list']['thumb']['noimage'])?true:false;
+    				
+                    $data['shadow'] = isset($data['shadow'])?true:false;
+    				
+    				$data['images']['body']['fixed'] = isset($data['images']['body']['fixed'])?true:false;
+                    $data['images']['wrap']['fixed'] = isset($data['images']['wrap']['fixed'])?true:false;
+    				
+                    $data['slideshow']['flag']     = isset($data['slideshow']['flag'])?true:false;
+                    $data['slideshow']['onpage']   = isset($data['slideshow']['onpage'])?true:false;
+    				$data['slideshow']['onsingle'] = isset($data['slideshow']['onsingle'])?true:false;
+    
+                    /**
+                     * Merge Configuration
+                     */
+                    $constructor = get_option('constructor') or $constructor = array();
+                    $data = array_merge($constructor, $data);
                 }
-                /**
-                 * Shadow
-                 */
-                if (isset($data['shadow'])) $data['shadow'] = true;
-
-                /**
-                 * CSS changes
-                 */
-                if (isset($data['css']) && is_writable($directory.'/themes/'.$data['theme'].'/style.css')) {
-                    file_put_contents($directory.'/themes/'.$data['theme'].'/style.css', $data['css']);
-                    unset($data['css']);
-                }
-
-                /**
-                 * Slideshow
-                 */
-                $data['slideshow']['id']        = (int)$data['slideshow']['id'];
-                $data['slideshow']['showposts'] = (int)$data['slideshow']['showposts'];
-
-                /**
-                 * Flags changes
-                 * @todo Need check follows code
-                 */
-				/*
-			    $arr_false = array_keys(array_diff_key($constructor, $data));
-			    $arr_false = array_fill_keys($arr_false, false);
-			    $data      = array_merge($constructor, $arr_false);
-				*/
-                $data['menu']['flag']   = isset($data['menu']['flag'])?true:false;
-                $data['menu']['home']   = isset($data['menu']['home'])?true:false;
-                $data['menu']['rss']    = isset($data['menu']['rss'])?true:false;
-                $data['menu']['search'] = isset($data['menu']['search'])?true:false;
-				
-				$data['content']['author'] = isset($data['content']['author'])?true:false;
-                $data['content']['thumb']['auto'] = isset($data['content']['thumb']['auto'])?true:false;
-				
-                $data['content']['list']['filter'] = isset($data['content']['list']['filter'])?true:false;
-				$data['content']['list']['thumb']['noimage'] = isset($data['content']['list']['thumb']['noimage'])?true:false;
-				
-                $data['shadow'] = isset($data['shadow'])?true:false;
-				
-				$data['images']['body']['fixed'] = isset($data['images']['body']['fixed'])?true:false;
-                $data['images']['wrap']['fixed'] = isset($data['images']['wrap']['fixed'])?true:false;
-				
-                $data['slideshow']['flag']     = isset($data['slideshow']['flag'])?true:false;
-                $data['slideshow']['onpage']   = isset($data['slideshow']['onpage'])?true:false;
-				$data['slideshow']['onsingle'] = isset($data['slideshow']['onsingle'])?true:false;
-
-                /**
-                 * Merge Configuration
-                 */
-                $constructor = get_option('constructor') or $constructor = array();
-                $data = array_merge($constructor, $data);
+                
+                // show text message
+                update_option('constructor', $data);
+            } 
+            wp_redirect("themes.php?page=functions.php&saved=true");
+            die;
+        } elseif (isset( $_REQUEST['action'] ) && 'export' == $_REQUEST['action']) {
+            $constructor = get_option('constructor');
+            if (!$constructor) {
+                $constructor = require $directory.'/themes/default/config.php';
             }
-            
-            // show text message
-            update_option('constructor', $data);
-        } 
-        wp_redirect("themes.php?page=functions.php&saved=true");
-        die;
-    } elseif (isset( $_REQUEST['action'] ) && 'export' == $_REQUEST['action']) {
-        $constructor = get_option('constructor');
-        if (!$constructor) {
-            $constructor = require $directory.'/themes/default/config.php';
+            unset($constructor['theme']); // forgot theme name
+    
+            header('Content-Type: text/plain');
+            header('Content-Disposition: attachment; filename="config.php"');
+    
+            echo "<?php \n";
+            echo "/* Export on ".date('Y-m-d H:i')." */ \n";
+            echo "return ";
+            var_export($constructor);
+            echo "\n ?>";
+            die;
         }
-        unset($constructor['theme']); // forgot theme name
-
-        header('Content-Type: text/plain');
-        header('Content-Disposition: attachment; filename="config.php"');
-
-        echo "<?php \n";
-        echo "/* Export on ".date('Y-m-d H:i')." */ \n";
-        echo "return ";
-        var_export($constructor);
-        echo "\n ?>";
-        die;
     }
     add_theme_page(__('Customize Theme', 'constructor'), __('Customize', 'constructor'), 'edit_themes', 'functions.php', 'constructor_theme_page');
 }
