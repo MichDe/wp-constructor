@@ -239,7 +239,7 @@ $fonts_body = $fonts[$constructor['fonts']['body']];
 
 /* Background images */
 if (isset($constructor['images']['body']['src']) && !empty($constructor['images']['body']['src'])) {
-    $body_bg = "background-image: url({$template_uri}/{$constructor['images']['body']['src']});\n"
+    $body_bg = "background-image: url('{$template_uri}/{$constructor['images']['body']['src']}');\n"
               ."background-repeat: {$constructor['images']['body']['repeat']};\n"
               ."background-position: {$constructor['images']['body']['pos']};\n";
 	if (isset($constructor['images']['body']['fixed']) && $constructor['images']['body']['fixed']) {
@@ -248,7 +248,7 @@ if (isset($constructor['images']['body']['src']) && !empty($constructor['images'
 } else { $body_bg = null; }
 
 if (isset($constructor['images']['wrap']['src']) && !empty($constructor['images']['wrap']['src'])) {
-    $wrap_bg = "background-image: url({$template_uri}/{$constructor['images']['wrap']['src']});\n"
+    $wrap_bg = "background-image: url('{$template_uri}/{$constructor['images']['wrap']['src']}');\n"
               ."background-repeat: {$constructor['images']['wrap']['repeat']};\n"
               ."background-position: {$constructor['images']['wrap']['pos']};\n";
     if (isset($constructor['images']['wrap']['fixed']) && $constructor['images']['wrap']['fixed']) {
@@ -257,25 +257,25 @@ if (isset($constructor['images']['wrap']['src']) && !empty($constructor['images'
 } else { $wrap_bg = null; }
 
 if (isset($constructor['images']['wrapper']['src']) && !empty($constructor['images']['wrapper']['src'])) {
-    $wrapper_bg = "background-image: url({$template_uri}/{$constructor['images']['wrapper']['src']});\n"
+    $wrapper_bg = "background-image: url('{$template_uri}/{$constructor['images']['wrapper']['src']}');\n"
 	             ."background-repeat: {$constructor['images']['wrapper']['repeat']};\n"
 	             ."background-position: {$constructor['images']['wrapper']['pos']};\n";
 } else { $wrapper_bg = null; }
 
 if (isset($constructor['images']['sidebar']['src']) && !empty($constructor['images']['sidebar']['src'])) {
-    $sidebar_bg = "background-image: url({$template_uri}/{$constructor['images']['sidebar']['src']});\n"
+    $sidebar_bg = "background-image: url('{$template_uri}/{$constructor['images']['sidebar']['src']}');\n"
               ."background-repeat: {$constructor['images']['sidebar']['repeat']};\n"
               ."background-position: {$constructor['images']['sidebar']['pos']};\n";
 } else { $sidebar_bg = null; }
 
 if (isset($constructor['images']['extrabar']['src']) && !empty($constructor['images']['extrabar']['src'])) {
-    $extrabar_bg = "background-image: url({$template_uri}/{$constructor['images']['extrabar']['src']});\n"
+    $extrabar_bg = "background-image: url('{$template_uri}/{$constructor['images']['extrabar']['src']}');\n"
               ."background-repeat: {$constructor['images']['extrabar']['repeat']};\n"
               ."background-position: {$constructor['images']['extrabar']['pos']};\n";
 } else { $extrabar_bg = null; }
 
 if (isset($constructor['images']['footer']['src']) && !empty($constructor['images']['footer']['src'])) {
-    $footer_bg = "background-image: url({$template_uri}/{$constructor['images']['footer']['src']});\n"
+    $footer_bg = "background-image: url('{$template_uri}/{$constructor['images']['footer']['src']}');\n"
               ."background-repeat: {$constructor['images']['footer']['repeat']};\n"
               ."background-position: {$constructor['images']['footer']['pos']};\n";
 } else { $footer_bg = null; }
