@@ -3,6 +3,11 @@
  * @package WordPress
  * @subpackage Constructor
  * 
+ * Don't work preview on admin page?
+ * Read issue 11006 for more details
+ * 
+ * @see      http://core.trac.wordpress.org/ticket/11006
+ * 
  * @author   Anton Shevchuk <AntonShevchuk@gmail.com>
  * @link     http://anton.shevchuk.name
  */
