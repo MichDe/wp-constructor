@@ -38,10 +38,14 @@
         <h3><?php _e('Donate', 'constructor'); ?></h3>
         <h4>PayPal</h4>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="9824022">
-            <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" style="border:0;" alt="PayPal - The safer, easier way to pay online!">
-            <img alt="" border="0" src="https://www.paypal.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
+            <input type="hidden" name="cmd" value="_donations">
+            <input type="hidden" name="business" value="mxleod@yahoo.com">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="item_name" value="Wordpress Constructor Theme">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+            <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" style="border:0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
         </form>
         
         <h4>WebMoney</h4>

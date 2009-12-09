@@ -15,7 +15,7 @@
 </p>
 <p>
 	<?php _e('Create <code>style.css</code> with follow text (change text in UPPERCASE)', 'constructor');?><br/>
-	<code>
+	<code style="display:block;">
 /*<br/>
 Theme Name: MY THEME<br/>
 Theme URI: http://MY.THEME.COM/<br/>

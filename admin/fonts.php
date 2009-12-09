@@ -1,4 +1,8 @@
 <?php
+/**
+ * @package WordPress
+ * @subpackage Constructor
+ */
 return array(
     // sans-serif
     'Arial,Helvetica, sans-serif',

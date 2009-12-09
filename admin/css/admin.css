@@ -149,6 +149,16 @@
     list-style:square;
     list-style-position:inside;
 }
+/*Donate*/
+.donate {
+    position:relative;
+}
+.donate .close {
+    position:absolute;
+    right:4px;
+    top:4px;
+}
+
 /*Themes Tab*/
 #constr-themes div {
     cursor:pointer;

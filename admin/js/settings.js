@@ -32,6 +32,23 @@ $(document).ready(function(){
        return false;
     });
 
+    $('.donate .close').hover(function(){
+        $(this).find('.ui-icon')
+            //.removeClass('ui-icon-close')
+            .addClass('ui-icon-closethick')
+            ;
+    },function(){
+        $(this).find('.ui-icon')
+            .removeClass('ui-icon-closethick')
+            //.addClass('ui-icon-close')
+            ;
+    })
+    .click(function(){
+        // @todo: not sure to correct way
+        $.get('themes.php?page=functions.php&theme-constructor-admin=donate');
+        $(this).parent('#message').remove();
+        return false;
+    });
 });
 })(jQuery);
 
