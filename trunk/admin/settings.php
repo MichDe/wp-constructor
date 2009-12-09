@@ -31,6 +31,38 @@ if (version_compare(phpversion(), '5.0.0', '<')) {
     require_once 'compatibility.php';
 }
 
+
+/**
+ * Parse request
+ *
+ * @param unknown_type $wp
+ */
+function constructor_admin_parse_request($wp) {
+    // only process requests with "my-plugin=ajax-handler"
+    if (array_key_exists('theme-constructor-admin', $wp->query_vars)){
+        switch ($wp->query_vars['theme-constructor-admin']) {
+        	case 'donate':
+				require_once 'ajax/donate.php';
+				break;
+		}
+		// die after return data
+        die();
+    }
+}
+add_action('wp', 'constructor_admin_parse_request');
+    
+/**
+ * register query vars
+ *
+ * @param array $vars
+ * @return array
+ */
+function constructor_admin_query_vars($vars) {
+    $vars[] = 'theme-constructor-admin';
+    return $vars;
+}
+add_filter('query_vars', 'constructor_admin_query_vars');
+
 /**
  * Add configuration page
  */
@@ -176,12 +208,28 @@ function constructor_theme_page_add()
 function constructor_theme_page()
 {
     $constructor   = get_option('constructor');
+    $admin         = get_option('constructor_admin');
     $directory     = get_template_directory();
     $directory_uri = get_template_directory_uri();
+
+    $donate = '<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_donations">
+            <input type="hidden" name="business" value="mxleod@yahoo.com">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="item_name" value="Wordpress Constructor Theme">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+            <input type="submit" name="Submit" class="button-primary" value="Donate" />
+            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>';
 
     if (!$constructor) {
         $constructor = require $directory.'/themes/default/config.php';
         $constructor['theme'] = 'default';
+    }
+    
+    if (!$admin) {
+        $admin['donate'] = true;
     }
 
     // modules list - change list manualy only
@@ -204,8 +252,15 @@ function constructor_theme_page()
 
     <div class='wrap'>
        <h2><?php _e('Customize Theme', 'constructor'); ?></h2>
-       <?php if ( isset( $_REQUEST['saved'] ) ) echo '<div id="message" class="updated fade"><p><strong>'.__('Options saved.').'</strong></p></div>'; ?>
        <?php
+       if ( $admin['donate'] ) {
+           echo '<div id="message" class="updated fade donate"><p>'.__('If you like this theme and find it useful, help keep this theme free and actively developed by clicking the donate button (via PayPal or CC)').$donate.'</p><a href="#" class="close" title=":("><span class="ui-icon ui-icon-close"/></a></div>';
+       }
+       
+       if ( isset( $_REQUEST['saved'] ) ) {
+           echo '<div id="message" class="updated fade"><p><strong>'.__('Options saved.').'</strong></p></div>';
+       }
+       
        if ( isset( $_SESSION['constructor-errors']) && !empty ($_SESSION['constructor-errors'])) {
            echo '<div id="errors" class="error fade">';
            echo '<p><strong>'.__('Errors', 'constructor').'</strong></p>';
