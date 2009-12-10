@@ -87,6 +87,18 @@ if (!is_admin()) {
     add_action('wp', 'constructor_parse_request');
     
     /**
+     * register query vars
+     *
+     * @param array $vars
+     * @return array
+     */
+    function constructor_query_vars($vars) {
+        $vars[] = 'theme-constructor';
+        return $vars;
+    }
+    add_filter('query_vars', 'constructor_query_vars');
+    
+    /**
      * Preview filter
      *
      * @param string $content
@@ -99,18 +111,6 @@ if (!is_admin()) {
     }
     
     add_filter('preview_theme_ob_filter', 'constructor_preview');
-    
-    /**
-     * register query vars
-     *
-     * @param array $vars
-     * @return array
-     */
-    function constructor_query_vars($vars) {
-        $vars[] = 'theme-constructor';
-        return $vars;
-    }
-    add_filter('query_vars', 'constructor_query_vars');
 	
     wp_enqueue_style( 'constructor-custom-style', get_option('home').'/?theme-constructor=css');
     

@@ -79,7 +79,8 @@
 		
 		<h4>jQuery</h4>
 		<ul>
-		    <li><a href="http://slideshow.hohli.com/">(a)Slideshow jQuery Plugin</a></li>
+		    <li><a href="http://slideshow.hohli.com/">(a) Slideshow jQuery Plugin</a></li>
+		    <li><a href="http://sexy.hohli.com/">(a) Sexy images jQuery Plugin</a></li>
 		    <li><a href="http://iphone.hohli.com/">iPhone jQuery UI</a></li>
 		    <li><a href="http://jquery.hohli.com/">jQuery-PHP library</a></li>
 		</ul>

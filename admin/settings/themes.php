@@ -34,7 +34,7 @@ foreach ($themes as $theme) :
           $data = get_theme_data($directory.'/themes/'.$theme.'/style.css');
 
           if (file_exists($directory.'/themes/'.$theme.'/screenshot.png')) {
-              $img = $directory_uri .'/themes/'.$theme.'/screenshot.png';
+              $img = $template_uri .'/themes/'.$theme.'/screenshot.png';
           }
       } else {
           $data = array(
