@@ -90,7 +90,7 @@
     color:#333;
 }
 
-.constructor textarea {
+.constructor textarea.big {
     width:100%;
     height:600px;
     border:2px solid #ccc;
@@ -153,7 +153,25 @@
 .donate {
     position:relative;
 }
-.donate .close {
+.donate-button {
+    float:left;
+    margin:8px;
+}
+.donate p {
+    height:20px;
+    line-height:24px;
+}
+/*Message*/
+#message {
+    position:relative;
+}
+
+#message .ui-icon {
+    margin-right: 4px;
+}
+
+/*Close button*/
+.message-close{
     position:absolute;
     right:4px;
     top:4px;

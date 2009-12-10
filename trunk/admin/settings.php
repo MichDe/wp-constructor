@@ -4,9 +4,13 @@
  * @subpackage Constructor
  */
 
-add_action('admin_menu', 'constructor_theme_page_add');
+/**
+ * @see functions.php
+ * @var $template_uri
+ */
 
-$directory_uri = get_template_directory_uri();
+
+add_action('admin_menu', 'constructor_theme_page_add');
 
 wp_enqueue_script('thickbox');
 
@@ -14,54 +18,25 @@ if (version_compare($wp_version, '2.8', '<')) {
     wp_deregister_script('jquery');
     wp_deregister_script('jquery-ui');
     
-    wp_enqueue_script('jquery',                  $directory_uri .'/admin/js/jquery.js');
+    wp_enqueue_script('jquery',                  $template_uri .'/admin/js/jquery.js');
 }
 
-wp_enqueue_script('jquery-ui',               $directory_uri .'/admin/js/jquery-ui.js', 'jquery');
+wp_enqueue_script('jquery-ui',               $template_uri .'/admin/js/jquery-ui.js', 'jquery');
     
-wp_enqueue_script('constructor-colorpicker', $directory_uri .'/admin/js/colorpicker.js', 'jquery');
-wp_enqueue_script('constructor-settings',    $directory_uri .'/admin/js/settings.js', 'jquery');
+wp_enqueue_script('constructor-colorpicker', $template_uri .'/admin/js/colorpicker.js', 'jquery');
+wp_enqueue_script('constructor-settings',    $template_uri .'/admin/js/settings.js', 'jquery');
+wp_enqueue_script('constructor-messages',    $template_uri .'/admin/js/messages.js', 'jquery');
 
 wp_enqueue_style('thickbox');
-wp_enqueue_style('constructor-admin',       $directory_uri .'/admin/css/admin.css');
-wp_enqueue_style('constructor-colorpicker', $directory_uri .'/admin/css/colorpicker.css');
-wp_enqueue_style('jquery.ui',               $directory_uri .'/admin/css/jquery-ui.css');
+wp_enqueue_style('constructor-admin',       $template_uri .'/admin/css/admin.css');
+wp_enqueue_style('constructor-colorpicker', $template_uri .'/admin/css/colorpicker.css');
+wp_enqueue_style('jquery.ui',               $template_uri .'/admin/css/jquery-ui.css');
 
 if (version_compare(phpversion(), '5.0.0', '<')) {
     require_once 'compatibility.php';
 }
 
-
-/**
- * Parse request
- *
- * @param unknown_type $wp
- */
-function constructor_admin_parse_request($wp) {
-    // only process requests with "my-plugin=ajax-handler"
-    if (array_key_exists('theme-constructor-admin', $wp->query_vars)){
-        switch ($wp->query_vars['theme-constructor-admin']) {
-        	case 'donate':
-				require_once 'ajax/donate.php';
-				break;
-		}
-		// die after return data
-        die();
-    }
-}
-add_action('wp', 'constructor_admin_parse_request');
-    
-/**
- * register query vars
- *
- * @param array $vars
- * @return array
- */
-function constructor_admin_query_vars($vars) {
-    $vars[] = 'theme-constructor-admin';
-    return $vars;
-}
-add_filter('query_vars', 'constructor_admin_query_vars');
+require_once 'ajax.php';
 
 /**
  * Add configuration page
@@ -207,11 +182,11 @@ function constructor_theme_page_add()
  */
 function constructor_theme_page()
 {
+    global $template_uri;
     $constructor   = get_option('constructor');
     $admin         = get_option('constructor_admin');
     $directory     = get_template_directory();
-    $directory_uri = get_template_directory_uri();
-
+    
     $donate = '<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
             <input type="hidden" name="cmd" value="_donations">
             <input type="hidden" name="business" value="mxleod@yahoo.com">
@@ -245,6 +220,7 @@ function constructor_theme_page()
                 'css',
                 'images',
                 'slideshow',
+                'save',
                 'export',
 				'help'
                 );
@@ -254,7 +230,7 @@ function constructor_theme_page()
        <h2><?php _e('Customize Theme', 'constructor'); ?></h2>
        <?php
        if ( $admin['donate'] ) {
-           echo '<div id="message" class="updated fade donate"><p>'.__('If you like this theme and find it useful, help keep this theme free and actively developed by clicking the donate button (via PayPal or CC)').$donate.'</p><a href="#" class="close" title=":("><span class="ui-icon ui-icon-close"/></a></div>';
+           echo '<div id="message" class="updated fade donate"><div class="donate-button">'.$donate.'</div><p>'.__('If you like this theme and find it useful, help keep this theme free and actively developed by clicking the donate button (via PayPal or CC)').'</p><a href="'.get_bloginfo('wpurl').'/wp-admin/admin-ajax.php" class="message-close" title=":("><span class="ui-icon ui-icon-close"/></a><br class="clear"/></div>';
        }
        
        if ( isset( $_REQUEST['saved'] ) ) {

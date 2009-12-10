@@ -1,4 +1,5 @@
 (function($){
+   
 $(document).ready(function(){
 	// Select based on images
     $('.constructor .select a').click(function(){
@@ -32,7 +33,8 @@ $(document).ready(function(){
        return false;
     });
 
-    $('.donate .close').hover(function(){
+    // Donate close button
+    $('.donate .message-close').hover(function(){
         $(this).find('.ui-icon')
             //.removeClass('ui-icon-close')
             .addClass('ui-icon-closethick')
@@ -45,8 +47,35 @@ $(document).ready(function(){
     })
     .click(function(){
         // @todo: not sure to correct way
-        $.get('themes.php?page=functions.php&theme-constructor-admin=donate');
+        $.post($(this).attr("href"), {
+            action: "constructor_admin_donate"
+          }
+        );
         $(this).parent('#message').remove();
+        return false;
+    });
+    
+    // Save button
+    $('#save-link').click(function(){
+        // @todo hardcode object
+        var data = {
+            action: "constructor_admin_save",
+            'theme':$('#save-theme-name').val(),
+            'theme-uri':$('#save-theme-uri').val(),
+            'description':$('#save-description').val(),
+            'version':$('#save-version').val(),
+            'author':$('#save-author').val(),
+            'author-uri':$('#save-author-uri').val()
+        };
+        
+        $.post($(this).attr("href"), data, function(response){
+            console.log(response);
+            if (response.status == 'ok') {                
+                Messages.addNotice(response.message, null);
+            } else {
+                Messages.addWarning(response.message, null);
+            }
+        },"json");
         return false;
     });
 });
