@@ -2,7 +2,7 @@
 Theme Name: Constructor
 Theme URI: http://code.google.com/p/wp-constructor/
 Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.7+ (include 2.8)
-Version: 0.6.7
+Version: 0.6.8
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -159,6 +159,11 @@ div.aligncenter {
 	    padding:0 8px;
 	}
 
+*+html #header {
+    position:relative;
+    z-index:300;
+}
+
 #header-slideshow {
     padding:2px;
     margin: 0;
@@ -167,7 +172,7 @@ div.aligncenter {
 #header-links {
     margin: 0 0 6px 0;
     padding: 0 10px;
-    z-index:300;
+    z-index:301;
     overflow:visible !important;
     -moz-border-radius: 0 0 6px 6px;
     -webkit-border-bottom-left-radius: 6px;
@@ -192,8 +197,8 @@ div.aligncenter {
     border-width:0 0 0 1px;
 }
 #header-links li {
-    position:relative;
     float: left;
+    position:relative;
     border-style:none dotted none none;
     border-width:0 1px 0 0;
     height:40px;
@@ -209,7 +214,7 @@ div.aligncenter {
 	#header-links li li:hover.indicator { background-position: 98%  -49px }
 
 #header-links ul ul {
-    z-index:301;
+    z-index:302;
     position:absolute;
 	display:none;
 	height:auto;
@@ -221,7 +226,7 @@ div.aligncenter {
     border-width:1px 0 0 0;
 }
 #header-links ul ul ul {
-    z-index:302;
+    z-index:303;
     top:10px;
     left: 98%;
 }
@@ -234,6 +239,7 @@ div.aligncenter {
 * html #header-links li li {
     width:120px
 }
+
 #header-links li a,
 #header-links li span{
     text-align:center;
@@ -542,7 +548,7 @@ div.aligncenter {
 	height: 30px;
 	font-size: 24px;
 	padding-left:28px;
-	width: 98px;
+	width: 96px;
     background-image: url(images/lens.png);
 	background-position: 4px 8px;
 	background-repeat: no-repeat;
