@@ -45,7 +45,9 @@ function constructor_admin_save() {
             
             if ($old_image != $new_image) {
                 // we are already check directory permissions
-                copy($old_image, $new_image);
+                if (!@copy($old_image, $new_image)) {
+                     returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), $old_image));
+                }
                 
                 $constructor['images'][$img]['src'] = 'themes/'. $theme_new .'/'. $file['basename'];
             }
@@ -55,9 +57,13 @@ function constructor_admin_save() {
     // copy default screenshot (if not exist)
     if (!file_exists($directory.'/themes/'.$theme_new.'/screenshot.png') && 
          file_exists($directory.'/themes/'.$theme_old.'/screenshot.png')) {
-        copy($directory.'/themes/'.$theme_old.'/screenshot.png', $directory.'/themes/'.$theme_new.'/screenshot.png');
+        if (!@copy($directory.'/themes/'.$theme_old.'/screenshot.png', $directory.'/themes/'.$theme_new.'/screenshot.png')) {
+            returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), '/themes/'.$theme_old.'/screenshot.png'));
+        }
     } elseif (!file_exists($directory.'/themes/'.$theme_new.'/screenshot.png')) {
-        copy($directory.'/admin/images/screenshot.png', $directory.'/themes/'.$theme_new.'/screenshot.png');
+        if (!@copy($directory.'/admin/images/screenshot.png', $directory.'/themes/'.$theme_new.'/screenshot.png')) {
+            returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), '/admin/images/screenshot.png'));
+        }
     }
     
     // update style file
@@ -87,8 +93,13 @@ Author URI: $author_uri
               "\n ?>";
               
     // update files content
-    file_put_contents($directory.'/themes/'.$theme_new.'/style.css', $style);
-    file_put_contents($directory.'/themes/'.$theme_new.'/config.php', $config);
+    if (!@file_put_contents($directory.'/themes/'.$theme_new.'/style.css', $style)) {
+        returnResponse(RESPONSE_KO, sprintf(__('Can\'t save file "%s".', 'constructor'), '/themes/'.$theme_new.'/style.css'));
+    }
+    
+    if (!@file_put_contents($directory.'/themes/'.$theme_new.'/config.php', $config)) {
+        returnResponse(RESPONSE_KO, sprintf(__('Can\'t save file "%s".', 'constructor'), '/themes/'.$theme_new.'/config.php'));
+    }
     
     returnResponse(RESPONSE_OK, __('Theme was saved, please reload page for view changes', 'constructor'));
     die();
