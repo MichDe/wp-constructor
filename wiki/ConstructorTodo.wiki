@@ -1,18 +1,25 @@
 #summary TODO List of project
 #labels Featured
 
+
   # ~~Slideshow with post content (like in some _premium_ themes)~~ - 0.6.0
   # ~~Add categories to top menu (optional)~~ - 0.6.1
   # ~~Add search form to top menu (optional)~~ - 0.6.1
-  # "Header" tab -> Header font size options
-  # "Header" tab -> Hide text (use text-indent)
-  # "Content" tab -> Show "comments closed" message option
-  # New "Comments" tab: Change avatar size
   # Include ready to use widgets (with thumbnail's)
   # Need update localizations files
-  # Cache for css.php
-  # Export theme as ZIP archive (with all images)
 
   # Create videocast "How To?"
   # ~~Create page with constructor themes (separately from wordpress repository)~~
   # ~~Create list with themes examples~~
+
+
+== Version 0.7 ==
+  
+  # Refactoring file structure (I like OOP)
+  # "Header" tab -> Header font size options
+  # "Header" tab -> Hide text (use text-indent)
+  # "Content" tab -> Show "comments closed" message option
+  # New "Comments" tab: Change avatar size
+  # Integrate "stepcarousel" with all options (replace? current slideshow realization)
+  # Cache for css.php
+  # Export theme as ZIP archive (with all images)
