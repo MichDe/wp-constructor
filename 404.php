@@ -5,7 +5,8 @@
  */
 ?>
 <?php get_header(); ?>
-<div id="wrapper" class="box shadow opacity">
+<div id="wrapcontent" class="wrapper">
+<div id="content" class="box shadow opacity">  
     <div id="container" >
         <div id="posts">
             <div <?php post_class(); ?>>
@@ -22,6 +23,7 @@
             </div>
         </div>
     </div><!-- id='container' -->
-</div><!-- id='wrapper' -->
-<?php get_constructor_sidebar(); ?>
+    <?php get_constructor_sidebar(); ?>
+</div><!-- id='content' -->
+</div><!-- id='wrapcontent' -->
 <?php get_footer(); ?>

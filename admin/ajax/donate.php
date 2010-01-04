@@ -13,3 +13,4 @@ function constructor_admin_donate() {
 }
 
 add_action('wp_ajax_constructor_admin_donate', 'constructor_admin_donate');
+?>

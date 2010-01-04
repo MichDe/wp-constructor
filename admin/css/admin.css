@@ -177,6 +177,14 @@
     top:4px;
 }
 
+/*Help Message*/
+.constructor-admin-help {
+    display:none;
+    position:relative;
+    background:#FFFBCC;
+    border:#E6DB55 solid 1px;
+}
+
 /*Themes Tab*/
 #constr-themes div {
     cursor:pointer;
@@ -293,4 +301,14 @@
 .colorpicker input {
 	color: #778398 !important;
     border:0 !important;
+}
+
+/* Images Tab */
+#constructor-layers {
+    width:800px;
+    height:659px;
+    background:url(images/layers.png) !important;
+}
+#constructor-layers ol {
+    padding:144px 0 0 64px;
 }

@@ -79,7 +79,7 @@
 
 <p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
 
-<p class="submit"><input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e('Submit Comment', 'constructor'); ?>" /></p>
+<p class="submit"><input name="submit" type="submit" id="submit" tabindex="5" class="medium awesome" value="<?php _e('Submit Comment', 'constructor'); ?>" /></p>
 <?php do_action('comment_form', $post->ID); ?>
 
 </form>

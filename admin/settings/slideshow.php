@@ -71,11 +71,11 @@ $(document).ready(function(){
         <th scope="row" valign="top"><?php _e('Position', 'constructor'); ?></th>
         <td class="select" id="slideshow-layout">
             <a href="#" title="<?php echo attribute_escape(__('In Content', 'constructor')); ?>" name="in" <?php if($constructor['slideshow']['layout'] == 'in') echo 'class="selected"'; ?>>
-                <img src="<?php echo $template_uri ?>/admin/images/slideshow-in.png" alt="<?php echo attribute_escape(__('In Content', 'constructor')); ?>" />
+                <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/slideshow-in.png" alt="<?php echo attribute_escape(__('In Content', 'constructor')); ?>" />
             </a>
 
             <a href="#" title="<?php echo attribute_escape(__('Over Content', 'constructor')); ?>" name="over" <?php if($constructor['slideshow']['layout'] == 'over') echo 'class="selected"'; ?>>
-                <img src="<?php echo $template_uri ?>/admin/images/slideshow-over.png" alt="<?php echo attribute_escape(__('Over Content', 'constructor')); ?>" />
+                <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/slideshow-over.png" alt="<?php echo attribute_escape(__('Over Content', 'constructor')); ?>" />
             </a>
         </td>
     </tr>
@@ -90,7 +90,7 @@ $(document).ready(function(){
 		</th>
         <td class="select" id="slideshow">
             <a href="#" title="<?php _e('Default', 'constructor'); ?>" name="0" <?php if($constructor['slideshow']['id'] == 0) echo 'class="selected"'; ?>>
-                <img src="<?php echo $template_uri ?>/admin/images/default.png" title="<?php _e('Default', 'constructor'); ?>" alt="<?php _e('Default', 'constructor'); ?>"/>
+                <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/default.png" title="<?php _e('Default', 'constructor'); ?>" alt="<?php _e('Default', 'constructor'); ?>"/>
             </a>
             <?php foreach ($gallerylist as $gallery) :?>
                 <?php $img = nggdb::find_image($gallery->previewpic); ?>

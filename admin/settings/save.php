@@ -1,6 +1,6 @@
 <?php __('Save As', 'constructor'); // requeried for correct translation 
 
-$theme_data = get_theme_data($directory.'/themes/'.$constructor['theme'].'/style.css');
+$theme_data = get_theme_data(CONSTRUCTOR_DIRECTORY.'/themes/'.$constructor['theme'].'/style.css');
 
 $author = strip_tags($theme_data['Author']);
 $author_uri = '';
@@ -14,10 +14,10 @@ if (preg_match('/href=\"([^"]*)\"/', $theme_data['Author'],$matches)) {
 <table class="form-table">
     <?php
     $save = true;
-    if (!is_writable($directory.'/themes/')) : $save = false;
+    if (!is_writable(CONSTRUCTOR_DIRECTORY.'/themes/')) : $save = false;
     ?>
     <tr>
-        <th scope="row" valign="top" colspan="2" class="th-full updated"><?php printf(__('<font color="red"><b>Warning!</b></font>: Directory "%s" is not writable.', 'constructor'), $directory.'/themes/'); ?></th>
+        <th scope="row" valign="top" colspan="2" class="th-full updated"><?php printf(__('<font color="red"><b>Warning!</b></font>: Directory "%s" is not writable.', 'constructor'), CONSTRUCTOR_DIRECTORY.'/themes/'); ?></th>
     </tr>
     <?php endif; ?>
     <tr>
@@ -30,7 +30,7 @@ if (preg_match('/href=\"([^"]*)\"/', $theme_data['Author'],$matches)) {
     </tr>
     <tr>
         <th scope="row"><?php _e('Description', 'constructor') ?>:</th>
-        <td><textarea name="save[description]" id="save-description" rows="5"><?php echo $theme_data['Description'];?></textarea></td>
+        <td><textarea name="save[description]" id="save-description" rows="5" cols="64"><?php echo $theme_data['Description'];?></textarea></td>
     </tr>
     <tr>
         <th scope="row"><?php _e('Version', 'constructor') ?>:</th>

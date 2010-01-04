@@ -106,3 +106,4 @@ Author URI: $author_uri
 }
 
 add_action('wp_ajax_constructor_admin_save', 'constructor_admin_save');
+?>

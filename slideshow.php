@@ -23,7 +23,7 @@ while($WP_Query->have_posts()) :
 	$image =  get_post_custom_values($metakey);
 	$image = $image[0];
 	
-    $content = apply_filters('the_content', get_the_content(__('Read the rest of this entry &raquo;', 'constructor')));
+    $content = apply_filters('the_content', get_the_content(__('Read more &raquo;', 'constructor')), true);
     $content = preg_replace('/(\<script.*\>.*\<\/script\>)/si', '', $content);
     $content = strip_tags($content, '<br><a><hr>');
 ?> 

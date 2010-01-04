@@ -262,6 +262,12 @@ if (isset($constructor['images']['wrapper']['src']) && !empty($constructor['imag
 	             ."background-position: {$constructor['images']['wrapper']['pos']};\n";
 } else { $wrapper_bg = null; }
 
+if (isset($constructor['images']['header']['src']) && !empty($constructor['images']['header']['src'])) {
+    $header_bg = "background-image: url('{$template_uri}/{$constructor['images']['header']['src']}');\n"
+              ."background-repeat: {$constructor['images']['header']['repeat']};\n"
+              ."background-position: {$constructor['images']['header']['pos']};\n";
+} else { $header_bg = null; }
+
 if (isset($constructor['images']['sidebar']['src']) && !empty($constructor['images']['sidebar']['src'])) {
     $sidebar_bg = "background-image: url('{$template_uri}/{$constructor['images']['sidebar']['src']}');\n"
               ."background-repeat: {$constructor['images']['sidebar']['repeat']};\n"
@@ -279,6 +285,26 @@ if (isset($constructor['images']['footer']['src']) && !empty($constructor['image
               ."background-repeat: {$constructor['images']['footer']['repeat']};\n"
               ."background-position: {$constructor['images']['footer']['pos']};\n";
 } else { $footer_bg = null; }
+
+/* Wrappers */
+
+if (isset($constructor['images']['wrapheader']['src']) && !empty($constructor['images']['wrapheader']['src'])) {
+    $wrapheader_bg = "background-image: url('{$template_uri}/{$constructor['images']['wrapheader']['src']}');\n"
+              ."background-repeat: {$constructor['images']['wrapheader']['repeat']};\n"
+              ."background-position: {$constructor['images']['wrapheader']['pos']};\n";
+} else { $wrapheader_bg = null; }
+
+if (isset($constructor['images']['wrapcontent']['src']) && !empty($constructor['images']['wrapcontent']['src'])) {
+    $wrapcontent_bg = "background-image: url('{$template_uri}/{$constructor['images']['wrapcontent']['src']}');\n"
+              ."background-repeat: {$constructor['images']['wrapcontent']['repeat']};\n"
+              ."background-position: {$constructor['images']['wrapcontent']['pos']};\n";
+} else { $wrapcontent_bg = null; }
+
+if (isset($constructor['images']['wrapfooter']['src']) && !empty($constructor['images']['wrapfooter']['src'])) {
+    $wrapfooter_bg = "background-image: url('{$template_uri}/{$constructor['images']['wrapfooter']['src']}');\n"
+              ."background-repeat: {$constructor['images']['wrapfooter']['repeat']};\n"
+              ."background-position: {$constructor['images']['wrapfooter']['pos']};\n";
+} else { $wrapfooter_bg = null; }
 
 /* Output CSS */
 echo <<<CSS
@@ -367,15 +393,25 @@ fieldset{
 /*/CSS3*/
 /*Layout*/
 #body {
-    width:{$width}px;
-}
-
-#wrap {
     {$wrap_bg}
 }
+#wrapheader {
+    {$wrapheader_bg}
+}
+    #header {
+        {$header_bg}
+    }
 
-#wrapper {
-    {$wrapper_bg}
+#wrapcontent {
+    {$wrapcontent_bg}
+}
+    #content {
+        {$wrapper_bg}
+    }
+
+
+.wrapper {
+    width:{$width}px;
 }
 
 {$layout}
@@ -393,10 +429,13 @@ fieldset{
     {$extrabar_bg};
 }
 
-#footer{
-    width:{$width}px;
-    $footer_bg
+#wrapfooter{
+    {$wrapfooter_bg}
 }
+    #footer{
+        width:{$width}px;
+        {$footer_bg}
+    }
 /*/Layout*/
 /*Header*/
 #header {
@@ -425,7 +464,7 @@ fieldset{
 .wp-sl img{
     border-color: {$color_border};
 }
-#wrapper .wp-sl {
+#content .wp-sl {
     border-width:0 0 1px 0;
     border-style:solid;
     border-color:{$color_border};
@@ -511,5 +550,15 @@ fieldset{
     color:{$color_text2}
 }
 /*/Footer*/
+/*Buttons*/
+.awesome, .awesome:visited {
+	background-color: {$color1};
+	color: {$color_bg};
+}
+.awesome:hover { 
+	background-color: {$color2};
+	color: {$color_bg2};
+}
+/*/Buttons*/
 CSS;
 

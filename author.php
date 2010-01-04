@@ -12,7 +12,8 @@ else :
     $authordata = get_userdata(intval($author));
 endif;
 ?>
-<div id="wrapper" class="box shadow opacity">
+<div id="wrapcontent" class="wrapper">
+<div id="content" class="box shadow opacity">  
     <div id="container" >
         <div id="posts">
             <div <?php post_class('author'); ?>>
@@ -98,6 +99,7 @@ endif;
             <div class="clear">&nbsp;</div>
         </div>
     </div><!-- id='container' -->
-</div><!-- id='wrapper' -->
-<?php get_constructor_sidebar(); ?>
+    <?php get_constructor_sidebar(); ?>
+</div><!-- id='content' -->
+</div><!-- id='wrapcontent' -->
 <?php get_footer(); ?>
