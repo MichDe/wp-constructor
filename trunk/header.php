@@ -18,12 +18,13 @@
 </head>
 <body <?php body_class(get_constructor_category_class()); ?>>
 	
-<div id="wrap">
 <div id="body">
-   <div id="header">
-        <?php get_constructor_menu()  ?>
-        <div class="logo">
-            <h1><a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); echo " &raquo; "; bloginfo('description');?>"><?php bloginfo('name'); ?></a></h1>
-            <h2><?php bloginfo('description');?></h2>
-        </div>
+   <div id="wrapheader" class="wrapper">
+       <div id="header">
+            <?php get_constructor_menu()  ?>
+            <div class="logo">
+                <h1><a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); echo " &raquo; "; bloginfo('description');?>"><?php bloginfo('name'); ?></a></h1>
+                <h2><?php bloginfo('description');?></h2>
+            </div>
+       </div>
    </div>

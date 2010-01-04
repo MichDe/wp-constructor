@@ -8,7 +8,8 @@ Template Name: Sitemap
  */
 
 get_header(); ?>
-<div id="wrapper" class="box shadow opacity">
+<div id="wrapcontent" class="wrapper">
+<div id="content" class="box shadow opacity">  
     <div id="container" class="container-sitemap">
         <div id="posts">
         <?php while (have_posts()) : the_post(); ?>
@@ -63,6 +64,7 @@ get_header(); ?>
     </div><!-- id='container' -->
     <?php get_constructor_sidebar(); ?>
 </div><!-- id='wrapper' -->
+</div><!-- id='wrapcontent' -->
 <?php get_footer(); ?>
 
                     

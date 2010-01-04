@@ -2,7 +2,7 @@
 Theme Name: Constructor
 Theme URI: http://code.google.com/p/wp-constructor/
 Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.7+ (include 2.8)
-Version: 0.6.8
+Version: 0.7.0
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -107,10 +107,10 @@ div.aligncenter {
 /*/Box*/
 
 /*Layout*/
-#body {
+.wrapper { /*#wrapheader,#wrapper,#wrapfooter*/
     margin:0 auto
 }
-#wrapper {
+#content {
     float:left;
     width:100%
 }
@@ -556,7 +556,7 @@ div.aligncenter {
 /*/Search*/
 /*Form*/
 input, select, textarea {
-    font-size:1.4em;
+    font-size:14px;
     padding: 4px;
     border-width:1px;
     border-style:solid;
@@ -858,4 +858,46 @@ td {
     text-align:justify
 }
 /*/Slideshow*/
+/*Buttons*/
+.awesome, .awesome:visited {
+	background-image:url(images/alert-overlay.png);
+	background-repeat: repeat-x; 
+	display: inline-block; 
+	padding: 5px 10px 6px; 
+	text-decoration: none;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+}
+
+	.awesome:hover							{ background-color: #111; color: #fff; }
+	.awesome:active							{ top: 1px; }
+	.small.awesome, .small.awesome:visited 	{ font-size: 11px; padding: ; }
+	.awesome, .awesome:visited,
+	.medium.awesome, .medium.awesome:visited { font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
+	.large.awesome, .large.awesome:visited 	{ font-size: 14px; padding: 8px 14px 9px; }
+	
+	.green.awesome, .green.awesome:visited	{ background-color: #91bd09; }
+	.green.awesome:hover					{ background-color: #749a02; }
+	
+	.blue.awesome, .blue.awesome:visited	{ background-color: #2daebf; }
+	.blue.awesome:hover						{ background-color: #007d9a; }
+	
+	.red.awesome, .red.awesome:visited		{ background-color: #e33100; }
+	.red.awesome:hover						{ background-color: #872300; }
+	
+	.magenta.awesome, .magenta.awesome:visited	{ background-color: #a9014b; }
+	.magenta.awesome:hover						{ background-color: #630030; }
+	
+	.orange.awesome, .orange.awesome:visited	{ background-color: #ff5c00; }
+	.orange.awesome:hover						{ background-color: #d45500; }
+	
+	.yellow.awesome, .yellow.awesome:visited	{ background-color: #ffb515; }
+	.yellow.awesome:hover						{ background-color: #fc9200; }
+/*/Buttons*/
 /*/Theme*/

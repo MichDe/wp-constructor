@@ -17,11 +17,11 @@
     </td>
 </tr>
 <?php
-if (!is_writable($directory.'/cache/')) : ;
+if (!is_writable(CONSTRUCTOR_DIRECTORY.'/cache/')) : ;
 ?>
 <tr>
 	<td></td>
-    <td scope="row" valign="top" class="updated"><?php printf(__('<font color="red"><b>Warning!</b></font>: Directory "%s" is not writable.', 'constructor'), $directory.'/cache/'); ?></td>
+    <td scope="row" valign="top" class="updated"><?php printf(__('<font color="red"><b>Warning!</b></font>: Directory "%s" is not writable.', 'constructor'), CONSTRUCTOR_DIRECTORY.'/cache/'); ?></td>
 </tr>
 <?php endif; ?>
 <tr>

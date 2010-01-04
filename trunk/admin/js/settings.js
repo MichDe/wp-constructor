@@ -69,7 +69,6 @@ $(document).ready(function(){
         };
         
         $.post($(this).attr("href"), data, function(response){
-            console.log(response);
             if (response.status == 'ok') {                
                 Messages.addNotice(response.message, null);
             } else {
@@ -78,6 +77,24 @@ $(document).ready(function(){
         },"json");
         return false;
     });
+    
+    var dialogs = {};
+    
+    // Help dialog
+    $('.help-button').click(function(){
+        var id = $(this).attr('name');
+        if (dialogs[id] == undefined) {
+            dialogs[id] = $(this).parents('.ui-tabs-panel').find('.constructor-admin-help');
+            dialogs[id].dialog({
+                autoOpen: false,
+                width:820/*,
+        		modal: true*/
+        	});
+        }
+        dialogs[id].dialog('open');
+    	return false;
+    });
+
 });
 })(jQuery);
 

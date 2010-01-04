@@ -24,17 +24,23 @@ $(document).ready(function(){
 
 <?php
 // load themes
-$themes = scandir($directory.'/themes/');
+$themes = scandir(CONSTRUCTOR_DIRECTORY.'/themes/');
 
 $themes = array_diff($themes, array( '.','..','.svn','.htaccess','readme.txt'));
 
 foreach ($themes as $theme) :
-      $img = null;
-      if (file_exists($directory.'/themes/'.$theme.'/style.css')) {
-          $data = get_theme_data($directory.'/themes/'.$theme.'/style.css');
+      // don't show files and hidden directories
+      if (!is_dir(CONSTRUCTOR_DIRECTORY.'/themes/'.$theme) or 
+          substr($theme, 0, 1) == '.') {
+          continue;
+      }
 
-          if (file_exists($directory.'/themes/'.$theme.'/screenshot.png')) {
-              $img = $template_uri .'/themes/'.$theme.'/screenshot.png';
+      $img = null;
+      if (file_exists(CONSTRUCTOR_DIRECTORY.'/themes/'.$theme.'/style.css')) {
+          $data = get_theme_data(CONSTRUCTOR_DIRECTORY.'/themes/'.$theme.'/style.css');
+
+          if (file_exists(CONSTRUCTOR_DIRECTORY.'/themes/'.$theme.'/screenshot.png')) {
+              $img = CONSTRUCTOR_DIRECTORY_URI .'/themes/'.$theme.'/screenshot.png';
           }
       } else {
           $data = array(

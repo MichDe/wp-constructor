@@ -59,8 +59,12 @@
             var playId = null;
             
             $this.addClass('opacity');
-            $this.append('<span class="prev opacity">&laquo;</span>');
-            $this.append('<span class="next opacity">&raquo;</span>');
+            $this.append('<span class="prev opacity medium awesome">&laquo;</span>');
+            $this.append('<span class="next opacity medium awesome">&raquo;</span>');
+            $this.append('<div class="slides"></span>');
+            
+            $slides = $this.find('.slides');
+            
             $this.find('> span.prev').click(function(){
                 _self.prevSlide();
             });
@@ -89,9 +93,9 @@
                 if (options.thumb && relocal.test(img))
                     img = options.thumbPath + escape(img) + '&h=' + $this.height() + '&w=' + Math.round($this.width()/2) + '&zc=1&q=95';
                 
-                $this.append('<div><a href="'+url+'" title="'+title+'" class="title opacity shadow">'+title+'</a><img src="'+img+'" alt="'+title+'"/><p class="box shadow opacity">'+text+'</p></div>');
+                $slides.append('<div><a href="'+url+'" title="'+title+'" class="title opacity shadow">'+title+'</a><img src="'+img+'" alt="'+title+'"/><p class="box shadow opacity">'+text+'</p></div>');
                 
-                var div = $this.find('> div:last');
+                var div = $slides.find('> div:last');
                 
                 div.click(function(){
                     _self.stop();
@@ -105,13 +109,13 @@
             
             this.nextSlide = function(){
                 
-                if ($this.find('> div').length == 1) return;
+                if ($slides.find('> div').length == 1) return;
                 
-                var current = $this.find('> div:visible');
-                var next    = $this.find('> div:visible').next('div');
+                var current = $slides.find('> div:visible');
+                var next    = $slides.find('> div:visible').next('div');
                 
                 if (next.length == 0) {
-                    next = $this.find('> div:first');
+                    next = $slides.find('> div:first');
                 }
                 
                 current.css({});
@@ -131,13 +135,13 @@
             }
             this.prevSlide = function(){
                 
-                if ($this.find('> div').length == 1) return;
+                if ($slides.find('> div').length == 1) return;
                 
-                var current = $this.find('> div:visible');
-                var prev    = $this.find('> div:visible').prev('div');
+                var current = $slides.find('> div:visible');
+                var prev    = $slides.find('> div:visible').prev('div');
                 
                 if (prev.length == 0) {
-                    prev = $this.find('> div:last');
+                    prev = $slides.find('> div:last');
                 }
                 
                 current.css({});

@@ -37,22 +37,11 @@
 	<td valign="top" class="updated quick-links">
         <h3><?php _e('Donate', 'constructor'); ?></h3>
         <h4>PayPal</h4>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-            <input type="hidden" name="cmd" value="_donations">
-            <input type="hidden" name="business" value="mxleod@yahoo.com">
-            <input type="hidden" name="lc" value="US">
-            <input type="hidden" name="item_name" value="Wordpress Constructor Theme">
-            <input type="hidden" name="currency_code" value="USD">
-            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
-            <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" style="border:0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-        </form>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mxleod@yahoo.com&lc=US&item_name=Wordpress%20Constructor%20Theme&currency_code=USD"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" style="border:0" alt="PayPal - The safer, easier way to pay online!"/></a>
         
         <h4>WebMoney</h4>
         <ul>
-        	<li>WME: <tt>E119370261590</tt></li>
 			<li>WMZ: <tt>Z454864056905</tt></li>
-			<li>WMU: <tt>U278559603576</tt></li>
 			<li>WMR: <tt>R258034622442</tt></li>
 		</ul>
 		
