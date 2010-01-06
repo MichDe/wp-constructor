@@ -5,7 +5,7 @@
  * @author   Anton Shevchuk <AntonShevchuk@gmail.com>
  * @link     http://anton.shevchuk.name
  * 
- * @version 0.2
+ * @version 0.3
  */
 (function($){
     /**
@@ -20,9 +20,9 @@
         var defaults = {
             thumb:false,
             thumbPath:'/wp-content/themes/constructor/timthumb.php?src=',
+            effect:'slide', // can be 'slide'
             effectTime:300,
             timeout:3000,
-            limit:240,
             play:true
             
         };
@@ -81,10 +81,10 @@
              * @param string text
              */
             this.addSlide = function(title, url, img, text){                
-                if (text.length > options.limit) {
-                    text = text.substring(0, options.limit);
-                    text += '...';
-                }
+//                if (text.length > options.limit) {
+//                    text = text.substring(0, options.limit);
+//                    text += '...';
+//                }
                 var domain = document.domain;
                     domain = domain.replace(/\./i,"\.");  // for strong check domain name
 
@@ -92,6 +92,7 @@
                 
                 if (options.thumb && relocal.test(img))
                     img = options.thumbPath + escape(img) + '&h=' + $this.height() + '&w=' + Math.round($this.width()/2) + '&zc=1&q=95';
+                
                 
                 $slides.append('<div><a href="'+url+'" title="'+title+'" class="title opacity shadow">'+title+'</a><img src="'+img+'" alt="'+title+'"/><p class="box shadow opacity">'+text+'</p></div>');
                 

@@ -1,6 +1,6 @@
 <?php __('Save As', 'constructor'); // requeried for correct translation 
 
-$theme_data = get_theme_data(CONSTRUCTOR_DIRECTORY.'/themes/'.$constructor['theme'].'/style.css');
+$theme_data = get_theme_data(CONSTRUCTOR_DIRECTORY.'/themes/'.$admin['theme'].'/style.css');
 
 $author = strip_tags($theme_data['Author']);
 $author_uri = '';

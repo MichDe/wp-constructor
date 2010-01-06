@@ -26,7 +26,9 @@ class Constructor_Admin extends Constructor_Abstract
     function init($modules = array()) 
     {
         $this->_modules = $modules;
-        
+     
+        require_once CONSTRUCTOR_DIRECTORY .'/admin/ajax.php';
+           
         add_action('admin_head', array($this, 'addThemeScripts'), 2);
         add_action('admin_head', array($this, 'addThemeStyles'),  3);
         add_action('admin_menu', array($this, 'addMenuItem'));
@@ -151,10 +153,11 @@ class Constructor_Admin extends Constructor_Abstract
                          * @todo Need check follows code
                          */
         				/*
-        			    $arr_false = array_keys(array_diff_key($constructor, $data));
+        			    $arr_false = array_keys(array_diff_key($this->_options, $data));
         			    $arr_false = array_fill_keys($arr_false, false);
-        			    $data      = array_merge($constructor, $arr_false);
+        			    $data      = array_merge($this->_options, $arr_false);
         				*/
+        			    
                         $data['menu']['flag']   = isset($data['menu']['flag'])?true:false;
                         $data['menu']['home']   = isset($data['menu']['home'])?true:false;
                         $data['menu']['rss']    = isset($data['menu']['rss'])?true:false;
@@ -174,7 +177,8 @@ class Constructor_Admin extends Constructor_Abstract
                         $data['slideshow']['flag']     = isset($data['slideshow']['flag'])?true:false;
                         $data['slideshow']['onpage']   = isset($data['slideshow']['onpage'])?true:false;
         				$data['slideshow']['onsingle'] = isset($data['slideshow']['onsingle'])?true:false;
-        
+                        
+        				
                         /**
                          * Merge Configuration
                          */
@@ -183,6 +187,7 @@ class Constructor_Admin extends Constructor_Abstract
                     }
                     
                     $this->_updateOptions($data);
+                    $this->_updateAdmin();
                 } 
                 wp_redirect("themes.php?page=functions.php&saved=true");
                 die;
@@ -206,6 +211,8 @@ class Constructor_Admin extends Constructor_Abstract
     {
         /*@var $constructor array*/
         $constructor = $this->_options;
+        /*@var $admin array*/
+        $admin = $this->_admin;
         ?>
         <div class='wrap'>
            <h2><?php _e('Customize Theme', 'constructor'); ?></h2>

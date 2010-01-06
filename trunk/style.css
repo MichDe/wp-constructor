@@ -799,23 +799,26 @@ td {
     border:0;
 }
 
-.wp-sl span.prev, .wp-sl span.next {    
+.wp-sl span.prev, .wp-sl span.next {
     z-index:200;
-    top:8px;
     position:absolute;
+    top:10px;
     display:block;
-    width:24px;
-    height:24px;
-    line-height:20px;
+    width:9px;
     cursor:pointer;
+    height:18px;
+    line-height:16px;
     text-align:center;
 }
 
 .wp-sl span.prev {
-    left:0;
+    left:4px;
 }
 .wp-sl span.next {    
-    right:0;
+    right:4px;
+}
+.wp-sl span.more {    
+    display:block;
 }
 
 .wp-sl div {
@@ -832,11 +835,15 @@ td {
     z-index:10;
     display:block;
     width:100%;
-    height:24px;
-    font-weight:900 !important;
-    line-height:24px;
-    text-indent:28px;
+    height:34px;
     padding:0 12px;
+    font-size:16px;
+    font-weight:900 !important;
+    line-height:38px;
+    
+    text-indent:28px;
+    text-transform:uppercase;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
 }
 
 .wp-sl img {
@@ -865,8 +872,11 @@ td {
 	display: inline-block; 
 	padding: 5px 10px 6px; 
 	text-decoration: none;
+	
+	border-radius: 5px; 
 	-moz-border-radius: 5px; 
 	-webkit-border-radius: 5px;
+	
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
 	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);

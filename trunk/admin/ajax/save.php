@@ -3,16 +3,18 @@
  * @package WordPress
  * @subpackage Constructor
  */
-function constructor_admin_save() {
+function constructor_admin_save()
+{
     global $current_user, $template_uri;
     
     $directory   = get_template_directory();
     
     // get theme options
     $constructor = get_option('constructor');
+    $admin       = get_option('constructor_admin');
     
     // get theme name
-    $theme = isset($_REQUEST['theme'])?$_REQUEST['theme']:$constructor['theme'];
+    $theme = isset($_REQUEST['theme'])?$_REQUEST['theme']:$admin['theme'];
     $theme_old = $constructor['theme'];
     $theme_new = strtolower($theme);
     $theme_new = preg_replace('/\W/', '-', $theme_new);

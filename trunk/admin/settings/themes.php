@@ -52,7 +52,7 @@ foreach ($themes as $theme) :
 
       }
 ?>
-    <div <?php if($constructor['theme'] == $theme) echo 'class="selected"'; ?> title="<?php echo $theme ?>">
+    <div <?php if ($admin['theme'] == $theme) echo 'class="selected"'; ?> title="<?php echo $theme ?>">
         <span>
             <?php if ($img): ?>
             <img src="<?php echo $img ;?>" />

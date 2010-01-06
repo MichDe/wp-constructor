@@ -41,7 +41,7 @@
         // Header Slideshow
 		if ($('.wp-sl').length > 0) {
 			var sl = $('.wp-sl').wpslideshow({
-				thumb: false,
+				thumb: wpSl.thumb,
 				thumbPath: wpSl.thumbPath,
 				limit: 480,
 				effectTime: 1000,

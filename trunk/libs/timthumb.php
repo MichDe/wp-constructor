@@ -65,7 +65,7 @@ if ($new_width == 0 && $new_height == 0) {
 
 // set path to cache directory (default is ./cache)
 // this can be changed to a different location
-$cache_dir = './cache';
+$cache_dir = '../cache';
 
 // get mime type of src
 $mime_type = mime_type($src);

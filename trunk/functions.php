@@ -62,25 +62,22 @@ $constructor_admin = get_option('constructor_admin');
 
 if (!$constructor) {
     $constructor = require 'themes/default/config.php';
+    $constructor_admin = array('theme'  => 'default');
 }
 
 // back compatibility  
-if (isset($constructor['theme'])) {
-    $theme = $constructor['theme'];
-} elseif (isset($constructor_admin['theme'])) {
-    $theme = $constructor_admin['theme'];
-} else {
-    $theme = 'default';
-}
-
-if (!$constructor_admin) {
-    $constructor_admin = array(
-        'theme'  => $theme,
-        'donate' => true,
-        'cache'  => false
-    );
-}
-    
+//if (isset($constructor['theme'])) {
+//    $theme = $constructor['theme'];
+//} elseif (isset($constructor_admin['theme'])) {
+//    $theme = $constructor_admin['theme'];
+//} else {
+//    $theme = 'default';
+//}
+//
+//if (!$constructor_admin) {
+//    $constructor_admin = array('theme'  => $theme);
+//}
+//    
 
 
 //require_once 'widgets/many-in-one.php';
@@ -138,7 +135,6 @@ if (!is_admin()) {
     
     add_filter('preview_theme_ob_filter', 'constructor_preview');
     
-//    wp_enqueue_style( 'constructor-custom-style', get_option('home').'/?theme-constructor=css');
     
     if (file_exists(get_template_directory() .'/themes/'.$theme.'/style.css'))
         wp_enqueue_style( 'constructor-theme', CONSTRUCTOR_DIRECTORY_URI.'/themes/'.$theme.'/style.css');
