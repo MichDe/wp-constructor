@@ -34,17 +34,18 @@ class Constructor_Main extends Constructor_Abstract
      */
     function addThemeStyles() 
     {
-        if (!$this->_admin['cache']) {
-            ob_start();
-            include_once CONSTRUCTOR_DIRECTORY .'/css.php';
-            $css = ob_get_contents();
-            ob_end_clean();
-            
-            file_put_contents(CONSTRUCTOR_DIRECTORY_URI .'/cache/style.css', $css);
+        global $blog_id;
+        
+        if (!$blog_id) {
+            $blog_id = 1;
         }
-        wp_enqueue_style('constructor-style',   CONSTRUCTOR_DIRECTORY_URI .'/cache/style.css');
-//        wp_enqueue_style('nix-theme',   CONSTRUCTOR_DIRECTORY_URI .'/theme.css');
-//        wp_enqueue_style('nix-sidebar', CONSTRUCTOR_DIRECTORY_URI .'/css/'.$this->_options['sidebar'].'.css');
+        
+        // load style
+        if (file_exists(CONSTRUCTOR_DIRECTORY .'/cache/style'.$blog_id.'.css')) {
+            wp_enqueue_style('constructor-style',   CONSTRUCTOR_DIRECTORY_URI .'/cache/style'.$blog_id.'.css');
+        } else {
+            wp_enqueue_style('constructor-style', get_option('home').'/?theme-constructor=css');
+        }
     }
     
     /**
@@ -116,7 +117,11 @@ class Constructor_Main extends Constructor_Abstract
      */
     function getDefaultSlideshow() 
     {
-        $slideshow = get_option('home').'/?theme-constructor=slideshow';
+        $options = $this->_options['slideshow']['advanced'];
+        $options['slideshow'] = get_option('home').'/?theme-constructor=slideshow';
+        $options['thumbPath'] = CONSTRUCTOR_DIRECTORY_URI."/libs/timthumb.php?src=";
+        
+        $options = json_encode($options);
         
         echo '<div class="wp-sl"></div>';
         wp_enqueue_script('constructor-slideshow', CONSTRUCTOR_DIRECTORY_URI.'/js/jquery.wp-slideshow.js', array('jquery'));
@@ -124,8 +129,7 @@ class Constructor_Main extends Constructor_Abstract
         echo "
         <script type='text/javascript'>
         /* <![CDATA[ */
-            var wpSl = {thumbPath:'".CONSTRUCTOR_DIRECTORY_URI."/libs/timthumb.php?src=',
-                        slideshow:'$slideshow'};
+            var wpSl = $options;
         /* ]]> */
         </script>";
     }
@@ -139,15 +143,15 @@ class Constructor_Main extends Constructor_Abstract
     function getLayout($where = 'index')
     {
         if (!isset($this->_options['layout'][$where])) {
-            return include_once CONSTRUCTOR_DIRECTORY .'/layout-default.php';
+            return include_once CONSTRUCTOR_DIRECTORY .'/layouts/default.php';
         }
         
         $layout = $this->_options['layout'][$where];
         
-        if (is_file(CONSTRUCTOR_DIRECTORY .'/layout-'.$layout.'.php')) {
-            include_once CONSTRUCTOR_DIRECTORY .'/layout-'.$layout.'.php';
+        if (is_file(CONSTRUCTOR_DIRECTORY .'/layouts/'.$layout.'.php')) {
+            include_once CONSTRUCTOR_DIRECTORY .'/layouts/'.$layout.'.php';
         } else {
-            include_once CONSTRUCTOR_DIRECTORY .'/layout-default.php';
+            include_once CONSTRUCTOR_DIRECTORY .'/layouts/default.php';
         }
         return true;
     }

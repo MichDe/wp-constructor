@@ -23,9 +23,16 @@ while($WP_Query->have_posts()) :
 	$image =  get_post_custom_values($metakey);
 	$image = $image[0];
 	
-    $content = apply_filters('the_content', get_the_content(__('Read more &raquo;', 'constructor')), true);
-    $content = preg_replace('/(\<script.*\>.*\<\/script\>)/si', '', $content);
-    $content = strip_tags($content, '<br><a><hr>');
+//    $content = apply_filters('the_content', get_the_excerpt(''), true);
+//    $content = preg_replace('/(\<script.*\>.*\<\/script\>)/si', '', $content);
+//    $content = strip_tags($content, '<br><a><hr>');
+
+    $content = str_replace('[...]', '', get_the_excerpt());
+    $content .= '<span class="more">'.
+                '<a href="'.get_permalink().'" title="'.get_the_title().'">'.
+                __('Read more &raquo;', 'constructor').
+                '</a>'.
+                '</span>';
 ?> 
 <post>
 	<title><?php the_title() ?></title>

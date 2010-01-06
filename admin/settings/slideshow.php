@@ -63,8 +63,23 @@ $(document).ready(function(){
             <input type="text" id="constructor-slideshow-showposts" class="small-text" name="constructor[slideshow][showposts]" value="<?php echo (isset($constructor['slideshow']['showposts'])?$constructor['slideshow']['showposts']:10); ?>" />
             <label for="constructor-slideshow-showposts"><?php _e('Number of slides', 'constructor')?></label>
             <br/>
+            
+            <input type="checkbox" id="constructor-slideshow-advanced-play" name="constructor[slideshow][advanced][play]" value="1" <?php if (isset($constructor['slideshow']['advanced']['play']) && $constructor['slideshow']['advanced']['play']) echo 'checked="checked"'; ?> />
+            <label for="constructor-slideshow-advanced-play"><?php _e('Autoplay', 'constructor')?></label>
+            <br/>
+            <input type="text" id="constructor-slideshow-advanced-effectTime" name="constructor[slideshow][advanced][effectTime]" value="<?php echo (isset($constructor['slideshow']['advanced']['effectTime'])?$constructor['slideshow']['advanced']['effectTime']:'300'); ?>" />
+            <label for="constructor-slideshow-advanced-effectTime"><?php _e('Effect time (ms)', 'constructor')?></label>
+            <br/>
+            <input type="text" id="constructor-slideshow-advanced-timeout" name="constructor[slideshow][advanced][timeout]" value="<?php echo (isset($constructor['slideshow']['advanced']['timeout'])?$constructor['slideshow']['advanced']['timeout']:'3000'); ?>" />
+            <label for="constructor-slideshow-advanced-timeout"><?php _e('Timeout between slides (ms)', 'constructor')?></label>
+            <br/>
+            
             <input type="text" id="constructor-slideshow-metakey" name="constructor[slideshow][metakey]" value="<?php echo (isset($constructor['slideshow']['metakey'])?$constructor['slideshow']['metakey']:'thumb-slideshow'); ?>" />
             <label for="constructor-slideshow-metakey"><?php _e('Key of custom field', 'constructor')?></label>
+            <br/>
+            <input type="checkbox" id="constructor-slideshow-advanced-thumb" name="constructor[slideshow][advanced][thumb]" value="1" <?php if (isset($constructor['slideshow']['advanced']['thumb']) && $constructor['slideshow']['advanced']['thumb']) echo 'checked="checked"'; ?> />
+            <label for="constructor-slideshow-advanced-thumb"><?php _e('Autogenerate thumbnail with right size', 'constructor')?></label>
+            <br/>
         </td>
     </tr>
     <tr>

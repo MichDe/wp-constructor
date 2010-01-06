@@ -43,12 +43,19 @@ return array(
             "slideshow" => array(            // Slideshow options
                         "flag" => 0,         // - enable/disable
                         "layout" => 'in',    // - slideshow "in" main container or "over"
+                        "onpage" => false,   // - show slideshow on page
+                        "onsingle" => false, // - show slideshow on single post
                         "showposts" => 10,   // - show last N slides
                         "metakey" => 'thumb-slideshow', // - custom field name
                         "id" => null,        // - slideshow ID - for NextGenGallery
                         "height" => 200,     // - height in px
-                        "onpage" => false,   // - show slideshow on page
-                        "onsingle" => false  // - show slideshow on single post
+                        "advanced" => array(
+                                "thumb"      => false,
+                                "play"       => true,
+                                "effect"     => 'slide',
+                                "effectTime" => 300,
+                                "timeout"    => 3000
+                            )
                         ),
             "images"   => array(             // background images
                         "body" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'repeat', 'fixed'=>false),
