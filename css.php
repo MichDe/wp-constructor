@@ -306,6 +306,19 @@ if (isset($constructor['images']['wrapfooter']['src']) && !empty($constructor['i
               ."background-position: {$constructor['images']['wrapfooter']['pos']};\n";
 } else { $wrapfooter_bg = null; }
 
+
+/* Comments */
+ 
+switch ($constructor['comments']['avatar']['pos']) {
+    case 'left':
+        $avatar_pos = "float: left;\margin: 0 10px 10px 0;";
+        break;
+    case 'right':
+    default:
+        $avatar_pos = "float: right;\margin: 0 0 10px 10px;";
+        break;
+}
+
 /* Output CSS */
 echo <<<CSS
 body {
@@ -409,8 +422,7 @@ fieldset{
         {$wrapper_bg}
     }
 
-
-.wrapper {
+#header,#content,#footer{
     width:{$width}px;
 }
 
@@ -515,6 +527,11 @@ fieldset{
     border-color:{$color_border}
 }
 /*/Sidebar*/
+/*Content Widgets*/
+#content-widget {
+    background-color: {$color_bg2};
+}
+/*/Content Widgets*/
 /*Comments*/
 .thread-even, .even {
     background-color: {$color_bg};
@@ -533,6 +550,7 @@ fieldset{
 }
 */
 .commentlist li .avatar {
+    {$avatar_pos};
     border-color: {$color_border2};
 }
 .commentlist a {
@@ -561,4 +579,4 @@ fieldset{
 }
 /*/Buttons*/
 CSS;
-
+?>

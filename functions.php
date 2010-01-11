@@ -12,7 +12,7 @@
  * @link     http://anton.shevchuk.name
  */
 // debug only current theme
-// error_reporting(E_ALL);
+ error_reporting(E_ALL);
 if ( function_exists('register_sidebar') ) {
 
     register_sidebar(array(
@@ -33,7 +33,7 @@ if ( function_exists('register_sidebar') ) {
 
     register_sidebar(array(
         'name'=>'footer',
-        'before_widget' => '<div>',
+        'before_widget' => '<div class="widget">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>',
@@ -46,6 +46,14 @@ if ( function_exists('register_sidebar') ) {
         'before_title' => '<span>',
         'after_title' => '</span>',
     )); 
+    
+    register_sidebar(array(
+        'name'=>'content',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    )); 
 }
 
 define('CONSTRUCTOR_DIRECTORY',     get_template_directory());
@@ -56,29 +64,6 @@ load_theme_textdomain('constructor', CONSTRUCTOR_DIRECTORY.'/lang');
 if ( version_compare( $wp_version, '2.8', '<=' ) ) {
     require_once 'admin/compatibility/body_class.php';
 }
-
-$constructor       = get_option('constructor');
-$constructor_admin = get_option('constructor_admin');
-
-if (!$constructor) {
-    $constructor = require 'themes/default/config.php';
-    $constructor_admin = array('theme'  => 'default');
-}
-
-// back compatibility  
-//if (isset($constructor['theme'])) {
-//    $theme = $constructor['theme'];
-//} elseif (isset($constructor_admin['theme'])) {
-//    $theme = $constructor_admin['theme'];
-//} else {
-//    $theme = 'default';
-//}
-//
-//if (!$constructor_admin) {
-//    $constructor_admin = array('theme'  => $theme);
-//}
-//    
-
 
 //require_once 'widgets/many-in-one.php';
 
@@ -142,7 +127,7 @@ if (!is_admin()) {
         
     require_once CONSTRUCTOR_DIRECTORY .'/libs/Constructor/Main.php';
     
-    $main = new Constructor_Main($constructor, $constructor_admin);
+    $main = new Constructor_Main();
     $main -> init();
     
     /* Alias section for fast theme development */
@@ -194,6 +179,18 @@ if (!is_admin()) {
         global $main;
         $main->getContent($layout);
     }
+    
+    /**
+     * get constructor content widget
+     * 
+     * @param integer $i post counter
+     * @return 
+     */
+    function get_constructor_content_widget($i)
+    {
+        global $main;
+        $main->getContentWidget($i);
+    }
 
     /**
      * get_constructor_author
@@ -206,6 +203,17 @@ if (!is_admin()) {
     {
         global $main;
         echo $main->getAuthor($before, $after);
+    }
+    
+    /**
+     * get_constructor_avatar_size
+     *
+     * @return string
+     */
+    function get_constructor_avatar_size($size = 32)
+    {
+        global $main;
+        return $main->getAvatarSize($size);
     }
     
     /**
@@ -278,6 +286,7 @@ if (!is_admin()) {
         __('Sidebar', 'constructor') => 'sidebar',
         __('Header',  'constructor') => 'header',
         __('Content', 'constructor') => 'content',
+        __('Comments','constructor') => 'comments',
         __('Footer',  'constructor') => 'footer',
         __('Colors',  'constructor') => 'colors',
         __('Fonts',   'constructor') => 'fonts',
@@ -290,6 +299,6 @@ if (!is_admin()) {
     
     require_once CONSTRUCTOR_DIRECTORY .'/libs/Constructor/Admin.php';
     
-    $admin = new Constructor_Admin($constructor, $constructor_admin);
+    $admin = new Constructor_Admin();
     $admin -> init($constructor_modules);
 }

@@ -10,9 +10,9 @@
         <div id="container" >
         <?php get_constructor_slideshow(true) ?>
     
-        <?php if (have_posts()) : ?>
+        <?php if (have_posts()) : $i = 0; ?>
             <div id="posts">
-            <?php while (have_posts()) : the_post(); ?>
+            <?php while (have_posts()) : the_post();  $i++; ?>
                 <div <?php post_class('box list opacity shadow'); ?> id="post-<?php the_ID() ?>">
                     <div class="title">
                         <h2>
@@ -27,6 +27,7 @@
                         
                     </div>
                 </div>
+            <?php get_constructor_content_widget($i) ?>
             <?php endwhile; ?>
             </div>
             <div class="navigation clear">
@@ -37,5 +38,6 @@
         <?php endif; ?>
         </div><!-- id='container' -->
         <?php get_constructor_sidebar(); ?>
+        <div class="empty clear">&nbsp;</div>
     </div><!-- id='content' -->
 </div><!-- id='wrapcontent' -->

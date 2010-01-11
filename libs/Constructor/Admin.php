@@ -177,13 +177,6 @@ class Constructor_Admin extends Constructor_Abstract
                         $data['slideshow']['flag']     = isset($data['slideshow']['flag'])?true:false;
                         $data['slideshow']['onpage']   = isset($data['slideshow']['onpage'])?true:false;
         				$data['slideshow']['onsingle'] = isset($data['slideshow']['onsingle'])?true:false;
-                        
-        				
-                        /**
-                         * Merge Configuration
-                         */
-                        $constructor = get_option('constructor') or $constructor = array();
-                        $data = array_merge($constructor, $data);
                     }
                     
                     $this->_updateOptions($data);
@@ -209,6 +202,7 @@ class Constructor_Admin extends Constructor_Abstract
      */
     function getPage() 
     {
+        global $constructor, $admin;
         /*@var $constructor array*/
         $constructor = $this->_options;
         /*@var $admin array*/

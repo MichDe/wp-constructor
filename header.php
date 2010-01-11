@@ -28,3 +28,7 @@
             </div>
        </div>
    </div>
+   
+   <?php get_constructor_slideshow() ?>
+   <div id="wrapcontent" class="wrapper">
+       <div id="content" class="box shadow opacity">

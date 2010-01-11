@@ -212,7 +212,8 @@ class Constructor_Main extends Constructor_Abstract
      * @param string $layout [optional]
      * @return 
      */
-    function getContent($layout = 'default') {
+    function getContent($layout = 'default')
+    {
 
          switch ($layout) {
              case 'list':
@@ -235,6 +236,24 @@ class Constructor_Main extends Constructor_Abstract
                 break;
          }
     }
+    
+    /**
+     * get constructor content widget
+     * 
+     * @param integer $i post counter
+     * @return 
+     */
+    function getContentWidget($i)
+    {
+        // widget is not enabled
+        if (!$this->_options['content']['widget']['flag']) return false;
+        
+        // wrong position
+        if ($this->_options['content']['widget']['after'] != $i) return false;
+        echo "<div id=\"content-widget\" class=\"box\">\n";
+        dynamic_sidebar('content');
+        echo "<div class=\"empty clear\"></div></div>";
+    }
 
     /**
      * get_constructor_author
@@ -247,6 +266,22 @@ class Constructor_Main extends Constructor_Abstract
     {
         if (isset($this->_options['content']['author']) && $this->_options['content']['author'])
             return $before . the_author_posts_link() . $after;
+    }
+    
+    /**
+     * get_constructor_author
+     *
+     * @param  string $before
+     * @param  string $after
+     * @return string
+     */
+    function getAvatarSize($size = 32)
+    {
+        if (isset($this->_options['comments']['avatar']['size'])) {
+            return (int)$this->_options['comments']['avatar']['size'];
+        } else {
+            return $size;
+        }
     }
     
     /**

@@ -21,7 +21,7 @@
 	<h3 id="comments"><?php comments_number(__('No Responses', 'constructor'), __('One Response', 'constructor'), __('% Responses', 'constructor'));?> <?php printf(__('to &#8220;%s&#8221;', 'constructor'), the_title('', '', false)); ?></h3>
 
 	<ol class="commentlist">
-	<?php wp_list_comments();?>
+	<?php wp_list_comments('avatar_size='.get_constructor_avatar_size());?>
 	</ol>
 
 	<div class="navigation">

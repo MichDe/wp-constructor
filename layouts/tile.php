@@ -22,7 +22,7 @@
                     </div>
                     <div class="links opacity">
                         <div class="date"><?php the_date() ?></div>
-                        <div class="comments"><?php comments_popup_link('0', '1', '%', '', '' ); ?></div>
+                        <div class="comments"><?php comments_popup_link('0', '1', '%', 'awesome', '' ); ?></div>
                     </div>
                 </div>
             <?php endwhile; ?>
@@ -35,5 +35,6 @@
         <?php endif; ?>
     
         </div><!-- id='container' -->
+        <div class="empty clear">&nbsp;</div>
     </div><!-- id='content' -->
 </div><!-- id='wrapcontent' -->

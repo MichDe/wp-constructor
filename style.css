@@ -79,6 +79,7 @@ div.aligncenter {
 .alignleft, .left { float: left }
 .alignright, .right { float: right }
 .clear { clear:both }
+.empty { height:0 }
 .hide  { display:none }
 
 /*Autogenerate styles*/
@@ -107,12 +108,13 @@ div.aligncenter {
 /*/Box*/
 
 /*Layout*/
-.wrapper { /*#wrapheader,#wrapper,#wrapfooter*/
-    margin:0 auto
-}
-#content {
-    float:left;
+/*#wrapheader,#wrapper,#wrapfooter*/
+.wrapper { 
     width:100%
+}
+#header,#content,#footer{
+    clear:both;
+    margin:0 auto
 }
 #container {
     margin:0;
@@ -429,7 +431,7 @@ div.aligncenter {
     width:306px;
     z-index:10;
     position:absolute;
-    top:2px;
+    top:8px;
     left:2px;
     text-align:left;
     padding:0 6px;
@@ -453,13 +455,15 @@ div.aligncenter {
 .tile .links {
     z-index:10;
     position:absolute;
-    bottom:0;
+    bottom:8px;
     left:0;
     height:32px;
     width:100%;
 }
 .tile .links .date{
-    padding:0 8px;
+    font-size:1.4em;
+    text-indent:0.8em;
+    padding:0;
     float:left;
     width:260px;
     line-height:32px;
@@ -468,12 +472,12 @@ div.aligncenter {
     float:right;
 }
 .tile .links .comments a{
-    margin:0 2px 2px 0;
-    padding: 2px 0;
+    margin:4px 6px 0 0;
+    /*padding: 2px 0;*/
     text-align:center;
-    width:32px;
-    height:32px;
-    background:url(images/comments.png) no-repeat 3px 1px;
+    width:14px;
+    height:14px;
+    /*background:url(images/comments.png) no-repeat 3px 1px;*/
 }
 /*/Tile*/
 /*List*/
@@ -513,6 +517,37 @@ div.aligncenter {
     height:0;
 }
 /*/Navigation*/
+/*Content Widgets*/
+#content-widget {
+    clear:both;
+    margin:0 0 10px 0
+}
+    #content-widget .widget {
+        float:left;
+        width:30%;
+        padding:4px 8px;
+    }
+    
+.widget h3 {
+    padding:0 4px 0px 8px;
+    line-height:2em
+}
+.widget a:hover{
+    text-decoration:underline
+}
+.widget ul {
+    padding:0 0 0 4px;
+    margin:0;
+}
+.widget li {
+    padding:2px;
+    list-style:none;
+}
+.widget li li {
+    padding:2px 2px 2px 6px;
+    list-style:circle inside;
+}
+/*/Content Widget*/
 /*Search*/
 #searchform {
     width:200px;
@@ -680,6 +715,10 @@ td {
 .comment-meta a:hover{
     border:0 !important
 }
+
+.reply {
+    clear:both;
+}
 /*/Comments*/
 
 /*Footer*/
@@ -689,30 +728,12 @@ td {
     margin: 0 auto;
     font-size:1.2em;
 }
-#footer div {
+#footer .widget {
     width:200px;
     float:left;
     margin: 0 0 12px 0
 }
-#footer h3 {
-    padding:0 4px 0px 8px;
-    line-height:2em
-}
-#footer a:hover{
-    text-decoration:underline
-}
-#footer ul {
-    padding:0 0 0 4px;
-    margin:0;
-}
-#footer li {
-    padding:2px;
-    list-style:none;
-}
-#footer li li {
-    padding:2px 2px 2px 6px;
-    list-style:circle inside;
-}
+
 #footer .copy{
     padding:4px 0 0 0;
     /*border-top:1px solid #999;*/
