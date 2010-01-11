@@ -85,7 +85,7 @@ class Constructor_Admin extends Constructor_Abstract
                 check_admin_referer('constructor');
                 if (isset($_REQUEST['constructor'])) {
         
-                    $files = $_FILES['constructor'];
+                    $files = isset($_FILES['constructor'])?$_FILES['constructor']:array();
                     $data  = $_REQUEST['constructor'];
                     
                     if (isset ($data['theme-reload']) && $data['theme-reload'] != 0) {
@@ -145,8 +145,8 @@ class Constructor_Admin extends Constructor_Abstract
                         /**
                          * Slideshow
                          */
-                        $data['slideshow']['id']        = (int)$data['slideshow']['id'];
-                        $data['slideshow']['showposts'] = (int)$data['slideshow']['showposts'];
+                        $data['slideshow']['id']        = isset($data['slideshow']['id'])?(int)$data['slideshow']['id']:null;
+                        $data['slideshow']['showposts'] = isset($data['slideshow']['showposts'])?(int)$data['slideshow']['showposts']:10;
         
                         /**
                          * Flags changes
@@ -165,6 +165,8 @@ class Constructor_Admin extends Constructor_Abstract
         				
         				$data['content']['author'] = isset($data['content']['author'])?true:false;
                         $data['content']['thumb']['auto'] = isset($data['content']['thumb']['auto'])?true:false;
+                        
+                        $data['content']['widget']['flag'] = isset($data['content']['widget']['flag'])?true:false;
         				
                         $data['content']['list']['filter'] = isset($data['content']['list']['filter'])?true:false;
         				$data['content']['list']['thumb']['noimage'] = isset($data['content']['list']['thumb']['noimage'])?true:false;

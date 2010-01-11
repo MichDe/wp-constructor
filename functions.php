@@ -120,15 +120,16 @@ if (!is_admin()) {
     
     add_filter('preview_theme_ob_filter', 'constructor_preview');
     
-    
-    if (file_exists(get_template_directory() .'/themes/'.$theme.'/style.css'))
-        wp_enqueue_style( 'constructor-theme', CONSTRUCTOR_DIRECTORY_URI.'/themes/'.$theme.'/style.css');
-
-        
     require_once CONSTRUCTOR_DIRECTORY .'/libs/Constructor/Main.php';
     
     $main = new Constructor_Main();
     $main -> init();
+    
+    if (file_exists(get_template_directory() .'/themes/'.$main->getTheme().'/style.css'))
+        wp_enqueue_style( 'constructor-theme', CONSTRUCTOR_DIRECTORY_URI.'/themes/'.$main->getTheme().'/style.css');
+
+        
+
     
     /* Alias section for fast theme development */
     
