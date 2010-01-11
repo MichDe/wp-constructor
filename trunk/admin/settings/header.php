@@ -57,7 +57,7 @@ $(document).ready(function(){
     <td>
 		<fieldset>
 			<legend>
-				<input type="checkbox" id="constructor-menu-flag" name="constructor[menu][flag]" value="1" <?php if ($constructor['menu']['flag'] == 1) echo 'checked="checked"'; ?> />
+				<input type="checkbox" id="constructor-menu-flag" name="constructor[menu][flag]" value="1" <?php if ($constructor['menu']['flag']) echo 'checked="checked"'; ?> />
                 <label for="constructor-menu-flag"><?php _e('Show top menu', 'constructor'); ?></label>
 			</legend>
 			<dl>

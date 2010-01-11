@@ -24,7 +24,7 @@ $(document).ready(function(){
 
 <fieldset>
     <legend>
-        <input type="checkbox" id="constructor-slideshow-flag" name="constructor[slideshow][flag]" value="1" <?php if (isset($constructor['slideshow']['flag']) && $constructor['slideshow']['flag']) echo 'checked="checked"'; ?>/>
+        <input type="checkbox" id="constructor-slideshow-flag" name="constructor[slideshow][flag]" value="1" <?php if ($constructor['slideshow']['flag']) echo 'checked="checked"'; ?>/>
         <label for="constructor-slideshow-flag"><?php _e('Enable slideshow', 'constructor'); ?></label>
     </legend>
 			
@@ -37,10 +37,10 @@ $(document).ready(function(){
     <tr>
         <th scope="row" valign="top" rowspan="2"><?php _e('Options', 'constructor'); ?></th>
         <td>
-            <input type="checkbox" id="constructor-slideshow-onpage" name="constructor[slideshow][onpage]" value="1" <?php if (isset($constructor['slideshow']['onpage']) && $constructor['slideshow']['onpage']) echo 'checked="checked"'; ?> />
+            <input type="checkbox" id="constructor-slideshow-onpage" name="constructor[slideshow][onpage]" value="1" <?php if ($constructor['slideshow']['onpage']) echo 'checked="checked"'; ?> />
             <label for="constructor-slideshow-onpage"><?php _e('Show on page', 'constructor')?></label>
             <br/>
-            <input type="checkbox" id="constructor-slideshow-onsingle" name="constructor[slideshow][onsingle]" value="1" <?php if (isset($constructor['slideshow']['onsingle']) && $constructor['slideshow']['onsingle']) echo 'checked="checked"'; ?> />
+            <input type="checkbox" id="constructor-slideshow-onsingle" name="constructor[slideshow][onsingle]" value="1" <?php if ($constructor['slideshow']['onsingle']) echo 'checked="checked"'; ?> />
             <label for="constructor-slideshow-onsingle"><?php _e('Show on single post', 'constructor')?></label>
         </td>
     </tr>
