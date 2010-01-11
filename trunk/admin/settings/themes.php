@@ -19,7 +19,7 @@ $(document).ready(function(){
 })(jQuery);
 </script>
 
-<input type="hidden" id="constructor-theme" name="constructor[theme]" value="<?php echo $constructor['theme']?>"/>
+<input type="hidden" id="constructor-theme" name="constructor[theme]" value="<?php echo $admin['theme']?>"/>
 <input type="hidden" id="constructor-theme-reload" name="constructor[theme-reload]" value="0"/>
 
 <?php

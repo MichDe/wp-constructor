@@ -39,7 +39,9 @@ class Constructor_Abstract
                                           ),
                         ),
             'comments'  => array(
-                        'avatar' => array ('size'   => 64),    // - avatar size (see comments)
+                        'avatar' => array ('size'   => 64,     // - avatar size (see comments)
+                                           'pos'    => 'right' // - avatarposition
+                                          ),
                         ),
             'footer'    => array(            // footer text
                         'text' => null,
@@ -225,6 +227,18 @@ class Constructor_Abstract
             }
         }
         return $a;
+    }
+    
+    /**
+     * getTheme
+     *
+     * return theme name
+     *
+     * @return  string 
+     */
+    function getTheme() 
+    {
+        return $this->_admin['theme'];
     }
 }
 ?>
