@@ -139,8 +139,15 @@
 	width:42px	
 }
 
+
 .constructor .quick-links h3{
+    position:relative;
     border-bottom:1px solid #E6DB55;
+}
+.constructor .quick-links .donate-progress{
+    position:absolute;
+    right:-4px;
+    top:-4px;
 }
 .constructor .quick-links h4{
     padding:2px 0;

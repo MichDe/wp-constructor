@@ -20,6 +20,13 @@ $(document).ready(function(){
 <input type="hidden" id="constructor-title-pos" name="constructor[title][pos]" value="<?php echo $constructor['title']['pos']?>"/>
 <table class="form-table">
 <tr>
+    <th scope="row" valign="top"><?php _e('Hidden title', 'constructor'); ?></th>
+    <td>
+		<input type="checkbox" id="constructor-title-hidden" name="constructor[title][hidden]" value="1" <?php if ($constructor['title']['hidden']) echo 'checked="checked"'; ?> />
+        <label for="constructor-title-hidden"><?php _e('hide title by CSS', 'constructor'); ?></label>
+    </td>
+</tr>
+<tr>
     <th scope="row" valign="top"><?php _e('Title position', 'constructor'); ?></th>
     <td class="position select" id="title-pos">
         <a href="#" title="<?php _e('Left', 'constructor'); ?>" name="left" <?php if($constructor['title']['pos'] == 'left') echo 'class="selected"'; ?>> </a>
@@ -29,7 +36,7 @@ $(document).ready(function(){
     </td>
 </tr>
 <tr>
-    <th scope="row" valign="top"><?php _e('Title colors', 'constructor'); ?></th>
+    <th scope="row" valign="top"><?php _e('Title font', 'constructor'); ?></th>
     <td class="color-selector">
         <div id="color_title" class="color"><div style="background-color: <?php echo $constructor['color']['title'] ?>"></div></div>
         - <?php echo attribute_escape(__('title', 'constructor')); ?>

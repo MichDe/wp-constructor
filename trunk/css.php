@@ -320,6 +320,19 @@ switch ($constructor['comments']['avatar']['pos']) {
         break;
 }
 
+/* Header */
+if ($constructor['title']['hidden']) {
+    $title = <<<CSS
+#header .logo h1, #header .logo h2 {
+    font-size:0;
+    text-indent:-9000px;
+}
+CSS;
+} else {
+    $title = '';
+}
+
+
 /* Output CSS */
 echo <<<CSS
 body {
@@ -458,6 +471,7 @@ fieldset{
 #header h1 { font: bold 600%/100% {$fonts_header}; }
 #header h1 a { color: {$color_title}}
 #header h2 { color: {$color_title2}}
+{$title}
 #header-links {    border-color: {$color_border} }
     #header-links ul { border-color: {$color_border} }
     #header-links li { border-color: {$color_border} }

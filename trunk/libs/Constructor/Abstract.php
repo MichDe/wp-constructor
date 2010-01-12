@@ -23,7 +23,8 @@ class Constructor_Abstract
                         'index'   => 'default',
                                  ),
             'title'     => array(            // title
-                        'pos' => 'left'      // - position
+                        'pos' => 'left',     // - position
+                        'hidden' => false    // - hidden title text
                         ),
             'content'   => array(            // content
                         'author' => 0,       // - link to author page
