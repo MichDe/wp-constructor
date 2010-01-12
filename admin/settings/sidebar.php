@@ -6,7 +6,7 @@ $(document).ready(function(){
     $("#constructor-layout-width-slider").slider({
         range: "min",
         value: <?php echo (int)$constructor['layout']['width']?>,
-        min: 712,
+        min: 640,
         max: 1280,
         step:8,
         slide: function(event, ui) {
