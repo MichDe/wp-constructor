@@ -214,6 +214,7 @@ $layout = <<<CSS
 CSS;
         break;
     case 'none':
+        $layout = '';
         break;
     case 'right':
     default:
