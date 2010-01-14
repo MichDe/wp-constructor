@@ -35,7 +35,7 @@
 		</ul>
 	</td>
 	<td valign="top" class="updated quick-links">
-        <h3><?php _e('Donate', 'constructor'); ?><img class="donate-progress" src="http://wp-constructor.googlecode.com/svn/trunk/admin/images/donate.png" alt="Donate Progress"/></h3>
+        <h3><?php _e('Donate', 'constructor'); ?><img class="donate-progress" src="http://wp-constructor.googlecode.com/svn/wiki/images/donate.png" alt="Donate Progress"/></h3>
         
         
         <h4>PayPal</h4>
