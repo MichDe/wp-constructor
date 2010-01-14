@@ -5,12 +5,14 @@
 Available following localizations:
  * English - default
  * Russian - it's my native language
- * Ukrainian - thx to Baziak
- * Polish - thx to mummle (http://chomikuj.pl/mummle/)
- * Danish - thx to Georg S. Adamsen (http://wordpress.blogos.dk/s%C3%B8g-efter-downloads/?did=171)
- * Italian - thx to gio gio (http://people.unica.it/)
- * French - thx to Nicolas Loeuillet
-
+ * Ukrainian - Baziak
+ * Polish - mummle (http://chomikuj.pl/mummle/)
+ * Danish - Georg S. Adamsen (http://wordpress.blogos.dk/s%C3%B8g-efter-downloads/?did=171)
+ * Italian - gio gio (http://people.unica.it/)
+ * French - Nicolas Loeuillet
+ * Lithuanian - Tomas Kikutis
+ * Japanese - Toshi Oshio (http://blog.falcon-space.net/2010/01/wpconstructor-jp/)
+ * Czech - Pech, Jiří (http://www.energyexpert.cz/)
 
 = Many themes =
 All aviable themes see on ConstructorThemes page
