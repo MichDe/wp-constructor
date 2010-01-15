@@ -49,20 +49,23 @@ get_header(); ?>
                 </div>
                 <div class="entry archive">
                     <?php the_content(__('Read the rest of this entry &raquo;', 'constructor')) ?>
+                    <table>
                     <?php foreach ($Archive as $Year => $Month) : ?>
-                        <p>
-                        <strong><a href="#<?php echo $Year ?>"><?php echo $Year ?></a></strong>:
-                        <?php for ($i = 1; $i <= 12; $i++) : ?>
-                            <?php if (isset($Archive[$Year][$i])): ?>
-                                <a href="#<?php echo $Year .'-'. $i?>"><?php echo $MonthAbr[$i] ?></a>
-                            <?php else: ?>
-                                <span><?php echo $MonthAbr[$i] ?></span>
-                            <?php endif;?>
-                        <?php endfor; ?>
-                        </p>
+                        <tr>
+                            <th><a href="#<?php echo $Year ?>"><?php echo $Year ?></a></th>
+                            <?php for ($i = 1; $i <= 12; $i++) : ?>
+                            <td>
+                                <?php if (isset($Archive[$Year][$i])): ?>
+                                    <a href="#<?php echo $Year .'-'. $i?>"><?php echo $MonthAbr[$i] ?></a>
+                                <?php else: ?>
+                                    <span><?php echo $MonthAbr[$i] ?></span>
+                                <?php endif;?>
+                            </td>
+                            <?php endfor; ?>
+                        </tr>
                     <?php endforeach; ?>
-
-
+                    </table>
+                    
                     <?php foreach ($Archive as $Year => $Month) : ?>
                         <h2><a name="<?php echo $Year ?>" href="<?php echo get_year_link($Year)?>"><?php echo $Year ?></a></h2>
                         <?php for ($i = 12; $i >= 1; $i--) : ?>
@@ -70,7 +73,7 @@ get_header(); ?>
                                 <h3><a name="<?php echo $Year.'-'.$i ?>" href="<?php echo get_month_link($Year, $i)?>"><?php echo $MonthNames[$i].' '.$Year ?></a></h3>
                                 <ul>
                                 <?php foreach ($Month[$i] as $Post) : ?>
-                                    <li><a href="<?php echo get_permalink($Post['ID']) ?>"><?php echo $Post['title'] ?></a></li>
+                                    <li><a href="<?php echo get_permalink($Post['ID']) ?>"><?php echo strip_tags(apply_filters('the_title', $Post['title'])) ?></a></li>
                                 <?php endforeach; ?>
                                 </ul>
                             <?php endif; ?>

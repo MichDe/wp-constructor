@@ -39,7 +39,7 @@
         
         
         <h4>PayPal</h4>
-        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mxleod@yahoo.com&lc=US&item_name=Wordpress%20Constructor%20Theme&currency_code=USD" class="button-primary">Donate</a><img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/cards.png" alt="Credit Cards"/>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mxleod@yahoo.com&lc=US&item_name=Wordpress%20Constructor%20Theme&currency_code=USD"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate via PayPal"/></a>
         
         <h4>WebMoney</h4>
         <ul>
