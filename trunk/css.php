@@ -309,7 +309,6 @@ if (isset($constructor['images']['wrapfooter']['src']) && !empty($constructor['i
 
 
 /* Comments */
- 
 switch ($constructor['comments']['avatar']['pos']) {
     case 'left':
         $avatar_pos = "float: left;\margin: 0 10px 10px 0;";
@@ -530,6 +529,22 @@ fieldset{
     border-color:{$color_border}
 }
 /*/Post*/
+/*Archive*/
+#posts .archive table th{
+    padding:0
+}
+#posts .archive table td{
+    padding:0;
+    color:{$color_text2}
+}
+#posts .archive table a{
+    padding:4px;
+    color:{$color_text}
+}
+#posts .archive table a:hover{
+    background-color: {$color2};
+}
+/*/Archive*/
 /*Sidebar*/    
 .sidebar .current_page_item a,
 .sidebar .current-cat a{

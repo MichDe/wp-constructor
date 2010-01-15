@@ -78,8 +78,6 @@ class Constructor_Admin extends Constructor_Abstract
      */
     function addMenuItem()
     {
-        session_start();
-        
         if ( isset( $_GET['page'] ) && $_GET['page'] == "functions.php" ) {
             if ( isset( $_REQUEST['action'] ) && 'save' == $_REQUEST['action'] ) {
                 check_admin_referer('constructor');
@@ -124,10 +122,12 @@ class Constructor_Admin extends Constructor_Abstract
         
                                     if (move_uploaded_file($files['tmp_name']['images'][$name]['src'], $upload . $image['src'])) {
                                         $data['images'][$name]['src'] = $path.$image['src'];
+                                    } else {
+                                        $errors[] = sprintf(__('File "%s" can\'t be move to "images" folder','constructor'), $image['src']);
+                                        continue;
                                     }
                                 }
                             }
-                            $_SESSION['constructor-errors'] = $errors;
                         }
                         /**
                          * Shadow
@@ -183,8 +183,13 @@ class Constructor_Admin extends Constructor_Abstract
                     
                     $this->_updateOptions($data);
                     $this->_updateAdmin();
-                } 
-                wp_redirect("themes.php?page=functions.php&saved=true");
+                }
+                
+                if (isset($errors) && sizeof($errors) > 0) {
+                    wp_redirect("themes.php?page=functions.php&saved=true&errors=true");
+                } else {
+                    wp_redirect("themes.php?page=functions.php&saved=true");
+                }
                 die;
             }
         }
@@ -221,14 +226,8 @@ class Constructor_Admin extends Constructor_Abstract
                    echo '<div id="message" class="updated fade"><p><strong>'.__('Options saved.').'</strong></p></div>';
                }
                
-               if ( isset( $_SESSION['constructor-errors']) && !empty ($_SESSION['constructor-errors'])) {
-                   echo '<div id="errors" class="error fade">';
-                   echo '<p><strong>'.__('Errors', 'constructor').'</strong></p>';
-                   foreach ($_SESSION['constructor-errors'] as $error) {
-                       echo "<p>{$error}</p>";
-                   }
-                   echo '</div>';
-                   unset ($_SESSION['constructor-errors']);
+               if ( isset( $_REQUEST['errors'] ) ) {
+                   echo '<div id="errors" class="error fade"><p><strong>'.__('Some images can\'t be upload. Please check permissions').'</strong></p></div>';
                }
                ?>
            <div class="constructor">

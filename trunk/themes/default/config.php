@@ -14,8 +14,9 @@ return array(
                         'search'  => 'default',
                         'index'   => 'default',
                                  ),
-            "title"     => array(            // title
-                        "pos" => 'left'      // - position
+            'title'     => array(            // title
+                        'pos' => 'left',     // - position
+                        'hidden' => false    // - hidden title text
                         ),
             "content"   => array(            // content
                         "author" => 0,       // - link to author page
@@ -23,6 +24,11 @@ return array(
                         'list'  =>  array (                    // list layout
                                            'filter' => false,  // - strip HTML tags
                                            'thumb'  => array ( 'pos' => 'left', 'noimage' => false, ), // - thumbnail position and "No Image" option
+                                          ),
+                        ),
+            'comments'  => array(
+                        'avatar' => array ('size'   => 64,     // - avatar size (see comments)
+                                           'pos'    => 'right' // - avatarposition
                                           ),
                         ),
             "footer"    => array(            // footer text
