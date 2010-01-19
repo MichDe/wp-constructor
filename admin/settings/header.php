@@ -6,9 +6,9 @@ $(document).ready(function(){
     $("#constructor-layout-header-slider").slider({
         range: "min",
         value: <?php echo (int)($constructor['layout']['header'])?>,
-        min: 80,
+        min: 0,
         max: 320,
-        step:5,
+        step:8,
         slide: function(event, ui) {
             $("#constructor-layout-header").val(ui.value);
         }

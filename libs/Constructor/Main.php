@@ -350,10 +350,10 @@ class Constructor_Main extends Constructor_Abstract
         global $post;
         
         if (isset($this->_options['content']['thumb']['auto']) && $this->_options['content']['thumb']['auto']) {
-            if ($img = $this->_get_post_image()) {
+            if ($img = $this->_getPostImage()) {
                 echo '<img class="thumb align'.$align.'" src="' .CONSTRUCTOR_DIRECTORY_URI. "/libs/timthumb.php?src=".urlencode($img).'&amp;h='.$height.'&amp;w='.$width.'&amp;zc=1&amp;q=95" alt="' .get_the_title(). '"/>';
             } else {
-                if ($img = $this->_get_post_image(false)) {
+                if ($img = $this->_getPostImage(false)) {
                     echo '<div class="crop thumb align'.$align.'" style="width:'.$width.'px;height:'.$height.'px;"><img src="'.$img.'" height="'.$height.'px" alt="' .get_the_title(). '"/></div>';
                 } else {
                     if ($noimage) {
