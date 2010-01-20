@@ -7,13 +7,13 @@ http://wp-constructor.googlecode.com/svn/trunk/themes/black-urban/screenshot.png
 = Default =
 http://wp-constructor.googlecode.com/svn/trunk/themes/default/screenshot.png
 
-= Example (<a href="http://code.google.com/p/wp-constructor/downloads/list">Download</a>) =
+= Example (<a href="http://code.google.com/p/wp-constructor/downloads/list?can=3&q=example">Download</a>) =
 http://wp-constructor.googlecode.com/svn/trunk/themes/example/screenshot.png
 
 = Lime =
 http://wp-constructor.googlecode.com/svn/trunk/themes/lime/screenshot.png
 
-= Naruto (<a href="http://code.google.com/p/wp-constructor/downloads/list">Download</a>) =
+= Naruto (<a href="http://code.google.com/p/wp-constructor/downloads/list?can=3&q=naruto">Download</a>) =
 http://wp-constructor.googlecode.com/svn/trunk/themes/naruto/screenshot.png
 
 Thx for images to <a href="http://ekoputeh.deviantart.com/">ekoputeh</a> and <a href="http://xergille.deviantart.com/">xergille</a>
@@ -21,7 +21,7 @@ Thx for images to <a href="http://ekoputeh.deviantart.com/">ekoputeh</a> and <a 
 = Orange =
 http://wp-constructor.googlecode.com/svn/trunk/themes/orange/screenshot.png
 
-= Pinup (<a href="http://code.google.com/p/wp-constructor/downloads/list">Download</a>) =
+= Pinup (<a href="http://code.google.com/p/wp-constructor/downloads/list?can=3&q=pinup">Download</a>) =
 http://wp-constructor.googlecode.com/svn/trunk/themes/pinup/screenshot.png
 
 Thx for images to <a href="http://dominic-marco.deviantart.com/">Dominic Marco</a>
