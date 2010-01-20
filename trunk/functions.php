@@ -12,7 +12,8 @@
  * @link     http://anton.shevchuk.name
  */
 // debug only current theme
- error_reporting(E_ALL);
+define('CONSTRUCTOR_DEBUG', false);
+
 if ( function_exists('register_sidebar') ) {
 
     register_sidebar(array(
@@ -280,7 +281,18 @@ if (!is_admin()) {
     }
     
 } else {
+    // only for administrator
+    if (CONSTRUCTOR_DEBUG || isset($_REQUEST['debug'])) {
+        require_once CONSTRUCTOR_DIRECTORY .'/libs/debug.php';
+    }
+    
+    // PHP4 compatibility
+    if (version_compare(phpversion(), '5.0.0', '<')) {
+        require_once CONSTRUCTOR_DIRECTORY .'/admin/compatibility.php';
+    }
+    
     // init modules for admin pages
+    // you can disable any
     $constructor_modules = array(
         __('Themes',  'constructor') => 'themes',
         __('Layout',  'constructor') => 'layout',

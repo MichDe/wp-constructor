@@ -162,15 +162,16 @@ class Constructor_Admin extends Constructor_Abstract
                         $data['menu']['home']   = isset($data['menu']['home'])?true:false;
                         $data['menu']['rss']    = isset($data['menu']['rss'])?true:false;
                         $data['menu']['search'] = isset($data['menu']['search'])?true:false;
-        				
-        				$data['content']['author'] = isset($data['content']['author'])?true:false;
-                        $data['content']['thumb']['auto'] = isset($data['content']['thumb']['auto'])?true:false;
                         
-                        $data['content']['widget']['flag'] = isset($data['content']['widget']['flag'])?true:false;
+                        $data['title']['hidden'] = isset($data['title']['hidden'])?true:false;
         				
+        				$data['content']['author'] = isset($data['content']['author'])?true:false;        				
+                        $data['content']['thumb']['auto'] = isset($data['content']['thumb']['auto'])?true:false;
+                        $data['content']['widget']['flag'] = isset($data['content']['widget']['flag'])?true:false; 
+                               				
                         $data['content']['list']['filter'] = isset($data['content']['list']['filter'])?true:false;
-        				$data['content']['list']['thumb']['noimage'] = isset($data['content']['list']['thumb']['noimage'])?true:false;
-        				
+        				$data['content']['list']['thumb']['noimage'] = isset($data['content']['list']['thumb']['noimage'])?true:false; 
+
                         $data['shadow'] = isset($data['shadow'])?true:false;
         				
         				$data['images']['body']['fixed'] = isset($data['images']['body']['fixed'])?true:false;
@@ -179,6 +180,9 @@ class Constructor_Admin extends Constructor_Abstract
                         $data['slideshow']['flag']     = isset($data['slideshow']['flag'])?true:false;
                         $data['slideshow']['onpage']   = isset($data['slideshow']['onpage'])?true:false;
         				$data['slideshow']['onsingle'] = isset($data['slideshow']['onsingle'])?true:false;
+        				
+        				$data['slideshow']['advanced']['thumb'] = isset($data['slideshow']['advanced']['thumb'])?true:false;
+        				$data['slideshow']['advanced']['play']  = isset($data['slideshow']['advanced']['play'])?true:false;
                     }
                     
                     $this->_updateOptions($data);
