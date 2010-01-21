@@ -141,6 +141,9 @@ class Constructor_Abstract
         
         if (!$options) {
             $options = require CONSTRUCTOR_DIRECTORY .'/themes/default/config.php';
+        }
+        
+        if (!$admin) {
             $admin   = array();
         }
         

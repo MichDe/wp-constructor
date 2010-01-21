@@ -241,7 +241,7 @@ class Constructor_Admin extends Constructor_Abstract
                     <div id="tabs">
                         <ul>
                             <?php foreach ($this->_modules as $module => $file) : ?>
-                            <li><a href="#constr-<?php echo $file ?>"><?php _e($module, 'constructor'); ?></a></li>
+                            <li><a href="#constr-<?php echo $file ?>"><?php echo $module ?></a></li>
                             <?php endforeach; ?>
                         </ul>
     
