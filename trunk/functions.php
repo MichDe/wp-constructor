@@ -11,6 +11,9 @@
  * @author   Anton Shevchuk <AntonShevchuk@gmail.com>
  * @link     http://anton.shevchuk.name
  */
+// need for defence
+define('CONSTRUCTOR', true);
+
 // debug only current theme
 define('CONSTRUCTOR_DEBUG', false);
 
