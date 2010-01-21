@@ -48,7 +48,7 @@
     <?php endif; ?>
     <tr>
         <th scope="row" valign="top" rowspan="3"><?php _e('Body Image', 'constructor'); ?> (<em><a href="#" class="help-button" title="<?php _e('Help', 'constructor'); ?>">?</a></em>)</th>
-        <?php constructor_admin_image_src('body') ?>
+        <?php constructor_admin_image_src('body', $upload) ?>
     </tr>
     <tr>
         <td colspan="2">
@@ -62,7 +62,7 @@
 
     <tr>
         <th scope="row" valign="top" rowspan="3"><?php _e('Background Image', 'constructor'); ?> (<em><a href="#" class="help-button" title="<?php _e('Help', 'constructor'); ?>">?</a></em>)</th>
-        <?php constructor_admin_image_src('wrap') ?>
+        <?php constructor_admin_image_src('wrap', $upload) ?>
     </tr>
     <tr>
         <td colspan="2">
@@ -76,7 +76,7 @@
 
     <tr>
         <th scope="row" valign="top" rowspan="2"><?php _e('Header Wrapper Image', 'constructor'); ?> (<em><a href="#" class="help-button" title="<?php _e('Help', 'constructor'); ?>">?</a></em>)</th>
-        <?php constructor_admin_image_src('wrapheader') ?>
+        <?php constructor_admin_image_src('wrapheader', $upload) ?>
     </tr>
     <tr>
         <?php constructor_admin_image('wrapheader') ?>
@@ -84,7 +84,7 @@
     
     <tr>
         <th scope="row" valign="top" rowspan="2"><?php _e('Header Image', 'constructor'); ?> (<em><a href="#" class="help-button" title="<?php _e('Help', 'constructor'); ?>">?</a></em>)</th>
-        <?php constructor_admin_image_src('header') ?>
+        <?php constructor_admin_image_src('header', $upload) ?>
     </tr>
     <tr>
         <?php constructor_admin_image('header') ?>
@@ -92,7 +92,7 @@
     
     <tr>
         <th scope="row" valign="top" rowspan="2"><?php _e('Content Wrapper Image', 'constructor'); ?> (<em><a href="#" class="help-button" title="<?php _e('Help', 'constructor'); ?>">?</a></em>)</th>
-        <?php constructor_admin_image_src('wrapcontent') ?>
+        <?php constructor_admin_image_src('wrapcontent', $upload) ?>
     </tr>
     <tr>
         <?php constructor_admin_image('wrapcontent') ?>
@@ -100,7 +100,7 @@
     
     <tr>
         <th scope="row" valign="top" rowspan="2"><?php _e('Content Image', 'constructor'); ?> (<em><a href="#" class="help-button" title="<?php _e('Help', 'constructor'); ?>">?</a></em>)</th>
-        <?php constructor_admin_image_src('wrapper') ?>
+        <?php constructor_admin_image_src('wrapper', $upload) ?>
     </tr>
     <tr>
         <?php constructor_admin_image('wrapper') ?>
@@ -108,14 +108,14 @@
     
     <tr>
         <th scope="row" valign="top" rowspan="2"><?php _e('Sidebar Image', 'constructor'); ?> (<em><a href="#" class="help-button" title="<?php _e('Help', 'constructor'); ?>">?</a></em>)</th>
-        <?php constructor_admin_image_src('sidebar') ?>
+        <?php constructor_admin_image_src('sidebar', $upload) ?>
     </tr>
     <tr>
         <?php constructor_admin_image('sidebar') ?>
     </tr>
     <tr>
         <th scope="row" valign="top" rowspan="2"><?php _e('Extrabar Image', 'constructor'); ?> (<em><a href="#" class="help-button" title="<?php _e('Help', 'constructor'); ?>">?</a></em>)</th>
-        <?php constructor_admin_image_src('extrabar') ?>
+        <?php constructor_admin_image_src('extrabar', $upload) ?>
     </tr>
     <tr>
         <?php constructor_admin_image('extrabar') ?>
@@ -123,7 +123,7 @@
     
     <tr>
         <th scope="row" valign="top" rowspan="2"><?php _e('Footer Wrapper Image', 'constructor'); ?> (<em><a href="#" class="help-button" title="<?php _e('Help', 'constructor'); ?>">?</a></em>)</th>
-        <?php constructor_admin_image_src('wrapcontent') ?>
+        <?php constructor_admin_image_src('wrapcontent', $upload) ?>
     </tr>
     <tr>
         <?php constructor_admin_image('wrapcontent') ?>
@@ -131,7 +131,7 @@
     
     <tr>
         <th scope="row" valign="top" rowspan="2"><?php _e('Footer Image', 'constructor'); ?> (<em><a href="#" class="help-button" title="<?php _e('Help', 'constructor'); ?>">?</a></em>)</th>
-        <?php constructor_admin_image_src('footer') ?>
+        <?php constructor_admin_image_src('footer', $upload) ?>
     </tr>
     <tr>
         <?php constructor_admin_image('footer') ?>
@@ -146,9 +146,9 @@
  * @param  string $key
  * @return string
  */
-function constructor_admin_image_src($key) 
+function constructor_admin_image_src($key, $upload) 
 {
-    global $constructor, $upload;
+    global $constructor;
     ?>
     <td colspan="2">
         <input type="text" name="constructor[images][<?php echo $key?>][src]" value="<?php echo $constructor['images'][$key]['src']?>"/>
