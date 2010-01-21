@@ -7,9 +7,6 @@
  */
 header('Content-type: text/css');
 
-// debug only current theme
-error_reporting(E_ALL);
-
 // template directory
 $template_uri = get_template_directory_uri();
 

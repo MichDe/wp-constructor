@@ -1,4 +1,6 @@
 <?php
+    if (!defined('CONSTRUCTOR')) return '';
+
     require_once 'includes/theme.php';
     require_once 'includes/plugin.php';
 
