@@ -72,28 +72,28 @@ class Constructor_Main extends Constructor_Abstract
         switch (true) {
             case (isset($this->_options['slideshow']['id']) && $this->_options['slideshow']['id']!='' && function_exists('nggShowSlideshow')):
                 if (!$in) {
-                    echo nggShowSlideshow((int)$this->_options['slideshow'],
-                                          $this->_options['layout']['width'] - 2 ,
-                                          $this->_options['slideshow']['height']);
+                    echo nggShowSlideshow((int)$this->_options['slideshow']['id'],
+                                          (int)($this->_options['layout']['width'] - 2),
+                                          (int)$this->_options['slideshow']['height']);
                 } else {
                     // switch statement for $this->_options['sidebar']
                     switch ($this->_options['sidebar']) {
                         case 'none':
-                            echo nggShowSlideshow((int)$this->_options['slideshow'],
-                                                  $this->_options['layout']['width'] - 4,
-                                                  $this->_options['slideshow']['height']);
+                            echo nggShowSlideshow((int)$this->_options['slideshow']['id'],
+                                                  (int)($this->_options['layout']['width'] - 4),
+                                                  (int)$this->_options['slideshow']['height']);
                             break;
                         case 'two':
                         case 'two-right':
                         case 'two-left':
-                            echo nggShowSlideshow((int)$this->_options['slideshow'],
-                                                  $this->_options['layout']['width'] - $this->_options['layout']['sidebar'] - $this->_options['layout']['extra'] - 6,
-                                                  $this->_options['slideshow']['height']);
+                            echo nggShowSlideshow((int)$this->_options['slideshow']['id'],
+                                                  (int)($this->_options['layout']['width'] - $this->_options['layout']['sidebar'] - $this->_options['layout']['extra'] - 6),
+                                                  (int)$this->_options['slideshow']['height']);
                             break;
                         default:
-                            echo nggShowSlideshow((int)$this->_options['slideshow'],
-                                                  $this->_options['layout']['width'] - $this->_options['layout']['sidebar'] - 4,
-                                                  $this->_options['slideshow']['height']);
+                            echo nggShowSlideshow((int)$this->_options['slideshow']['id'],
+                                                  (int)($this->_options['layout']['width'] - $this->_options['layout']['sidebar'] - 4),
+                                                  (int)$this->_options['slideshow']['height']);
                             break;
                     }
                 }

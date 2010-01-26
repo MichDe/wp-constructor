@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-20 12:14+0200\n"
+"POT-Creation-Date: 2010-01-26 15:21+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
@@ -194,59 +194,59 @@ msgstr ""
 msgid "Sorry, but you are looking for something that isn&#8217;t here."
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:297
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
 msgid "Themes"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:298
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:301
 msgid "Layout"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:299
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:302
 msgid "Sidebar"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:303
 msgid "Header"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:301
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
 msgid "Content"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:302
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:305
 msgid "Comments"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:303
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:306
 msgid "Footer"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:307
 msgid "Colors"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:305
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:308
 msgid "Fonts"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:306
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:309
 msgid "CSS"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:307
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:310
 msgid "Images"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:308
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:311
 msgid "Slideshow"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:309
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:312
 msgid "Save"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:310
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:313
 msgid "Help"
 msgstr ""
 
@@ -568,8 +568,12 @@ msgstr ""
 msgid "use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a>"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:107
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:105
+msgid "required <strong>imagerotator.swf</strong>"
+msgstr ""
+
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:108
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:109
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:12
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:13
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:26
@@ -581,7 +585,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:122
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:123
 msgid "You can use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a> plugin for build custom slideshow"
 msgstr ""
 

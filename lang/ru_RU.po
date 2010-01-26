@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-20 12:14+0200\n"
-"PO-Revision-Date: 2010-01-20 12:18+0200\n"
+"POT-Creation-Date: 2010-01-26 15:21+0200\n"
+"PO-Revision-Date: 2010-01-26 15:25+0200\n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -194,59 +194,59 @@ msgstr "Ошибка 404 &mdash; Не найдено"
 msgid "Sorry, but you are looking for something that isn&#8217;t here."
 msgstr "Извините, но того, что вы ищете, здесь нет"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:297
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
 msgid "Themes"
 msgstr "Тема"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:298
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:301
 msgid "Layout"
 msgstr "Макет"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:299
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:302
 msgid "Sidebar"
 msgstr "Боковая панель"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:300
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:303
 msgid "Header"
 msgstr "&laquo;Шапка&raquo;"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:301
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
 msgid "Content"
 msgstr "Контент"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:302
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:305
 msgid "Comments"
 msgstr "Комментарии"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:303
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:306
 msgid "Footer"
 msgstr "&laquo;Подвал&raquo;"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:304
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:307
 msgid "Colors"
 msgstr "Цвета"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:305
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:308
 msgid "Fonts"
 msgstr "Шрифты"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:306
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:309
 msgid "CSS"
 msgstr "CSS"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:307
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:310
 msgid "Images"
 msgstr "Изображения"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:308
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:311
 msgid "Slideshow"
 msgstr "Слайдшоу"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:309
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:312
 msgid "Save"
 msgstr "Сохранить изменения"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:310
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:313
 msgid "Help"
 msgstr "Помощь"
 
@@ -568,8 +568,12 @@ msgstr "Над контентом"
 msgid "use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a>"
 msgstr "использует <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a>"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:107
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:105
+msgid "required <strong>imagerotator.swf</strong>"
+msgstr "требуется <strong>imagerotator.swf</strong>"
+
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:108
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:109
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:12
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:13
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:26
@@ -581,7 +585,7 @@ msgstr "использует <a href=\"http://wordpress.org/extend/plugins/nextg
 msgid "Default"
 msgstr "По умолчанию"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:122
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:123
 msgid "You can use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a> plugin for build custom slideshow"
 msgstr "Можете использовать <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a> плагин для создания слайдшоу из фотографий"
 
