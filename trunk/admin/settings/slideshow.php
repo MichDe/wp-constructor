@@ -101,7 +101,8 @@ $(document).ready(function(){
     <tr>
         <th scope="row" valign="top" >
         	<?php _e('Slideshow', 'constructor'); ?> 
-			<br/><em><small><?php _e('use <a href="http://wordpress.org/extend/plugins/nextgen-gallery/">NextGEN-Gallery</a>', 'constructor');?></small></em>
+			<br/><em><small><?php _e('use <a href="http://wordpress.org/extend/plugins/nextgen-gallery/">NextGEN-Gallery</a>', 'constructor');?><br/>
+			<?php _e('required <strong>imagerotator.swf</strong>', 'constructor');?></small></em>
 		</th>
         <td class="select" id="slideshow">
             <a href="#" title="<?php _e('Default', 'constructor'); ?>" name="0" <?php if($constructor['slideshow']['id'] == 0) echo 'class="selected"'; ?>>

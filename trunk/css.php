@@ -319,9 +319,13 @@ switch ($constructor['comments']['avatar']['pos']) {
 /* Header */
 if ($constructor['title']['hidden']) {
     $title = <<<CSS
-#header .logo h1, #header .logo h2 {
+#header .logo h1 a, #header .logo h2 {
     font-size:0;
     text-indent:-9000px;
+}
+#header .logo h1 a {
+    display:block;
+    height:100%;
 }
 CSS;
 } else {

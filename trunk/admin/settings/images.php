@@ -43,7 +43,7 @@
     if (!is_writable(CONSTRUCTOR_DIRECTORY.'/images/')) : $upload = false;
     ?>
     <tr>
-        <th scope="row" valign="top" colspan="2" class="th-full updated"><?php printf(__('<font color="red"><b>Warning!</b></font>: Directory "%s" is not writable.', 'constructor'), CONSTRUCTOR_DIRECTORY.'/images/'); ?></th>
+        <th scope="row" valign="top" colspan="3" class="th-full updated"><?php printf(__('<font color="red"><b>Warning!</b></font>: Directory "%s" is not writable.', 'constructor'), CONSTRUCTOR_DIRECTORY.'/images/'); ?></th>
     </tr>
     <?php endif; ?>
     <tr>
