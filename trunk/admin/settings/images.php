@@ -123,10 +123,10 @@
     
     <tr>
         <th scope="row" valign="top" rowspan="2"><?php _e('Footer Wrapper Image', 'constructor'); ?> (<em><a href="#" class="help-button" title="<?php _e('Help', 'constructor'); ?>">?</a></em>)</th>
-        <?php constructor_admin_image_src('wrapcontent', $upload) ?>
+        <?php constructor_admin_image_src('wrapfooter', $upload) ?>
     </tr>
     <tr>
-        <?php constructor_admin_image('wrapcontent') ?>
+        <?php constructor_admin_image('wrapfooter') ?>
     </tr>
     
     <tr>

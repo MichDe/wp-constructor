@@ -173,7 +173,9 @@ class Constructor_Main extends Constructor_Abstract
         }
          
         if (isset($this->_options['menu']['pages']['depth']) && $this->_options['menu']['pages']['depth']) {
-            wp_list_pages('title_li=&depth='.$this->_options['menu']['pages']['depth']);
+            $arg = array('title_li'=>'',
+                         'depth'   => $this->_options['menu']['pages']['depth']);
+            wp_list_pages($arg);
         }
         
         if ( function_exists('dynamic_sidebar')) {
