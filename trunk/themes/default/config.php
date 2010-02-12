@@ -63,6 +63,18 @@ return array(
                                 "timeout"    => 3000
                             )
                         ),
+            'design'   => array(
+                        'box'       => array (
+                                'flag' => true, // create box border radius
+                                'radius' => 4,  // value of it
+                            ),           
+                        'shadow'    => array (
+                                'flag' => true, // create shadow
+                                'x'    => 0,
+                                'y'    => 0,
+                                'blur' => 3
+                                ),           
+                        ),
             "images"   => array(             // background images
                         "body" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'repeat', 'fixed'=>false),
                         "wrap" => array('src'=>'themes/default/header.png', 'pos'=>'center top', 'repeat'=>'no-repeat', 'fixed'=>false),
@@ -76,7 +88,6 @@ return array(
                         "wrapfooter"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                         ),
             "opacity"   => 'light',          // type of opacity
-            "shadow"    => true,             // create shadow
             "color"     => array(            // theme colors
                         "bg"      => '#fff',
                         "bg2"     => '#fff5c5',

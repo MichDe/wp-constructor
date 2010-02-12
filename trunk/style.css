@@ -2,7 +2,7 @@
 Theme Name: Constructor
 Theme URI: http://code.google.com/p/wp-constructor/
 Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.7+ (include 2.9)
-Version: 0.7.8
+Version: 0.7.9
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -96,16 +96,7 @@ div.aligncenter {
 .blogroll {}
 .linkcat{}
 /*/Autogenerate styles*/
-/*Box*/
-.box {
-    border-style:solid;
-    border-width:1px;
-    border-radius: 6px;
-    -moz-border-radius: 6px;
-    -khtml-border-radius: 6px;
-    -webkit-border-radius: 6px
-}
-/*/Box*/
+
 
 /*Layout*/
 /*#wrapheader,#wrapper,#wrapfooter*/
@@ -179,16 +170,6 @@ div.aligncenter {
     padding: 0 10px;
     z-index:301;
     overflow:visible !important;
-    -moz-border-radius: 0 0 6px 6px;
-    -webkit-border-bottom-left-radius: 6px;
-    -webkit-border-bottom-right-radius: 6px;
-    -khtml-border-bottom-left-radius: 6px;
-    -khtml-border-bottom-right-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    border-style:solid;
-    border-width:1px;
-    border-top:0;
 }
 #header-links ul,
 #header-links li{
@@ -793,6 +774,10 @@ td {
     border-collapse: collapse;
     margin-left:6px
 }
+#wp-calendar caption{
+    padding:4px 0;
+    font-weight:700;
+}
 #wp-calendar th {
     border:0;
     width:2em;
@@ -808,6 +793,8 @@ td {
 #wp-calendar tbody a{
     display:block;
     font-weight:700;
+    border:0 !important;
+    padding:0 !important;
     text-decoration:underline
 }
 #wp-calendar tbody a:hover{
@@ -895,8 +882,11 @@ td {
     margin:10px auto;
     width:90%;
 
+}#posts .archive table th{
+    padding:0;
 }
 #posts .archive table td{
+    padding:0;
     text-align:center;
 }
 #posts .archive table a{

@@ -23,3 +23,4 @@ return array(
     '"Lucida Console",Courier, monospace',
     '"Monotype Corsiva",Courier, monospace',
 );
+?>

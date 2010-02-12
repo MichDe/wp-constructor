@@ -6,11 +6,11 @@
 class Constructor_Abstract 
 {
     /**
-     * Options by key "constructor"
+     * Default options by key "constructor"
      *
      * @var array
      */
-    var $_options = array(
+    var $_default = array(
             'sidebar'   => 'right',          // sidebar position
             'layout'    =>  array(           // layouts styles
                         'header'  => 140,    // header height
@@ -76,6 +76,18 @@ class Constructor_Abstract
                                 'timeout'    => 3000
                             )
                         ),
+            'design'   => array(
+                        'box'       => array (
+                                'flag' => true, // create box border radius
+                                'radius' => 6,  // value of it
+                            ),           
+                        'shadow'    => array (
+                                'flag' => true, // create shadow
+                                'x'    => 0,
+                                'y'    => 0,
+                                'blur' => 3
+                                ),           
+                        ),
             'images'   => array(             // background images
                         'body' => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat', 'fixed'=>false),
                         'wrap' => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat', 'fixed'=>false),
@@ -91,7 +103,6 @@ class Constructor_Abstract
                         'wrapfooter'  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                         ),
             'opacity'   => 'light',          // type of opacity
-            'shadow'    => false,            // create shadow
             'color'     => array(            // theme colors
                         'bg'      => '#fff',
                         'bg2'     => '#eee',
@@ -107,8 +118,16 @@ class Constructor_Abstract
                         'header2'   => '#ff8833',
                         'header3'   => '#ffaa66',
                         ),
+    );
     
-                         );
+    
+    /**
+     * Options by key "constructor"
+     *
+     * @var array
+     */
+    var $_options = array();
+    
     
     /**
      * Options by key "constructor_admin"
@@ -147,7 +166,7 @@ class Constructor_Abstract
             $admin   = array();
         }
         
-        $this->_options = $this->_arrayMerge($this->_options, $options);
+        $this->_options = $this->_arrayMerge($this->_default, $options);
         $this->_admin   = $this->_arrayMerge($this->_admin,   $admin);
     }
     
@@ -186,7 +205,7 @@ class Constructor_Abstract
      */
     function _updateOptions($data = array()) 
     {
-        $this->_options = $this->_arrayMerge($this->_options, $data);
+        $this->_options = $this->_arrayMerge($this->_default, $data);
         
         update_option('constructor', $this->_options);
         

@@ -115,14 +115,49 @@ CSS;
 CSS;
         break;
 }
+/* Box */
+if ($constructor['design']['box']['flag']) {
+    $radius = $constructor['design']['box']['radius'];
+    
+    $box = <<<CSS
+.box {
+    border-color:{$color_border};
+    border-style:solid;
+    border-width:1px;
+    border-radius: {$radius}px;
+    -moz-border-radius: {$radius}px;
+    -khtml-border-radius: {$radius}px;
+    -webkit-border-radius: {$radius}px
+}
 
+#header-links {
+    -moz-border-radius: 0 0 {$radius}px {$radius}px;
+    -webkit-border-bottom-left-radius: {$radius}px;
+    -webkit-border-bottom-right-radius: {$radius}px;
+    -khtml-border-bottom-left-radius: {$radius}px;
+    -khtml-border-bottom-right-radius: {$radius}px;
+    border-bottom-left-radius: {$radius}px;
+    border-bottom-right-radius: {$radius}px;
+    border-color:{$color_border};
+    border-style:solid;
+    border-width:1px;
+    border-top:0;
+}
+CSS;
+} else {
+    $box = '';
+}
 /* Shadow */
-if ($constructor['shadow']) {
+if ($constructor['design']['shadow']['flag']) {
+    $x_offset = $constructor['design']['shadow']['x'];
+    $y_offset = $constructor['design']['shadow']['y'];
+    $blur     = $constructor['design']['shadow']['blur'];
+    
     $shadow = <<<CSS
 .shadow {
-    box-shadow: 0 0 3px {$color_border};
-    -moz-box-shadow: 0 0 3px {$color_border};
-    -webkit-box-shadow: 0 0 3px {$color_border}
+    box-shadow: {$x_offset}px {$y_offset}px {$blur}px {$color_border};
+    -moz-box-shadow: {$x_offset}px {$y_offset}px {$blur}px {$color_border};
+    -webkit-box-shadow: {$x_offset}px {$y_offset}px {$blur}px {$color_border}
 }
 CSS;
 } else {
@@ -132,7 +167,7 @@ CSS;
 /* Layout */
 
 // width changes
-$sidebar2 = $sidebar - 4; // 2px - it's border width
+$sidebar2 = $sidebar - 4; // 2px - it's borders width
 $extra2   = $extra   - 4;
 
 // switch statement for $sidebar
@@ -358,13 +393,15 @@ h6 { color:{$color3} }
 pre {font-family:{$fonts_body}}
 
 a:hover { color:{$color1} }
-
-th {
+table caption {
+    color:{$color2};
+}
+table th {
     color:{$color_text};
     background-color:{$color3};
     border-color: {$color_border}
 }
-td {
+table td {
     border-color: {$color_border}
 }
 
@@ -404,9 +441,6 @@ fieldset{
 }
 /*/Form*/
 /*CSS3*/
-.box {
-    border-color: {$color_border}
-}
 ::selection {
     background: {$color1};
     color:{$color_bg};
@@ -417,6 +451,7 @@ fieldset{
 }
 {$opacity}
 {$shadow}
+{$box}
 /*/CSS3*/
 /*Layout*/
 #body {
@@ -511,6 +546,10 @@ fieldset{
 #wp-calendar tbody {
     border-bottom:1px solid {$color_border2}
 }
+#wp-calendar #today {    
+   color:{$color_text};
+   background-color: {$color_bg2};
+}
 /*/Calendar*/
 /*Post*/
 .hentry .title a,
@@ -531,11 +570,7 @@ fieldset{
 }
 /*/Post*/
 /*Archive*/
-#posts .archive table th{
-    padding:0
-}
 #posts .archive table td{
-    padding:0;
     color:{$color_text2}
 }
 #posts .archive table a{
