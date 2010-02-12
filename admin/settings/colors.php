@@ -90,13 +90,6 @@ $(document).ready(function(){
     </td>
 </tr>
 <tr>
-    <th scope="row" valign="top"><?php _e('Shadow', 'constructor'); ?></th>
-    <td>
-        <input type="checkbox" id="constructor-shadow" name="constructor[shadow]" value="1" <?php if ($constructor['shadow']) echo 'checked="checked"'; ?>/>
-        <label for="constructor-shadow"><?php _e('Only for Safari and Chrome', 'constructor')?></label>
-    </td>
-</tr>
-<tr>
     <th scope="row" valign="top"><?php _e('Elements Colors', 'constructor'); ?></th>
     <td class="color-selector">
         <div id="color_bg" class="color"><div style="background-color: <?php echo $constructor['color']['bg'] ?>"></div></div>

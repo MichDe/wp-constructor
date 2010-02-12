@@ -28,3 +28,5 @@ function returnResponse($status = RESPONSE_OK, $message = '') {
     echo "{'status':'$status','message':'$message'}";
     die();
 }
+
+?>

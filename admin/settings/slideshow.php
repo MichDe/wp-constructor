@@ -25,7 +25,7 @@ $(document).ready(function(){
 <fieldset>
     <legend>
         <input type="checkbox" id="constructor-slideshow-flag" name="constructor[slideshow][flag]" value="1" <?php if ($constructor['slideshow']['flag']) echo 'checked="checked"'; ?>/>
-        <label for="constructor-slideshow-flag"><?php _e('Enable slideshow', 'constructor'); ?></label>
+        <label for="constructor-slideshow-flag"><?php _e('Enable', 'constructor'); ?></label>
     </legend>
 			
 <table class="form-table">

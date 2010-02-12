@@ -33,9 +33,15 @@
 		
 		// Header Search Form
 		$('#menusearchform .s').mouseenter(function(){
-			$(this).animate({width:'+=32px',left:'-=16px'});
+		    var $this = $(this);
+		    if (!$this.data('expand')) {
+		        $this.data('expand', true);
+			    $this.animate({width:'+=32px',left:'-=16px'});
+		    }
 		}).mouseleave(function(){
-            $(this).animate({width:'-=32px',left:'+=16px'});
+		    var $this = $(this);
+		    $this.data('expand', false);
+            $this.animate({width:'-=32px',left:'+=16px'});
         });
 
         // Header Slideshow

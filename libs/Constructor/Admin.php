@@ -172,7 +172,8 @@ class Constructor_Admin extends Constructor_Abstract
                         $data['content']['list']['filter'] = isset($data['content']['list']['filter'])?true:false;
         				$data['content']['list']['thumb']['noimage'] = isset($data['content']['list']['thumb']['noimage'])?true:false; 
 
-                        $data['shadow'] = isset($data['shadow'])?true:false;
+                        $data['design']['box']['flag']    = isset($data['design']['box']['flag'])?true:false;
+                        $data['design']['shadow']['flag'] = isset($data['design']['shadow']['flag'])?true:false;
         				
         				$data['images']['body']['fixed'] = isset($data['images']['body']['fixed'])?true:false;
                         $data['images']['wrap']['fixed'] = isset($data['images']['wrap']['fixed'])?true:false;
