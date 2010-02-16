@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-26 15:21+0200\n"
-"PO-Revision-Date: 2010-01-26 15:25+0200\n"
+"POT-Creation-Date: 2010-02-16 11:28+0200\n"
+"PO-Revision-Date: 2010-02-16 11:30+0200\n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -223,30 +223,34 @@ msgid "Footer"
 msgstr "&laquo;Подвал&raquo;"
 
 #: W:/www/wordpress/wp-content/themes/constructor/functions.php:307
-msgid "Colors"
-msgstr "Цвета"
-
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:308
 msgid "Fonts"
 msgstr "Шрифты"
 
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:308
+msgid "Colors"
+msgstr "Цвета"
+
 #: W:/www/wordpress/wp-content/themes/constructor/functions.php:309
+msgid "Design"
+msgstr "Дизайн"
+
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:310
 msgid "CSS"
 msgstr "CSS"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:310
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:311
 msgid "Images"
 msgstr "Изображения"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:311
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:312
 msgid "Slideshow"
 msgstr "Слайдшоу"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:312
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:313
 msgid "Save"
 msgstr "Сохранить изменения"
 
-#: W:/www/wordpress/wp-content/themes/constructor/functions.php:313
+#: W:/www/wordpress/wp-content/themes/constructor/functions.php:314
 msgid "Help"
 msgstr "Помощь"
 
@@ -396,48 +400,40 @@ msgid "Light High"
 msgstr "Очень Светлый"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:93
-msgid "Shadow"
-msgstr "Тень"
-
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:96
-msgid "Only for Safari and Chrome"
-msgstr "Только для Safari и Chrome"
-
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:100
 msgid "Elements Colors"
 msgstr "Цвет элементов"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:103
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:96
 msgid "background"
 msgstr "фон"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:106
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:99
 msgid "background alternative"
 msgstr "фон (альтернативный)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:109
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:102
 msgid "opacity style color"
 msgstr "Цвет &laquo;прозрачности&raquo;"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:112
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:105
 msgid "text"
 msgstr "текст"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:115
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:108
 msgid "text alternative"
 msgstr "текст (альтернативный)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:118
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:111
 msgid "border"
 msgstr "границы"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:121
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:114
 msgid "border alternative"
 msgstr "границы (альтернативный)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:124
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:127
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:130
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:117
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:120
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/colors.php:123
 msgid "tags"
 msgstr "теги"
 
@@ -494,8 +490,8 @@ msgid "<font color=\"red\"><b>Warning!</b></font>: File \"%s\" is not writable."
 msgstr "<font color=\"red\"><b>Внимание!</b></font>: Файл  &laquo;%s&raquo; имеет атрибут только для чтения."
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:28
-msgid "Enable slideshow"
-msgstr "Включить слайдшоу"
+msgid "Enable"
+msgstr "Включить"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:34
 msgid "By default use images from posts with custom field <code>thumb-slideshow</code>"
@@ -1019,6 +1015,30 @@ msgstr "Аноним"
 msgid "version"
 msgstr "версия"
 
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/design.php:53
+msgid "Borders"
+msgstr "Границы"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/design.php:61
+msgid "Border radius"
+msgstr "Радиус закругления"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/design.php:69
+msgid "Shadow"
+msgstr "Тень"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/design.php:78
+msgid "Horizontal offset"
+msgstr "Отступ по горизонтали"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/design.php:81
+msgid "Vertical offset"
+msgstr "Отступ по вертикали"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/design.php:84
+msgid "Blur"
+msgstr "Размытие"
+
 #: W:/www/wordpress/wp-content/themes/constructor/admin/ajax/save.php:31
 #: W:/www/wordpress/wp-content/themes/constructor/admin/ajax/save.php:34
 #, php-format
@@ -1046,26 +1066,26 @@ msgstr "Тема сохранена, обновите страницу пожа�
 msgid "Home"
 msgstr "Домой"
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:330
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:332
 #, php-format
 msgid "%1$s and %2$s."
 msgstr "%1$s и %2$s."
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:330
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:332
 msgid "Entries (RSS)"
 msgstr "Записи (RSS)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:330
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:332
 msgid "Comments (RSS)"
 msgstr "Комментарии (RSS)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:334
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:336
 #, php-format
 msgid "%d queries. %s seconds."
 msgstr "%d запросов. %s секунд."
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:360
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:371
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:362
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:373
 msgid "No Image"
 msgstr "Без Изображения"
 
@@ -1084,31 +1104,35 @@ msgstr "Файл &laquo;%s&raquo; не является изображением
 msgid "File \"%s\" can't be move to \"images\" folder"
 msgstr "Не удалось переместить файл \"%s\" в папку \"images\""
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:200
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:223
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:201
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:224
 msgid "Customize Theme"
 msgstr "Настройки темы"
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:201
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:202
 msgid "Customize"
 msgstr "Настройки"
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:226
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:227
 msgid "If you like this theme and find it useful, help keep this theme free and actively developed by clicking the donate button (via PayPal or CC)"
 msgstr "Если Вам понравилась данная темы, то Вы можете помочь материально."
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:230
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:231
 msgid "Options saved."
 msgstr "Настройки сохранены."
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:234
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:235
 msgid "Some images can't be upload. Please check permissions"
 msgstr "Некоторые картинки не были залиты. Проверьте права доступа."
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:256
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:257
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
+#~ msgid "Only for Safari and Chrome"
+#~ msgstr "Только для Safari и Chrome"
+#~ msgid "Enable slideshow"
+#~ msgstr "Включить слайдшоу"
 #~ msgid "Title colors"
 #~ msgstr "Цвет заголовка"
 #~ msgid "Errors"
