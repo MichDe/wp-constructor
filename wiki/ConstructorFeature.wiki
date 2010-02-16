@@ -13,6 +13,7 @@ Available following localizations:
  * Lithuanian - Tomas Kikutis
  * Japanese - Toshi Oshio (http://blog.falcon-space.net/2010/01/wpconstructor-jp/)
  * Czech - Pech, Jiří (http://www.energyexpert.cz/)
+ * Polytonic (classical) Greek - Amaryllis Deliyanni (http://keymangreek.gr/)
 
 = Many themes =
 All aviable themes see on ConstructorThemes page
