@@ -21,31 +21,31 @@ if ( function_exists('register_sidebar') ) {
 
     register_sidebar(array(
         'name'=>'sidebar',
-        'before_widget' => '<li>',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget' => '</li>',
-        'before_title' => '<h3>',
+        'before_title' => '<h3 class="widgettitle">',
         'after_title' => '</h3>',
     ));
 
     register_sidebar(array(
         'name'=>'extra',
-        'before_widget' => '<li>',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget' => '</li>',
-        'before_title' => '<h3>',
+        'before_title' => '<h3 class="widgettitle">',
         'after_title' => '</h3>',
     ));
 
     register_sidebar(array(
         'name'=>'footer',
-        'before_widget' => '<div class="widget">',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h3>',
+        'before_title' => '<h3 class="widgettitle">',
         'after_title' => '</h3>',
     ));  
       
     register_sidebar(array(
         'name'=>'header',
-        'before_widget' => '<li>',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget' => '</li>',
         'before_title' => '<span>',
         'after_title' => '</span>',
@@ -53,9 +53,9 @@ if ( function_exists('register_sidebar') ) {
     
     register_sidebar(array(
         'name'=>'content',
-        'before_widget' => '<div class="widget">',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h3>',
+        'before_title' => '<h3 class="widgettitle">',
         'after_title' => '</h3>',
     )); 
 }

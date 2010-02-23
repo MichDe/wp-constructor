@@ -163,6 +163,8 @@ class Constructor_Admin extends Constructor_Abstract
                         $data['menu']['rss']    = isset($data['menu']['rss'])?true:false;
                         $data['menu']['search'] = isset($data['menu']['search'])?true:false;
                         
+                        $data['menu']['categories']['group'] = isset($data['menu']['categories']['group'])?true:false;
+                        
                         $data['title']['hidden'] = isset($data['title']['hidden'])?true:false;
         				
         				$data['content']['author'] = isset($data['content']['author'])?true:false;        				
