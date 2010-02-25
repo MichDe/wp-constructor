@@ -73,5 +73,8 @@
 				}
 			});
 		}
+		
+		// No underline for a with img
+		$('a:has(img)').css({border:0});
     });
 })(jQuery);
