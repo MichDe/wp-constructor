@@ -15,7 +15,7 @@ $metakey   = isset($constructor['slideshow']['metakey'])?$constructor['slideshow
 
 $WP_Query = new WP_Query();   
 $WP_Query->query('showposts='.$showposts.'&meta_key='.$metakey);
-echo '<?xml version="1.0" encoding="UTF-8" ?>';
+echo '<'.'?xml version="1.0" encoding="UTF-8" ?>';
 echo '<posts>';
 
 while($WP_Query->have_posts()) :
