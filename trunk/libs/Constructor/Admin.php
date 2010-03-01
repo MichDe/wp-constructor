@@ -115,8 +115,8 @@ class Constructor_Admin extends Constructor_Abstract
                             foreach ($files['name']['images'] as $name => $image) {
                                 if (isset($image['src']) && is_uploaded_file($files['tmp_name']['images'][$name]['src'])) {
         
-                                    if (!preg_match('/\.(jpe?g|png|gif)$/i', $image['src'])) {
-                                        $errors[] = sprintf(__('File "%s" is not a image (jpeg, png, gif)','constructor'), $image['src']);
+                                    if (!preg_match('/\.(jpe?g|png|gif|tiff)$/i', $image['src'])) {
+                                        $errors[] = sprintf(__('File "%s" is not a image (jpeg, png, gif, tiff)','constructor'), $image['src']);
                                         continue;
                                     }
         
