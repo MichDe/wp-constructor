@@ -72,6 +72,13 @@ CSS is Cascading Style Sheets - read manual for beginners http://www.w3schools.c
 }
 }}}
 
+*How do I change the size of the font in the header menu?
+{{{
+#header-links a {
+    font-size: 10px !important; /* 10px is default */
+}
+}}}
+
 *How can I change font size for title
 {{{
 #header h1 {
