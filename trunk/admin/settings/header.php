@@ -74,7 +74,12 @@ $(document).ready(function(){
 		                <option value="1" <?php if ($constructor['menu']['pages']['depth'] == 1) echo 'selected="selected"'; ?>><?php _e('Show first-level pages', 'constructor'); ?></option>
 		                <option value="2" <?php if ($constructor['menu']['pages']['depth'] == 2) echo 'selected="selected"'; ?>><?php _e('Show pages in drop-down menu', 'constructor'); ?></option>
 		                <option value="3" <?php if ($constructor['menu']['pages']['depth'] == 3) echo 'selected="selected"'; ?>><?php _e('Show pages in drop-down menu (2-levels)', 'constructor'); ?></option>         
-		            </select></dd>
+		            </select>
+					<br/>
+                    <label for="constructor-menu-pages-exclude"><?php _e('Exclude:', 'constructor'); ?></label>
+                    <input type="text" name="constructor[menu][pages][exclude]" id="constructor-menu-pages-exclude" value="<?php echo $constructor['menu']['pages']['exclude']; ?>"/>
+                    <span><?php _e('(IDs, coma separated)', 'constructor'); ?></span>
+                    </dd>
                 <dt><?php _e('Categories', 'constructor'); ?></dt>
 				<dd>
 					<input type="checkbox" id="constructor-menu-categories-group" name="constructor[menu][categories][group]" value="1" <?php if ($constructor['menu']['categories']['group']) echo 'checked="checked"'; ?>/>
@@ -86,6 +91,14 @@ $(document).ready(function(){
 		                <option value="2" <?php if ($constructor['menu']['categories']['depth'] == 2) echo 'selected="selected"'; ?>><?php _e('Show categories in drop-down menu', 'constructor'); ?></option>
 		                <option value="3" <?php if ($constructor['menu']['categories']['depth'] == 3) echo 'selected="selected"'; ?>><?php _e('Show categories in drop-down menu (2-levels)', 'constructor'); ?></option>
 		            </select>
+					<br/>
+                    <label for="constructor-menu-categories-exclude"><?php _e('Exclude:', 'constructor'); ?></label>
+                    <input type="text" name="constructor[menu][categories][exclude]" id="constructor-menu-categories-exclude" value="<?php echo $constructor['menu']['categories']['exclude']; ?>"/>
+                    <span><?php _e('(IDs, coma separated)', 'constructor'); ?></span>
+					<br/>
+                    <label for="constructor-menu-categories-title"><?php _e('Custom title:', 'constructor'); ?></label>
+                    <input type="text" name="constructor[menu][categories][title]" id="constructor-menu-categories-title" value="<?php echo $constructor['menu']['categories']['title']; ?>"/>
+					<br/>
 			    </dd>
                 <dt><?php _e('Links', 'constructor'); ?></dt>
 				<dd>

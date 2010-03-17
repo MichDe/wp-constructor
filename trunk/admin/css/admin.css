@@ -1,3 +1,8 @@
+.constructor {
+    width:100%;
+    clear:both;
+}
+
 .constructor .color{
     cursor:pointer;
     float:left;
@@ -159,6 +164,7 @@
 /*Donate*/
 .donate {
     position:relative;
+    min-height:42px;
 }
 .donate-button {
     float:left;

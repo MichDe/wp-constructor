@@ -1,0 +1,17 @@
+/*
+Theme Name: Minds
+Theme URI: 
+Description: My Minds Theme
+Version: 0.0.1
+Author: Anton Shevchuk
+Author URI: http://anton.shevchuk.name/
+*/
+#container {
+    border-right:3px dotted #AAAAAA !important;
+}
+#sidebar {
+    width:352px !important;
+}
+#footer {
+/*    min-height:300px;*/
+}

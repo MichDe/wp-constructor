@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-16 11:28+0200\n"
-"PO-Revision-Date: 2010-02-16 11:34+0200\n"
+"POT-Creation-Date: 2010-03-17 11:37+0200\n"
+"PO-Revision-Date: 2010-03-17 11:40+0200\n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -302,7 +302,7 @@ msgstr "Про мене"
 
 #: W:/www/wordpress/wp-content/themes/constructor/author.php:73
 #, php-format
-msgid "Last posts by %s"
+msgid "Latest posts by %s"
 msgstr "Останні записи %s"
 
 #: W:/www/wordpress/wp-content/themes/constructor/author.php:86
@@ -310,12 +310,10 @@ msgid "No posts by this author."
 msgstr "Намеє записів від цього автора"
 
 #: W:/www/wordpress/wp-content/themes/constructor/author.php:95
-#: W:/www/wordpress/wp-content/themes/constructor/layouts/list.php:35
 msgid "Newer Entries &raquo;"
 msgstr "Новіші записи &raquo;"
 
 #: W:/www/wordpress/wp-content/themes/constructor/author.php:96
-#: W:/www/wordpress/wp-content/themes/constructor/layouts/list.php:34
 msgid "&laquo; Older Entries"
 msgstr "&laquo; Старіші записи"
 
@@ -457,7 +455,6 @@ msgstr "Ширина другої бічної панелі"
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:77
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:77
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/comments.php:37
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:32
 msgid "Left"
 msgstr "Ліворуч"
 
@@ -465,7 +462,6 @@ msgstr "Ліворуч"
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:80
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:78
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/comments.php:38
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:34
 msgid "Right"
 msgstr "Праворуч"
 
@@ -883,43 +879,57 @@ msgstr "Відображати у випадаючому меню"
 msgid "Show pages in drop-down menu (2-levels)"
 msgstr "Відображати у випадаючому меню (два рівня)"
 
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:79
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:95
+msgid "Exclude:"
+msgstr "За винятком:"
+
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:81
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:97
+msgid "(IDs, coma separated)"
+msgstr "(ID елементів, через кому)"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:86
 msgid "Group categories in one menu item"
 msgstr "Відображати рубрики в одному елементі меню"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:84
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:89
 msgid "Disable categories"
 msgstr "Без рубрик"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:85
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:90
 msgid "Show first-level categories"
 msgstr "Відображати лише рубрики першого рівня"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:86
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:91
 msgid "Show categories in drop-down menu"
 msgstr "Відображати рубрики у випадаючому меню"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:87
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:92
 msgid "Show categories in drop-down menu (2-levels)"
 msgstr "Відображати рубрики у випадаючому меню (два рівня)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:90
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:99
+msgid "Custom title:"
+msgstr "Назва:"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:103
 msgid "Links"
 msgstr "Посилання"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:93
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:106
 msgid "Show link to home page"
 msgstr "Відображати посилання на головну сторінку"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:96
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:109
 msgid "Show link to RSS feed"
 msgstr "Відображати посилання на RSS-стрічку"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:98
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:111
 msgid "Tools"
 msgstr "Знаряддя"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:101
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/header.php:114
 msgid "Show search form"
 msgstr "Відображати форму пошуку"
 
@@ -1045,20 +1055,20 @@ msgstr "Розмивання"
 msgid "Directory \"%s\" is not writable."
 msgstr "Directory \"%s\" is not writable."
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/ajax/save.php:51
-#: W:/www/wordpress/wp-content/themes/constructor/admin/ajax/save.php:63
-#: W:/www/wordpress/wp-content/themes/constructor/admin/ajax/save.php:67
+#: W:/www/wordpress/wp-content/themes/constructor/admin/ajax/save.php:52
+#: W:/www/wordpress/wp-content/themes/constructor/admin/ajax/save.php:66
+#: W:/www/wordpress/wp-content/themes/constructor/admin/ajax/save.php:70
 #, php-format
 msgid "Can't copy file \"%s\"."
 msgstr "Не можемо скопіювати файл \"%s\"."
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/ajax/save.php:99
-#: W:/www/wordpress/wp-content/themes/constructor/admin/ajax/save.php:103
+#: W:/www/wordpress/wp-content/themes/constructor/admin/ajax/save.php:105
+#: W:/www/wordpress/wp-content/themes/constructor/admin/ajax/save.php:109
 #, php-format
 msgid "Can't save file \"%s\"."
 msgstr "Не можемо зберегти файл \"%s\"."
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/ajax/save.php:106
+#: W:/www/wordpress/wp-content/themes/constructor/admin/ajax/save.php:112
 msgid "Theme was saved, please reload page for view changes"
 msgstr "Тема збережена, оновіть сторінку"
 
@@ -1066,66 +1076,66 @@ msgstr "Тема збережена, оновіть сторінку"
 msgid "Home"
 msgstr "Додому"
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:332
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:340
 #, php-format
 msgid "%1$s and %2$s."
 msgstr "%1$s і %2$s."
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:332
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:340
 msgid "Entries (RSS)"
 msgstr "Записи (RSS)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:332
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:340
 msgid "Comments (RSS)"
 msgstr "Коментарі (RSS)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:336
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:344
 #, php-format
 msgid "%d queries. %s seconds."
 msgstr "%d запитів. %s секунд."
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:362
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:373
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:370
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:381
 msgid "No Image"
 msgstr "Нема зображення"
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:104
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:115
 #, php-format
 msgid "System can't create \"%s\" directory"
 msgstr "Система не в змозі створити папку \"%s\" "
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:119
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:130
 #, php-format
-msgid "File \"%s\" is not a image (jpeg, png, gif)"
+msgid "File \"%s\" is not a image (jpeg, png, gif, tiff)"
 msgstr "Файл &laquo;%s&raquo; не є зображенням"
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:126
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:137
 #, php-format
 msgid "File \"%s\" can't be move to \"images\" folder"
 msgstr "Файл \"%s\" не може бути перенесен до \"images\""
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:201
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:224
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:217
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:240
 msgid "Customize Theme"
 msgstr "Налаштування теми"
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:202
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:218
 msgid "Customize"
 msgstr "Налаштування"
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:227
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:243
 msgid "If you like this theme and find it useful, help keep this theme free and actively developed by clicking the donate button (via PayPal or CC)"
 msgstr "Якшо бажаєте допомогти, Ви маєте цю  можливість ;)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:231
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:247
 msgid "Options saved."
 msgstr "Налаштування збережені."
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:235
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:251
 msgid "Some images can't be upload. Please check permissions"
 msgstr "Деякі зображення не були завантаженні, будь ласка перевірте права доступу"
 
-#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:257
+#: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Admin.php:272
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 

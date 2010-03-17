@@ -10,14 +10,14 @@ class Constructor_Admin extends Constructor_Abstract
     var $_modules = array();
     var $_donate  = '
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-            <input type="hidden" name="cmd" value="_donations">
-            <input type="hidden" name="business" value="mxleod@yahoo.com">
-            <input type="hidden" name="lc" value="US">
-            <input type="hidden" name="item_name" value="Wordpress Constructor Theme">
-            <input type="hidden" name="currency_code" value="USD">
-            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+            <input type="hidden" name="cmd" value="_donations" />
+            <input type="hidden" name="business" value="mxleod@yahoo.com" />
+            <input type="hidden" name="lc" value="US" />
+            <input type="hidden" name="item_name" value="Wordpress Constructor Theme" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest" />
             <input type="submit" name="Submit" class="button-primary" value="Donate" />
-            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
         </form>';
     
     /**
@@ -32,6 +32,17 @@ class Constructor_Admin extends Constructor_Abstract
         add_action('admin_head', array($this, 'addThemeScripts'), 2);
         add_action('admin_head', array($this, 'addThemeStyles'),  3);
         add_action('admin_menu', array($this, 'addMenuItem'));
+    }
+    
+    /**
+     * to integer
+     *
+     * @param   string   $el  array element
+     * @return  integer  $el
+     */
+    public function toInt($el) 
+    {
+        return (int)$el;
     }
     
     /**
@@ -165,6 +176,9 @@ class Constructor_Admin extends Constructor_Abstract
                         
                         $data['menu']['categories']['group'] = isset($data['menu']['categories']['group'])?true:false;
                         
+                        $data['menu']['pages']['exclude'] = join(',',array_map(array($this, 'toInt'), spliti(',', $data['menu']['pages']['exclude'])));
+                        $data['menu']['categories']['exclude'] = join(',',array_map(array($this, 'toInt'), spliti(',', $data['menu']['categories']['exclude'])));
+                        
                         $data['title']['hidden'] = isset($data['title']['hidden'])?true:false;
         				
         				$data['content']['author'] = isset($data['content']['author'])?true:false;        				
@@ -226,7 +240,7 @@ class Constructor_Admin extends Constructor_Abstract
            <h2><?php _e('Customize Theme', 'constructor'); ?></h2>
            <?php
                if ( $this->_admin['donate'] ) {
-                   echo '<div id="message" class="updated fade donate"><div class="donate-button">'.$this->_donate.'</div><p>'.__('If you like this theme and find it useful, help keep this theme free and actively developed by clicking the donate button (via PayPal or CC)').'</p><a href="'.get_bloginfo('wpurl').'/wp-admin/admin-ajax.php" class="message-close" title=":("><span class="ui-icon ui-icon-close"/></a><br class="clear"/></div>';
+                   echo '<div id="message" class="updated fade donate"><div class="donate-button">'.$this->_donate.'</div><p>'.__('If you like this theme and find it useful, help keep this theme free and actively developed by clicking the donate button (via PayPal or CC)').'</p><a href="'.get_bloginfo('wpurl').'/wp-admin/admin-ajax.php" class="message-close ui-icon ui-icon-close" title=":("><span/></a><br class="clear"/></div>';
                }
                
                if ( isset( $_REQUEST['saved'] ) ) {
@@ -247,7 +261,6 @@ class Constructor_Admin extends Constructor_Abstract
                             <li><a href="#constr-<?php echo $file ?>"><?php echo $module ?></a></li>
                             <?php endforeach; ?>
                         </ul>
-    
                         <?php foreach ($this->_modules as $module => $file) : ?>
                         <div id="constr-<?php echo $file ?>">
                             <?php require_once CONSTRUCTOR_DIRECTORY ."/admin/settings/$file.php" ?>

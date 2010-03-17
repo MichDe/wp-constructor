@@ -70,7 +70,7 @@ endif;
             </div>
             <div <?php post_class(); ?>>
                 <div class="title opacity box">
-                    <h2><?php printf(__('Last posts by %s', 'constructor'), get_the_author_nickname()); ?></h2>
+                    <h2><?php printf(__('Latest posts by %s', 'constructor'), get_the_author_nickname()); ?></h2>
                     
                 </div>
                 <div class="entry">
