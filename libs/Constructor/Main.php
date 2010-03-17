@@ -174,7 +174,9 @@ class Constructor_Main extends Constructor_Abstract
          
         if (isset($this->_options['menu']['pages']['depth']) && $this->_options['menu']['pages']['depth']) {
             $arg = array('title_li'=>'',
-                         'depth'   => $this->_options['menu']['pages']['depth']);
+                         'exclude' => $this->_options['menu']['pages']['exclude'],
+                         'depth'   => $this->_options['menu']['pages']['depth']
+                         );
             wp_list_pages($arg);
         }
         
@@ -182,13 +184,19 @@ class Constructor_Main extends Constructor_Abstract
             dynamic_sidebar('header');
         }
         
-        if (isset($this->_options['menu']['categories']['depth']) && $this->_options['menu']['categories']['depth']) {            
+        if (isset($this->_options['menu']['categories']['depth']) && $this->_options['menu']['categories']['depth']) {  
+            $arg = array('title_li'=>'',
+                 'exclude' => $this->_options['menu']['categories']['exclude'],
+                 'depth'   => $this->_options['menu']['categories']['depth']
+                 );
+
             if (isset($this->_options['menu']['categories']['group']) && $this->_options['menu']['categories']['group']) {
-                echo '<li><a href="#" title="'.__('Categories','constructor').'">'.__('Categories','constructor').'</a><ul>';
-                wp_list_categories('title_li=&depth='.$this->_options['menu']['categories']['depth']);
+                $cat_title = !empty($this->_options['menu']['categories']['title'])?$this->_options['menu']['categories']['title']:__('Categories','constructor');
+                echo '<li><a href="#" title="'.$cat_title.'">'.$cat_title.'</a><ul>';
+                wp_list_categories($arg);
                 echo '</ul></li>';
             } else {
-                wp_list_categories('title_li=&depth='.$this->_options['menu']['categories']['depth']);
+                wp_list_categories($arg);
             }
         }
         
@@ -267,7 +275,7 @@ class Constructor_Main extends Constructor_Abstract
     function getAuthor($before = '', $after = '')
     {
         if (isset($this->_options['content']['author']) && $this->_options['content']['author'])
-            return $before . the_author_posts_link() . $after;
+            echo $before; the_author_posts_link(); echo $after;
     }
     
     /**

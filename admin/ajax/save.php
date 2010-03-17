@@ -34,6 +34,7 @@ function constructor_admin_save()
             returnResponse(RESPONSE_KO, sprintf(__('Directory "%s" is not writable.', 'constructor'), $directory.'/themes/'));
         } else {
             @mkdir($directory.'/themes/'.$theme_new);
+            @chmod($directory.'/themes/'.$theme_new, 0666);
         }
     }
     
@@ -51,6 +52,8 @@ function constructor_admin_save()
                      returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), $old_image));
                 }
                 
+                // read and write for owner and everybody else
+                @chmod($new_image, 0666);
                 $constructor['images'][$img]['src'] = 'themes/'. $theme_new .'/'. $file['basename'];
             }
         }
@@ -67,6 +70,9 @@ function constructor_admin_save()
             returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), '/admin/images/screenshot.png'));
         }
     }
+    
+    // read and write for owner and everybody else
+    @chmod($directory.'/themes/'.$theme_new.'/screenshot.png', 0666);
     
     // update style file
     if (file_exists($directory.'/themes/'.$theme_old.'/style.css')) {

@@ -56,8 +56,8 @@ class Constructor_Abstract
                         'home' => false,     // - link to home page
                         'rss'  => false,     // - link to RSS
                         'search' => false,   // - search form
-                        'pages'      => array('depth'=>1),
-                        'categories' => array('depth'=>1, 'group'=>1)
+                        'pages'      => array('depth'=>1, 'exclude'=>''),
+                        'categories' => array('depth'=>1, 'exclude'=>'', 'group'=>1, 'title'=>'')
                         ),
             'slideshow' => array(            // Slideshow options
                         'flag' => false,     // - enable/disable
