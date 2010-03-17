@@ -13,6 +13,9 @@ http://wp-constructor.googlecode.com/svn/trunk/themes/example/screenshot.png
 = Lime =
 http://wp-constructor.googlecode.com/svn/trunk/themes/lime/screenshot.png
 
+= Mi Minds (<a href="http://code.google.com/p/wp-constructor/downloads/list?can=3&q=minds">Download</a>) =
+http://wp-constructor.googlecode.com/svn/trunk/themes/minds/screenshot.png
+
 = Naruto (<a href="http://code.google.com/p/wp-constructor/downloads/list?can=3&q=naruto">Download</a>) =
 http://wp-constructor.googlecode.com/svn/trunk/themes/naruto/screenshot.png
 
