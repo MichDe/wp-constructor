@@ -1,0 +1,33 @@
+#summary Create custom layout
+#labels Featured,Phase-Implementation
+
+For create custom layout (different of default/list/tile) you should be create new file in folder /constructor/layouts. For example - mylayout.php:
+
+{{{
+<?php 
+__('Mylayout', 'constructor'); // requeried for correct translation
+?>
+<div id="container" >
+<?php get_constructor_slideshow(true) ?>
+
+<?php if (have_posts()) : ?>
+    <div id="posts">
+    <?php while (have_posts()) : the_post(); $i++; ?>
+        <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
+           <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+           <?php get_constructor_content() ?>
+        </div>
+    <?php endwhile; ?>
+    </div>
+    <div class="navigation clear">
+        <div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'constructor')) ?></div>
+        <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'constructor')) ?></div>
+        <div class="empty clear">&nbsp;</div>
+    </div>
+<?php endif; ?>
+
+</div><!-- id='container' -->
+<?php get_constructor_sidebar(); ?>
+}}}
+
+Image with name layout-mylayout.png (300x200px) put to folder /constructor/admin/images
