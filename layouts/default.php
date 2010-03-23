@@ -3,7 +3,8 @@
  * @package WordPress
  * @subpackage constructor
  */
-?>   
+__('Default', 'constructor'); // requeried for correct translation
+?>
 <div id="container" >
 <?php get_constructor_slideshow(true) ?>
 

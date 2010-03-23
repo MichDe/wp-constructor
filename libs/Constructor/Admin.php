@@ -40,7 +40,7 @@ class Constructor_Admin extends Constructor_Abstract
      * @param   string   $el  array element
      * @return  integer  $el
      */
-    public function toInt($el) 
+    function toInt($el) 
     {
         return (int)$el;
     }
