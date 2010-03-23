@@ -3,6 +3,7 @@
  * @package WordPress
  * @subpackage constructor
  */
+__('List', 'constructor'); // requeried for correct translation
 ?>
 <?php get_constructor_slideshow() ?>
 <div id="wrapcontent" class="wrapper">

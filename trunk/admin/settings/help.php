@@ -29,9 +29,10 @@
 		<ul>  
 		    <li><a href="http://wordpress.org/tags/constructor">Forum Topics on Wordpress.org</a></li>
 		    <li><a href="http://code.google.com/p/wp-constructor/wiki/ConstructorFaq">Constructor F.A.Q</a></li>
-		    <li><a href="http://code.google.com/p/wp-constructor/wiki/ConstructorThemes">Constructor Themes</a></li>
-		    <li><a href="http://code.google.com/p/wp-constructor/wiki/ConstructorTodo">Constructor ToDo List</a></li>
-		    <li><a href="http://code.google.com/p/wp-constructor/issues/list">Constructor Issues</a></li> 
+		    <li><a href="http://code.google.com/p/wp-constructor/wiki/ConstructorFaq">Create Custom Layout</a></li>		    
+		    <li><a href="http://code.google.com/p/wp-constructor/wiki/ConstructorThemes">Available Themes</a></li>
+		    <li><a href="http://code.google.com/p/wp-constructor/wiki/ConstructorTodo">ToDo List</a></li>
+		    <li><a href="http://code.google.com/p/wp-constructor/issues/list">Issues</a></li> 
 		</ul>
 	</td>
 	<td valign="top" class="updated quick-links">
