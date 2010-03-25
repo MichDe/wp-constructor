@@ -42,24 +42,31 @@ foreach ($themes as $theme) :
           if (file_exists(CONSTRUCTOR_DIRECTORY.'/themes/'.$theme.'/screenshot.png')) {
               $img = CONSTRUCTOR_DIRECTORY_URI .'/themes/'.$theme.'/screenshot.png';
           }
+          if (empty($data['URI'])) {
+              $data['URI'] = '#';
+          }
       } else {
           $data = array(
               'Title' => $theme,
               'Description' => __('File "style.css" is not exists','constructor'),
               'Author' => __('Anonymous','constructor'),
               'Version' => '0.0',
+              'URI' => '#'
           );
 
       }
 ?>
+
     <div <?php if ($admin['theme'] == $theme) echo 'class="selected"'; ?> title="<?php echo $theme ?>">
         <span>
             <?php if ($img): ?>
             <img src="<?php echo $img ;?>" />
             <?php endif; ?>
         </span>
-        <strong><?php echo $data['Title'] ?></strong> <em>@<?php echo $data['Author'] ?></em>- <?php _e('version', 'constructor'); ?> <?php echo $data['Version'] ?>
+        <strong><a href="<?php echo $data['URI']?>" title="<?php echo $data['Title'] ?>"><?php echo $data['Title'] ?></a></strong> <em>@<?php echo $data['Author'] ?></em>- <?php _e('version', 'constructor'); ?> <?php echo $data['Version'] ?>
+        
         <p><?php echo $data['Description'] ?></p>
+        
     </div>
 <?php endforeach; ?>
 <br class="clear"/>

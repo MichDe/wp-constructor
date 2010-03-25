@@ -39,6 +39,7 @@ return array(
                         'body'   => 0,       // - for content
                         ),
             "menu"     => array(             // menu with links
+                        'pos'  => 'left top',// - position (left|right)+(top|center|bottom)
                         "flag" => 1,         // - enable/disable
                         "home" => false,     // - link to home page
                         "rss"  => false,     // - link to RSS
