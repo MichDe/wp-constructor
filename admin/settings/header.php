@@ -18,6 +18,7 @@ $(document).ready(function(){
 /* ]]> */
 </script>
 <input type="hidden" id="constructor-title-pos" name="constructor[title][pos]" value="<?php echo $constructor['title']['pos']?>"/>
+<input type="hidden" id="constructor-menu-pos" name="constructor[menu][pos]" value="<?php echo $constructor['menu']['pos']?>"/>
 <table class="form-table">
 <tr>
     <th scope="row" valign="top"><?php _e('Hidden title', 'constructor'); ?></th>
@@ -68,6 +69,26 @@ $(document).ready(function(){
                 <label for="constructor-menu-flag"><?php _e('Show top menu', 'constructor'); ?></label>
 			</legend>
 			<dl>
+			    <dt><?php _e('Position', 'constructor'); ?></dt>
+			    <dd class="position select" id="menu-pos">
+                    <a href="#" title="<?php _e('Top Left', 'constructor'); ?>" name="left top" <?php if ($constructor['menu']['pos'] == 'left top') echo 'class="selected"'; ?>> </a>
+                    <span name="center top"> </span>
+                    <a href="#" title="<?php _e('Top Right', 'constructor'); ?>" name="right top" <?php if ($constructor['menu']['pos'] == 'right top') echo 'class="selected"'; ?>> </a>
+
+                    <br class="clear"/>
+            
+                    <a href="#" title="<?php _e('Center Left', 'constructor'); ?>" name="left center" <?php if ($constructor['menu']['pos'] == 'left center') echo 'class="selected"'; ?>> </a>
+                    <span name="center center"> </span>
+                    <a href="#" title="<?php _e('Center Right', 'constructor'); ?>" name="right center" <?php if ($constructor['menu']['pos'] == 'right center') echo 'class="selected"'; ?>> </a>
+            
+                    <br class="clear"/>
+            
+                    <a href="#" title="<?php _e('Bottom Left', 'constructor'); ?>" name="left bottom" <?php if ($constructor['menu']['pos'] == 'left bottom') echo 'class="selected"'; ?>> </a>        
+                    <span name="center bottom"> </span>
+                    <a href="#" title="<?php _e('Bottom Right', 'constructor'); ?>" name="right bottom" <?php if ($constructor['menu']['pos'] == 'right bottom') echo 'class="selected"'; ?>> </a>
+                    
+                    <br class="clear"/>
+			    </dd>
 				<dt><?php _e('Pages', 'constructor'); ?></dt>
 				<dd><select name="constructor[menu][pages][depth]" id="constructor-menu-pages">
 		                <option value="0" <?php if ($constructor['menu']['pages']['depth'] == 0) echo 'selected="selected"'; ?>><?php _e('Disable pages', 'constructor'); ?></option>

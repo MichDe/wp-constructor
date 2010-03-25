@@ -129,7 +129,12 @@ if ($constructor['design']['box']['flag']) {
     -khtml-border-radius: {$radius}px;
     -webkit-border-radius: {$radius}px
 }
-
+CSS;
+    // switch statement for $constructor['menu']['pos']
+    switch ($constructor['menu']['pos']) {
+        case 'left top':
+        case 'right top':
+            $box .= <<<CSS
 #header-links {
     -moz-border-radius: 0 0 {$radius}px {$radius}px;
     -webkit-border-bottom-left-radius: {$radius}px;
@@ -144,8 +149,47 @@ if ($constructor['design']['box']['flag']) {
     border-top:0;
 }
 CSS;
+            break;
+        default: 
+           $box .= <<<CSS
+#header-links {
+    -moz-border-radius: {$radius}px;
+    -webkit-border-radius: {$radius}px;
+    -khtml-border-radius: {$radius}px;
+    border-radius: {$radius} px;
+    border:{$color_border} solid 1px;
+}
+CSS;
+            break;
+    }
+
+    
 } else {
     $box = '';
+}
+// switch statement for $constructor['menu']['pos']
+switch ($constructor['menu']['pos']) {    
+    case 'left top':
+        $menu ="left:0;top:0;";
+        break;
+    case 'right top':
+        $menu ="right:0;top:0;";
+        break;
+    case 'left center':
+        $menu ="left:0;top:40%;";
+        break;
+    case 'right center':
+        $menu ="right:0;top:40%;";
+        break;
+    case 'left bottom':
+        $menu ="left:0;bottom:0;";
+        break;
+    case 'right bottom':
+        $menu ="right:0;bottom:0;";
+        break;
+    default:
+        $menu = "";
+        break;
 }
 /* Shadow */
 if ($constructor['design']['shadow']['flag']) {
@@ -478,16 +522,16 @@ fieldset{
 {$layout}
 
     .container-full {
-        width:{$width}px !important;
+        width:{$width}px !important
     }
 
 #sidebar{
     width:{$sidebar2}px;
-    {$sidebar_bg};
+    {$sidebar_bg}
 }
 #extra {
     width:{$extra2}px;
-    {$extrabar_bg};
+    {$extrabar_bg}
 }
 
 #wrapfooter{
@@ -507,9 +551,10 @@ fieldset{
 #header h1 a { color: {$color_title}}
 #header h2 { color: {$color_title2}}
 {$title}
-#header-links {    border-color: {$color_border} }
-    #header-links ul { border-color: {$color_border} }
-    #header-links li { border-color: {$color_border} }
+
+#header-links { {$menu} border-color: {$color_border} }
+    #header-links ul {  border-color: {$color_border} }
+    #header-links li {  border-color: {$color_border} }
     #header-links li li { background-color:{$color_bg}  }
     #header-links li:hover { background-color:{$color_bg2} }
     

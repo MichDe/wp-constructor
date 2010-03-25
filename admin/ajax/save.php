@@ -6,6 +6,8 @@
 function constructor_admin_save()
 {
     global $current_user, $template_uri;
+    // setup permissions for save
+    $permission = 0777;
     
     $directory   = get_template_directory();
     
@@ -34,7 +36,7 @@ function constructor_admin_save()
             returnResponse(RESPONSE_KO, sprintf(__('Directory "%s" is not writable.', 'constructor'), $directory.'/themes/'));
         } else {
             @mkdir($directory.'/themes/'.$theme_new);
-            @chmod($directory.'/themes/'.$theme_new, 0666);
+            @chmod($directory.'/themes/'.$theme_new, $permission);
         }
     }
     
@@ -53,7 +55,7 @@ function constructor_admin_save()
                 }
                 
                 // read and write for owner and everybody else
-                @chmod($new_image, 0666);
+                @chmod($new_image, $permission);
                 $constructor['images'][$img]['src'] = 'themes/'. $theme_new .'/'. $file['basename'];
             }
         }
@@ -72,7 +74,7 @@ function constructor_admin_save()
     }
     
     // read and write for owner and everybody else
-    @chmod($directory.'/themes/'.$theme_new.'/screenshot.png', 0666);
+    @chmod($directory.'/themes/'.$theme_new.'/screenshot.png', $permission);
     
     // update style file
     if (file_exists($directory.'/themes/'.$theme_old.'/style.css')) {

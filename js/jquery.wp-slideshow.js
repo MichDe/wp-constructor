@@ -5,7 +5,7 @@
  * @author   Anton Shevchuk <AntonShevchuk@gmail.com>
  * @link     http://anton.shevchuk.name
  * 
- * @version 0.3
+ * @version 0.4
  */
 (function($){
     /**
@@ -94,10 +94,11 @@
                     img = options.thumbPath + escape(img) + '&h=' + $this.height() + '&w=' + Math.round($this.width()/2) + '&zc=1&q=95';
                 
                 
-                $slides.append('<div><a href="'+url+'" title="'+title+'" class="title opacity shadow">'+title+'</a><img src="'+img+'" alt="'+title+'"/><p class="box shadow opacity">'+text+'</p></div>');
+                $slides.append('<div><a href="'+url+'" title="'+title+'" class="title opacity shadow">'+title+'</a><p class="box shadow opacity">'+text+'</p></div>');
                 
                 var div = $slides.find('> div:last');
                 
+                div.css('background','url('+ img +') no-repeat');
                 div.click(function(){
                     _self.stop();
                 });

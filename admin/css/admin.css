@@ -22,7 +22,7 @@
 	height: 28px;
 	background: url(../images/select2.png) center;
 }
-.constructor .select a {
+.constructor .select a, .constructor .select span {
     width:300px;
     float:left;
     display:block;
@@ -34,15 +34,18 @@
     -khtml-border-radius: 6px;
     -webkit-border-radius: 6px;
     -webkit-box-shadow: 5px 5px 7px #aaa
-
 }
+.constructor .select span {
+    background-color:#ccc;
+}
+
 .constructor .select a.selected {
     border:2px solid #21759B
 }
 .constructor .select a:hover {
     border:2px solid #D54E21
 }
-.constructor .position a{
+.constructor .position a, .constructor .position span{
     width:30px !important;
     height:30px;
 }

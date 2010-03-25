@@ -128,8 +128,7 @@ if (!is_admin()) {
     
     $main = new Constructor_Main();
     $main -> init();
-    
-    if (file_exists(get_template_directory() .'/themes/'.$main->getTheme().'/style.css'))
+    if (file_exists(CONSTRUCTOR_DIRECTORY .'/themes/'.$main->getTheme().'/style.css'))
         wp_enqueue_style( 'constructor-theme', CONSTRUCTOR_DIRECTORY_URI.'/themes/'.$main->getTheme().'/style.css');
 
         
