@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-17 11:37+0200\n"
-"PO-Revision-Date: 2010-03-17 11:39+0200\n"
+"PO-Revision-Date: 2010-03-25 17:53+0200\n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -1074,7 +1074,7 @@ msgstr "Тема сохранена, обновите страницу пожа�
 
 #: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:172
 msgid "Home"
-msgstr "Домой"
+msgstr "Главная"
 
 #: W:/www/wordpress/wp-content/themes/constructor/libs/Constructor/Main.php:340
 #, php-format
