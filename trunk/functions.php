@@ -146,6 +146,8 @@ if (!is_admin()) {
     /**
      * get_constructor_layout
      *
+     * return layout by admin options for $where
+     * 
      * @param  string $where
      * @return string
      */
@@ -158,12 +160,14 @@ if (!is_admin()) {
     /**
      * get_constructor_links
      *
+     * @param  string $before
+     * @param  string $after
      * @return string
      */
-    function get_constructor_menu()
+    function get_constructor_menu($before = '', $after = '')
     {
         global $main;
-        $main->getMenu();
+        $main->getMenu($before, $after);
     }
     
     /**
