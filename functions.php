@@ -128,14 +128,8 @@ if (!is_admin()) {
     
     $main = new Constructor_Main();
     $main -> init();
-    if (file_exists(CONSTRUCTOR_DIRECTORY .'/themes/'.$main->getTheme().'/style.css'))
-        wp_enqueue_style( 'constructor-theme', CONSTRUCTOR_DIRECTORY_URI.'/themes/'.$main->getTheme().'/style.css');
-
-        
-
     
-    /* Alias section for fast theme development */
-    
+    /* Alias section for fast theme development */    
     /**
      * get_constructor_slideshow
      *
@@ -313,6 +307,20 @@ if (!is_admin()) {
 		__('Help',    'constructor') => 'help'
     );
     
+    if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
+    	// This theme uses post thumbnails
+    	//add_theme_support( 'post-thumbnails' );
+    	//set_post_thumbnail_size( 50, 50, true ); // Normal post thumbnails
+    	//add_image_size( 'single-post-thumbnail', 400, 9999 ); // Permalink thumbnail size
+    
+    	// This theme uses wp_nav_menu()
+    	add_theme_support( 'nav-menus' );
+
+    	// Add default posts and comments RSS feed links to head
+    	add_theme_support( 'automatic-feed-links' );    	
+    }
+	
+	
     require_once CONSTRUCTOR_DIRECTORY .'/libs/Constructor/Admin.php';
     
     $admin = new Constructor_Admin();

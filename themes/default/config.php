@@ -15,7 +15,7 @@ return array(
                         'index'   => 'default',
                                  ),
             'title'     => array(            // title
-                        'pos' => 'left',     // - position
+                        'pos' => 'left top', // - position
                         'hidden' => false    // - hidden title text
                         ),
             "content"   => array(            // content
@@ -40,6 +40,7 @@ return array(
                         ),
             "menu"     => array(             // menu with links
                         'pos'  => 'right bottom',// - position (left|right)+(top|center|bottom)
+                        'width'=> false,     // - can be '100%'
                         "flag" => 1,         // - enable/disable
                         "home" => false,     // - link to home page
                         "rss"  => false,     // - link to RSS

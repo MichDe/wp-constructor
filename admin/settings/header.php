@@ -30,10 +30,24 @@ $(document).ready(function(){
 <tr>
     <th scope="row" valign="top"><?php _e('Title position', 'constructor'); ?></th>
     <td class="position select" id="title-pos">
-        <a href="#" title="<?php _e('Left', 'constructor'); ?>" name="left" <?php if($constructor['title']['pos'] == 'left') echo 'class="selected"'; ?>> </a>
-        <a href="#" title="<?php _e('Center', 'constructor'); ?>" name="center" <?php if($constructor['title']['pos'] == 'center') echo 'class="selected"'; ?>> </a>
-        <a href="#" title="<?php _e('Right', 'constructor'); ?>" name="right" <?php if($constructor['title']['pos'] == 'right') echo 'class="selected"'; ?>> </a>
+        
+        <a href="#" title="<?php _e('Top Left', 'constructor'); ?>" name="left top" <?php if($constructor['title']['pos'] == 'left top') echo 'class="selected"'; ?>> </a>
+        <a href="#" title="<?php _e('Top Center', 'constructor'); ?>" name="center top" <?php if($constructor['title']['pos'] == 'center top') echo 'class="selected"'; ?>> </a>
+        <a href="#" title="<?php _e('Top Right', 'constructor'); ?>" name="right top" <?php if($constructor['title']['pos'] == 'right top') echo 'class="selected"'; ?>> </a>
+
         <br class="clear"/>
+        
+        <span name="center left"> </span>
+        <span name="center center"> </span>
+        <span name="center right"> </span>
+        
+        <br class="clear"/>
+
+        <a href="#" title="<?php _e('Bottom Left', 'constructor'); ?>" name="left bottom" <?php if($constructor['title']['pos'] == 'left bottom') echo 'class="selected"'; ?>> </a>
+        <a href="#" title="<?php _e('Bottom Center', 'constructor'); ?>" name="center bottom" <?php if($constructor['title']['pos'] == 'center bottom') echo 'class="selected"'; ?>> </a>
+        <a href="#" title="<?php _e('Bottom Right', 'constructor'); ?>" name="right bottom" <?php if($constructor['title']['pos'] == 'right bottom') echo 'class="selected"'; ?>> </a>
+     
+        
     </td>
 </tr>
 <tr>
@@ -89,6 +103,11 @@ $(document).ready(function(){
                     
                     <br class="clear"/>
 			    </dd>
+			    <dt><?php _e('Width', 'constructor'); ?></dt>
+			    <dd>
+			         <input type="checkbox" id="constructor-menu-width" name="constructor[menu][width]" value="100%" <?php if ($constructor['menu']['width'] == '100%') echo 'checked="checked"'; ?>/>
+                     <label for="constructor-menu-width"><?php _e('stretch across the width', 'constructor'); ?></label>
+                </dd>
 				<dt><?php _e('Pages', 'constructor'); ?></dt>
 				<dd><select name="constructor[menu][pages][depth]" id="constructor-menu-pages">
 		                <option value="0" <?php if ($constructor['menu']['pages']['depth'] == 0) echo 'selected="selected"'; ?>><?php _e('Disable pages', 'constructor'); ?></option>
@@ -132,7 +151,7 @@ $(document).ready(function(){
 				<dt><?php _e('Tools', 'constructor'); ?></dt>
 				<dd>
 				   <input type="checkbox" id="constructor-menu-search" name="constructor[menu][search]" value="1" <?php if ($constructor['menu']['search']) echo 'checked="checked"'; ?>/>
-                   <label for="constructor-menu-rss"><?php _e('Show search form', 'constructor'); ?></label>
+                   <label for="constructor-menu-search"><?php _e('Show search form', 'constructor'); ?></label>
 			   </dd>
 			</dl>
 		</fieldset>

@@ -15,7 +15,7 @@ return array(
                         'index'   => 'default',
                                  ),
             "title"     => array(
-                        "pos" => 'center'
+                        "pos" => 'center bottom'
                     ),
             "content"   => array(            // content
                         "author" => 0,       // - link to author page
@@ -33,6 +33,7 @@ return array(
                         'body'   => 0,
                     ),
             "menu"     => array(             // menu with links
+                        "width"=> '100%',
                         "flag" => 1,         // - enable/disable
                         "home" => false,     // - link to home page
                         "rss"  => false,     // - link to RSS

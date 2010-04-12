@@ -45,7 +45,7 @@ get_header(); ?>
         <?php while (have_posts()) : the_post(); ?>
             <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
                 <div class="title opacity box">
-                    <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
+                    <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1>
                 </div>
                 <div class="entry archive">
                     <?php the_content(__('Read the rest of this entry &raquo;', 'constructor')) ?>
@@ -70,7 +70,7 @@ get_header(); ?>
                         <h2><a name="<?php echo $Year ?>" href="<?php echo get_year_link($Year)?>"><?php echo $Year ?></a></h2>
                         <?php for ($i = 12; $i >= 1; $i--) : ?>
                             <?php if (isset($Archive[$Year][$i])) : ?>
-                                <h3><a name="<?php echo $Year.'-'.$i ?>" href="<?php echo get_month_link($Year, $i)?>"><?php echo $MonthNames[$i].' '.$Year ?></a></h3>
+                                <h3><a name="<?php echo $Year.'-'.$i ?>" href="<?php echo get_month_link($Year, $i)?>"><?php echo $MonthNames[$i] ?></a></h3>
                                 <ul>
                                 <?php foreach ($Month[$i] as $Post) : ?>
                                     <li><a href="<?php echo get_permalink($Post['ID']) ?>"><?php echo strip_tags(apply_filters('the_title', $Post['title'])) ?></a></li>

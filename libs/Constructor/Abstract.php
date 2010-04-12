@@ -23,7 +23,7 @@ class Constructor_Abstract
                         'index'   => 'default',
                                  ),
             'title'     => array(            // title
-                        'pos' => 'left',     // - position
+                        'pos' => 'left top', // - position
                         'hidden' => false    // - hidden title text
                         ),
             'content'   => array(            // content
@@ -53,6 +53,7 @@ class Constructor_Abstract
                         ),
             'menu'     => array(             // menu with links
                         'pos'  => 'left top',// - position (left|right)+(top|center|bottom)
+                        'width'=> false,     // - can be '100%'
                         'flag' => false,     // - enable/disable
                         'home' => false,     // - link to home page
                         'rss'  => false,     // - link to RSS

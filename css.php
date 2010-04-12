@@ -64,7 +64,7 @@ CSS;
 .opacity {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBg8AUIMAAAUgBOUWVeTwAAAABJRU5ErkJggg==);
     background:rgba(0, 0, 0, 0.3);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000);
+    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000);*/   
 }
 CSS;
         break;
@@ -73,7 +73,7 @@ CSS;
 .opacity {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYmBgaAAIMAAAjwCD5Hc2/AAAAABJRU5ErkJggg==);
     background:rgba(0, 0, 0, 0.5);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#75000000, endColorstr=#75000000);
+    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#75000000, endColorstr=#75000000);*/
 }
 CSS;
         break;
@@ -82,7 +82,7 @@ CSS;
 .opacity {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBgOAMQYAAA0QDNW2hbhQAAAABJRU5ErkJggg==);
     background:rgba(0, 0, 0, 0.8);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#90000000, endColorstr=#90000000);
+    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#90000000, endColorstr=#90000000);*/
 }
 CSS;
         break;
@@ -91,7 +91,7 @@ CSS;
 .opacity {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//vy9AgAEACUkDS4BbGHwAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.3);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50FFFFFF, endColorstr=#50FFFFFF);
+    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50FFFFFF, endColorstr=#50FFFFFF);*/
 }
 CSS;
         break;
@@ -100,7 +100,7 @@ CSS;
 .opacity {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/P///xmAAAMACc0DyzeP8KAAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.8);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#90FFFFFF, endColorstr=#90FFFFFF);
+    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#90FFFFFF, endColorstr=#90FFFFFF);*/
 }
 CSS;
         break;
@@ -110,7 +110,7 @@ CSS;
 .opacity {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/v//fyxAgAEACWgDXjXePfkAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.5);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#75FFFFFF, endColorstr=#75FFFFFF);
+    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#75FFFFFF, endColorstr=#75FFFFFF);*/
 }
 CSS;
         break;
@@ -135,7 +135,7 @@ CSS;
         case 'left top':
         case 'right top':
             $box .= <<<CSS
-#header-links {
+#menu {
     -moz-border-radius: 0 0 {$radius}px {$radius}px;
     -webkit-border-bottom-left-radius: {$radius}px;
     -webkit-border-bottom-right-radius: {$radius}px;
@@ -152,7 +152,7 @@ CSS;
             break;
         default: 
            $box .= <<<CSS
-#header-links {
+#menu {
     -moz-border-radius: {$radius}px;
     -webkit-border-radius: {$radius}px;
     -khtml-border-radius: {$radius}px;
@@ -167,30 +167,68 @@ CSS;
 } else {
     $box = '';
 }
-// switch statement for $constructor['menu']['pos']
-switch ($constructor['menu']['pos']) {    
-    case 'left top':
-        $menu ="left:0;top:0;";
+// switch statement for $constructor['title']['pos']
+
+list($title_halign, $title_valign) = preg_split('/ /', $constructor['title']['pos']);
+$title_align = '';
+
+switch ($title_halign) {
+    case 'left':
+        $title_align .= 'text-align:left;';
         break;
-    case 'right top':
-        $menu ="right:0;top:0;";
+    case 'center':
+        $title_align .= 'text-align:center;';
         break;
-    case 'left center':
-        $menu ="left:0;top:40%;";
-        break;
-    case 'right center':
-        $menu ="right:0;top:40%;";
-        break;
-    case 'left bottom':
-        $menu ="left:0;bottom:0;";
-        break;
-    case 'right bottom':
-        $menu ="right:0;bottom:0;";
-        break;
-    default:
-        $menu = "";
+    case 'right':
+        $title_align .= 'text-align:right;';
         break;
 }
+
+switch ($title_valign) {
+    case 'bottom':
+        $title_align .= 'bottom:0;';
+        break;
+    case 'top':
+    default:
+        $title_align .= 'top:0;';
+        break;
+}
+
+// switch statement for $constructor['menu']['pos']
+$menu_center = round(($constructor['layout']['header'] - 40) / 2);
+
+$menu = "";
+switch ($constructor['menu']['pos']) {
+    case 'right top':
+        $menu .="right:0;top:0;";
+        break;
+    case 'left center':
+        $menu .="left:0;top:{$menu_center}px;";
+        break;
+    case 'right center':
+        $menu .="right:0;top:{$menu_center}px;";
+        break;
+    case 'left bottom':
+        $menu .="left:0;bottom:0;margin-bottom: 6px;";
+        break;
+    case 'right bottom':
+        $menu .="right:0;bottom:0;margin-bottom: 6px;";
+        break;
+    case 'left top':
+    default:
+        $menu .="left:0;top:0;";
+        break;
+}
+
+// switch statement for $constructor['menu']['width']
+switch ($constructor['menu']['width']) {
+    case '100%':
+        $menu .= "width:{$width}px;";
+        break;
+    default:
+        break;
+}
+
 /* Shadow */
 if ($constructor['design']['shadow']['flag']) {
     $x_offset = $constructor['design']['shadow']['x'];
@@ -398,11 +436,11 @@ switch ($constructor['comments']['avatar']['pos']) {
 /* Header */
 if ($constructor['title']['hidden']) {
     $title = <<<CSS
-#header .logo h1 a, #header .logo h2 {
+#header #name a, #header #description {
     font-size:0;
     text-indent:-9000px;
 }
-#header .logo h1 a {
+#header #name a {
     display:block;
     height:100%;
 }
@@ -448,20 +486,55 @@ table th {
 table td {
     border-color: {$color_border}
 }
+/*Colors*/
+/* text colors */
+.color0 { color:{$color_opacity} }
 
 .color1 { color:{$color1} }
 .color2 { color:{$color2} }
 .color3 { color:{$color3} }
 
-.color-text  { color:{$color_text} }
-.color-text2 { color:{$color_text2} }
+.color4 { color:{$color_text} }
+.color5 { color:{$color_text2} }
 
-.color-bg  { background-color:{$color_bg}  }
-.color-bg2 { background-color:{$color_bg2} }
+.color6 { color:{$color_bg}  }
+.color7 { color:{$color_bg2} }
 
-.color_border  { border-color: {$color_border}  }
-.color_border2 { border-color: {$color_border2} }
+.color8 { color:{$color_border}  }
+.color9 { color:{$color_border2} }
 
+/* borders colors */
+.bcolor0 { border-color:{$color_opacity} }
+
+.bcolor1 { border-color:{$color1} }
+.bcolor2 { border-color:{$color2} }
+.bcolor3 { border-color:{$color3} }
+
+.bcolor4 { border-color:{$color_text} }
+.bcolor5 { border-color:{$color_text2} }
+
+.bcolor6 { border-color:{$color_bg}  }
+.bcolor7 { border-color:{$color_bg2} }
+
+.bcolor8 { border-color:{$color_border}  }
+.bcolor9 { border-color:{$color_border2} }
+
+/* background colors */
+.bgcolor0 { background-color:{$color_opacity} }
+
+.bgcolor1 { background-color:{$color1} }
+.bgcolor2 { background-color:{$color2} }
+.bgcolor3 { background-color:{$color3} }
+
+.bgcolor4 { background-color:{$color_text} }
+.bgcolor5 { background-color:{$color_text2} }
+
+.bgcolor6 { background-color:{$color_bg}  }
+.bgcolor7 { background-color:{$color_bg2} }
+
+.bgcolor8 { background-color:{$color_border}  }
+.bgcolor9 { background-color:{$color_border2} }
+/*/Colors*/
 
 /*Form*/
 input, select, textarea {
@@ -551,19 +624,22 @@ fieldset{
 #header h1 a { color: {$color_title}}
 #header h2 { color: {$color_title2}}
 {$title}
+#header #title {
+    {$title_align}
+}
 
-#header-links { {$menu} border-color: {$color_border} }
-    #header-links ul {  border-color: {$color_border} }
-    #header-links li {  border-color: {$color_border} }
-    #header-links li li { background-color:{$color_bg}  }
-    #header-links li:hover { background-color:{$color_bg2} }
+#menu { {$menu} border-color: {$color_border} }
+    #menu ul {  border-color: {$color_border} }
+    #menu li {  border-color: {$color_border} }
+    #menu li li { background-color:{$color_bg}  }
+    #menu li:hover { background-color:{$color_bg2} }
     
-    #header-links .current_page_item a,
-    #header-links .current-cat a{
+    #menu .current_page_item a,
+    #menu .current-cat a{
         color:{$color1}
     }
-    #header-links .current_page_item li a,
-    #header-links .current-cat li a {
+    #menu .current_page_item li a,
+    #menu .current-cat li a {
         color: {$color_text}
     }
 /*/Header*/
@@ -599,7 +675,7 @@ fieldset{
 /*Post*/
 .hentry .title a,
 .hentry .title span{
-    border-bottom:3px dotted {$color3}
+    /*border-bottom:3px dotted {$color3}*/
 }
 .hentry .entry a,
 .hentry .footer a{
@@ -612,6 +688,19 @@ fieldset{
 .hentry .entry .crop,
 .hentry .entry img {
     border-color:{$color_border}
+}
+.list .title {
+   border-color:{$color_border};
+   background-color: {$color3};
+}
+.list .title h2 a{
+   color: {$color_bg};
+}
+.list .title h2 a:hover{
+   color: {$color_bg2};
+}
+.list .title .date{
+   color: {$color_bg2};
 }
 /*/Post*/
 /*Archive*/
@@ -680,11 +769,11 @@ fieldset{
 }
 /*/Footer*/
 /*Buttons*/
-.awesome, .awesome:visited {
+.button, .button:visited {
 	background-color: {$color1};
 	color: {$color_bg};
 }
-.awesome:hover { 
+.button:hover { 
 	background-color: {$color2};
 	color: {$color_bg2};
 }

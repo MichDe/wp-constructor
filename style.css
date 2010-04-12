@@ -1,8 +1,8 @@
 /*  
 Theme Name: Constructor
 Theme URI: http://code.google.com/p/wp-constructor/
-Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.7+ (include 2.9)
-Version: 0.9.0
+Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.7+ (include 3.0)
+Version: 0.9.5
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -11,23 +11,22 @@ Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, cu
 	whose blog you will find at http://anton.shevchuk.name/
 
 */
-html, body {
-    margin:0;
-    padding:0;
-}
+
+html,body,
+div,pre,code,
+dl,dt,dd,ul,ol,li,
+h1,h2,h3,h4,h5,h6,
+form,fieldset,legend,input,button,textarea,
+p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+caption,th{text-align:left;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
 
 body {
     min-width:1000px;
     line-height:1.5em;
-}
-
-div, ul, ol, li, p, img {
-    margin:0;
-    padding:0;
-}
-
-li ul, li ol {
-    padding-left:20px;
 }
 
 hr {
@@ -35,9 +34,9 @@ hr {
     height: 1px;
 }
 
-h1 {font-size:2.0em }
-h2 {font-size:1.8em }
-h3 {font-size:1.6em; margin:12px 0}
+h1 {font-size:2.0em; margin:12px 0}
+h2 {font-size:1.8em; margin:12px 0}
+h3 {font-size:1.6em; margin:8px  0}
 h4 {font-size:1.4em; margin:8px  0}
 h5 {font-size:1.2em; margin:6px  0}
 h6 {font-size:1.2em; margin:4px  0}
@@ -134,25 +133,26 @@ div.aligncenter {
     height:140px;
     position: relative
 }
-	#header .logo {
+	#header #title {
 	    position:absolute;
-	    height:60%;
+	    display:block;
+	    width:100%;
 	    text-transform: uppercase;
 	    margin:0 auto
 	}
-	#header h1 {
+	#header #name {
 	    font: bold 600%/100% Verdana,Tahoma,sans-serif;
 	    letter-spacing: -6px;
 	    margin:0;
 	    padding:0;
 	}
-	#header h2 {
+	#header #description {
 	    display:block;
 	    font-size:1.2em;
 	    margin:0;
 	    padding:0 8px;
 	}
-	#header .logo a {
+	#header a {
 	    display:block;
 	}
 
@@ -166,44 +166,42 @@ div.aligncenter {
     margin: 0;
 }
 
-#header-links {
+#menu {
     position:absolute;
-    margin: 0 0 6px 0;
-    padding: 0 10px;
     z-index:301;
-    overflow:visible !important;
+    overflow:visible;
 }
-#header-links ul,
-#header-links li{
-    padding:0;
-    margin:0;
-    list-style:none;
-}
-#header-links ul {
-    height:40px;
+#menu ul.menu {
     border-style:none none none dotted;
     border-width:0 0 0 1px;
+    margin: 0 10px;
+    float:left;
 }
-#header-links li {
+#menu li {
     float: left;
     position:relative;
     border-style:none dotted none none;
     border-width:0 1px 0 0;
     height:40px;
+    list-style:none;
 }
 
-#header-links li.indicator {
+#menu li.indicator {
+    cursor:pointer;
 	background-image: url('images/arrows.png');
 	background-repeat: no-repeat;
 	background-position: 98% -106px; /* 8-bit indexed alpha png. IE6 gets solid image only */
 }
-	#header-links li:hover.indicator    { background-position: 98% -161px }
-	#header-links li li.indicator       { background-position: 98%    6px }
-	#header-links li li:hover.indicator { background-position: 98%  -49px }
+	#menu li:hover.indicator    { background-position: 98% -161px }
+	#menu li li.indicator       { background-position: 98%    6px }
+	#menu li li:hover.indicator { background-position: 98%  -49px }
 
-#header-links ul ul {
+#menu ul ul {
+    top:40px;
+    left:0px;
     z-index:302;
     position:absolute;
+    zoom: 1;
 	display:none;
 	height:auto;
     min-width:122px;
@@ -213,23 +211,23 @@ div.aligncenter {
     border-style:dotted none none none;
     border-width:1px 0 0 0;
 }
-#header-links ul ul ul {
+#menu ul ul ul {
     z-index:303;
     top:10px;
     left: 98%;
 }
-#header-links li li {
+#menu li li {
     float:none;
     width: auto;
     border-style:none dotted dotted dotted;
     border-width:0 1px 1px 1px;
 }
-* html #header-links li li {
+* html #menu li li {
     width:120px
 }
 
-#header-links li a,
-#header-links li span{
+#menu li a,
+#menu li span{
     text-align:center;
     white-space: nowrap;
     display:block;
@@ -242,7 +240,7 @@ div.aligncenter {
     line-height:40px
 }
 /* 2-th level reset */
-#header-links li li a {
+#menu li li a {
     text-align:left;
     padding:0 24px 0 16px;
 	min-width:80px;
@@ -277,9 +275,6 @@ div.aligncenter {
 .sidebar .tagcloud {
     padding:0px 16px
 }
-.sidebar ul {
-    margin:0;
-}
 .sidebar ul ul{
     padding:0 0 0 4px;
 }
@@ -303,19 +298,25 @@ div.aligncenter {
     width:100%;
     margin:0 0 10px 0
 }
-.hentry .title h2 {
+.hentry .title h1,
+.hentry .title h2,
+.hentry .title h3 {
     margin:0;
     font-weight:700 !important;
-    font-size:1.8em
+    font-size:2em;
+}
+.hentry .title h1 a,
+.hentry .title h2 a{
+    display:block;
+    padding:10px 12px;
 }
 .hentry .title, .pagetitle {
-    padding:10px 0 14px 12px;
-    margin-bottom: 12px
+    margin-bottom: 8px
 }
 .hentry .entry {
     font-size:1.2em;
     line-height:1.4em;
-    padding:0 4px;
+    padding:4px;
 }
 .hentry .entry h1,
 .hentry .entry h2,
@@ -336,10 +337,6 @@ div.aligncenter {
     padding:4px;
     border-style:solid;
     border-width:1px;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -khtml-border-radius: 4px;
-    -webkit-border-radius: 4px
 }
 
 .hentry .entry img.alignleft {
@@ -370,7 +367,9 @@ div.aligncenter {
 .hentry .pages {
     font-size:1.4em
 }
+.hentry .more-link {
 
+}
 .hentry .footer {
     clear:both
 }
@@ -459,11 +458,10 @@ div.aligncenter {
 }
 .tile .links .comments a{
     margin:4px 6px 0 0;
-    /*padding: 2px 0;*/
+    padding: 5px 8px;
     text-align:center;
     width:14px;
     height:14px;
-    /*background:url(images/comments.png) no-repeat 3px 1px;*/
 }
 /*/Tile*/
 /*List*/
@@ -471,12 +469,24 @@ div.aligncenter {
 
 }
 .list .title {
-    padding:8px 0 8px 12px;
+    /*padding:8px 0 8px 12px;
     margin:0
+    border-bottom:1px solid #f0f;*/
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+.list .title h2 {
+	background-image:url(images/alert-overlay.png);
+	background-repeat: repeat-x; 
+}
+.list .title h2 a {
+    padding:6px 12px;
 }
 .list .date {
     position:absolute;
-    top:8px;
+    top:12px;
     right:12px;
 	font-size:1.2em;
 	font-weight:600;
@@ -522,8 +532,7 @@ div.aligncenter {
     text-decoration:underline
 }
 .widget ul {
-    padding:0 0 0 4px;
-    margin:0;
+    /*padding:0 0 0 4px;*/
 }
 .widget li {
     padding:2px;
@@ -537,7 +546,6 @@ div.aligncenter {
 /*Search*/
 #searchform {
     width:200px;
-    padding:0;
     margin:12px auto
 }
 #searchform label {
@@ -554,8 +562,6 @@ div.aligncenter {
     text-indent:-1000px;
     display:inline;
     line-height:0px;
-    padding:0;
-    margin:0
 }
 
 #menusearchform {
@@ -581,10 +587,6 @@ input, select, textarea {
     padding: 4px;
     border-width:1px;
     border-style:solid;
-    border-radius:4px;
-    -moz-border-radius: 4px;
-    -khtml-border-radius: 4px;
-    -webkit-border-radius: 4px;
 }
 fieldset{
     border-width:1px;
@@ -597,7 +599,7 @@ textarea {width: 98%}
     margin: 5px 10px 0 0
 }
 #commentform input {
-    width: 170px;
+    min-width: 170px;
     padding: 2px;
     margin: 5px 5px 1px 0
 }
@@ -615,8 +617,7 @@ textarea {width: 98%}
 	text-align:right;
 }
 /*/Form*/
-
-/*/Table*/
+/*Table*/
 table {
     border-collapse:collapse
 }
@@ -645,7 +646,6 @@ td {
     padding:8px
 }
 .commentlist {
-    padding: 0;
     text-align: justify
 }
 
@@ -654,10 +654,6 @@ td {
     padding: 5px 5px 10px 10px;
     list-style: none;
     clear:both;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -khtml-border-radius: 4px;
-    -webkit-border-radius: 4px
 }
 
 .commentlist ul {
@@ -691,8 +687,6 @@ td {
 
 .nocomments {
     text-align: center;
-    margin: 0;
-    padding: 0
 }
 .comment-author{
     font-size:1.2em
@@ -717,21 +711,20 @@ td {
 #footer .widget {
     width:200px;
     float:left;
-    margin: 0 0 12px 0
+    margin: 0 0 0 12px
 }
 
 #footer .copy{
-    padding:4px 0 0 0;
-    /*border-top:1px solid #999;*/
+    padding:14px 0 0 0;
     text-align:center
 }
 /*/Footer*/
 /*Feed*/
 .feed-icon {
     position:absolute;
-    top:18px;
+    top:8px;
     right:16px;
-    padding-right:20px;
+    padding-right:20px !important;
     display:block;
     font-size:0.6em;
 	line-height:18px;
@@ -750,11 +743,6 @@ td {
     text-align: center;
     padding-top: 4px;
     margin: 10px;
-    /* optional rounded corners for browsers that support it */
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -khtml-border-radius: 3px;
-    -webkit-border-radius: 3px;
 }
 .wp-caption a {
     border: 0 none !important;
@@ -819,8 +807,8 @@ td {
     display:block;
     width:9px;
     cursor:pointer;
-    height:18px;
-    line-height:16px;
+    height:25px;
+    line-height:23px;
     text-align:center;
 }
 
@@ -883,8 +871,8 @@ td {
 #posts .archive table {
     margin:10px auto;
     width:90%;
-
-}#posts .archive table th{
+}
+#posts .archive table th{
     padding:0;
 }
 #posts .archive table td{
@@ -898,48 +886,41 @@ td {
 /*/Archive*/
 /*/Templates*/
 /*Buttons*/
-.awesome, .awesome:visited {
-	background-image:url(images/alert-overlay.png);
+.button, .button:visited {
+	background-image:url(images/alert-overlay.png) !important; /* important requried by IE for opacity elements*/
 	background-repeat: repeat-x; 
 	display: inline-block; 
-	padding: 5px 10px 6px; 
+	padding: 2px 10px; 
 	text-decoration: none;
 	
-	border-radius: 5px; 
-	-moz-border-radius: 5px; 
-	-webkit-border-radius: 5px;
-	
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.5);
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
-	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	
 	border-bottom: 1px solid rgba(0,0,0,0.25);
 	position: relative;
 	cursor: pointer;
+	
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 13px;
 }
-
-	.awesome:hover							{ background-color: #111; color: #fff; }
-	.awesome:active							{ top: 1px; }
-	.small.awesome, .small.awesome:visited 	{ font-size: 11px; padding: ; }
-	.awesome, .awesome:visited,
-	.medium.awesome, .medium.awesome:visited { font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
-	.large.awesome, .large.awesome:visited 	{ font-size: 14px; padding: 8px 14px 9px; }
+	.button:hover { background-color: #111; color: #fff; }
+	.button:active { top: 1px; }
 	
-	.green.awesome, .green.awesome:visited	{ background-color: #91bd09; }
-	.green.awesome:hover					{ background-color: #749a02; }
-	
-	.blue.awesome, .blue.awesome:visited	{ background-color: #2daebf; }
-	.blue.awesome:hover						{ background-color: #007d9a; }
-	
-	.red.awesome, .red.awesome:visited		{ background-color: #e33100; }
-	.red.awesome:hover						{ background-color: #872300; }
-	
-	.magenta.awesome, .magenta.awesome:visited	{ background-color: #a9014b; }
-	.magenta.awesome:hover						{ background-color: #630030; }
-	
-	.orange.awesome, .orange.awesome:visited	{ background-color: #ff5c00; }
-	.orange.awesome:hover						{ background-color: #d45500; }
-	
-	.yellow.awesome, .yellow.awesome:visited	{ background-color: #ffb515; }
-	.yellow.awesome:hover						{ background-color: #fc9200; }
 /*/Buttons*/
 /*/Theme*/
+
+/* optional rounded corners for browsers that support it */
+.hentry .entry .crop,
+.hentry .entry img,
+.commentlist li,
+.wp-caption,
+ input, select, textarea,
+.button, .button:visited {
+	border-radius: 4px; 
+	-moz-border-radius: 4px; 
+    -khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}

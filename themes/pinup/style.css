@@ -7,7 +7,7 @@ Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 */
 
-#header h1 {
+#header #title {
     letter-spacing: -2px;
 }
 /*disable circles*/

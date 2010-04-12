@@ -59,8 +59,8 @@
             var playId = null;
             
             $this.addClass('opacity');
-            $this.append('<span class="prev opacity medium awesome">&laquo;</span>');
-            $this.append('<span class="next opacity medium awesome">&raquo;</span>');
+            $this.append('<span class="prev opacity medium button">&laquo;</span>');
+            $this.append('<span class="next opacity medium button">&raquo;</span>');
             $this.append('<div class="slides"></span>');
             
             $slides = $this.find('.slides');
