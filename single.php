@@ -28,7 +28,7 @@ get_header();
                     <?php get_constructor_author('', ' |') ?>
                     <?php the_tags(__('Tags', 'constructor') . ': ', ', ', ' |'); ?>
                     <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
-                    <?php comments_popup_link(__('No Comments &#187;', 'constructor'), __('1 Comment &#187;', 'constructor'), __('% Comments &#187;', 'constructor'), '', __('Comments Closed', 'constructor') ); ?>                    </div>
+                    <?php comments_popup_link(__('No Comments &#187;', 'constructor'), __('1 Comment &#187;', 'constructor'), __('% Comments &#187;', 'constructor'), 'comments-link', __('Comments Closed', 'constructor') ); ?>                    </div>
                     <div class="line clear"></div>
                 </div>
             </div>

@@ -167,6 +167,7 @@ div.aligncenter {
 }
 
 #menu {
+    text-align:left;
     position:absolute;
     z-index:301;
     overflow:visible;
@@ -199,10 +200,10 @@ div.aligncenter {
 #menu ul ul {
     top:40px;
     left:0px;
-    z-index:302;
+    /*z-index:302;*/
     position:absolute;
     zoom: 1;
-	display:none;
+	/*display:none;*/
 	height:auto;
     min-width:122px;
     width:auto !important;
@@ -218,7 +219,7 @@ div.aligncenter {
 }
 #menu li li {
     float:none;
-    width: auto;
+    width:auto;
     border-style:none dotted dotted dotted;
     border-width:0 1px 1px 1px;
 }

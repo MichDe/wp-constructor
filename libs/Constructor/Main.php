@@ -30,12 +30,14 @@ class Constructor_Main extends Constructor_Abstract
     /**
      * add styles by wp_head hook
      *
-     * @return  void
+     * @global $blog_id
+     * @return void
      */
     function addThemeStyles() 
     {
         global $blog_id;
         
+        // need for wordpress MU and WP3
         if (!$blog_id) {
             $blog_id = 1;
         }
@@ -163,15 +165,20 @@ class Constructor_Main extends Constructor_Abstract
     /**
      * get_constructor_links
      *
+     * @param  string $before
+     * @param  string $after
      * @return string
      */
-    function getMenu()
+    function getMenu($before = '', $after = '')
     {
         if (!isset($this->_options['menu']['flag']) or !$this->_options['menu']['flag']) return false;
 
         echo '<div id="menu" class="opacity shadow">';
 //        echo '<div>';
         echo '<ul class="menu opacity">';
+        if (!empty($before)) {            
+            echo '<li class="before-item">'.$before.'</li>';
+        }
         
         if (function_exists('wp_nav_menu')) {
             $nav_menu = wp_nav_menu( array( 'sort_column' => 'menu_order',
@@ -180,7 +187,8 @@ class Constructor_Main extends Constructor_Abstract
                                             
             $nav_menu = strip_tags($nav_menu, '<li><a>');
             echo $nav_menu;
-        } 
+        }
+        // maybe "else" or not? 
         {
             
         
@@ -231,8 +239,11 @@ class Constructor_Main extends Constructor_Abstract
                 echo '<li id="rss"><a href="'.get_bloginfo('rss2_url').'"  title="'.__('RSS Feed', 'constructor').'">'. __('RSS Feed', 'constructor').'</a></li>';
             }
             
-            echo '</ul>';
         }
+        if (!empty($after)) {            
+            echo '<li class="after-item">'.$after.'</li>';
+        }
+        echo '</ul>';
 //        echo '</div>';
         echo '</div>';
     }
@@ -323,25 +334,26 @@ class Constructor_Main extends Constructor_Abstract
      */
     function getSidebar()
     {
-        if (isset($this->_options['sidebar']) && $this->_options['sidebar'] == 'none') return false;
-        
-        ?>
-            <div id="sidebar" class="sidebar">
-                <?php get_sidebar(); ?>
-            </div>
-        <?php
-        
-        if (isset($this->_options['sidebar']) && 
-            ($this->_options['sidebar'] == 'two' or $this->_options['sidebar'] == 'two-right' or $this->_options['sidebar'] == 'two-left' )) {
-        ?>
-            <div id="extra" class="sidebar">
-                <ul>
-                    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('extra') ) : ?>
-                    <?php wp_list_pages('title_li=<h2>'.__('Pages', 'constructor').'</h2>' ); ?>
-                    <?php endif; ?>
-                </ul>
-            </div>
-        <?php
+        // switch statement for $this->_options['sidebar']
+        switch ($this->_options['sidebar']) {
+            case 'left':
+            case 'right':
+                get_sidebar();
+                break;
+            case 'left':
+            case 'right':
+                get_sidebar();
+                break;
+            case 'two':
+            case 'two-right':
+            case 'two-left':
+                get_sidebar();
+                get_sidebar('extra');
+                break;
+            case 'none':
+            default:
+                // nothing
+                break;
         }
     }
     
