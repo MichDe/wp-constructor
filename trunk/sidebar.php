@@ -5,7 +5,6 @@
  */
 ?>
 	<ul>
-
 		<?php 	/* Widgetized sidebar, if you have the plugin installed. */
 				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar') ) : ?>
                 
@@ -15,7 +14,7 @@
 		</li>
 		<?php endif; ?>
 		
-		<?php wp_list_pages('title_li=<h2>'.__('Pages', 'constructor').'</h2>' ); ?>
+		<?php wp_list_pages('title_li=<h3>'.__('Pages', 'constructor').'</h3>' ); ?>
 
 		<?php wp_list_categories('show_count=1&title_li=<h3>'.__('Categories', 'constructor').'</h3>'); ?>
 		

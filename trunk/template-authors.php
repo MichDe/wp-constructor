@@ -13,7 +13,7 @@ get_header(); ?>
         <?php while (have_posts()) : the_post(); ?>
             <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
                 <div class="title opacity box">
-                    <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
+                    <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1>
                 </div>
                 <div class="entry">
 

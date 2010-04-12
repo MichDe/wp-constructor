@@ -27,6 +27,7 @@
 	<div class="navigation">
 		<div class="alignleft"><?php previous_comments_link() ?></div>
 		<div class="alignright"><?php next_comments_link() ?></div>
+		<div class="empty clear">&nbsp;</div>
 	</div>
 
 <?php else : // this is displayed if there are no comments so far ?>
@@ -67,7 +68,7 @@
     <?php endif; ?>    
     <!--<p><small><?php printf(__('<strong>XHTML:</strong> You can use these tags: <code>%s</code>', 'constructor'), allowed_tags()); ?></small></p>-->    
     <p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>    
-    <p class="submit"><input name="submit" type="submit" id="submit" tabindex="5" class="medium awesome" value="<?php _e('Submit Comment', 'constructor'); ?>" /></p>
+    <p class="submit"><input name="submit" type="submit" id="submit" tabindex="5" class="button" value="<?php _e('Submit Comment', 'constructor'); ?>" /></p>
     <?php do_action('comment_form', $post->ID); ?>    
     </form>
 

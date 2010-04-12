@@ -7,7 +7,7 @@
 // load header.php
 get_header();
 
-// load one of layout pages (layout-*.php)
+// load one of layout pages (layouts/*.php) based on settings
 get_constructor_layout('archive');
 
 // load footer.php

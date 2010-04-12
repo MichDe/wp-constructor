@@ -16,7 +16,7 @@ get_header();
         <?php while (have_posts()) : the_post(); ?>
             <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
                 <div class="title opacity box">
-                    <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
+                    <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1>
                 </div>
                 <div class="entry">
                     <?php the_content(__('Read the rest of this entry &raquo;', 'constructor')) ?>
@@ -24,7 +24,7 @@ get_header();
                 </div>
                 <div class="footer">
                     <div class="links right">
-                    <?php the_date() ?> |
+                    <?php the_time() ?> |
                     <?php get_constructor_author('', ' |') ?>
                     <?php the_tags(__('Tags', 'constructor') . ': ', ', ', ' |'); ?>
                     <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>

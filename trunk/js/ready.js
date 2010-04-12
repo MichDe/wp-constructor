@@ -9,11 +9,11 @@
     $(document).ready(function(){
 
         // Header Drop-Down Menu
-        if ($("#header-links > ul ul").length > 0) {
+        if ($("#menu ul ul").length > 0) {
 			
-			$("#header-links li:has(ul)").addClass('indicator');
+			$("#menu li:has(ul)").addClass('indicator');
 			
-			$("#header-links li:has(ul)").hover(function(){
+			$("#menu li:has(ul)").hover(function(){
 				$(this)
 					.addClass('hover')
 					.children('ul')

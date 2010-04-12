@@ -46,8 +46,12 @@ class Constructor_Main extends Constructor_Abstract
         } else {
             wp_enqueue_style('constructor-style', get_option('home').'/?theme-constructor=css');
         }
+        
+        // load constructor subtheme style
+        if (file_exists(CONSTRUCTOR_DIRECTORY .'/themes/'.$this->getTheme().'/style.css')) {
+            wp_enqueue_style( 'constructor-theme', CONSTRUCTOR_DIRECTORY_URI.'/themes/'.$this->getTheme().'/style.css');
+        }
     }
-    
     /**
      * get_constructor_slideshow
      *
@@ -164,56 +168,73 @@ class Constructor_Main extends Constructor_Abstract
     function getMenu()
     {
         if (!isset($this->_options['menu']['flag']) or !$this->_options['menu']['flag']) return false;
-        
 
-        echo '<div id="header-links" class="opacity shadow"><ul class="opacity">';
+        echo '<div id="menu" class="opacity shadow">';
+//        echo '<div>';
+        echo '<ul class="menu opacity">';
         
-        if (isset($this->_options['menu']['home']) && $this->_options['menu']['home']) {
-            echo '<li id="home"><a href="'.get_option('home').'/" title="'.get_bloginfo('name').'">'.__('Home', 'constructor').'</a></li>';
-        }
-         
-        if (isset($this->_options['menu']['pages']['depth']) && $this->_options['menu']['pages']['depth']) {
-            $arg = array('title_li'=>'',
-                         'exclude' => $this->_options['menu']['pages']['exclude'],
-                         'depth'   => $this->_options['menu']['pages']['depth']
-                         );
-            wp_list_pages($arg);
-        }
+        if (function_exists('wp_nav_menu')) {
+            $nav_menu = wp_nav_menu( array( 'sort_column' => 'menu_order',
+                                            'container'   => '', 'echo' => 0,
+                                            'menu_class'  => 'menu opacity' ) );
+                                            
+            $nav_menu = strip_tags($nav_menu, '<li><a>');
+            echo $nav_menu;
+        } 
+        {
+            
         
-        if ( function_exists('dynamic_sidebar')) {
-            dynamic_sidebar('header');
-        }
-        
-        if (isset($this->_options['menu']['categories']['depth']) && $this->_options['menu']['categories']['depth']) {  
-            $arg = array('title_li'=>'',
-                 'exclude' => $this->_options['menu']['categories']['exclude'],
-                 'depth'   => $this->_options['menu']['categories']['depth']
-                 );
-
-            if (isset($this->_options['menu']['categories']['group']) && $this->_options['menu']['categories']['group']) {
-                $cat_title = !empty($this->_options['menu']['categories']['title'])?$this->_options['menu']['categories']['title']:__('Categories','constructor');
-                echo '<li><a href="#" title="'.$cat_title.'">'.$cat_title.'</a><ul>';
-                wp_list_categories($arg);
-                echo '</ul></li>';
-            } else {
-                wp_list_categories($arg);
+            if (isset($this->_options['menu']['home']) && $this->_options['menu']['home']) {
+                echo '<li id="home"><a href="'.get_option('home').'/" title="'.get_bloginfo('name').'">'.__('Home', 'constructor').'</a></li>';
             }
+            
+    
+             
+            if (isset($this->_options['menu']['pages']['depth']) && $this->_options['menu']['pages']['depth']) {
+                $arg = array('title_li'=>'',
+                             'exclude' => $this->_options['menu']['pages']['exclude'],
+                             'depth'   => $this->_options['menu']['pages']['depth']
+                             );
+                wp_list_pages($arg);
+            }
+            
+            if ( function_exists('dynamic_sidebar')) {
+                dynamic_sidebar('header');
+            }
+            
+            if (isset($this->_options['menu']['categories']['depth']) && $this->_options['menu']['categories']['depth']) {  
+                $arg = array('title_li'=>'',
+                     'exclude' => $this->_options['menu']['categories']['exclude'],
+                     'depth'   => $this->_options['menu']['categories']['depth']
+                     );
+    
+                if (isset($this->_options['menu']['categories']['group']) && $this->_options['menu']['categories']['group']) {
+                    $cat_title = !empty($this->_options['menu']['categories']['title'])?$this->_options['menu']['categories']['title']:__('Categories','constructor');
+                    echo '<li><a href="#" title="'.$cat_title.'">'.$cat_title.'</a><ul>';
+                    wp_list_categories($arg);
+                    echo '</ul></li>';
+                } else {
+                    wp_list_categories($arg);
+                }
+            }
+            
+            if (isset($this->_options['menu']['search']) && $this->_options['menu']['search'])  {
+                echo '<li id="menusearchform">
+                          <form role="search" method="get" action="' . get_option('home') . '/" >
+                          <input class="s" type="text" value="' . esc_attr(apply_filters('the_search_query', get_search_query())) . '" name="s"/>
+                          
+                          </form>
+                      </li>';
+            }
+            
+            if (isset($this->_options['menu']['rss']) && $this->_options['menu']['rss'])  {
+                echo '<li id="rss"><a href="'.get_bloginfo('rss2_url').'"  title="'.__('RSS Feed', 'constructor').'">'. __('RSS Feed', 'constructor').'</a></li>';
+            }
+            
+            echo '</ul>';
         }
-        
-        if (isset($this->_options['menu']['search']) && $this->_options['menu']['search'])  {
-            echo '<li id="menusearchform">
-                      <form role="search" method="get" action="' . get_option('home') . '/" >
-                      <input class="s" type="text" value="' . esc_attr(apply_filters('the_search_query', get_search_query())) . '" name="s"/>
-                      
-                      </form>
-                  </li>';
-        }
-        
-        if (isset($this->_options['menu']['rss']) && $this->_options['menu']['rss'])  {
-            echo '<li id="rss"><a href="'.get_bloginfo('rss2_url').'"  title="'.__('RSS Feed', 'constructor').'">'. __('RSS Feed', 'constructor').'</a></li>';
-        }
-        
-        echo '</ul><div class="clear"></div></div>';
+//        echo '</div>';
+        echo '</div>';
     }
     
     /**

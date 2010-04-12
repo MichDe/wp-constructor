@@ -16,10 +16,10 @@ endif;
         <div id="posts">
             <div <?php post_class('author'); ?>>
                 <div class="title opacity box">
-                    <h2>
+                    <h1>
                         <a href="#" rel="bookmark" title="<?php echo get_the_author() ?>"><?php echo get_the_author(); ?></a>
                         <a class="feed-icon right" href="<?php echo get_author_feed_link(get_the_author_ID()) ?>" title="<?php _e("Author RSS Feed", 'constructor') ?>"><?php _e("RSS Feed", 'constructor') ?></a>
-                    </h2>
+                    </h1>
                 </div>
                 <div class="entry opacity box">
                     <div class="wp-caption alignleft persona" style="width: 128px">
@@ -70,8 +70,7 @@ endif;
             </div>
             <div <?php post_class(); ?>>
                 <div class="title opacity box">
-                    <h2><?php printf(__('Latest posts by %s', 'constructor'), get_the_author_nickname()); ?></h2>
-                    
+                    <h3><?php printf(__('Latest posts by %s', 'constructor'), get_the_author_nickname()); ?></h3>
                 </div>
                 <div class="entry">
 
@@ -79,7 +78,7 @@ endif;
                     <!-- The Loop -->
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                       <li>
-                        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a>,
+                        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a>
                         | <?php the_date() ?>
                       </li>
                     <?php endwhile; else: ?>
@@ -92,9 +91,9 @@ endif;
             </div>        
         </div>
         <div class="navigation">
-            <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'constructor')) ?></div>
             <div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'constructor')) ?></div>
-            <div class="clear">&nbsp;</div>
+            <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'constructor')) ?></div>
+            <div class="empty clear">&nbsp;</div>
         </div>
     </div><!-- id='container' -->
     <?php get_constructor_sidebar(); ?>

@@ -13,22 +13,22 @@ get_header(); ?>
         <?php while (have_posts()) : the_post(); ?>
             <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
                 <div class="title opacity box">
-                    <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
+                    <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1>
                 </div>
                 <div class="entry">
                 
                     <?php the_content(__('Read the rest of this entry &raquo;', 'constructor')) ?>
-                    <h3><?php _e('Pages', 'constructor') ?></h3>
+                    <h2><?php _e('Pages', 'constructor') ?></h2>
                     <ul>
                         <?php wp_list_pages('title_li=' ); ?>
                     </ul>
                     
-                    <h3><?php _e('Categories', 'constructor') ?></h3>
+                    <h2><?php _e('Categories', 'constructor') ?></h2>
                     <ul>
         			    <?php wp_list_categories('title_li=&depth=1&show_count=1'); ?>
                     </ul>
                     
-                    <h3><?php _e('Archives', 'constructor') ?></h3>
+                    <h2><?php _e('Archives', 'constructor') ?></h2>
                     <ul>
                         <?php wp_get_archives('type=monthly&show_post_count=1'); ?>
                     </ul>
@@ -51,7 +51,7 @@ get_header(); ?>
                     <?php if($post->post_parent) : $parent_link = get_permalink($post->post_parent); ?>
                     <a href="<?php echo $parent_link; ?>"><?php _e('Back to Parent Page', 'constructor');?></a> |
                     <?php endif; ?>
-                    <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
+                    <?php edit_post_link(__('Edit', 'constructor'), '', ''); ?>
                     </div>
                     <div class="line clear"></div>
                 </div>
