@@ -12,14 +12,6 @@
   # ~~Create page with constructor themes (separately from wordpress repository)~~
   # ~~Create list with themes examples~~
 
-
-== Version 0.7 ==
-  
-  # Refactoring file structure (I like OOP)
   # "Header" tab -> Header font size options
-  # "Header" tab -> Hide text (use text-indent)
   # "Content" tab -> Show "comments closed" message option
-  # New "Comments" tab: Change avatar size
-  # Integrate "stepcarousel" with all options (replace? current slideshow realization)
-  # Cache for css.php
   # Export theme as ZIP archive (with all images)
