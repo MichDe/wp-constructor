@@ -67,7 +67,7 @@ You can use follows classes in your layout:
 .bcolor9 { border-color:#{color border2}  }
 
 /* background color */
-.bcolor0 { background-color:#{color opacity} }
+.bgcolor0 { background-color:#{color opacity} }
 
 .bgcolor1 { background-color:#{color 1} }
 .bgcolor2 { background-color:#{color 2} }
