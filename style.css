@@ -1,7 +1,7 @@
 /*  
 Theme Name: Constructor
 Theme URI: http://code.google.com/p/wp-constructor/
-Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.7+ (include 3.0)
+Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.8+ (include 3.0)
 Version: 0.9.5
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
@@ -373,8 +373,11 @@ div.aligncenter {
 .hentry .footer {
     clear:both
 }
+.hentry .footer .links {
+    float:right
+}
 .hentry .footer .line {
-
+    clear:both
 }
 /* for big external images */
 .hentry .crop {
@@ -501,7 +504,8 @@ div.aligncenter {
 /*/List*/
 /*Navigation*/
 .navigation {
-    font-size:1.4em
+    font-size:1.4em;
+    clear:both;
 }
 .navigation div a{
     display:block;

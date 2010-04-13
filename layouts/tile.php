@@ -25,9 +25,9 @@ __('Tile', 'constructor'); // requeried for correct translation
         </div>
     <?php endwhile; ?>
     </div>
-    <div class="navigation clear">
-        <div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'constructor')) ?></div>
-        <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'constructor')) ?></div>
+    <div class="navigation">
+        <div class="alignleft"><?php next_posts_link(__('<span>&laquo;</span> Older Entries', 'constructor')) ?></div>
+        <div class="alignright"><?php previous_posts_link(__('Newer Entries <span>&raquo;</span>', 'constructor')) ?></div>
         <div class="clear">&nbsp;</div>
     </div>
 <?php endif; ?>

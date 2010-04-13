@@ -9,9 +9,9 @@
 		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar')) : ?>
                 
             <?php if (!is_404()) : ?>
-        	    <li>
-        			<?php get_search_form(); ?>
-        		</li>
+    	    <li>
+    			<?php get_search_form(); ?>
+    		</li>
     		<?php endif; ?>
     		
     		<?php wp_list_pages('title_li=<h3>'.__('Pages', 'constructor').'</h3>' ); ?>
@@ -23,13 +23,13 @@
     	    </li>
     
     		<?php /* If this is the frontpage */ if ( is_home() || is_page() ) : ?>
-    			<li><h3><?php _e('Meta', 'constructor') ?></h3>
+			<li><h3><?php _e('Meta', 'constructor') ?></h3>
     			<ul>
     				<?php wp_register(); ?>
     				<li><?php wp_loginout(); ?></li>
     				<?php wp_meta(); ?>
     			</ul>
-    			</li>
+			</li>
     		<?php endif; ?>
 
 		<?php endif; ?>

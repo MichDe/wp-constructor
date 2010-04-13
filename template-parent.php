@@ -23,7 +23,7 @@ get_header(); ?>
                     <?php wp_link_pages(array('before' => '<p class="pages"><strong>'.__('Pages', 'constructor').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
                 </div>
                 <div class="footer">
-                    <div class="links right">
+                    <div class="links">
                     <?php if($post->post_parent) : $parent_link = get_permalink($post->post_parent); ?>
                     <a href="<?php echo $parent_link; ?>"><?php _e('Back to Parent Page', 'constructor');?></a> |
                     <?php endif; ?>
@@ -31,7 +31,7 @@ get_header(); ?>
                     <?php the_tags(__('Tags', 'constructor') . ': ', ', ', ' |'); ?>
                     <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
                     <?php comments_popup_link(__('No Comments &#187;', 'constructor'), __('1 Comment &#187;', 'constructor'), __('% Comments &#187;', 'constructor'), '', __('Comments Closed', 'constructor') ); ?>                    </div>
-                    <div class="line clear"></div>
+                    <div class="line"></div>
                 </div>
             </div>
         <?php endwhile; ?>
