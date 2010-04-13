@@ -31,3 +31,54 @@ __('Mylayout', 'constructor'); // requeried for correct translation
 }}}
 
 Image with name layout-mylayout.png (300x200px) put to folder /constructor/admin/images
+
+You can use follows classes in your layout:
+{{{
+/* text color */
+.color0 { color:#{color opacity} }
+
+.color1 { color:#{color 1} }
+.color2 { color:#{color 2} }
+.color3 { color:#{color 3} }
+
+.color4 { color:#{color text} }
+.color5 { color:#{color text2} }
+
+.color6 { color:#{color background}  }
+.color7 { color:#{color background2} }
+
+.color8 { color:#{color border}  }
+.color9 { color:#{color border2}  }
+
+/* border color */
+.bcolor0 { border-color:#{color opacity} }
+
+.bcolor1 { border-color:#{color 1} }
+.bcolor2 { border-color:#{color 2} }
+.bcolor3 { border-color:#{color 3} }
+
+.bcolor4 { border-color:#{color text} }
+.bcolor5 { border-color:#{color text2} }
+
+.bcolor6 { border-color:#{color background}  }
+.bcolor7 { border-color:#{color background2} }
+
+.bcolor8 { border-color:#{color border}  }
+.bcolor9 { border-color:#{color border2}  }
+
+/* background color */
+.bcolor0 { background-color:#{color opacity} }
+
+.bgcolor1 { background-color:#{color 1} }
+.bgcolor2 { background-color:#{color 2} }
+.bgcolor3 { background-color:#{color 3} }
+
+.bgcolor4 { background-color:#{color text} }
+.bgcolor5 { background-color:#{color text2} }
+
+.bgcolor6 { background-color:#{color background}  }
+.bgcolor7 { background-color:#{color background2} }
+
+.bgcolor8 { background-color:#{color border}  }
+.bgcolor9 { background-color:#{color border2}  }
+}}}
