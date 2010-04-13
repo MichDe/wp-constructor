@@ -200,10 +200,9 @@ div.aligncenter {
 #menu ul ul {
     top:40px;
     left:0px;
-    /*z-index:302;*/
     position:absolute;
     zoom: 1;
-	/*display:none;*/
+	display:none;
 	height:auto;
     min-width:122px;
     width:auto !important;

@@ -13,7 +13,7 @@ return array (
                         'index'   => 'default',
                                  ),
             "title"     => array(
-                        'pos' => 'left'
+                        'pos' => 'left top'
                     ),
             "content"   => array(            // content
                         'author' => true,    // - link to author page
