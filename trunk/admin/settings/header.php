@@ -113,7 +113,8 @@ $(document).ready(function(){
 		                <option value="0" <?php if ($constructor['menu']['pages']['depth'] == 0) echo 'selected="selected"'; ?>><?php _e('Disable pages', 'constructor'); ?></option>
 		                <option value="1" <?php if ($constructor['menu']['pages']['depth'] == 1) echo 'selected="selected"'; ?>><?php _e('Show first-level pages', 'constructor'); ?></option>
 		                <option value="2" <?php if ($constructor['menu']['pages']['depth'] == 2) echo 'selected="selected"'; ?>><?php _e('Show pages in drop-down menu', 'constructor'); ?></option>
-		                <option value="3" <?php if ($constructor['menu']['pages']['depth'] == 3) echo 'selected="selected"'; ?>><?php _e('Show pages in drop-down menu (2-levels)', 'constructor'); ?></option>         
+		                <option value="3" <?php if ($constructor['menu']['pages']['depth'] == 3) echo 'selected="selected"'; ?>><?php _e('Show pages in drop-down menu (2-levels)', 'constructor'); ?></option>  
+		                <option value="4" <?php if ($constructor['menu']['pages']['depth'] == 4) echo 'selected="selected"'; ?>><?php _e('Show pages in drop-down menu (3-levels)', 'constructor'); ?></option>         
 		            </select>
 					<br/>
                     <label for="constructor-menu-pages-exclude"><?php _e('Exclude:', 'constructor'); ?></label>
@@ -130,6 +131,7 @@ $(document).ready(function(){
 		                <option value="1" <?php if ($constructor['menu']['categories']['depth'] == 1) echo 'selected="selected"'; ?>><?php _e('Show first-level categories', 'constructor'); ?></option>
 		                <option value="2" <?php if ($constructor['menu']['categories']['depth'] == 2) echo 'selected="selected"'; ?>><?php _e('Show categories in drop-down menu', 'constructor'); ?></option>
 		                <option value="3" <?php if ($constructor['menu']['categories']['depth'] == 3) echo 'selected="selected"'; ?>><?php _e('Show categories in drop-down menu (2-levels)', 'constructor'); ?></option>
+		                <option value="4" <?php if ($constructor['menu']['categories']['depth'] == 4) echo 'selected="selected"'; ?>><?php _e('Show categories in drop-down menu (3-levels)', 'constructor'); ?></option>
 		            </select>
 					<br/>
                     <label for="constructor-menu-categories-exclude"><?php _e('Exclude:', 'constructor'); ?></label>

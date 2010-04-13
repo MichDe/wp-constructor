@@ -19,22 +19,22 @@ __('Default', 'constructor'); // requeried for correct translation
             	<?php get_constructor_content() ?>
             </div>
             <div class="footer">
-                <div class="links right">
+                <div class="links">
                 <?php the_time() ?> |
                 <?php get_constructor_author('', ' |') ?>
                 <?php the_tags(__('Tags', 'constructor') . ': ', ', ', ' |'); ?>
                 <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
                 <?php comments_popup_link(__('No Comments &#187;', 'constructor'), __('1 Comment &#187;', 'constructor'), __('% Comments &#187;', 'constructor'), 'comments-link', __('Comments Closed', 'constructor') ); ?></div>
-                <div class="line clear"></div>
+                <div class="line"></div>
             </div>
         </div>
         <?php get_constructor_content_widget($i) ?>
     <?php endwhile; ?>
     </div>
-    <div class="navigation clear">
-        <div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'constructor')) ?></div>
-        <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'constructor')) ?></div>
-        <div class="empty clear">&nbsp;</div>
+    <div class="navigation">
+        <div class="alignleft"><?php next_posts_link(__('<span>&laquo;</span> Older Entries', 'constructor')) ?></div>
+        <div class="alignright"><?php previous_posts_link(__('Newer Entries <span>&raquo;</span>', 'constructor')) ?></div>
+        <div class="clear">&nbsp;</div>
     </div>
 <?php endif; ?>
 </div><!-- id='container' -->

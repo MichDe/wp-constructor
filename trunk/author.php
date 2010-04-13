@@ -91,9 +91,9 @@ endif;
             </div>        
         </div>
         <div class="navigation">
-            <div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'constructor')) ?></div>
-            <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'constructor')) ?></div>
-            <div class="empty clear">&nbsp;</div>
+            <div class="alignleft"><?php next_posts_link(__('<span>&laquo;</span> Older Entries', 'constructor')) ?></div>
+            <div class="alignright"><?php previous_posts_link(__('Newer Entries <span>&raquo;</span>', 'constructor')) ?></div>
+            <div class="clear">&nbsp;</div>
         </div>
     </div><!-- id='container' -->
     <?php get_constructor_sidebar(); ?>

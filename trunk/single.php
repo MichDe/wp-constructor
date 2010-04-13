@@ -23,23 +23,21 @@ get_header();
 				    <?php wp_link_pages(array('before' => '<p class="pages"><strong>'.__('Pages', 'constructor').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
                 </div>
                 <div class="footer">
-                    <div class="links right">
+                    <div class="links">
                     <?php the_time() ?> |
                     <?php get_constructor_author('', ' |') ?>
                     <?php the_tags(__('Tags', 'constructor') . ': ', ', ', ' |'); ?>
                     <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
                     <?php comments_popup_link(__('No Comments &#187;', 'constructor'), __('1 Comment &#187;', 'constructor'), __('% Comments &#187;', 'constructor'), 'comments-link', __('Comments Closed', 'constructor') ); ?>                    </div>
-                    <div class="line clear"></div>
+                    <div class="line"></div>
                 </div>
             </div>
         <?php endwhile; ?>
         </div>
-        <div id='comments'>
-           <?php comments_template(); ?>
-        </div>
-        <div class="navigation clear">
-            <div class="alignleft"><?php next_post_link('%link') ?></div>
-            <div class="alignright"><?php previous_post_link('%link') ?></div>
+        <?php comments_template(); ?>
+        <div class="navigation">
+            <div class="alignleft"><?php previous_post_link('%link', '<span>&laquo;</span> %title') ?></div>
+            <div class="alignright"><?php next_post_link('%link', '%title <span>&raquo;</span>') ?></div>
             <div class="clear">&nbsp;</div>
         </div>
     <?php endif; ?>
