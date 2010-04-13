@@ -15,7 +15,7 @@ return array(
                         'index'   => 'default',
                                  ),
             "title"     => array(            // title
-                        "pos" => 'left'      // - position
+                        "pos" => 'bottom left'      // - position
                     ),
             "content"   => array(            // content
                         "author" => 0,       // - link to author page

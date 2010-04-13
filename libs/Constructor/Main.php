@@ -176,10 +176,19 @@ class Constructor_Main extends Constructor_Abstract
         echo '<div id="menu" class="opacity shadow">';
 //        echo '<div>';
         echo '<ul class="menu opacity">';
-        if (!empty($before)) {            
-            echo '<li class="before-item">'.$before.'</li>';
+        
+        // before items
+        if (!empty($before)) {
+            echo '<li class="before-item">';
+            if (is_array($before)) {
+                echo join('</li><li class="before-item">', $before);
+            } else {
+                echo $before;
+            }
+            echo '</li>';
         }
         
+        // navigation menu - WP3
         if (function_exists('wp_nav_menu')) {
             $nav_menu = wp_nav_menu( array( 'sort_column' => 'menu_order',
                                             'container'   => '', 'echo' => 0,
@@ -191,13 +200,12 @@ class Constructor_Main extends Constructor_Abstract
         // maybe "else" or not? 
         {
             
-        
+            // show link to homepage
             if (isset($this->_options['menu']['home']) && $this->_options['menu']['home']) {
                 echo '<li id="home"><a href="'.get_option('home').'/" title="'.get_bloginfo('name').'">'.__('Home', 'constructor').'</a></li>';
             }
             
-    
-             
+            // show pages drop-down menu (or as is)
             if (isset($this->_options['menu']['pages']['depth']) && $this->_options['menu']['pages']['depth']) {
                 $arg = array('title_li'=>'',
                              'exclude' => $this->_options['menu']['pages']['exclude'],
@@ -206,10 +214,12 @@ class Constructor_Main extends Constructor_Abstract
                 wp_list_pages($arg);
             }
             
+            // dynamic sidebar "header"
             if ( function_exists('dynamic_sidebar')) {
                 dynamic_sidebar('header');
             }
             
+            // show categories drop-down menu (or as is)
             if (isset($this->_options['menu']['categories']['depth']) && $this->_options['menu']['categories']['depth']) {  
                 $arg = array('title_li'=>'',
                      'exclude' => $this->_options['menu']['categories']['exclude'],
@@ -226,6 +236,7 @@ class Constructor_Main extends Constructor_Abstract
                 }
             }
             
+            // show search bar
             if (isset($this->_options['menu']['search']) && $this->_options['menu']['search'])  {
                 echo '<li id="menusearchform">
                           <form role="search" method="get" action="' . get_option('home') . '/" >
@@ -235,13 +246,21 @@ class Constructor_Main extends Constructor_Abstract
                       </li>';
             }
             
+            // show link to RSS
             if (isset($this->_options['menu']['rss']) && $this->_options['menu']['rss'])  {
                 echo '<li id="rss"><a href="'.get_bloginfo('rss2_url').'"  title="'.__('RSS Feed', 'constructor').'">'. __('RSS Feed', 'constructor').'</a></li>';
             }
             
         }
+        // after items
         if (!empty($after)) {            
-            echo '<li class="after-item">'.$after.'</li>';
+            echo '<li class="after-item">';
+            if (is_array($after)) {
+                echo join('</li><li class="after-item">', $after);
+            } else {
+                echo $after;
+            }
+            echo '</li>';
         }
         echo '</ul>';
 //        echo '</div>';
