@@ -70,17 +70,16 @@ endif;
             </div>
             <div <?php post_class(); ?>>
                 <div class="title opacity box">
-                    <h3><?php printf(__('Latest posts by %s', 'constructor'), get_the_author_nickname()); ?></h3>
+                    <h2><a href="#" rel="bookmark" title="<?php echo get_the_author() ?>"><?php printf(__('Latest posts by %s', 'constructor'), get_the_author_nickname()); ?></a></h2>
                 </div>
                 <div class="entry">
 
                     <ul>
                     <!-- The Loop -->
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                      <li>
-                        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a>
-                        | <?php the_date() ?>
-                      </li>
+                       <li>
+                          <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a> | <?php the_time() ?>
+                       </li>
                     <?php endwhile; else: ?>
                          <p><?php _e('No posts by this author.', 'constructor'); ?></p>
                     <?php endif; ?>
