@@ -194,9 +194,10 @@ class Constructor_Admin extends Constructor_Abstract
         				$data['images']['body']['fixed'] = isset($data['images']['body']['fixed'])?true:false;
                         $data['images']['wrap']['fixed'] = isset($data['images']['wrap']['fixed'])?true:false;
         				
-                        $data['slideshow']['flag']     = isset($data['slideshow']['flag'])?true:false;
-                        $data['slideshow']['onpage']   = isset($data['slideshow']['onpage'])?true:false;
-        				$data['slideshow']['onsingle'] = isset($data['slideshow']['onsingle'])?true:false;
+                        $data['slideshow']['flag']      = isset($data['slideshow']['flag'])?true:false;
+                        $data['slideshow']['onpage']    = isset($data['slideshow']['onpage'])?true:false;
+        				$data['slideshow']['onsingle']  = isset($data['slideshow']['onsingle'])?true:false;
+        				$data['slideshow']['onarchive'] = isset($data['slideshow']['onarchive'])?true:false;
         				
         				$data['slideshow']['advanced']['thumb'] = isset($data['slideshow']['advanced']['thumb'])?true:false;
         				$data['slideshow']['advanced']['play']  = isset($data['slideshow']['advanced']['play'])?true:false;

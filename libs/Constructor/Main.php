@@ -66,43 +66,43 @@ class Constructor_Main extends Constructor_Abstract
         if (!$this->_options['slideshow']['flag']) {
             return false;
         }
-        if (is_page()   && !$this->_options['slideshow']['onpage'])   return false;
-        if (is_single() && !$this->_options['slideshow']['onsingle']) return false;
+        if (is_page()   && !$this->_options['slideshow']['onpage'])    return false;
+        if (is_single() && !$this->_options['slideshow']['onsingle'])  return false;
+        if (is_archive()&& !$this->_options['slideshow']['onarchive']) return false;
 
         if ( $in && $this->_options['slideshow']['layout'] == 'over') return false;
         if (!$in && $this->_options['slideshow']['layout'] == 'in')   return false;
-
-        echo '<div id="header-slideshow" style="height:'.$this->_options['slideshow']['height'].'px">';
+        
+        // height from configuration
+        $height = (int)$this->_options['slideshow']['height'];
+        
+        // calculate slideshow width
+        if (!$in) {
+            $width = (int)($this->_options['layout']['width'] - 2);
+        } else {            
+            // switch statement for $this->_options['sidebar']
+            switch ($this->_options['sidebar']) {
+                case 'none':
+                    $width = (int)($this->_options['layout']['width'] - 4);
+                    break;
+                case 'two':
+                case 'two-right':
+                case 'two-left':
+                    $width = (int)($this->_options['layout']['width'] - $this->_options['layout']['sidebar'] - $this->_options['layout']['extra'] - 6);
+                    break;
+                default:
+                    $width = (int)($this->_options['layout']['width'] - $this->_options['layout']['sidebar'] - 4);
+                    break;
+            }
+        }
+        
+        
+        echo '<div id="slideshow" style="height:'.$height.'px;width:'.$width.'px">';
 
         // switch statement for true
         switch (true) {
             case (isset($this->_options['slideshow']['id']) && $this->_options['slideshow']['id']!='' && function_exists('nggShowSlideshow')):
-                if (!$in) {
-                    echo nggShowSlideshow((int)$this->_options['slideshow']['id'],
-                                          (int)($this->_options['layout']['width'] - 2),
-                                          (int)$this->_options['slideshow']['height']);
-                } else {
-                    // switch statement for $this->_options['sidebar']
-                    switch ($this->_options['sidebar']) {
-                        case 'none':
-                            echo nggShowSlideshow((int)$this->_options['slideshow']['id'],
-                                                  (int)($this->_options['layout']['width'] - 4),
-                                                  (int)$this->_options['slideshow']['height']);
-                            break;
-                        case 'two':
-                        case 'two-right':
-                        case 'two-left':
-                            echo nggShowSlideshow((int)$this->_options['slideshow']['id'],
-                                                  (int)($this->_options['layout']['width'] - $this->_options['layout']['sidebar'] - $this->_options['layout']['extra'] - 6),
-                                                  (int)$this->_options['slideshow']['height']);
-                            break;
-                        default:
-                            echo nggShowSlideshow((int)$this->_options['slideshow']['id'],
-                                                  (int)($this->_options['layout']['width'] - $this->_options['layout']['sidebar'] - 4),
-                                                  (int)$this->_options['slideshow']['height']);
-                            break;
-                    }
-                }
+                echo nggShowSlideshow((int)$this->_options['slideshow']['id'], $width, $height);
                 break;
         
             default:

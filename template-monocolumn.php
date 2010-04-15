@@ -10,7 +10,8 @@ Template Name: Monocolumn
 wp_enqueue_script( 'comment-reply' );
 
 get_header(); ?>
-    <div id="container" class="container-full" >
+<div id="content" class="box shadow opacity layout-full">
+    <div id="container">
         <div id="posts">
         <?php while (have_posts()) : the_post(); ?>
             <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
@@ -37,6 +38,8 @@ get_header(); ?>
         <?php endwhile; ?>
         </div>
     </div><!-- id='container' -->
+    <div class="empty clear">&nbsp;</div>
+</div><!-- id='content' -->
 <?php get_footer(); ?>
 
                     

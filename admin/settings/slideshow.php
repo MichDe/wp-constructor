@@ -42,6 +42,9 @@ $(document).ready(function(){
             <br/>
             <input type="checkbox" id="constructor-slideshow-onsingle" name="constructor[slideshow][onsingle]" value="1" <?php if ($constructor['slideshow']['onsingle']) echo 'checked="checked"'; ?> />
             <label for="constructor-slideshow-onsingle"><?php _e('Show on single post', 'constructor')?></label>
+            <br/>
+            <input type="checkbox" id="constructor-slideshow-onarchive" name="constructor[slideshow][onarchive]" value="1" <?php if ($constructor['slideshow']['onarchive']) echo 'checked="checked"'; ?> />
+            <label for="constructor-slideshow-onarchive"><?php _e('Show on archive', 'constructor')?></label>
         </td>
     </tr>
     <tr>

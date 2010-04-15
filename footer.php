@@ -4,8 +4,6 @@
  * @subpackage Constructor
  */
 ?>
-            <div class="empty clear">&nbsp;</div>
-        </div><!-- id='content' -->
     </div><!-- id='wrapcontent' -->
     <div id="wrapfooter" class="wrapper">
     	<div id="footer">	
