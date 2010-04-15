@@ -32,6 +32,30 @@ __('Mylayout', 'constructor'); // requeried for correct translation
 
 Image with name layout-mylayout.png (300x200px) put to folder /constructor/admin/images
 
+For use custom sidebars position (example with two sidebars):
+{{{
+<?php 
+// required ID with sidebars position
+// one of:
+//  - layout-right
+//  - layout-left
+//  - layout-two
+//  - layout-two-right
+//  - layout-two-left
+?>
+
+<div id="layout-two">
+    <div id="container" >
+    <!-- same code -->
+    </div>
+    <!-- sidebar.php -->
+    <?php get_sidebar(); ?>
+    <!-- sidebar-extra.php -->
+    <?php get_sidebar('extra'); ?>
+</div>
+}}}
+
+
 You can use follows classes in your layout:
 {{{
 /* text color */
