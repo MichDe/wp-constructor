@@ -102,7 +102,7 @@ div.aligncenter {
 .wrapper { 
     width:100%
 }
-#header,#content,#footer{
+#header,#slideshow,#content,#footer{
     clear:both;
     margin:0 auto
 }
@@ -110,12 +110,6 @@ div.aligncenter {
     margin:0;
 	float:left;
     min-height:600px
-}
-
-.container-full {
-    margin:0 !important;
-    padding:0 !important;
-    border: 0 !important;
 }
 /* Right Sidebar */
 #sidebar {
@@ -161,9 +155,8 @@ div.aligncenter {
     z-index:300;
 }
 
-#header-slideshow {
+#slideshow {
     padding:2px;
-    margin: 0;
 }
 
 #menu {

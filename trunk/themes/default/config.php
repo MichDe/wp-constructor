@@ -53,6 +53,7 @@ return array(
                         "layout" => 'in',    // - slideshow "in" main container or "over"
                         "onpage" => false,   // - show slideshow on page
                         "onsingle" => false, // - show slideshow on single post
+                        'onarchive' => false, // - show slideshow on archives
                         "showposts" => 10,   // - show last N slides
                         "metakey" => 'thumb-slideshow', // - custom field name
                         "id" => null,        // - slideshow ID - for NextGenGallery

@@ -8,6 +8,7 @@ Template Name: Authors
  */
 
 get_header(); ?>
+<div id="content" class="box shadow opacity">
     <div id="container" class="container-authors">
         <div id="posts">
         <?php while (have_posts()) : the_post(); ?>
@@ -37,4 +38,6 @@ get_header(); ?>
 
     </div><!-- id='container' -->
     <?php get_constructor_sidebar(); ?>
+    <div class="empty clear">&nbsp;</div>
+</div><!-- id='content' -->
 <?php get_footer(); ?>

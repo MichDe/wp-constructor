@@ -12,6 +12,7 @@ else :
     $authordata = get_userdata(intval($author));
 endif;
 ?>
+<div id="content" class="box shadow opacity">
     <div id="container" >
         <div id="posts">
             <div <?php post_class('author'); ?>>
@@ -92,4 +93,6 @@ endif;
         <?php get_constructor_navigation(); ?>
     </div><!-- id='container' -->
     <?php get_constructor_sidebar(); ?>
+    <div class="empty clear">&nbsp;</div>
+</div><!-- id='content' -->
 <?php get_footer(); ?>

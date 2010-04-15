@@ -354,12 +354,12 @@ CSS;
 $width2 = $width - ($sidebar + 1); // 1 is border width
 
 $layout_alt .= <<<CSS
-#layout-left #container {
+.layout-left #container {
     width:{$width2}px;
     margin-left:{$sidebar}px;
     border-left:1px dotted {$color_border};
 }
-#layout-left #sidebar {
+.layout-left #sidebar {
     margin-left:-{$width}px !important;
 }
 
@@ -368,7 +368,7 @@ CSS;
 $width2 = $width - ($sidebar + $extra + 2); // 2 is borders width
 
 $layout_alt .= <<<CSS
-#layout-two #container {
+.layout-two #container {
     width:{$width2}px;
     margin-left:{$extra}px;
     border-left:1px dotted {$color_border};
@@ -376,10 +376,10 @@ $layout_alt .= <<<CSS
     margin-right:{$sidebar}px;
     border-right:1px dotted {$color_border};
 }
-#layout-two #sidebar {
+.layout-two #sidebar {
     margin-left:-{$sidebar}px;
 }
-#layout-two #extra {
+.layout-two #extra {
     margin-left:-{$width}px;
 }
 
@@ -389,17 +389,17 @@ $margin = $sidebar + $extra + 2;
 $width2 = $width - $margin;
 
 $layout_alt .= <<<CSS
-#layout-two-right #container {
+.layout-two-right #container {
     width:{$width2}px;
 
     margin-right:{$margin}px;
     border-right:1px dotted {$color_border};
 }
-#layout-two-right #sidebar {
+.layout-two-right #sidebar {
     margin-left:-{$margin}px;
     border-right:1px dotted {$color_border};
 }
-#layout-two-right #extra {
+.layout-two-right #extra {
     margin-left:-{$extra}px;
 }
 
@@ -408,16 +408,16 @@ CSS;
 $margin2 = $width - $sidebar;
 
 $layout_alt .= <<<CSS
-#layout-two-left #container {
+.layout-two-left #container {
     width:{$width2}px;
     margin-left:{$margin}px;
     border-left:1px dotted {$color_border};
 }
-#layout-two-left #sidebar {
+.layout-two-left #sidebar {
     margin-left:-{$width}px;
     border-right:1px dotted {$color_border};
 }
-#layout-two-left #extra {
+.layout-two-left #extra {
     margin-left:-{$margin2}px;
 }
 
@@ -425,12 +425,12 @@ CSS;
 
 $width2  = $width - $sidebar;
 $layout_alt .= <<<CSS
-#layout-right #container {
+.layout-right #container {
     width:{$width2}px;
     margin-right:{$sidebar}px;
     border-right:1px dotted {$color_border};
 }
-#layout-right #sidebar {
+.layout-right #sidebar {
     margin-left:-{$sidebar}px;
 }
 CSS;
@@ -694,8 +694,9 @@ fieldset{
 
 {$layout}
 {$layout_alt}
-
-    .container-full {
+    .layout-full #container {
+        border:0;
+        margin:0;
         width:{$width}px !important
     }
 
