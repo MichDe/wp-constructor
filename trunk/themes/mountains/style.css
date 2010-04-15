@@ -1,0 +1,38 @@
+/*
+Theme Name: Mountains
+Theme URI: http://anton.shevchuk.name/wordpress/create-wordpress-theme-with-constructor/
+Description: Mountains. Thx to <a href="http://www.flickr.com/photos/neilsingapore/">neilalderney123</a> for photo
+Version: 0.0.1
+Author: Anton Shevchuk
+Author URI: http://anton.shevchuk.name/
+*/
+#name {
+    margin-top:40px !important;
+    font-size:112px !important;
+}
+#description {
+    font-size:24px !important;
+    font-weight:900;
+    text-indent:24px;
+}
+.navigation div {
+    margin:0 0 8px;
+}
+.navigation div a {
+	height:24px;
+}
+.navigation .alignright a {
+    border-left: 4px solid #147dbe;
+    margin:0 16px 0 0;
+    padding-left:8px;
+}
+.navigation .alignleft a {
+    border-right: 4px solid #147dbe;
+    margin:0 0 0 16px;
+    padding-right:8px;
+}
+#footer .widget h3,
+#footer .widget a {
+   color:#fff;
+   font-weight:900;
+}

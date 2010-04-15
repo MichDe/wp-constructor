@@ -158,7 +158,7 @@ if (!is_admin()) {
     }
     
     /**
-     * get_constructor_links
+     * get top menu
      *
      * @param  string $before
      * @param  string $after
@@ -171,7 +171,7 @@ if (!is_admin()) {
     }
     
     /**
-     * get constructor content
+     * get content
      * 
      * @param string $layout [optional]
      * @return 
@@ -183,7 +183,7 @@ if (!is_admin()) {
     }
     
     /**
-     * get constructor content widget
+     * get content widget
      * 
      * @param integer $i post counter
      * @return 
@@ -195,7 +195,7 @@ if (!is_admin()) {
     }
 
     /**
-     * get_constructor_author
+     * get author name
      *
      * @param  string $before
      * @param  string $after
@@ -208,7 +208,7 @@ if (!is_admin()) {
     }
     
     /**
-     * get_constructor_avatar_size
+     * get avatar size
      *
      * @return string
      */
@@ -219,7 +219,7 @@ if (!is_admin()) {
     }
     
     /**
-     * get_constructor_sidebar
+     * get sidebar
      *
      * @access  public
      * @return  string
@@ -231,7 +231,19 @@ if (!is_admin()) {
     }
     
     /**
-     * get_constructor_footer
+     * get navigation
+     *
+     * @access  public
+     * @return  string
+     */
+    function get_constructor_navigation()
+    {
+        global $main;
+        $main->getNavigation();
+    }
+    
+    /**
+     * get footer
      *
      * @access public
      * @return string

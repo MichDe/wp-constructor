@@ -63,7 +63,7 @@ class Constructor_Main extends Constructor_Abstract
      */
     function getSlideshow($in = false)
     {
-        if (!isset($this->_options['slideshow']['flag']) or $this->_options['slideshow']['flag'] == '') {
+        if (!$this->_options['slideshow']['flag']) {
             return false;
         }
         if (is_page()   && !$this->_options['slideshow']['onpage'])   return false;
@@ -163,7 +163,7 @@ class Constructor_Main extends Constructor_Abstract
     }
     
     /**
-     * get_constructor_links
+     * get_constructor_menu
      *
      * @param  string $before
      * @param  string $after
@@ -275,13 +275,12 @@ class Constructor_Main extends Constructor_Abstract
      */
     function getContent($layout = 'default')
     {
-
          switch ($layout) {
              case 'list':
                 $this->getPostImage(128, 128, 'thumb-list',
                                     $this->_options['content']['list']['thumb']['pos'],
                                     $this->_options['content']['list']['thumb']['noimage']);
-                if (!isset($this->_options['content']['list']['filter']) or !$this->_options['content']['list']['filter']) {
+                if (!$this->_options['content']['list']['filter']) {
                     the_content(__('Read the rest of this entry &raquo;', 'constructor'));
                 } else {
                     $content = apply_filters('the_content', get_the_content(__('Read the rest of this entry &raquo;', 'constructor')));
@@ -325,7 +324,7 @@ class Constructor_Main extends Constructor_Abstract
      */
     function getAuthor($before = '', $after = '')
     {
-        if (isset($this->_options['content']['author']) && $this->_options['content']['author'])
+        if ($this->_options['content']['author'])
             echo $before; the_author_posts_link(); echo $after;
     }
     
@@ -377,6 +376,17 @@ class Constructor_Main extends Constructor_Abstract
     }
     
     /**
+     * get_constructor_navigation
+     *
+     * @access  public
+     * @return  string
+     */
+    function getNavigation()
+    {
+        include_once CONSTRUCTOR_DIRECTORY . '/navigation.php';
+    }
+    
+    /**
      * get_constructor_footer
      *
      * @access public
@@ -411,7 +421,7 @@ class Constructor_Main extends Constructor_Abstract
     {
         global $post;
         
-        if (isset($this->_options['content']['thumb']['auto']) && $this->_options['content']['thumb']['auto']) {
+        if ($this->_options['content']['thumb']['auto']) {
             if ($img = $this->_getPostImage()) {
                 echo '<img class="thumb align'.$align.'" src="' .CONSTRUCTOR_DIRECTORY_URI. "/libs/timthumb.php?src=".urlencode($img).'&amp;h='.$height.'&amp;w='.$width.'&amp;zc=1&amp;q=95" alt="' .get_the_title(). '"/>';
             } else {

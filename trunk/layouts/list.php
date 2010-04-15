@@ -7,7 +7,6 @@ __('List', 'constructor'); // requeried for correct translation
 ?>   
 <div id="container" >
 <?php get_constructor_slideshow(true) ?>
-
 <?php if (have_posts()) : $i = 0; ?>
     <div id="posts">
     <?php while (have_posts()) : the_post();  $i++; ?>
@@ -28,11 +27,7 @@ __('List', 'constructor'); // requeried for correct translation
     <?php get_constructor_content_widget($i) ?>
     <?php endwhile; ?>
     </div>
-    <div class="navigation">
-        <div class="alignleft"><?php next_posts_link(__('<span>&laquo;</span> Older Entries', 'constructor')) ?></div>
-        <div class="alignright"><?php previous_posts_link(__('Newer Entries <span>&raquo;</span>', 'constructor')) ?></div>
-        <div class="clear">&nbsp;</div>
-    </div>
+    <?php get_constructor_navigation(); ?>
 <?php endif; ?>
-</div><!-- id='container' -->
+</div>
 <?php get_constructor_sidebar(); ?>

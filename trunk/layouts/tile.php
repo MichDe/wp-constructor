@@ -7,7 +7,6 @@ __('Tile', 'constructor'); // requeried for correct translation
 ?>
 <div id="container" class="container-full" >
 <?php get_constructor_slideshow(true) ?>
-
 <?php if (have_posts()) : ?>
     <div id="posts">
     <?php while (have_posts()) : the_post(); ?>
@@ -25,11 +24,6 @@ __('Tile', 'constructor'); // requeried for correct translation
         </div>
     <?php endwhile; ?>
     </div>
-    <div class="navigation">
-        <div class="alignleft"><?php next_posts_link(__('<span>&laquo;</span> Older Entries', 'constructor')) ?></div>
-        <div class="alignright"><?php previous_posts_link(__('Newer Entries <span>&raquo;</span>', 'constructor')) ?></div>
-        <div class="clear">&nbsp;</div>
-    </div>
+    <?php get_constructor_navigation(); ?>
 <?php endif; ?>
-
-</div><!-- id='container' -->
+</div>
