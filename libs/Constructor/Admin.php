@@ -149,7 +149,7 @@ class Constructor_Admin extends Constructor_Abstract
                          * CSS changes
                          */
                         if (isset($data['css']) && is_writable(CONSTRUCTOR_DIRECTORY.'/themes/'.$data['theme'].'/style.css')) {
-                            file_put_contents(CONSTRUCTOR_DIRECTORY.'/themes/'.$data['theme'].'/style.css', $data['css']);
+                            file_put_contents(CONSTRUCTOR_DIRECTORY.'/themes/'.$data['theme'].'/style.css', stripslashes($data['css']));
                             unset($data['css']);
                         }
         
