@@ -7,10 +7,11 @@ For create custom layout (different of default/list/tile) you should be create n
 <?php 
 __('Mylayout', 'constructor'); // requeried for correct translation
 ?>
-<div id="container" >
-<?php get_constructor_slideshow(true) ?>
+<div id="content" class="box shadow opacity">
+    <div id="container" >
+    <?php get_constructor_slideshow(true) ?>
 
-<?php if (have_posts()) : ?>
+    <?php if (have_posts()) : ?>
     <div id="posts">
     <?php while (have_posts()) : the_post(); $i++; ?>
         <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
@@ -24,10 +25,12 @@ __('Mylayout', 'constructor'); // requeried for correct translation
         <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'constructor')) ?></div>
         <div class="empty clear">&nbsp;</div>
     </div>
-<?php endif; ?>
+    <?php endif; ?>
 
-</div><!-- id='container' -->
-<?php get_constructor_sidebar(); ?>
+    </div><!-- id='container' -->
+    <?php get_constructor_sidebar(); ?>
+    <div class="empty clear">&nbsp;</div>
+</div><!-- id='content' -->
 }}}
 
 Image with name layout-mylayout.png (300x200px) put to folder /constructor/admin/images
@@ -35,16 +38,16 @@ Image with name layout-mylayout.png (300x200px) put to folder /constructor/admin
 For use custom sidebars position (example with two sidebars):
 {{{
 <?php 
-// required ID with sidebars position
+// required class with sidebars position
 // one of:
+//  - layout-full
 //  - layout-right
 //  - layout-left
 //  - layout-two
 //  - layout-two-right
 //  - layout-two-left
 ?>
-
-<div id="layout-two">
+<div id="content" class="box shadow opacity layout-two">
     <div id="container" >
     <!-- same code -->
     </div>
@@ -52,6 +55,7 @@ For use custom sidebars position (example with two sidebars):
     <?php get_sidebar(); ?>
     <!-- sidebar-extra.php -->
     <?php get_sidebar('extra'); ?>
+    <div class="empty clear">&nbsp;</div>
 </div>
 }}}
 
