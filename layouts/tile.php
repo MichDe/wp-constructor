@@ -5,8 +5,8 @@
  */
 __('Tile', 'constructor'); // requeried for correct translation
 ?>
-<div id="content" class="box shadow opacity">
-    <div id="container" class="container-full" >
+<div id="content" class="box shadow opacity layout-full">
+    <div id="container" >
     <?php get_constructor_slideshow(true) ?>
     <?php if (have_posts()) : ?>
         <div id="posts">

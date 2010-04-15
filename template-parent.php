@@ -8,6 +8,7 @@ Template Name: Parent Page
  */
 
 get_header(); ?>
+<div id="content" class="box shadow opacity">
     <div id="container" class="container-sitemap">
         <div id="posts">
         <?php while (have_posts()) : the_post(); ?>
