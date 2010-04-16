@@ -156,7 +156,7 @@ CSS;
     -moz-border-radius: {$radius}px;
     -webkit-border-radius: {$radius}px;
     -khtml-border-radius: {$radius}px;
-    border-radius: {$radius} px;
+    border-radius: {$radius}px;
     border:{$color_border} solid 1px;
 }
 CSS;
@@ -805,6 +805,11 @@ fieldset{
    color: {$color_bg2};
 }
 /*/Post*/
+/*Author*/
+.author dt, .author dd {
+    border-color:{$color_bg2}
+}
+/*/Author*/
 /*Archive*/
 #posts .archive table td{
     color:{$color_text2}

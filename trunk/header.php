@@ -15,6 +15,7 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <?php wp_get_archives('type=monthly&format=link'); ?>
     <?php wp_head(); ?>
+    <link rel="stylesheet" href="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/rtl.css" type="text/css" media="screen" />
 </head>
 <body <?php body_class(get_constructor_category_class()); ?>>
 	
