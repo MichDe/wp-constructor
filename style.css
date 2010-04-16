@@ -2,7 +2,7 @@
 Theme Name: Constructor
 Theme URI: http://code.google.com/p/wp-constructor/
 Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.8+ (include 3.0)
-Version: 0.9.7
+Version: 0.9.8
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -124,7 +124,6 @@ div.aligncenter {
 /*Theme*/
 /*Header*/
 #header {
-    height:140px;
     position: relative
 }
 	#header #title {
@@ -383,20 +382,34 @@ div.aligncenter {
 	padding:0;
 }
 /*/Post*/
-/*Author*/
+/*Author*/ 
 .author dl {
+    overflow: hidden;
     margin:8px 0;
 }
 .author dt {
+    float: left;
+    clear: left;
+    width: 160px;
+    font-weight: bold;
+    text-align: right;
     padding:4px;
 }
 .author dd {
     padding:4px;
-    margin:0 0 0 20px;
+    width: 290px;
+    margin:0 0 0 170px;
 }
 .author .persona {
     margin-left: 6px !important;
 }
+
+.author dt, .author dd {
+    padding: 2px 5px;
+    border-width:0 0 1px 0;
+    border-style:solid;
+}
+
 /*/Author*/
 /*Tile*/
 .tile {
@@ -419,6 +432,9 @@ div.aligncenter {
     margin:0;
 }
 
+.tile .title h2 a {
+    padding:4px 12px;
+}
 .tile a {
     display:block;
     border:0 !important;
@@ -446,7 +462,7 @@ div.aligncenter {
     text-indent:0.8em;
     padding:0;
     float:left;
-    width:260px;
+    width:280px;
     line-height:32px;
 }
 .tile .links .comments {
@@ -753,6 +769,7 @@ td {
     font-size: 11px;
     line-height: 17px;
     padding: 0 4px 5px;
+    text-indent:0;
     margin: 0
 }
 /*/Caption*/
@@ -877,6 +894,8 @@ td {
     text-align:center;
 }
 #posts .archive table a{
+
+    text-align:center;
     display:block;
     border:0;
 }

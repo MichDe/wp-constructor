@@ -2,7 +2,7 @@
 Theme Name: Mountains
 Theme URI: http://anton.shevchuk.name/wordpress/create-wordpress-theme-with-constructor/
 Description: Mountains. Thx to <a href="http://www.flickr.com/photos/neilsingapore/">neilalderney123</a> for photo
-Version: 0.0.1
+Version: 0.0.2
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 */
@@ -31,6 +31,9 @@ Author URI: http://anton.shevchuk.name/
     border-right: 4px solid #147dbe;
     margin:0 0 0 16px;
     padding-right:8px;
+}
+.button, .button:visited {
+    color:#fff;
 }
 #footer .widget h3,
 #footer .widget a {
