@@ -513,6 +513,7 @@ div.aligncenter {
 /*/List*/
 /*Navigation*/
 .navigation {
+    overflow: hidden;
     font-size:1.4em;
     clear:both;
 }

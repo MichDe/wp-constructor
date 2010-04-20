@@ -54,7 +54,6 @@ get_header(); ?>
                     <?php endif; ?>
                     <?php edit_post_link(__('Edit', 'constructor'), '', ''); ?>
                     </div>
-                    <div class="line"></div>
                 </div>
             </div>
         <?php endwhile; ?>
