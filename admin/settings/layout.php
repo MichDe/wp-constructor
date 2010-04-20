@@ -1,6 +1,12 @@
 <?php __('Layout', 'constructor'); // requeried for correct translation  
 $layouts = scandir(CONSTRUCTOR_DIRECTORY.'/layouts/');
 $layouts = array_diff($layouts, array( '.','..','.svn','.htaccess','readme.txt'));
+
+function is_php($file) {
+    $info = pathinfo($file);
+    return ($info['extension'] == 'php');
+}
+$layouts = array_filter($layouts, 'is_php');
 ?>
 <input type="hidden" id="constructor-layout-home" name="constructor[layout][home]" value="<?php echo $constructor['layout']['home']?>"/>
 <input type="hidden" id="constructor-layout-archive" name="constructor[layout][archive]" value="<?php echo $constructor['layout']['archive']?>"/>

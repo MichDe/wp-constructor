@@ -29,7 +29,6 @@ get_header();
                     <?php the_tags(__('Tags', 'constructor') . ': ', ', ', ' |'); ?>
                     <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
                     <?php comments_popup_link(__('No Comments &#187;', 'constructor'), __('1 Comment &#187;', 'constructor'), __('% Comments &#187;', 'constructor'), 'comments-link', __('Comments Closed', 'constructor') ); ?>                    </div>
-                    <div class="line"></div>
                 </div>
             </div>
         <?php endwhile; ?>
@@ -38,7 +37,6 @@ get_header();
         <div class="navigation">
             <div class="alignleft"><?php previous_post_link('%link', '<span>&laquo;</span> %title') ?></div>
             <div class="alignright"><?php next_post_link('%link', '%title <span>&raquo;</span>') ?></div>
-            <div class="clear">&nbsp;</div>
         </div>
     <?php endif; ?>
 

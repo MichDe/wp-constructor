@@ -2,14 +2,14 @@
 Theme Name: Example
 Theme URI: http://code.google.com/p/wp-constructor/downloads/list?can=2&q=Example
 Description: Example Constructor Theme, see it and build your own theme, PSD source is available
-Version: 0.1.5
+Version: 0.1.6
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 */
 
-.hentry .footer .line {
-	height:64px;
-	background: url(line.png) 50% top no-repeat
+.hentry .footer {
+	height:80px;
+	background: url(line.png) 50% 100% no-repeat
 }
 * html .hentry .footer .line {
     height:2px;
