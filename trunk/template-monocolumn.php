@@ -37,7 +37,6 @@ get_header(); ?>
         <?php endwhile; ?>
         </div>
     </div><!-- id='container' -->
-    <div class="empty clear">&nbsp;</div>
 </div><!-- id='content' -->
 <?php get_footer(); ?>
 

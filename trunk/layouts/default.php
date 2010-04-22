@@ -35,5 +35,4 @@ __('Default', 'constructor'); // requeried for correct translation
     <?php endif; ?>
     </div>
     <?php get_constructor_sidebar(); ?>
-    <div class="empty clear">&nbsp;</div>
 </div><!-- id='content' -->

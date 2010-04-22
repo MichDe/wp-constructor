@@ -111,6 +111,9 @@ div.aligncenter {
 	float:left;
     min-height:600px
 }
+#content {
+    overflow:hidden;
+}
 /* Right Sidebar */
 #sidebar {
     float:left;

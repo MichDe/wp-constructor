@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-15 14:02+0200\n"
+"POT-Creation-Date: 2010-04-20 18:23+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
@@ -129,60 +129,60 @@ msgstr ""
 msgid "to &#8220;%s&#8221;"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:39
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:38
 msgid "Comments are closed."
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:50
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:49
 msgid "Leave a Reply"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:50
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:49
 #, php-format
 msgid "Leave a Reply for %s"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:56
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:55
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:62
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:61
 #, php-format
 msgid "Logged in as <a href=\"%1$s\">%2$s</a>."
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:62
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:61
 msgid "Log out of this account"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:62
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:61
 msgid "Log out &raquo;"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:65
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:64
 msgid "Name"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:65
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:67
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:64
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:66
 msgid "(required)"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:67
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:66
 msgid "Mail (will not be published)"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:69
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:68
 msgid "Website"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:72
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:71
 #, php-format
 msgid "<strong>XHTML:</strong> You can use these tags: <code>%s</code>"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:74
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:73
 msgid "Submit Comment"
 msgstr ""
 
@@ -348,7 +348,6 @@ msgid "Tile"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/layouts/default.php:6
-#: W:/www/wordpress/wp-content/themes/constructor/layouts/mono.php:6
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:111
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:112
 msgid "Default"
@@ -470,12 +469,14 @@ msgstr ""
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:76
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:77
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:77
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/comments.php:37
 msgid "Left"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:79
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:80
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:78
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/comments.php:38
 msgid "Right"
 msgstr ""
 
@@ -586,19 +587,19 @@ msgstr ""
 msgid "You can use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a> plugin for build custom slideshow"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:11
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:17
 msgid "Homepage"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:17
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:23
 msgid "Archive"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:23
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:29
 msgid "Search"
 msgstr ""
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:29
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:35
 msgid "Index"
 msgstr ""
 
@@ -662,6 +663,7 @@ msgid "Show \"No Image\" picture"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:76
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/comments.php:36
 msgid "Thumbnail position"
 msgstr ""
 

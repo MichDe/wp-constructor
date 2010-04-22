@@ -13,6 +13,8 @@ return array(
                         'archive' => 'default',
                         'search'  => 'default',
                         'index'   => 'default',
+                        'single'  => 'single',
+                        'page'    => 'page',
                                  ),
             'title'     => array(            // title
                         'pos' => 'left top', // - position
