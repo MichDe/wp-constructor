@@ -28,5 +28,4 @@ __('Tile', 'constructor'); // requeried for correct translation
         <?php get_constructor_navigation(); ?>
     <?php endif; ?>
     </div>
-    <div class="empty clear">&nbsp;</div>
 </div><!-- id='content' -->

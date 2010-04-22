@@ -37,6 +37,18 @@ $layouts = array_filter($layouts, 'is_php');
         <?php constructor_admin_layout($layouts, 'index'); ?>
     </td>
 </tr>
+<tr>
+    <th><?php _e('Page', 'constructor')?></th>
+    <td class="select" id="layout-index">
+        <?php constructor_admin_layout($layouts, 'page'); ?>
+    </td>
+</tr>
+<tr>
+    <th><?php _e('Post', 'constructor')?></th>
+    <td class="select" id="layout-index">
+        <?php constructor_admin_layout($layouts, 'single'); ?>
+    </td>
+</tr>
 </table>
 
 <?php       

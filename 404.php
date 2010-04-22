@@ -27,6 +27,5 @@
 		document.getElementById('s') && document.getElementById('s').focus();
 	</script>
     <?php get_constructor_sidebar(); ?>
-    <div class="empty clear">&nbsp;</div>
 </div><!-- id='content' -->
 <?php get_footer(); ?>

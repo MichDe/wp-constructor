@@ -21,6 +21,8 @@ class Constructor_Abstract
                         'archive' => 'default',
                         'search'  => 'default',
                         'index'   => 'default',
+                        'single'  => 'single',
+                        'page'    => 'page',
                                  ),
             'title'     => array(            // title
                         'pos' => 'left top', // - position

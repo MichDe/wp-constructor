@@ -93,6 +93,5 @@ endif;
         <?php get_constructor_navigation(); ?>
     </div><!-- id='container' -->
     <?php get_constructor_sidebar(); ?>
-    <div class="empty clear">&nbsp;</div>
 </div><!-- id='content' -->
 <?php get_footer(); ?>
