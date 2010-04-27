@@ -16,7 +16,13 @@ __('Tile', 'constructor'); // requeried for correct translation
                     <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
                 </div>
                 <div class="thumbnail">
-                    <?php get_constructor_content('tile') ?>
+                    <?php 
+                        // try to found post thubmnail
+                        if (!($thumb = get_the_post_thumbnail(NULL, 'tile-post-thumbnail'))) {
+                            $thumb = get_constructor_noimage();
+                        } 
+                        echo $thumb;    
+                    ?>
                 </div>
                 <div class="links opacity">
                     <div class="date"><?php the_time() ?></div>

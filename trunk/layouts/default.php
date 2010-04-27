@@ -16,7 +16,7 @@ __('Default', 'constructor'); // requeried for correct translation
                     <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
                 </div>
                 <div class="entry">
-                	<?php get_constructor_content() ?>
+                	<?php the_content(__('Read the rest of this entry &raquo;', 'constructor')); ?>
                 </div>
                 <div class="footer">
                     <div class="links">

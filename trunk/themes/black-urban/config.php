@@ -29,8 +29,8 @@ return array(
                         "text" => null
                     ),
             "fonts"     => array(
-                        'header' => 1,
-                        'body'   => 0,
+                        'header' => '"Comic Sans MS",Helvetica,sans-serif',
+                        'body'   => 'Verdana,Helvetica,sans-serif',
                     ),
             "menu"     => array(             // menu with links
                         "width"=> '100%',

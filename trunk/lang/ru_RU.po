@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-15 14:02+0200\n"
-"PO-Revision-Date: 2010-04-15 14:03+0200\n"
+"POT-Creation-Date: 2010-04-23 15:26+0200\n"
+"PO-Revision-Date: 2010-04-23 15:27+0200\n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +18,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: W:/wordpress.dark.php5.nixsolutions.com/wp-content/themes/constructor\n"
 
 #: W:/www/wordpress/wp-content/themes/constructor/sidebar.php:17
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:23
 #: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:24
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:23
 #: W:/www/wordpress/wp-content/themes/constructor/sidebar-extra.php:11
 msgid "Pages"
 msgstr "Страницы"
@@ -30,64 +28,13 @@ msgid "Categories"
 msgstr "Рубрики"
 
 #: W:/www/wordpress/wp-content/themes/constructor/sidebar.php:21
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:29
 #: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:32
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:31
 msgid "Tags"
 msgstr "Метки"
 
 #: W:/www/wordpress/wp-content/themes/constructor/sidebar.php:26
 msgid "Meta"
 msgstr "Управление"
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:19
-#: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:17
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:19
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:19
-#: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:49
-#, php-format
-msgid "Permanent Link to %s"
-msgstr "Постоянная ссылка на %s"
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:22
-#: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:21
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:23
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:22
-#: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:52
-msgid "Read the rest of this entry &raquo;"
-msgstr "Читать запись полностью &raquo;"
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:30
-#: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:31
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:33
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:32
-#: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:89
-msgid "Edit"
-msgstr "Редактировать"
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:31
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:33
-msgid "No Comments &#187;"
-msgstr "Нет комментариев &#187;"
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:31
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:33
-msgid "1 Comment &#187;"
-msgstr "1 комментарий &#187;"
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:31
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:33
-msgid "% Comments &#187;"
-msgstr "% комментариев &#187;"
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:31
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:33
-msgid "Comments Closed"
-msgstr "Комментарии закрыты"
 
 #: W:/www/wordpress/wp-content/themes/constructor/navigation.php:10
 msgid "<span>&laquo;</span> Older Entries"
@@ -97,16 +44,50 @@ msgstr "<span>&laquo;</span> Предыдущие записи"
 msgid "Newer Entries <span>&raquo;</span>"
 msgstr "Следующие записи <span>&raquo;</span>"
 
+#: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:17
+#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:19
+#: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:49
+#, php-format
+msgid "Permanent Link to %s"
+msgstr "Постоянная ссылка на %s"
+
+#: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:21
+#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:23
+#: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:52
+msgid "Read the rest of this entry &raquo;"
+msgstr "Читать запись полностью &raquo;"
+
 #: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:29
 #: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:29
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:28
 #: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:87
 msgid "Back to Parent Page"
 msgstr "Вверх"
 
+#: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:31
+#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:33
+#: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:89
+msgid "Edit"
+msgstr "Редактировать"
+
 #: W:/www/wordpress/wp-content/themes/constructor/slideshow.php:33
 msgid "Read more &raquo;"
 msgstr "Еще &raquo;"
+
+#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
+msgid "No Comments &#187;"
+msgstr "Нет комментариев &#187;"
+
+#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
+msgid "1 Comment &#187;"
+msgstr "1 комментарий &#187;"
+
+#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
+msgid "% Comments &#187;"
+msgstr "% комментариев &#187;"
+
+#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
+msgid "Comments Closed"
+msgstr "Комментарии закрыты"
 
 #: W:/www/wordpress/wp-content/themes/constructor/comments.php:13
 msgid "This post is password protected. Enter the password to view comments."
@@ -129,60 +110,60 @@ msgstr "% комментариев"
 msgid "to &#8220;%s&#8221;"
 msgstr "на &laquo;%s&raquo;"
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:39
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:38
 msgid "Comments are closed."
 msgstr "Комментарии закрыты"
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:50
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:49
 msgid "Leave a Reply"
 msgstr "Оставить комментарий"
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:50
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:49
 #, php-format
 msgid "Leave a Reply for %s"
 msgstr "Оставить комментарий на %s"
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:56
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:55
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "Вы должны <a href=\"%s\">войти</a> чтобы оставить комментарий."
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:62
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:61
 #, php-format
 msgid "Logged in as <a href=\"%1$s\">%2$s</a>."
 msgstr "Вы вошли как <a href=\"%1$s\">%2$s</a>."
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:62
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:61
 msgid "Log out of this account"
 msgstr "Выйти из текущего аккаунта"
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:62
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:61
 msgid "Log out &raquo;"
 msgstr "Выйти &raquo;"
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:65
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:64
 msgid "Name"
 msgstr "Имя"
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:65
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:67
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:64
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:66
 msgid "(required)"
 msgstr "(обязательно)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:67
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:66
 msgid "Mail (will not be published)"
 msgstr "E-mail (не публикуется)"
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:69
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:68
 msgid "Website"
 msgstr "Сайт"
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:72
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:71
 #, php-format
 msgid "<strong>XHTML:</strong> You can use these tags: <code>%s</code>"
 msgstr "<strong>XHTML:</strong> Вы можете использовать эти тэги: <code>%s</code>"
 
-#: W:/www/wordpress/wp-content/themes/constructor/comments.php:74
+#: W:/www/wordpress/wp-content/themes/constructor/comments.php:73
 msgid "Submit Comment"
 msgstr "Отправить комментарий"
 
@@ -339,6 +320,11 @@ msgstr "Глобальные Рубрики"
 msgid "Many In One"
 msgstr "Много в одном"
 
+#: W:/www/wordpress/wp-content/themes/constructor/layouts/single.php:6
+#: W:/www/wordpress/wp-content/themes/constructor/layouts/page.php:6
+msgid "Single"
+msgstr "Запись"
+
 #: W:/www/wordpress/wp-content/themes/constructor/layouts/list.php:6
 msgid "List"
 msgstr "Списком"
@@ -348,7 +334,6 @@ msgid "Tile"
 msgstr "Плиткой"
 
 #: W:/www/wordpress/wp-content/themes/constructor/layouts/default.php:6
-#: W:/www/wordpress/wp-content/themes/constructor/layouts/mono.php:6
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:111
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:112
 msgid "Default"
@@ -469,13 +454,11 @@ msgstr "Ширина второй боковой панели"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:76
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:77
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:77
 msgid "Left"
 msgstr "Слева"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:79
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:80
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:78
 msgid "Right"
 msgstr "Справа"
 
@@ -560,7 +543,6 @@ msgid "Autogenerate thumbnail with right size"
 msgstr "Автогенерация миниатюр под заданный размер"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:89
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:40
 msgid "Position"
 msgstr "Расположение"
 
@@ -586,21 +568,29 @@ msgstr "требуется <strong>imagerotator.swf</strong>"
 msgid "You can use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a> plugin for build custom slideshow"
 msgstr "Можете использовать <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a> плагин для создания слайдшоу из фотографий"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:11
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:17
 msgid "Homepage"
 msgstr "Домашняя страница"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:17
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:23
 msgid "Archive"
 msgstr "Архив"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:23
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:29
 msgid "Search"
 msgstr "Поиск"
 
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:29
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:35
 msgid "Index"
 msgstr "Индекс"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:41
+msgid "Page"
+msgstr "Страница"
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:47
+msgid "Post"
+msgstr "Запись"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:6
 msgid "Posts"
@@ -619,6 +609,8 @@ msgid "Autogenerate thumbnails"
 msgstr "Автогенерация миниатюр"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:24
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/images.php:46
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/save.php:20
 #, php-format
 msgid "<font color=\"red\"><b>Warning!</b></font>: Directory \"%s\" is not writable."
 msgstr "<font color=\"red\"><b>Внимание!</b></font>: Директория  &laquo;%s&raquo; имеет атрибут только для чтения."
@@ -662,6 +654,7 @@ msgid "Show \"No Image\" picture"
 msgstr "Отображать картинку &laquo;No Image&raquo; "
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:76
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/comments.php:36
 msgid "Thumbnail position"
 msgstr "Расположение миниатюры"
 

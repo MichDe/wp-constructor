@@ -1,8 +1,8 @@
 /*  
 Theme Name: Constructor
 Theme URI: http://code.google.com/p/wp-constructor/
-Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.8+ (include 3.0)
-Version: 0.9.8
+Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.9+ (include 3.0)
+Version: 0.9.9
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -26,7 +26,7 @@ input,button,textarea,select{*font-size:100%;}
 
 body {
     min-width:1000px;
-    line-height:1.5em;
+    font: 62.5%/1.5em Arial,Helvetica,sans-serif;
 }
 
 hr {
@@ -137,14 +137,11 @@ div.aligncenter {
 	    margin:0 auto
 	}
 	#header #name {
-	    font: bold 600%/100% Verdana,Tahoma,sans-serif;
-	    letter-spacing: -6px;
 	    margin:0;
 	    padding:0;
 	}
 	#header #description {
 	    display:block;
-	    font-size:1.2em;
 	    margin:0;
 	    padding:0 8px;
 	}
@@ -299,6 +296,7 @@ div.aligncenter {
     margin:0;
     font-weight:700 !important;
     font-size:2em;
+    line-height:1.4em;
 }
 .hentry .title h1 a,
 .hentry .title h2 a{
@@ -366,6 +364,7 @@ div.aligncenter {
 
 }
 .hentry .footer {
+    overflow:hidden;
     clear:both
 }
 .hentry .footer .links {
@@ -436,7 +435,7 @@ div.aligncenter {
 }
 
 .tile .title h2 a {
-    padding:4px 12px;
+    padding:2px 4px;
 }
 .tile a {
     display:block;
@@ -530,17 +529,7 @@ div.aligncenter {
     height:0;
 }
 /*/Navigation*/
-/*Content Widgets*/
-#content-widget {
-    clear:both;
-    margin:0 0 10px 0
-}
-    #content-widget .widget {
-        float:left;
-        width:30%;
-        padding:4px 8px;
-    }
-    
+/*Widgets*/
 .widget h3 {
     padding:0 4px 0px 8px;
     line-height:2em
@@ -559,7 +548,19 @@ div.aligncenter {
     padding:2px 2px 2px 6px;
     list-style:circle inside;
 }
-/*/Content Widget*/
+.widget_tag_cloud a {
+    line-height:100%;
+}
+#content-widget {
+    clear:both;
+    margin:0 0 10px 0
+}
+    #content-widget .widget {
+        float:left;
+        width:30%;
+        padding:4px 8px;
+    }
+/*/Widgets*/
 /*Search*/
 #searchform {
     width:200px;
@@ -600,7 +601,7 @@ div.aligncenter {
 /*/Search*/
 /*Form*/
 input, select, textarea {
-    font-size:14px;
+    font-size:1.4em;
     padding: 4px;
     border-width:1px;
     border-style:solid;
@@ -770,9 +771,9 @@ td {
     border: 0 none !important;
 }
 .wp-caption p.wp-caption-text {
-    font-size: 11px;
+    font-size: 1em;
     line-height: 17px;
-    padding: 0 4px 5px;
+    padding: 4px 0;
     text-indent:0;
     margin: 0
 }
@@ -856,7 +857,7 @@ td {
     width:100%;
     height:34px;
     padding:0 12px;
-    font-size:16px;
+    font-size:1.6em;
     font-weight:900 !important;
     line-height:38px;
     
@@ -922,7 +923,7 @@ td {
 	position: relative;
 	cursor: pointer;
 	
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: bold;
 	line-height: 13px;
 }

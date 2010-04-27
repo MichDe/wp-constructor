@@ -38,13 +38,47 @@ $color3   = $constructor['color']['header3'];
 
 $color_bg      = $constructor['color']['bg'];
 $color_bg2     = $constructor['color']['bg2'];
-$color_title   = $constructor['color']['title'];
-$color_title2  = $constructor['color']['title2'];
 $color_text    = $constructor['color']['text'];
 $color_text2   = $constructor['color']['text2'];
 $color_border  = $constructor['color']['border'];
 $color_border2 = $constructor['color']['border2'];
 $color_opacity = isset($constructor['color']['opacity'])?$constructor['color']['opacity']:'#ffffff';
+
+/*Fonts*/
+
+$title_font = <<<CSS
+font-family:{$constructor['fonts']['title']['family']};
+font-size:{$constructor['fonts']['title']['size']}px;
+line-height:{$constructor['fonts']['title']['size']}px;
+font-weight:{$constructor['fonts']['title']['weight']};
+color:{$constructor['fonts']['title']['color']};
+text-transform:{$constructor['fonts']['title']['transform']};
+CSS;
+
+$description_font = <<<CSS
+font-family:{$constructor['fonts']['description']['family']};
+font-size:{$constructor['fonts']['description']['size']}px;
+line-height:{$constructor['fonts']['description']['size']}px;
+font-weight:{$constructor['fonts']['description']['weight']};
+color:{$constructor['fonts']['description']['color']};
+text-transform:{$constructor['fonts']['description']['transform']};
+CSS;
+
+$body_font = <<<CSS
+font-family:{$constructor['fonts']['content']['family']};
+font-size:{$constructor['fonts']['content']['size']}px;
+color:{$constructor['fonts']['content']['color']};
+CSS;
+
+$header_font = <<<CSS
+font-family:{$constructor['fonts']['header']['family']};
+CSS;
+
+$content_font = <<<CSS
+font-family:{$constructor['fonts']['content']['family']};
+CSS;
+
+/*/Fonts*/
 
 /* Opacity */
 // switch statement for $constructor['opacity']
@@ -436,12 +470,6 @@ $layout_alt .= <<<CSS
 CSS;
 }
 
-/* List of Fonts */
-$fonts = include dirname(__FILE__) . '/admin/fonts.php';
-
-$fonts_header = $fonts[$constructor['fonts']['header']];
-$fonts_body = $fonts[$constructor['fonts']['body']];
-
 /* Background images */
 if (isset($constructor['images']['body']['src']) && !empty($constructor['images']['body']['src'])) {
     
@@ -553,8 +581,8 @@ CSS;
 /* Output CSS */
 echo <<<CSS
 body {
-    font: 62.5%/1.6 {$fonts_body};
     background-color:{$color_bg};
+    {$content_font}
     {$body_bg}
 }
 
@@ -563,7 +591,7 @@ a { color:{$color_text} }
 
 hr { color: {$color1}; background-color: {$color1} }
 
-h1,h2,h3,h4,h5,h6 {font-family:{$fonts_header}}
+h1,h2,h3,h4,h5,h6 {{$header_font}}
 
 h1,
 h2 { color:{$color1} }
@@ -572,7 +600,7 @@ h4 { color:{$color2} }
 h5,
 h6 { color:{$color3} }
 
-pre {font-family:{$fonts_body}}
+pre {{$content_font}}
 
 a:hover { color:{$color1} }
 table caption {
@@ -722,9 +750,8 @@ fieldset{
 	height: {$constructor['layout']['header']}px;
 	text-align: {$constructor['title']['pos']}
 }
-#header #name { font: bold 600%/100% {$fonts_header}; }
-#header #name a { color: {$color_title}}
-#header #description { color: {$color_title2}}
+#header #name { $title_font }
+#header #description { $description_font }
 {$title}
 #header #title {
     {$title_align}

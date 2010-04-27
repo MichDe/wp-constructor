@@ -8,27 +8,11 @@ function is_php($file) {
 }
 $layouts = array_filter($layouts, 'is_php');
 ?>
-<input type="hidden" id="constructor-layout-home" name="constructor[layout][home]" value="<?php echo $constructor['layout']['home']?>"/>
-<input type="hidden" id="constructor-layout-archive" name="constructor[layout][archive]" value="<?php echo $constructor['layout']['archive']?>"/>
-<input type="hidden" id="constructor-layout-search" name="constructor[layout][search]" value="<?php echo $constructor['layout']['search']?>"/>
-<input type="hidden" id="constructor-layout-index" name="constructor[layout][index]" value="<?php echo $constructor['layout']['index']?>"/>
 <table class="form-table">
 <tr>
     <th><?php _e('Homepage', 'constructor')?></th>
     <td class="select" id="layout-home">
         <?php constructor_admin_layout($layouts, 'home'); ?>
-    </td>
-</tr>
-<tr>
-    <th><?php _e('Archive', 'constructor')?></th>
-    <td class="select" id="layout-archive">
-        <?php constructor_admin_layout($layouts, 'archive'); ?>
-    </td>
-</tr>
-<tr>
-    <th><?php _e('Search', 'constructor')?></th>
-    <td class="select" id="layout-search">
-        <?php constructor_admin_layout($layouts, 'search'); ?>
     </td>
 </tr>
 <tr>
@@ -39,14 +23,38 @@ $layouts = array_filter($layouts, 'is_php');
 </tr>
 <tr>
     <th><?php _e('Page', 'constructor')?></th>
-    <td class="select" id="layout-index">
+    <td class="select" id="layout-page">
         <?php constructor_admin_layout($layouts, 'page'); ?>
     </td>
 </tr>
 <tr>
     <th><?php _e('Post', 'constructor')?></th>
-    <td class="select" id="layout-index">
+    <td class="select" id="layout-single">
         <?php constructor_admin_layout($layouts, 'single'); ?>
+    </td>
+</tr>
+<tr>
+    <th><?php _e('Archive', 'constructor')?></th>
+    <td class="select" id="layout-archive">
+        <?php constructor_admin_layout($layouts, 'archive'); ?>
+    </td>
+</tr>
+<tr>
+    <th><?php _e('Date', 'constructor')?></th>
+    <td class="select" id="layout-date">
+        <?php constructor_admin_layout($layouts, 'date'); ?>
+    </td>
+</tr>
+<tr>
+    <th><?php _e('Category', 'constructor')?></th>
+    <td class="select" id="layout-category">
+        <?php constructor_admin_layout($layouts, 'category'); ?>
+    </td>
+</tr>
+<tr>
+    <th><?php _e('Search', 'constructor')?></th>
+    <td class="select" id="layout-search">
+        <?php constructor_admin_layout($layouts, 'search'); ?>
     </td>
 </tr>
 </table>
@@ -62,6 +70,9 @@ $layouts = array_filter($layouts, 'is_php');
 function constructor_admin_layout($layouts, $key) 
 {
     global $constructor;
+    ?>    
+    <input type="hidden" id="constructor-layout-<?php echo $key ?>" name="constructor[layout][<?php echo $key ?>]" value="<?php echo $constructor['layout'][$key]?>"/>
+    <?php
     foreach ($layouts as $layout) {
         $info = pathinfo($layout);
         $name = $info['filename'];
