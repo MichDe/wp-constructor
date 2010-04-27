@@ -94,6 +94,8 @@ $(document).ready(function(){
         dialogs[id].dialog('open');
     	return false;
     });
+    
+
 
 });
 })(jQuery);
@@ -107,4 +109,18 @@ function name2id(name) {
         name = name.replace(/\[/,'-');
         name = name.replace(/\]/,'');
     return name;  
+}
+
+// Init Color Picker
+function initColorPicker(el) {
+    jQuery('#'+el).ColorPicker({
+        color:jQuery('#constructor-'+el).val(),
+        onChange: function (hsb, hex, rgb) {
+            jQuery('#constructor-'+el).val('#' + hex);
+            jQuery('#'+el+' div').css('backgroundColor', '#' + hex);
+        }
+    })
+    .bind('keyup', function(){
+        jQuery(this).ColorPickerSetColor(this.value);
+    });
 }

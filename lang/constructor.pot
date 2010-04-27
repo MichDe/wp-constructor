@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-20 18:23+0200\n"
+"POT-Creation-Date: 2010-04-23 15:26+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
@@ -18,9 +18,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: W:/www/wordpress/wp-content/themes/constructor\n"
 
 #: W:/www/wordpress/wp-content/themes/constructor/sidebar.php:17
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:23
 #: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:24
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:23
 #: W:/www/wordpress/wp-content/themes/constructor/sidebar-extra.php:11
 msgid "Pages"
 msgstr ""
@@ -30,63 +28,12 @@ msgid "Categories"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/sidebar.php:21
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:29
 #: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:32
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:31
 msgid "Tags"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/sidebar.php:26
 msgid "Meta"
-msgstr ""
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:19
-#: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:17
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:19
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:19
-#: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:49
-#, php-format
-msgid "Permanent Link to %s"
-msgstr ""
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:22
-#: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:21
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:23
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:22
-#: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:52
-msgid "Read the rest of this entry &raquo;"
-msgstr ""
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:30
-#: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:31
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:33
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:32
-#: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:89
-msgid "Edit"
-msgstr ""
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:31
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:33
-msgid "No Comments &#187;"
-msgstr ""
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:31
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:33
-msgid "1 Comment &#187;"
-msgstr ""
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:31
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:33
-msgid "% Comments &#187;"
-msgstr ""
-
-#: W:/www/wordpress/wp-content/themes/constructor/single.php:31
-#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:33
-msgid "Comments Closed"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/navigation.php:10
@@ -97,15 +44,49 @@ msgstr ""
 msgid "Newer Entries <span>&raquo;</span>"
 msgstr ""
 
+#: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:17
+#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:19
+#: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:49
+#, php-format
+msgid "Permanent Link to %s"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:21
+#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:23
+#: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:52
+msgid "Read the rest of this entry &raquo;"
+msgstr ""
+
 #: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:29
 #: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:29
-#: W:/www/wordpress/wp-content/themes/constructor/page.php:28
 #: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:87
 msgid "Back to Parent Page"
 msgstr ""
 
+#: W:/www/wordpress/wp-content/themes/constructor/template-authors.php:31
+#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:33
+#: W:/www/wordpress/wp-content/themes/constructor/template-archive.php:89
+msgid "Edit"
+msgstr ""
+
 #: W:/www/wordpress/wp-content/themes/constructor/slideshow.php:33
 msgid "Read more &raquo;"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
+msgid "No Comments &#187;"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
+msgid "1 Comment &#187;"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
+msgid "% Comments &#187;"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/template-monocolumn.php:34
+msgid "Comments Closed"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/comments.php:13
@@ -339,6 +320,11 @@ msgstr ""
 msgid "Many In One"
 msgstr ""
 
+#: W:/www/wordpress/wp-content/themes/constructor/layouts/single.php:6
+#: W:/www/wordpress/wp-content/themes/constructor/layouts/page.php:6
+msgid "Single"
+msgstr ""
+
 #: W:/www/wordpress/wp-content/themes/constructor/layouts/list.php:6
 msgid "List"
 msgstr ""
@@ -468,15 +454,11 @@ msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:76
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:77
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:77
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/comments.php:37
 msgid "Left"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:79
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/sidebar.php:80
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:78
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/comments.php:38
 msgid "Right"
 msgstr ""
 
@@ -561,7 +543,6 @@ msgid "Autogenerate thumbnail with right size"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:89
-#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:40
 msgid "Position"
 msgstr ""
 
@@ -603,6 +584,14 @@ msgstr ""
 msgid "Index"
 msgstr ""
 
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:41
+msgid "Page"
+msgstr ""
+
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/layout.php:47
+msgid "Post"
+msgstr ""
+
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:6
 msgid "Posts"
 msgstr ""
@@ -620,6 +609,8 @@ msgid "Autogenerate thumbnails"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/content.php:24
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/images.php:46
+#: W:/www/wordpress/wp-content/themes/constructor/admin/settings/save.php:20
 #, php-format
 msgid "<font color=\"red\"><b>Warning!</b></font>: Directory \"%s\" is not writable."
 msgstr ""

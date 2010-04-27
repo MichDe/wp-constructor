@@ -31,7 +31,7 @@ $(document).ready(function(){
 <table class="form-table">
     <tr>
         <th colspan="2">
-			<?php _e('By default use images from posts with custom field <code>thumb-slideshow</code>', 'constructor');?>
+			<?php _e('By default use images from posts with thumbnails', 'constructor');?>
         </th>
     </tr>
     <tr>
@@ -77,9 +77,6 @@ $(document).ready(function(){
             <label for="constructor-slideshow-advanced-timeout"><?php _e('Timeout between slides (ms)', 'constructor')?></label>
             <br/>
             
-            <input type="text" id="constructor-slideshow-metakey" name="constructor[slideshow][metakey]" value="<?php echo (isset($constructor['slideshow']['metakey'])?$constructor['slideshow']['metakey']:'thumb-slideshow'); ?>" />
-            <label for="constructor-slideshow-metakey"><?php _e('Key of custom field', 'constructor')?></label>
-            <br/>
             <input type="checkbox" id="constructor-slideshow-advanced-thumb" name="constructor[slideshow][advanced][thumb]" value="1" <?php if (isset($constructor['slideshow']['advanced']['thumb']) && $constructor['slideshow']['advanced']['thumb']) echo 'checked="checked"'; ?> />
             <label for="constructor-slideshow-advanced-thumb"><?php _e('Autogenerate thumbnail with right size', 'constructor')?></label>
             <br/>

@@ -106,7 +106,7 @@ class Constructor_Main extends Constructor_Abstract
                 break;
         
             default:
-                $this->getDefaultSlideshow();
+                $this->getDefaultSlideshow($width, $height);
                 break;
         }
         
@@ -119,14 +119,15 @@ class Constructor_Main extends Constructor_Abstract
      *
      * generate code for embedded slideshow
      *
+     * @param   integer $width
+     * @param   integer $height
      * @return  string
      */
-    function getDefaultSlideshow() 
+    function getDefaultSlideshow($width, $height) 
     {
         $options = $this->_options['slideshow']['advanced'];
-        $options['slideshow'] = get_option('home').'/?theme-constructor=slideshow';
+        $options['slideshow'] = get_option('home').'/?theme-constructor=slideshow&w='.$width.'&h='.$height;
         $options['thumbPath'] = CONSTRUCTOR_DIRECTORY_URI."/libs/timthumb.php?src=";
-        
         $options = json_encode($options);
         
         echo '<div class="wp-sl"></div>';
@@ -268,36 +269,6 @@ class Constructor_Main extends Constructor_Abstract
     }
     
     /**
-     * get constructor content
-     * 
-     * @param string $layout [optional]
-     * @return 
-     */
-    function getContent($layout = 'default')
-    {
-         switch ($layout) {
-             case 'list':
-                $this->getPostImage(128, 128, 'thumb-list',
-                                    $this->_options['content']['list']['thumb']['pos'],
-                                    $this->_options['content']['list']['thumb']['noimage']);
-                if (!$this->_options['content']['list']['filter']) {
-                    the_content(__('Read the rest of this entry &raquo;', 'constructor'));
-                } else {
-                    $content = apply_filters('the_content', get_the_content(__('Read the rest of this entry &raquo;', 'constructor')));
-                    $content = preg_replace('/(\<script.*\>.*\<\/script\>)/si', '', $content);
-                    echo strip_tags($content, '<p><br><a><hr><i><em><b><strong><ul><ol><li>');
-                }
-                break;
-            case 'tile';
-                $this->getPostImage();
-                break;
-            default:
-                the_content(__('Read the rest of this entry &raquo;', 'constructor'));
-                break;
-         }
-    }
-    
-    /**
      * get constructor content widget
      * 
      * @param integer $i post counter
@@ -404,72 +375,6 @@ class Constructor_Main extends Constructor_Abstract
 
         if (defined('WP_DEBUG') && WP_DEBUG) {
             printf(__('%d queries. %s seconds.', 'constructor'), get_num_queries(), timer_stop(0, 3));
-        }
-    }
-    
-    /**
-     * Generate HTML code for images
-     * 
-     * @param integer $width [optional]
-     * @param integer $height [optional]
-     * @param string $key [optional]
-     * @param string $align [optional]
-     * @param bool $noimage [optional]
-     * @return string
-     */
-    function getPostImage($width = 312, $height = 292, $key = 'thumb', $align = 'none', $noimage = true)
-    {
-        global $post;
-        
-        if ($this->_options['content']['thumb']['auto']) {
-            if ($img = $this->_getPostImage()) {
-                echo '<img class="thumb align'.$align.'" src="' .CONSTRUCTOR_DIRECTORY_URI. "/libs/timthumb.php?src=".urlencode($img).'&amp;h='.$height.'&amp;w='.$width.'&amp;zc=1&amp;q=95" alt="' .get_the_title(). '"/>';
-            } else {
-                if ($img = $this->_getPostImage(false)) {
-                    echo '<div class="crop thumb align'.$align.'" style="width:'.$width.'px;height:'.$height.'px;"><img src="'.$img.'" height="'.$height.'px" alt="' .get_the_title(). '"/></div>';
-                } else {
-                    if ($noimage) {
-                        echo '<img class="thumb align'.$align.'" src="' .CONSTRUCTOR_DIRECTORY_URI. '/images/noimage.png" width="'.$width.'px" height="'.$height.'px" alt="' .__('No Image', 'constructor'). '"/>';
-                    }  
-                }
-            }
-        } else {
-            $thumbs = get_post_custom_values($key);
-            if (sizeof($thumbs) > 0) {
-                $img = $thumbs[0];
-                echo '<img class="thumb align'.$align.'" src="' .$img.'" width="'.$width.'px" height="'.$height.'px" alt="' .get_the_title(). '"/>';
-            } else {
-                if ($noimage) {
-                    echo '<img class="thumb align'.$align.'" src="' .CONSTRUCTOR_DIRECTORY_URI. '/images/noimage.png" width="'.$width.'px" height="'.$height.'px" alt="' .__('No Image', 'constructor'). '"/>';
-                }
-            }
-        }
-    }
-    
-    /**
-     * _get_post_image
-     *
-     * @see    wordpress loop
-     * @param  bool $local search only local images
-     * @return string
-     */
-    function _getPostImage($local = true)
-    {
-        global $post;
-
-        if ($local) {
-            $home = addcslashes(get_bloginfo('siteurl'), '.-/');
-            $pattern = "/\<\s*img.*src\s*=\s*[\"\']?(?:$home|\/)([^\"\'\ >]*)[\"\']?.*\/\>/i";
-        } else {
-            $pattern = "/\<\s*img.*src\s*=\s*[\"\']?([^\"\'\ >]*)[\"\']?.*\/\>/i";
-        }
-
-        preg_match_all($pattern, $post->post_content, $images);
-
-        if (!isset($images[1][0])) {
-            return false;
-        } else {
-            return $images[1][0];
         }
     }
     

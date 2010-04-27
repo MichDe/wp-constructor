@@ -16,7 +16,7 @@ Wordpress Constructor Theme, it's many-in-one theme:
 
 Build your own theme on [settings page](/wp-admin/themes.php?page=functions.php).
 
-For Wordpress version 2.7+
+For Wordpress version 2.9+
 
 == Installation ==
 

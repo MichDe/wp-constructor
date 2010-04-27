@@ -21,13 +21,6 @@ $(document).ready(function(){
 <input type="hidden" id="constructor-menu-pos" name="constructor[menu][pos]" value="<?php echo $constructor['menu']['pos']?>"/>
 <table class="form-table">
 <tr>
-    <th scope="row" valign="top"><?php _e('Hidden title', 'constructor'); ?></th>
-    <td>
-		<input type="checkbox" id="constructor-title-hidden" name="constructor[title][hidden]" value="1" <?php if ($constructor['title']['hidden']) echo 'checked="checked"'; ?> />
-        <label for="constructor-title-hidden"><?php _e('hide title by CSS', 'constructor'); ?></label>
-    </td>
-</tr>
-<tr>
     <th scope="row" valign="top"><?php _e('Title position', 'constructor'); ?></th>
     <td class="position select" id="title-pos">
         
@@ -51,14 +44,10 @@ $(document).ready(function(){
     </td>
 </tr>
 <tr>
-    <th scope="row" valign="top"><?php _e('Title font', 'constructor'); ?></th>
-    <td class="color-selector">
-        <div id="color_title" class="color"><div style="background-color: <?php echo $constructor['color']['title'] ?>"></div></div>
-        - <?php echo attribute_escape(__('title', 'constructor')); ?>
-        <br class="clear"/>
-        <div id="color_title2" class="color"><div style="background-color: <?php echo $constructor['color']['title2'] ?>"></div></div>
-        - <?php echo attribute_escape(__('description', 'constructor')); ?>
-        <br class="clear"/>
+    <th scope="row" valign="top"><?php _e('Hidden title', 'constructor'); ?></th>
+    <td>
+		<input type="checkbox" id="constructor-title-hidden" name="constructor[title][hidden]" value="1" <?php if ($constructor['title']['hidden']) echo 'checked="checked"'; ?> />
+        <label for="constructor-title-hidden"><?php _e('hide title by CSS', 'constructor'); ?></label>
     </td>
 </tr>
 <tr>

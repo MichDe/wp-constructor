@@ -2,20 +2,6 @@
 <script type="text/javascript">
 (function($){
 $(document).ready(function(){
-    // Init Color Picker
-    function initColorPicker(el) {
-        $('#'+el).ColorPicker({
-            color:$('#constructor-'+el).val(),
-            onChange: function (hsb, hex, rgb) {
-                $('#constructor-'+el).val('#' + hex);
-                $('#'+el+' div').css('backgroundColor', '#' + hex);
-            }
-        })
-        .bind('keyup', function(){
-            $(this).ColorPickerSetColor(this.value);
-        });
-    }
-
     initColorPicker('color_header1');
     initColorPicker('color_header2');
     initColorPicker('color_header3');

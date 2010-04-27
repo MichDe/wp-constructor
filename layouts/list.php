@@ -19,7 +19,8 @@ __('List', 'constructor'); // requeried for correct translation
     				<div class="date color2"><?php the_time() ?></div>
                 </div>                
                 <div class="entry clear">
-    				<?php get_constructor_content('list') ?>
+                    <?php the_post_thumbnail( 'list-post-thumbnail', array('class' => 'thumb alignleft') ); ?>
+    				<?php the_content(__('Read the rest of this entry &raquo;', 'constructor')); ?>
                 </div>
                 <div class="footer">
                     

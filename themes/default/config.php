@@ -10,11 +10,13 @@ return array(
                         'sidebar' => 240,    // sidebar width
                         'extra'   => 240,    // extrabar  width
                         'home'    => 'default',
-                        'archive' => 'default',
-                        'search'  => 'default',
                         'index'   => 'default',
-                        'single'  => 'single',
                         'page'    => 'page',
+                        'single'  => 'single',
+                        'archive' => 'default',
+                        'date'    => 'default',
+                        'category' => 'default',
+                        'search'  => 'default',
                                  ),
             'title'     => array(            // title
                         'pos' => 'left top', // - position
@@ -22,11 +24,6 @@ return array(
                         ),
             "content"   => array(            // content
                         "author" => 0,       // - link to author page
-                        'thumb' =>  array ('auto'   => false), // - autogenerate thumbnails
-                        'list'  =>  array (                    // list layout
-                                           'filter' => false,  // - strip HTML tags
-                                           'thumb'  => array ( 'pos' => 'left', 'noimage' => false, ), // - thumbnail position and "No Image" option
-                                          ),
                         ),
             'comments'  => array(
                         'avatar' => array ('size'   => 64,     // - avatar size (see comments)
@@ -37,8 +34,22 @@ return array(
                         "text" => null,
                         ),
             "fonts"     => array(            // fonts
-                        'header' => 0,       // - for title
-                        'body'   => 0,       // - for content
+                        'title' => array('family' => 'Arial,Helvetica,sans-serif', 
+                                         'size'   => 48,
+                                         'weight' => 800,
+                                         'color'  => '#333',
+                                         'transform' => 'uppercase',
+                                         
+                                         ),       
+                        'description' => array('family' => 'Arial,Helvetica,sans-serif', 
+                                         'size'   => 14,
+                                         'weight' => 600,
+                                         'color'  => '#777',
+                                         'transform' => 'uppercase'
+                                         
+                                         ),
+                        'header'      => array('family' => 'Arial,Helvetica,sans-serif'),
+                        'content'     => array('family' => 'Arial,Helvetica,sans-serif'),
                         ),
             "menu"     => array(             // menu with links
                         'pos'  => 'right bottom',// - position (left|right)+(top|center|bottom)
@@ -87,7 +98,7 @@ return array(
                         "wrapper"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                         "sidebar"  => array('src'=>'', 'pos'=>'right bottom', 'repeat'=>'no-repeat'),
                         "extrabar" => array('src'=>'', 'pos'=>'right bottom', 'repeat'=>'no-repeat'),
-                        "footer"   => array('src'=>'themes/default/footer.png', 'pos'=>'right bottom', 'repeat'=>'no-repeat'),
+                        "footer"   => array('src'=>'', 'pos'=>'right bottom', 'repeat'=>'no-repeat'),
                         "wrapheader"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                         "wrapcontent" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                         "wrapfooter"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),

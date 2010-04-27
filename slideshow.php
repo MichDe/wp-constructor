@@ -11,17 +11,21 @@ if (!$constructor = get_option('constructor')) {
 }
 
 $showposts = isset($constructor['slideshow']['showposts'])?$constructor['slideshow']['showposts']:10;
-$metakey   = isset($constructor['slideshow']['metakey'])?$constructor['slideshow']['metakey']:'thumb-slideshow';
+$width = isset($_GET['w'])?(int)$_GET['w']:320;
+$height = isset($_GET['h'])?(int)$_GET['h']:240;
 
-$WP_Query = new WP_Query();   
-$WP_Query->query('showposts='.$showposts.'&meta_key='.$metakey);
+$WP_Query = new WP_Query();
+$WP_Query->query('showposts='.$showposts.'&meta_key=_thumbnail_id');
 echo '<'.'?xml version="1.0" encoding="UTF-8" ?>';
 echo '<posts>';
 
 while($WP_Query->have_posts()) :
 	$WP_Query->the_post();
-	$image =  get_post_custom_values($metakey);
+
+	$post_thumbnail_id = get_post_thumbnail_id();
+	$image = wp_get_attachment_image_src($post_thumbnail_id, array($width, $height));
 	$image = $image[0];
+//	$image = get_the_post_thumbnail(null,array($width, $height));
 	
 //    $content = apply_filters('the_content', get_the_excerpt(''), true);
 //    $content = preg_replace('/(\<script.*\>.*\<\/script\>)/si', '', $content);

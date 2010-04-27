@@ -77,26 +77,6 @@
     height:48px;
     line-height:32px;
 }
-.constructor .font-selector {
-	width:80%;
-    font-size:1.4em !important;
-	line-height:1.4em !important;
-	height:1.8em !important;	
-}
-.constructor .font-selector optgroup{
-    font-size:1.2em !important;
-	font-style: normal;
-	text-align: right;
-	border-top: 2px solid #333;
-	/*background:#333;
-	color:#fff;*/
-}
-.constructor .font-selector option {
-    font-size:1.0em !important;
-	text-align: left;
-	background:#fff;
-    color:#333;
-}
 
 .constructor textarea.big {
     width:100%;
@@ -235,12 +215,8 @@
 }
 
 /*Fonts Tab*/
-#constr-fonts label {
-    font-size:1.8em;
-    line-height:32px;
-}
-#constr-fonts td {
-    height:32px;
+#constr-fonts select {
+    font-size:14px;
 }
 
 /*Footer Tab*/

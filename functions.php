@@ -20,30 +20,6 @@ define('CONSTRUCTOR_DEBUG', false);
 if ( function_exists('register_sidebar') ) {
 
     register_sidebar(array(
-        'name'=>'sidebar',
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget' => '</li>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>',
-    ));
-
-    register_sidebar(array(
-        'name'=>'extra',
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget' => '</li>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>',
-    ));
-
-    register_sidebar(array(
-        'name'=>'footer',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>',
-    ));  
-      
-    register_sidebar(array(
         'name'=>'header',
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget' => '</li>',
@@ -57,7 +33,30 @@ if ( function_exists('register_sidebar') ) {
         'after_widget' => '</div>',
         'before_title' => '<h3 class="widgettitle">',
         'after_title' => '</h3>',
-    )); 
+    ));
+    
+    // options for all follows sidebars
+    $widget_options = array(
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget' => '</li>',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>',
+    );
+    
+    register_sidebar(array_merge($widget_options, array('name'=>'sidebar')));
+    register_sidebar(array_merge($widget_options, array('name'=>'sidebar categories')));
+    register_sidebar(array_merge($widget_options, array('name'=>'sidebar posts')));
+    register_sidebar(array_merge($widget_options, array('name'=>'sidebar pages')));
+    
+    register_sidebar(array_merge($widget_options, array('name'=>'extra')));
+    register_sidebar(array_merge($widget_options, array('name'=>'extra categories')));
+    register_sidebar(array_merge($widget_options, array('name'=>'extra posts')));
+    register_sidebar(array_merge($widget_options, array('name'=>'extra pages')));
+    
+    register_sidebar(array_merge($widget_options, array('name'=>'footer')));
+    register_sidebar(array_merge($widget_options, array('name'=>'footer categories')));
+    register_sidebar(array_merge($widget_options, array('name'=>'footer posts')));
+    register_sidebar(array_merge($widget_options, array('name'=>'footer pages')));    
 }
 
 define('CONSTRUCTOR_DIRECTORY',     get_template_directory());
@@ -65,11 +64,20 @@ define('CONSTRUCTOR_DIRECTORY_URI', get_template_directory_uri());
 
 load_theme_textdomain('constructor', CONSTRUCTOR_DIRECTORY.'/lang');
 
-if ( version_compare( $wp_version, '2.8', '<=' ) ) {
-    require_once 'admin/compatibility/body_class.php';
-}
+if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
+	// This theme uses post thumbnails
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 64, 64, true ); // Normal post thumbnail
+	add_image_size( 'list-post-thumbnail', 128, 128, true );
+	add_image_size( 'tile-post-thumbnail', 312, 292, true );
+	add_image_size( 'slideshow-thumbnail');
+	    
+	// This theme uses wp_nav_menu()
+	add_theme_support( 'nav-menus' );
 
-//require_once 'widgets/many-in-one.php';
+	// Add default posts and comments RSS feed links to head
+	add_theme_support( 'automatic-feed-links' );    	
+}
 
 if (!is_admin()) {    
     
@@ -169,19 +177,7 @@ if (!is_admin()) {
         global $main;
         $main->getMenu($before, $after);
     }
-    
-    /**
-     * get content
-     * 
-     * @param string $layout [optional]
-     * @return 
-     */
-    function get_constructor_content($layout = 'default')
-    {
-        global $main;
-        $main->getContent($layout);
-    }
-    
+        
     /**
      * get content widget
      * 
@@ -216,6 +212,16 @@ if (!is_admin()) {
     {
         global $main;
         return $main->getAvatarSize($size);
+    }
+    
+    /**
+     * get no image
+     *
+     * @return string
+     */
+    function get_constructor_noimage($width = 312, $height = 292, $align = 'none') 
+    {
+        return '<img class="thumb align'.$align.'" src="' .CONSTRUCTOR_DIRECTORY_URI. '/images/noimage.png" width="'.$width.'px" height="'.$height.'px" alt="' .__('No Image', 'constructor'). '"/>';
     }
     
     /**
@@ -323,20 +329,6 @@ if (!is_admin()) {
 		__('Help',    'constructor') => 'help'
     );
     
-    if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
-    	// This theme uses post thumbnails
-    	//add_theme_support( 'post-thumbnails' );
-    	//set_post_thumbnail_size( 50, 50, true ); // Normal post thumbnails
-    	//add_image_size( 'single-post-thumbnail', 400, 9999 ); // Permalink thumbnail size
-    
-    	// This theme uses wp_nav_menu()
-    	add_theme_support( 'nav-menus' );
-
-    	// Add default posts and comments RSS feed links to head
-    	add_theme_support( 'automatic-feed-links' );    	
-    }
-	
-	
     require_once CONSTRUCTOR_DIRECTORY .'/libs/Constructor/Admin.php';
     
     $admin = new Constructor_Admin();

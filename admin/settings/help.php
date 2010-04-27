@@ -9,22 +9,6 @@
 		    <li><?php _e('Author Homepage', 'constructor'); ?>: <a href="http://anton.shevchuk.name">Anton Shevchuk</a></li>
 		</ul>
 		
-		<h3><?php _e('Tile layout', 'constructor'); ?></h3>
-		<p>
-		    <?php _e('For "tile" layout using images from custom fields with key <code>thumb</code> (or use autogenerate option on content tab)', 'constructor'); ?>
-		</p>
-		
-		<h3><?php _e('List layout', 'constructor'); ?></h3>
-		<p>
-		    <?php _e('For "list" layout using images from custom fields with key <code>thumb-list</code> (or use autogenerate option on content tab)', 'constructor'); ?>       
-		</p>
-		
-		<h3><?php _e('Slideshow', 'constructor'); ?></h3>
-		<p>
-		    <?php _e('For slideshow using images from custom fields with key <code>thumb-slideshow</code> (by default, your can change it on slideshow tab)', 'constructor'); ?>       
-		</p>
-		
-		
 		<h3><?php _e('Related Links', 'constructor'); ?></h3>
 		<ul>  
 		    <li><a href="http://wordpress.org/tags/constructor">Forum Topics on Wordpress.org</a></li>

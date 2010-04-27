@@ -18,11 +18,13 @@ class Constructor_Abstract
                         'sidebar' => 240,    // sidebar width
                         'extra'   => 240,    // extrabar  width
                         'home'    => 'default',
-                        'archive' => 'default',
-                        'search'  => 'default',
                         'index'   => 'default',
-                        'single'  => 'single',
                         'page'    => 'page',
+                        'single'  => 'single',
+                        'archive' => 'default',
+                        'date'    => 'default',
+                        'category' => 'default',
+                        'search'  => 'default',
                                  ),
             'title'     => array(            // title
                         'pos' => 'left top', // - position
@@ -34,12 +36,6 @@ class Constructor_Abstract
                         'widget' => array ('flag'   => false,  // - enable content widget place
                                            'after'  => 1       // - show after N post
                                           ),
-                        'list'  =>  array (                    // list layout
-                                           'filter' => false,  // - strip HTML tags
-                                           'thumb'  => array ( 
-                                                   'pos' => 'left',       // - thumbnail position 
-                                                   'noimage' => false, ), // - 'No Image' option
-                                          ),
                         ),
             'comments'  => array(
                         'avatar' => array ('size'   => 64,     // - avatar size (see comments)
@@ -50,8 +46,22 @@ class Constructor_Abstract
                         'text' => null,
                         ),
             'fonts'     => array(            // fonts
-                        'header' => 0,       // - for title
-                        'body'   => 0,       // - for content
+                        'title' => array('family' => 'Arial,Helvetica,sans-serif', 
+                                         'size'   => 48,
+                                         'weight' => 800,
+                                         'color'  => '#333',
+                                         'transform' => 'uppercase',
+                                         
+                                         ),       
+                        'description' => array('family' => 'Arial,Helvetica,sans-serif', 
+                                         'size'   => 14,
+                                         'weight' => 600,
+                                         'color'  => '#777',
+                                         'transform' => 'uppercase'
+                                         
+                                         ),
+                        'header'      => array('family' => 'Arial,Helvetica,sans-serif'),
+                        'content'     => array('family' => 'Arial,Helvetica,sans-serif'),
                         ),
             'menu'     => array(             // menu with links
                         'pos'  => 'left top',// - position (left|right)+(top|center|bottom)
@@ -70,7 +80,6 @@ class Constructor_Abstract
                         'onsingle' => false, // - show slideshow on single post
                         'onarchive' => false, // - show slideshow on archives
                         'showposts' => 10,   // - show last N slides
-                        'metakey' => 'thumb-slideshow', // - custom field name
                         'id' => null,        // - slideshow ID - for NextGenGallery
                         'height' => 200,     // - height in px
                         'advanced' => array(

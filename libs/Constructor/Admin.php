@@ -169,6 +169,13 @@ class Constructor_Admin extends Constructor_Abstract
         			    $data      = array_merge($this->_options, $arr_false);
         				*/
         			    
+        				$fonts = require CONSTRUCTOR_DIRECTORY . '/admin/fonts.php';
+        				
+        				$data['fonts']['title']['family'] = $fonts[$data['fonts']['title']['family']];
+        				$data['fonts']['description']['family'] = $fonts[$data['fonts']['description']['family']];
+        				$data['fonts']['header']['family'] = $fonts[$data['fonts']['header']['family']];
+        				$data['fonts']['content']['family'] = $fonts[$data['fonts']['content']['family']];
+        				
                         $data['menu']['flag']   = isset($data['menu']['flag'])?true:false;
                         $data['menu']['home']   = isset($data['menu']['home'])?true:false;
                         $data['menu']['rss']    = isset($data['menu']['rss'])?true:false;
@@ -181,12 +188,8 @@ class Constructor_Admin extends Constructor_Abstract
                         
                         $data['title']['hidden'] = isset($data['title']['hidden'])?true:false;
         				
-        				$data['content']['author'] = isset($data['content']['author'])?true:false;        				
-                        $data['content']['thumb']['auto'] = isset($data['content']['thumb']['auto'])?true:false;
+        				$data['content']['author'] = isset($data['content']['author'])?true:false;
                         $data['content']['widget']['flag'] = isset($data['content']['widget']['flag'])?true:false; 
-                               				
-                        $data['content']['list']['filter'] = isset($data['content']['list']['filter'])?true:false;
-        				$data['content']['list']['thumb']['noimage'] = isset($data['content']['list']['thumb']['noimage'])?true:false; 
 
                         $data['design']['box']['flag']    = isset($data['design']['box']['flag'])?true:false;
                         $data['design']['shadow']['flag'] = isset($data['design']['shadow']['flag'])?true:false;
@@ -220,6 +223,133 @@ class Constructor_Admin extends Constructor_Abstract
                        'edit_themes',
                        'functions.php',
                        array($this, 'getPage'));
+    }
+    
+    /**
+     * getFonts
+     *
+     * @return  rettype  return
+     */
+    function getFontFamily($key) 
+    {
+        /*@var $constructor array*/
+        $constructor = $this->_options;
+        
+        $fonts = require CONSTRUCTOR_DIRECTORY . '/admin/fonts.php';
+        echo "<select class='constructor-font-family' name='constructor[fonts][".$key."][family]'>";
+        foreach ($fonts as $k => $font) :
+        ?>
+            <option value="<?php echo $k ?>" <?php if ($font == $constructor['fonts'][$key]['family']) echo 'selected="selected"'; ?>><?php echo $font ?></option>
+        <?php
+        endforeach;        
+        echo "</select>";
+    }
+    
+    /**
+     * getFonts
+     *
+     * @return  rettype  return
+     */
+    function getFontSize($key) 
+    {
+        /*@var $constructor array*/
+        $constructor = $this->_options;
+        $size = $constructor['fonts'][$key]['size'];
+        
+        
+        $font_sizes = array(8,9,10,11,12,14,16,18,20,
+                            22,24,26,28,32,36,40,44,48,
+                            52,56,60,72,76,80,84,88,92);
+                            
+        if (is_integer($size) && !in_array($size, $font_sizes)) {
+            array_unshift($font_sizes, $size);
+        }
+        
+        echo "<select class='constructor-font-size' name='constructor[fonts][".$key."][size]'>";
+        foreach ($font_sizes as $font_size) :
+        ?>
+            <option value='<?php echo $font_size ?>' <?php if ($size == $font_size) echo 'selected="selected"'; ?>><?php echo $font_size ?>px</option>
+        <?php
+        endforeach;        
+        echo "</select>";
+    }
+    
+    /**
+     * getFonts
+     *
+     * @return  rettype  return
+     */
+    function getFontTransform($key) 
+    {
+        /*@var $constructor array*/
+        $constructor = $this->_options;
+        /*
+        none	No capitalization. The text renders as it is. This is default
+        capitalize	Transforms the first character of each word to uppercase
+        uppercase	Transforms all characters to uppercase
+        lowercase	Transforms all characters to lowercase
+        */
+        $options = array('none',
+                         'capitalize',
+                         'uppercase',
+                         'lowercase',
+                          );
+       
+        echo "<select class='constructor-font-transform' name='constructor[fonts][".$key."][transform]'>";
+        foreach ($options as $option) :
+        ?>
+            <option value='<?php echo $option ?>' <?php if ($constructor['fonts'][$key]['transform'] == $option) echo 'selected="selected"'; ?>><?php echo $option ?></option>
+        <?php
+        endforeach;        
+        echo "</select>";
+    }
+    
+    /**
+     * getFonts
+     *
+     * @return  rettype  return
+     */
+    function getFontWeight($key) 
+    {
+        /*@var $constructor array*/
+        $constructor = $this->_options;
+        /*
+        Defines from thin to thick characters. 400 is the same as normal, and 700 is the same as bold
+        */
+        $options = array(100,200,300,400,500,600,700,800,900);
+       
+        echo "<select class='constructor-font-weight' name='constructor[fonts][".$key."][weight]'>";
+        foreach ($options as $option) :
+        ?>
+            <option value='<?php echo $option ?>' <?php if ($constructor['fonts'][$key]['weight'] == $option) echo 'selected="selected"'; ?>><?php echo $option ?></option>
+        <?php
+        endforeach;        
+        echo "</select>";
+    }
+    
+    /**
+     * getFonts
+     *
+     * @return  rettype  return
+     */
+    function getFontColor($key) 
+    {
+        /*@var $constructor array*/
+        $constructor = $this->_options;
+        $color = $constructor['fonts'][$key]['color'];
+        ?>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        (function($){
+            $(document).ready(function(){            
+                initColorPicker('fonts-<?php echo $key?>-color');        
+            });
+        })(jQuery);
+        /* ]]> */
+        </script>
+        <input type="hidden" id="constructor-fonts-<?php echo $key?>-color" name="constructor[fonts][<?php echo $key?>][color]" value="<?php echo $color?>"/>
+        <div id="fonts-<?php echo $key?>-color" class="color"><div style="background-color: <?php echo $color ?>"></div></div>
+        <?php
     }
     
     /**

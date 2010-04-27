@@ -18,6 +18,7 @@
      */
     $.fn.wpslideshow = function(options) {
         var defaults = {
+            url:false,
             thumb:false,
             thumbPath:'/wp-content/themes/constructor/timthumb.php?src=',
             effect:'slide', // can be 'slide'
@@ -173,6 +174,28 @@
                     clearTimeout(_self.playId);
             }
 
+            this.load = function(){
+    			$.ajax({
+    				type: "GET",
+    				url: options.url,
+    				dataType: "xml",
+    				success: function(data){
+    					if ($('post', data).length == 0) {
+    						$('#slideshow').hide();
+    					};
+    					$('post', data).each(function(){
+    						var $xml = $(this);
+    						_self.addSlide($xml.children('title').text(),
+        								   $xml.find('permalink').text(),
+        								   $xml.find('image').text(),
+        							       $xml.find('content').text());
+    					});
+    				}
+    			});  
+            }
+            
+            this.load();
+            
             if (options.play) {
                 this.play();
             }
