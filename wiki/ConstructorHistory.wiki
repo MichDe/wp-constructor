@@ -1,6 +1,41 @@
 #summary Version history
 #labels Featured
 
+== 0.9.5 ==
+  * Wordpress 3.0 navigation menu support
+  * new top menu feature - stretch across the width of site
+  * updated List layout
+  * CSS classes for more flexible layout development
+  * refactored of CSS (rename some classes in header; remove old code)
+  * fixed issue with drop-down menu in IE8 (and IE7 w/out transparency feature now :( )
+
+== 0.9.0 ==
+  * position of top menu
+
+== 0.7.4 ==
+  * hotfix for comments
+
+== 0.7.2 ==
+  * added hide title option
+
+== 0.7.0 ==
+  * big refactoring
+  * ...
+
+== 0.6.7 ==
+  * update Russian translation
+  * fixed small issues
+
+== 0.6.6 ==
+  * added Catalan translation
+  * update Author page
+  * issue #19
+
+== 0.6.4 ==
+  * updated languages
+  * issue #16
+  * issue #17
+
 == 0.6.3 ==
   * added 'header'  widget sidebar
   * small fixes in default theme
@@ -72,6 +107,4 @@
                     "body" => array(..., 'fixed'=>false), <br/>
                     "wrap" => array(..., 'fixed'=>false),
  ...)`
-
-
 
