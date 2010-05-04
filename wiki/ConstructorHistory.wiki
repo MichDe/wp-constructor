@@ -8,6 +8,9 @@
   * CSS classes for more flexible layout development
   * refactored of CSS (rename some classes in header; remove old code)
   * fixed issue with drop-down menu in IE8 (and IE7 w/out transparency feature now :( )
+  * SEO optimization
+  * new navigation.php file - for easy integration plugins like wp-pagenavi
+  * new sidebar-extra.php - for changes w/out widgets
 
 == 0.9.0 ==
   * position of top menu
@@ -107,4 +110,3 @@
                     "body" => array(..., 'fixed'=>false), <br/>
                     "wrap" => array(..., 'fixed'=>false),
  ...)`
-
