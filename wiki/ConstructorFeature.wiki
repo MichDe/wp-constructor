@@ -14,6 +14,7 @@ Available following localizations:
  * Japanese - Toshi Oshio (http://blog.falcon-space.net/2010/01/wpconstructor-jp/)
  * Czech - Pech, Jiří (http://www.energyexpert.cz/)
  * Polytonic (classical) Greek - Amaryllis Deliyanni (http://keymangreek.gr/)
+ * Norwegian - Tarjei Joten Svensen (http://www.sol.no/)
 
 = Many themes =
 All aviable themes see on ConstructorThemes page
