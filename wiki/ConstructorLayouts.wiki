@@ -16,7 +16,7 @@ __('Mylayout', 'constructor'); // requeried for correct translation
     <?php while (have_posts()) : the_post(); $i++; ?>
         <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
            <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-           <?php get_constructor_content() ?>
+           <?php the_content(__('Read the rest of this entry &raquo;', 'constructor')); ?>
         </div>
     <?php endwhile; ?>
     </div>
