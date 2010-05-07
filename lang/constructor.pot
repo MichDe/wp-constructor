@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-07 17:54+0200\n"
+"POT-Creation-Date: 2010-05-07 18:28+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
@@ -589,11 +589,11 @@ msgid "Over Content"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:104
-msgid "use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a>"
+msgid "use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\" title=\"wordpress.org\">NextGEN-Gallery</a>"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:105
-msgid "required <strong>imagerotator.swf</strong>"
+msgid "required <a href=\"http://www.longtailvideo.com/players/jw-image-rotator/\" title=\"www.longtailvideo.com\">imagerotator.swf</a>"
 msgstr ""
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:123
