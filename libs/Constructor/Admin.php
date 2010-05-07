@@ -175,7 +175,7 @@ class Constructor_Admin extends Constructor_Abstract
         				$data['fonts']['description']['family'] = $fonts[$data['fonts']['description']['family']];
         				$data['fonts']['header']['family'] = $fonts[$data['fonts']['header']['family']];
         				$data['fonts']['content']['family'] = $fonts[$data['fonts']['content']['family']];
-        				
+
                         $data['menu']['flag']   = isset($data['menu']['flag'])?true:false;
                         $data['menu']['home']   = isset($data['menu']['home'])?true:false;
                         $data['menu']['rss']    = isset($data['menu']['rss'])?true:false;
@@ -204,6 +204,7 @@ class Constructor_Admin extends Constructor_Abstract
         				
         				$data['slideshow']['advanced']['thumb'] = isset($data['slideshow']['advanced']['thumb'])?true:false;
         				$data['slideshow']['advanced']['play']  = isset($data['slideshow']['advanced']['play'])?true:false;
+        				
                     }
                     
                     $this->_updateOptions($data);
@@ -254,14 +255,14 @@ class Constructor_Admin extends Constructor_Abstract
     {
         /*@var $constructor array*/
         $constructor = $this->_options;
-        $size = $constructor['fonts'][$key]['size'];
+        $size = (int)$constructor['fonts'][$key]['size'];
         
         
         $font_sizes = array(8,9,10,11,12,14,16,18,20,
                             22,24,26,28,32,36,40,44,48,
                             52,56,60,72,76,80,84,88,92);
-                            
-        if (is_integer($size) && !in_array($size, $font_sizes)) {
+         
+        if ($size && !in_array($size, $font_sizes)) {
             array_unshift($font_sizes, $size);
         }
         
@@ -364,6 +365,7 @@ class Constructor_Admin extends Constructor_Abstract
         global $constructor, $admin;
         /*@var $constructor array*/
         $constructor = $this->_options;
+        
         /*@var $admin array*/
         $admin = $this->_admin;
         ?>

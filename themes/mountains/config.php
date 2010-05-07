@@ -1,5 +1,5 @@
 <?php 
-/* Save on 2010-04-14 14:05 */ 
+/* Save on 2010-05-07 14:18 */ 
 return array (
   'sidebar' => 'right',
   'layout' => 
@@ -9,9 +9,14 @@ return array (
     'sidebar' => '240',
     'extra' => '240',
     'home' => 'default',
-    'archive' => 'default',
-    'search' => 'default',
     'index' => 'default',
+    'page' => 'page',
+    'single' => 'single',
+    'archive' => 'default',
+    'date' => 'default',
+    'category' => 'default',
+    'tag' => 'default',
+    'search' => 'default',
   ),
   'title' => 
   array (
@@ -20,24 +25,11 @@ return array (
   ),
   'content' => 
   array (
-    'author' => false,
-    'thumb' => 
-    array (
-      'auto' => false,
-    ),
+    'author' => false,   
     'widget' => 
     array (
       'flag' => false,
       'after' => 1,
-    ),
-    'list' => 
-    array (
-      'filter' => false,
-      'thumb' => 
-      array (
-        'pos' => 'left',
-        'noimage' => false,
-      ),
     ),
   ),
   'comments' => 
@@ -54,8 +46,30 @@ return array (
   ),
   'fonts' => 
   array (
-    'header' => '0',
-    'body' => '0',
+    'title' => 
+    array (
+      'family' => 'Arial,Helvetica,sans-serif',
+      'size' => '92',
+      'weight' => '800',
+      'color'  => '#fff',
+      'transform' => 'uppercase',
+    ),
+    'description' => 
+    array (
+      'family' => 'Arial,Helvetica,sans-serif',
+      'size' => '24',
+      'weight' => '600',
+      'color' => '#777',
+      'transform' => 'uppercase',
+    ),
+    'header' => 
+    array (
+      'family' => 'Arial,Helvetica,sans-serif',
+    ),
+    'content' => 
+    array (
+      'family' => 'Arial,Helvetica,sans-serif',
+    ),
   ),
   'menu' => 
   array (
@@ -84,8 +98,8 @@ return array (
     'layout' => 'in',
     'onpage' => false,
     'onsingle' => false,
+    'onarchive' => false,
     'showposts' => 10,
-    'metakey' => 'thumb-slideshow',
     'id' => 0,
     'height' => '200',
     'advanced' => 
@@ -119,7 +133,7 @@ return array (
       'src' => 'themes/mountains/body.jpg',
       'pos' => 'center bottom',
       'repeat' => 'no-repeat',
-      'fixed' => true,
+      'fixed' => false,
     ),
     'wrap' => 
     array (

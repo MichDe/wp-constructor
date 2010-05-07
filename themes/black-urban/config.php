@@ -19,18 +19,26 @@ return array(
                     ),
             "content"   => array(            // content
                         "author" => 0,       // - link to author page
-                        'thumb' =>  array ('auto' => false), // - autogenerate thumbnails
-                        'list'  =>  array (                    // list layout
-                                           'filter' => false,  // - strip HTML tags
-                                           'thumb'  => array ( 'pos' => 'left', 'noimage' => false, ), // - thumbnail position and "No Image" option
-                                          ),
                         ),
             "footer"    => array(            // footer text
                         "text" => null
                     ),
             "fonts"     => array(
-                        'header' => '"Comic Sans MS",Helvetica,sans-serif',
-                        'body'   => 'Verdana,Helvetica,sans-serif',
+                        'title' => array('family' => '"Comic Sans MS",Helvetica,sans-serif', 
+                                         'size'   => 64,
+                                         'weight' => 800,
+                                         'color'  => '#fff',
+                                         'transform' => 'uppercase',
+                                         
+                                         ),       
+                        'description' => array('family' => '"Comic Sans MS",Helvetica,sans-serif', 
+                                         'size'   => 14,
+                                         'weight' => 600,
+                                         'color'  => '#777',
+                                         'transform' => 'uppercase'                                         
+                                         ),
+                        'header'      => array('family' => '"Comic Sans MS",Helvetica,sans-serif'),
+                        'content'     => array('family' => 'Verdana,Helvetica,sans-serif'),
                     ),
             "menu"     => array(             // menu with links
                         "width"=> '100%',

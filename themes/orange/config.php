@@ -18,19 +18,27 @@ return array(
                         "pos" => 'center bottom'
                     ),
             "content"   => array(            // content
-                        "author" => 0,       // - link to author page
-                        'thumb' =>  array ('auto' => false), // - autogenerate thumbnails
-                        'list'  =>  array (                    // list layout
-                                           'filter' => false,  // - strip HTML tags
-                                           'thumb'  => array ( 'pos' => 'left', 'noimage' => false, ), // - thumbnail position and "No Image" option
-                                          ),
+                        "author" => 0,       // - link to author page                       
                         ),
             "footer"    => array(            // footer text
                         "text" => null
                     ),
             "fonts"     => array(
-                        'header' => 0,
-                        'body'   => 0,
+                        'title' => array('family' => 'Arial,Helvetica,sans-serif', 
+                                         'size'   => 64,
+                                         'weight' => 800,
+                                         'color'  => '#333',
+                                         'transform' => 'uppercase',
+                                         
+                                         ),       
+                        'description' => array('family' => 'Arial,Helvetica,sans-serif', 
+                                         'size'   => 14,
+                                         'weight' => 600,
+                                         'color'  => '#777',
+                                         'transform' => 'uppercase'                                         
+                                         ),
+                        'header'      => array('family' => 'Arial,Helvetica,sans-serif'),
+                        'content'     => array('family' => 'Arial,Helvetica,sans-serif'),
                     ),
             "menu"     => array(             // menu with links
                         "flag" => 1,         // - enable/disable

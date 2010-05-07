@@ -52,6 +52,12 @@ $layouts = array_filter($layouts, 'is_php');
     </td>
 </tr>
 <tr>
+    <th><?php _e('Tag', 'constructor')?></th>
+    <td class="select" id="layout-tag">
+        <?php constructor_admin_layout($layouts, 'tag'); ?>
+    </td>
+</tr>
+<tr>
     <th><?php _e('Search', 'constructor')?></th>
     <td class="select" id="layout-search">
         <?php constructor_admin_layout($layouts, 'search'); ?>
