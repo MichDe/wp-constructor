@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-07 17:54+0200\n"
-"PO-Revision-Date: 2010-05-07 18:18+0200\n"
+"POT-Creation-Date: 2010-05-07 18:28+0200\n"
+"PO-Revision-Date: 2010-05-07 18:30+0200\n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -589,12 +589,12 @@ msgid "Over Content"
 msgstr "Над змістом"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:104
-msgid "use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a>"
-msgstr "викоритовує <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a>"
+msgid "use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\" title=\"wordpress.org\">NextGEN-Gallery</a>"
+msgstr "викоритовує <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\" title=\"wordpress.org\">NextGEN-Gallery</a>"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:105
-msgid "required <strong>imagerotator.swf</strong>"
-msgstr "потребує <strong>imagerotator.swf</strong>"
+msgid "required <a href=\"http://www.longtailvideo.com/players/jw-image-rotator/\" title=\"www.longtailvideo.com\">imagerotator.swf</a>"
+msgstr "потребує <a href=\"http://www.longtailvideo.com/players/jw-image-rotator/\" title=\"www.longtailvideo.com\">imagerotator.swf</a>"
 
 #: W:/www/wordpress/wp-content/themes/constructor/admin/settings/slideshow.php:123
 msgid "You can use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a> plugin for build custom slideshow"
@@ -1116,6 +1116,8 @@ msgstr "Деякі зображення не були завантаженні, 
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 
+#~ msgid "required <strong>imagerotator.swf</strong>"
+#~ msgstr "потребує <strong>imagerotator.swf</strong>"
 #~ msgid "Global categories"
 #~ msgstr "Рубрики"
 #~ msgid "Many In One"

@@ -101,8 +101,8 @@ $(document).ready(function(){
     <tr>
         <th scope="row" valign="top" >
         	<?php _e('Slideshow', 'constructor'); ?> 
-			<br/><em><small><?php _e('use <a href="http://wordpress.org/extend/plugins/nextgen-gallery/">NextGEN-Gallery</a>', 'constructor');?><br/>
-			<?php _e('required <strong>imagerotator.swf</strong>', 'constructor');?></small></em>
+			<br/><em><small><?php _e('use <a href="http://wordpress.org/extend/plugins/nextgen-gallery/" title="wordpress.org">NextGEN-Gallery</a>', 'constructor');?><br/>
+			<?php _e('required <a href="http://www.longtailvideo.com/players/jw-image-rotator/" title="www.longtailvideo.com">imagerotator.swf</a>', 'constructor');?></small></em>
 		</th>
         <td class="select" id="slideshow">
             <a href="#" title="<?php _e('Default', 'constructor'); ?>" name="0" <?php if($constructor['slideshow']['id'] == 0) echo 'class="selected"'; ?>>
@@ -110,7 +110,7 @@ $(document).ready(function(){
             </a>
             <?php foreach ($gallerylist as $gallery) :?>
                 <?php $img = nggdb::find_image($gallery->previewpic); ?>
-                <a href="#" title="<?php echo $gallery->title ?>" name="<?php echo $gallery->gid ?>" <?php if($constructor['slideshow']['id'] == $gallery->gid) echo 'class="selected"'; ?>>
+                <a href="#" title="<?php echo $gallery->title ?>" name="<?php echo $gallery->gid ?>" <?php if ($constructor['slideshow']['id'] == $gallery->gid) echo 'class="selected"'; ?>>
                 <img src="<?php echo $img->thumbURL ?>" title="<?php echo $gallery->title ?>" alt="<?php echo $gallery->title ?>"/>
                 </a>
             <?php endforeach;?>
