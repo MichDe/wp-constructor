@@ -609,10 +609,10 @@ table caption {
 table th {
     color:{$color_text};
     background-color:{$color3};
-    border-color: {$color_border}
+    border-color:{$color_border}
 }
 table td {
-    border-color: {$color_border}
+    border-color:{$color_border}
 }
 /*Colors*/
 /* text colors */
@@ -750,7 +750,7 @@ fieldset{
 	height: {$constructor['layout']['header']}px;
 	text-align: {$constructor['title']['pos']}
 }
-#header #name { $title_font }
+#header #name a { $title_font }
 #header #description { $description_font }
 {$title}
 #header #title {
@@ -791,13 +791,20 @@ fieldset{
 /*/Images*/
 /*Calendar*/
 #wp-calendar th {
-    border-bottom:1px solid {$color_border}
-}
-#wp-calendar tbody {
     border-bottom:1px solid {$color_border2}
 }
-#wp-calendar #today {    
+#wp-calendar tbody {
+   color:{$color_text2};
+   border-bottom:1px solid {$color_border2}
+}
+#wp-calendar tbody a {
    color:{$color_text};
+}
+#wp-calendar tbody a:hover {
+   background-color: {$color3};
+}
+#wp-calendar #today {    
+   color:{$color1};
    background-color: {$color_bg2};
 }
 /*/Calendar*/
@@ -861,6 +868,11 @@ fieldset{
     border-color:{$color_border}
 }
 /*/Sidebar*/
+/*Widgets*/
+.widget_rss li .rsswidget {
+    color:{$color1}
+}
+/*/Widgets*/
 /*Content Widgets*/
 #content-widget {
     background-color: {$color_bg2};

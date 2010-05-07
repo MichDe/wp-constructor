@@ -16,6 +16,7 @@ return array(
                         'archive' => 'default',
                         'date'    => 'default',
                         'category' => 'default',
+                        'tag'     => 'default',
                         'search'  => 'default',
                                  ),
             'title'     => array(            // title
@@ -35,7 +36,7 @@ return array(
                         ),
             "fonts"     => array(            // fonts
                         'title' => array('family' => 'Arial,Helvetica,sans-serif', 
-                                         'size'   => 48,
+                                         'size'   => 64,
                                          'weight' => 800,
                                          'color'  => '#333',
                                          'transform' => 'uppercase',
@@ -45,8 +46,7 @@ return array(
                                          'size'   => 14,
                                          'weight' => 600,
                                          'color'  => '#777',
-                                         'transform' => 'uppercase'
-                                         
+                                         'transform' => 'uppercase'                                         
                                          ),
                         'header'      => array('family' => 'Arial,Helvetica,sans-serif'),
                         'content'     => array('family' => 'Arial,Helvetica,sans-serif'),
@@ -56,10 +56,10 @@ return array(
                         'width'=> false,     // - can be '100%'
                         "flag" => 1,         // - enable/disable
                         "home" => false,     // - link to home page
-                        "rss"  => false,     // - link to RSS
+                        "rss"  => true,     // - link to RSS
                         "search" => true,    // - search form
                         'pages'      => array('depth'=>1, 'exclude'=>''),
-                        'categories' => array('depth'=>1, 'exclude'=>'', 'group'=>1, 'title'=>'')
+                        'categories' => array('depth'=>0, 'exclude'=>'', 'group'=>1, 'title'=>'')
                         ),
             "slideshow" => array(            // Slideshow options
                         "flag" => 0,         // - enable/disable
@@ -92,13 +92,13 @@ return array(
                                 ),           
                         ),
             "images"   => array(             // background images
-                        "body" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'repeat', 'fixed'=>false),
-                        "wrap" => array('src'=>'themes/default/header.png', 'pos'=>'center top', 'repeat'=>'no-repeat', 'fixed'=>false),
-                        "header"   => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
+                        "body" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat', 'fixed'=>false),
+                        "wrap" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat', 'fixed'=>false),
+                        "header"   => array('src'=>'themes/default/header.jpg', 'pos'=>'right top', 'repeat'=>'no-repeat'),
                         "wrapper"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
-                        "sidebar"  => array('src'=>'', 'pos'=>'right bottom', 'repeat'=>'no-repeat'),
-                        "extrabar" => array('src'=>'', 'pos'=>'right bottom', 'repeat'=>'no-repeat'),
-                        "footer"   => array('src'=>'', 'pos'=>'right bottom', 'repeat'=>'no-repeat'),
+                        "sidebar"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
+                        "extrabar" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
+                        "footer"   => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                         "wrapheader"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                         "wrapcontent" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                         "wrapfooter"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),

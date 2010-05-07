@@ -175,7 +175,6 @@ class Constructor_Main extends Constructor_Abstract
         if (!isset($this->_options['menu']['flag']) or !$this->_options['menu']['flag']) return false;
 
         echo '<div id="menu" class="opacity shadow">';
-//        echo '<div>';
         echo '<ul class="menu opacity">';
         
         // before items
@@ -202,12 +201,12 @@ class Constructor_Main extends Constructor_Abstract
         {
             
             // show link to homepage
-            if (isset($this->_options['menu']['home']) && $this->_options['menu']['home']) {
+            if ($this->_options['menu']['home']) {
                 echo '<li id="home"><a href="'.get_option('home').'/" title="'.get_bloginfo('name').'">'.__('Home', 'constructor').'</a></li>';
             }
             
             // show pages drop-down menu (or as is)
-            if (isset($this->_options['menu']['pages']['depth']) && $this->_options['menu']['pages']['depth']) {
+            if ($this->_options['menu']['pages']['depth']) {
                 $arg = array('title_li'=>'',
                              'exclude' => $this->_options['menu']['pages']['exclude'],
                              'depth'   => $this->_options['menu']['pages']['depth']
@@ -221,7 +220,7 @@ class Constructor_Main extends Constructor_Abstract
             }
             
             // show categories drop-down menu (or as is)
-            if (isset($this->_options['menu']['categories']['depth']) && $this->_options['menu']['categories']['depth']) {  
+            if ($this->_options['menu']['categories']['depth']) {  
                 $arg = array('title_li'=>'',
                      'exclude' => $this->_options['menu']['categories']['exclude'],
                      'depth'   => $this->_options['menu']['categories']['depth']
@@ -238,7 +237,7 @@ class Constructor_Main extends Constructor_Abstract
             }
             
             // show search bar
-            if (isset($this->_options['menu']['search']) && $this->_options['menu']['search'])  {
+            if ($this->_options['menu']['search'])  {
                 echo '<li id="menusearchform">
                           <form role="search" method="get" action="' . get_option('home') . '/" >
                           <input class="s" type="text" value="' . esc_attr(apply_filters('the_search_query', get_search_query())) . '" name="s"/>
@@ -248,7 +247,7 @@ class Constructor_Main extends Constructor_Abstract
             }
             
             // show link to RSS
-            if (isset($this->_options['menu']['rss']) && $this->_options['menu']['rss'])  {
+            if ($this->_options['menu']['rss'])  {
                 echo '<li id="rss"><a href="'.get_bloginfo('rss2_url').'"  title="'.__('RSS Feed', 'constructor').'">'. __('RSS Feed', 'constructor').'</a></li>';
             }
             
@@ -264,7 +263,6 @@ class Constructor_Main extends Constructor_Abstract
             echo '</li>';
         }
         echo '</ul>';
-//        echo '</div>';
         echo '</div>';
     }
     

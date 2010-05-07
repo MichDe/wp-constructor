@@ -16,19 +16,27 @@ return array (
                         'pos' => 'left top'
                     ),
             "content"   => array(            // content
-                        'author' => true,    // - link to author page
-					    'thumb' =>  array ('auto' => true), // - autogenerate thumbnails
-                        'list'  =>  array (                    // list layout
-                                           'filter' => false,  // - strip HTML tags
-                                           'thumb'  => array ( 'pos' => 'left', 'noimage' => false, ), // - thumbnail position and "No Image" option
-                                          ),
+                        'author' => true,    // - link to author page					   
 						),
             "footer"    => array(            // footer text
                         "text" => null
                     ),
             "fonts"     => array(
-                        'header' => 2,
-                        'body'   => 2,
+                        'title' => array('family' => 'Tahoma,Helvetica,sans-serif', 
+                                         'size'   => 64,
+                                         'weight' => 800,
+                                         'color'  => '#fff',
+                                         'transform' => 'uppercase',
+                                         
+                                         ),       
+                        'description' => array('family' => 'Tahoma,Helvetica,sans-serif', 
+                                         'size'   => 14,
+                                         'weight' => 600,
+                                         'color'  => '#777',
+                                         'transform' => 'uppercase'                                         
+                                         ),
+                        'header'      => array('family' => 'Tahoma,Helvetica,sans-serif'),
+                        'content'     => array('family' => 'Tahoma,Helvetica,sans-serif'),
                     ),
             "menu"     => array(             // menu with links
                         "flag" => false,         // - enable/disable

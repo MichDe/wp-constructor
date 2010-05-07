@@ -19,20 +19,7 @@ return array (
   ),
   'content' => 
   array (
-    'list' => 
-    array (
-      'thumb' => 
-      array (
-        'pos' => 'left',
-        'noimage' => false,
-      ),
-      'filter' => false,
-    ),
-    'author' => false,
-    'thumb' => 
-    array (
-      'auto' => false,
-    ),
+    'author' => false,   
   ),
   'footer' => 
   array (
@@ -40,8 +27,21 @@ return array (
   ),
   'fonts' => 
   array (
-    'header' => '1',
-    'body' => '0',
+            'title' => array('family' => '"Comic Sans MS",Helvetica, sans-serif', 
+                             'size'   => 64,
+                             'weight' => 800,
+                             'color'  => '#333',
+                             'transform' => 'uppercase',
+                             
+                             ),       
+            'description' => array('family' => '"Comic Sans MS",Helvetica, sans-serif', 
+                             'size'   => 14,
+                             'weight' => 600,
+                             'color'  => '#777',
+                             'transform' => 'uppercase'                                         
+                             ),
+            'header'      => array('family' => '"Comic Sans MS",Helvetica, sans-serif'),
+            'content'     => array('family' => 'Arial,Helvetica,sans-serif'),
   ),
   'menu' => 
   array (

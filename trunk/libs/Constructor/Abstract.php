@@ -24,6 +24,7 @@ class Constructor_Abstract
                         'archive' => 'default',
                         'date'    => 'default',
                         'category' => 'default',
+                        'tag'     => 'default',
                         'search'  => 'default',
                                  ),
             'title'     => array(            // title
@@ -32,7 +33,6 @@ class Constructor_Abstract
                         ),
             'content'   => array(            // content
                         'author' => 0,       // - link to author page
-                        'thumb' =>  array ('auto'   => false), // - autogenerate thumbnails
                         'widget' => array ('flag'   => false,  // - enable content widget place
                                            'after'  => 1       // - show after N post
                                           ),
@@ -220,7 +220,9 @@ class Constructor_Abstract
     function _updateOptions($data = array()) 
     {
         $this->_options = $this->_arrayMerge($this->_default, $data);
-        
+
+//        echo '<pre>';
+//        print_r($this->_options);
         update_option('constructor', $this->_options);
         
         // need update style cache

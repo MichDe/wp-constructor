@@ -16,14 +16,14 @@
     <?php wp_get_archives('type=monthly&format=link'); ?>
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(get_constructor_category_class()); ?>>
+<body <?php body_class(); ?>>
 	
 <div id="body">
    <div id="wrapheader" class="wrapper">
        <div id="header">
             <?php get_constructor_menu() ?>
             <div id="title">
-				<?php if ( is_home() || is_front_page() ) { ?>
+				<?php if (is_home() || is_front_page()) { ?>
 					<h1 id="name"><a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); echo " &raquo; "; bloginfo('description');?>"><?php bloginfo('name'); ?></a></h1>
 				<?php } else { ?>	
 					<div id="name"><a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); echo " &raquo; "; bloginfo('description');?>"><?php bloginfo('name'); ?></a></div>

@@ -2,7 +2,7 @@
 Theme Name: Ukraine
 Theme URI: 
 Description: Ukraine Theme. Special for my compatriots
-Version: 0.0.4
+Version: 1.0.0
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 */
@@ -11,6 +11,7 @@ Author URI: http://anton.shevchuk.name/
 }
 .navigation div a {
 	height:24px;
+	line-height:24px;
 }
 .navigation .alignright a {
 	border-left: 4px solid #FF1212;

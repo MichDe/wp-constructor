@@ -64,19 +64,19 @@ define('CONSTRUCTOR_DIRECTORY_URI', get_template_directory_uri());
 
 load_theme_textdomain('constructor', CONSTRUCTOR_DIRECTORY.'/lang');
 
-if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
+if (function_exists('add_theme_support')) { // Added in 2.9
 	// This theme uses post thumbnails
-	add_theme_support( 'post-thumbnails' );
+	add_theme_support('post-thumbnails' );
 	set_post_thumbnail_size( 64, 64, true ); // Normal post thumbnail
-	add_image_size( 'list-post-thumbnail', 128, 128, true );
-	add_image_size( 'tile-post-thumbnail', 312, 292, true );
-	add_image_size( 'slideshow-thumbnail');
+	add_image_size('list-post-thumbnail', 128, 128, true );
+	add_image_size('tile-post-thumbnail', 312, 292, true );
+	add_image_size('slideshow-thumbnail');
 	    
 	// This theme uses wp_nav_menu()
-	add_theme_support( 'nav-menus' );
+	add_theme_support('nav-menus');
 
 	// Add default posts and comments RSS feed links to head
-	add_theme_support( 'automatic-feed-links' );    	
+	add_theme_support('automatic-feed-links');    	
 }
 
 if (!is_admin()) {    

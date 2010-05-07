@@ -2,7 +2,7 @@
 Theme Name: Constructor
 Theme URI: http://code.google.com/p/wp-constructor/
 Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.9+ (include 3.0)
-Version: 0.9.9
+Version: 1.0.0
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -90,8 +90,6 @@ div.aligncenter {
 .page_item {}
 .current_page_item {}
 .current_page_parent {}
-.widget {}
-.widget_text {}
 .blogroll {}
 .linkcat{}
 /*/Autogenerate styles*/
@@ -530,6 +528,7 @@ div.aligncenter {
 }
 /*/Navigation*/
 /*Widgets*/
+.widget {}
 .widget h3 {
     padding:0 4px 0px 8px;
     line-height:2em
@@ -548,9 +547,40 @@ div.aligncenter {
     padding:2px 2px 2px 6px;
     list-style:circle inside;
 }
+
+.widget_text {}
+.widget_text .textwidget{
+    padding:0 2px
+}
+
+.widget_tag_cloud div {
+    padding:0 2px
+}
 .widget_tag_cloud a {
     line-height:100%;
 }
+.widget_rss {}
+.widget_rss li {
+    overflow:hidden;
+}
+.widget_rss li .rsswidget {
+    font-weight:700;
+    display:block;
+    text-decoration:underline;
+}
+
+.widget_rss .rss-date {
+    font-style:italic;
+    margin:2px 0;
+    /*font-size:0.8em;*/
+}
+.widget_rss .rssSummary {
+    padding:2px 0;
+}
+.widget_rss cite {
+    float:right;
+}
+
 #content-widget {
     clear:both;
     margin:0 0 10px 0
@@ -789,25 +819,27 @@ td {
 }
 #wp-calendar th {
     border:0;
+    text-align:center;
     width:2em;
 }
 #wp-calendar td {
     text-align:center;
-    padding:4px 2px;
-    border:0 !important
-}
-#wp-calendar tbody {
-
+    padding:0;
+    height:2em;
+    /*width:2em;*/
+    border:0
 }
 #wp-calendar tbody a{
     display:block;
     font-weight:700;
-    border:0 !important;
-    padding:0 !important;
-    text-decoration:underline
+    border:0;
+    padding:4px 2px;
 }
 #wp-calendar tbody a:hover{
     text-decoration:none
+}
+#wp-calendar #today {  
+    font-weight:700;
 }
 /*/Calendar*/
 /*Slideshow*/
