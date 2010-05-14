@@ -95,7 +95,11 @@ $(document).ready(function(){
     	return false;
     });
     
-
+    // Accordion
+    $('.constructor-accordion').accordion({
+		autoHeight: false,
+		navigation: true
+	});
 
 });
 })(jQuery);

@@ -3,12 +3,17 @@
  * Don't change this is file
  */
 return array(
-            "sidebar"   => 'right',          // sidebar position
+            "sidebar"   => 'two',          // sidebar position
             'layout'    =>  array(           // layouts styles
                         'header'  => 140,    // header height
                         'width'   => 1024,   // container width
                         'sidebar' => 240,    // sidebar width
                         'extra'   => 240,    // extrabar  width
+                        'fluid'   => array('flag' => false,
+                                           'width' => 80, // in %
+                                           'min-width' => 960, // in px
+                                           'max-width' => 1280, // in px
+                                           ),
                         'home'    => 'default',
                         'index'   => 'default',
                         'page'    => 'page',

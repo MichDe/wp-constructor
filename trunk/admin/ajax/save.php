@@ -23,7 +23,7 @@ function constructor_admin_save()
     $theme_new = preg_replace('/[-]+/', '-', $theme_new);
     
     $theme_uri   = isset($_REQUEST['theme-uri'])?$_REQUEST['theme-uri']:'';
-    $description = isset($_REQUEST['description'])?$_REQUEST['description']:'';
+    $description = stripslashes(isset($_REQUEST['description'])?$_REQUEST['description']:'');
     $version     = isset($_REQUEST['version'])?$_REQUEST['version']:'0.0.1';
     $author      = isset($_REQUEST['author'])?$_REQUEST['author']:'';
     $author_uri  = isset($_REQUEST['author-uri'])?$_REQUEST['author-uri']:$current_user->user_nicename;

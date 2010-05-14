@@ -283,6 +283,20 @@ CSS;
 /* Layout */
 $layout = "";
 $layout_alt = "";
+$layout_fluid = "";
+
+if ($constructor['layout']['fluid']['flag']) {
+    $layout_fluid = <<<CSS
+    width:{$constructor['layout']['fluid']['width']}%;
+    min-width:{$constructor['layout']['fluid']['min-width']}px;
+    max-width:{$constructor['layout']['fluid']['max-width']}px;
+CSS;
+} else {
+    $layout_fluid = <<<CSS
+    width:{$width}px;
+CSS;
+}
+
 
 // width changes
 $sidebar2 = $sidebar - 4; // 2px - it's borders width
@@ -717,7 +731,7 @@ fieldset{
     }
 
 #header,#content,#footer{
-    width:{$width}px;
+    {$layout_fluid}
 }
 
 {$layout}
