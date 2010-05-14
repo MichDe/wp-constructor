@@ -1,17 +1,4 @@
 <?php __('Images', 'constructor'); // requeried for correct translation ?>
-<script type="text/javascript">
-/* <![CDATA[ */
-(function($){
-    $(document).ready(function(){
-        $('#constructor-accordion').accordion({
-			autoHeight: false,
-			navigation: true
-		});
-
-    });
-})(jQuery);
-/* ]]> */
-</script>
 <div class="constructor-admin-help" title="<?php _e('Help', 'constructor'); ?>" name="Images">
     <div id="constructor-layers">
         <ol>
@@ -43,7 +30,7 @@
     <tr>
         <td>
         
-<div id="constructor-accordion">
+<div class="constructor-accordion">
     <h3><a href="#"><?php _e('Body Image', 'constructor'); ?></a></h3>
     <div>
         <table class="form-table">
@@ -119,7 +106,7 @@
 </div>
         
         </td>
-        <td valign="top" class="updated quick-links">
+        <td valign="top" class="updated quick-links" width="240px">
             <h3><?php _e('Help', 'constructor'); ?></h3>
             <a href="#" class="help-button" title="<?php _e('Help', 'constructor'); ?>"><?php _e('See helpful illustration!', 'constructor'); ?></a></td>
     </tr>

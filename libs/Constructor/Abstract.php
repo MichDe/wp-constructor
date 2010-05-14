@@ -17,11 +17,16 @@ class Constructor_Abstract
                         'width'   => 1024,   // container width
                         'sidebar' => 240,    // sidebar width
                         'extra'   => 240,    // extrabar  width
-                        'home'    => 'default',
+                        'fluid'   => array('flag' => false,
+                                           'width' => 80, // in %
+                                           'min-width' => 960, // in px
+                                           'max-width' => 1280, // in px
+                                           ),
+                        'home'    => 'default', // deprecated
                         'index'   => 'default',
                         'page'    => 'page',
                         'single'  => 'single',
-                        'archive' => 'default',
+                        'archive' => 'default', // deprecated
                         'date'    => 'default',
                         'category' => 'default',
                         'tag'     => 'default',
@@ -221,8 +226,6 @@ class Constructor_Abstract
     {
         $this->_options = $this->_arrayMerge($this->_default, $data);
 
-//        echo '<pre>';
-//        print_r($this->_options);
         update_option('constructor', $this->_options);
         
         // need update style cache
