@@ -1,0 +1,35 @@
+#wrapheader, #header, #wrapfooter, #footer, .sidebar {
+    display:none;
+}
+#content {
+    border:0 !important;
+}
+#container {
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+    box-shadow:none !important;
+    -moz-box-shadow:none !important;
+    -webkit-box-shadow:none !important;
+}
+#posts {
+    margin:0 10px !important;
+    padding:10px 0 !important;
+}
+
+.hentry .title {
+    border:0 !important;
+}
+.hentry .footer {
+    display:none;
+}
+.more-link {
+    display:none;
+}
+.navigation {
+    display:none;
+}
+#respond {
+    display:none;
+}

@@ -22,6 +22,9 @@
 	height: 28px;
 	background: url(../images/select2.png) center;
 }
+.constructor .select {
+    overflow:hidden;
+}
 .constructor .select a, .constructor .select span {
     width:300px;
     float:left;
@@ -33,7 +36,9 @@
     -moz-border-radius: 6px;
     -khtml-border-radius: 6px;
     -webkit-border-radius: 6px;
-    -webkit-box-shadow: 5px 5px 7px #aaa
+    box-shadow: 2px 2px 4px #aaa;
+    -moz-box-shadow: 2px 2px 4px #aaa;
+    -webkit-box-shadow: 2px 2px 4px #aaa
 }
 .constructor .select span {
     background-color:#ccc;
@@ -86,7 +91,6 @@
     -moz-border-radius: 6px;
     -khtml-border-radius: 6px;
     -webkit-border-radius: 6px;
-    -webkit-box-shadow: 5px 5px 7px #aaa
 }
 
 .constructor fieldset {
@@ -195,7 +199,9 @@
     -moz-border-radius: 6px;
     -khtml-border-radius: 6px;
     -webkit-border-radius: 6px;
-    -webkit-box-shadow: 5px 5px 7px #aaa
+    box-shadow: 2px 2px 4px #aaa;
+    -moz-box-shadow: 2px 2px 4px #aaa;
+    -webkit-box-shadow: 2px 2px 4px #aaa
 }
 #constr-themes div.selected {
     border:2px solid #21759B
@@ -221,7 +227,7 @@
 
 /*Footer Tab*/
 #constr-footer textarea {
-    height:48px;
+    height:64px;
 }
 
 /*Color Tab*/
