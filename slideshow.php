@@ -24,6 +24,10 @@ while($WP_Query->have_posts()) :
 
 	$post_thumbnail_id = get_post_thumbnail_id();
 	$image = wp_get_attachment_image_src($post_thumbnail_id, array($width, $height));
+	
+	// hm... not sure it's possible?
+	if (empty($image) or !isset($image[0])) continue;
+	
 	$image = $image[0];
 //	$image = get_the_post_thumbnail(null,array($width, $height));
 	

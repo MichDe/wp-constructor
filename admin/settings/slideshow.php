@@ -76,10 +76,6 @@ $(document).ready(function(){
             <input type="text" id="constructor-slideshow-advanced-timeout" name="constructor[slideshow][advanced][timeout]" value="<?php echo (isset($constructor['slideshow']['advanced']['timeout'])?$constructor['slideshow']['advanced']['timeout']:'3000'); ?>" />
             <label for="constructor-slideshow-advanced-timeout"><?php _e('Timeout between slides (ms)', 'constructor')?></label>
             <br/>
-            
-            <input type="checkbox" id="constructor-slideshow-advanced-thumb" name="constructor[slideshow][advanced][thumb]" value="1" <?php if (isset($constructor['slideshow']['advanced']['thumb']) && $constructor['slideshow']['advanced']['thumb']) echo 'checked="checked"'; ?> />
-            <label for="constructor-slideshow-advanced-thumb"><?php _e('Autogenerate thumbnail with right size', 'constructor')?></label>
-            <br/>
         </td>
     </tr>
     <tr>

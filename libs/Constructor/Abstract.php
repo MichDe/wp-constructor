@@ -88,7 +88,6 @@ class Constructor_Abstract
                         'id' => null,        // - slideshow ID - for NextGenGallery
                         'height' => 200,     // - height in px
                         'advanced' => array(
-                                'thumb'      => false,
                                 'play'       => false,
                                 'effect'     => 'slide',
                                 'effectTime' => 300,

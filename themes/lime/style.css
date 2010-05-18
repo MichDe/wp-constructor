@@ -2,7 +2,7 @@
 Theme Name: Lime
 Theme URI: 
 Description: Lime Constructor Theme
-Version: 1.0.0
+Version: 1.0.1
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 */
@@ -11,7 +11,8 @@ Author URI: http://anton.shevchuk.name/
 	background: url(line.png) 50% 100% no-repeat
 }
 
-.navigation div a{
+.navigation .alignleft a,
+.navigation .alignright a{
     text-indent:-9999%;
     display:block;
     width:64px;
@@ -20,4 +21,5 @@ Author URI: http://anton.shevchuk.name/
 }
 .navigation .alignleft a{background: url(prev.png) 0 0 no-repeat}
 .navigation .alignright a{background: url(next.png) 0 0 no-repeat}
-.navigation a:hover {background-position: 100% 100%}
+.navigation .alignleft a:hover,
+.navigation .alignright a:hover {background-position: 100% 100%}
