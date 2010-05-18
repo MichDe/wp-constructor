@@ -127,7 +127,7 @@ class Constructor_Main extends Constructor_Abstract
     {
         $options = $this->_options['slideshow']['advanced'];
         $options['slideshow'] = get_option('home').'/?theme-constructor=slideshow&w='.$width.'&h='.$height;
-        $options['thumbPath'] = CONSTRUCTOR_DIRECTORY_URI."/libs/timthumb.php?src=";
+//        $options['thumbPath'] = CONSTRUCTOR_DIRECTORY_URI."/libs/timthumb.php?src=";
         $options = json_encode($options);
         
         echo '<div class="wp-sl"></div>';

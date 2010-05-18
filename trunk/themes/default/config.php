@@ -5,7 +5,7 @@
 return array(
             "sidebar"   => 'two',          // sidebar position
             'layout'    =>  array(           // layouts styles
-                        'header'  => 140,    // header height
+                        'header'  => 142,    // header height
                         'width'   => 1024,   // container width
                         'sidebar' => 240,    // sidebar width
                         'extra'   => 240,    // extrabar  width

@@ -2,7 +2,7 @@
 Theme Name: Constructor
 Theme URI: http://code.google.com/p/wp-constructor/
 Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.9+ (include 3.0)
-Version: 1.0.2
+Version: 1.0.3
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -25,7 +25,7 @@ input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inher
 input,button,textarea,select{*font-size:100%;}
 
 body {
-    min-width:1000px;
+    /*min-width:1000px;*/
     font: 62.5%/1.5em Arial,Helvetica,sans-serif;
 }
 
@@ -518,14 +518,17 @@ div.aligncenter {
     font-size:1.4em;
     clear:both;
 }
-.navigation div a{
+.navigation .alignleft a,
+.navigation .alignright a{
     display:block;
     width:auto;
     height:32px;
     margin:0 20px
 }
-.navigation div.clear{
-    height:0;
+.navigation .wp-pagenavi {
+    text-align:center;
+    margin:8px 0;
+    padding:8px
 }
 /*/Navigation*/
 /*Widgets*/

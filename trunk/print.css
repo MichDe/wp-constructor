@@ -1,3 +1,7 @@
+/*  
+Theme Name: Constructor
+Stylesheet: Printable
+*/
 #wrapheader, #header, #wrapfooter, #footer, .sidebar {
     display:none;
 }
@@ -13,23 +17,29 @@
     -moz-box-shadow:none !important;
     -webkit-box-shadow:none !important;
 }
-#posts {
-    margin:0 10px !important;
-    padding:10px 0 !important;
+    #posts {
+        margin:0 10px !important;
+        padding:0 !important;
+    }
+    
+        .hentry .title {
+            border:0 !important;
+            margin-bottom:0;
+            padding:4px;
+        }
+            .hentry .title a {
+                padding:0px;
+            }
+        .hentry .footer {
+            display:none;
+        }
+        
+#slideshow, #respond {
+    display:none;
 }
-
-.hentry .title {
+.more-link, .navigation {
+    display:none;
+}
+.box {
     border:0 !important;
-}
-.hentry .footer {
-    display:none;
-}
-.more-link {
-    display:none;
-}
-.navigation {
-    display:none;
-}
-#respond {
-    display:none;
 }

@@ -938,5 +938,12 @@ fieldset{
 	color: {$color_bg2};
 }
 /*/Buttons*/
+/*Plugins:wp-pagenavi*/
+.wp-pagenavi a, .wp-pagenavi span {
+    border:1px solid {$color_border} !important;
+}
+.wp-pagenavi a:hover, .wp-pagenavi span.current {
+    border-color:{$color_border2} !important;
+}
 CSS;
 ?>
