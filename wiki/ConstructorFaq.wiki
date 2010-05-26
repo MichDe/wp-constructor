@@ -15,14 +15,8 @@ CSS is Cascading Style Sheets - read manual for beginners http://www.w3schools.c
 }}}
 
 *How can I use header image as clickable logo*
-{{{
-#header h1 a{
-    display:block;
-    width:100%; /*width of logo*/
-    height:180px; /*height of logo*/
-    text-indent: -99999% !important; /*hide text of logo*/
-}
-}}} 
+ * Open "Header" tab on "Customize" page
+ * Check "hide title by CSS" option
 
 *How do I remove/change the dotted line underneath the entry post title?*
 {{{
