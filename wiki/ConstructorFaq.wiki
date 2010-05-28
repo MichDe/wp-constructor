@@ -68,12 +68,12 @@ CSS is Cascading Style Sheets - read manual for beginners http://www.w3schools.c
 
 *How do I change the size of the font in the header menu?
 {{{
-#header-links a {
-    font-size: 10px !important; /* 10px is default */
+#menu li a, #menu li span{
+    font-size:1.2em;
 }
 }}}
 
-*How can I change font size for title
+*How can I change font size for title (deprecated, use setting)
 {{{
 #header h1 {
     font-size: 2.0em !important; /* default */
@@ -93,7 +93,7 @@ CSS is Cascading Style Sheets - read manual for beginners http://www.w3schools.c
 }
 }}}
 
-*How can I hide title in header, but leave link
+*How can I hide title in header, but leave link (deprecated, use setting)
 {{{
 #header h1 a{
     text-indent: -9999% !important;
