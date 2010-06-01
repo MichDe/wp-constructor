@@ -20,7 +20,7 @@ __('Default', 'constructor'); // requeried for correct translation
                 </div>
                 <div class="footer">
                     <div class="links">
-                    <?php the_time() ?> |
+                    <?php the_date() ?> |
                     <?php get_constructor_author('', ' |') ?>
                     <?php the_tags(__('Tags', 'constructor') . ': ', ', ', ' |'); ?>
                     <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>

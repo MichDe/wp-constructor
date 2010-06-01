@@ -1,0 +1,48 @@
+/*
+Theme Name: NIX Gray
+Theme URI: http://nixsolutions.com
+Description: NIX Solutions
+Version: 1.0.0
+Author: Anton Shevchuk
+Author URI: http://anton.shevchuk.name/
+*/
+#name {
+    margin-left:20px !important;
+    text-shadow: 0px 0px 4px #555;
+}
+#description {
+    margin-left:100px !important;
+}
+#menu {
+    /*top:110px;*/
+    margin-bottom:3px;
+}
+#menu ul.menu {
+    margin-left:-12px !important;
+}
+#menu ul,#menu li {
+    border:0 !important;
+}
+#menu li a, #menu li span{
+    height:30px;
+    line-height:30px;
+    font-size:1.2em;
+    background: url(images/menu.jpg) no-repeat right 1px;
+}
+#menu ul.menu > li > a{
+    text-transform:uppercase;
+}
+#menu ul ul {
+    top:30px;
+}
+#menu li li a, #menu li li span {
+    background-color:#eee;
+    border-bottom:1px solid #fff;
+}
+#container {
+    border:0 !important;
+}
+
+.title, .sidebar h3 {
+    background: url(images/divider.jpg) repeat-x left bottom;	
+}

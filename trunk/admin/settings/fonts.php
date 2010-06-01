@@ -23,7 +23,7 @@ $(document).ready(function(){
 		    <?php _e('Font Weight', 'constructor') ?>: <?php $this->getFontWeight('title') ?>
 		    <?php _e('Text Decoration', 'constructor') ?>: <?php $this->getFontTransform('title') ?>
 		</td>
-		<td rowspan="4" valign="top" class="updated quick-links">
+		<td rowspan="4" valign="top" class="updated quick-links" width="320px">
 		
 		
 		<h3><?php _e('Font Family Example', 'constructor') ?></h3>

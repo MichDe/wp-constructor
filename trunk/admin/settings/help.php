@@ -19,7 +19,7 @@
 		    <li><a href="http://code.google.com/p/wp-constructor/issues/list">Issues</a></li> 
 		</ul>
 	</td>
-	<td valign="top" class="updated quick-links" width="240px">
+	<td valign="top" class="updated quick-links" width="320px">
         <h3><?php _e('Donate', 'constructor'); ?><img class="donate-progress" src="http://wp-constructor.googlecode.com/svn/wiki/images/donate.png" alt="Donate Progress"/></h3>
         
         

@@ -2,7 +2,12 @@
     width:100%;
     clear:both;
 }
-
+.constructor pre {
+    font-family:Consolas,Monaco,Courier,monospace;
+    background:#EAEAEA;
+    padding:2px 4px;
+    margin:2px;
+}
 .constructor .color{
     cursor:pointer;
     float:left;
