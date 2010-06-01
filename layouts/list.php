@@ -16,7 +16,7 @@ __('List', 'constructor'); // requeried for correct translation
                     <h2>
                         <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a>
                     </h2>
-    				<div class="date color2"><?php the_time() ?></div>
+    				<div class="date color2"><?php the_date() ?></div>
                 </div>                
                 <div class="entry clear">
                     <?php the_post_thumbnail( 'list-post-thumbnail', array('class' => 'thumb alignleft') ); ?>

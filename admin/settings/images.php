@@ -35,7 +35,7 @@
     <div>
         <table class="form-table">
             <?php constructor_admin_image_src('body', $upload) ?>
-            <?php constructor_admin_image_fixed('fixed') ?>
+            <?php constructor_admin_image_fixed('body') ?>
     		<?php constructor_admin_image('body') ?>
 		</table>
     </div>
@@ -43,7 +43,7 @@
     <div>
         <table class="form-table">
             <?php constructor_admin_image_src('wrap', $upload) ?>
-            <?php constructor_admin_image_fixed('fixed') ?>
+            <?php constructor_admin_image_fixed('wrap') ?>
     		<?php constructor_admin_image('wrap') ?>
 		</table>
     </div>
@@ -106,7 +106,7 @@
 </div>
         
         </td>
-        <td valign="top" class="updated quick-links" width="240px">
+        <td valign="top" class="updated quick-links" width="320px">
             <h3><?php _e('Help', 'constructor'); ?></h3>
             <a href="#" class="help-button" title="<?php _e('Help', 'constructor'); ?>"><?php _e('See helpful illustration!', 'constructor'); ?></a></td>
     </tr>

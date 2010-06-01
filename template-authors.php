@@ -17,7 +17,6 @@ get_header(); ?>
                     <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1>
                 </div>
                 <div class="entry">
-
                     <?php the_content(__('Read the rest of this entry &raquo;', 'constructor')) ?>
                     <ul>
                         <?php wp_list_authors('optioncount=1&exclude_admin=0&show_fullname=1') ?>

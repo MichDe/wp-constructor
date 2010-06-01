@@ -3,7 +3,7 @@
  * Don't change this is file
  */
 return array(
-            "sidebar"   => 'two',          // sidebar position
+            "sidebar"   => 'right',          // sidebar position
             'layout'    =>  array(           // layouts styles
                         'header'  => 142,    // header height
                         'width'   => 1024,   // container width

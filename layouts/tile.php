@@ -25,7 +25,7 @@ __('Tile', 'constructor'); // requeried for correct translation
                     ?>
                 </div>
                 <div class="links opacity">
-                    <div class="date"><?php the_time() ?></div>
+                    <div class="date"><?php the_date() ?></div>
                     <div class="comments"><?php comments_popup_link('0', '1', '%', 'button', '' ); ?></div>
                 </div>
             </div>

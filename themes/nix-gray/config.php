@@ -1,13 +1,20 @@
 <?php 
-/* Save on 2010-05-07 14:18 */ 
+/* Save on 2010-06-01 14:51 */ 
 return array (
   'sidebar' => 'right',
   'layout' => 
   array (
-    'header' => '200',
-    'width' => '1024',
-    'sidebar' => '240',
+    'header' => '150',
+    'width' => '980',
+    'sidebar' => '232',
     'extra' => '240',
+    'fluid' => 
+    array (
+      'flag' => false,
+      'width' => 80,
+      'min-width' => 960,
+      'max-width' => 1280,
+    ),
     'home' => 'default',
     'index' => 'default',
     'page' => 'page',
@@ -25,11 +32,18 @@ return array (
   ),
   'content' => 
   array (
-    'author' => false,   
+    'author' => false,
     'widget' => 
     array (
       'flag' => false,
       'after' => 1,
+    ),
+    'list' => 
+    array (
+      'thumb' => 
+      array (
+        'pos' => '',
+      ),
     ),
   ),
   'comments' => 
@@ -48,35 +62,35 @@ return array (
   array (
     'title' => 
     array (
-      'family' => 'Arial,Helvetica,sans-serif',
-      'size' => '92',
+      'family' => '"Trebuchet MS",Helvetica,sans-serif',
+      'size' => '64',
       'weight' => '800',
-      'color'  => '#fff',
+      'color' => '#ffffff',
       'transform' => 'uppercase',
     ),
     'description' => 
     array (
-      'family' => 'Arial,Helvetica,sans-serif',
-      'size' => '24',
+      'family' => '"Trebuchet MS",Helvetica,sans-serif',
+      'size' => '18',
       'weight' => '600',
-      'color' => '#777',
+      'color' => '#ed0000',
       'transform' => 'uppercase',
     ),
     'header' => 
     array (
-      'family' => 'Arial,Helvetica,sans-serif',
+      'family' => '"Trebuchet MS",Helvetica,sans-serif',
     ),
     'content' => 
     array (
-      'family' => 'Arial,Helvetica,sans-serif',
+      'family' => '"Trebuchet MS",Helvetica,sans-serif',
     ),
   ),
   'menu' => 
   array (
-    'pos' => 'right bottom',
-    'width' => false,
+    'pos' => 'left bottom',
+    'width' => '100%',
     'flag' => true,
-    'home' => false,
+    'home' => true,
     'rss' => false,
     'search' => false,
     'pages' => 
@@ -86,7 +100,7 @@ return array (
     ),
     'categories' => 
     array (
-      'depth' => '4',
+      'depth' => '3',
       'exclude' => '0',
       'group' => true,
       'title' => '',
@@ -94,58 +108,58 @@ return array (
   ),
   'slideshow' => 
   array (
-    'flag' => true,
+    'flag' => false,
     'layout' => 'in',
     'onpage' => false,
     'onsingle' => false,
     'onarchive' => false,
     'showposts' => 10,
     'id' => 0,
-    'height' => '200',
+    'height' => 200,
     'advanced' => 
     array (
-      'thumb' => false,
       'play' => false,
       'effect' => 'slide',
-      'effectTime' => '300',
-      'timeout' => '3000',
+      'effectTime' => 300,
+      'timeout' => 3000,
+      'thumb' => false,
     ),
   ),
   'design' => 
   array (
     'box' => 
     array (
-      'flag' => true,
-      'radius' => '6',
+      'flag' => false,
+      'radius' => 6,
     ),
     'shadow' => 
     array (
-      'flag' => true,
-      'x' => '0',
-      'y' => '0',
-      'blur' => '3',
+      'flag' => false,
+      'x' => 0,
+      'y' => 0,
+      'blur' => 3,
     ),
   ),
   'images' => 
   array (
     'body' => 
     array (
-      'src' => 'themes/mountains/body.jpg',
-      'pos' => 'center bottom',
-      'repeat' => 'no-repeat',
-      'fixed' => true,
+      'src' => 'themes/nix-gray/body.jpg',
+      'pos' => 'left top',
+      'repeat' => 'repeat-x',
+      'fixed' => false,
     ),
     'wrap' => 
     array (
       'src' => '',
-      'pos' => 'center top',
-      'repeat' => 'no-repeat',
+      'pos' => 'left top',
+      'repeat' => 'repeat-x',
       'fixed' => false,
     ),
     'header' => 
     array (
       'src' => '',
-      'pos' => 'left top',
+      'pos' => 'center bottom',
       'repeat' => 'no-repeat',
     ),
     'wrapper' => 
@@ -168,44 +182,44 @@ return array (
     ),
     'footer' => 
     array (
-      'src' => '',
-      'pos' => 'left top',
+      'src' => 'themes/nix-gray/footer.jpg',
+      'pos' => 'center top',
       'repeat' => 'no-repeat',
     ),
     'wrapheader' => 
     array (
-      'src' => 'themes/mountains/header.jpg',
+      'src' => 'themes/nix-gray/content.jpg',
       'pos' => 'center bottom',
-      'repeat' => 'repeat-x',
+      'repeat' => 'no-repeat',
     ),
     'wrapcontent' => 
     array (
-      'src' => '',
-      'pos' => 'left top',
-      'repeat' => 'no-repeat',
+      'src' => 'themes/nix-gray/wrapper.jpg',
+      'pos' => 'center top',
+      'repeat' => 'repeat-y',
     ),
     'wrapfooter' => 
     array (
-      'src' => '',
-      'pos' => 'left top',
+      'src' => 'themes/nix-gray/footer.jpg',
+      'pos' => 'center top',
       'repeat' => 'no-repeat',
     ),
   ),
-  'opacity' => 'lighthigh',
+  'opacity' => 'none',
   'color' => 
   array (
-    'bg' => '#548aba',
-    'bg2' => '#d9edff',
+    'bg' => '#cccccc',
+    'bg2' => '#f2f2f2',
     'opacity' => '#fff',
-    'title' => '#fcfcfc',
-    'title2' => '#424242',
-    'text' => '#333',
+    'title' => '#333',
+    'title2' => '#555',
+    'text' => '#424242',
     'text2' => '#aaa',
     'border' => '#aaa',
     'border2' => '#999',
-    'header1' => '#058af7',
-    'header2' => '#1e89d6',
-    'header3' => '#5da183',
+    'header1' => '#ff0000',
+    'header2' => '#ff1212',
+    'header3' => '#ff3333',
   ),
   'theme-reload' => '0',
 )

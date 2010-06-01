@@ -18,6 +18,7 @@
 	            break;
 	        default:
 	            wp_list_pages('title_li=<h2>'.__('Pages', 'constructor').'</h2>' );
+	            wp_list_categories('show_count=1&title_li=<h3>'.__('Categories', 'constructor').'</h3>');
 	            break;
 	    }
 	    ?>
