@@ -310,6 +310,7 @@ div.aligncenter {
     font-size:1.4em;
     line-height:1.6em;
     padding:4px;
+    overflow:hidden;
 }
 .hentry .entry h1,
 .hentry .entry h2,
@@ -383,6 +384,28 @@ div.aligncenter {
 	border:0;
 	padding:0;
 }
+/*Attachments*/
+.attachment-list {
+    
+}
+.attachment-list.preview {
+    overflow:hidden;
+}
+.attachment-list.preview li{
+    list-style:none;
+    float:left;
+
+}
+.attachment-list.image {
+
+}
+.attachment-list.video {
+
+}
+.attachment-list.application {
+
+}
+/*/Attachments*/
 /*/Post*/
 /*Author*/ 
 .author dl {

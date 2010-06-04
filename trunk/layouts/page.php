@@ -11,7 +11,7 @@ __('Single', 'constructor'); // requeried for correct translation
 
     <?php if (have_posts()) : ?>
         <div id="posts">
-        <?php while (have_posts()) : the_post(); ?>
+        <?php while (have_posts()) : the_post(); global $post; ?>
             <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
                 <div class="title opacity box">
                     <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1>
@@ -22,7 +22,7 @@ __('Single', 'constructor'); // requeried for correct translation
                 </div>
                 <div class="footer">
                     <div class="links">
-                    <?php if($post->post_parent) : $parent_link = get_permalink($post->post_parent); ?>
+                    <?php if ($post->post_parent) : $parent_link = get_permalink($post->post_parent); ?>
                     <a href="<?php echo $parent_link; ?>"><?php _e('Back to Parent Page', 'constructor');?></a> |
                     <?php endif; ?>
                     <?php the_time() ?> |
