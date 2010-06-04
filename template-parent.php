@@ -25,7 +25,7 @@ get_header(); ?>
                 </div>
                 <div class="footer">
                     <div class="links">
-                    <?php if($post->post_parent) : $parent_link = get_permalink($post->post_parent); ?>
+                    <?php if ($post->post_parent) : $parent_link = get_permalink($post->post_parent); ?>
                     <a href="<?php echo $parent_link; ?>"><?php _e('Back to Parent Page', 'constructor');?></a> |
                     <?php endif; ?>
                     <?php the_date() ?> |

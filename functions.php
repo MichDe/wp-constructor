@@ -35,6 +35,14 @@ if ( function_exists('register_sidebar') ) {
         'after_title' => '</h3>',
     ));
     
+    register_sidebar(array(
+        'name'=>'incontent',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>',
+    ));
+    
     // options for all follows sidebars
     $widget_options = array(
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
@@ -133,6 +141,7 @@ if (!is_admin()) {
     add_filter('preview_theme_ob_filter', 'constructor_preview');
     
     require_once CONSTRUCTOR_DIRECTORY .'/libs/Constructor/Main.php';
+    require_once CONSTRUCTOR_DIRECTORY .'/libs/Constructor/Shortcodes.php';
     
     $main = new Constructor_Main();
     $main -> init();

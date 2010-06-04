@@ -8,6 +8,11 @@
         <input type="checkbox" id="constructor-author" name="constructor[content][author]" value="1" <?php if (isset($constructor['content']['author']) && $constructor['content']['author'] == 1) echo 'checked="checked"'; ?> />
         <label for="constructor-author"><?php _e('Show author link', 'constructor'); ?></label>
     </td>
+    <td rowspan="2" valign="top" class="updated quick-links" width="320px">
+    <h3><?php _e('Help', 'constructor'); ?></h3>
+    <?php _e('You can use short tag [constructor_widget] in your post, and can configured with <a href="widgets.php">widgets</a> (use "in post" sidebar)', 'constructor')?>
+    
+    </td>
 </tr>
 
 
