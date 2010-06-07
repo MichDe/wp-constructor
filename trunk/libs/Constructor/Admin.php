@@ -32,6 +32,28 @@ class Constructor_Admin extends Constructor_Abstract
         add_action('admin_head', array($this, 'addThemeScripts'), 2);
         add_action('admin_head', array($this, 'addThemeStyles'),  3);
         add_action('admin_menu', array($this, 'addMenuItem'));
+        
+        add_action('switch_theme', array($this, 'disable'));
+    }
+    
+    /**
+     * unload callback
+     *
+     * @param string $theme
+     */
+    function disable($theme)
+    {
+        // disable autoload
+    }
+    
+    /**
+     * remove callback
+     */
+    function remove()
+    {
+        // remove theme options
+        delete_option('constructor');
+        delete_option('constructor_admin');
     }
     
     /**

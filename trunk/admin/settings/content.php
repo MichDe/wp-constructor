@@ -10,7 +10,15 @@
     </td>
     <td rowspan="2" valign="top" class="updated quick-links" width="320px">
     <h3><?php _e('Help', 'constructor'); ?></h3>
-    <?php _e('You can use short tag [constructor_widget] in your post, and can configured with <a href="widgets.php">widgets</a> (use "in post" sidebar)', 'constructor')?>
+    <?php _e('You can use short code [widgets] in your post, and can configured with <a href="widgets.php">widgets</a> (use "In Posts" sidebar)', 'constructor')?>
+    <br />
+    <br />
+    <?php _e('Available <a href="http://code.google.com/p/wp-constructor/wiki/ConstructorShortcodes" title="Constructor Short Codes">short codes</a>:', 'constructor')?>
+    <ul>
+        <li>[attachments <em>type=image</em> <em>preview=1</em>]</li>
+        <li>[subpages]</li>
+        <li>[widgets]</li>
+    </ul>
     
     </td>
 </tr>
@@ -19,7 +27,7 @@
 <tr>
     <th scope="row" valign="top">
         <?php _e('Content widgets place', 'constructor'); ?><br/>
-        <small><em><?php _e('can configured with <a href="widgets.php">widgets</a>, use "content" sidebar', 'constructor'); ?></em></small>
+        <small><em><?php _e('can configured with <a href="widgets.php">widgets</a>, use "After N Post" sidebar', 'constructor'); ?></em></small>
     </th>
     <td>
 		<fieldset>

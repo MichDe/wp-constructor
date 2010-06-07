@@ -20,7 +20,8 @@ define('CONSTRUCTOR_DEBUG', false);
 if ( function_exists('register_sidebar') ) {
 
     register_sidebar(array(
-        'name'=>'header',
+        'id'=>'header',
+        'name'=>'Top Menu',
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget' => '</li>',
         'before_title' => '<span>',
@@ -28,7 +29,8 @@ if ( function_exists('register_sidebar') ) {
     )); 
     
     register_sidebar(array(
-        'name'=>'content',
+        'id'=>'content',
+        'name'=>'After N Post',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3 class="widgettitle">',
@@ -36,7 +38,8 @@ if ( function_exists('register_sidebar') ) {
     ));
     
     register_sidebar(array(
-        'name'=>'incontent',
+        'id'=>'incontent',
+        'name'=>'In Posts',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3 class="widgettitle">',
@@ -51,20 +54,20 @@ if ( function_exists('register_sidebar') ) {
         'after_title' => '</h3>',
     );
     
-    register_sidebar(array_merge($widget_options, array('name'=>'sidebar')));
-    register_sidebar(array_merge($widget_options, array('name'=>'sidebar categories')));
-    register_sidebar(array_merge($widget_options, array('name'=>'sidebar posts')));
-    register_sidebar(array_merge($widget_options, array('name'=>'sidebar pages')));
+    register_sidebar(array_merge($widget_options, array('id'=>'sidebar','name'=>'Sidebar')));
+    register_sidebar(array_merge($widget_options, array('id'=>'sidebar categories', 'name'=>'Sidebar for Categories')));
+    register_sidebar(array_merge($widget_options, array('id'=>'sidebar posts', 'name'=>'Sidebar for Posts')));
+    register_sidebar(array_merge($widget_options, array('id'=>'sidebar pages', 'name'=>'Sidebar for Pages')));
     
-    register_sidebar(array_merge($widget_options, array('name'=>'extra')));
-    register_sidebar(array_merge($widget_options, array('name'=>'extra categories')));
-    register_sidebar(array_merge($widget_options, array('name'=>'extra posts')));
-    register_sidebar(array_merge($widget_options, array('name'=>'extra pages')));
+    register_sidebar(array_merge($widget_options, array('id'=>'extra','name'=>'Extrabar')));
+    register_sidebar(array_merge($widget_options, array('id'=>'extra categories','name'=>'Extrabar for Categories')));
+    register_sidebar(array_merge($widget_options, array('id'=>'extra posts','name'=>'Extrabar for Posts')));
+    register_sidebar(array_merge($widget_options, array('id'=>'extra pages','name'=>'Extrabar for Pages')));
     
-    register_sidebar(array_merge($widget_options, array('name'=>'footer')));
-    register_sidebar(array_merge($widget_options, array('name'=>'footer categories')));
-    register_sidebar(array_merge($widget_options, array('name'=>'footer posts')));
-    register_sidebar(array_merge($widget_options, array('name'=>'footer pages')));    
+    register_sidebar(array_merge($widget_options, array('id'=>'footer', 'name'=>'Footer'))); 
+    register_sidebar(array_merge($widget_options, array('id'=>'footer categories', 'name'=>'Footer for Categories'))); 
+    register_sidebar(array_merge($widget_options, array('id'=>'footer posts', 'name'=>'Footer for Posts'))); 
+    register_sidebar(array_merge($widget_options, array('id'=>'footer pages', 'name'=>'Footer for Pages'))); 
 }
 
 define('CONSTRUCTOR_DIRECTORY',     get_template_directory());
@@ -317,6 +320,7 @@ if (!is_admin()) {
     if (version_compare(phpversion(), '5.0.0', '<')) {
         require_once CONSTRUCTOR_DIRECTORY .'/admin/compatibility.php';
     }
+    
     
     // init modules for admin pages
     // you can disable any

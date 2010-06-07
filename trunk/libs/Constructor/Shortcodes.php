@@ -23,7 +23,7 @@ class Constructor_Shortcodes
      * Return widget
      * 
      * <code>
-     * [subpages]
+     * [widgets]
      * </code>
      */
     function widgets($attributes)

@@ -3,7 +3,9 @@
  * @package WordPress
  * @subpackage Constructor
  */
-header ("content-type: text/xml"); 
+header('HTTP/1.0 200 OK');
+header('Content-Type: text/xml', true);
+flush();
 
 // load config
 if (!$constructor = get_option('constructor')) {
@@ -16,9 +18,10 @@ $height = isset($_GET['h'])?(int)$_GET['h']:240;
 
 $WP_Query = new WP_Query();
 $WP_Query->query('showposts='.$showposts.'&meta_key=_thumbnail_id');
+
 echo '<'.'?xml version="1.0" encoding="UTF-8" ?>';
 echo '<posts>';
-
+if ($WP_Query->have_posts()) {
 while($WP_Query->have_posts()) :
 	$WP_Query->the_post();
 
@@ -50,5 +53,8 @@ while($WP_Query->have_posts()) :
 </post>
 <?php 
 endwhile;
+} else {
+    echo  "<!-- Nothing found -->";
+}
 echo '</posts>';
 ?>

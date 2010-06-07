@@ -64,10 +64,14 @@ $(document).ready(function(){
 			</dl>
 		</fieldset>
     </td>
+    <td rowspan="2" valign="top" class="updated quick-links" width="320px">
+        <h3><?php _e('Help', 'constructor'); ?></h3>
+        <?php _e('Features for modern browsers (not IE of course)', 'constructor'); ?>
+    </td>
 </tr>
 <tr>
     <th scope="row" valign="top"><?php _e('Shadow', 'constructor'); ?></th>
-    <td rowspan="3">
+    <td>
     
 		<fieldset>
 			<legend>		        
