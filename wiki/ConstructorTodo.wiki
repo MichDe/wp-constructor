@@ -12,6 +12,6 @@
   # ~~Create page with constructor themes (separately from wordpress repository)~~
   # ~~Create list with themes examples~~
 
-  # "Header" tab -> Header font size options
+  # ~~"Header" tab -> Header font size options~~
   # "Content" tab -> Show "comments closed" message option
   # Export theme as ZIP archive (with all images)
