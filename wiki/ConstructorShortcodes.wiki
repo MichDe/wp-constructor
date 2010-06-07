@@ -11,3 +11,7 @@
 = Subpages =
 
  * `[subpages]` - list of all subpages
+
+= Widgets =
+
+ * `[widgets]` - widgets from "In Posts" sidebar
