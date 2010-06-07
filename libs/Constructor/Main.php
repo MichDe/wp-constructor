@@ -192,6 +192,7 @@ class Constructor_Main extends Constructor_Abstract
         if (function_exists('wp_nav_menu')) {
             $nav_menu = wp_nav_menu( array( 'sort_column' => 'menu_order',
                                             'container'   => '', 'echo' => 0,
+                                            'theme_location' => 'primary',
                                             'menu_class'  => 'menu opacity' ) );
                                             
             $nav_menu = strip_tags($nav_menu, '<li><a>');
@@ -281,7 +282,7 @@ class Constructor_Main extends Constructor_Abstract
         if ($this->_options['content']['widget']['after'] != $i) return false;
         echo "<div id=\"content-widget\" class=\"box\">\n";
         dynamic_sidebar('content');
-        echo "<div class=\"empty clear\"></div></div>";
+        echo "</div>";
     }
 
     /**

@@ -24,7 +24,7 @@
     	    }
     	    ?>
         	<p class="clear copy">
-            	<?php get_constructor_footer(); ?>
+            	<?php get_constructor_footer();?>
         	</p>
     	</div>
 	</div>
