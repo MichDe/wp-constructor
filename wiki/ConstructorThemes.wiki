@@ -19,6 +19,9 @@ http://wp-constructor.googlecode.com/svn/trunk/themes/minds/screenshot.png
 = Mountains (<a href="http://code.google.com/p/wp-constructor/downloads/list?can=3&q=mountains">Download</a>) =
 http://wp-constructor.googlecode.com/svn/trunk/themes/mountains/screenshot.png
 
+= NIX Gray (<a href="http://code.google.com/p/wp-constructor/downloads/list?can=3&q=nix-gray">Download</a>) =
+http://wp-constructor.googlecode.com/svn/trunk/themes/nix-gray/screenshot.png
+
 = Naruto (<a href="http://code.google.com/p/wp-constructor/downloads/list?can=3&q=naruto">Download</a>) =
 http://wp-constructor.googlecode.com/svn/trunk/themes/naruto/screenshot.png
 
