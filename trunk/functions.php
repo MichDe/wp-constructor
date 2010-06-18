@@ -70,6 +70,10 @@ if ( function_exists('register_sidebar') ) {
     register_sidebar(array_merge($widget_options, array('id'=>'footer-pages', 'name'=>'Footer for Pages'))); 
 }
 
+if (function_exists('register_nav_menu')) {
+    register_nav_menu('header', __('Header Menu','constructor'));
+}
+
 define('CONSTRUCTOR_DIRECTORY',     get_template_directory());
 define('CONSTRUCTOR_DIRECTORY_URI', get_template_directory_uri());
 
