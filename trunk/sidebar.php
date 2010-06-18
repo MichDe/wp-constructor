@@ -9,11 +9,11 @@
 	    <?php 	    
 	    // switch statement for widget place
 	    switch (true) {
-	        case (is_archive() && dynamic_sidebar('sidebar categories')):
+	        case (is_archive() && dynamic_sidebar('sidebar-categories')):
 	            break;
-	        case (is_page() && dynamic_sidebar('sidebar pages')):
+	        case (is_page() && dynamic_sidebar('sidebar-pages')):
 	            break;
-	        case (is_single() && dynamic_sidebar('sidebar posts')):
+	        case (is_single() && dynamic_sidebar('sidebar-posts')):
 	            break;
             case (dynamic_sidebar('sidebar')):
 	            break;

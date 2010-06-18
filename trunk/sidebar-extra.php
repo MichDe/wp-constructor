@@ -8,11 +8,11 @@
     <ul><?php 	    
 	    // switch statement for widget place
 	    switch (true) {
-	        case (is_archive() && dynamic_sidebar('extra categories')):
+	        case (is_archive() && dynamic_sidebar('extra-categories')):
 	            break;
-	        case (is_page() && dynamic_sidebar('extra pages')):
+	        case (is_page() && dynamic_sidebar('extra-pages')):
 	            break;
-	        case (is_single() && dynamic_sidebar('extra posts')):
+	        case (is_single() && dynamic_sidebar('extra-posts')):
 	            break;
             case (dynamic_sidebar('extra')):
 	            break;

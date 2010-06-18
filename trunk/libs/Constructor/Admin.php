@@ -407,7 +407,7 @@ class Constructor_Admin extends Constructor_Abstract
                }
                ?>
            <div class="constructor">
-                <form method="post" id="constructor-form" action="<?php echo attribute_escape($_SERVER['REQUEST_URI']); ?>" enctype="multipart/form-data">
+                <form method="post" id="constructor-form" action="<?php echo esc_attr($_SERVER['REQUEST_URI']); ?>" enctype="multipart/form-data">
                     <?php wp_nonce_field('constructor'); ?>
                     <input type="hidden" name="action" value="save" />
                     <div id="tabs">
