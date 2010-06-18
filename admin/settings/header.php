@@ -97,6 +97,10 @@ $(document).ready(function(){
 			         <input type="checkbox" id="constructor-menu-width" name="constructor[menu][width]" value="100%" <?php if ($constructor['menu']['width'] == '100%') echo 'checked="checked"'; ?>/>
                      <label for="constructor-menu-width"><?php _e('stretch across the width', 'constructor'); ?></label>
                 </dd>
+                <?php if (function_exists('wp_nav_menu')) : ?>
+                <dt><?php _e('Header Menu', 'constructor'); ?></dt>
+                <dd><?php _e('You can use <a href="nav-menus.php">navigation menu</a> with name "Header Menu"', 'constructor');?></dd>
+                <?php endif; ?>
 				<dt><?php _e('Pages', 'constructor'); ?></dt>
 				<dd><select name="constructor[menu][pages][depth]" id="constructor-menu-pages">
 		                <option value="0" <?php if ($constructor['menu']['pages']['depth'] == 0) echo 'selected="selected"'; ?>><?php _e('Disable pages', 'constructor'); ?></option>

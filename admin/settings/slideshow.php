@@ -81,12 +81,12 @@ $(document).ready(function(){
     <tr>
         <th scope="row" valign="top"><?php _e('Position', 'constructor'); ?></th>
         <td class="select" id="slideshow-layout">
-            <a href="#" title="<?php echo attribute_escape(__('In Content', 'constructor')); ?>" name="in" <?php if($constructor['slideshow']['layout'] == 'in') echo 'class="selected"'; ?>>
-                <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/slideshow-in.png" alt="<?php echo attribute_escape(__('In Content', 'constructor')); ?>" />
+            <a href="#" title="<?php echo esc_attr(__('In Content', 'constructor')); ?>" name="in" <?php if($constructor['slideshow']['layout'] == 'in') echo 'class="selected"'; ?>>
+                <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/slideshow-in.png" alt="<?php echo esc_attr(__('In Content', 'constructor')); ?>" />
             </a>
 
-            <a href="#" title="<?php echo attribute_escape(__('Over Content', 'constructor')); ?>" name="over" <?php if($constructor['slideshow']['layout'] == 'over') echo 'class="selected"'; ?>>
-                <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/slideshow-over.png" alt="<?php echo attribute_escape(__('Over Content', 'constructor')); ?>" />
+            <a href="#" title="<?php echo esc_attr(__('Over Content', 'constructor')); ?>" name="over" <?php if($constructor['slideshow']['layout'] == 'over') echo 'class="selected"'; ?>>
+                <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/slideshow-over.png" alt="<?php echo esc_attr(__('Over Content', 'constructor')); ?>" />
             </a>
         </td>
     </tr>

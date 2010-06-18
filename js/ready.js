@@ -19,14 +19,20 @@
 					.children('ul')
 						.stop(true,true)
 						.slideDown()
-						//.animate({opacity:1},{queue:false})
+					;
+				$(this).find('div.menu-header-menu-container')
+					   .children('ul')
+                           .stop(true,true)
+                           .slideDown()
 					;
 			}, function(){
 				$(this)
 					.removeClass('hover')
 					.children('ul')
-						.slideUp()
-						//.animate({opacity:0.2},{queue:false})
+					.slideUp()
+					;
+				$(this).find('div.menu-header-menu-container')
+					   .children('ul').slideUp()
 					;
 			});
         }

@@ -55,19 +55,19 @@ if ( function_exists('register_sidebar') ) {
     );
     
     register_sidebar(array_merge($widget_options, array('id'=>'sidebar','name'=>'Sidebar')));
-    register_sidebar(array_merge($widget_options, array('id'=>'sidebar categories', 'name'=>'Sidebar for Categories')));
-    register_sidebar(array_merge($widget_options, array('id'=>'sidebar posts', 'name'=>'Sidebar for Posts')));
-    register_sidebar(array_merge($widget_options, array('id'=>'sidebar pages', 'name'=>'Sidebar for Pages')));
+    register_sidebar(array_merge($widget_options, array('id'=>'sidebar-categories', 'name'=>'Sidebar for Categories')));
+    register_sidebar(array_merge($widget_options, array('id'=>'sidebar-posts', 'name'=>'Sidebar for Posts')));
+    register_sidebar(array_merge($widget_options, array('id'=>'sidebar-pages', 'name'=>'Sidebar for Pages')));
     
     register_sidebar(array_merge($widget_options, array('id'=>'extra','name'=>'Extrabar')));
-    register_sidebar(array_merge($widget_options, array('id'=>'extra categories','name'=>'Extrabar for Categories')));
-    register_sidebar(array_merge($widget_options, array('id'=>'extra posts','name'=>'Extrabar for Posts')));
-    register_sidebar(array_merge($widget_options, array('id'=>'extra pages','name'=>'Extrabar for Pages')));
+    register_sidebar(array_merge($widget_options, array('id'=>'extra-categories','name'=>'Extrabar for Categories')));
+    register_sidebar(array_merge($widget_options, array('id'=>'extra-posts','name'=>'Extrabar for Posts')));
+    register_sidebar(array_merge($widget_options, array('id'=>'extra-pages','name'=>'Extrabar for Pages')));
     
     register_sidebar(array_merge($widget_options, array('id'=>'footer', 'name'=>'Footer'))); 
-    register_sidebar(array_merge($widget_options, array('id'=>'footer categories', 'name'=>'Footer for Categories'))); 
-    register_sidebar(array_merge($widget_options, array('id'=>'footer posts', 'name'=>'Footer for Posts'))); 
-    register_sidebar(array_merge($widget_options, array('id'=>'footer pages', 'name'=>'Footer for Pages'))); 
+    register_sidebar(array_merge($widget_options, array('id'=>'footer-categories', 'name'=>'Footer for Categories'))); 
+    register_sidebar(array_merge($widget_options, array('id'=>'footer-posts', 'name'=>'Footer for Posts'))); 
+    register_sidebar(array_merge($widget_options, array('id'=>'footer-pages', 'name'=>'Footer for Pages'))); 
 }
 
 define('CONSTRUCTOR_DIRECTORY',     get_template_directory());

@@ -76,8 +76,8 @@ function constructor_admin_layout($layouts, $key)
         $name = substr($info['basename'], 0, -4);
         $title = ucfirst(strtolower($name));
         ?>
-        <a href="#" title="<?php echo attribute_escape(__($title, 'constructor')); ?>" name="<?php echo $name; ?>" <?php if($constructor['layout'][$key] == $name) echo 'class="selected"'; ?>>
-            <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/layout-<?php echo $name; ?>.png" alt="<?php echo attribute_escape(__($title, 'constructor')); ?>" />
+        <a href="#" title="<?php echo esc_attr(__($title, 'constructor')); ?>" name="<?php echo $name; ?>" <?php if($constructor['layout'][$key] == $name) echo 'class="selected"'; ?>>
+            <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/layout-<?php echo $name; ?>.png" alt="<?php echo esc_attr(__($title, 'constructor')); ?>" />
         </a>
         <?php
     }

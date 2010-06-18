@@ -190,7 +190,8 @@ class Constructor_Main extends Constructor_Abstract
         
         // navigation menu - WP3
         if (function_exists('wp_nav_menu')) {
-            $nav_menu = wp_nav_menu( array( 'sort_column' => 'menu_order',
+            $nav_menu = wp_nav_menu( array( 'menu'        => 'Header Menu',
+                                            'sort_column' => 'menu_order',
                                             'container'   => '', 'echo' => 0,
                                             'theme_location' => 'primary',
                                             'menu_class'  => 'menu opacity' ) );
