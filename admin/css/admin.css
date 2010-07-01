@@ -229,6 +229,12 @@
 #constr-fonts select {
     font-size:14px;
 }
+#constr-fonts optgroup option {
+    text-indent:8px;
+}
+#font-example {
+    font-size:26px;
+}
 
 /*Footer Tab*/
 #constr-footer textarea {

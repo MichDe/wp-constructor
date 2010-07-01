@@ -103,9 +103,10 @@ class Constructor_Admin extends Constructor_Abstract
         wp_enqueue_style('constructor-admin',       CONSTRUCTOR_DIRECTORY_URI .'/admin/css/admin.css');
         wp_enqueue_style('constructor-colorpicker', CONSTRUCTOR_DIRECTORY_URI .'/admin/css/colorpicker.css');
         wp_enqueue_style('jquery-ui',               CONSTRUCTOR_DIRECTORY_URI .'/admin/css/jquery-ui.css');
+        wp_enqueue_style('google-font-face',        'http://code.google.com/webfonts/css');
         wp_print_styles();
     }
-    
+
     /**
      * Add configuration page
      */
@@ -192,7 +193,9 @@ class Constructor_Admin extends Constructor_Abstract
         				*/
         			    
         				$fonts = require CONSTRUCTOR_DIRECTORY . '/admin/fonts.php';
-        				
+                        $font_face = require CONSTRUCTOR_DIRECTORY . '/admin/font-face.php';
+                        $fonts = array_merge($fonts, $font_face);
+
         				$data['fonts']['title']['family'] = $fonts[$data['fonts']['title']['family']];
         				$data['fonts']['description']['family'] = $fonts[$data['fonts']['description']['family']];
         				$data['fonts']['header']['family'] = $fonts[$data['fonts']['header']['family']];
@@ -257,14 +260,24 @@ class Constructor_Admin extends Constructor_Abstract
     {
         /*@var $constructor array*/
         $constructor = $this->_options;
-        
+
         $fonts = require CONSTRUCTOR_DIRECTORY . '/admin/fonts.php';
         echo "<select class='constructor-font-family' name='constructor[fonts][".$key."][family]'>";
+        echo "<optgroup label='".__('Standart Fonts', 'constructor')."'>";
         foreach ($fonts as $k => $font) :
         ?>
             <option value="<?php echo $k ?>" <?php if ($font == $constructor['fonts'][$key]['family']) echo 'selected="selected"'; ?>><?php echo $font ?></option>
         <?php
-        endforeach;        
+        endforeach;
+        $k++; // start from this is font
+        $font_face = require CONSTRUCTOR_DIRECTORY . '/admin/font-face.php';
+        echo "<optgroup label='".__('Google Fonts', 'constructor')."'>";
+        foreach ($font_face as $i => $font) :
+        ?>
+            <option value="<?php echo $k+$i ?>" <?php if ($font == $constructor['fonts'][$key]['family']) echo 'selected="selected"'; ?>><?php echo $font ?></option>
+        <?php
+        endforeach;
+        echo "</optgroup>";
         echo "</select>";
     }
     

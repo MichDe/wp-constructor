@@ -1,6 +1,4 @@
-<?php __('Fonts', 'constructor'); // requeried for correct translation 
-    $fonts = require dirname(__FILE__) . '/../fonts.php';
-?>
+<?php __('Fonts', 'constructor'); // requeried for correct translation ?>
 <script type="text/javascript">
 /* <![CDATA[ */
 (function($){
