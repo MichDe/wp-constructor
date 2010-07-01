@@ -24,7 +24,6 @@ class Constructor_Main extends Constructor_Abstract
     function addThemeScripts() 
     {
         wp_enqueue_script('constructor-theme',     CONSTRUCTOR_DIRECTORY_URI.'/js/ready.js', array('jquery'));
-
     }
     
     /**
@@ -41,7 +40,7 @@ class Constructor_Main extends Constructor_Abstract
         if (!$blog_id) {
             $blog_id = 1;
         }
-        
+
         // load style
         if (file_exists(CONSTRUCTOR_DIRECTORY .'/cache/style'.$blog_id.'.css')) {
             wp_enqueue_style('constructor-style',   CONSTRUCTOR_DIRECTORY_URI .'/cache/style'.$blog_id.'.css');
@@ -244,7 +243,7 @@ class Constructor_Main extends Constructor_Abstract
             // show search bar
             if ($this->_options['menu']['search'])  {
                 echo '<li id="menusearchform">
-                          <form role="search" method="get" action="' . get_option('home') . '/" >
+                          <form method="get" action="' . get_option('home') . '/" >
                           <input class="s" type="text" value="' . esc_attr(apply_filters('the_search_query', get_search_query())) . '" name="s"/>
                           
                           </form>

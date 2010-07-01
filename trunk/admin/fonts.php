@@ -6,7 +6,7 @@
 return array(
     // sans-serif
     'Arial,Helvetica,sans-serif',
-    '"Arial Black", Gadget,sans-serif',
+    '"Arial Black",Gadget,sans-serif',
     '"Comic Sans MS",Helvetica,sans-serif',
     'Impact,Charcoal,sans-serif',
     '"Lucida Sans Unicode","Lucida Grande",sans-serif',
@@ -24,7 +24,7 @@ return array(
     '"Bookman Old Style",Times,serif',
     'Garamond,Times,serif',
     'Georgia,Times,serif',
-    '"Palatino Linotype", "Book Antiqua", Palatino, serif',
+    '"Palatino Linotype","Book Antiqua",Palatino, serif',
     '"Times New Roman",Times,serif',
     
     // monospace
@@ -33,5 +33,3 @@ return array(
     '"Monotype Corsiva",Courier,monospace',
 );
 ?>
-
-

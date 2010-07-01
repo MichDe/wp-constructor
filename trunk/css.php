@@ -46,6 +46,41 @@ $color_opacity = isset($constructor['color']['opacity'])?$constructor['color']['
 
 /*Fonts*/
 
+// detect font-face
+$font_face = require CONSTRUCTOR_DIRECTORY .'/admin/font-face.php';
+$include_fonts = array();
+if (array_search($constructor['fonts']['title']['family'], $font_face) !== false) {
+    $font = preg_split('/[,]+/', $constructor['fonts']['title']['family']);
+    $font = urlencode(trim($font[0],'"'));
+    array_push($include_fonts, $font);
+}
+if (array_search($constructor['fonts']['description']['family'], $font_face) !== false) {
+    $font = preg_split('/[,]+/', $constructor['fonts']['description']['family']);
+    $font = urlencode(trim($font[0],'"'));
+    if (array_search($font, $include_fonts) === false) {
+        array_push($include_fonts, $font);
+    }
+}
+if (array_search($constructor['fonts']['header']['family'], $font_face) !== false) {
+    $font = preg_split('/[,]+/', $constructor['fonts']['header']['family']);
+    $font = urlencode(trim($font[0],'"'));
+    if (array_search($font, $include_fonts) === false) {
+        array_push($include_fonts, $font);
+    }
+}
+if (array_search($constructor['fonts']['content']['family'], $font_face) !== false) {
+    $font = preg_split('/[,]+/', $constructor['fonts']['content']['family']);
+    $font = urlencode(trim($font[0],'"'));
+    if (array_search($font, $include_fonts) === false) {
+        array_push($include_fonts, $font);
+    }
+}
+if (!empty($include_fonts)) {
+    $font_face = '@import url(http://fonts.googleapis.com/css?family='.join('|',$include_fonts).');'."\n";
+} else {
+    $font_face = '';
+}
+
 $title_font = <<<CSS
 font-family:{$constructor['fonts']['title']['family']};
 font-size:{$constructor['fonts']['title']['size']}px;
@@ -594,6 +629,7 @@ CSS;
 
 /* Output CSS */
 echo <<<CSS
+{$font_face}
 body {
     background-color:{$color_bg};
     {$content_font}

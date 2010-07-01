@@ -1,6 +1,5 @@
 <?php __('Content', 'constructor'); // requeried for correct translation ?>
 
-<input type="hidden" id="constructor-content-list-thumb-pos" name="constructor[content][list][thumb][pos]" value="<?php echo $constructor['content']['list']['thumb']['pos']?>"/>
 <table class="form-table">
 <tr>
     <th scope="row" valign="top"><?php _e('Posts', 'constructor'); ?></th>
