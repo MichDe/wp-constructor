@@ -30,13 +30,7 @@
 		<div class="alignright"><?php next_comments_link() ?></div>
 	</div>
     <?php endif; ?>
-<?php else : // this is displayed if there are no comments so far ?>
-	<?php if (comments_open()) : // comments are open, but there are no comments.?>
-	<?php else : // comments are closed ?>
-    	<p class="nocomments"><?php _e('Comments are closed.', 'constructor'); ?></p>
-	<?php endif; ?>
 <?php endif; ?>
-
 
 <!-- Respond form -->
 
