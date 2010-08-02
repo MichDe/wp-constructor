@@ -9,7 +9,7 @@
 	if (isset($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
 		die ('Please do not load this page directly. Thanks!');
 	
-	if ( post_password_required() ) { ?>
+	if (post_password_required()) { ?>
 		<p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.', 'constructor'); ?></p>
 	<?php
 		return;
@@ -61,13 +61,14 @@
         
         <?php endif; ?>    
         <!--<p><small><?php printf(__('<strong>XHTML:</strong> You can use these tags: <code>%s</code>', 'constructor'), allowed_tags()); ?></small></p>-->    
-        <p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>    
+        <p><textarea name="comment" id="comment" cols="40" rows="10" tabindex="4"></textarea></p>    
         <p class="submit"><input name="submit" type="submit" id="submit" tabindex="5" class="button" value="<?php _e('Submit Comment', 'constructor'); ?>" /></p>
         <?php do_action('comment_form', $post->ID); ?>    
         </form>
     
     <?php endif; // If registration required and not logged in ?>
     </div><!--id="respond"-->    
+<?php else:  ?>
+    <p class="nocomments"><?php _e('Comments are closed.', 'constructor'); ?></p>
 <?php endif; // if you delete this the sky will fall on your head ?>
-
 </div>

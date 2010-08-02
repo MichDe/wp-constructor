@@ -278,23 +278,7 @@ if (!is_admin()) {
         global $main;
         $main->getFooter();
     }
-    
-    /**
-     * Generate HTML code for images
-     * 
-     * @param integer $width [optional]
-     * @param integer $height [optional]
-     * @param string $key [optional]
-     * @param string $align [optional]
-     * @param bool $noimage [optional]
-     * @return string
-     */
-    function get_constructor_post_image($width = 312, $height = 292, $key = 'thumb', $align = 'none', $noimage = true)
-    {
-        global $main;
-        $main->getPostImage($width, $height, $key, $align, $noimage);
-    }
-    
+
     /**
      * get constructor category classname
      * 
