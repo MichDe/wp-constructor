@@ -22,11 +22,17 @@ __('Single', 'constructor'); // requeried for correct translation
                 </div>
                 <div class="footer">
                     <div class="links">
-                    <?php the_date() ?> |
-                    <?php get_constructor_author('', ' |') ?>
-                    <?php the_tags(__('Tags', 'constructor') . ': ', ', ', ' |'); ?>
-                    <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
-                    <?php comments_popup_link(__('No Comments &#187;', 'constructor'), __('1 Comment &#187;', 'constructor'), __('% Comments &#187;', 'constructor'), 'comments-link', __('Comments Closed', 'constructor') ); ?>                    </div>
+                        <?php the_date() ?> |
+                        <?php get_constructor_author('', ' |') ?>
+                        <?php the_tags(__('Tags', 'constructor') . ': ', ', ', ' |'); ?>
+                        <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
+                        <?php comments_popup_link(
+                                  __('No Comments &#187;', 'constructor'),
+                                  __('1 Comment &#187;', 'constructor'),
+                                  __('% Comments &#187;', 'constructor'),
+                                  'comments-link',
+                                  __('Comments Closed', 'constructor')); ?>
+                    </div>
                 </div>
             </div>
         <?php endwhile; ?>

@@ -196,7 +196,6 @@ class Constructor_Main extends Constructor_Abstract
                                             'container'   => '', 'echo' => 0,
                                             'theme_location' => 'header',
                                             'menu_class'  => 'menu opacity' ) );
-                                            
             $nav_menu = strip_tags($nav_menu, '<li><a>');
             
             echo $nav_menu;
