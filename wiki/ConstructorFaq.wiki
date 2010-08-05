@@ -104,7 +104,7 @@ CSS is Cascading Style Sheets - read manual for beginners http://www.w3schools.c
 *How can I change style for footer line
 {{{
 /* Example from Black Urban Theme */
-.hentry .footer .line {
+.hentry .footer {
    /* set height */
    height:64px !important;
    /* remove borders */
