@@ -101,8 +101,6 @@ CSS;
 
 $body_font = <<<CSS
 font-family:{$constructor['fonts']['content']['family']};
-font-size:{$constructor['fonts']['content']['size']}px;
-color:{$constructor['fonts']['content']['color']};
 CSS;
 
 $header_font = <<<CSS
