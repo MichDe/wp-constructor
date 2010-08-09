@@ -32,7 +32,7 @@ if (function_exists('add_theme_support')) { // Added in 2.9
 	add_image_size('slideshow-thumbnail');
 	    
 	// This theme uses wp_nav_menu()
-	add_theme_support('nav-menus');
+	add_theme_support('menus');
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support('automatic-feed-links');    	

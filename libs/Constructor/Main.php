@@ -193,10 +193,10 @@ class Constructor_Main extends Constructor_Abstract
         ) {
             $nav_menu = wp_nav_menu( array( 
                                             'sort_column' => 'menu_order',
-                                            'container'   => '', 'echo' => 0,
+                                            'container'   => '', 'echo' => 0, 'depth' => 0,
                                             'theme_location' => 'header',
                                             'menu_class'  => 'menu opacity' ) );
-            $nav_menu = strip_tags($nav_menu, '<li><a>');
+            $nav_menu = preg_replace('/<ul(?:.*?)>(.*)<\/ul>/s', '\1', $nav_menu);
             
             echo $nav_menu;
         }

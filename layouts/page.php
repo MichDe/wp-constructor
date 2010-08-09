@@ -33,7 +33,7 @@ __('Single', 'constructor'); // requeried for correct translation
                                   __('1 Comment &#187;', 'constructor'),
                                   __('% Comments &#187;', 'constructor'),
                                   'comments-link',
-                                  __('Comments Closed', 'constructor')); ?>
+                                  ''); ?>
                     </div>
                 </div>
             </div>

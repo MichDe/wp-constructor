@@ -136,14 +136,17 @@ class Constructor_Admin extends Constructor_Abstract
         				$data['fonts']['content']['family'] = $fonts[$data['fonts']['content']['family']];
 
                         $data['menu']['flag']   = isset($data['menu']['flag'])?true:false;
-                        $data['menu']['home']   = isset($data['menu']['home'])?true:false;
-                        $data['menu']['rss']    = isset($data['menu']['rss'])?true:false;
-                        $data['menu']['search'] = isset($data['menu']['search'])?true:false;
 
-                        $data['menu']['categories']['group'] = isset($data['menu']['categories']['group'])?true:false;
+                        if ($data['menu']['flag']) {
+                            $data['menu']['home']   = isset($data['menu']['home'])?true:false;
+                            $data['menu']['rss']    = isset($data['menu']['rss'])?true:false;
+                            $data['menu']['search'] = isset($data['menu']['search'])?true:false;
 
-                        $data['menu']['pages']['exclude'] = join(',',array_map(array($this, 'toInt'), spliti(',', $data['menu']['pages']['exclude'])));
-                        $data['menu']['categories']['exclude'] = join(',',array_map(array($this, 'toInt'), spliti(',', $data['menu']['categories']['exclude'])));
+                            $data['menu']['categories']['group'] = isset($data['menu']['categories']['group'])?true:false;
+    
+                            $data['menu']['pages']['exclude'] = join(',',array_map(array($this, 'toInt'), spliti(',', $data['menu']['pages']['exclude'])));
+                            $data['menu']['categories']['exclude'] = join(',',array_map(array($this, 'toInt'), spliti(',', $data['menu']['categories']['exclude'])));
+                        }
 
                         $data['title']['hidden'] = isset($data['title']['hidden'])?true:false;
 

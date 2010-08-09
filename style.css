@@ -1,8 +1,8 @@
 /*  
 Theme Name: Constructor
 Theme URI: http://code.google.com/p/wp-constructor/
-Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 2.9+ (include 3.0)
-Version: 1.1.1
+Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 3.0+
+Version: 1.2.0
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -643,6 +643,7 @@ div.aligncenter {
 
 #menusearchform {
     width: 134px;
+    height:40px;
 }
 #menusearchform .s {
 	z-index:301;
@@ -672,27 +673,7 @@ fieldset{
 }
 textarea {width: 98%}
 
-#commentform {
-    margin: 5px 10px 0 0
-}
-#commentform input {
-    min-width: 170px;
-    padding: 2px;
-    margin: 5px 5px 1px 0
-}
-#commentform textarea {
-    width: 100%;
-}
-#commentform #submit {
-    cursor:pointer
-}
-#commentform p {
-    margin: 5px 0
-}
-#commentform p.submit {
-    margin: 5px 0 0 0;
-	text-align:right;
-}
+
 /*/Form*/
 /*Table*/
 table {
@@ -776,6 +757,32 @@ td {
 .reply {
     clear:both;
 }
+#commentform {
+    margin: 5px 10px 0 0
+}
+
+#commentform input {
+    min-width: 170px;
+    padding: 2px;
+    margin: 5px 5px 1px 0
+}
+
+#commentform textarea {
+    width: 100%;
+}
+#commentform .comment-form-comment label {
+    display:none;
+}
+#commentform #submit {
+    cursor:pointer
+}
+#commentform p {
+    margin: 5px 0
+}
+#commentform p.submit {
+    margin: 5px 0 0 0;
+	text-align:right;
+}
 /*/Comments*/
 
 /*Footer*/
@@ -786,6 +793,7 @@ td {
     font-size:1.2em;
 }
 #footer .widget {
+    list-style:none;
     width:200px;
     float:left;
     margin: 0 0 0 12px
