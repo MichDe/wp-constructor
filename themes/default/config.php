@@ -60,10 +60,10 @@ return array(
                         'pos'  => 'right bottom',// - position (left|right)+(top|center|bottom)
                         'width'=> false,     // - can be '100%'
                         "flag" => 1,         // - enable/disable
-                        "home" => false,     // - link to home page
-                        "rss"  => true,     // - link to RSS
+                        "home" => true,      // - link to home page
+                        "rss"  => true,      // - link to RSS
                         "search" => true,    // - search form
-                        'pages'      => array('depth'=>1, 'exclude'=>''),
+                        'pages'      => array('depth'=>0, 'exclude'=>''),
                         'categories' => array('depth'=>0, 'exclude'=>'', 'group'=>1, 'title'=>'')
                         ),
             "slideshow" => array(            // Slideshow options
