@@ -46,7 +46,7 @@ while($WP_Query->have_posts()) :
                 '</span>';
 ?> 
 <post>
-	<title><?php the_title() ?></title>
+	<title><![CDATA[<?php the_title() ?>]]></title>
 	<permalink><?php the_permalink() ?></permalink>
 	<image><?php echo $image ?></image>
 	<content><![CDATA[<?php echo $content ?>]]></content>

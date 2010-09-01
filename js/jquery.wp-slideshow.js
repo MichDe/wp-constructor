@@ -5,7 +5,7 @@
  * @author   Anton Shevchuk <AntonShevchuk@gmail.com>
  * @link     http://anton.shevchuk.name
  * 
- * @version 0.4
+ * @version 0.5
  */
 (function($){
     /**
@@ -62,7 +62,7 @@
             $this.addClass('opacity');
             $this.append('<span class="prev opacity medium button">&laquo;</span>');
             $this.append('<span class="next opacity medium button">&raquo;</span>');
-            $this.append('<div class="slides"></span>');
+            $this.append('<div class="slides"></div>');
             
             $slides = $this.find('.slides');
             
@@ -185,7 +185,7 @@
     					};
     					$('post', data).each(function(){
     						var $xml = $(this);
-    						_self.addSlide($xml.children('title').text(),
+    						_self.addSlide($xml.find('title').text(),
         								   $xml.find('permalink').text(),
         								   $xml.find('image').text(),
         							       $xml.find('content').text());
