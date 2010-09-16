@@ -71,44 +71,22 @@ class Constructor_Main extends Constructor_Abstract
 
         if ( $in && $this->_options['slideshow']['layout'] == 'over') return false;
         if (!$in && $this->_options['slideshow']['layout'] == 'in')   return false;
+
+        $size = $this->getSlideshowSize();
+
         
-        // height from configuration
-        $height = (int)$this->_options['slideshow']['height'];
-        
-        // calculate slideshow width
-        if (!$in) {
-            $width = (int)($this->_options['layout']['width'] - 2);
-        } else {            
-            // switch statement for $this->_options['sidebar']
-            switch ($this->_options['sidebar']) {
-                case 'none':
-                    $width = (int)($this->_options['layout']['width'] - 4);
-                    break;
-                case 'two':
-                case 'two-right':
-                case 'two-left':
-                    $width = (int)($this->_options['layout']['width'] - $this->_options['layout']['sidebar'] - $this->_options['layout']['extra'] - 6);
-                    break;
-                default:
-                    $width = (int)($this->_options['layout']['width'] - $this->_options['layout']['sidebar'] - 4);
-                    break;
-            }
-        }
-        
-        
-        echo '<div id="slideshow" style="height:'.$height.'px;width:'.$width.'px">';
+        echo '<div id="slideshow" style="height:'.$size['height'].'px;width:'.$size['width'].'px">';
 
         // switch statement for true
         switch (true) {
             case (isset($this->_options['slideshow']['id']) && $this->_options['slideshow']['id']!='' && function_exists('nggShowSlideshow')):
-                echo nggShowSlideshow((int)$this->_options['slideshow']['id'], $width, $height);
+                echo nggShowSlideshow((int)$this->_options['slideshow']['id'], $size['width'], $size['height']);
                 break;
         
             default:
-                $this->getDefaultSlideshow($width, $height);
+                $this->getDefaultSlideshow($size['width'], $size['height']);
                 break;
-        }
-        
+        }        
         
         echo '</div>';
     }

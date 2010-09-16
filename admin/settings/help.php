@@ -21,7 +21,8 @@
 	</td>
 	<td valign="top" class="updated quick-links" width="320px">
         <h3><?php _e('Donate', 'constructor'); ?><img class="donate-progress" src="http://wp-constructor.googlecode.com/svn/wiki/images/donate.png" alt="Donate Progress"/></h3>
-        
+
+        <?php _e('You can send your Name and Url for promote on <a href="http://donate.hohli.com/">Donate page</a>', 'constructor');?>
         
         <h4>PayPal</h4>
         <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mxleod@yahoo.com&lc=US&item_name=Wordpress%20Constructor%20Theme&currency_code=USD"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate via PayPal"/></a>

@@ -29,7 +29,6 @@ if (function_exists('add_theme_support')) { // Added in 2.9
 	set_post_thumbnail_size( 64, 64, true ); // Normal post thumbnail
 	add_image_size('list-post-thumbnail', 128, 128, true );
 	add_image_size('tile-post-thumbnail', 312, 292, true );
-	add_image_size('slideshow-thumbnail');
 	    
 	// This theme uses wp_nav_menu()
 	add_theme_support('menus');

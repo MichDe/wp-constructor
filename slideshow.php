@@ -25,14 +25,20 @@ if ($WP_Query->have_posts()) {
 while($WP_Query->have_posts()) :
 	$WP_Query->the_post();
 
-	$post_thumbnail_id = get_post_thumbnail_id();
-	$image = wp_get_attachment_image_src($post_thumbnail_id, array($width, $height));
+//	$post_thumbnail_id = get_post_thumbnail_id();
+//	$image = wp_get_attachment_image_src($post_thumbnail_id, array($width, $height));
 	
 	// hm... not sure it's possible?
-	if (empty($image) or !isset($image[0])) continue;
+//	if (empty($image) or !isset($image[0])) continue;
 	
-	$image = $image[0];
-//	$image = get_the_post_thumbnail(null,array($width, $height));
+//	$image = $image[0];
+	$image = get_the_post_thumbnail(null, 'slideshow-thumbnail');
+    if (preg_match('/src="(.*?)"/i', $image, $matches)) {
+        $image = $matches[1];
+    } else {
+        continue;
+    }
+
 	
 //    $content = apply_filters('the_content', get_the_excerpt(''), true);
 //    $content = preg_replace('/(\<script.*\>.*\<\/script\>)/si', '', $content);
