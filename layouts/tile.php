@@ -3,7 +3,7 @@
  * @package WordPress
  * @subpackage constructor
  */
-__('Tile', 'constructor'); // requeried for correct translation
+__('Tile', 'constructor'); // required for correct translation
 ?>
 <div id="content" class="box shadow opacity layout-full">
     <div id="container" >

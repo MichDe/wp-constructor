@@ -1,4 +1,4 @@
-<?php __('Sidebar', 'constructor'); // requeried for correct translation ?>
+<?php __('Sidebar', 'constructor'); // required for correct translation ?>
 <script type="text/javascript">
 /* <![CDATA[ */
 (function($){

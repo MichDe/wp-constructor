@@ -1,4 +1,4 @@
-<?php __('Images', 'constructor'); // requeried for correct translation ?>
+<?php __('Images', 'constructor'); // required for correct translation ?>
 <div class="constructor-admin-help" title="<?php _e('Help', 'constructor'); ?>" name="Images">
     <div id="constructor-layers">
         <ol>

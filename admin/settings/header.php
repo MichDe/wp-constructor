@@ -1,4 +1,4 @@
-<?php __('Header', 'constructor'); // requeried for correct translation ?>
+<?php __('Header', 'constructor'); // required for correct translation ?>
 <script type="text/javascript">
 /* <![CDATA[ */
 (function($){

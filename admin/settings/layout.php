@@ -1,4 +1,4 @@
-<?php __('Layout', 'constructor'); // requeried for correct translation  
+<?php __('Layout', 'constructor'); // required for correct translation
 $layouts = scandir(CONSTRUCTOR_DIRECTORY.'/layouts/');
 $layouts = array_diff($layouts, array( '.','..','.svn','.htaccess','readme.txt'));
 

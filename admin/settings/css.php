@@ -1,4 +1,4 @@
-<?php __('CSS', 'constructor'); // requeried for correct translation 
+<?php __('CSS', 'constructor'); // required for correct translation
 $css_file = CONSTRUCTOR_DIRECTORY .'/themes/'.$admin['theme'].'/style.css';
 ?>
 <table class="form-table">

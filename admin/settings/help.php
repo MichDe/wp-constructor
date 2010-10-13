@@ -1,4 +1,4 @@
-<?php __('Help', 'constructor'); // requeried for correct translation ?>
+<?php __('Help', 'constructor'); // required for correct translation ?>
 
 <table class="form-table">
 <tr>

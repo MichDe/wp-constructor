@@ -1,4 +1,4 @@
-<?php __('Save As', 'constructor'); // requeried for correct translation 
+<?php __('Save As', 'constructor'); // required for correct translation
 
 $theme_data = get_theme_data(CONSTRUCTOR_DIRECTORY.'/themes/'.$admin['theme'].'/style.css');
 

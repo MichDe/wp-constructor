@@ -1,5 +1,5 @@
 <?php
-    __('Slideshow', 'constructor'); // requeried for correct translation
+    __('Slideshow', 'constructor'); // required for correct translation
     global $nggdb;
 ?>
 <script type="text/javascript">
