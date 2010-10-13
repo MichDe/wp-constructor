@@ -1,4 +1,4 @@
-<?php __('Themes', 'constructor'); // requeried for correct translation ?>
+<?php __('Themes', 'constructor'); // required for correct translation ?>
 <script type="text/javascript">
 (function($){
 $(document).ready(function(){

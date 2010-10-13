@@ -1,4 +1,4 @@
-<?php __('Design', 'constructor'); // requeried for correct translation 
+<?php __('Design', 'constructor'); // required for correct translation
 ?>
 <script type="text/javascript">
 /* <![CDATA[ */

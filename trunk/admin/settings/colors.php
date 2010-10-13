@@ -1,4 +1,4 @@
-<?php __('Colors', 'constructor'); // requeried for correct translation ?>
+<?php __('Colors', 'constructor'); // required for correct translation ?>
 <script type="text/javascript">
 (function($){
 $(document).ready(function(){

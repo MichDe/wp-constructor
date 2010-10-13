@@ -1,4 +1,4 @@
-<?php __('Comments', 'constructor'); // requeried for correct translation ?>
+<?php __('Comments', 'constructor'); // required for correct translation ?>
 <script type="text/javascript">
 /* <![CDATA[ */
 (function($){

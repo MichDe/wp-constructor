@@ -1,4 +1,4 @@
-<?php __('Fonts', 'constructor'); // requeried for correct translation ?>
+<?php __('Fonts', 'constructor'); // required for correct translation ?>
 <script type="text/javascript">
 /* <![CDATA[ */
 (function($){
