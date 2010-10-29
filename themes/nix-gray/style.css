@@ -33,6 +33,7 @@ Author URI: http://anton.shevchuk.name/
     text-transform:uppercase;
 }
 #menu ul ul {
+    border:0 !important;
     top:30px;
 }
 #menu li li a, #menu li li span {

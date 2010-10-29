@@ -5,7 +5,7 @@
  */
 ?>
 <?php get_header(); ?>
-<div id="content" class="box shadow opacity">
+<div id="content" class="box shadow opacity <?php the_constructor_layout_class() ?>">
     <div id="container" >
         <div id="posts">
             <div <?php post_class(); ?>>

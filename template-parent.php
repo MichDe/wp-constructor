@@ -8,8 +8,8 @@ Template Name: Parent Page
  */
 
 get_header(); ?>
-<div id="content" class="box shadow opacity">
-    <div id="container" class="container-sitemap">
+<div id="content" class="box shadow opacity <?php the_constructor_layout_class() ?>">
+    <div id="container">
         <div id="posts">
         <?php while (have_posts()) : the_post(); ?>
             <div <?php post_class(); ?> id="post-<?php the_ID() ?>">

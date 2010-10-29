@@ -182,6 +182,20 @@ if (!is_admin()) {
         global $main;
         $main->getLayout($where);
     }
+
+    /**
+     * get_constructor_class
+     *
+     * return default layout class
+     *
+     * @param  string $rewrite
+     * @return string
+     */
+    function the_constructor_layout_class($rewrite = null)
+    {
+        global $main;
+        echo $main->getLayoutClass($rewrite);
+    }
     
     /**
      * get top menu

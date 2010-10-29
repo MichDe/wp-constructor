@@ -139,6 +139,34 @@ class Constructor_Main extends Constructor_Abstract
         }
         return true;
     }
+
+    /**
+     * get_constructor_class
+     *
+     * @param  string $rewrite
+     * @return string
+     */
+    function getLayoutClass($rewrite = null)
+    {
+        if ($rewrite) {
+            switch ($rewrite) {
+                case 'left':
+                case 'right':
+                case 'two':
+                case 'two-left':
+                case 'two-right':
+                case 'none':
+                    $sidebar = $rewrite;
+                    break;
+                default:
+                    $sidebar = 'right';
+                    break;
+            }
+        } else {
+            $sidebar = $this->_options['sidebar'];
+        }
+        return 'layout-'.$sidebar;
+    }
     
     /**
      * get_constructor_menu

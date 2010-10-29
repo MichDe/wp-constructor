@@ -7,6 +7,11 @@
  */
 header('Content-type: text/css');
 
+// debug
+//error_reporting(E_ALL);
+
+global $constructor, $template_uri;
+
 // template directory
 $template_uri = get_template_directory_uri();
 
@@ -82,33 +87,33 @@ if (!empty($include_fonts)) {
 }
 
 $title_font = <<<CSS
-font-family:{$constructor['fonts']['title']['family']};
-font-size:{$constructor['fonts']['title']['size']}px;
-line-height:{$constructor['fonts']['title']['size']}px;
-font-weight:{$constructor['fonts']['title']['weight']};
-color:{$constructor['fonts']['title']['color']};
-text-transform:{$constructor['fonts']['title']['transform']};
+    font-family:{$constructor['fonts']['title']['family']};
+    font-size:{$constructor['fonts']['title']['size']}px;
+    line-height:{$constructor['fonts']['title']['size']}px;
+    font-weight:{$constructor['fonts']['title']['weight']};
+    color:{$constructor['fonts']['title']['color']};
+    text-transform:{$constructor['fonts']['title']['transform']};
 CSS;
 
 $description_font = <<<CSS
-font-family:{$constructor['fonts']['description']['family']};
-font-size:{$constructor['fonts']['description']['size']}px;
-line-height:{$constructor['fonts']['description']['size']}px;
-font-weight:{$constructor['fonts']['description']['weight']};
-color:{$constructor['fonts']['description']['color']};
-text-transform:{$constructor['fonts']['description']['transform']};
+    font-family:{$constructor['fonts']['description']['family']};
+    font-size:{$constructor['fonts']['description']['size']}px;
+    line-height:{$constructor['fonts']['description']['size']}px;
+    font-weight:{$constructor['fonts']['description']['weight']};
+    color:{$constructor['fonts']['description']['color']};
+    text-transform:{$constructor['fonts']['description']['transform']};
 CSS;
 
 $body_font = <<<CSS
-font-family:{$constructor['fonts']['content']['family']};
+    font-family:{$constructor['fonts']['content']['family']};
 CSS;
 
 $header_font = <<<CSS
-font-family:{$constructor['fonts']['header']['family']};
+    font-family:{$constructor['fonts']['header']['family']};
 CSS;
 
 $content_font = <<<CSS
-font-family:{$constructor['fonts']['content']['family']};
+    font-family:{$constructor['fonts']['content']['family']};
 CSS;
 
 /*/Fonts*/
@@ -130,8 +135,7 @@ CSS;
         $opacity = <<<CSS
 .opacity {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBg8AUIMAAAUgBOUWVeTwAAAABJRU5ErkJggg==);
-    background:rgba(0, 0, 0, 0.3);
-    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000);*/   
+    background:rgba(0, 0, 0, 0.3); 
 }
 CSS;
         break;
@@ -140,7 +144,6 @@ CSS;
 .opacity {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYmBgaAAIMAAAjwCD5Hc2/AAAAABJRU5ErkJggg==);
     background:rgba(0, 0, 0, 0.5);
-    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#75000000, endColorstr=#75000000);*/
 }
 CSS;
         break;
@@ -149,7 +152,6 @@ CSS;
 .opacity {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBgOAMQYAAA0QDNW2hbhQAAAABJRU5ErkJggg==);
     background:rgba(0, 0, 0, 0.8);
-    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#90000000, endColorstr=#90000000);*/
 }
 CSS;
         break;
@@ -158,7 +160,6 @@ CSS;
 .opacity {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//vy9AgAEACUkDS4BbGHwAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.3);
-    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50FFFFFF, endColorstr=#50FFFFFF);*/
 }
 CSS;
         break;
@@ -167,7 +168,6 @@ CSS;
 .opacity {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/P///xmAAAMACc0DyzeP8KAAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.8);
-    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#90FFFFFF, endColorstr=#90FFFFFF);*/
 }
 CSS;
         break;
@@ -177,7 +177,6 @@ CSS;
 .opacity {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/v//fyxAgAEACWgDXjXePfkAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.5);
-    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#75FFFFFF, endColorstr=#75FFFFFF);*/
 }
 CSS;
         break;
@@ -315,7 +314,6 @@ CSS;
 
 /* Layout */
 $layout = "";
-$layout_alt = "";
 $layout_fluid = "";
 
 if ($constructor['layout']['fluid']['flag']) {
@@ -335,106 +333,11 @@ CSS;
 $sidebar2 = $sidebar - 4; // 2px - it's borders width
 $extra2   = $extra   - 4;
 
-// switch statement for $sidebar
-switch ($constructor['sidebar']) {
-    case 'left':
-$width2 = $width - ($sidebar + 1); // 1 is border width
-
-$layout = <<<CSS
-#container {
-    width:{$width2}px;
-    margin-left:{$sidebar}px;
-    border-left:1px dotted {$color_border};
-}
-#sidebar {
-    margin-left:-{$width}px !important;
-}
-CSS;
-        break;
-    case 'two':
-$width2 = $width - ($sidebar + $extra + 2); // 2 is borders width
-$layout = <<<CSS
-#container {
-    width:{$width2}px;
-    margin-left:{$extra}px;
-    border-left:1px dotted {$color_border};
-
-    margin-right:{$sidebar}px;
-    border-right:1px dotted {$color_border};
-}
-#sidebar {
-    margin-left:-{$sidebar}px;
-}
-#extra {
-    margin-left:-{$width}px;
-}
-CSS;
-        break;
-    case 'two-right':
-$margin = $sidebar + $extra + 2;
-$width2 = $width - $margin;
-
-$layout = <<<CSS
-#container {
-    width:{$width2}px;
-
-    margin-right:{$margin}px;
-    border-right:1px dotted {$color_border};
-}
-#sidebar {
-    margin-left:-{$margin}px;
-    border-right:1px dotted {$color_border};
-}
-#extra {
-    margin-left:-{$extra}px;
-}
-CSS;
-        break;
-    case 'two-left':
-$margin  = $sidebar + $extra + 2;
-$margin2 = $width - $sidebar;
-$width2  = $width - $margin;
-
-$layout = <<<CSS
-#container {
-    width:{$width2}px;
-    margin-left:{$margin}px;
-    border-left:1px dotted {$color_border};
-}
-#sidebar {
-    margin-left:-{$width}px;
-    border-right:1px dotted {$color_border};
-}
-#extra {
-    margin-left:-{$margin2}px;
-}
-CSS;
-        break;
-    case 'none':
-        $layout = '';
-        break;
-    case 'right':
-    default:
-$width2  = $width - $sidebar;
-$layout = <<<CSS
-#container {
-    width:{$width2}px;
-    margin-right:{$sidebar}px;
-    border-right:1px dotted {$color_border};
-}
-#sidebar {
-    margin-left:-{$sidebar}px;
-}
-CSS;
-        break;
-}
-
-
-// alternative layouts CSS
+// sidebar layouts CSS
 {
 $width2 = $width - ($sidebar + 1); // 1 is border width
 
-$layout_alt .= <<<CSS
+$layout .= <<<CSS
 .layout-left #container {
     width:{$width2}px;
     margin-left:{$sidebar}px;
@@ -448,7 +351,7 @@ CSS;
 
 $width2 = $width - ($sidebar + $extra + 2); // 2 is borders width
 
-$layout_alt .= <<<CSS
+$layout .= <<<CSS
 .layout-two #container {
     width:{$width2}px;
     margin-left:{$extra}px;
@@ -469,7 +372,7 @@ CSS;
 $margin = $sidebar + $extra + 2;
 $width2 = $width - $margin;
 
-$layout_alt .= <<<CSS
+$layout .= <<<CSS
 .layout-two-right #container {
     width:{$width2}px;
 
@@ -488,7 +391,7 @@ CSS;
 
 $margin2 = $width - $sidebar;
 
-$layout_alt .= <<<CSS
+$layout .= <<<CSS
 .layout-two-left #container {
     width:{$width2}px;
     margin-left:{$margin}px;
@@ -505,7 +408,7 @@ $layout_alt .= <<<CSS
 CSS;
 
 $width2  = $width - $sidebar;
-$layout_alt .= <<<CSS
+$layout .= <<<CSS
 .layout-right #container {
     width:{$width2}px;
     margin-right:{$sidebar}px;
@@ -517,94 +420,53 @@ $layout_alt .= <<<CSS
 CSS;
 }
 
+{
+$layout .= <<<CSS
+.layout-none #container {
+    border:0;
+    margin:0;
+    width:{$width}px !important
+}
+CSS;
+}
+
+function constructor_css_bg($section) {
+    global $constructor, $template_uri;
+    $css = "";
+    if (isset($constructor['images'][$section]['src']) && !empty($constructor['images'][$section]['src'])) {
+        $css = "background-image: url('{$template_uri}/{$constructor['images'][$section]['src']}');\n"
+             . "background-repeat: {$constructor['images'][$section]['repeat']};\n"
+             . "background-position: {$constructor['images'][$section]['pos']};\n";
+        if (isset($constructor['images'][$section]['fixed']) && $constructor['images'][$section]['fixed']) {
+            $css .= "background-attachment:fixed;\n";
+        }
+    }
+    
+    return $css;
+}
+
 /* Background images */
-if (isset($constructor['images']['body']['src']) && !empty($constructor['images']['body']['src'])) {
-    
-    // required for back compatibility
-    /*
-    if (false === strpos($constructor['images']['body']['src'], 'http://')) {
-        $image = $template_uri .'/'. $constructor['images']['body']['src'];
-    } else {
-        $image = $constructor['images']['body']['src'];
-    }
-    */
-    
-    $body_bg = "background-image: url('{$template_uri}/{$constructor['images']['body']['src']}');\n"
-             . "background-repeat: {$constructor['images']['body']['repeat']};\n"
-             . "background-position: {$constructor['images']['body']['pos']};\n";
-	if (isset($constructor['images']['body']['fixed']) && $constructor['images']['body']['fixed']) {
-    	$body_bg .= "background-attachment:fixed;\n";
-    }
-} else { $body_bg = null; }
-
-if (isset($constructor['images']['wrap']['src']) && !empty($constructor['images']['wrap']['src'])) {
-    $wrap_bg = "background-image: url('{$template_uri}/{$constructor['images']['wrap']['src']}');\n"
-             . "background-repeat: {$constructor['images']['wrap']['repeat']};\n"
-             . "background-position: {$constructor['images']['wrap']['pos']};\n";
-    if (isset($constructor['images']['wrap']['fixed']) && $constructor['images']['wrap']['fixed']) {
-    	$wrap_bg .= "background-attachment:fixed;\n";
-    }
-} else { $wrap_bg = null; }
-
-if (isset($constructor['images']['wrapper']['src']) && !empty($constructor['images']['wrapper']['src'])) {
-    $wrapper_bg = "background-image: url('{$template_uri}/{$constructor['images']['wrapper']['src']}');\n"
-	            . "background-repeat: {$constructor['images']['wrapper']['repeat']};\n"
-	            . "background-position: {$constructor['images']['wrapper']['pos']};\n";
-} else { $wrapper_bg = null; }
-
-if (isset($constructor['images']['header']['src']) && !empty($constructor['images']['header']['src'])) {
-    $header_bg = "background-image: url('{$template_uri}/{$constructor['images']['header']['src']}');\n"
-               . "background-repeat: {$constructor['images']['header']['repeat']};\n"
-               . "background-position: {$constructor['images']['header']['pos']};\n";
-} else { $header_bg = null; }
-
-if (isset($constructor['images']['sidebar']['src']) && !empty($constructor['images']['sidebar']['src'])) {
-    $sidebar_bg = "background-image: url('{$template_uri}/{$constructor['images']['sidebar']['src']}');\n"
-                . "background-repeat: {$constructor['images']['sidebar']['repeat']};\n"
-                . "background-position: {$constructor['images']['sidebar']['pos']};\n";
-} else { $sidebar_bg = null; }
-
-if (isset($constructor['images']['extrabar']['src']) && !empty($constructor['images']['extrabar']['src'])) {
-    $extrabar_bg = "background-image: url('{$template_uri}/{$constructor['images']['extrabar']['src']}');\n"
-                 . "background-repeat: {$constructor['images']['extrabar']['repeat']};\n"
-                 . "background-position: {$constructor['images']['extrabar']['pos']};\n";
-} else { $extrabar_bg = null; }
-
-if (isset($constructor['images']['footer']['src']) && !empty($constructor['images']['footer']['src'])) {
-    $footer_bg = "background-image: url('{$template_uri}/{$constructor['images']['footer']['src']}');\n"
-               . "background-repeat: {$constructor['images']['footer']['repeat']};\n"
-               . "background-position: {$constructor['images']['footer']['pos']};\n";
-} else { $footer_bg = null; }
+$body_bg = constructor_css_bg('body');
+$wrap_bg = constructor_css_bg('wrap');
+$wrapper_bg = constructor_css_bg('wrapper');
+$header_bg = constructor_css_bg('header');
+$sidebar_bg = constructor_css_bg('sidebar');
+$extrabar_bg = constructor_css_bg('extrabar');
+$footer_bg = constructor_css_bg('footer');
 
 /* Wrappers */
-
-if (isset($constructor['images']['wrapheader']['src']) && !empty($constructor['images']['wrapheader']['src'])) {
-    $wrapheader_bg = "background-image: url('{$template_uri}/{$constructor['images']['wrapheader']['src']}');\n"
-                   . "background-repeat: {$constructor['images']['wrapheader']['repeat']};\n"
-                   . "background-position: {$constructor['images']['wrapheader']['pos']};\n";
-} else { $wrapheader_bg = null; }
-
-if (isset($constructor['images']['wrapcontent']['src']) && !empty($constructor['images']['wrapcontent']['src'])) {
-    $wrapcontent_bg = "background-image: url('{$template_uri}/{$constructor['images']['wrapcontent']['src']}');\n"
-                    . "background-repeat: {$constructor['images']['wrapcontent']['repeat']};\n"
-                    . "background-position: {$constructor['images']['wrapcontent']['pos']};\n";
-} else { $wrapcontent_bg = null; }
-
-if (isset($constructor['images']['wrapfooter']['src']) && !empty($constructor['images']['wrapfooter']['src'])) {
-    $wrapfooter_bg = "background-image: url('{$template_uri}/{$constructor['images']['wrapfooter']['src']}');\n"
-                   . "background-repeat: {$constructor['images']['wrapfooter']['repeat']};\n"
-                   . "background-position: {$constructor['images']['wrapfooter']['pos']};\n";
-} else { $wrapfooter_bg = null; }
-
+$wrapheader_bg = constructor_css_bg('wrapheader');
+$wrapcontent_bg = constructor_css_bg('wrapcontent');
+$wrapfooter_bg = constructor_css_bg('wrapfooter');
 
 /* Comments */
 switch ($constructor['comments']['avatar']['pos']) {
     case 'left':
-        $avatar_pos = "float: left;\margin: 0 10px 10px 0;";
+        $avatar_pos = "float: left;\n    margin: 0 10px 10px 0;";
         break;
     case 'right':
     default:
-        $avatar_pos = "float: right;\margin: 0 0 10px 10px;";
+        $avatar_pos = "float: right;\n    margin: 0 0 10px 10px;";
         break;
 }
 
@@ -630,8 +492,8 @@ echo <<<CSS
 {$font_face}
 body {
     background-color:{$color_bg};
-    {$content_font}
-    {$body_bg}
+{$content_font}
+{$body_bg}
 }
 
 body,
@@ -736,11 +598,11 @@ fieldset{
 /*CSS3*/
 ::selection {
     background: {$color1};
-    color:{$color_bg};
+    color:{$color_bg}
 }
 ::-moz-selection {
     background: {$color1};
-    color:{$color_bg};
+    color:{$color_bg}
 }
 {$opacity}
 {$shadow}
@@ -769,12 +631,6 @@ fieldset{
 }
 
 {$layout}
-{$layout_alt}
-    .layout-full #container {
-        border:0;
-        margin:0;
-        width:{$width}px !important
-    }
 
 #sidebar{
     width:{$sidebar2}px;
@@ -798,8 +654,12 @@ fieldset{
 	height: {$constructor['layout']['header']}px;
 	text-align: {$constructor['title']['pos']}
 }
-#header #name a { $title_font }
-#header #description { $description_font }
+#header #name a {
+{$title_font}
+}
+#header #description {
+{$description_font}
+}
 {$title}
 #header #title {
     {$title_align}
@@ -964,12 +824,12 @@ fieldset{
 /*/Footer*/
 /*Buttons*/
 .button, .button:visited {
-	background-color: {$color1};
-	color: {$color_bg};
+    background-color: {$color1};
+    color: {$color_bg};
 }
 .button:hover { 
-	background-color: {$color2};
-	color: {$color_bg2};
+    background-color: {$color2};
+    color: {$color_bg2};
 }
 /*/Buttons*/
 /*Plugins:wp-pagenavi*/

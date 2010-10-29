@@ -10,7 +10,7 @@ Template Name: Monocolumn
 wp_enqueue_script( 'comment-reply' );
 
 get_header(); ?>
-<div id="content" class="box shadow opacity layout-full">
+<div id="content" class="box shadow opacity <?php the_constructor_layout_class('none') ?>">
     <div id="container">
         <div id="posts">
         <?php while (have_posts()) : the_post(); ?>
