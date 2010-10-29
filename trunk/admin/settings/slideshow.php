@@ -37,6 +37,8 @@ $(document).ready(function(){
     <tr>
         <th scope="row" valign="top" rowspan="2"><?php _e('Options', 'constructor'); ?></th>
         <td>
+            <?php _e('By default slideshow is showing on homepage only', 'constructor'); ?>
+            <br/>
             <input type="checkbox" id="constructor-slideshow-onpage" name="constructor[slideshow][onpage]" value="1" <?php if ($constructor['slideshow']['onpage']) echo 'checked="checked"'; ?> />
             <label for="constructor-slideshow-onpage"><?php _e('Show on page', 'constructor')?></label>
             <br/>

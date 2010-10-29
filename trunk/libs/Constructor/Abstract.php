@@ -291,8 +291,7 @@ class Constructor_Abstract
      * @param   array    $data
      * @return  array
      */
-    function _updateAdmin($data = array(
-    ))
+    function _updateAdmin($data = array())
     {
         $this->_admin = $this->_arrayMerge($this->_admin, $data);
 

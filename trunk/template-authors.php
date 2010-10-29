@@ -8,7 +8,7 @@ Template Name: Authors
  */
 
 get_header(); ?>
-<div id="content" class="box shadow opacity">
+<div id="content" class="box shadow opacity <?php the_constructor_layout_class() ?>">
     <div id="container" class="container-authors">
         <div id="posts">
         <?php while (have_posts()) : the_post(); ?>

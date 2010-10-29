@@ -5,7 +5,7 @@
  */
 __('Simple', 'constructor'); // required for correct translation
 ?>
-<div id="content" class="box shadow opacity">
+<div id="content" class="box shadow opacity <?php the_constructor_layout_class() ?>">
     <div id="container" >
     <?php get_constructor_slideshow(true) ?>
     <?php if (have_posts()) : ?>
@@ -18,7 +18,7 @@ __('Simple', 'constructor'); // required for correct translation
                 <div class="entry">
                 	<?php
                         // without "more" link
-                        the_content(__('', 'constructor'));
+                        the_content('');
                     ?>
                 </div>
                 <div class="footer"></div>
