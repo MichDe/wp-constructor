@@ -1,7 +1,7 @@
 #summary Create custom layout
 #labels Featured,Phase-Implementation
 
-For create custom layout (different of default/list/tile) you should be create new file in folder /constructor/layouts. For example - mylayout.php:
+For create custom layout (different of default/list/tile) you should be create new file in folder `/constructor/layouts`. For example - *mylayout.php*:
 
 {{{
 <?php 
@@ -33,14 +33,16 @@ __('Mylayout', 'constructor'); // requeried for correct translation
 </div><!-- id='content' -->
 }}}
 
-Image with name layout-mylayout.png (300x200px) put to folder /constructor/admin/images
+Image with name *layout-mylayout.png* (300x200px) put to folder `/constructor/admin/images`
 
-For use custom sidebars position (example with two sidebars):
+For use custom sidebars position you can write next code (don't forget write *layout-two* class in div with `id="content"`).
+
+Example with two sidebars:
 {{{
 <?php 
 // required class with sidebars position
 // one of:
-//  - layout-full
+//  - layout-none
 //  - layout-right
 //  - layout-left
 //  - layout-two
