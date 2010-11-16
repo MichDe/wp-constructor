@@ -2,7 +2,7 @@
 Theme Name: Constructor
 Theme URI: http://code.google.com/p/wp-constructor/
 Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 3.0+
-Version: 1.3.0
+Version: 1.3.1
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -92,6 +92,10 @@ div.aligncenter {
 .current_page_parent {}
 .blogroll {}
 .linkcat{}
+
+.wp-caption {}
+.wp-caption-text {}
+.gallery-caption {}
 /*/Autogenerate styles*/
 
 
@@ -306,6 +310,7 @@ div.aligncenter {
 .hentry .title, .pagetitle {
     margin-bottom: 8px
 }
+
 .hentry .entry {
     font-size:1.4em;
     line-height:1.6em;
@@ -384,6 +389,11 @@ div.aligncenter {
 	border:0;
 	padding:0;
 }
+
+.sticky {
+
+}
+
 /*Attachments*/
 .attachment-list {
     
@@ -706,25 +716,21 @@ td {
 .commentlist {
     text-align: justify
 }
-
 .commentlist li {
     margin: 0 0 10px 0;
     padding: 5px 5px 10px 10px;
     list-style: none;
     clear:both;
 }
-
 .commentlist ul {
     clear:both
 }
 .commentlist ul.children{
     margin-top:10px;
 }
-
-.commentlist li li { 
+.commentlist li li {
     margin: 0 -4px 1px 0
 }
-
 .commentlist li .avatar { 
     float: right;
     padding: 2px;
@@ -740,9 +746,9 @@ td {
     font-size:1.2em;
     margin: 10px 5px 10px 0
 }
-.children { padding: 0 }
-
-
+.children {
+    padding: 0
+}
 .nocomments {
     text-align: center;
 }
@@ -753,7 +759,6 @@ td {
 .comment-meta a:hover{
     border:0 !important
 }
-
 .reply {
     clear:both;
 }

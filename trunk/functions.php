@@ -38,7 +38,7 @@ if (function_exists('add_theme_support')) { // Added in 2.9
 }
 
 // sidebar registration
-if ( function_exists('register_sidebar') ) {
+if (function_exists('register_sidebar')) {
 
     register_sidebar(array(
         'id'=>'header',
@@ -154,7 +154,15 @@ if (!is_admin()) {
     
     $main = new Constructor_Main();
     $main -> init();
-    
+
+    /**
+     * It's really bad practices, don't use globals
+     * You should be create setter for this is function
+     */
+    if (!isset($content_width)) {
+        $content_width = $main->_options['layout']['width'];
+    }
+
     /* Alias section for fast theme development */    
     /**
      * get_constructor_slideshow

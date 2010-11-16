@@ -465,10 +465,12 @@ $wrapfooter_bg = constructor_css_bg('wrapfooter');
 switch ($constructor['comments']['avatar']['pos']) {
     case 'left':
         $avatar_pos = "float: left;\n    margin: 0 10px 10px 0;";
+        $avatar_author = "float: right !important;\n    margin: 0 0 10px 10px !important;";
         break;
     case 'right':
     default:
         $avatar_pos = "float: right;\n    margin: 0 0 10px 10px;";
+        $avatar_author = "float: left !important;\n    margin: 0 10px 10px 0 !important;";
         break;
 }
 
@@ -698,6 +700,12 @@ fieldset{
    border: 1px solid {$color_border};
    background-color: {$color_bg2};
 }
+.wp-caption-text {
+   color:{$color_text};
+}
+.gallery-caption {
+   color:{$color_text};
+}
 /*/Images*/
 /*Calendar*/
 #wp-calendar th {
@@ -817,6 +825,9 @@ fieldset{
 }
 .comment-meta a{
     color:{$color_text2}
+}
+.bypostauthor .avatar{
+    {$avatar_author}
 }
 /*/Comments*/
 /*Footer*/
