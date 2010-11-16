@@ -18,6 +18,7 @@ class Constructor_Abstract
             'width' => 1024, // container width
             'sidebar' => 240, // sidebar width
             'extra' => 240, // extrabar  width
+            // @TODO: it's really hard for current theme structure
             'fluid' => array(
                 'flag' => false,
                 'width' => 80, // in %
@@ -181,15 +182,12 @@ class Constructor_Abstract
         ),
     );
 
-
     /**
      * Options by key "constructor"
      *
      * @var array
      */
-    var $_options = array(
-    );
-
+    var $_options = array();
 
     /**
      * Options by key "constructor_admin"

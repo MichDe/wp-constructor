@@ -25,9 +25,9 @@
             <?php get_constructor_menu() ?>
             <div id="title">
 				<?php if (is_home() || is_front_page()) { ?>
-					<h1 id="name"><a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); echo " &raquo; "; bloginfo('description');?>"><?php bloginfo('name'); ?></a></h1>
+					<h1 id="name"><a href="<?php echo home_url(); ?>/" title="<?php bloginfo('name'); echo " &raquo; "; bloginfo('description');?>"><?php bloginfo('name'); ?></a></h1>
 				<?php } else { ?>	
-					<div id="name"><a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); echo " &raquo; "; bloginfo('description');?>"><?php bloginfo('name'); ?></a></div>
+					<div id="name"><a href="<?php echo home_url(); ?>/" title="<?php bloginfo('name'); echo " &raquo; "; bloginfo('description');?>"><?php bloginfo('name'); ?></a></div>
 				<?php } ?>
                 <div id="description"><?php bloginfo('description');?></div>
             </div>

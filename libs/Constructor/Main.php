@@ -45,7 +45,7 @@ class Constructor_Main extends Constructor_Abstract
         if (file_exists(CONSTRUCTOR_DIRECTORY .'/cache/style'.$blog_id.'.css')) {
             wp_enqueue_style('constructor-style',   CONSTRUCTOR_DIRECTORY_URI .'/cache/style'.$blog_id.'.css');
         } else {
-            wp_enqueue_style('constructor-style', get_option('home').'/?theme-constructor=css');
+            wp_enqueue_style('constructor-style', home_url().'/?theme-constructor=css');
         }
         
         // load constructor subtheme style
