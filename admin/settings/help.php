@@ -8,7 +8,11 @@
 		    <li><?php _e('Project Homepage', 'constructor'); ?>: <a href="http://code.google.com/p/wp-constructor/">Wp-Constructor</a></li>
 		    <li><?php _e('Author Homepage', 'constructor'); ?>: <a href="http://anton.shevchuk.name">Anton Shevchuk</a></li>
 		</ul>
-		
+
+        <h3><?php _e('Update Theme', 'constructor'); ?></h3>
+        <p><?php _e('Before update &laquo;Constructor theme&raquo; you should be save all your changes and download your theme to computer,
+         because wordpress cleans theme folder before install new version', 'constructor'); ?></p>
+
 		<h3><?php _e('Related Links', 'constructor'); ?></h3>
 		<ul>  
 		    <li><a href="http://wordpress.org/tags/constructor">Forum Topics on Wordpress.org</a></li>
