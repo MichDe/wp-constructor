@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-16 12:25+0200\n"
-"PO-Revision-Date: 2010-09-16 12:27+0200\n"
+"POT-Creation-Date: 2010-11-16 11:31+0200\n"
+"PO-Revision-Date: 2010-11-16 11:36+0200\n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -134,7 +134,7 @@ msgstr "Извините, но того, что вы ищете, здесь не
 msgid "Header Menu"
 msgstr "Меню в шапке сайта"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/functions.php:242
+#: W:/www/wordpress3/wp-content/themes/constructor/functions.php:256
 msgid "No Image"
 msgstr "Без Изображения"
 
@@ -209,6 +209,10 @@ msgstr "%1$s работает на %2$s"
 #: W:/www/wordpress3/wp-content/themes/constructor/themes/example/config.php:25
 msgid "Constructor Theme"
 msgstr "Конструктор"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/layouts/simple.php:6
+msgid "Simple"
+msgstr "Простенький"
 
 #: W:/www/wordpress3/wp-content/themes/constructor/layouts/single.php:6
 #: W:/www/wordpress3/wp-content/themes/constructor/layouts/page.php:6
@@ -506,71 +510,75 @@ msgstr "По умлочанию, используются картинки из 
 msgid "Options"
 msgstr "Настройки"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:41
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:40
+msgid "By default slideshow is showing on homepage only"
+msgstr "По умолчание слайдшоу отображается лишь на главной"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:43
 msgid "Show on page"
 msgstr "Отображать на страницах"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:44
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:46
 msgid "Show on single post"
 msgstr "Отображать на страницах с записями"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:47
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:49
 msgid "Show on archive"
 msgstr "Отображать на страницах архива"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:53
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:55
 msgid "Height"
 msgstr "Высота"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:62
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:64
 msgid "Advanced options"
 msgstr "Тонкая настройка"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:63
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:65
 msgid "only for default slideshow"
 msgstr "только для стандартного слайдшоу"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:67
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:69
 msgid "Number of slides"
 msgstr "Количество слайдов"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:71
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:73
 msgid "Autoplay"
 msgstr "Автозапуск"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:74
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:76
 msgid "Effect time (ms)"
 msgstr "Время эффекта (ms)"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:77
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:79
 msgid "Timeout between slides (ms)"
 msgstr "Задержка между слайдами (ms)"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:82
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:84
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:38
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/header.php:75
 msgid "Position"
 msgstr "Расположение"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:84
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:85
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:86
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:87
 msgid "In Content"
 msgstr "Внутри контента"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:88
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:89
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:90
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:91
 msgid "Over Content"
 msgstr "Над контентом"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:100
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:102
 msgid "use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\" title=\"wordpress.org\">NextGEN-Gallery</a>"
 msgstr "использует <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\" title=\"wordpress.org\">NextGEN-Gallery</a>"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:101
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:103
 msgid "required <a href=\"http://www.longtailvideo.com/players/jw-image-rotator/\" title=\"www.longtailvideo.com\">imagerotator.swf</a>"
 msgstr "требует <a href=\"http://www.longtailvideo.com/players/jw-image-rotator/\" title=\"www.longtailvideo.com\">imagerotator.swf</a>"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:119
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:121
 msgid "You can use <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a> plugin for build custom slideshow"
 msgstr "Можете использовать <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGEN-Gallery</a> плагин для создания слайдшоу из фотографий"
 
@@ -941,18 +949,28 @@ msgid "Author Homepage"
 msgstr "Домашняя страница автора"
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/help.php:12
+msgid "Update Theme"
+msgstr "Обновление Темы"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/help.php:13
+msgid ""
+"Before update &laquo;Constructor theme&raquo; you should be save all your changes and download your theme to computer,\n"
+"         because wordpress cleans theme folder before install new version"
+msgstr "Перед обновлением темы, необходимо сохранить все ваши изменения как свою тему, и сохранить её на своём компьютере. Так как Wordpress перед установкой новой версии очищает директорию темы, то все ваши изменения будут удалены."
+
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/help.php:16
 msgid "Related Links"
 msgstr "Ссылки по теме"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/help.php:23
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/help.php:27
 msgid "Donate"
 msgstr "Пожертвование"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/help.php:25
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/help.php:29
 msgid "You can send your Name and Url for promote on <a href=\"http://donate.hohli.com/\">Donate page</a>"
 msgstr "Вы можете отправить ваше имя и URL сайта, для размещении на <a href=\"http://donate.hohli.com/\">donate</a> страничке"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/help.php:42
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/help.php:46
 msgid "Author works"
 msgstr "Работы автора"
 
@@ -1051,24 +1069,24 @@ msgstr "Нельзя сохранить файл &laquo;%s&raquo;."
 msgid "Theme was saved, please reload page for view changes"
 msgstr "Тема сохранена, обновите страницу пожайлуста"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:186
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:214
 msgid "Home"
 msgstr "Главная"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:352
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:380
 #, php-format
 msgid "%1$s and %2$s."
 msgstr "%1$s и %2$s."
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:352
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:380
 msgid "Entries (RSS)"
 msgstr "Записи (RSS)"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:352
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:380
 msgid "Comments (RSS)"
 msgstr "Комментарии (RSS)"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:356
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:384
 #, php-format
 msgid "%d queries. %s seconds."
 msgstr "%d запросов. %s секунд."
@@ -1083,43 +1101,43 @@ msgstr "Система не смогла создать директорию \"%
 msgid "File \"%s\" is not a image (jpeg, png, gif, tiff)"
 msgstr "Файл &laquo;%s&raquo; не является изображением"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:94
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:97
 #, php-format
 msgid "File \"%s\" can't be move to \"images\" folder"
 msgstr "Не удалось переместить файл &laquo;%s&raquo; в папку &laquo;images&raquo;"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:264
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:273
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:435
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:267
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:276
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:438
 msgid "Customize Theme"
 msgstr "Настройки темы"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:265
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:274
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:268
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:277
 msgid "Customize"
 msgstr "Настройки"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:293
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:296
 msgid "Standart Fonts"
 msgstr "Стандартные шрифты"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:301
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:304
 msgid "Google Fonts"
 msgstr "Шрифты от Google"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:438
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:441
 msgid "If you like this theme and find it useful, help keep this theme free and actively developed by clicking the donate button (via PayPal or CC)"
 msgstr "Если Вам понравилась данная темы, то Вы можете помочь материально."
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:442
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:445
 msgid "Options saved."
 msgstr "Настройки сохранены."
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:446
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:449
 msgid "Some images can't be upload. Please check permissions"
 msgstr "Некоторые картинки не были залиты. Проверьте права доступа."
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:467
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:470
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
