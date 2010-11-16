@@ -1,6 +1,8 @@
 <?php
 /**
  * CSS Generator, please never change this is file, if your not sure what are you doing!
+ *
+ * base64 used for encode transparent images, don't worry about it 
  * 
  * @package WordPress
  * @subpackage Constructor

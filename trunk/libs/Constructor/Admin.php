@@ -89,6 +89,9 @@ class Constructor_Admin extends Constructor_Abstract
                                     }
 
                                     if (move_uploaded_file($files['tmp_name']['images'][$name]['src'], $upload . $image['src'])) {
+                                        // Everything for owner, read and execute for others
+                                        // Use @ it's really bad, but "try {} catch {}" don't work in PHP4
+                                        @chmod($upload . $image['src'], 0755);
                                         $data['images'][$name]['src'] = $path.$image['src'];
                                     } else {
                                         $errors[] = sprintf(__('File "%s" can\'t be move to "images" folder','constructor'), $image['src']);
