@@ -103,7 +103,7 @@ class Constructor_Main extends Constructor_Abstract
     function getDefaultSlideshow($width, $height) 
     {
         $options = $this->_options['slideshow']['advanced'];
-        $options['slideshow'] = get_option('home').'/?theme-constructor=slideshow&w='.$width.'&h='.$height;
+        $options['slideshow'] = home_url().'/?theme-constructor=slideshow&w='.$width.'&h='.$height;
 //        $options['thumbPath'] = CONSTRUCTOR_DIRECTORY_URI."/libs/timthumb.php?src=";
         $options = json_encode($options);
         
@@ -211,7 +211,7 @@ class Constructor_Main extends Constructor_Abstract
             
             // show link to homepage
             if ($this->_options['menu']['home']) {
-                echo '<li id="home"><a href="'.get_option('home').'/" title="'.get_bloginfo('name').'">'.__('Home', 'constructor').'</a></li>';
+                echo '<li id="home"><a href="'.home_url().'/" title="'.get_bloginfo('name').'">'.__('Home', 'constructor').'</a></li>';
             }
             
             // show pages drop-down menu (or as is)
@@ -248,7 +248,7 @@ class Constructor_Main extends Constructor_Abstract
             // show search bar
             if ($this->_options['menu']['search'])  {
                 echo '<li id="menusearchform">
-                          <form method="get" action="' . get_option('home') . '/" >
+                          <form method="get" action="' . home_url() . '/" >
                           <input class="s" type="text" value="' . esc_attr(apply_filters('the_search_query', get_search_query())) . '" name="s"/>
                           
                           </form>
