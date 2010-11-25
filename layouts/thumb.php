@@ -3,20 +3,23 @@
  * @package WordPress
  * @subpackage constructor
  */
-__('Default', 'constructor'); // required for correct translation
+__('Single', 'constructor'); // required for correct translation
 ?>
 <div id="content" class="box shadow opacity <?php the_constructor_layout_class() ?>">
     <div id="container" >
     <?php get_constructor_slideshow(true) ?>
-    <?php if (have_posts()) : $i = 0; ?>
+
+    <?php if (have_posts()) : ?>
         <div id="posts">
-        <?php while (have_posts()) : the_post(); $i++; ?>
+        <?php while (have_posts()) : the_post(); ?>
             <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
                 <div class="title opacity box">
-                    <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
+                    <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1>
                 </div>
                 <div class="entry">
-                	<?php the_content(__('Read the rest of this entry &raquo;', 'constructor')); ?>
+                    <?php echo get_the_post_thumbnail(NULL, 'tile-post-thumbnail', array('class'=>'aligncenter')) ?>
+                    <?php the_content(__('Read the rest of this entry &raquo;', 'constructor')) ?>
+				    <?php wp_link_pages(array('before' => '<p class="pages"><strong>'.__('Pages', 'constructor').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
                 </div>
                 <div class="footer">
                     <div class="links">
@@ -33,12 +36,11 @@ __('Default', 'constructor'); // required for correct translation
                     </div>
                 </div>
             </div>
-            <?php get_constructor_content_widget($i) ?>
         <?php endwhile; ?>
         </div>
         <?php comments_template(); ?>
         <?php get_constructor_navigation(); ?>
     <?php endif; ?>
-    </div>
+    </div><!-- id='container' -->
     <?php get_constructor_sidebar(); ?>
 </div><!-- id='content' -->

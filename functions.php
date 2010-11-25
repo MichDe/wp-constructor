@@ -26,7 +26,7 @@ load_theme_textdomain('constructor', CONSTRUCTOR_DIRECTORY.'/lang');
 if (function_exists('add_theme_support')) { // Added in 2.9
 	// This theme uses post thumbnails
 	add_theme_support('post-thumbnails' );
-	set_post_thumbnail_size( 64, 64, true ); // Normal post thumbnail
+	set_post_thumbnail_size(64, 64, true); // Normal post thumbnail
 	add_image_size('list-post-thumbnail', 128, 128, true );
 	add_image_size('tile-post-thumbnail', 312, 292, true );
 	    
@@ -47,7 +47,7 @@ if (function_exists('register_sidebar')) {
         'after_widget' => '</li>',
         'before_title' => '<span>',
         'after_title' => '</span>',
-    )); 
+    ));
     
     register_sidebar(array(
         'id'=>'content',

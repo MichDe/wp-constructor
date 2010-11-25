@@ -38,10 +38,7 @@ __('Single', 'constructor'); // required for correct translation
         <?php endwhile; ?>
         </div>
         <?php comments_template(); ?>
-        <div class="navigation">
-            <div class="alignleft"><?php previous_post_link('%link', '<span>&laquo;</span> %title') ?></div>
-            <div class="alignright"><?php next_post_link('%link', '%title <span>&raquo;</span>') ?></div>
-        </div>
+        <?php get_constructor_navigation(); ?>
     <?php endif; ?>
     </div><!-- id='container' -->
     <?php get_constructor_sidebar(); ?>

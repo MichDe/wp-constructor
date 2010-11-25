@@ -25,6 +25,7 @@ __('Simple', 'constructor'); // required for correct translation
             </div>
         <?php endwhile; ?>
         </div>
+        <?php comments_template(); ?>
         <?php get_constructor_navigation(); ?>
     <?php endif; ?>
     </div>
