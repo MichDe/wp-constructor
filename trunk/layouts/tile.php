@@ -16,6 +16,7 @@ __('Tile', 'constructor'); // required for correct translation
                     <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
                 </div>
                 <div class="thumbnail">
+                    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>">
                     <?php 
                         // try to found post thubmnail
                         if (!($thumb = get_the_post_thumbnail(NULL, 'tile-post-thumbnail'))) {
@@ -23,6 +24,7 @@ __('Tile', 'constructor'); // required for correct translation
                         } 
                         echo $thumb;    
                     ?>
+                    </a>
                 </div>
                 <div class="links opacity">
                     <div class="date"><?php the_date() ?></div>

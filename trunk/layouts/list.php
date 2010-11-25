@@ -29,6 +29,7 @@ __('List', 'constructor'); // required for correct translation
         <?php get_constructor_content_widget($i) ?>
         <?php endwhile; ?>
         </div>
+        <?php comments_template(); ?>
         <?php get_constructor_navigation(); ?>
     <?php endif; ?>
     </div>
