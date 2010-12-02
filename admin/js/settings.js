@@ -109,9 +109,9 @@ $(document).ready(function(){
  * @param {String} name
  */
 function name2id(name) {
-    var name = name.replace(/\]\[/,'-');
-        name = name.replace(/\[/,'-');
-        name = name.replace(/\]/,'');
+    name = name.replace(/\]\[/,'-');
+    name = name.replace(/\[/,'-');
+    name = name.replace(/\]/,'');
     return name;  
 }
 
@@ -127,4 +127,16 @@ function initColorPicker(el) {
     .bind('keyup', function(){
         jQuery(this).ColorPickerSetColor(this.value);
     });
+}
+
+Array.prototype.indexOf = function(obj) {
+  for (var i = 0; i < this.length; i++) {
+    if (this[i] == obj)
+      return i;
+  }
+  return -1;
+}
+
+Array.prototype.has = function(obj) {
+  return this.indexOf(obj) >= 0;
 }

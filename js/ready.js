@@ -62,7 +62,18 @@
 				play: true
 			});
 		}
-		
+
+        // Tiles - small tile layout
+        $('.tiles').hover(function(){
+           $(this).find('.thumbnail').hide();
+           $(this).find('.announce').fadeIn();
+        }, function(){
+           var $self = $(this);
+           $self.find('.announce').fadeOut(function(){
+               $self.find('.thumbnail').show();
+           });
+        });
+
 		// No underline for a with img
 		$('a:has(img)').css({border:0});
     });

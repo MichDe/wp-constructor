@@ -303,12 +303,24 @@ class Constructor_Admin extends Constructor_Abstract
         $font_face = require CONSTRUCTOR_DIRECTORY . '/admin/font-face.php';
         echo "<optgroup label='".__('Google Fonts', 'constructor')."'>";
         foreach ($font_face as $i => $font) :
-        ?>
-            <option value="<?php echo $k+$i ?>" <?php if ($font == $constructor['fonts'][$key]['family']) echo 'selected="selected"'; ?>><?php echo $font ?></option>
-        <?php
+            if ($font == $constructor['fonts'][$key]['family']) :
+                $loadFont = $font;
+            ?>
+                <option class="webfonts" value="<?php echo $k+$i ?>" selected="selected"><?php echo $font ?></option>
+            <?php
+            else:
+            ?>
+                <option class="webfonts" value="<?php echo $k+$i ?>"><?php echo $font ?></option>
+            <?php
+            endif;
         endforeach;
         echo "</optgroup>";
         echo "</select>";
+        if (isset($loadFont)) {
+            ?>
+                <script type="text/javascript">loadFont('<?php echo $loadFont ?>');</script>
+            <?php
+        }
     }
     
     /**

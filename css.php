@@ -477,11 +477,11 @@ switch ($constructor['comments']['avatar']['pos']) {
 /* Header */
 if ($constructor['title']['hidden']) {
     $title = <<<CSS
-#header #name a, #header #description {
-    font-size:0;
+#name a, #description {
+    font-size:0px;
     text-indent:-9000px;
 }
-#header #name a {
+#name a {
     display:block;
     height:100%;
 }

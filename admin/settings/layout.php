@@ -1,85 +1,98 @@
-<?php __('Layout', 'constructor'); // required for correct translation
-$layouts = scandir(CONSTRUCTOR_DIRECTORY.'/layouts/');
-$layouts = array_diff($layouts, array( '.','..','.svn','.htaccess','readme.txt'));
+<?php __('Layout', 'constructor'); // required for correct translation ?>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function($){
+$(document).ready(function(){
+    $("#constructor-layout-width-slider").slider({
+        range: "min",
+        value: <?php echo (int)$constructor['layout']['width']?>,
+        min: 640,
+        max: 1280,
+        step:8,
+        slide: function(event, ui) {
+            $("#constructor-layout-width").val(ui.value);
+        }
+    });
 
-function is_php($file) {
-    $info = pathinfo($file);
-    return ($info['extension'] == 'php');
-}
-$layouts = array_filter($layouts, 'is_php');
-?>
+    $("#constructor-layout-sidebar-slider").slider({
+        range: "min",
+        value: <?php echo (int)$constructor['layout']['sidebar']?>,
+        min: 160,
+        max: 420,
+        step:8,
+        slide: function(event, ui) {
+            $("#constructor-layout-sidebar").val(ui.value);
+        }
+    });
 
+
+    $("#constructor-layout-extra-slider").slider({
+        range: "min",
+        value: <?php echo (int)$constructor['layout']['extra']?>,
+        min: 160,
+        max: 420,
+        step:8,
+        slide: function(event, ui) {
+            $("#constructor-layout-extra").val(ui.value);
+        }
+    });
+});
+})(jQuery);
+/* ]]> */
+</script>
+<input type="hidden" id="constructor-sidebar" name="constructor[sidebar]" value="<?php echo $constructor['sidebar']?>"/>
 <table class="form-table">
-    <tr>
-        <td>
-            
-        <div class="constructor-accordion">
-            <h3><a href="#"><?php _e('Homepage', 'constructor')?></a></h3>
-            <div class="select" id="layout-home"><?php constructor_admin_layout($layouts, 'home'); ?></div>
-            <h3><a href="#"><?php _e('Post', 'constructor')?></a></h3>
-            <div class="select" id="layout-single"><?php constructor_admin_layout($layouts, 'single'); ?></div>
-            <h3><a href="#"><?php _e('Page', 'constructor')?></a></h3>
-            <div class="select" id="layout-page"><?php constructor_admin_layout($layouts, 'page'); ?></div>
-            <h3><a href="#"><?php _e('Search', 'constructor')?></a></h3>
-            <div class="select" id="layout-search"><?php constructor_admin_layout($layouts, 'search'); ?></div>        
-            <h3><a href="#"><?php _e('Date', 'constructor')?></a></h3>
-            <div class="select" id="layout-date"><?php constructor_admin_layout($layouts, 'date'); ?></div>
-            <h3><a href="#"><?php _e('Category', 'constructor')?></a></h3>
-            <div class="select" id="layout-category"><?php constructor_admin_layout($layouts, 'category'); ?></div>
-            <h3><a href="#"><?php _e('Tag', 'constructor')?></a></h3>
-            <div class="select" id="layout-tag"><?php constructor_admin_layout($layouts, 'tag'); ?></div>
-        </div>
-
+<tr>
+	<tr>
+	    <th rowspan="3"><?php _e('Width', 'constructor')?></th>
+        <td class="slider">
+            <p>
+                <label for="constructor-layout-width"><?php _e('Container Width', 'constructor'); ?>:</label>
+                <input type="text" id="constructor-layout-width" name="constructor[layout][width]" value="<?php echo $constructor['layout']['width']?>" style="border:0; color:#21759B; font-weight:bold; width:42px" /> px
+            </p>
+            <div id="constructor-layout-width-slider"  style="width:600px;"></div>
         </td>
-        <td valign="top" class="updated quick-links" width="240px">
-            <h3><?php _e('Help', 'constructor'); ?></h3>
-            <a href="http://code.google.com/p/wp-constructor/wiki/ConstructorLayouts" title="Create custom layout">Create custom layout</a>
-            <br/><br/>
-            <dl>
-                <dt><?php _e('Homepage', 'constructor')?></dt>
-                <dd>http://domain.com</dd>
-                <dt><?php _e('Post', 'constructor')?></dt>
-                <dd>http://domain.com/?p=123<br/> http://domain.com/the_post_title/</dd>
-                <dt><?php _e('Page', 'constructor')?></dt>
-                <dd>http://domain.com/?page_id=123<br/> http://domain.com/the_page_title/</dd>
-                <dt><?php _e('Search', 'constructor')?></dt>
-                <dd>http://domain.com/?s=search%20string</dd>                
-                <dt><?php _e('Date', 'constructor')?></dt>
-                <dd>http://domain.com/?m=2010<br/> http://domain.com/2010/05</dd>
-                <dt><?php _e('Category', 'constructor')?></dt>
-                <dd>http://domain.com/?cat=12<br/> http://domain.com/category/name</dd>
-                <dt><?php _e('Tag', 'constructor')?></dt>
-                <dd>http://domain.com/?tag=name<br/> http://domain.com/tag/name</dd>
-            </dl>
-            
-            
-        </td>
-    </tr>
-</table>
-    
-<?php       
-/**
- * Return string for build options
- *
- * @param  array  $layouts
- * @param  string $key
- * @return string
- */
-function constructor_admin_layout($layouts, $key) 
-{
-    global $constructor;
-    ?>    
-    <input type="hidden" id="constructor-layout-<?php echo $key ?>" name="constructor[layout][<?php echo $key ?>]" value="<?php echo $constructor['layout'][$key]?>"/>
-    <?php
-    foreach ($layouts as $layout) {
-        $info = pathinfo($layout);
-        $name = substr($info['basename'], 0, -4);
-        $title = ucfirst(strtolower($name));
-        ?>
-        <a href="#" title="<?php echo esc_attr(__($title, 'constructor')); ?>" name="<?php echo $name; ?>" <?php if($constructor['layout'][$key] == $name) echo 'class="selected"'; ?>>
-            <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/layout-<?php echo $name; ?>.png" alt="<?php echo esc_attr(__($title, 'constructor')); ?>" />
+	</tr>
+	<tr>
+	    <td class="slider">
+	        <p>
+	            <label for="constructor-layout-sidebar"><?php _e('Sidebar Width', 'constructor'); ?>:</label>
+	            <input type="text" id="constructor-layout-sidebar" name="constructor[layout][sidebar]" value="<?php echo $constructor['layout']['sidebar']?>" style="border:0; color:#21759B; font-weight:bold; width:42px" /> px
+	        </p>
+	        <div id="constructor-layout-sidebar-slider"  style="width:600px;"></div>
+	    </td>
+	</tr>
+	<tr>
+	    <td class="slider">
+	        <p>
+	            <label for="constructor-layout-extra"><?php _e('Extra Bar Width', 'constructor'); ?>:</label>
+	            <input type="text" id="constructor-layout-extra" name="constructor[layout][extra]" value="<?php echo $constructor['layout']['extra']?>" style="border:0; color:#21759B; font-weight:bold; width:42px" /> px
+	        </p>
+	        <div id="constructor-layout-extra-slider"  style="width:600px;"></div>
+	    </td>
+	</tr>
+    <th scope="row" valign="top"><?php _e('Sidebar', 'constructor'); ?></th>
+    <td class="select" id="sidebar">
+        <a href="#" title="<?php echo esc_attr(__('Left', 'constructor')); ?>" name="left" <?php if($constructor['sidebar'] == 'left') echo 'class="selected"'; ?>>
+            <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/sidebar-left.png" alt="<?php echo esc_attr(__('Left', 'constructor')); ?>" />
         </a>
-        <?php
-    }
-}
-?>
+        <a href="#" title="<?php echo esc_attr(__('Right', 'constructor')); ?>" name="right" <?php if($constructor['sidebar'] == 'right') echo 'class="selected"'; ?>>
+            <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/sidebar-right.png" alt="<?php echo esc_attr(__('Right', 'constructor')); ?>" />
+        </a>
+        <br class="clear"/>
+        <a href="#" title="<?php echo esc_attr(__('Two', 'constructor')); ?>" name="two" <?php if($constructor['sidebar'] == 'two') echo 'class="selected"'; ?>>
+            <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/sidebar-two.png" alt="<?php echo esc_attr(__('Two', 'constructor')); ?>" />
+        </a>
+        <a href="#" title="<?php echo esc_attr(__('None', 'constructor')); ?>" name="none" <?php if($constructor['sidebar'] == 'none') echo 'class="selected"'; ?>>
+            <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/sidebar-none.png" alt="<?php echo esc_attr(__('None', 'constructor')); ?>" />
+        </a>
+        <br class="clear"/>
+        <a href="#" title="<?php echo esc_attr(__('Two Right', 'constructor')); ?>" name="two-right" <?php if($constructor['sidebar'] == 'two-right') echo 'class="selected"'; ?>>
+            <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/sidebar-two-right.png" alt="<?php echo esc_attr(__('Two Right', 'constructor')); ?>" />
+        </a>
+        <a href="#" title="<?php echo esc_attr(__('Two Left', 'constructor')); ?>" name="two-left" <?php if($constructor['sidebar'] == 'two-left') echo 'class="selected"'; ?>>
+            <img src="<?php echo CONSTRUCTOR_DIRECTORY_URI ?>/admin/images/sidebar-two-left.png" alt="<?php echo esc_attr(__('Two Left', 'constructor')); ?>" />
+        </a>
+    </td>
+</tr>
+</table>
