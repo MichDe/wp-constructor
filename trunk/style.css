@@ -131,18 +131,19 @@ div.aligncenter {
 #header {
     position: relative
 }
-	#header #title {
+	#title {
 	    position:absolute;
 	    display:block;
 	    width:100%;
 	    text-transform: uppercase;
 	    margin:0 auto
 	}
-	#header #name {
+	#name {
+        height:100%;
 	    margin:0;
 	    padding:0;
 	}
-	#header #description {
+	#description {
 	    display:block;
 	    margin:0;
 	    padding:0 8px;
@@ -182,9 +183,7 @@ div.aligncenter {
 
 #menu li.indicator {
     cursor:pointer;
-	background-image: url('images/arrows.png');
-	background-repeat: no-repeat;
-	background-position: 98% -106px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+	background: url('images/arrows.png') no-repeat 98% -106px; /* 8-bit indexed alpha png. IE6 gets solid image only */
 }
 	#menu li:hover.indicator    { background-position: 98% -161px }
 	#menu li li.indicator       { background-position: 98%    6px }
@@ -192,13 +191,13 @@ div.aligncenter {
 
 #menu ul ul {
     top:40px;
-    left:0px;
+    left:0;
     position:absolute;
-    zoom: 1;
+    zoom:1;
 	display:none;
 	height:auto;
     min-width:122px;
-    width:auto !important;
+    width:auto !important; /*IE fix*/
     width:122px;
     margin-left:-1px !important;
     border-style:dotted none none none !important;
@@ -227,7 +226,7 @@ div.aligncenter {
     padding:0 8px;
     font-weight:700 !important;
     min-width:104px;
-    width:auto !important;
+    width:auto !important; /*IE fix*/
     width:104px;
     height:40px;
     line-height:40px
@@ -237,16 +236,14 @@ div.aligncenter {
     text-align:left;
     padding:0 24px 0 16px;
 	min-width:80px;
-    width:auto !important;
+    width:auto !important; /*IE fix*/
     width:80px;
     border:0
 }
 
 #rss a {
     text-indent:16px;
-    background-image:url('images/feed-icon-16x16.png');
-    background-repeat:no-repeat;
-    background-position:8px 50%;
+    background:url('images/feed-icon-16x16.png') no-repeat 8px 50%;
 }
 /*/Header*/
 /*Sidebar*/
@@ -511,6 +508,38 @@ div.aligncenter {
     height:14px;
 }
 /*/Tile*/
+/*Tiles*/
+.tiles {
+    overflow:hidden;
+    clear:none;
+    position:relative;
+    width:128px;
+    height:128px;
+    float:left;
+    margin:0 6px 10px 6px;
+}
+.tile .thumbnail {
+    width:128px;
+    height:128px;
+}
+.tiles .announce {
+    display:none;
+    width:128px;
+    height:128px;
+}
+    .tiles .announce a{
+        display:block;
+        margin:4px;
+        width:128px;
+        height:128px;
+        font-size:1.4em;
+    }
+    .tiles .announce span{
+        display:block;
+        margin:0 0 4px 0;
+        font-size:0.8em;
+    }
+/*/Tiles*/
 /*List*/
 .list {
 
@@ -526,7 +555,7 @@ div.aligncenter {
 }
 .list .title h2 {
 	background-image:url(images/alert-overlay.png);
-	background-repeat: repeat-x; 
+	background-repeat:repeat-x;
 }
 .list .title h2 a {
     padding:6px 12px;
@@ -568,7 +597,7 @@ div.aligncenter {
 /*Widgets*/
 .widget {}
 .widget h3 {
-    padding:0 4px 0px 8px;
+    padding:0 4px 0 8px;
     line-height:2em
 }
 .widget a:hover{
@@ -664,9 +693,7 @@ div.aligncenter {
 	font-size: 24px;
 	padding-left:28px;
 	width: 96px;
-    background-image: url(images/lens.png);
-	background-position: 4px 8px;
-	background-repeat: no-repeat;
+    background: url(images/lens.png) 4px 8px no-repeat;
 }
 /*/Search*/
 /*Form*/

@@ -4,22 +4,38 @@
  * @subpackage Constructor
  */
 return array(
-    'Cantarell', // Regular   Italic   Bold   Bold Italic
-    'Cardo',     // 
+    'Allerta',
+    '"Allerta Stencil"',
+    'Arimo', // Regular / Italic / Bold / Bold Italic
+    'Arvo', // Regular / Italic / Bold / Bold Italic
+    'Bentham',
+    'Cantarell', // Regular / Italic / Bold / Bold Italic
+    'Cardo',
+    'Cousine', // Regular / Italic / Bold / Bold Italic
     'Crimson',
-    '"Droid Sans",sans-serif',      // Regular   Bold
-    '"Droid Sans Mono",monospace',
-    '"Droid Serif",serif',
+    'Cuprum',
+    '"Droid Sans"',      // Regular / Bold
+    '"Droid Sans Mono"',
+    '"Droid Serif"',
+    'Geo',
     '"IM Fell"',
     'Inconsolata',
-    '"Josefin Sans Std Light"',
+    '"Josefin Sans"',
+    '"Josefin Slab"',
     'Lobster',
     'Molengo',
+    'Neucha',
+    'Neuton',
     'Nobile',
     '"OFL Sorts Mill Goudy TT"',
     '"Old Standard TT"',
+    '"PT Sans"',
+    'Philosopher',
+    'Puritan',
     '"Reenie Beanie"',
     'Tangerine',
+    'Tinos',
+    'UnifrakturMaguntia',
     'Vollkorn',
     '"Yanone Kaffeesatz"',
 );

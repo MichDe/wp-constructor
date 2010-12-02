@@ -20,7 +20,7 @@ if (version_compare(phpversion(), '5.0.0', '<')) {
 $constructor_modules = array(
     __('Themes',  'constructor') => 'themes',
     __('Layout',  'constructor') => 'layout',
-    __('Sidebar', 'constructor') => 'sidebar',
+    __('Templates', 'constructor') => 'templates',
     __('Header',  'constructor') => 'header',
     __('Content', 'constructor') => 'content',
     __('Comments','constructor') => 'comments',
