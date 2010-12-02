@@ -27,14 +27,14 @@ Author URI: http://anton.shevchuk.name/
     height:30px;
     line-height:30px;
     font-size:1.2em;
-    background: url(images/menu.jpg) no-repeat right 1px;
+    background: url(menu.jpg) no-repeat right 1px;
 }
 #menu ul.menu > li > a{
     text-transform:uppercase;
 }
 #menu ul ul {
-    border:0 !important;
     top:30px;
+    border:0 !important;
 }
 #menu li li a, #menu li li span {
     background-color:#eee;
@@ -45,5 +45,5 @@ Author URI: http://anton.shevchuk.name/
 }
 
 .title, .sidebar h3 {
-    background: url(images/divider.jpg) repeat-x left bottom;	
+    background: url(divider.jpg) repeat-x left bottom;
 }
