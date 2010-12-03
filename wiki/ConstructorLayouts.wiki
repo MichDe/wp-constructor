@@ -1,5 +1,7 @@
-#summary Create custom layout
+#summary Create custom layout/template
 #labels Featured,Phase-Implementation
+
+On "Templates" tab you can see default layouts and can choose anyone. But if you want more flexibility you can create new layout, it's easy
 
 For create custom layout (different of default/list/tile) you should be create new file in folder `/constructor/layouts`. For example - *mylayout.php*:
 
