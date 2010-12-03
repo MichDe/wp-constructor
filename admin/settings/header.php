@@ -1,22 +1,5 @@
 <?php __('Header', 'constructor'); // required for correct translation ?>
-<script type="text/javascript">
-/* <![CDATA[ */
-(function($){
-$(document).ready(function(){
-    $("#constructor-layout-header-slider").slider({
-        range: "min",
-        value: <?php echo (int)($constructor['layout']['header'])?>,
-        min: 0,
-        max: 320,
-        step:8,
-        slide: function(event, ui) {
-            $("#constructor-layout-header").val(ui.value);
-        }
-    });
-});
-})(jQuery);
-/* ]]> */
-</script>
+
 <input type="hidden" id="constructor-title-pos" name="constructor[title][pos]" value="<?php echo $constructor['title']['pos']?>"/>
 <input type="hidden" id="constructor-menu-pos" name="constructor[menu][pos]" value="<?php echo $constructor['menu']['pos']?>"/>
 <table class="form-table">
@@ -39,8 +22,7 @@ $(document).ready(function(){
         <a href="#" title="<?php _e('Bottom Left', 'constructor'); ?>" name="left bottom" <?php if($constructor['title']['pos'] == 'left bottom') echo 'class="selected"'; ?>> </a>
         <a href="#" title="<?php _e('Bottom Center', 'constructor'); ?>" name="center bottom" <?php if($constructor['title']['pos'] == 'center bottom') echo 'class="selected"'; ?>> </a>
         <a href="#" title="<?php _e('Bottom Right', 'constructor'); ?>" name="right bottom" <?php if($constructor['title']['pos'] == 'right bottom') echo 'class="selected"'; ?>> </a>
-     
-        
+
     </td>
 </tr>
 <tr>
@@ -48,16 +30,6 @@ $(document).ready(function(){
     <td>
 		<input type="checkbox" id="constructor-title-hidden" name="constructor[title][hidden]" value="1" <?php if ($constructor['title']['hidden']) echo 'checked="checked"'; ?> />
         <label for="constructor-title-hidden"><?php _e('hide title by CSS', 'constructor'); ?></label>
-    </td>
-</tr>
-<tr>
-    <th class="slider">
-    	<?php _e('Header height', 'constructor')?>: 
-	    <input type="text" id="constructor-layout-header" name="constructor[layout][header]" value="<?php echo $constructor['layout']['header']?>" />px
-	</th>
-    <td class="slider">
-    	<br/>
-        <div id="constructor-layout-header-slider"  style="width:200px;"></div>
     </td>
 </tr>
 <tr>

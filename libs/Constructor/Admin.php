@@ -235,7 +235,8 @@ class Constructor_Admin extends Constructor_Abstract
         }
         
         wp_enqueue_script('jquery-ui',               CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery-ui.js', 'jquery');
-            
+        wp_enqueue_script('jquery-layout',           CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.layout.js', 'jquery');
+
         wp_enqueue_script('constructor-colorpicker', CONSTRUCTOR_DIRECTORY_URI .'/admin/js/colorpicker.js', 'jquery');
         wp_enqueue_script('constructor-settings',    CONSTRUCTOR_DIRECTORY_URI .'/admin/js/settings.js', 'jquery');
         wp_enqueue_script('constructor-messages',    CONSTRUCTOR_DIRECTORY_URI .'/admin/js/messages.js', 'jquery');
@@ -468,7 +469,7 @@ class Constructor_Admin extends Constructor_Abstract
                     <div id="tabs">
                         <ul>
                             <?php foreach ($this->_modules as $module => $file) : ?>
-                            <li><a href="#constr-<?php echo $file ?>"><?php echo $module ?></a></li>
+                            <li><a href="#constr-<?php echo $file ?>" name="<?php echo $file ?>"><?php echo $module ?></a></li>
                             <?php endforeach; ?>
                         </ul>
                         <?php foreach ($this->_modules as $module => $file) : ?>
