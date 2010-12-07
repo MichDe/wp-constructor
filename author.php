@@ -17,7 +17,7 @@ $author = get_the_author();
 <div id="content" class="box shadow opacity <?php the_constructor_layout_class() ?>">
     <div id="container" >
         <div id="posts">
-            <div <?php post_class('author'); ?>>
+            <div <?php echo 'class="author hentry ' . join(' ', get_post_class($class, null)) . '"'; ?>>
                 <div class="title opacity box">
                     <h1>
                         <a href="#" rel="bookmark" title="<?php echo $author ?>"><?php echo $author; ?></a>
@@ -30,8 +30,11 @@ $author = get_the_author();
                         <p class="wp-caption-text"><?php printf(__('%1$s %2$s', 'constructor'), get_the_author_meta('first_name'), get_the_author_meta('last_name'))?></p>
                     </div>
                     <dl class="left">
-                        <dt><?php _e('Full Name', 'constructor') ?></dt>
-                        <dd><?php printf(__('%1$s %2$s', 'constructor'), get_the_author_meta('first_name'), get_the_author_meta('last_name'))?></dd>
+                        <?php if ($first = get_the_author_meta('first_name')
+                                  or $last = get_the_author_meta('last_name')) : ?>
+                            <dt><?php _e('Full Name', 'constructor') ?></dt>
+                            <dd><?php printf(__('%1$s %2$s', 'constructor'), $first, $last)?></dd>
+                        <?php endif; ?>
 
                         <?php if ($nickname = get_the_author_meta('nickname')) : ?>
                             <dt><?php _e('Nickname', 'constructor') ?></dt>
@@ -70,26 +73,29 @@ $author = get_the_author();
                     </dl>
                 </div>
             </div>
+            <?php if (have_posts()) : ?>
             <div <?php post_class(); ?>>
                 <div class="title opacity box">
                     <h2><a href="#" rel="bookmark" title="<?php echo $author ?>"><?php printf(__('Latest posts by %s', 'constructor'), get_the_author_meta('nickname')); ?></a></h2>
                 </div>
                 <div class="entry">
-
-                    <ul>
-                    <!-- The Loop -->
-                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                       <li>
-                          <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a> | <?php the_date() ?>
-                       </li>
-                    <?php endwhile; else: ?>
-                         <p><?php _e('No posts by this author.', 'constructor'); ?></p>
-                    <?php endif; ?>
-                    <!-- End Loop -->
-                    </ul>
+                        <ul>
+                        <?php while (have_posts()) : the_post(); ?>
+                           <li>
+                              <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a> | <?php the_date() ?>
+                           </li>
+                        <?php endwhile; ?>
+                        </ul>
                 </div>
                 <div class="footer"></div>
-            </div>        
+            </div>
+            <?php else: ?>
+            <div class="hentry">
+               <div class="title opacity box">
+                    <h2><a href="#"><?php _e('No posts by this author.', 'constructor'); ?></a></h2>
+                </div>
+            </div>
+            <?php endif; ?>
         </div>
         <?php get_constructor_navigation(); ?>
     </div><!-- id='container' -->
