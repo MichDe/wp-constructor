@@ -247,7 +247,6 @@ class Constructor_Admin extends Constructor_Abstract
         wp_enqueue_style('constructor-admin',       CONSTRUCTOR_DIRECTORY_URI .'/admin/css/admin.css');
         wp_enqueue_style('constructor-colorpicker', CONSTRUCTOR_DIRECTORY_URI .'/admin/css/colorpicker.css');
         wp_enqueue_style('jquery-ui',               CONSTRUCTOR_DIRECTORY_URI .'/admin/css/jquery-ui.css');
-        wp_enqueue_style('google-font-face',        'http://code.google.com/webfonts/css');
         wp_print_styles();
     }
 
