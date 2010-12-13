@@ -227,18 +227,11 @@ class Constructor_Admin extends Constructor_Abstract
         global $wp_version;
         wp_enqueue_script('thickbox');
 
-        if (version_compare($wp_version, '2.8', '<')) {
-            wp_deregister_script('jquery');
-            wp_deregister_script('jquery-ui');
-            
-            wp_enqueue_script('jquery',              CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.js');
-        }
-        
-        wp_enqueue_script('jquery-ui',               CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery-ui.js', 'jquery');
-        wp_enqueue_script('jquery-layout',           CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.layout.js', 'jquery');
-
+        wp_enqueue_script('constructor-layout',      CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.layout.js', 'jquery');
+        wp_enqueue_script('constructor-accordion',   CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.ui.accordion.js', array('jquery','jquery-ui'));
+        wp_enqueue_script('constructor-slider',      CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.ui.slider.js', array('jquery','jquery-ui'));
         wp_enqueue_script('constructor-colorpicker', CONSTRUCTOR_DIRECTORY_URI .'/admin/js/colorpicker.js', 'jquery');
-        wp_enqueue_script('constructor-settings',    CONSTRUCTOR_DIRECTORY_URI .'/admin/js/settings.js', 'jquery');
+        wp_enqueue_script('constructor-settings',    CONSTRUCTOR_DIRECTORY_URI .'/admin/js/settings.js', array('jquery','jquery-ui'));
         wp_enqueue_script('constructor-messages',    CONSTRUCTOR_DIRECTORY_URI .'/admin/js/messages.js', 'jquery');
         wp_print_scripts();
     }
