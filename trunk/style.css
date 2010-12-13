@@ -183,7 +183,9 @@ div.aligncenter {
 
 #menu li.indicator {
     cursor:pointer;
-	background: url('images/arrows.png') no-repeat 98% -106px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+    background-image: url('images/arrows.png');
+    background-repeat: no-repeat;
+    background-position: 98% -106px; /* 8-bit indexed alpha png. IE6 gets solid image only */
 }
 	#menu li:hover.indicator    { background-position: 98% -161px }
 	#menu li li.indicator       { background-position: 98%    6px }
@@ -243,7 +245,9 @@ div.aligncenter {
 
 #rss a {
     text-indent:16px;
-    background:url('images/feed-icon-16x16.png') no-repeat 8px 50%;
+    background-image:url('images/feed-icon-16x16.png');
+    background-repeat:no-repeat;
+    background-position:8px 50%;
 }
 /*/Header*/
 /*Sidebar*/
@@ -693,7 +697,9 @@ div.aligncenter {
 	font-size: 24px;
 	padding-left:28px;
 	width: 96px;
-    background: url(images/lens.png) 4px 8px no-repeat;
+    background-image: url(images/lens.png);
+	background-position: 4px 8px;
+	background-repeat: no-repeat;
 }
 /*/Search*/
 /*Form*/
