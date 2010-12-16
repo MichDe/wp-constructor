@@ -26,7 +26,11 @@ class Constructor_Admin extends Constructor_Abstract
     function init($modules = array()) 
     {
         $this->_modules = $modules;
-     
+
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+
         require_once CONSTRUCTOR_DIRECTORY .'/admin/ajax.php';
 
         // process request
@@ -228,10 +232,10 @@ class Constructor_Admin extends Constructor_Abstract
         wp_enqueue_script('thickbox');
 
         wp_enqueue_script('constructor-layout',      CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.layout.js', 'jquery');
-        wp_enqueue_script('constructor-accordion',   CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.ui.accordion.js', array('jquery','jquery-ui'));
-        wp_enqueue_script('constructor-slider',      CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.ui.slider.js', array('jquery','jquery-ui'));
+        wp_enqueue_script('constructor-accordion',   CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.ui.accordion.js', array('jquery','jquery-ui-core'));
+        wp_enqueue_script('constructor-slider',      CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.ui.slider.js', array('jquery','jquery-ui-core'));
         wp_enqueue_script('constructor-colorpicker', CONSTRUCTOR_DIRECTORY_URI .'/admin/js/colorpicker.js', 'jquery');
-        wp_enqueue_script('constructor-settings',    CONSTRUCTOR_DIRECTORY_URI .'/admin/js/settings.js', array('jquery','jquery-ui'));
+        wp_enqueue_script('constructor-settings',    CONSTRUCTOR_DIRECTORY_URI .'/admin/js/settings.js', array('jquery','jquery-ui-core', 'jquery-ui-tabs'));
         wp_enqueue_script('constructor-messages',    CONSTRUCTOR_DIRECTORY_URI .'/admin/js/messages.js', 'jquery');
         wp_print_scripts();
     }
@@ -243,6 +247,20 @@ class Constructor_Admin extends Constructor_Abstract
      */
     function addThemeStyles() 
     {
+        global $blog_id;
+        
+        // basic style
+        //add_editor_style('style.css');
+
+        // save current changes to session
+        $_SESSION['constructor_width'] = $this->_options['layout']['width'];
+        $_SESSION['constructor_color'] = $this->_options['color'];
+        $_SESSION['constructor_fonts'] = $this->_options['fonts'];
+
+        // load generated style
+        add_editor_style('css-editor.php?theme='.$this->_admin['theme']);
+
+
         wp_enqueue_style('thickbox');
         wp_enqueue_style('constructor-admin',       CONSTRUCTOR_DIRECTORY_URI .'/admin/css/admin.css');
         wp_enqueue_style('constructor-colorpicker', CONSTRUCTOR_DIRECTORY_URI .'/admin/css/colorpicker.css');

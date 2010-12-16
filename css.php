@@ -55,7 +55,7 @@ $color_opacity = isset($constructor['color']['opacity'])?$constructor['color']['
 /*Fonts*/
 
 // detect font-face
-$font_face = require CONSTRUCTOR_DIRECTORY .'/admin/font-face.php';
+$font_face = require dirname(__FILE__) .'/admin/font-face.php';
 $include_fonts = array();
 if (array_search($constructor['fonts']['title']['family'], $font_face) !== false) {
     $font = preg_split('/[,]+/', $constructor['fonts']['title']['family']);
