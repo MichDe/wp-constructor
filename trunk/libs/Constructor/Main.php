@@ -376,7 +376,7 @@ class Constructor_Main extends Constructor_Abstract
             echo stripslashes($this->_options['footer']['text']);
         } else {
             echo '&copy; '.date('Y') .' '. sprintf(__('%1$s is proudly powered by %2$s', 'constructor'), get_bloginfo('name'), '<a href="http://wordpress.org/">WordPress</a>') .
-                 ' | <a href="http://anton.shevchuk.name/">'. __('Anton Shevchuk', 'constructor') .'</a><br />'.
+                 ' | <a href="http://anton.shevchuk.name/">'. __('Constructor Theme', 'constructor') .'</a><br />'.
                  sprintf(__('%1$s and %2$s.', 'constructor'), '<a href="' . get_bloginfo('rss2_url') . '">' . __('Entries (RSS)', 'constructor') . '</a>', '<a href="' . get_bloginfo('comments_rss2_url') . '">' . __('Comments (RSS)', 'constructor') . '</a>');
         }
 
