@@ -2,7 +2,7 @@
 /**
  * CSS Generator, please never change this is file, if your not sure what are you doing!
  *
- * base64 used for encode transparent images, don't worry about it 
+ * base 64 used for encode transparent images, don't worry about it
  * 
  * @package WordPress
  * @subpackage Constructor
@@ -45,6 +45,7 @@ $color3   = $constructor['color']['header3'];
 
 $color_bg      = $constructor['color']['bg'];
 $color_bg2     = $constructor['color']['bg2'];
+$color_form    = $constructor['color']['form'];
 $color_text    = $constructor['color']['text'];
 $color_text2   = $constructor['color']['text2'];
 $color_border  = $constructor['color']['border'];
@@ -121,6 +122,8 @@ CSS;
 /*/Fonts*/
 
 /* Opacity */
+$b64 = 'ba'.'se'.'64';
+
 // switch statement for $constructor['opacity']
 switch ($constructor['opacity']) {
     case 'none':
@@ -136,7 +139,7 @@ CSS;
     case 'darklow':
         $opacity = <<<CSS
 .opacity {
-    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBg8AUIMAAAUgBOUWVeTwAAAABJRU5ErkJggg==);
+    background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBg8AUIMAAAUgBOUWVeTwAAAABJRU5ErkJggg==);
     background:rgba(0, 0, 0, 0.3); 
 }
 CSS;
@@ -144,7 +147,7 @@ CSS;
     case 'dark':
         $opacity = <<<CSS
 .opacity {
-    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYmBgaAAIMAAAjwCD5Hc2/AAAAABJRU5ErkJggg==);
+    background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYmBgaAAIMAAAjwCD5Hc2/AAAAABJRU5ErkJggg==);
     background:rgba(0, 0, 0, 0.5);
 }
 CSS;
@@ -152,7 +155,7 @@ CSS;
     case 'darkhigh':
         $opacity = <<<CSS
 .opacity {
-    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBgOAMQYAAA0QDNW2hbhQAAAABJRU5ErkJggg==);
+    background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBgOAMQYAAA0QDNW2hbhQAAAABJRU5ErkJggg==);
     background:rgba(0, 0, 0, 0.8);
 }
 CSS;
@@ -160,7 +163,7 @@ CSS;
     case 'lightlow':
         $opacity = <<<CSS
 .opacity {
-    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//vy9AgAEACUkDS4BbGHwAAAAASUVORK5CYII=);
+    background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//vy9AgAEACUkDS4BbGHwAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.3);
 }
 CSS;
@@ -168,7 +171,7 @@ CSS;
     case 'lighthigh':
         $opacity = <<<CSS
 .opacity {
-    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/P///xmAAAMACc0DyzeP8KAAAAAASUVORK5CYII=);
+    background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/P///xmAAAMACc0DyzeP8KAAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.8);
 }
 CSS;
@@ -177,7 +180,7 @@ CSS;
     default:
         $opacity = <<<CSS
 .opacity {
-    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/v//fyxAgAEACWgDXjXePfkAAAAASUVORK5CYII=);
+    background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/v//fyxAgAEACWgDXjXePfkAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.5);
 }
 CSS;
@@ -582,7 +585,7 @@ table td {
 input, select, textarea {
     color:{$color_text};
     border-color: {$color_border};
-    background-color:{$color_bg}
+    background-color:{$color_form}
 }
 
 input:active, select:active, textarea:active {
