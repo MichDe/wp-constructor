@@ -376,7 +376,7 @@ class Constructor_Main extends Constructor_Abstract
             echo stripslashes($this->_options['footer']['text']);
         } else {
             echo '&copy; '.date('Y') .' '. sprintf(__('%1$s is proudly powered by %2$s', 'constructor'), get_bloginfo('name'), '<a href="http://wordpress.org/">WordPress</a>') .
-                 ' | <a href="http://anton.shevchuk.name/">'. __('Constructor Theme', 'constructor') .'</a><br />'.
+                 ' | <a href="http://anton.shevchuk.name/">'. __('Anton Shevchuk', 'constructor') .'</a><br />'.
                  sprintf(__('%1$s and %2$s.', 'constructor'), '<a href="' . get_bloginfo('rss2_url') . '">' . __('Entries (RSS)', 'constructor') . '</a>', '<a href="' . get_bloginfo('comments_rss2_url') . '">' . __('Comments (RSS)', 'constructor') . '</a>');
         }
 
@@ -399,14 +399,14 @@ class Constructor_Main extends Constructor_Abstract
         if (is_single()) {
             $cat = get_the_category($wp_query->post->ID);
             if ($cat) {
-                $category = split('/', rtrim(get_category_parents($cat[0], false, '/', true), '/'));
+                $category = preg_split('/\//', rtrim(get_category_parents($cat[0], false, '/', true), '/'));
             }
         } elseif (is_page()) {
             $category = get_post_custom_values('category_name', $wp_query->post->ID);
         } elseif (is_category()) {
             $cat = get_category(get_query_var('cat'));
             if ($cat) {
-                $category = split('/', rtrim(get_category_parents($cat, false, '/', true), '/'));
+                $category = preg_split('/\//', rtrim(get_category_parents($cat, false, '/', true), '/'));
             }
         }
         return $category;

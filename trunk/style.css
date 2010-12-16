@@ -1,8 +1,10 @@
 /*  
 Theme Name: Constructor
 Theme URI: http://code.google.com/p/wp-constructor/
-Description: Wordpress Constructor Theme, it's many-in-one theme (six layouts, configured colors, fonts and slideshow, widget ready). Build your own theme on <a href="themes.php?page=functions.php">settings page</a>. For Wordpress version 3.0+
-Version: 1.4.0
+Description: Wordpress Constructor Themee for those who want to create a unique blog design quickly and effortlessly (many layouts, configured colors, custom fonts and slideshow, etc).
+Start build your own theme from <a href="themes.php?page=functions.php">settings page</a>.
+
+Version: 1.4.1
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -573,10 +575,10 @@ div.aligncenter {
 }
 
 .list .thumb.alignleft {
-    margin:4px 8px 4px 0px !important;
+    margin:4px 8px 4px 0 !important;
 }
 .list .thumb.alignright {
-    margin:4px 0px 4px 8px !important;
+    margin:4px 0 4px 8 !important;
 }
 /*/List*/
 /*Navigation*/

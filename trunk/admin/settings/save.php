@@ -46,5 +46,5 @@ if (preg_match('/href=\"([^"]*)\"/', $theme_data['Author'],$matches)) {
     </tr>
 </table>
 <p>
-    <a href="<?php echo get_bloginfo('wpurl') ?>/wp-admin/admin-ajax.php" id="save-link" class="button-secondary"><?php _e('Save Theme', 'constructor'); ?></a>
+    <a href="<?php echo site_url() ?>/wp-admin/admin-ajax.php" id="save-link" class="button-secondary"><?php _e('Save Theme', 'constructor'); ?></a>
 </p>

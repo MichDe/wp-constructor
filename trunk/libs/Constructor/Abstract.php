@@ -175,6 +175,7 @@ class Constructor_Abstract
             'text2' => '#aaa',
             'border' => '#aaa',
             'border2' => '#999',
+            'form' => '#fff',
 
             'header1' => '#ff6600',
             'header2' => '#ff8833',
