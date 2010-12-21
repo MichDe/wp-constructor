@@ -49,7 +49,6 @@
         slideshow.nextSlide = function(){ 
             slideshow.each(function () { this.nextSlide(); })
         };
-        
 		/*
 		 * Construct
 		 */
