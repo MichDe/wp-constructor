@@ -5,16 +5,20 @@
 Available following localizations:
  * English - default
  * Russian - it's my native language
- * Ukrainian - Baziak
- * Polish - mummle (http://chomikuj.pl/mummle/)
- * Danish - Georg S. Adamsen (http://wordpress.blogos.dk/s%C3%B8g-efter-downloads/?did=171)
- * Italian - gio gio (http://people.unica.it/)
- * French - Nicolas Loeuillet
- * Lithuanian - Tomas Kikutis
- * Japanese - Toshi Oshio (http://blog.falcon-space.net/2010/01/wpconstructor-jp/)
+
+ * Catalan - Daniel Rubio
  * Czech - Pech, Jiří (http://www.energyexpert.cz/)
- * Polytonic (classical) Greek - Amaryllis Deliyanni (http://keymangreek.gr/)
+ * Danish - Georg S. Adamsen (http://wordpress.blogos.dk/s%C3%B8g-efter-downloads/?did=171)
+ * Dutch - Martin Reinders, Arjen Buitelaar (http://broodje-kebab.nl/blog/)
+ * French - Nicolas Loeuillet
+ * Hungarian - Peter Aprily
+ * Italian - gio gio (http://people.unica.it/)
+ * Japanese - Toshi Oshio (http://blog.falcon-space.net/2010/01/wpconstructor-jp/)
+ * Lithuanian - Tomas Kikutis
  * Norwegian - Tarjei Joten Svensen (http://www.sol.no/)
+ * Polytonic (classical) Greek - Amaryllis Deliyanni (http://keymangreek.gr/)
+ * Polish - mummle (http://chomikuj.pl/mummle/)
+ * Ukrainian - Baziak
 
 = Many themes =
 All aviable themes see on ConstructorThemes page
