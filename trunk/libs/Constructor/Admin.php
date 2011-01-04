@@ -36,6 +36,7 @@ class Constructor_Admin extends Constructor_Abstract
         // process request
         $this->request();
 
+
         add_action('admin_head', array($this, 'addThemeScripts'), 2);
         add_action('admin_head', array($this, 'addThemeStyles'),  3);
         add_action('admin_menu', array($this, 'addMenuItem'));
@@ -151,8 +152,8 @@ class Constructor_Admin extends Constructor_Abstract
 
                             $data['menu']['categories']['group'] = isset($data['menu']['categories']['group'])?true:false;
     
-                            $data['menu']['pages']['exclude'] = join(',',array_map(array($this, 'toInt'), spliti(',', $data['menu']['pages']['exclude'])));
-                            $data['menu']['categories']['exclude'] = join(',',array_map(array($this, 'toInt'), spliti(',', $data['menu']['categories']['exclude'])));
+                            $data['menu']['pages']['exclude'] = join(',',array_map('intval', spliti(',', $data['menu']['pages']['exclude'])));
+                            $data['menu']['categories']['exclude'] = join(',',array_map('intval', spliti(',', $data['menu']['categories']['exclude'])));
                         }
 
                         $data['title']['hidden'] = isset($data['title']['hidden'])?true:false;
@@ -208,17 +209,6 @@ class Constructor_Admin extends Constructor_Abstract
         // remove theme options
         delete_option('constructor');
         delete_option('constructor_admin');
-    }
-    
-    /**
-     * to integer
-     *
-     * @param   string   $el  array element
-     * @return  integer  $el
-     */
-    function toInt($el) 
-    {
-        return (int)$el;
     }
     
     /**
