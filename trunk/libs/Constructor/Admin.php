@@ -11,7 +11,7 @@ class Constructor_Admin extends Constructor_Abstract
     var $_donate  = '
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
             <input type="hidden" name="cmd" value="_donations" />
-            <input type="hidden" name="business" value="mxleod@yahoo.com" />
+            <input type="hidden" name="business" value="oksanaromaniuk@gmail.com" />
             <input type="hidden" name="lc" value="US" />
             <input type="hidden" name="item_name" value="Wordpress Constructor Theme" />
             <input type="hidden" name="currency_code" value="USD" />
