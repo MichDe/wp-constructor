@@ -42,16 +42,23 @@ class Constructor_Main extends Constructor_Abstract
         }
 
         // load style
-        if (file_exists(CONSTRUCTOR_DIRECTORY .'/cache/style'.$blog_id.'.css')) {
-            wp_enqueue_style('constructor-style',   CONSTRUCTOR_DIRECTORY_URI .'/cache/style'.$blog_id.'.css');
+        if (file_exists(CONSTRUCTOR_CUSTOM_CACHE .'/style.css')) {
+            wp_enqueue_style('constructor-style',   CONSTRUCTOR_CUSTOM_CACHE_URI .'/style.css');
         } else {
             wp_enqueue_style('constructor-style', home_url().'/?theme-constructor=css');
         }
-        
+
         // load constructor subtheme style
-        if (file_exists(CONSTRUCTOR_DIRECTORY .'/themes/'.$this->getTheme().'/style.css')) {
-            wp_enqueue_style( 'constructor-theme', CONSTRUCTOR_DIRECTORY_URI.'/themes/'.$this->getTheme().'/style.css');
+        if ($this->isDefaultTheme($this->getTheme())) {
+            if (file_exists(CONSTRUCTOR_DEFAULT_THEMES.'/'.$this->getTheme().'/style.css')) {
+                wp_enqueue_style( 'constructor-theme', CONSTRUCTOR_DEFAULT_THEMES_URI .'/'.$this->getTheme().'/style.css');
+            }
+        } else {
+            if (file_exists(CONSTRUCTOR_CUSTOM_THEMES.'/'.$this->getTheme().'/style.css')) {
+                wp_enqueue_style( 'constructor-theme', CONSTRUCTOR_CUSTOM_THEMES_URI .'/'.$this->getTheme().'/style.css');
+            }
         }
+
     }
     /**
      * get_constructor_slideshow

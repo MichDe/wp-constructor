@@ -7,6 +7,8 @@ require_once 'Abstract.php';
 
 class Constructor_Admin extends Constructor_Abstract
 {
+    var $_themes = null;
+    var $_custom = null;
     var $_modules = array();
     var $_donate  = '
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -19,7 +21,9 @@ class Constructor_Admin extends Constructor_Abstract
             <input type="submit" name="Submit" class="button-primary" value="Donate" />
             <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
         </form>';
-    
+
+    var $_errors = array();
+
     /**
      * init all hooks
      */
@@ -36,12 +40,48 @@ class Constructor_Admin extends Constructor_Abstract
         // process request
         $this->request();
 
+        // permission check
+        if (!$this->permissions()) {
+            echo '<div id="errors" class="error fade">'.
+                 '<p><strong>'.
+                 __('Please check permissions for next directories:').'</strong></p>'.
+                 '<ul>'.
+                    '<li>'.WP_CONTENT_DIR.'</li>'.
+                    '<li>'.CONSTRUCTOR_CUSTOM_CONTENT.'</li>'.
+                    '<li>'.CONSTRUCTOR_CUSTOM_CACHE.'</li>'.
+                    '<li>'.CONSTRUCTOR_CUSTOM_THEMES.'</li>'.
+                    '<li>'.CONSTRUCTOR_CUSTOM_IMAGES.'</li>'.
+                 '</ul>'.
+                 '</div>';
+        }
 
         add_action('admin_head', array($this, 'addThemeScripts'), 2);
         add_action('admin_head', array($this, 'addThemeStyles'),  3);
         add_action('admin_menu', array($this, 'addMenuItem'));
         
         add_action('switch_theme', array($this, 'disable'));
+    }
+
+    /**
+     * Check directories and permissions
+     * @return void
+     */
+    function permissions()
+    {
+        if (is_dir(CONSTRUCTOR_CUSTOM_CONTENT) && !is_writable(CONSTRUCTOR_CUSTOM_CONTENT)) {
+            return false;
+        } elseif (is_dir(WP_CONTENT_DIR) && !is_writable(WP_CONTENT_DIR)) {
+            return false;
+        } elseif (!is_dir(CONSTRUCTOR_CUSTOM_CONTENT)) {
+            mkdir(CONSTRUCTOR_CUSTOM_CONTENT);
+        }
+
+        is_dir(CONSTRUCTOR_CUSTOM_CACHE)  or mkdir(CONSTRUCTOR_CUSTOM_CACHE);
+        is_dir(CONSTRUCTOR_CUSTOM_THEMES) or mkdir(CONSTRUCTOR_CUSTOM_THEMES);
+        is_dir(CONSTRUCTOR_CUSTOM_IMAGES) or mkdir(CONSTRUCTOR_CUSTOM_IMAGES);
+
+        is_dir(CONSTRUCTOR_CUSTOM_THEMES .'/current') or mkdir(CONSTRUCTOR_CUSTOM_THEMES .'/current');
+        return true;
     }
 
     /**
@@ -62,44 +102,28 @@ class Constructor_Admin extends Constructor_Abstract
                     if (isset ($data['theme-reload']) && $data['theme-reload'] != 0) {
                         // loading theme and forgot all changes
                         $theme = $data['theme'];
-                        $data  = require CONSTRUCTOR_DIRECTORY.'/themes/'.$theme.'/config.php';
-                        $this->_admin['theme'] = $theme;
-                        unset($data['theme']);
+                        $this->load($theme);
                     } else {
-                    	global $blog_id;
-        				// is MU WP
-        				if ($blog_id && $blog_id != 1) {
-        					$upload = CONSTRUCTOR_DIRECTORY.'/images/'.$blog_id.'/';
-        					$path   = 'images/'.$blog_id.'/';
 
-        					if (!is_dir($upload)) {
-        						if (!@mkdir($upload)) {
-        							$errors[] = sprintf(__('System can\'t create "%s" directory','constructor'), $upload);
-        						}
-        					}
-        				} else {
-        					$upload = CONSTRUCTOR_DIRECTORY.'/images/';
-        					$path   = 'images/';
-        				}
+                        $this->_admin['theme'] = 'current';
 
-                        if ($files && is_writable($upload)) {
+                        if ($files && is_writable(CONSTRUCTOR_CUSTOM_THEMES .'/current/')) {
 
-                            $errors = array();
                             foreach ($files['name']['images'] as $name => $image) {
                                 if (isset($image['src']) && is_uploaded_file($files['tmp_name']['images'][$name]['src'])) {
 
                                     if (!preg_match('/\.(jpe?g|png|gif|tiff)$/i', $image['src'])) {
-                                        $errors[] = sprintf(__('File "%s" is not a image (jpeg, png, gif, tiff)','constructor'), $image['src']);
+                                        $this->_errors[] = sprintf(__('File "%s" is not a image (jpeg, png, gif, tiff)','constructor'), $image['src']);
                                         continue;
                                     }
 
-                                    if (move_uploaded_file($files['tmp_name']['images'][$name]['src'], $upload . $image['src'])) {
+                                    if (move_uploaded_file($files['tmp_name']['images'][$name]['src'], CONSTRUCTOR_CUSTOM_THEMES .'/current/' . $image['src'])) {
                                         // Everything for owner, read and execute for others
                                         // Use @ it's really bad, but "try {} catch {}" don't work in PHP4
-                                        @chmod($upload . $image['src'], 0755);
-                                        $data['images'][$name]['src'] = $path.$image['src'];
+                                        @chmod(CONSTRUCTOR_CUSTOM_THEMES .'/current/' . $image['src'], 0755);
+                                        $data['images'][$name]['src'] = $image['src'];
                                     } else {
-                                        $errors[] = sprintf(__('File "%s" can\'t be move to "images" folder','constructor'), $image['src']);
+                                        $this->_errors[] = sprintf(__('File "%s" can\'t be move to "/constructor/current/" folder','constructor'), $image['src']);
                                         continue;
                                     }
                                 }
@@ -113,8 +137,8 @@ class Constructor_Admin extends Constructor_Abstract
                         /**
                          * CSS changes
                          */
-                        if (isset($data['css']) && is_writable(CONSTRUCTOR_DIRECTORY.'/themes/'.$data['theme'].'/style.css')) {
-                            file_put_contents(CONSTRUCTOR_DIRECTORY.'/themes/'.$data['theme'].'/style.css', stripslashes($data['css']));
+                        if (isset($data['css']) && is_writable(CONSTRUCTOR_CUSTOM_THEMES.'/current/style.css')) {
+                            file_put_contents(CONSTRUCTOR_CUSTOM_THEMES.'/current/style.css', stripslashes($data['css']));
                             unset($data['css']);
                         }
 
@@ -152,7 +176,7 @@ class Constructor_Admin extends Constructor_Abstract
 
                             $data['menu']['categories']['group'] = isset($data['menu']['categories']['group'])?true:false;
     
-                            $data['menu']['pages']['exclude'] = join(',',array_map('intval', spliti(',', $data['menu']['pages']['exclude'])));
+                            $data['menu']['pages']['exclude'] = join(',',array_map('intval', split(',', $data['menu']['pages']['exclude'])));
                             $data['menu']['categories']['exclude'] = join(',',array_map('intval', spliti(',', $data['menu']['categories']['exclude'])));
                         }
 
@@ -175,13 +199,15 @@ class Constructor_Admin extends Constructor_Abstract
         				$data['slideshow']['advanced']['thumb'] = isset($data['slideshow']['advanced']['thumb'])?true:false;
         				$data['slideshow']['advanced']['play']  = isset($data['slideshow']['advanced']['play'])?true:false;
 
+                        $this->_updateAdmin();
+                        $this->_updateOptions($data);
+
+                        $this->save();
                     }
 
-                    $this->_updateOptions($data);
-                    $this->_updateAdmin();
                 }
 
-                if (isset($errors) && sizeof($errors) > 0) {
+                if (sizeof($this->_errors) > 0) {
                     wp_redirect("themes.php?page={$_GET['page']}&saved=true&errors=true");
                 } else {
                     wp_redirect("themes.php?page={$_GET['page']}&saved=true");
@@ -189,6 +215,251 @@ class Constructor_Admin extends Constructor_Abstract
                 die;
             }
         }
+    }
+
+    /**
+     * @param  $theme
+     * @return void
+     */
+    function load($theme)
+    {
+        if ($this->isDefaultTheme($theme)) {
+            $data = require CONSTRUCTOR_DEFAULT_THEMES .'/'.$theme.'/config.php';
+        } else {
+            $data = require CONSTRUCTOR_CUSTOM_THEMES .'/'. $theme .'/config.php';
+        }
+
+        $this->_admin['theme'] = $theme;
+
+        $this->_updateAdmin();
+        $this->_updateOptions($data);
+    }
+
+    /**
+     * Save theme as current
+     * @return void
+     */
+    function save()
+    {
+        global $current_user, $template_uri;
+        // setup permissions for save
+        $permission = 0777;
+
+        // get theme options
+        $constructor = $this->_options;
+        $admin       = $this->_admin;
+
+        // get theme name
+        $path = CONSTRUCTOR_CUSTOM_THEMES .'/current/';
+
+        $theme_uri   = home_url();
+        $description = get_bloginfo('description');
+        $version     = '0.0.1';
+        $author      = $current_user->user_nicename;
+        $author_uri  = '';
+
+        // create new folder for new theme
+        if (is_dir($path) &&
+            !is_writable($path)) {
+            $this->_errors[] = sprintf(__('Directory "%s" is not writable.', 'constructor'), $path);
+            return false;
+        } else {
+            if (!is_writable(CONSTRUCTOR_CUSTOM_THEMES .'/')) {
+                $this->_errors[] = sprintf(__('Directory "%s" is not writable.', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/');
+                return false;
+            } else {
+                @mkdir($path);
+                @chmod($path, $permission);
+            }
+        }
+
+        // copy default screenshot (if not exist)
+        if (!file_exists($path.'/screenshot.png')) {
+            if (!@copy(CONSTRUCTOR_DIRECTORY.'/admin/images/screenshot.png', $path.'/screenshot.png')) {
+
+                $this->_errors[] = sprintf(__('Can\'t copy file "%s".', 'constructor'), '/admin/images/screenshot.png');
+                return false;
+            }
+        }
+
+        // read and write for owner and everybody else
+        @chmod($path.'/screenshot.png', $permission);
+
+        // update style file
+        if (file_exists($path.'/style.css')) {
+            $style = file_get_contents($path.'/style.css');
+            // match first comment /* ... */
+            $style = preg_replace('|\/\*(.*)\*\/|Umis', '', $style, 1);
+        } else {
+            $style = '';
+        }
+
+        $style = "/*
+Theme Name: Current
+Theme URI: $theme_uri
+Description: $description
+Version: $version
+Author: $author
+Author URI: $author_uri
+*/".$style;
+
+        unset($constructor['theme']);
+
+        $config = "<?php \n".
+                  "/* Save on ".date('Y-m-d H:i')." */ \n".
+                  "return ".
+                  var_export($constructor, true).
+                  "\n ?>";
+
+        // update files content
+        if (!@file_put_contents($path.'/style.css', $style)) {
+            $this->_errors[] = sprintf(__('Can\'t save file "%s".', 'constructor'), $path.'/style.css');
+            return false;
+        }
+
+        if (!@file_put_contents($path.'/config.php', $config)) {
+            $this->_errors[] =  sprintf(__('Can\'t save file "%s".', 'constructor'), $path.'/config.php');
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Save theme as custom
+     * @return void
+     */
+    function save2($source_theme = 'current')
+    {
+        global $current_user, $template_uri;
+        // setup permissions for save
+        $permission = 0777;
+
+        $directory   = get_template_directory();
+
+        // get theme options
+        $constructor = $this->_options;
+        $admin       = $this->_admin;
+
+        // get request
+        $save  = $_REQUEST['save'];
+
+        // get theme name
+        $theme = isset($save['theme'])?$save['theme']:$admin['theme'];
+        $theme_old = $source_theme;
+
+
+        $theme_new = strtolower($theme);
+        $theme_new = preg_replace('/\W/', '-', $theme_new);
+        $theme_new = preg_replace('/[-]+/', '-', $theme_new);
+
+        $path_new = CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new;
+        $path_old = (in_array($theme_old, $this->getDefaultThemes())
+                     ?CONSTRUCTOR_DIRECTORY.'/themes/'.$theme_old
+                     :CONSTRUCTOR_CUSTOM_THEMES.'/'.$theme_old);
+
+        $theme_uri   = isset($save['theme-uri'])?$save['theme-uri']:'';
+        $description = stripslashes(isset($save['description'])?$save['description']:'');
+        $version     = isset($save['version'])?$save['version']:'0.0.1';
+        $author      = isset($save['author'])?$save['author']:'';
+        $author_uri  = isset($save['author-uri'])?$save['author-uri']:$current_user->user_nicename;
+
+        // create new folder for new theme
+        if (is_dir($path_new) &&
+            !is_writable($path_new)) {
+            returnResponse(RESPONSE_KO,  sprintf(__('Directory "%s" is not writable.', 'constructor'), $path_new));
+        } else {
+            if (!is_writable(CONSTRUCTOR_CUSTOM_THEMES .'/')) {
+                returnResponse(RESPONSE_KO, sprintf(__('Directory "%s" is not writable.', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/'));
+            } else {
+                @mkdir($path_new);
+                @chmod($path_new, $permission);
+            }
+        }
+        // copy all theme images to new? directory
+        foreach ($constructor['images'] as $img => $data) {
+            if (!empty($data['src'])) {
+                $file = pathinfo($data['src']);
+
+                $old_image = $path_old . '/'. $data['src'];
+                $new_image = $path_new .'/'. $file['basename'];
+
+                if ($old_image != $new_image) {
+                    // we are already check directory permissions
+                    if (!@copy($old_image, $new_image)) {
+                         returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), $old_image));
+                    }
+
+                    // read and write for owner and everybody else
+                    @chmod($new_image, $permission);
+                    $constructor['images'][$img]['src'] = CONSTRUCTOR_URI_THEMES .'/'.$theme_new .'/'. $file['basename'];
+                }
+            }
+        }
+
+        // copy default screenshot (if not exist)
+        if (!file_exists($path_new.'/screenshot.png') &&
+             file_exists(CONSTRUCTOR_DIRECTORY.'/themes/'.$theme_old.'/screenshot.png')) {
+            if (!@copy(CONSTRUCTOR_DIRECTORY.'/themes/'.$theme_old.'/screenshot.png', $path_new.'/screenshot.png')) {
+                returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), '/themes/'.$theme_old.'/screenshot.png'));
+            }
+        } elseif (!file_exists($path_new.'/screenshot.png')) {
+            if (!@copy(CONSTRUCTOR_DIRECTORY.'/admin/images/screenshot.png', $path_new.'/screenshot.png')) {
+                returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), '/admin/images/screenshot.png'));
+            }
+        }
+
+        // read and write for owner and everybody else
+        @chmod($path_new.'/screenshot.png', $permission);
+
+        // update style file
+        if (file_exists($directory.'/themes/'.$theme_old.'/style.css')) {
+            $style = file_get_contents($directory.'/themes/'.$theme_old.'/style.css');
+            // match first comment /* ... */
+            $style = preg_replace('|\/\*(.*)\*\/|Umis', '', $style, 1);
+        } else {
+            $style = '';
+        }
+
+        $style = "/*
+Theme Name: $theme
+Theme URI: $theme_uri
+Description: $description
+Version: $version
+Author: $author
+Author URI: $author_uri
+*/".$style;
+
+        unset($constructor['theme']);
+
+        $config = "<?php \n".
+                  "/* Save on ".date('Y-m-d H:i')." */ \n".
+                  "return ".
+                  var_export($constructor, true).
+                  "\n ?>";
+
+        // update files content
+        if (!@file_put_contents(CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/style.css', $style)) {
+            returnResponse(RESPONSE_KO, sprintf(__('Can\'t save file "%s".', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/style.css'));
+        }
+
+        if (!@file_put_contents(CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/config.php', $config)) {
+            returnResponse(RESPONSE_KO, sprintf(__('Can\'t save file "%s".', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/config.php'));
+        }
+
+        returnResponse(RESPONSE_OK, __('Theme was saved, please reload page for view changes', 'constructor'));
+    }
+
+    /**
+     * @return void
+     */
+    function donate()
+    {
+        // set donate flag to false
+        $constructor_admin = get_option('constructor_admin');
+        $constructor_admin['donate'] = false;
+        update_option('constructor_admin', $constructor_admin);
+
+        die();
     }
 
     /**
@@ -210,7 +481,8 @@ class Constructor_Admin extends Constructor_Abstract
         delete_option('constructor');
         delete_option('constructor_admin');
     }
-    
+
+
     /**
      * add scripts by wp_head hook
      *

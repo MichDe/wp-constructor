@@ -61,11 +61,11 @@ return array(
                     ),
             "images"   => array(
                         "body" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'repeat', 'fixed'=>false),
-                        "wrap" => array('src'=>'themes/black-urban/header.jpg','pos'=>'center top', 'repeat'=>'no-repeat', 'fixed'=>false),
+                        "wrap" => array('src'=>'header.jpg','pos'=>'center top', 'repeat'=>'no-repeat', 'fixed'=>false),
                         "wrapper"  => array('src'=>'','pos'=>'left top', 'repeat'=>'no-repeat'),
-                        "sidebar"  => array('src'=>'themes/black-urban/sidebar.jpg','pos'=>'right bottom', 'repeat'=>'no-repeat'),
+                        "sidebar"  => array('src'=>'sidebar.jpg','pos'=>'right bottom', 'repeat'=>'no-repeat'),
                         "extrabar" => array('src'=>'','pos'=>'right bottom', 'repeat'=>'no-repeat'),
-                        "footer"   => array('src'=>'themes/black-urban/footer.jpg','pos'=>'left bottom', 'repeat'=>'no-repeat'),
+                        "footer"   => array('src'=>'footer.jpg','pos'=>'left bottom', 'repeat'=>'no-repeat'),
                     ),
             "opacity"   => 'dark',
             "shadow"    => false,             // create shadow

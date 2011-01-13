@@ -200,6 +200,8 @@ class Constructor_Abstract
         'donate' => true
     );
 
+    var $_theme = 'default';
+
     /**
      * Nix_Abstract
      *
@@ -221,16 +223,17 @@ class Constructor_Abstract
         $admin = get_option('constructor_admin');
 
         if (!$options) {
-            $options = require CONSTRUCTOR_DIRECTORY . '/themes/default/config.php';
+            $options = require CONSTRUCTOR_DEFAULT_THEMES . '/default/config.php';
         }
 
         if (!$admin) {
-            $admin = array(
-            );
+            $admin = array();
         }
 
         $this->_options = $this->_arrayMerge($this->_default, $options);
         $this->_admin = $this->_arrayMerge($this->_admin, $admin);
+
+        $this->_theme = $this->_admin['theme'];
 
         if (function_exists('add_image_size')) {
             $size = $this->getSlideshowSize();
@@ -260,7 +263,7 @@ class Constructor_Abstract
         $css .= ob_get_contents();
         ob_end_clean();
 
-        file_put_contents(CONSTRUCTOR_DIRECTORY . '/cache/style' . $blog_id . '.css', $css);
+        file_put_contents(CONSTRUCTOR_CUSTOM_CACHE . '/style.css', $css);
     }
 
     /**
@@ -330,6 +333,59 @@ class Constructor_Abstract
     function getTheme()
     {
         return $this->_admin['theme'];
+    }
+
+    /**
+     * @param  $theme
+     * @return bool
+     */
+    function isDefaultTheme($theme)
+    {
+        return in_array($theme, $this->getDefaultThemes());
+    }
+
+    /**
+     * @return string
+     */
+    function getThemePath()
+    {
+        return ($this->isDefaultTheme($this->_theme)
+                 ? CONSTRUCTOR_DEFAULT_THEMES.'/'.$this->_theme
+                 : CONSTRUCTOR_CUSTOM_THEMES.'/'.$this->_theme);
+    }
+
+    /**
+     * @return string
+     */
+    function getThemeUri()
+    {
+        return ($this->isDefaultTheme($this->_theme)
+                 ? CONSTRUCTOR_DEFAULT_THEMES_URI.'/'.$this->_theme
+                 : CONSTRUCTOR_CUSTOM_THEMES_URI.'/'.$this->_theme);
+    }
+
+    /**
+     * @return array
+     */
+    function getCustomThemes()
+    {
+        if ($this->_custom === null) {
+            $themes = scandir(CONSTRUCTOR_CUSTOM_THEMES);
+            $this->_custom = array_diff($themes, array('.', '..', '.svn', '.htaccess', 'readme.txt'));
+        }
+        return $this->_custom;
+    }
+
+    /**
+     * @return array
+     */
+    function getDefaultThemes()
+    {
+        if ($this->_themes === null) {
+            $themes = scandir(CONSTRUCTOR_DEFAULT_THEMES);
+            $this->_themes = array_diff($themes, array('.', '..', '.svn', '.htaccess', 'readme.txt'));
+        }
+        return $this->_themes;
     }
 
     /**

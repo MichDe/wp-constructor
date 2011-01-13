@@ -57,10 +57,10 @@ return array (
                         "onsingle" => false   // show slideshow on single post
                     ),
             "images"   => array(
-                        "body" => array('src'=>'themes/naruto/naruto.jpg', 'pos'=>'top center', 'repeat'=>'no-repeat', 'fixed'=>false),
+                        "body" => array('src'=>'naruto.jpg', 'pos'=>'top center', 'repeat'=>'no-repeat', 'fixed'=>false),
                         "wrap" => array('src'=>'', 'pos'=>'center top', 'repeat'=>'no-repeat', 'fixed'=>false),
                         "wrapper"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
-                        "sidebar"  => array('src'=>'themes/naruto/fox.jpg', 'pos'=>'right bottom', 'repeat'=>'no-repeat'),
+                        "sidebar"  => array('src'=>'fox.jpg', 'pos'=>'right bottom', 'repeat'=>'no-repeat'),
                         "extrabar" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                         "footer"   => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                     ),
@@ -81,4 +81,4 @@ return array (
 					    'header3' => '#ff5f33',
                     ),
 )
- ?>
+?>

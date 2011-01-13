@@ -130,7 +130,7 @@ return array (
   array (
     'body' => 
     array (
-      'src' => 'themes/mountains/body.jpg',
+      'src' => 'body.jpg',
       'pos' => 'center bottom',
       'repeat' => 'no-repeat',
       'fixed' => true,
@@ -174,7 +174,7 @@ return array (
     ),
     'wrapheader' => 
     array (
-      'src' => 'themes/mountains/header.jpg',
+      'src' => 'header.jpg',
       'pos' => 'center bottom',
       'repeat' => 'repeat-x',
     ),
