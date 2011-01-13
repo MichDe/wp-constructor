@@ -5,8 +5,13 @@
  * @package WordPress
  * @subpackage Constructor
  */
-require_once 'ajax/donate.php';
-require_once 'ajax/save.php';
+
+require_once CONSTRUCTOR_DIRECTORY .'/libs/Constructor/Admin.php';
+
+$admin = new Constructor_Admin();
+
+add_action('wp_ajax_constructor_admin_save', array($admin, 'save'));
+add_action('wp_ajax_constructor_admin_donate', array($admin, 'donate'));
 
 /**
  * Definition of response OK/KO
