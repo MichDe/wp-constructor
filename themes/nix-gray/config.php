@@ -144,7 +144,7 @@ return array (
   array (
     'body' => 
     array (
-      'src' => 'themes/nix-gray/body.jpg',
+      'src' => 'body.jpg',
       'pos' => 'left top',
       'repeat' => 'repeat-x',
       'fixed' => false,
@@ -182,25 +182,25 @@ return array (
     ),
     'footer' => 
     array (
-      'src' => 'themes/nix-gray/footer.jpg',
+      'src' => 'footer.jpg',
       'pos' => 'center top',
       'repeat' => 'no-repeat',
     ),
     'wrapheader' => 
     array (
-      'src' => 'themes/nix-gray/content.jpg',
+      'src' => 'content.jpg',
       'pos' => 'center bottom',
       'repeat' => 'no-repeat',
     ),
     'wrapcontent' => 
     array (
-      'src' => 'themes/nix-gray/wrapper.jpg',
+      'src' => 'wrapper.jpg',
       'pos' => 'center top',
       'repeat' => 'repeat-y',
     ),
     'wrapfooter' => 
     array (
-      'src' => 'themes/nix-gray/footer.jpg',
+      'src' => 'footer.jpg',
       'pos' => 'center top',
       'repeat' => 'no-repeat',
     ),

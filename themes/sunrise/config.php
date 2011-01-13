@@ -57,7 +57,7 @@ return array (
                         "onsingle" => false   // show slideshow on single post
                     ),
             "images"   => array(
-                        "body" => array('src'=>'themes/sunrise/sunrise.jpg', 'pos'=>'left bottom', 'repeat'=>'repeat-x', 'fixed'=>1),
+                        "body" => array('src'=>'sunrise.jpg', 'pos'=>'left bottom', 'repeat'=>'repeat-x', 'fixed'=>1),
                         "wrap" => array('src'=>'', 'pos'=>'center top', 'repeat'=>'no-repeat', 'fixed'=>false),
                         "wrapper"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                         "sidebar"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),

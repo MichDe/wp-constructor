@@ -65,7 +65,7 @@ return array (
     array (
       'repeat' => 'no-repeat',
       'pos' => 'center top',
-      'src' => 'themes/pinup/header.jpg',
+      'src' => 'header.jpg',
       'fixed' => false,
     ),
     'wrap' => 
@@ -85,7 +85,7 @@ return array (
     array (
       'repeat' => 'no-repeat',
       'pos' => 'right bottom',
-      'src' => 'themes/pinup/sidebar.jpg',
+      'src' => 'sidebar.jpg',
     ),
     'extrabar' => 
     array (

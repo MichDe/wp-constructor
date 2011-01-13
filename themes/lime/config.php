@@ -60,7 +60,7 @@ return array(
                     ),
             "images"   => array(
                         "body" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'repeat', 'fixed'=>false),
-                        "wrap" => array('src'=>'themes/lime/header.jpg','pos'=>'center top', 'repeat'=>'no-repeat', 'fixed'=>false),
+                        "wrap" => array('src'=>'header.jpg','pos'=>'center top', 'repeat'=>'no-repeat', 'fixed'=>false),
                         "wrapper"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                         "sidebar"  => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),
                         "extrabar" => array('src'=>'', 'pos'=>'left top', 'repeat'=>'no-repeat'),

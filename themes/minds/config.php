@@ -121,14 +121,14 @@ array (
 array (
 'body' =>
 array (
-'src' => 'themes/minds/Pattern.png',
+'src' => 'Pattern.png',
 'pos' => 'left top',
 'repeat' => 'repeat',
 'fixed' => true,
 ),
 'wrap' =>
 array (
-'src' => 'themes/minds/Background.png',
+'src' => 'Background.png',
 'pos' => 'center top',
 'repeat' => 'no-repeat',
 'fixed' => false,
@@ -171,13 +171,13 @@ array (
 ),
 'wrapcontent' =>
 array (
-'src' => 'themes/minds/Content-Wrapper.png',
+'src' => 'Content-Wrapper.png',
 'pos' => 'center top',
 'repeat' => 'repeat-y',
 ),
 'wrapfooter' =>
 array (
-'src' => 'themes/minds/Footer-Wrapper.png',
+'src' => 'Footer-Wrapper.png',
 'pos' => 'center top',
 'repeat' => 'no-repeat',
 ),

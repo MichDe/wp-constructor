@@ -12,72 +12,70 @@ header('Content-type: text/css');
 // debug
 //error_reporting(E_ALL);
 
-global $constructor, $template_uri;
-
-// template directory
-$template_uri = get_template_directory_uri();
-
-// config is null
-$constructor = null;
 
 // load custom theme (using theme switcher)
-if (isset($_GET['theme'])) {
-    $theme = $_GET['theme'];
-    $theme = preg_replace('/[^a-z0-9\-\_]+/i', '', $theme);
-    if (file_exists(dirname(__FILE__) . '/themes/'.$theme.'/config.php')) {
-       $constructor = include dirname(__FILE__) . '/themes/'.$theme.'/config.php';
-    }
-} else {
-    $constructor = get_option('constructor');
-}
+//if (isset($_GET['theme'])) {
+//    $theme = $_GET['theme'];
+//    $theme = preg_replace('/[^a-z0-9\-\_]+/i', '', $theme);
+//    if (file_exists(dirname(__FILE__) . '/themes/'.$theme.'/config.php')) {
+//       $options = include_once dirname(__FILE__) . '/themes/'.$theme.'/config.php';
+//       $options['theme'] = $theme;
+//    }
+//} else {
+global $image_uri, $options;
 
-if (!$constructor) {
-    $constructor = include dirname(__FILE__) . '/themes/default/config.php';
-}
+include_once dirname(__FILE__) .'/libs/Constructor/Admin.php';
+$Constructor = new Constructor_Admin();
 
-$width    = isset($constructor['layout']['width'])?$constructor['layout']['width']:1024;
-$sidebar  = isset($constructor['layout']['sidebar'])?$constructor['layout']['sidebar']:240;
-$extra    = isset($constructor['layout']['extra'])?$constructor['layout']['extra']:240;
+$options = $Constructor->_options;
+$theme = $Constructor->_theme;
 
-$color1   = $constructor['color']['header1'];
-$color2   = $constructor['color']['header2'];
-$color3   = $constructor['color']['header3'];
+$image_uri = $Constructor->getThemeUri();
+//}
 
-$color_bg      = $constructor['color']['bg'];
-$color_bg2     = $constructor['color']['bg2'];
-$color_form    = $constructor['color']['form'];
-$color_text    = $constructor['color']['text'];
-$color_text2   = $constructor['color']['text2'];
-$color_border  = $constructor['color']['border'];
-$color_border2 = $constructor['color']['border2'];
-$color_opacity = isset($constructor['color']['opacity'])?$constructor['color']['opacity']:'#ffffff';
+$width    = isset($options['layout']['width'])?$options['layout']['width']:1024;
+$sidebar  = isset($options['layout']['sidebar'])?$options['layout']['sidebar']:240;
+$extra    = isset($options['layout']['extra'])?$options['layout']['extra']:240;
+
+$color1   = $options['color']['header1'];
+$color2   = $options['color']['header2'];
+$color3   = $options['color']['header3'];
+
+$color_bg      = $options['color']['bg'];
+$color_bg2     = $options['color']['bg2'];
+$color_form    = $options['color']['form'];
+$color_text    = $options['color']['text'];
+$color_text2   = $options['color']['text2'];
+$color_border  = $options['color']['border'];
+$color_border2 = $options['color']['border2'];
+$color_opacity = isset($options['color']['opacity'])?$options['color']['opacity']:'#ffffff';
 
 /*Fonts*/
 
 // detect font-face
 $font_face = require dirname(__FILE__) .'/admin/font-face.php';
 $include_fonts = array();
-if (array_search($constructor['fonts']['title']['family'], $font_face) !== false) {
-    $font = preg_split('/[,]+/', $constructor['fonts']['title']['family']);
+if (array_search($options['fonts']['title']['family'], $font_face) !== false) {
+    $font = preg_split('/[,]+/', $options['fonts']['title']['family']);
     $font = urlencode(trim($font[0],'"'));
     array_push($include_fonts, $font);
 }
-if (array_search($constructor['fonts']['description']['family'], $font_face) !== false) {
-    $font = preg_split('/[,]+/', $constructor['fonts']['description']['family']);
+if (array_search($options['fonts']['description']['family'], $font_face) !== false) {
+    $font = preg_split('/[,]+/', $options['fonts']['description']['family']);
     $font = urlencode(trim($font[0],'"'));
     if (array_search($font, $include_fonts) === false) {
         array_push($include_fonts, $font);
     }
 }
-if (array_search($constructor['fonts']['header']['family'], $font_face) !== false) {
-    $font = preg_split('/[,]+/', $constructor['fonts']['header']['family']);
+if (array_search($options['fonts']['header']['family'], $font_face) !== false) {
+    $font = preg_split('/[,]+/', $options['fonts']['header']['family']);
     $font = urlencode(trim($font[0],'"'));
     if (array_search($font, $include_fonts) === false) {
         array_push($include_fonts, $font);
     }
 }
-if (array_search($constructor['fonts']['content']['family'], $font_face) !== false) {
-    $font = preg_split('/[,]+/', $constructor['fonts']['content']['family']);
+if (array_search($options['fonts']['content']['family'], $font_face) !== false) {
+    $font = preg_split('/[,]+/', $options['fonts']['content']['family']);
     $font = urlencode(trim($font[0],'"'));
     if (array_search($font, $include_fonts) === false) {
         array_push($include_fonts, $font);
@@ -90,33 +88,33 @@ if (!empty($include_fonts)) {
 }
 
 $title_font = <<<CSS
-    font-family:{$constructor['fonts']['title']['family']};
-    font-size:{$constructor['fonts']['title']['size']}px;
-    line-height:{$constructor['fonts']['title']['size']}px;
-    font-weight:{$constructor['fonts']['title']['weight']};
-    color:{$constructor['fonts']['title']['color']};
-    text-transform:{$constructor['fonts']['title']['transform']};
+    font-family:{$options['fonts']['title']['family']};
+    font-size:{$options['fonts']['title']['size']}px;
+    line-height:{$options['fonts']['title']['size']}px;
+    font-weight:{$options['fonts']['title']['weight']};
+    color:{$options['fonts']['title']['color']};
+    text-transform:{$options['fonts']['title']['transform']};
 CSS;
 
 $description_font = <<<CSS
-    font-family:{$constructor['fonts']['description']['family']};
-    font-size:{$constructor['fonts']['description']['size']}px;
-    line-height:{$constructor['fonts']['description']['size']}px;
-    font-weight:{$constructor['fonts']['description']['weight']};
-    color:{$constructor['fonts']['description']['color']};
-    text-transform:{$constructor['fonts']['description']['transform']};
+    font-family:{$options['fonts']['description']['family']};
+    font-size:{$options['fonts']['description']['size']}px;
+    line-height:{$options['fonts']['description']['size']}px;
+    font-weight:{$options['fonts']['description']['weight']};
+    color:{$options['fonts']['description']['color']};
+    text-transform:{$options['fonts']['description']['transform']};
 CSS;
 
 $body_font = <<<CSS
-    font-family:{$constructor['fonts']['content']['family']};
+    font-family:{$options['fonts']['content']['family']};
 CSS;
 
 $header_font = <<<CSS
-    font-family:{$constructor['fonts']['header']['family']};
+    font-family:{$options['fonts']['header']['family']};
 CSS;
 
 $content_font = <<<CSS
-    font-family:{$constructor['fonts']['content']['family']};
+    font-family:{$options['fonts']['content']['family']};
 CSS;
 
 /*/Fonts*/
@@ -124,8 +122,8 @@ CSS;
 /* Opacity */
 $b64 = 'ba'.'se'.'64';
 
-// switch statement for $constructor['opacity']
-switch ($constructor['opacity']) {
+// switch statement for $options['opacity']
+switch ($options['opacity']) {
     case 'none':
         $opacity = '';
         break;
@@ -187,8 +185,8 @@ CSS;
         break;
 }
 /* Box */
-if ($constructor['design']['box']['flag']) {
-    $radius = $constructor['design']['box']['radius'];
+if ($options['design']['box']['flag']) {
+    $radius = $options['design']['box']['radius'];
     
     $box = <<<CSS
 .box {
@@ -201,8 +199,8 @@ if ($constructor['design']['box']['flag']) {
     -webkit-border-radius: {$radius}px
 }
 CSS;
-    // switch statement for $constructor['menu']['pos']
-    switch ($constructor['menu']['pos']) {
+    // switch statement for $options['menu']['pos']
+    switch ($options['menu']['pos']) {
         case 'left top':
         case 'right top':
             $box .= <<<CSS
@@ -238,9 +236,9 @@ CSS;
 } else {
     $box = '';
 }
-// switch statement for $constructor['title']['pos']
+// switch statement for $options['title']['pos']
 
-list($title_halign, $title_valign) = preg_split('/ /', $constructor['title']['pos']);
+list($title_halign, $title_valign) = preg_split('/ /', $options['title']['pos']);
 $title_align = '';
 
 switch ($title_halign) {
@@ -265,11 +263,11 @@ switch ($title_valign) {
         break;
 }
 
-// switch statement for $constructor['menu']['pos']
-$menu_center = round(($constructor['layout']['header'] - 40) / 2);
+// switch statement for $options['menu']['pos']
+$menu_center = round(($options['layout']['header'] - 40) / 2);
 
 $menu = "";
-switch ($constructor['menu']['pos']) {
+switch ($options['menu']['pos']) {
     case 'right top':
         $menu .="right:0;top:0;";
         break;
@@ -291,8 +289,8 @@ switch ($constructor['menu']['pos']) {
         break;
 }
 
-// switch statement for $constructor['menu']['width']
-switch ($constructor['menu']['width']) {
+// switch statement for $options['menu']['width']
+switch ($options['menu']['width']) {
     case '100%':
         $menu .= "width:{$width}px;";
         break;
@@ -301,10 +299,10 @@ switch ($constructor['menu']['width']) {
 }
 
 /* Shadow */
-if ($constructor['design']['shadow']['flag']) {
-    $x_offset = $constructor['design']['shadow']['x'];
-    $y_offset = $constructor['design']['shadow']['y'];
-    $blur     = $constructor['design']['shadow']['blur'];
+if ($options['design']['shadow']['flag']) {
+    $x_offset = $options['design']['shadow']['x'];
+    $y_offset = $options['design']['shadow']['y'];
+    $blur     = $options['design']['shadow']['blur'];
     
     $shadow = <<<CSS
 .shadow {
@@ -321,11 +319,11 @@ CSS;
 $layout = "";
 $layout_fluid = "";
 
-if ($constructor['layout']['fluid']['flag']) {
+if ($options['layout']['fluid']['flag']) {
     $layout_fluid = <<<CSS
-    width:{$constructor['layout']['fluid']['width']}%;
-    min-width:{$constructor['layout']['fluid']['min-width']}px;
-    max-width:{$constructor['layout']['fluid']['max-width']}px;
+    width:{$options['layout']['fluid']['width']}%;
+    min-width:{$options['layout']['fluid']['min-width']}px;
+    max-width:{$options['layout']['fluid']['max-width']}px;
 CSS;
 } else {
     $layout_fluid = <<<CSS
@@ -436,13 +434,13 @@ CSS;
 }
 
 function constructor_css_bg($section) {
-    global $constructor, $template_uri;
+    global $options, $image_uri;
     $css = "";
-    if (isset($constructor['images'][$section]['src']) && !empty($constructor['images'][$section]['src'])) {
-        $css = "background-image: url('{$template_uri}/{$constructor['images'][$section]['src']}');\n"
-             . "background-repeat: {$constructor['images'][$section]['repeat']};\n"
-             . "background-position: {$constructor['images'][$section]['pos']};\n";
-        if (isset($constructor['images'][$section]['fixed']) && $constructor['images'][$section]['fixed']) {
+    if (isset($options['images'][$section]['src']) && !empty($options['images'][$section]['src'])) {
+        $css = "background-image: url('{$image_uri}/{$options['images'][$section]['src']}');\n"
+             . "background-repeat: {$options['images'][$section]['repeat']};\n"
+             . "background-position: {$options['images'][$section]['pos']};\n";
+        if (isset($options['images'][$section]['fixed']) && $options['images'][$section]['fixed']) {
             $css .= "background-attachment:fixed;\n";
         }
     }
@@ -465,7 +463,7 @@ $wrapcontent_bg = constructor_css_bg('wrapcontent');
 $wrapfooter_bg = constructor_css_bg('wrapfooter');
 
 /* Comments */
-switch ($constructor['comments']['avatar']['pos']) {
+switch ($options['comments']['avatar']['pos']) {
     case 'left':
         $avatar_pos = "float: left;\n    margin: 0 10px 10px 0;";
         $avatar_author = "float: right !important;\n    margin: 0 0 10px 10px !important;";
@@ -478,7 +476,7 @@ switch ($constructor['comments']['avatar']['pos']) {
 }
 
 /* Header */
-if ($constructor['title']['hidden']) {
+if ($options['title']['hidden']) {
     $title = <<<CSS
 #name a, #description {
     font-size:0px;
@@ -658,8 +656,8 @@ fieldset{
 /*/Layout*/
 /*Header*/
 #header {
-	height: {$constructor['layout']['header']}px;
-	text-align: {$constructor['title']['pos']}
+	height: {$options['layout']['header']}px;
+	text-align: {$options['title']['pos']}
 }
 #header #name a {
 {$title_font}
