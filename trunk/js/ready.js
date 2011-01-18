@@ -39,28 +39,15 @@
 		
 		// Header Search Form
         var $menuSearch = $('#menusearchform .s');
-        var defaultValue = $menuSearch.hasClass('default')?$menuSearch.val():'Search...';
-
-		$('#menusearchform .s').mouseenter(function(){
-            /* hover logic */
+		$menuSearch.mouseenter(function(){
 		    if (!$menuSearch.data('expand')) {
 		        $menuSearch.data('expand', true);
 			    $menuSearch.animate({width:'+=32px',left:'-=16px'});
 		    }
-            /* end */
 		}).mouseleave(function(){
-            /* hover logic */
-		    $menuSearch.data('expand', false);
-            $menuSearch.animate({width:'-=32px',left:'+=16px'});
-            /* end */
-            if ($menuSearch.val() == '') {
-                $menuSearch.val(defaultValue);
-                $menuSearch.addClass('default');
-            }
-        }).click(function(){
-            if ($menuSearch.val() == defaultValue) {
-                $menuSearch.val('');
-                $menuSearch.removeClass('default');
+		    if ($menuSearch.data('expand')) {
+                $menuSearch.data('expand', false);
+                $menuSearch.animate({width:'-=32px',left:'+=16px'});
             }
         });
 

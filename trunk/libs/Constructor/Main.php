@@ -262,7 +262,9 @@ class Constructor_Main extends Constructor_Abstract
                 }
                 echo '<li id="menusearchform">
                           <form method="get" action="' . home_url() . '/" >
-                          <input class="'.$class.'" type="text" value="' . $value . '" name="s"/>
+                          <input class="'.$class.'" type="text" value="' . $value . '" name="s" '
+                               .'onfocus="javascript:if(this.value==\''.$value.'\') this.value=\'\';"'
+                               .'onblur="javascript:if(this.value==\'\') this.value=\''.$value.'\';"/>
                           
                           </form>
                       </li>';
