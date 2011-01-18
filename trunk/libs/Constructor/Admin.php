@@ -105,6 +105,8 @@ class Constructor_Admin extends Constructor_Abstract
                         $this->load($theme);
                     } else {
 
+                        $theme = $this->_admin['theme'];
+
                         $this->_admin['theme'] = 'current';
 
                         if ($files && is_writable(CONSTRUCTOR_CUSTOM_THEMES .'/current/')) {
@@ -202,7 +204,7 @@ class Constructor_Admin extends Constructor_Abstract
                         $this->_updateAdmin();
                         $this->_updateOptions($data);
 
-                        $this->save();
+                        $this->save($theme);
                     }
 
                 }
@@ -237,9 +239,10 @@ class Constructor_Admin extends Constructor_Abstract
 
     /**
      * Save theme as current
+     * @param  string $theme old theme
      * @return void
      */
-    function save()
+    function save($theme)
     {
         global $current_user, $template_uri;
         // setup permissions for save
@@ -250,7 +253,13 @@ class Constructor_Admin extends Constructor_Abstract
         $admin       = $this->_admin;
 
         // get theme name
-        $path = CONSTRUCTOR_CUSTOM_THEMES .'/current/';
+        $path = CONSTRUCTOR_CUSTOM_THEMES .'/current';
+
+        if ($this->isDefaultTheme($theme)) {
+            $path_old = CONSTRUCTOR_DEFAULT_THEMES .'/'. $theme;
+        } else {
+            $path_old = CONSTRUCTOR_CUSTOM_THEMES .'/'. $theme;
+        }
 
         $theme_uri   = home_url();
         $description = get_bloginfo('description');
@@ -273,6 +282,22 @@ class Constructor_Admin extends Constructor_Abstract
             }
         }
 
+        // copy all theme images to new? directory
+        foreach ($constructor['images'] as $img => $data) {
+            if (!empty($data['src'])) {
+                $old_image = $path_old .'/'. $data['src'];
+                $new_image = $path .'/'. $data['src'];
+
+                if ($old_image != $new_image) {
+                    // we are already check directory permissions
+                    if (!@copy($old_image, $new_image)) {
+                         $this->_errors[] = sprintf(__('Can\'t copy file "%s".', 'constructor'), $old_image);
+                    }
+                    // read and write for owner and everybody else
+                    @chmod($new_image, $permission);
+                }
+            }
+        }
         // copy default screenshot (if not exist)
         if (!file_exists($path.'/screenshot.png')) {
             if (!@copy(CONSTRUCTOR_DIRECTORY.'/admin/images/screenshot.png', $path.'/screenshot.png')) {
@@ -493,15 +518,15 @@ Author URI: $author_uri
         global $wp_version;
         wp_enqueue_script('thickbox');
 
-        wp_enqueue_script('constructor-layout',      CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.layout.js', 'jquery');
+        wp_enqueue_script('constructor-layout',      CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.layout.js',  array('jquery'));
         wp_enqueue_script('constructor-custom',      CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery-ui-custom.js', array('jquery'));
 //        wp_enqueue_script('constructor-accordion',   CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.ui.accordion.js', array('jquery','jquery-ui-core'));
 //        wp_enqueue_script('constructor-widget',      CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.ui.widget.js', array('jquery','jquery-ui-core'));
 //        wp_enqueue_script('constructor-mouse',       CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.ui.mouse.js', array('jquery','jquery-ui-core'));
 //        wp_enqueue_script('constructor-slider',      CONSTRUCTOR_DIRECTORY_URI .'/admin/js/jquery.ui.slider.js', array('jquery','jquery-ui-core'));
-        wp_enqueue_script('constructor-colorpicker', CONSTRUCTOR_DIRECTORY_URI .'/admin/js/colorpicker.js', 'jquery');
+        wp_enqueue_script('constructor-colorpicker', CONSTRUCTOR_DIRECTORY_URI .'/admin/js/colorpicker.js',  array('jquery'));
         wp_enqueue_script('constructor-settings',    CONSTRUCTOR_DIRECTORY_URI .'/admin/js/settings.js', array('jquery'));
-        wp_enqueue_script('constructor-messages',    CONSTRUCTOR_DIRECTORY_URI .'/admin/js/messages.js', 'jquery');
+        wp_enqueue_script('constructor-messages',    CONSTRUCTOR_DIRECTORY_URI .'/admin/js/messages.js',  array('jquery'));
         wp_print_scripts();
     }
     

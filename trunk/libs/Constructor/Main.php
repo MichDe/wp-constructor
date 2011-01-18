@@ -254,9 +254,15 @@ class Constructor_Main extends Constructor_Abstract
             
             // show search bar
             if ($this->_options['menu']['search'])  {
+                $value = esc_attr(apply_filters('the_search_query', get_search_query()));
+                $class = "s";
+                if (empty($value)) {
+                    $value = __('Search...', 'constructor');
+                    $class = "s default";
+                }
                 echo '<li id="menusearchform">
                           <form method="get" action="' . home_url() . '/" >
-                          <input class="s" type="text" value="' . esc_attr(apply_filters('the_search_query', get_search_query())) . '" name="s"/>
+                          <input class="'.$class.'" type="text" value="' . $value . '" name="s"/>
                           
                           </form>
                       </li>';
