@@ -1,6 +1,47 @@
 #summary Version history
 #labels Featured
 
+== 1.5.0 ==
+  * Create notice for search field in menu
+  * Change save process, now constructor use folder blogs.dir for save custom themes and cache.
+
+For update themes you should be change path to images in theme `config.php` - remove `themes/%theme_name%/` from image path:
+{{{
+// before
+"images"   => array(
+    "header"   => array('src'=>'themes/default/header.jpg', 'pos'=>'right top', 'repeat'=>'no-repeat'),
+),
+
+// after
+"images"   => array(
+    "header"   => array('src'=>'header.jpg', 'pos'=>'right top', 'repeat'=>'no-repeat'),
+),
+
+
+}}}
+
+  * Change donation address
+
+== 1.4.4 ==
+  * Added Hungarian, Catalon, Dutch languages 
+  * Copy sp_SP as es_ES language
+
+== 1.4.3 ==
+  * Rebuild jQuery UI
+
+== 1.4.2 ==
+  * Added jQuery Layout plugin
+  * Added new layout "Thumb" 
+  * Added CSS for editor
+  * Added HU translation
+  * More fonts from Google Font Directory, and small changes in UI on "Fonts" tab 
+  * Rename tabs: - "Layout" -> "Templates" - "Sidebar" -> "Layout"
+  * Create new color for form elements
+  * Update layout's thumbnails
+  * Small navigation refactoring
+  * Fixed Javascript issue on admin panel
+  * Fixed small CSS issues
+
 == 0.9.5 ==
   * Wordpress 3.0 navigation menu support
   * new top menu feature - stretch across the width of site
