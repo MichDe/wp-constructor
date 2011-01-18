@@ -7,7 +7,6 @@ require_once 'Abstract.php';
 
 class Constructor_Admin extends Constructor_Abstract
 {
-    var $_themes = null;
     var $_custom = null;
     var $_modules = array();
     var $_donate  = '
@@ -44,13 +43,11 @@ class Constructor_Admin extends Constructor_Abstract
         if (!$this->permissions()) {
             echo '<div id="errors" class="error fade">'.
                  '<p><strong>'.
-                 __('Please check permissions for next directories:').'</strong></p>'.
+                 __('Please check permissions for next directories:', 'constructor').'</strong></p>'.
                  '<ul>'.
                     '<li>'.WP_CONTENT_DIR.'</li>'.
+                    '<li>'.WP_CONTENT_DIR.'/blogs.dir</li>'.
                     '<li>'.CONSTRUCTOR_CUSTOM_CONTENT.'</li>'.
-                    '<li>'.CONSTRUCTOR_CUSTOM_CACHE.'</li>'.
-                    '<li>'.CONSTRUCTOR_CUSTOM_THEMES.'</li>'.
-                    '<li>'.CONSTRUCTOR_CUSTOM_IMAGES.'</li>'.
                  '</ul>'.
                  '</div>';
         }
@@ -68,14 +65,39 @@ class Constructor_Admin extends Constructor_Abstract
      */
     function permissions()
     {
-        if (is_dir(CONSTRUCTOR_CUSTOM_CONTENT) && !is_writable(CONSTRUCTOR_CUSTOM_CONTENT)) {
-            return false;
-        } elseif (is_dir(WP_CONTENT_DIR) && !is_writable(WP_CONTENT_DIR)) {
-            return false;
-        } elseif (!is_dir(CONSTRUCTOR_CUSTOM_CONTENT)) {
-            mkdir(CONSTRUCTOR_CUSTOM_CONTENT);
+        global $blog_id;
+
+        if (!$blog_id) {
+            $blog_id = 1;
         }
 
+        // check blogs.dir
+        if (!is_dir(WP_CONTENT_DIR .'/blogs.dir') && !is_writable(WP_CONTENT_DIR)) {
+            return false;
+        } elseif (!is_dir(WP_CONTENT_DIR .'/blogs.dir')) {
+            @mkdir(WP_CONTENT_DIR .'/blogs.dir');
+        }
+
+        // check blogs.dir/$blog_id
+        if (!is_dir(WP_CONTENT_DIR .'/blogs.dir/'.$blog_id) && !is_writable(WP_CONTENT_DIR .'/blogs.dir')) {
+            return false;
+        } elseif (!is_dir(WP_CONTENT_DIR .'/blogs.dir/'.$blog_id)) {
+            @mkdir(WP_CONTENT_DIR .'/blogs.dir/'.$blog_id);
+        }
+
+        // check blogs.dir/$blog_id/constructor
+        if (!is_dir(CONSTRUCTOR_CUSTOM_CONTENT) && !is_writable(WP_CONTENT_DIR .'/blogs.dir/'.$blog_id)) {
+            return false;
+        } elseif (!is_dir(CONSTRUCTOR_CUSTOM_CONTENT)) {
+            @mkdir(CONSTRUCTOR_CUSTOM_CONTENT);
+        }
+
+        // check permission for CONSTRUCTOR_CUSTOM_CONTENT
+        if (!is_writable(CONSTRUCTOR_CUSTOM_CONTENT)) {
+            return false;
+        }
+
+        // create subfloders
         is_dir(CONSTRUCTOR_CUSTOM_CACHE)  or mkdir(CONSTRUCTOR_CUSTOM_CACHE);
         is_dir(CONSTRUCTOR_CUSTOM_THEMES) or mkdir(CONSTRUCTOR_CUSTOM_THEMES);
         is_dir(CONSTRUCTOR_CUSTOM_IMAGES) or mkdir(CONSTRUCTOR_CUSTOM_IMAGES);

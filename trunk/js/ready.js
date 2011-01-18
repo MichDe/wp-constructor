@@ -42,12 +42,12 @@
 		$menuSearch.mouseenter(function(){
 		    if (!$menuSearch.data('expand')) {
 		        $menuSearch.data('expand', true);
-			    $menuSearch.animate({width:'+=32px',left:'-=16px'});
+			    $menuSearch.stop(true,true).animate({width:'+=32px',left:'-=16px'});
 		    }
 		}).mouseleave(function(){
 		    if ($menuSearch.data('expand')) {
                 $menuSearch.data('expand', false);
-                $menuSearch.animate({width:'-=32px',left:'+=16px'});
+                $menuSearch.stop(true,true).animate({width:'-=32px',left:'+=16px'});
             }
         });
 
