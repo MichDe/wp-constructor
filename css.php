@@ -684,6 +684,9 @@ fieldset{
     #menu .current-cat li a {
         color: {$color_text}
     }
+#menusearchform .default {
+   color:{$color_text2};
+}
 /*/Header*/
 /*Slideshow*/
 .wp-sl img{

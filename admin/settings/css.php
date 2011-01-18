@@ -1,5 +1,11 @@
 <?php __('CSS', 'constructor'); // required for correct translation
-$css_file = CONSTRUCTOR_DIRECTORY .'/themes/'.$admin['theme'].'/style.css';
+
+if ($this->isDefaultTheme($admin['theme'])) {
+    $css_file = CONSTRUCTOR_DEFAULT_THEMES .'/'.$admin['theme'].'/style.css';
+} else {
+    $css_file = CONSTRUCTOR_CUSTOM_THEMES .'/'.$admin['theme'].'/style.css';
+}
+
 ?>
 <table class="form-table">
 <?php if (!is_writable($css_file)) : ?>

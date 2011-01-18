@@ -67,14 +67,21 @@ $(document).ready(function(){
             'author':$('#save-author').val(),
             'author-uri':$('#save-author-uri').val()
         };
-        
-        $.post($(this).attr("href"), data, function(response){
-            if (response.status == 'ok') {                
-                Messages.addNotice(response.message, null);
-            } else {
-                Messages.addWarning(response.message, null);
+
+        jQuery.ajax({
+			type: "POST",
+			url: $(this).attr("href"),
+			data: data,
+			dataType: "json",
+			success: function(response) {
+                if (response.status == 'ok') {
+                    Messages.addNotice(response.message, null);
+                } else {
+                    Messages.addWarning(response.message, null);
+                }
             }
-        },"json");
+		});
+
         return false;
     });
     
