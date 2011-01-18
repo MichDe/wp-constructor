@@ -201,6 +201,7 @@ class Constructor_Abstract
     );
 
     var $_theme = 'default';
+    var $_themes = null;
 
     /**
      * Nix_Abstract
