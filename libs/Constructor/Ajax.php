@@ -31,6 +31,10 @@ class Constructor_Ajax extends Constructor_Abstract
         $theme_new = preg_replace('/\W/', '-', $theme_new);
         $theme_new = preg_replace('/[-]+/', '-', $theme_new);
 
+        if ($this->isDefaultTheme($theme_new)) {
+            $theme_new = $theme_new .'_'. date('His');
+        }
+
         $path_new = CONSTRUCTOR_CUSTOM_THEMES .'/'. $theme_new;
         $path_old = CONSTRUCTOR_CUSTOM_THEMES .'/current';
 
