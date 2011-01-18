@@ -684,8 +684,12 @@ fieldset{
     #menu .current-cat li a {
         color: {$color_text}
     }
+#menusearchform .s {
+   background-color:{$color_bg2}
+}
 #menusearchform .default {
    color:{$color_text2};
+   background-color:{$color_bg}
 }
 /*/Header*/
 /*Slideshow*/

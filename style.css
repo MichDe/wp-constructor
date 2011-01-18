@@ -689,7 +689,7 @@ div.aligncenter {
 }
 
 #menusearchform {
-    width: 134px;
+    width:134px;
     height:40px;
 }
 #menusearchform .s {
@@ -697,16 +697,18 @@ div.aligncenter {
 	position:absolute;
 	top:0;
 	left:2px;
-	height: 30px;
-	font-size: 24px;
+	height:30px;
+	font-size:20px;
+	line-height:40px;
 	padding-left:28px;
-	width: 96px;
+	width:96px;
     background-image: url(images/lens.png);
-	background-position: 4px 8px;
+	background-position:4px 8px;
 	background-repeat: no-repeat;
 }
 #menusearchform .default {
-    font-size:16px !important;
+    /*font-size:16px !important;
+    line-height:36px;*/
 }
 /*/Search*/
 /*Form*/
