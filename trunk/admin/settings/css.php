@@ -1,10 +1,6 @@
 <?php __('CSS', 'constructor'); // required for correct translation
 
-if ($this->isDefaultTheme($admin['theme'])) {
-    $css_file = CONSTRUCTOR_DEFAULT_THEMES .'/'.$admin['theme'].'/style.css';
-} else {
-    $css_file = CONSTRUCTOR_CUSTOM_THEMES .'/'.$admin['theme'].'/style.css';
-}
+$css_file = $theme_uri .'/style.css';
 
 ?>
 <table class="form-table">

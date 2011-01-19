@@ -122,14 +122,14 @@
  */
 function constructor_admin_image_src($key, $upload) 
 {
-    global $constructor;
+    global $constructor, $theme_uri;
     ?>
     <tr>
     <td colspan="2">
         <input type="text" name="constructor[images][<?php echo $key?>][src]" value="<?php echo $constructor['images'][$key]['src']?>"/>
         <?php if ($upload) : ?><input type="file" name="constructor[images][<?php echo $key?>][src]"/><?php endif; ?>
         <?php if ($constructor['images'][$key]['src']) : ?>
-            (<a class="thickbox" href="<?php echo CONSTRUCTOR_DIRECTORY_URI .'/'.$constructor['images'][$key]['src']; ?>" title="<?php _e('Preview image', 'constructor'); ?>"><?php _e('preview', 'constructor'); ?></a>, 
+            (<a class="thickbox" href="<?php echo $theme_uri .'/'.$constructor['images'][$key]['src']; ?>" title="<?php _e('Preview image', 'constructor'); ?>"><?php _e('preview', 'constructor'); ?></a>,
              <a href="#" class="clear-link" title="<?php _e('Remove image (only from theme)', 'constructor'); ?>"><?php _e('clear', 'constructor'); ?></a>)
         <?php endif; ?>
     </td>

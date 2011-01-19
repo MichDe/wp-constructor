@@ -37,15 +37,15 @@
 			});
         }
 		
-		// Header Search Form
+        // Header Search Form
         var $menuSearch = $('#menusearchform .s');
-		$menuSearch.mouseenter(function(){
-		    if (!$menuSearch.data('expand')) {
-		        $menuSearch.data('expand', true);
-			    $menuSearch.stop(true,true).animate({width:'+=32px',left:'-=16px'});
-		    }
-		}).mouseleave(function(){
-		    if ($menuSearch.data('expand')) {
+        $menuSearch.mouseenter(function(){
+            if (!$menuSearch.data('expand')) {
+                $menuSearch.data('expand', true);
+                $menuSearch.stop(true,true).animate({width:'+=32px',left:'-=16px'});
+            }
+        }).mouseleave(function(){
+            if ($menuSearch.data('expand')) {
                 $menuSearch.data('expand', false);
                 $menuSearch.stop(true,true).animate({width:'-=32px',left:'+=16px'});
             }

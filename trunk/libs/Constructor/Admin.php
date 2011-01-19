@@ -36,9 +36,6 @@ class Constructor_Admin extends Constructor_Abstract
 
         require_once CONSTRUCTOR_DIRECTORY .'/admin/ajax.php';
 
-        // process request
-        $this->request();
-
         // permission check
         if (!$this->permissions()) {
             echo '<div id="errors" class="error fade">'.
@@ -51,6 +48,9 @@ class Constructor_Admin extends Constructor_Abstract
                  '</ul>'.
                  '</div>';
         }
+
+        // process request
+        $this->request();
 
         add_action('admin_head', array($this, 'addThemeScripts'), 2);
         add_action('admin_head', array($this, 'addThemeStyles'),  3);
@@ -232,8 +232,10 @@ class Constructor_Admin extends Constructor_Abstract
                 }
 
                 if (sizeof($this->_errors) > 0) {
+                    $_SESSION['errors'] = serialize($this->_errors);
                     wp_redirect("themes.php?page={$_GET['page']}&saved=true&errors=true");
                 } else {
+                    $_SESSION['errors'] = '';
                     wp_redirect("themes.php?page={$_GET['page']}&saved=true");
                 }
                 die;
@@ -310,10 +312,10 @@ class Constructor_Admin extends Constructor_Abstract
                 $old_image = $path_old .'/'. $data['src'];
                 $new_image = $path .'/'. $data['src'];
 
-                if ($old_image != $new_image) {
+                if ($old_image != $new_image && file_exists($old_image)) {
                     // we are already check directory permissions
                     if (!@copy($old_image, $new_image)) {
-                         $this->_errors[] = sprintf(__('Can\'t copy file "%s".', 'constructor'), $old_image);
+                         $this->_errors[] = sprintf(__('Can\'t copy file "%s" to "%s".', 'constructor'), $old_image, $new_image);
                     }
                     // read and write for owner and everybody else
                     @chmod($new_image, $permission);
@@ -369,131 +371,6 @@ Author URI: $author_uri
             return false;
         }
         return true;
-    }
-
-    /**
-     * Save theme as custom
-     * @return void
-     */
-    function save2($source_theme = 'current')
-    {
-        global $current_user, $template_uri;
-        // setup permissions for save
-        $permission = 0777;
-
-        $directory   = get_template_directory();
-
-        // get theme options
-        $constructor = $this->_options;
-        $admin       = $this->_admin;
-
-        // get request
-        $save  = $_REQUEST['save'];
-
-        // get theme name
-        $theme = isset($save['theme'])?$save['theme']:$admin['theme'];
-        $theme_old = $source_theme;
-
-
-        $theme_new = strtolower($theme);
-        $theme_new = preg_replace('/\W/', '-', $theme_new);
-        $theme_new = preg_replace('/[-]+/', '-', $theme_new);
-
-        $path_new = CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new;
-        $path_old = (in_array($theme_old, $this->getDefaultThemes())
-                     ?CONSTRUCTOR_DIRECTORY.'/themes/'.$theme_old
-                     :CONSTRUCTOR_CUSTOM_THEMES.'/'.$theme_old);
-
-        $theme_uri   = isset($save['theme-uri'])?$save['theme-uri']:'';
-        $description = stripslashes(isset($save['description'])?$save['description']:'');
-        $version     = isset($save['version'])?$save['version']:'0.0.1';
-        $author      = isset($save['author'])?$save['author']:'';
-        $author_uri  = isset($save['author-uri'])?$save['author-uri']:$current_user->user_nicename;
-
-        // create new folder for new theme
-        if (is_dir($path_new) &&
-            !is_writable($path_new)) {
-            returnResponse(RESPONSE_KO,  sprintf(__('Directory "%s" is not writable.', 'constructor'), $path_new));
-        } else {
-            if (!is_writable(CONSTRUCTOR_CUSTOM_THEMES .'/')) {
-                returnResponse(RESPONSE_KO, sprintf(__('Directory "%s" is not writable.', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/'));
-            } else {
-                @mkdir($path_new);
-                @chmod($path_new, $permission);
-            }
-        }
-        // copy all theme images to new? directory
-        foreach ($constructor['images'] as $img => $data) {
-            if (!empty($data['src'])) {
-                $file = pathinfo($data['src']);
-
-                $old_image = $path_old . '/'. $data['src'];
-                $new_image = $path_new .'/'. $file['basename'];
-
-                if ($old_image != $new_image) {
-                    // we are already check directory permissions
-                    if (!@copy($old_image, $new_image)) {
-                         returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), $old_image));
-                    }
-
-                    // read and write for owner and everybody else
-                    @chmod($new_image, $permission);
-                    $constructor['images'][$img]['src'] = CONSTRUCTOR_URI_THEMES .'/'.$theme_new .'/'. $file['basename'];
-                }
-            }
-        }
-
-        // copy default screenshot (if not exist)
-        if (!file_exists($path_new.'/screenshot.png') &&
-             file_exists(CONSTRUCTOR_DIRECTORY.'/themes/'.$theme_old.'/screenshot.png')) {
-            if (!@copy(CONSTRUCTOR_DIRECTORY.'/themes/'.$theme_old.'/screenshot.png', $path_new.'/screenshot.png')) {
-                returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), '/themes/'.$theme_old.'/screenshot.png'));
-            }
-        } elseif (!file_exists($path_new.'/screenshot.png')) {
-            if (!@copy(CONSTRUCTOR_DIRECTORY.'/admin/images/screenshot.png', $path_new.'/screenshot.png')) {
-                returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), '/admin/images/screenshot.png'));
-            }
-        }
-
-        // read and write for owner and everybody else
-        @chmod($path_new.'/screenshot.png', $permission);
-
-        // update style file
-        if (file_exists($directory.'/themes/'.$theme_old.'/style.css')) {
-            $style = file_get_contents($directory.'/themes/'.$theme_old.'/style.css');
-            // match first comment /* ... */
-            $style = preg_replace('|\/\*(.*)\*\/|Umis', '', $style, 1);
-        } else {
-            $style = '';
-        }
-
-        $style = "/*
-Theme Name: $theme
-Theme URI: $theme_uri
-Description: $description
-Version: $version
-Author: $author
-Author URI: $author_uri
-*/".$style;
-
-        unset($constructor['theme']);
-
-        $config = "<?php \n".
-                  "/* Save on ".date('Y-m-d H:i')." */ \n".
-                  "return ".
-                  var_export($constructor, true).
-                  "\n ?>";
-
-        // update files content
-        if (!@file_put_contents(CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/style.css', $style)) {
-            returnResponse(RESPONSE_KO, sprintf(__('Can\'t save file "%s".', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/style.css'));
-        }
-
-        if (!@file_put_contents(CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/config.php', $config)) {
-            returnResponse(RESPONSE_KO, sprintf(__('Can\'t save file "%s".', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/config.php'));
-        }
-
-        returnResponse(RESPONSE_OK, __('Theme was saved, please reload page for view changes', 'constructor'));
     }
 
     /**
@@ -762,12 +639,18 @@ Author URI: $author_uri
      */
     function getPage() 
     {
-        global $constructor, $admin;
+        global $constructor, $admin, $theme_path, $theme_uri;
         /*@var $constructor array*/
         $constructor = $this->_options;
         
         /*@var $admin array*/
         $admin = $this->_admin;
+
+        /*@var $theme_path string */
+        $theme_path = $this->getThemePath();
+
+        /*@var $theme_uri string */
+        $theme_uri = $this->getThemeUri();
         ?>
         <div class='wrap'>
            <h2><?php _e('Customize Theme', 'constructor'); ?></h2>
@@ -781,7 +664,14 @@ Author URI: $author_uri
                }
                
                if ( isset( $_REQUEST['errors'] ) ) {
-                   echo '<div id="errors" class="error fade"><p><strong>'.__('Some images can\'t be upload. Please check permissions').'</strong></p></div>';
+                   if (isset($_SESSION['errors']) && $_SESSION['errors'] != '') {
+                       $errors = unserialize($_SESSION['errors']);
+                       $_SESSION['errors'] = '';
+                   }
+                   echo '<div id="errors" class="error fade"><p><strong>'.
+                            __('Some images can\'t be upload. Please check permissions').'<br/>'.
+                            join('<br/>',$errors).
+                        '</strong></p></div>';
                }
                ?>
            <div class="constructor">
