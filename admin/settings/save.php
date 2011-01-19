@@ -1,12 +1,6 @@
 <?php __('Save As', 'constructor'); // required for correct translation
 
-if ($this->isDefaultTheme($admin['theme'])) {
-    $theme_data = get_theme_data(CONSTRUCTOR_DEFAULT_THEMES .'/'.$admin['theme'].'/style.css');
-} else {
-    $theme_data = get_theme_data(CONSTRUCTOR_CUSTOM_THEMES .'/'.$admin['theme'].'/style.css');
-}
-
-
+$theme_data = $theme_uri.'/style.css';
 
 $author = strip_tags($theme_data['Author']);
 $author_uri = '';
