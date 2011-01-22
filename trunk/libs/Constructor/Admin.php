@@ -71,39 +71,15 @@ class Constructor_Admin extends Constructor_Abstract
             $blog_id = 1;
         }
 
-        // check blogs.dir
-        if (!is_dir(WP_CONTENT_DIR .'/blogs.dir') && !is_writable(WP_CONTENT_DIR)) {
+        if (!wp_mkdir_p(CONSTRUCTOR_CUSTOM_CONTENT)) {
             return false;
-        } elseif (!is_dir(WP_CONTENT_DIR .'/blogs.dir')) {
-            @mkdir(WP_CONTENT_DIR .'/blogs.dir');
+        } else {
+            if (!wp_mkdir_p(CONSTRUCTOR_CUSTOM_CACHE))  return false;
+            if (!wp_mkdir_p(CONSTRUCTOR_CUSTOM_THEMES)) return false;
+            if (!wp_mkdir_p(CONSTRUCTOR_CUSTOM_IMAGES)) return false;
+            if (!wp_mkdir_p(CONSTRUCTOR_CUSTOM_THEMES .'/current')) return false;
+            return true;
         }
-
-        // check blogs.dir/$blog_id
-        if (!is_dir(WP_CONTENT_DIR .'/blogs.dir/'.$blog_id) && !is_writable(WP_CONTENT_DIR .'/blogs.dir')) {
-            return false;
-        } elseif (!is_dir(WP_CONTENT_DIR .'/blogs.dir/'.$blog_id)) {
-            @mkdir(WP_CONTENT_DIR .'/blogs.dir/'.$blog_id);
-        }
-
-        // check blogs.dir/$blog_id/constructor
-        if (!is_dir(CONSTRUCTOR_CUSTOM_CONTENT) && !is_writable(WP_CONTENT_DIR .'/blogs.dir/'.$blog_id)) {
-            return false;
-        } elseif (!is_dir(CONSTRUCTOR_CUSTOM_CONTENT)) {
-            @mkdir(CONSTRUCTOR_CUSTOM_CONTENT);
-        }
-
-        // check permission for CONSTRUCTOR_CUSTOM_CONTENT
-        if (!is_writable(CONSTRUCTOR_CUSTOM_CONTENT)) {
-            return false;
-        }
-
-        // create subfloders
-        is_dir(CONSTRUCTOR_CUSTOM_CACHE)  or mkdir(CONSTRUCTOR_CUSTOM_CACHE);
-        is_dir(CONSTRUCTOR_CUSTOM_THEMES) or mkdir(CONSTRUCTOR_CUSTOM_THEMES);
-        is_dir(CONSTRUCTOR_CUSTOM_IMAGES) or mkdir(CONSTRUCTOR_CUSTOM_IMAGES);
-
-        is_dir(CONSTRUCTOR_CUSTOM_THEMES .'/current') or mkdir(CONSTRUCTOR_CUSTOM_THEMES .'/current');
-        return true;
     }
 
     /**
@@ -144,7 +120,7 @@ class Constructor_Admin extends Constructor_Abstract
                                     if (move_uploaded_file($files['tmp_name']['images'][$name]['src'], CONSTRUCTOR_CUSTOM_THEMES .'/current/' . $image['src'])) {
                                         // Everything for owner, read and execute for others
                                         // Use @ it's really bad, but "try {} catch {}" don't work in PHP4
-                                        @chmod(CONSTRUCTOR_CUSTOM_THEMES .'/current/' . $image['src'], 0755);
+                                        // @chmod(CONSTRUCTOR_CUSTOM_THEMES .'/current/' . $image['src'], 0755);
                                         $data['images'][$name]['src'] = $image['src'];
                                     } else {
                                         $this->_errors[] = sprintf(__('File "%s" can\'t be move to "/constructor/current/" folder','constructor'), $image['src']);
@@ -297,12 +273,9 @@ class Constructor_Admin extends Constructor_Abstract
             $this->_errors[] = sprintf(__('Directory "%s" is not writable.', 'constructor'), $path);
             return false;
         } else {
-            if (!is_writable(CONSTRUCTOR_CUSTOM_THEMES .'/')) {
+            if (!wp_mkdir_p($path)) {
                 $this->_errors[] = sprintf(__('Directory "%s" is not writable.', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/');
                 return false;
-            } else {
-                @mkdir($path);
-                @chmod($path, $permission);
             }
         }
 
@@ -318,7 +291,7 @@ class Constructor_Admin extends Constructor_Abstract
                          $this->_errors[] = sprintf(__('Can\'t copy file "%s" to "%s".', 'constructor'), $old_image, $new_image);
                     }
                     // read and write for owner and everybody else
-                    @chmod($new_image, $permission);
+                    // @chmod($new_image, $permission);
                 }
             }
         }
@@ -330,9 +303,9 @@ class Constructor_Admin extends Constructor_Abstract
                 return false;
             }
         }
-
+ 
         // read and write for owner and everybody else
-        @chmod($path.'/screenshot.png', $permission);
+        // @chmod($path.'/screenshot.png', $permission);
 
         // update style file
         if (file_exists($path.'/style.css')) {
