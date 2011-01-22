@@ -49,11 +49,8 @@ class Constructor_Ajax extends Constructor_Abstract
             !is_writable($path_new)) {
             $this->returnResponse(RESPONSE_KO,  sprintf(__('Directory "%s" is not writable.', 'constructor'), $path_new));
         } else {
-            if (!is_writable(CONSTRUCTOR_CUSTOM_THEMES .'/')) {
+            if (!wp_mkdir_p($path_new)) {
                 $this->returnResponse(RESPONSE_KO, sprintf(__('Directory "%s" is not writable.', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/'));
-            } else {
-                @mkdir($path_new);
-                @chmod($path_new, $permission);
             }
         }
         // copy all theme images to new? directory
@@ -68,7 +65,7 @@ class Constructor_Ajax extends Constructor_Abstract
                          $this->returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), $old_image));
                     }
                     // read and write for owner and everybody else
-                    @chmod($new_image, $permission);
+                    // @chmod($new_image, $permission);
                 }
             }
         }
@@ -86,7 +83,7 @@ class Constructor_Ajax extends Constructor_Abstract
         }
 
         // read and write for owner and everybody else
-        @chmod($path_new.'/screenshot.png', $permission);
+        // @chmod($path_new.'/screenshot.png', $permission);
 
         // update style file
         if (file_exists($path_old.'/style.css')) {
@@ -115,10 +112,12 @@ Author URI: $author_uri
                   "\n ?>";
 
         // update files content
+        // style CSS
         if (!@file_put_contents(CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/style.css', $style)) {
             $this->returnResponse(RESPONSE_KO, sprintf(__('Can\'t save file "%s".', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/style.css'));
         }
 
+        // theme config
         if (!@file_put_contents(CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/config.php', $config)) {
             $this->returnResponse(RESPONSE_KO, sprintf(__('Can\'t save file "%s".', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/config.php'));
         }
