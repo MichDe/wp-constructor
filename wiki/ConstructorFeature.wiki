@@ -11,7 +11,7 @@ Available following localizations:
  * Danish - Georg S. Adamsen (http://wordpress.blogos.dk/s%C3%B8g-efter-downloads/?did=171)
  * Dutch - Martin Reinders, Arjen Buitelaar (http://broodje-kebab.nl/blog/)
  * French - Nicolas Loeuillet
- * Hungarian - Peter Aprily (www.solarside.hu)
+ * Hungarian - Peter Aprily (http://www.solarside.hu)
  * Italian - gio gio (http://people.unica.it/)
  * Japanese - Toshi Oshio (http://blog.falcon-space.net/2010/01/wpconstructor-jp/)
  * Lithuanian - Tomas Kikutis
