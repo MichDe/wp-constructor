@@ -1,6 +1,6 @@
 <?php __('CSS', 'constructor'); // required for correct translation
 
-$css_file = $theme_uri .'/style.css';
+$css_file = $theme_path .'/style.css';
 
 ?>
 <table class="form-table">

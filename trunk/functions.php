@@ -11,13 +11,6 @@
  * @author   Anton Shevchuk <AntonShevchuk@gmail.com>
  * @link     http://anton.shevchuk.name
  */
-// try to receive blog Id
-global $blog_id;
-
-if (!$blog_id) {
-    $blog_id = 1;
-}
-
 // need for defence
 define('CONSTRUCTOR', true);
 
@@ -30,12 +23,14 @@ define('CONSTRUCTOR_DIRECTORY_URI', get_template_directory_uri());
 define('CONSTRUCTOR_DEFAULT_THEMES', CONSTRUCTOR_DIRECTORY.'/themes');
 define('CONSTRUCTOR_DEFAULT_THEMES_URI', CONSTRUCTOR_DIRECTORY_URI.'/themes');
 
-define('CONSTRUCTOR_CUSTOM_CONTENT',  WP_CONTENT_DIR .'/blogs.dir/'.$blog_id.'/constructor');
+$wp_upload = wp_upload_dir();
+
+define('CONSTRUCTOR_CUSTOM_CONTENT',  $wp_upload['basedir'].'/constructor');
 define('CONSTRUCTOR_CUSTOM_CACHE',    CONSTRUCTOR_CUSTOM_CONTENT.'/cache');
 define('CONSTRUCTOR_CUSTOM_IMAGES',   CONSTRUCTOR_CUSTOM_CONTENT.'/images');
 define('CONSTRUCTOR_CUSTOM_THEMES',   CONSTRUCTOR_CUSTOM_CONTENT.'/themes');
 
-define('CONSTRUCTOR_CUSTOM_CONTENT_URI', WP_CONTENT_URL .'/blogs.dir/'.$blog_id.'/constructor');
+define('CONSTRUCTOR_CUSTOM_CONTENT_URI', $wp_upload['baseurl'].'/constructor');
 define('CONSTRUCTOR_CUSTOM_CACHE_URI',   CONSTRUCTOR_CUSTOM_CONTENT_URI.'/cache');
 define('CONSTRUCTOR_CUSTOM_IMAGES_URI',  CONSTRUCTOR_CUSTOM_CONTENT_URI.'/images');
 define('CONSTRUCTOR_CUSTOM_THEMES_URI',  CONSTRUCTOR_CUSTOM_CONTENT_URI.'/themes');

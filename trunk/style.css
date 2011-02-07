@@ -4,7 +4,7 @@ Theme URI: http://code.google.com/p/wp-constructor/
 Description: Wordpress Constructor Theme for those who want to create a unique blog design quickly and effortlessly (many layouts, configured colors, custom fonts and slideshow, etc).
 Start build your own theme from <a href="themes.php?page=functions.php">settings page</a>.
  
-Version: 1.5.3
+Version: 1.5.4
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -173,16 +173,12 @@ div.aligncenter {
     overflow:visible;
 }
 #menu ul.menu {
-    border-style:none none none dotted;
-    border-width:0 0 0 1px;
     margin: 0 10px;
     float:left;
 }
 #menu li {
     float: left;
     position:relative;
-    border-style:none dotted none none;
-    border-width:0 1px 0 0;
     list-style:none;
 }
 
@@ -197,6 +193,7 @@ div.aligncenter {
 	#menu li li:hover.indicator { background-position: 98%  -49px }
 
 #menu ul ul {
+    z-index:302;
     top:40px;
     left:0;
     position:absolute;
@@ -207,8 +204,6 @@ div.aligncenter {
     width:auto !important; /*IE fix*/
     width:122px;
     margin-left:-1px !important;
-    border-style:dotted none none none !important;
-    border-width:1px 0 0 0 !important;
 }
 #menu ul ul ul {
     z-index:303;
@@ -218,8 +213,6 @@ div.aligncenter {
 #menu li li {
     float:none;
     width:auto;
-    border-style:none dotted dotted dotted;
-    border-width:0 1px 1px 1px;
 }
 * html #menu li li {
     width:120px
@@ -334,9 +327,14 @@ div.aligncenter {
     margin-left:12px;
 } 
 .hentry .entry p{
-    text-indent:12px;
     margin-bottom:4px
 }
+
+.hentry .entry a,
+.hentry .footer a{
+    text-decoration:underline;
+}
+
 .hentry .entry .crop,
 .hentry .entry img {
     padding:4px;
@@ -478,7 +476,6 @@ div.aligncenter {
 }
 .tile a {
     display:block;
-    border:0 !important;
 }
 
 .tile .thumbnail {
@@ -554,9 +551,6 @@ div.aligncenter {
 
 }
 .list .title {
-    /*padding:8px 0 8px 12px;
-    margin:0
-    border-bottom:1px solid #f0f;*/
     text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
 	box-shadow: 0 1px 2px rgba(0,0,0,0.5);
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
@@ -597,11 +591,23 @@ div.aligncenter {
     height:32px;
     margin:0 20px
 }
-.navigation .wp-pagenavi {
+.wp-pagenavi {
     text-align:center;
     margin:8px 0;
-    padding:8px
+    padding:8px;
+	clear: both;
 }
+
+.wp-pagenavi a, .wp-pagenavi span {
+	text-decoration: none;
+	padding: 3px 5px;
+	margin: 2px;
+}
+
+.wp-pagenavi span.current {
+	font-weight: bold;
+}
+
 /*/Navigation*/
 /*Widgets*/
 .widget {}
@@ -714,7 +720,7 @@ div.aligncenter {
 /*/Search*/
 /*Form*/
 input, select, textarea {
-    font-size:1.4em;
+    font-size:1.2em;
     padding: 4px;
     border-width:1px;
     border-style:solid;
@@ -722,7 +728,8 @@ input, select, textarea {
 fieldset{
     border-width:1px;
     border-style:solid;
-    padding: 8px
+    padding: 8px;
+    margin: 8px 0;
 }
 textarea {width: 98%}
 
@@ -730,19 +737,26 @@ textarea {width: 98%}
 /*/Form*/
 /*Table*/
 table {
-    border-collapse:collapse
+    border-collapse:collapse;
+	border-spacing:0;
+    border-width:1px;
+    border-style:solid;
+	margin: 0 -1px 24px 0;
+	text-align: left;
+	width: 100%;
 }
-
 th {
-    font-size:1.2em;
-    padding:4px 6px;
-    border-width:1px;
-    border-style:solid
+	color: #888;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 18px;
+	padding: 9px 24px;
 }
-td {
-    padding:4px;
-    border-width:1px;
-    border-style:solid
+tr td {
+    border-top-width:1px;
+    border-top-style:solid;
+
+	padding: 6px 24px;
 }
 /*/Table*/
 /*Comments*/
@@ -800,7 +814,7 @@ td {
 }
 .comment-meta a,
 .comment-meta a:hover{
-    border:0 !important
+    text-decoration:none
 }
 .reply {
     clear:both;
@@ -880,9 +894,6 @@ td {
     padding-top: 4px;
     margin: 10px;
 }
-.wp-caption a {
-    border: 0 none !important;
-}
 .wp-caption img {
     margin: 0 !important;
     padding: 0 !important;
@@ -901,8 +912,7 @@ td {
 /*/Caption*/
 /*Calendar*/
 #wp-calendar {
-    border-collapse: collapse;
-    margin-left:6px
+    
 }
 #wp-calendar caption{
     padding:4px 0;
@@ -910,6 +920,7 @@ td {
 }
 #wp-calendar th {
     border:0;
+    padding:4px;
     text-align:center;
     width:2em;
 }
@@ -1025,7 +1036,6 @@ td {
     padding:4px;
     text-align:center;
     display:block;
-    border:0;
 }
 /*/Archive*/
 /*/Templates*/

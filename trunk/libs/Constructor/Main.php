@@ -34,13 +34,6 @@ class Constructor_Main extends Constructor_Abstract
      */
     function addThemeStyles() 
     {
-        global $blog_id;
-        
-        // need for wordpress MU and WP3
-        if (!$blog_id) {
-            $blog_id = 1;
-        }
-
         // load style
         if (file_exists(CONSTRUCTOR_CUSTOM_CACHE .'/style.css')) {
             wp_enqueue_style('constructor-style',   CONSTRUCTOR_CUSTOM_CACHE_URI .'/style.css');

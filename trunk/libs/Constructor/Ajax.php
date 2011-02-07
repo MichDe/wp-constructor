@@ -18,8 +18,6 @@ class Constructor_Ajax extends Constructor_Abstract
     function save()
     {
         global $current_user, $template_uri;
-        // setup permissions for save
-        $permission = 0777;
 
         // get theme options
         $constructor = $this->_options;
@@ -64,8 +62,6 @@ class Constructor_Ajax extends Constructor_Abstract
                     if (!@copy($old_image, $new_image)) {
                          $this->returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), $old_image));
                     }
-                    // read and write for owner and everybody else
-                    // @chmod($new_image, $permission);
                 }
             }
         }
@@ -81,9 +77,6 @@ class Constructor_Ajax extends Constructor_Abstract
                 $this->returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), '/admin/images/screenshot.png'));
             }
         }
-
-        // read and write for owner and everybody else
-        // @chmod($path_new.'/screenshot.png', $permission);
 
         // update style file
         if (file_exists($path_old.'/style.css')) {
@@ -137,7 +130,53 @@ Author URI: $author_uri
 
         die();
     }
-    
+
+    /**
+     * clean
+     *
+     * @return void
+     */
+    function clean()
+    {
+        delete_option('constructor');
+        delete_option('constructor_admin');
+
+        if ($this->_clean(CONSTRUCTOR_CUSTOM_CONTENT)) {
+            $this->returnResponse(RESPONSE_OK, __('Theme was cleaned', 'constructor'));
+        } else {
+            $this->returnResponse(RESPONSE_KO, sprintf(__('System can&#39;t remove folder &quot;%s&quot;', 'constructor'), CONSTRUCTOR_CUSTOM_CONTENT));
+        }
+    }
+
+    /**
+     * _clean
+     *
+     * Used for remove folders in $wp_uploads['basepath'] .'/constructor'
+     *
+     * @return void
+     */
+    function _clean($folder)
+    {
+        if (!is_dir($folder)) {
+            // not exists or not dir
+            return true;
+        }
+        $files = scandir($folder);
+        $files = array_diff($files, array('.','..'));
+        if (!empty($files)) {
+            foreach ($files as $file) {
+                if (is_dir($folder .'/'. $file)) {
+                    if (!$this->_clean($folder .'/'. $file)) {
+                        return false;
+                    }
+                } elseif (!@unlink($folder .'/'. $file)) {
+                    return false;
+                }
+            }
+        }
+        return @rmdir($folder);
+    }
+
     /**
      * Return simple JSON response
      *

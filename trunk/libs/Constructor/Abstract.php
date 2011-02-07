@@ -251,12 +251,6 @@ class Constructor_Abstract
      */
     function _updateCache()
     {
-        global $blog_id;
-
-        if (!$blog_id) {
-            $blog_id = 1;
-        }
-
         $css = "/*generated " . date('Y-m-d H:i') . "*/\n\n";
 
         ob_start();
