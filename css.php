@@ -138,7 +138,8 @@ CSS;
         $opacity = <<<CSS
 .opacity {
     background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBg8AUIMAAAUgBOUWVeTwAAAABJRU5ErkJggg==);
-    background:rgba(0, 0, 0, 0.3); 
+    background:rgba(0, 0, 0, 0.3);
+
 }
 CSS;
         break;
@@ -147,6 +148,7 @@ CSS;
 .opacity {
     background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYmBgaAAIMAAAjwCD5Hc2/AAAAABJRU5ErkJggg==);
     background:rgba(0, 0, 0, 0.5);
+
 }
 CSS;
         break;
@@ -155,6 +157,7 @@ CSS;
 .opacity {
     background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBgOAMQYAAA0QDNW2hbhQAAAABJRU5ErkJggg==);
     background:rgba(0, 0, 0, 0.8);
+    
 }
 CSS;
         break;
@@ -163,6 +166,7 @@ CSS;
 .opacity {
     background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//vy9AgAEACUkDS4BbGHwAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.3);
+
 }
 CSS;
         break;
@@ -171,6 +175,7 @@ CSS;
 .opacity {
     background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/P///xmAAAMACc0DyzeP8KAAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.8);
+
 }
 CSS;
         break;
@@ -180,6 +185,7 @@ CSS;
 .opacity {
     background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/v//fyxAgAEACWgDXjXePfkAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.5);
+    
 }
 CSS;
         break;
@@ -504,7 +510,7 @@ body {
 body,
 a { color:{$color_text} }
 
-hr { color: {$color1}; background-color: {$color1} }
+hr { background-color: {$color1} }
 
 h1,h2,h3,h4,h5,h6 {{$header_font}}
 
@@ -518,17 +524,23 @@ h6 { color:{$color3} }
 pre {{$content_font}}
 
 a:hover { color:{$color1} }
+table {
+    border-color:{$color_border};
+}
 table caption {
-    color:{$color2};
+    color:{$color1};
 }
-table th {
-    color:{$color_text};
-    background-color:{$color3};
-    border-color:{$color_border}
+th {
+    color:{$color1};
 }
-table td {
-    border-color:{$color_border}
+tr td {
+    border-top-color:{$color_border};
 }
+tr.odd td {
+	background: {$color_bg2};
+}
+
+
 /*Colors*/
 /* text colors */
 .color0 { color:{$color_opacity} }
@@ -670,9 +682,7 @@ fieldset{
     {$title_align}
 }
 
-#menu { {$menu} border-color: {$color_border} }
-    #menu ul {  border-color: {$color_border} }
-    #menu li {  border-color: {$color_border} }
+#menu { {$menu} }
     #menu li li { background-color:{$color_bg}  }
     #menu li:hover { background-color:{$color_bg2} }
     
@@ -727,7 +737,7 @@ fieldset{
    color:{$color_text};
 }
 #wp-calendar tbody a:hover {
-   background-color: {$color3};
+   background-color: {$color_bg};
 }
 #wp-calendar #today {    
    color:{$color1};
@@ -735,18 +745,6 @@ fieldset{
 }
 /*/Calendar*/
 /*Post*/
-.hentry .title a,
-.hentry .title span{
-    /*border-bottom:3px dotted {$color3}*/
-}
-.hentry .entry a,
-.hentry .footer a{
-    border-bottom:1px dotted {$color_text}
-}
-.hentry .entry a:hover,
-.hentry .footer a:hover{
-    border-bottom:1px solid {$color1}
-}
 .hentry .entry .crop,
 .hentry .entry img {
     border-color:{$color_border}

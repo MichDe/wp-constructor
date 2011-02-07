@@ -79,6 +79,7 @@ return array(
                         "text2"   => '#ccc',
                         "border"  => '#555',
                         "border2" => '#999',
+                        "form"    => '#333',
 
                         "header1"   => '#ff6600',
                         "header2"   => '#ff7711',

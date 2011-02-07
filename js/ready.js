@@ -18,21 +18,21 @@
 					.addClass('hover')
 					.children('ul')
 						.stop(true,true)
-						.slideDown()
+						.show()
 					;
 				$(this).find('div.menu-header-menu-container')
 					   .children('ul')
                            .stop(true,true)
-                           .slideDown()
+                           .show()
 					;
 			}, function(){
 				$(this)
 					.removeClass('hover')
 					.children('ul')
-					.slideUp()
+					.hide()
 					;
 				$(this).find('div.menu-header-menu-container')
-					   .children('ul').slideUp()
+					   .children('ul').hide()
 					;
 			});
         }

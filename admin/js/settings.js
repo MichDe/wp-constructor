@@ -59,7 +59,7 @@ $(document).ready(function(){
     $('#save-link').click(function(){
         // @todo hardcode object
         var data = {
-            action: "constructor_admin_save",
+            'action': "constructor_admin_save",
             'theme':$('#save-theme-name').val(),
             'theme-uri':$('#save-theme-uri').val(),
             'description':$('#save-description').val(),
@@ -68,7 +68,7 @@ $(document).ready(function(){
             'author-uri':$('#save-author-uri').val()
         };
 
-        jQuery.ajax({
+        $.ajax({
 			type: "POST",
 			url: $(this).attr("href"),
 			data: data,
@@ -82,6 +82,30 @@ $(document).ready(function(){
             }
 		});
 
+        return false;
+    });
+
+    // Clean button
+    $('#clean-link').click(function(){
+
+        if (confirm('Are you sure you want to remove all changes?')) {
+            var data = {
+                'action': "constructor_admin_clean"
+            };
+            $.ajax({
+                type: "POST",
+                url: $(this).attr("href"),
+                data: data,
+                dataType: "json",
+                success: function(response) {
+                    if (response.status == 'ok') {
+                        Messages.addNotice(response.message, null);
+                    } else {
+                        Messages.addWarning(response.message, null);
+                    }
+                }
+            });
+        }
         return false;
     });
     

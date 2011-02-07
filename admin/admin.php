@@ -32,6 +32,7 @@ $constructor_modules = array(
     __('Images',  'constructor') => 'images',
     __('Slideshow', 'constructor') => 'slideshow',
     __('Save',    'constructor') => 'save',
+    __('Clean',   'constructor') => 'clean',
     __('Help',    'constructor') => 'help'
 );
 

@@ -1,6 +1,6 @@
 <?php __('Save As', 'constructor'); // required for correct translation
 
-$theme_data = $theme_uri.'/style.css';
+$theme_data = get_theme_data($theme_path.'/style.css');
 
 $author = strip_tags($theme_data['Author']);
 $author_uri = '';

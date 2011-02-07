@@ -14,6 +14,10 @@ var Messages = {
 			    
     addMessage:function(type, text, callback) {
 
+        jQuery('#message').detach();
+
+        console.log(text);
+
         var el = jQuery(Messages['_type'+type]);
             el.find('p').append(text);
             el.css({display:'none'});

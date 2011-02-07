@@ -43,7 +43,7 @@ class Constructor_Admin extends Constructor_Abstract
                  __('Please check permissions for next directories:', 'constructor').'</strong></p>'.
                  '<ul>'.
                     '<li>'.WP_CONTENT_DIR.'</li>'.
-                    '<li>'.WP_CONTENT_DIR.'/blogs.dir</li>'.
+                    '<li>'.WP_CONTENT_DIR.'/constructor</li>'.
                     '<li>'.CONSTRUCTOR_CUSTOM_CONTENT.'</li>'.
                  '</ul>'.
                  '</div>';
@@ -65,12 +65,6 @@ class Constructor_Admin extends Constructor_Abstract
      */
     function permissions()
     {
-        global $blog_id;
-
-        if (!$blog_id) {
-            $blog_id = 1;
-        }
-
         if (!wp_mkdir_p(CONSTRUCTOR_CUSTOM_CONTENT)) {
             return false;
         } else {
@@ -118,9 +112,6 @@ class Constructor_Admin extends Constructor_Abstract
                                     }
 
                                     if (move_uploaded_file($files['tmp_name']['images'][$name]['src'], CONSTRUCTOR_CUSTOM_THEMES .'/current/' . $image['src'])) {
-                                        // Everything for owner, read and execute for others
-                                        // Use @ it's really bad, but "try {} catch {}" don't work in PHP4
-                                        // @chmod(CONSTRUCTOR_CUSTOM_THEMES .'/current/' . $image['src'], 0755);
                                         $data['images'][$name]['src'] = $image['src'];
                                     } else {
                                         $this->_errors[] = sprintf(__('File "%s" can\'t be move to "/constructor/current/" folder','constructor'), $image['src']);
@@ -290,8 +281,6 @@ class Constructor_Admin extends Constructor_Abstract
                     if (!@copy($old_image, $new_image)) {
                          $this->_errors[] = sprintf(__('Can\'t copy file "%s" to "%s".', 'constructor'), $old_image, $new_image);
                     }
-                    // read and write for owner and everybody else
-                    // @chmod($new_image, $permission);
                 }
             }
         }
@@ -303,9 +292,6 @@ class Constructor_Admin extends Constructor_Abstract
                 return false;
             }
         }
- 
-        // read and write for owner and everybody else
-        // @chmod($path.'/screenshot.png', $permission);
 
         // update style file
         if (file_exists($path.'/style.css')) {
@@ -409,8 +395,6 @@ Author URI: $author_uri
      */
     function addThemeStyles() 
     {
-        global $blog_id;
-        
         // basic style
         //add_editor_style('style.css');
 
