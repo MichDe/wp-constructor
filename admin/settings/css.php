@@ -33,7 +33,7 @@ $css_file = $theme_path .'/style.css';
             <dd>0, solid 1px red, dotted 2px green, etc.</dd>
         </dl>
         <h4><?php _e('CSS example', 'constructor'); ?></h4>
-        <?php _e('Title');?>
+        <?php _e('Title', 'constructor');?>
 <pre>#name a{
     color:red !important;;
 }
@@ -41,15 +41,15 @@ $css_file = $theme_path .'/style.css';
     color:green !important;;
 }
 </pre>
-        <?php _e('Header menu');?>
+        <?php _e('Header menu', 'constructor');?>
 <pre>#menu li a, #menu li span{
     font-size:1.2em;
 }</pre>
-        <?php _e('Sidebar');?>
+        <?php _e('Sidebar', 'constructor');?>
 <pre>.sidebar{
     font-size:1.4em;
 }</pre>
-        <?php _e('Content');?>
+        <?php _e('Content', 'constructor');?>
 <pre>.hentry .title { /* post title */
     border:0;
 }

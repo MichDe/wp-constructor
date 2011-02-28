@@ -10,9 +10,9 @@
 
         // Header Drop-Down Menu
         if ($("#menu ul ul").length > 0) {
-			
+
 			$("#menu li:has(ul)").addClass('indicator');
-			
+
 			$("#menu li:has(ul)").hover(function(){
 				$(this)
 					.addClass('hover')
@@ -36,7 +36,7 @@
 					;
 			});
         }
-		
+
         // Header Search Form
         var $menuSearch = $('#menusearchform .s');
         $menuSearch.mouseenter(function(){

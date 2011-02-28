@@ -4,7 +4,7 @@ Theme URI: http://code.google.com/p/wp-constructor/
 Description: Wordpress Constructor Theme for those who want to create a unique blog design quickly and effortlessly (many layouts, configured colors, custom fonts and slideshow, etc).
 Start build your own theme from <a href="themes.php?page=functions.php">settings page</a>.
  
-Version: 1.5.4
+Version: 1.5.5
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -56,23 +56,21 @@ pre {
 }
 
 blockquote{ padding-left:6px }
-
-dl {
-    font-size:1.2em;
+dl { font-size:1.2em;}
+dt { font-weight:700 !important; }
+dd { }
+del { text-decoration: line-through; }
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
-dt {
-    width:120px;
-    font-weight:700 !important;
-}
-dd {
-
-}
-
 a {
     outline:none;
     text-decoration:none;
 }
-
+a img {
+	border: none;
+}
 .aligncenter,
 div.aligncenter {
     display: block;
@@ -84,6 +82,12 @@ div.aligncenter {
 .clear { clear:both }
 .empty { height:0 }
 .hide  { display:none }
+
+/*Images*/
+img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img {
+    height: auto;
+    max-width: 100%;
+}
 
 /*Autogenerate styles*/
 .categories {}
@@ -115,7 +119,7 @@ div.aligncenter {
 #container {
     margin:0;
 	float:left;
-    min-height:600px
+    min-height:360px
 }
 #content {
     overflow:hidden;
@@ -335,13 +339,6 @@ div.aligncenter {
     text-decoration:underline;
 }
 
-.hentry .entry .crop,
-.hentry .entry img {
-    padding:4px;
-    border-style:solid;
-    border-width:1px;
-}
-
 .hentry .entry img.alignleft {
     margin: 0 4px 4px 0
 }
@@ -367,6 +364,32 @@ div.aligncenter {
 .hentry .entry li {
     padding:2px;
 }
+
+.hentry .gallery {
+	margin: 0 auto 18px;
+}
+.hentry .gallery .gallery-item {
+	float: left;
+	margin-top: 0;
+	text-align: center;
+	width: 33%;
+}
+.hentry .gallery .gallery-caption {
+    font-size:0.8em;
+	margin: 0 0 12px;
+}
+.hentry .gallery dl {
+	margin: 0;
+}
+.hentry .gallery img {
+    border-width:2px;
+    border-style:solid;
+	padding:4px;
+}
+.hentry .gallery br+br {
+	display: none;
+}
+
 .hentry .pages {
     font-size:1.4em
 }
@@ -452,22 +475,26 @@ div.aligncenter {
 /*/Author*/
 /*Tile*/
 .tile {
-    clear:none;
-    position:relative;
-    width:320px;
-    height:300px;
-    float:left;
-    margin:0 6px 10px 6px;
+    padding: 5px !important;
 }
 
-.tile .title{
-    width:306px;
+.tile .hentry {
+    clear:none;
+    position:relative;
+    width:328px;
+    height:328px;
+    float:left;
+    margin:4px;
+}
+
+.tile .title {
+    width:100%;
     z-index:10;
     position:absolute;
     top:8px;
-    left:2px;
+    left:0;
     text-align:left;
-    padding:0 6px;
+    text-indent:6px;
     margin:0;
 }
 
@@ -483,7 +510,7 @@ div.aligncenter {
     position:absolute;
     top:2px;
     left:4px;
-    width:312px;
+    width:320px;
     margin:2px auto;
 }
 
@@ -524,7 +551,7 @@ div.aligncenter {
     float:left;
     margin:0 6px 10px 6px;
 }
-.tile .thumbnail {
+.tiles .thumbnail {
     width:128px;
     height:128px;
 }
@@ -893,6 +920,8 @@ tr td {
     text-align: center;
     padding-top: 4px;
     margin: 10px;
+    border-width: 2px;
+    border-style: solid;
 }
 .wp-caption img {
     margin: 0 !important;
