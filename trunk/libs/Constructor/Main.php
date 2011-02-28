@@ -108,7 +108,7 @@ class Constructor_Main extends Constructor_Abstract
         $options = json_encode($options);
         
         echo '<div class="wp-sl"></div>';
-        wp_enqueue_script('constructor-slideshow', CONSTRUCTOR_DIRECTORY_URI.'/js/jquery.wp-slideshow.js', array('jquery'));
+        wp_enqueue_script('constructor-slideshow', CONSTRUCTOR_DIRECTORY_URI.'/js/jquery.wp-slideshow.js');
         wp_print_scripts('constructor-slideshow');
         echo "
         <script type='text/javascript'>

@@ -169,5 +169,5 @@ Array.prototype.indexOf = function(obj) {
 }
 
 Array.prototype.has = function(obj) {
-  return this.indexOf(obj) >= 0;
+  return this.prototype.indexOf(obj) >= 0;
 }

@@ -43,7 +43,7 @@ if (function_exists('add_theme_support')) { // Added in 2.9
 	add_theme_support('post-thumbnails' );
 	set_post_thumbnail_size(64, 64, true); // Normal post thumbnail
 	add_image_size('list-post-thumbnail', 128, 128, true );
-	add_image_size('tile-post-thumbnail', 312, 292, true );
+	add_image_size('tile-post-thumbnail', 320, 320, true );
 	    
 	// This theme uses wp_nav_menu()
 	add_theme_support('menus');
@@ -175,7 +175,7 @@ if (!is_admin()) {
      * You should be create setter for this is function
      */
     if (!isset($content_width)) {
-        $content_width = $main->_options['layout']['width'];
+        $content_width = $main->getContentWidth();
     }
 
     /* Alias section for fast theme development */    
@@ -274,7 +274,7 @@ if (!is_admin()) {
      *
      * @return string
      */
-    function get_constructor_noimage($width = 312, $height = 292, $align = 'none') 
+    function get_constructor_noimage($width = 320, $height = 320, $align = 'none')
     {
         return '<img class="thumb align'.$align.'" src="' .CONSTRUCTOR_DIRECTORY_URI. '/images/noimage.png" width="'.$width.'px" height="'.$height.'px" alt="' .__('No Image', 'constructor'). '"/>';
     }

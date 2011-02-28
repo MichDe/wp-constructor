@@ -238,7 +238,7 @@ class Constructor_Abstract
 
         if (function_exists('add_image_size')) {
             $size = $this->getSlideshowSize();
-	        add_image_size('slideshow-thumbnail', $size['width'], $size['height']);
+	        add_image_size('slideshow-thumbnail', $size['width'], $size['height'], true);
         }
     }
 
@@ -384,6 +384,29 @@ class Constructor_Abstract
     }
 
     /**
+     * getContentWidth
+     *
+     * @return integer
+     */
+    function getContentWidth()
+    {
+        // switch statement for $this->_options['sidebar']
+        switch ($this->_options['sidebar']) {
+            case 'none':
+                return (int)($this->_options['layout']['width'] - 4);
+                break;
+            case 'two':
+            case 'two-right':
+            case 'two-left':
+                return (int)($this->_options['layout']['width'] - $this->_options['layout']['sidebar'] - $this->_options['layout']['extra'] - 6);
+                break;
+            default:
+                return (int)($this->_options['layout']['width'] - $this->_options['layout']['sidebar'] - 4);
+                break;
+        }
+    }
+
+    /**
      * getSlideshowSize
      *
      * @return array
@@ -399,22 +422,7 @@ class Constructor_Abstract
         if ($this->_options['slideshow']['layout'] == 'over') {
             $return['width'] = (int)($this->_options['layout']['width'] - 2);
         } else {
-            // switch statement for $this->_options['sidebar']
-            switch ($this->_options['sidebar']) {
-                case 'none':
-                    $return['width'] = (int)($this->_options['layout']['width'] - 4);
-                    break;
-                case 'two':
-                case 'two-right':
-                case 'two-left':
-                    $return['width'
-                    ] = (int)($this->_options['layout']['width'] - $this->_options['layout']['sidebar'] - $this->_options['layout']['extra'] - 6);
-                    break;
-                default:
-                    $return['width'
-                    ] = (int)($this->_options['layout']['width'] - $this->_options['layout']['sidebar'] - 4);
-                    break;
-            }
+            $return['width'] = $this->getContentWidth();
         }
         return $return;
     }

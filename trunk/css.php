@@ -139,7 +139,7 @@ CSS;
 .opacity {
     background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBg8AUIMAAAUgBOUWVeTwAAAABJRU5ErkJggg==);
     background:rgba(0, 0, 0, 0.3);
-
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000)";*/
 }
 CSS;
         break;
@@ -148,7 +148,7 @@ CSS;
 .opacity {
     background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYmBgaAAIMAAAjwCD5Hc2/AAAAABJRU5ErkJggg==);
     background:rgba(0, 0, 0, 0.5);
-
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000, endColorstr=#80000000)";*/
 }
 CSS;
         break;
@@ -157,7 +157,7 @@ CSS;
 .opacity {
     background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBgOAMQYAAA0QDNW2hbhQAAAABJRU5ErkJggg==);
     background:rgba(0, 0, 0, 0.8);
-    
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#AA000000, endColorstr=#AA000000)";*/
 }
 CSS;
         break;
@@ -166,7 +166,7 @@ CSS;
 .opacity {
     background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//vy9AgAEACUkDS4BbGHwAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.3);
-
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#50FFFFFF, endColorstr=#50FFFFFF)";*/
 }
 CSS;
         break;
@@ -175,7 +175,7 @@ CSS;
 .opacity {
     background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/P///xmAAAMACc0DyzeP8KAAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.8);
-
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#AAFFFFFF, endColorstr=#AAFFFFFF)";*/
 }
 CSS;
         break;
@@ -185,7 +185,7 @@ CSS;
 .opacity {
     background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/v//fyxAgAEACWgDXjXePfkAAAAASUVORK5CYII=);
     background:rgba(255, 255, 255, 0.5);
-    
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#80FFFFFF, endColorstr=#80FFFFFF)";*/
 }
 CSS;
         break;
@@ -683,6 +683,7 @@ fieldset{
 }
 
 #menu { {$menu} }
+    #menu ul ul { border: 1px solid {$color_border};}
     #menu li li { background-color:{$color_bg}  }
     #menu li:hover { background-color:{$color_bg2} }
     
@@ -715,14 +716,17 @@ fieldset{
 /*Images*/
 .wp-caption {
    color:{$color_text};
-   border: 1px solid {$color_border};
-   background-color: {$color_bg2};
+   border-color: {$color_border};
+   /*background-color: {$color_border};*/
 }
 .wp-caption-text {
    color:{$color_text};
 }
-.gallery-caption {
-   color:{$color_text};
+.gallery .gallery-caption {
+   color:{$color_text2};
+}
+.gallery img {
+   border-color: {$color_border};
 }
 /*/Images*/
 /*Calendar*/

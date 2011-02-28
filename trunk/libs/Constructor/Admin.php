@@ -52,8 +52,6 @@ class Constructor_Admin extends Constructor_Abstract
         // process request
         $this->request();
 
-        add_action('admin_head', array($this, 'addThemeScripts'), 2);
-        add_action('admin_head', array($this, 'addThemeStyles'),  3);
         add_action('admin_menu', array($this, 'addMenuItem'));
         
         add_action('switch_theme', array($this, 'disable'));
@@ -420,7 +418,7 @@ Author URI: $author_uri
     function addMenuItem()
     {
         // super admin
-        add_theme_page(
+        $page = add_theme_page(
             __('Customize Theme', 'constructor'),
             __('Customize', 'constructor'),
             'edit_themes',
@@ -436,6 +434,9 @@ Author URI: $author_uri
             'admin/admin.php',
             array($this, 'getPage')
         );
+        
+        add_action('admin_head-'. $page, array($this, 'addThemeScripts'), 2);
+        add_action('admin_head-'. $page, array($this, 'addThemeStyles'),  3);
     }
     
     /**
