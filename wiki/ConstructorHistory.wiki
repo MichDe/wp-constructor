@@ -1,10 +1,19 @@
 #summary Version history
 #labels Featured
 
-== 1.5.0 ==
+== 1.5.6 ==
+  * Change transparent properties (now is image for all browsers)
+
+== 1.5.5 ==
+  * Many small fixes (repository requriements)
+  * Fix for wordpress 3.1
+
+= 1.5.0 =
   * Create notice for search field in menu
   * Change save process, now constructor use folder blogs.dir for save custom themes and cache.
+  * Change donation address
 
+==== Theme Changes ====
 For update themes you should be change path to images in theme `config.php` - remove `themes/%theme_name%/` from image path:
 {{{
 // before
@@ -17,10 +26,8 @@ For update themes you should be change path to images in theme `config.php` - re
     "header"   => array('src'=>'header.jpg', 'pos'=>'right top', 'repeat'=>'no-repeat'),
 ),
 
-
 }}}
 
-  * Change donation address
 
 == 1.4.4 ==
   * Added Hungarian, Catalon, Dutch languages 
@@ -42,27 +49,74 @@ For update themes you should be change path to images in theme `config.php` - re
   * Fixed Javascript issue on admin panel
   * Fixed small CSS issues
 
-== 0.9.5 ==
-  * Wordpress 3.0 navigation menu support
-  * new top menu feature - stretch across the width of site
-  * updated List layout
-  * CSS classes for more flexible layout development
-  * refactored of CSS (rename some classes in header; remove old code)
-  * fixed issue with drop-down menu in IE8 (and IE7 w/out transparency feature now :( )
-  * SEO optimization
-  * new navigation.php file - for easy integration plugins like wp-pagenavi
-  * new sidebar-extra.php - for changes w/out widgets
+= 1.4.0 =
+  * Changed "Layout" interface (thx to Platforma theme for good idea)
+  * Small navigation refactoring
 
-== 0.9.0 ==
-  * position of top menu
+= 1.3.0 =
+  * Added Hungarian translation
+  * Rebuild sidebar layout creation system (more flexible for advanced users)
+  * Refactoring of CSS generator
+  * Small fix in nix gray theme
+
+
+== 1.2.4 ==
+  * Small refactoring in library
+  * Hotfix for comments
+
+== 1.2.2 ==
+  * Hotfix for default slideshow
+
+= 1.2.0 =
+
+  * Wordpress 3.0 is required
+  * Removed some old functions
+  * Updated to HTML5
+
+= 1.1.0 =
+
+  * Critical fix for MU sites
+  * Added support of Google Font Face API
+  * Added shortcodes subpages/attachments/widgets
+  * Return the_date function in templates
+  * Updated navigation menu (WP 3.0 feature)
+
+
+== 1.0.3 ==
+  * Added printable version
+
+= 1.0.0 =
+  * Updated all subthemes
+  * Updated translation for EN, RU, UA
+
+== 0.9.9 ==
+  * Removed deprecated functional (support only Wordpress 2.9+)
+
+== 0.9.8 ==
+  * Added options for page and post layouts
+  * Added RTL CSS file
+
+== 0.9.5 ==
+  * Added Wordpress 3.0 navigation menu support
+  * Added new top menu feature - stretch across the width of site
+  * Updated List layout
+  * CSS classes for more flexible layout development
+  * Refactored of CSS (rename some classes in header; remove old code)
+  * Fixed issue with drop-down menu in IE8 (and IE7 w/out transparency feature now :( )
+  * SEO optimization
+  * Added new navigation.php file - for easy integration plugins like wp-pagenavi
+  * Added new sidebar-extra.php - for changes w/out widgets
+
+= 0.9.0 =
+  * Improved options of top menu
 
 == 0.7.4 ==
   * hotfix for comments
 
 == 0.7.2 ==
-  * added hide title option
+  * Added hide title option
 
-== 0.7.0 ==
+= 0.7.0 =
   * big refactoring
   * ...
 
