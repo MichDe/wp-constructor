@@ -1,0 +1,17 @@
+/*
+Theme Name: Minds
+Theme URI: http://code.google.com/p/wp-constructor/downloads/list?can=2&q=My+minds
+Description: My Minds Theme With PSD sources
+Version: 1.5.0
+Author: Anton Shevchuk
+Author URI: http://anton.shevchuk.name/
+*/
+#container {
+    border-right:3px dotted #AAAAAA !important;
+}
+#sidebar {
+    width:352px !important;
+}
+#footer {
+/*    min-height:300px;*/
+}
