@@ -1,2 +1,11 @@
   * [ConstructorFeature Features]
   * [ConstructorThemes Themes]
+  * [ConstructorTemplates Templates]
+  * [ConstructorShortcodes Shortcodes]
+  * [ConstructorFaq FAQ] 
+  * Advanced
+    * [ConstructorMenu Menu]
+    * [ConstructorLayouts Layouts]
+  * [ConstructorTodo TODO List]
+  * [ConstructorHistory History]
+  * [ConstructorExamples Examples]
