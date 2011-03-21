@@ -41,12 +41,30 @@ class Constructor_Abstract
             'hidden' => false // - hidden title text
         ),
         'content' => array(
+            'date' => 1, // show date
             // content
-            'author' => 0, // - link to author page
+            'links' => array(
+                'author' => 0, // - link to author page
+                'category' => 1, // - links to categories
+                'tags' => 0, // - links to tags
+                'comments' => 1 // - link to comments
+             ),
             'widget' => array(
                 'flag' => false, // - enable content widget place
                 'after' => 1 // - show after N post
             ),
+            'social' => array(
+                'twitter' => 1,
+                'facebook' => 1,
+                'delicious' => 1,
+                'reddit' => 1,
+                'vkontakte' => 0,
+                'digg' => 0,
+                'mixx' => 0,
+                'stumbleupon' => 0,
+                'google' => 0,
+                'memori' => 0,
+            )
         ),
         'comments' => array(
             'avatar' => array(

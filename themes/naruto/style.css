@@ -8,32 +8,37 @@ Author URI: http://anton.shevchuk.name/
 */
 /*disable circles*/
 .sidebar li {
-	list-style-type:none !important
+    list-style-type: none !important
 }
+
 .sidebar li a {
-	padding-left:4px;
-	border-left:6px solid #333;
+    padding-left: 4px;
+    border-left: 6px solid #333;
 }
+
 .sidebar li a:hover {
-	border-left:6px solid #FF7711;
+    border-left: 6px solid #FF7711;
 }
+
 .sidebar h3 {
-	border-bottom:1px solid #FF7711
-	
+    border-bottom: 1px solid #FF7711
+
 }
+
 #sidebar {
-    padding-bottom:380px;
+    padding-bottom: 380px;
 }
 
 .title {
-	background:url(title.png) -10px 0 no-repeat;
-	border:0 !important;
-    padding-left:40px !important;
+    background: url(title.png) -10px 0 no-repeat;
+    border: 0 !important;
+    padding-left: 40px !important;
 }
-.title a{
-    border:0 !important;
+
+.title a {
+    border: 0 !important;
 }
 
 .tile .title {
-    padding-left:12px !important;
+    padding-left: 12px !important;
 }

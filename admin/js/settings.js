@@ -160,14 +160,12 @@ function initColorPicker(el) {
     });
 }
 
-Array.prototype.indexOf = function(obj) {
-  for (var i = 0; i < this.length; i++) {
-    if (this[i] == obj)
-      return i;
-  }
-  return -1;
-}
-
-Array.prototype.has = function(obj) {
-  return this.prototype.indexOf(obj) >= 0;
+if (Array.prototype.indexOf == undefined) {
+    Array.prototype.indexOf = function(obj) {
+      for (var i = 0; i < this.length; i++) {
+        if (this[i] == obj)
+          return i;
+      }
+      return -1;
+    }
 }

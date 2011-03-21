@@ -31,6 +31,7 @@ $options = $Constructor->_options;
 $theme = $Constructor->_theme;
 
 $image_uri = $Constructor->getThemeUri();
+$theme_uri = CONSTRUCTOR_DIRECTORY_URI;
 //}
 
 $width    = isset($options['layout']['width'])?$options['layout']['width']:1024;
@@ -120,8 +121,6 @@ CSS;
 /*/Fonts*/
 
 /* Opacity */
-$b64 = 'ba'.'se'.'64';
-
 // switch statement for $options['opacity']
 switch ($options['opacity']) {
     case 'none':
@@ -137,45 +136,35 @@ CSS;
     case 'darklow':
         $opacity = <<<CSS
 .opacity {
-    background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBg8AUIMAAAUgBOUWVeTwAAAABJRU5ErkJggg==);
-    background:rgba(0, 0, 0, 0.3);
-    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000)";*/
+    background:url('$theme_uri/images/opacity_black_30.png');
 }
 CSS;
         break;
     case 'dark':
         $opacity = <<<CSS
 .opacity {
-    background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYmBgaAAIMAAAjwCD5Hc2/AAAAABJRU5ErkJggg==);
-    background:rgba(0, 0, 0, 0.5);
-    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000, endColorstr=#80000000)";*/
+    background:url('$theme_uri/images/opacity_black_50.png');
 }
 CSS;
         break;
     case 'darkhigh':
         $opacity = <<<CSS
 .opacity {
-    background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBgOAMQYAAA0QDNW2hbhQAAAABJRU5ErkJggg==);
-    background:rgba(0, 0, 0, 0.8);
-    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#AA000000, endColorstr=#AA000000)";*/
+    background:url('$theme_uri/images/opacity_black_80.png');
 }
 CSS;
         break;
     case 'lightlow':
         $opacity = <<<CSS
 .opacity {
-    background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//vy9AgAEACUkDS4BbGHwAAAAASUVORK5CYII=);
-    background:rgba(255, 255, 255, 0.3);
-    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#50FFFFFF, endColorstr=#50FFFFFF)";*/
+    background:url('$theme_uri/images/opacity_white_30.png');
 }
 CSS;
         break;
     case 'lighthigh':
         $opacity = <<<CSS
 .opacity {
-    background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/P///xmAAAMACc0DyzeP8KAAAAAASUVORK5CYII=);
-    background:rgba(255, 255, 255, 0.8);
-    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#AAFFFFFF, endColorstr=#AAFFFFFF)";*/
+    background:url('$theme_uri/images/opacity_white_80.png');
 }
 CSS;
         break;
@@ -183,9 +172,7 @@ CSS;
     default:
         $opacity = <<<CSS
 .opacity {
-    background:url(data:image/png;{$b64},iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/v//fyxAgAEACWgDXjXePfkAAAAASUVORK5CYII=);
-    background:rgba(255, 255, 255, 0.5);
-    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#80FFFFFF, endColorstr=#80FFFFFF)";*/
+    background:url('$theme_uri/images/opacity_white_50.png');
 }
 CSS;
         break;
@@ -826,12 +813,6 @@ fieldset{
 .commentlist li .avatar {
     {$avatar_pos};
     border-color: {$color_border2};
-}
-.commentlist a {
-    border-bottom:1px dotted {$color_text}
-}
-.commentlist a:hover {
-    border-bottom:1px solid {$color1}
 }
 .comment-meta a{
     color:{$color_text2}

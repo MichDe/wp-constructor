@@ -22,18 +22,20 @@ __('Single', 'constructor'); // required for correct translation
                 </div>
                 <div class="footer">
                     <div class="links">
+                        <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
                         <?php if ($post->post_parent) : $parent_link = get_permalink($post->post_parent); ?>
                         <a href="<?php echo $parent_link; ?>"><?php _e('Back to Parent Page', 'constructor');?></a> |
                         <?php endif; ?>
-                        <?php the_time() ?> |
-                        <?php the_tags(__('Tags', 'constructor') . ': ', ', ', ' |'); ?>
-                        <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
-                        <?php comments_popup_link(
-                                  __('No Comments &#187;', 'constructor'),
-                                  __('1 Comment &#187;', 'constructor'),
-                                  __('% Comments &#187;', 'constructor'),
-                                  'comments-link',
-                                  ''); ?>
+                        <?php if (get_constructor_option('content', 'date')) { the_date(); echo ' | '; } ?>
+                        <?php if (get_constructor_option('content', 'links', 'comments')) {
+                            comments_popup_link(
+                                __('No Comments &#187;', 'constructor'),
+                                __('1 Comment &#187;', 'constructor'),
+                                __('% Comments &#187;', 'constructor'),
+                                'comments-link',
+                                __('Comments Closed', 'constructor')
+                            );
+                        } ?>
                     </div>
                 </div>
             </div>

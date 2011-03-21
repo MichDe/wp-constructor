@@ -171,8 +171,22 @@ class Constructor_Admin extends Constructor_Abstract
 
                         $data['title']['hidden'] = isset($data['title']['hidden'])?true:false;
 
-        				$data['content']['author'] = isset($data['content']['author'])?true:false;
-                        $data['content']['widget']['flag'] = isset($data['content']['widget']['flag'])?true:false;
+        				$data['content']['date'] = isset($data['content']['date'])?true:false;
+        				$data['content']['links']['author'] = isset($data['content']['links']['author'])?true:false;
+        				$data['content']['links']['category'] = isset($data['content']['links']['category'])?true:false;
+        				$data['content']['links']['tags'] = isset($data['content']['links']['tags'])?true:false;
+        				$data['content']['links']['comments'] = isset($data['content']['links']['comments'])?true:false;
+
+                        $data['content']['social']['twitter'] = isset($data['content']['social']['twitter'])?true:false;
+                        $data['content']['social']['facebook'] = isset($data['content']['social']['facebook'])?true:false;
+                        $data['content']['social']['delicious'] = isset($data['content']['social']['delicious'])?true:false;
+                        $data['content']['social']['reddit'] = isset($data['content']['social']['reddit'])?true:false;
+                        $data['content']['social']['vkontakte'] = isset($data['content']['social']['vkontakte'])?true:false;
+                        $data['content']['social']['digg'] = isset($data['content']['social']['digg'])?true:false;
+                        $data['content']['social']['mixx'] = isset($data['content']['social']['mixx'])?true:false;
+                        $data['content']['social']['stumbleupon'] = isset($data['content']['social']['stumbleupon'])?true:false;
+                        $data['content']['social']['google'] = isset($data['content']['social']['google'])?true:false;
+                        $data['content']['social']['memori'] = isset($data['content']['social']['memori'])?true:false;
 
                         $data['design']['box']['flag']    = isset($data['design']['box']['flag'])?true:false;
                         $data['design']['shadow']['flag'] = isset($data['design']['shadow']['flag'])?true:false;

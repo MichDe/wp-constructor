@@ -9,14 +9,17 @@ Author URI: http://anton.shevchuk.name/
 #name {
     text-shadow: 0px 0px 4px #777;
 }
+
 /*disable circles*/
 .sidebar li {
-	list-style-type:none !important
+    list-style-type: none !important
 }
+
 .sidebar li a {
-	padding-left:4px;
-	border-left:6px solid #333;
+    padding-left: 4px;
+    border-left: 6px solid #333;
 }
+
 .sidebar li a:hover {
-	border-left:6px solid #FF7711;
+    border-left: 6px solid #FF7711;
 }

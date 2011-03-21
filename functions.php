@@ -175,10 +175,24 @@ if (!is_admin()) {
      * You should be create setter for this is function
      */
     if (!isset($content_width)) {
-        $content_width = $main->getContentWidth();
+        $content_width = $main->getContentWidth() - 24;
     }
 
-    /* Alias section for fast theme development */    
+    /* Alias section for fast theme development */
+    
+    /**
+     * get_constructor_option
+     *
+     * @param  string $section
+     * @param  string $key1
+     * @param  string $key2
+     * @return mixed
+     */
+    function get_constructor_option($section, $key1, $key2 = null)
+    {
+        global $main;
+        return $main->getOption($section, $key1, $key2);
+    }
     /**
      * get_constructor_slideshow
      *
@@ -301,6 +315,18 @@ if (!is_admin()) {
     {
         global $main;
         $main->getNavigation();
+    }
+
+    /**
+     * get social bar
+     *
+     * @access  public
+     * @return  string
+     */
+    function get_constructor_social()
+    {
+        global $main;
+        $main->getSocial();
     }
     
     /**
