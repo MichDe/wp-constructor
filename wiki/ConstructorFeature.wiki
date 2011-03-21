@@ -23,15 +23,17 @@ Available following localizations:
 = Many themes =
 All aviable themes see on ConstructorThemes page
 
-http://wp-constructor.googlecode.com/svn/wiki/screenshot/themes.png
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/themes.jpg
 
 = Six sidebar positions =
 And user can change width of sidebars and main container
-http://wp-constructor.googlecode.com/svn/wiki/screenshot/sidebar.png
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/layout.png
 
 = Three layouts =
 Three layouts for home/posts/archive/search pages
-http://wp-constructor.googlecode.com/svn/wiki/screenshot/layout.png
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/templates.png
 
 = Header Settings =
 Header menu is supported widgets - see "header" sidebar on widgets page
@@ -43,37 +45,56 @@ Constructor theme has custom author homepage, and you can enable links to author
 
 http://wp-constructor.googlecode.com/svn/wiki/screenshot/content.png
 
+= Comments Settings =
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/comments.png
+
 = Footer Settings =
 User can change text in footer
 
 http://wp-constructor.googlecode.com/svn/wiki/screenshot/footer.png
-
-= Colors =
-Change colors of theme
-
-http://wp-constructor.googlecode.com/svn/wiki/screenshot/colors.png
 
 = Fonts =
 You can change fonts for content or(and) header
 
 http://wp-constructor.googlecode.com/svn/wiki/screenshot/fonts.png
 
+= Colors =
+Change colors of theme
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/colors.png
+
+
 = CSS =
 You can change CSS file of any Constructor Themes (writable permissions is requried)
 
 http://wp-constructor.googlecode.com/svn/wiki/screenshot/css.png
+
+= Design =
+CSS3 features
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/design.png
 
 = Images =
 Upload new images for your theme
 
 http://wp-constructor.googlecode.com/svn/wiki/screenshot/images.png
 
+Images location
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/images-help.png
+
 = Slideshow =
 Add slideshow from Nextgen Gallery plugin or images from posts
 
 http://wp-constructor.googlecode.com/svn/wiki/screenshot/slideshow.png
 
-= Export =
-Export your custom theme
+= Save =
+Save your custom theme
 
-http://wp-constructor.googlecode.com/svn/wiki/screenshot/export.png
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/save.png
+
+= Clean =
+Reset Constructor theme
+
+http://wp-constructor.googlecode.com/svn/wiki/screenshot/clean.png
