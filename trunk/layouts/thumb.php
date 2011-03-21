@@ -23,16 +23,22 @@ __('Single', 'constructor'); // required for correct translation
                 </div>
                 <div class="footer">
                     <div class="links">
-                        <?php the_date() ?> |
-                        <?php get_constructor_author('', ' |') ?>
-                        <?php the_tags(__('Tags', 'constructor') . ': ', ', ', ' |'); ?>
                         <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
-                        <?php comments_popup_link(
-                                  __('No Comments &#187;', 'constructor'),
-                                  __('1 Comment &#187;', 'constructor'),
-                                  __('% Comments &#187;', 'constructor'),
-                                  'comments-link',
-                                  __('Comments Closed', 'constructor')); ?>
+                        <?php if (get_constructor_option('content', 'date')) { the_date(); echo ' | '; } ?>
+                        <?php if (get_constructor_option('content', 'links', 'author')) { the_author_posts_link(); echo ' | '; } ?>
+                        <?php if (get_constructor_option('content', 'links', 'category') && count( get_the_category() ) ) : ?>
+                            <?php _e('Posted in', 'constructor'); echo ": "; the_category(', '); ?>
+                        <?php endif; ?>
+                        <?php if (get_constructor_option('content', 'links', 'tags')) { the_tags(__('Tags', 'constructor') . ': ', ', ', ' |'); } ?>
+                        <?php if (get_constructor_option('content', 'links', 'comments')) {
+                            comments_popup_link(
+                                __('No Comments &#187;', 'constructor'),
+                                __('1 Comment &#187;', 'constructor'),
+                                __('% Comments &#187;', 'constructor'),
+                                'comments-link',
+                                __('Comments Closed', 'constructor')
+                            );
+                        } ?>
                     </div>
                 </div>
             </div>

@@ -8,20 +8,31 @@ Author URI: http://anton.shevchuk.name/
 */
 
 .hentry .footer {
-	height:80px;
-	background: url(line.png) 50% 100% no-repeat
+    height: 80px;
+    background: url(line.png) 50% 100% no-repeat
 }
+
 * html .hentry .footer .line {
-    height:2px;
+    height: 2px;
     background: none
 }
-.navigation div a{
-    text-indent:-9999%;
-    display:block;
-    width:220px;
-    height:64px;
-    margin:0 20px
+
+.navigation div a {
+    text-indent: -9999%;
+    display: block;
+    width: 220px;
+    height: 64px;
+    margin: 0 20px
 }
-.navigation .alignleft a{background: url(prev.png) 0 0 no-repeat}
-.navigation .alignright a{background: url(next.png) 0 0 no-repeat}
-.navigation a:hover {background-position: 100% 100%}
+
+.navigation .alignleft a {
+    background: url(prev.png) 0 0 no-repeat
+}
+
+.navigation .alignright a {
+    background: url(next.png) 0 0 no-repeat
+}
+
+.navigation a:hover {
+    background-position: 100% 100%
+}

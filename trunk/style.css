@@ -4,7 +4,7 @@ Theme URI: http://code.google.com/p/wp-constructor/
 Description: Wordpress Constructor Theme for those who want to create a unique blog design quickly and effortlessly (many layouts, configured colors, custom fonts and slideshow, etc).
 Start build your own theme from <a href="themes.php?page=functions.php">settings page</a>.
  
-Version: 1.5.5
+Version: 1.5.7
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 Tags: fixed-width, one-column, two-columns, three-columns, threaded-comments, custom-colors, custom-header, theme-options, left-sidebar, right-sidebar
@@ -105,8 +105,6 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img {
 .wp-caption-text {}
 .gallery-caption {}
 /*/Autogenerate styles*/
-
-
 /*Layout*/
 /*#wrapheader,#wrapper,#wrapfooter*/
 .wrapper { 
@@ -178,7 +176,6 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img {
 }
 #menu ul.menu {
     margin: 0 10px;
-    float:left;
 }
 #menu li {
     float: left;
@@ -196,6 +193,10 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img {
 	#menu li li.indicator       { background-position: 98%    6px }
 	#menu li li:hover.indicator { background-position: 98%  -49px }
 
+#menu ul div {
+    display:none;
+}
+
 #menu ul ul {
     z-index:302;
     top:40px;
@@ -208,6 +209,9 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img {
     width:auto !important; /*IE fix*/
     width:122px;
     margin-left:-1px !important;
+}
+* html #menu ul ul {
+    width:1px;
 }
 #menu ul ul ul {
     z-index:303;
@@ -391,11 +395,47 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img {
 }
 
 .hentry .pages {
-    font-size:1.4em
+    padding:8px 0;
+    margin:8px 0;
+    clear:both;
 }
 .hentry .more-link {
 
 }
+.hentry .social {
+    overflow:hidden;
+    clear:both;
+    margin:4px 0;
+}
+    .hentry .social a {
+        background:url('images/social.png') no-repeat 0 0 ;
+        display:block;
+        float:right;
+        width:48px;
+        height:48px;
+        text-indent:-9999%;
+    }
+    .social a.twitter { background-position: 0 0; }
+    .social a.twitter:hover { background-position: 0 100%; }
+    .social a.facebook { background-position: -48px 0; }
+    .social a.facebook:hover { background-position: -48px 100%; }
+    .social a.delicious { background-position: -96px 0; }
+    .social a.delicious:hover { background-position: -96px 100%; }
+    .social a.reddit { background-position: -144px 0; }
+    .social a.reddit:hover { background-position: -144px 100%; }
+    .social a.vkontakte { background-position: -192px 0; }
+    .social a.vkontakte:hover { background-position: -192px 100%; }
+    .social a.digg { background-position: -240px 0; }
+    .social a.digg:hover { background-position: -240px 100%; }
+    .social a.mixx { background-position: -288px 0; }
+    .social a.mixx:hover { background-position: -288px 100%; }
+    .social a.stumbleupon { background-position: -336px 0; }
+    .social a.stumbleupon:hover { background-position: -336px 100%; }
+    .social a.google { background-position: -384px 0; }
+    .social a.google:hover { background-position: -384px 100%; }
+    .social a.memori { background-position: -432px 0; }
+    .social a.memori:hover { background-position: -432px 100%; }
+
 .hentry .footer {
     overflow:hidden;
     clear:both

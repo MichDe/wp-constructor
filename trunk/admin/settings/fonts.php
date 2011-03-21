@@ -38,7 +38,7 @@ $(document).ready(function(){
 })(jQuery);
 var loaded = new Array();
 function loadFont(font) {
-    if (loaded.has(font)) return true;
+    if (loaded.indexOf(font) >= 0) return true;
     loaded.push(font);
     font = font.replace(/\"/gi, '');
     font = font.replace(/ /gi, '+');

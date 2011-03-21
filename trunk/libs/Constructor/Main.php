@@ -54,6 +54,31 @@ class Constructor_Main extends Constructor_Abstract
 
     }
     /**
+     * getOption
+     *
+     * @param  string $section
+     * @param  string $key1
+     * @param  string $key2
+     * @return mixed
+     */
+    function getOption($section, $key1, $key2 = null)
+    {
+        if ($key2) {
+            if (isset($this->_options[$section][$key1][$key2])) {
+                return $this->_options[$section][$key1][$key2];
+            } else {
+                return false;
+            }
+        }
+
+        if (isset($this->_options[$section][$key1])) {
+            return $this->_options[$section][$key1];
+        } else {
+            return false;
+        }
+    }
+
+    /**
      * get_constructor_slideshow
      *
      * @access  public
@@ -180,7 +205,7 @@ class Constructor_Main extends Constructor_Abstract
         if (!isset($this->_options['menu']['flag']) or !$this->_options['menu']['flag']) return false;
 
         echo '<div id="menu" class="opacity shadow">';
-        echo '<ul class="menu opacity">';
+        echo '<ul class="menu">';
         
         // before items
         if (!empty($before)) {
@@ -199,9 +224,10 @@ class Constructor_Main extends Constructor_Abstract
         ) {
             $nav_menu = wp_nav_menu( array( 
                                             'sort_column' => 'menu_order',
-                                            'container'   => '', 'echo' => 0, 'depth' => 0,
+                                            'container'   => '',
+                                            'echo' => 0, 'depth' => 0,
                                             'theme_location' => 'header',
-                                            'menu_class'  => 'menu opacity' ) );
+                                            'menu_class'  => '' ) );
             $nav_menu = preg_replace('/<ul(?:.*?)>(.*)<\/ul>/s', '\1', $nav_menu);
             
             echo $nav_menu;
@@ -361,6 +387,31 @@ class Constructor_Main extends Constructor_Abstract
         }
     }
     
+    /**
+     * get_constructor_social
+     *
+     * @access  public
+     * @return  string
+     */
+    function getSocial()
+    {
+        if (
+            $this->_options['content']['social']['twitter'] or
+            $this->_options['content']['social']['facebook'] or
+            $this->_options['content']['social']['delicious'] or
+            $this->_options['content']['social']['reddit'] or
+            $this->_options['content']['social']['vkontakte'] or
+            $this->_options['content']['social']['digg'] or
+            $this->_options['content']['social']['mixx'] or
+            $this->_options['content']['social']['stumbleupon'] or
+            $this->_options['content']['social']['google'] or
+            $this->_options['content']['social']['memori']
+        ) {
+            include_once CONSTRUCTOR_DIRECTORY . '/social.php';
+        }
+
+    }
+
     /**
      * get_constructor_navigation
      *
