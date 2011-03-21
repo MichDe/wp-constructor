@@ -13,5 +13,5 @@
   # ~~Create list with themes examples~~
 
   # ~~"Header" tab -> Header font size options~~
-  # "Content" tab -> Show "comments closed" message option
-  # Export theme as ZIP archive (with all images)
+  # ~~"Content" tab -> Show "comments closed" message option~~
+  # Export/Import theme as ZIP archive (with all images)
