@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-07 15:21+0200\n"
-"PO-Revision-Date: 2011-02-07 15:21+0200\n"
+"POT-Creation-Date: 2011-03-23 15:34+0200\n"
+"PO-Revision-Date: 2011-03-23 16:33+0200\n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -109,6 +109,46 @@ msgstr "на &laquo;%s&raquo;"
 msgid "Comments are closed."
 msgstr "Комментарии закрыты"
 
+#: W:/www/wordpress3/wp-content/themes/constructor/social.php:14
+msgid "Twitter"
+msgstr "Twitter"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/social.php:17
+msgid "Facebook"
+msgstr "Facebook"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/social.php:20
+msgid "Del.icio.us"
+msgstr "Del.icio.us"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/social.php:23
+msgid "Reddit"
+msgstr "Reddit"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/social.php:26
+msgid "VKontakte"
+msgstr "ВКонтакте"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/social.php:29
+msgid "Digg"
+msgstr "Digg"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/social.php:32
+msgid "Mixx"
+msgstr "Mixx"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/social.php:35
+msgid "StumbleUpon"
+msgstr "StumbleUpon"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/social.php:38
+msgid "Google"
+msgstr "Google"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/social.php:41
+msgid "Memori"
+msgstr "Memori"
+
 #: W:/www/wordpress3/wp-content/themes/constructor/template-archive.php:30
 #, php-format
 msgid "%b"
@@ -130,7 +170,7 @@ msgstr "Извините, но того, что вы ищете, здесь не
 msgid "Header Menu"
 msgstr "Меню в шапке сайта"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/functions.php:279
+#: W:/www/wordpress3/wp-content/themes/constructor/functions.php:293
 msgid "No Image"
 msgstr "Без Изображения"
 
@@ -197,12 +237,12 @@ msgstr "Записи данного автора отсутствуют"
 msgid "Archives"
 msgstr "Архив"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/themes/example/config.php:24
+#: W:/www/wordpress3/wp-content/themes/constructor/themes/example/config.php:49
 #, php-format
 msgid "%1$s is proudly powered by %2$s"
 msgstr "%1$s работает на %2$s"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/themes/example/config.php:25
+#: W:/www/wordpress3/wp-content/themes/constructor/themes/example/config.php:50
 msgid "Constructor Theme"
 msgstr "Конструктор"
 
@@ -215,6 +255,12 @@ msgstr "Простенький"
 #: W:/www/wordpress3/wp-content/themes/constructor/layouts/thumb.php:6
 msgid "Single"
 msgstr "Запись"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/layouts/single.php:30
+#: W:/www/wordpress3/wp-content/themes/constructor/layouts/default.php:27
+#: W:/www/wordpress3/wp-content/themes/constructor/layouts/thumb.php:30
+msgid "Posted in"
+msgstr "Опубликовано в "
 
 #: W:/www/wordpress3/wp-content/themes/constructor/layouts/list.php:6
 msgid "List"
@@ -538,7 +584,7 @@ msgid "Timeout between slides (ms)"
 msgstr "Задержка между слайдами (ms)"
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:84
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:38
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:104
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/header.php:47
 msgid "Position"
 msgstr "Расположение"
@@ -605,46 +651,74 @@ msgid "Header Height"
 msgstr "Высота &laquo;шапки&raquo; сайта"
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:5
-msgid "Posts"
-msgstr "Записи"
+msgid "Meta information"
+msgstr "Мета-информация"
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:8
-msgid "Show author link"
-msgstr "Отображать ссылку на страницу автора"
+msgid "Show post date"
+msgstr "Отображать дату публикации"
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:12
-msgid "You can use short code [widgets] in your post, and can configured with <a href=\"widgets.php\">widgets</a> (use \"In Posts\" sidebar)"
-msgstr "Вы можете использовать код [widgets] при написании записей, и настроить содержимое с помощью <a href=\"widgets.php\">виджетов</a> (см. &laquo;In Posts&raquo; сайдбар)"
+msgid "Use this options to control what meta information is shown"
+msgstr "Используйте эти настройки для контроля над метаданными записей"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:15
-msgid "Available <a href=\"http://code.google.com/p/wp-constructor/wiki/ConstructorShortcodes\" title=\"Constructor Short Codes\">short codes</a>:"
-msgstr "Доступные <a href=\"http://code.google.com/p/wp-constructor/wiki/ConstructorShortcodes\" title=\"Constructor Short Codes\">коды</a>:"
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:19
+msgid "Link to author page"
+msgstr "Отображать ссылку на страницу автора"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:28
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:25
+msgid "List of categories"
+msgstr "Список категорий"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:31
+msgid "List of tags"
+msgstr "Список меток"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:37
+msgid "Link to comments"
+msgstr "Ссылка на комментарии"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:43
+msgid "Sharing Icons"
+msgstr "Икноки социальных сервисов"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:53
+msgid "Select which service you would like to use for sharing"
+msgstr "Выберите какие сервисы желаете использовать"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:94
 msgid "Content widgets place"
 msgstr "Виджеты в контенте"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:29
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:95
 msgid "can configured with <a href=\"widgets.php\">widgets</a>, use \"After N Post\" sidebar"
 msgstr "меню можно настроить с помощью <a href=\"widgets.php\">виджетов</a> (см. &laquo;After N Post&raquo; сайдбар)"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:35
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:101
 msgid "Show widgets place"
 msgstr "Отображать виджеты"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:40
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:41
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:42
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:43
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:44
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:45
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:46
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:47
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:48
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:49
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:106
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:107
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:108
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:109
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:110
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:111
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:112
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:113
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:114
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:115
 #, php-format
 msgid "after %d post"
 msgstr "после %d записи"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:122
+msgid "You can use short code [widgets] in your post, and can configured with <a href=\"widgets.php\">widgets</a> (use \"In Posts\" sidebar)"
+msgstr "Вы можете использовать код [widgets] при написании записей, и настроить содержимое с помощью <a href=\"widgets.php\">виджетов</a> (см. &laquo;In Posts&raquo; сайдбар)"
+
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:125
+msgid "Available <a href=\"http://code.google.com/p/wp-constructor/wiki/ConstructorShortcodes\" title=\"Constructor Short Codes\">short codes</a>:"
+msgstr "Доступные <a href=\"http://code.google.com/p/wp-constructor/wiki/ConstructorShortcodes\" title=\"Constructor Short Codes\">коды</a>:"
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/comments.php:25
 msgid "Avatar size"
@@ -1071,28 +1145,28 @@ msgstr "Отступ по вертикали"
 msgid "Blur"
 msgstr "Размытие"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:214
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:240
 msgid "Home"
 msgstr "Главная"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:253
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:279
 msgid "Search..."
 msgstr "Поиск..."
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:388
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:439
 #, php-format
 msgid "%1$s and %2$s."
 msgstr "%1$s и %2$s."
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:388
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:439
 msgid "Entries (RSS)"
 msgstr "Записи (RSS)"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:388
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:439
 msgid "Comments (RSS)"
 msgstr "Комментарии (RSS)"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:392
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:443
 #, php-format
 msgid "%d queries. %s seconds."
 msgstr "%d запросов. %s секунд."
@@ -1101,30 +1175,30 @@ msgstr "%d запросов. %s секунд."
 msgid "Please check permissions for next directories:"
 msgstr "Проверьте права доступа для следующих директорий"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:110
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:108
 #, php-format
 msgid "File \"%s\" is not a image (jpeg, png, gif, tiff)"
 msgstr "Файл &laquo;%s&raquo; не является изображением"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:117
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:115
 #, php-format
 msgid "File \"%s\" can't be move to \"/constructor/current/\" folder"
 msgstr "Не удалось переместить файл &laquo;%s&raquo; в папку &laquo;/constructor/current/&raquo;"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:264
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:268
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:276
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:280
 #: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:48
 #: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:51
 #, php-format
 msgid "Directory \"%s\" is not writable."
 msgstr "Директория  &laquo;%s&raquo; имеет атрибут только для чтения."
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:282
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:294
 #, php-format
 msgid "Can't copy file \"%s\" to \"%s\"."
 msgstr "Нельзя скопировать файл  &laquo;%s&raquo; в &laquo;%s&raquo; "
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:291
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:303
 #: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:63
 #: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:73
 #: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:77
@@ -1132,46 +1206,46 @@ msgstr "Нельзя скопировать файл  &laquo;%s&raquo; в &laquo
 msgid "Can't copy file \"%s\"."
 msgstr "Нельзя скопировать файл  &laquo;%s&raquo;."
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:324
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:329
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:336
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:341
 #: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:110
 #: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:115
 #, php-format
 msgid "Can't save file \"%s\"."
 msgstr "Нельзя сохранить файл &laquo;%s&raquo;."
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:424
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:433
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:613
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:436
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:445
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:628
 msgid "Customize Theme"
 msgstr "Настройки темы"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:425
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:434
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:437
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:446
 msgid "Customize"
 msgstr "Настройки"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:453
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:468
 msgid "Standart Fonts"
 msgstr "Стандартные шрифты"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:461
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:476
 msgid "Google Fonts"
 msgstr "Шрифты от Google"
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:616
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:631
 msgid "If you like this theme and find it useful, help keep this theme free and actively developed by clicking the donate button (via PayPal or CC)"
 msgstr "Если Вам понравилась данная темы, то Вы можете помочь материально."
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:620
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:635
 msgid "Options saved."
 msgstr "Настройки сохранены."
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:629
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:644
 msgid "Some images can't be upload. Please check permissions"
 msgstr "Некоторые картинки не были залиты. Проверьте права доступа."
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:652
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:667
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
@@ -1187,6 +1261,12 @@ msgstr "Настройки темы были удалены"
 #, php-format
 msgid "System can&#39;t remove folder &quot;%s&quot;"
 msgstr "Система не смогла удалить директорию &laquo;%s&raquo;"
+
+#~ msgid "Posts"
+#~ msgstr "Записи"
+
+#~ msgid "Show author link"
+#~ msgstr "Отображать ссылку на страницу автора"
 
 #~ msgid "System can't create \"%s\" directory"
 #~ msgstr "Система не смогла создать директорию \"%s\""
@@ -1227,9 +1307,6 @@ msgstr "Система не смогла удалить директорию &la
 #~ msgid "<strong>XHTML:</strong> You can use these tags: <code>%s</code>"
 #~ msgstr ""
 #~ "<strong>XHTML:</strong> Вы можете использовать эти тэги: <code>%s</code>"
-
-#~ msgid "Submit Comment"
-#~ msgstr "Отправить комментарий"
 
 #~ msgid "Autogenerate thumbnail with right size"
 #~ msgstr "Автогенерация миниатюр под заданный размер"
