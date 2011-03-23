@@ -612,6 +612,13 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img {
         margin:0 0 4px 0;
         font-size:0.8em;
     }
+.tiles.next a{
+    font-size:1.8em;
+    display:block;
+    height:128px;
+    line-height:128px;
+    text-align:center;
+}
 /*/Tiles*/
 /*List*/
 .list {
