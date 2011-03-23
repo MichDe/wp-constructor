@@ -753,6 +753,13 @@ fieldset{
 .list .title .date{
    color: {$color_bg2};
 }
+
+.tiles .announce{
+    background-color: {$color_bg};
+}
+.tiles.next a:hover{
+    background-color: {$color_bg};
+}
 /*/Post*/
 /*Author*/
 .author dt, .author dd {
