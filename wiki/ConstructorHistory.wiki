@@ -1,8 +1,13 @@
 #summary Version history
 #labels Featured
 
-== 1.5.7 ==
+== 1.5.8 ==
+
   === In progress ===
+  * Added this file to repository
+  * Minor changes in readme.txt
+
+== 1.5.7 ==
   * Added more options for post metainformation
   * "Social" integration
   * Change transparent properties (now is image for all browsers)
