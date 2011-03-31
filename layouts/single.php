@@ -27,7 +27,7 @@ __('Single', 'constructor'); // required for correct translation
                         <?php if (get_constructor_option('content', 'date')) { the_date(); echo ' | '; } ?>
                         <?php if (get_constructor_option('content', 'links', 'author')) { the_author_posts_link(); echo ' | '; } ?>
                         <?php if (get_constructor_option('content', 'links', 'category') && count( get_the_category() ) ) : ?>
-                            <?php _e('Posted in', 'constructor'); echo ": "; the_category(', '); ?>
+                            <?php _e('Posted in', 'constructor'); echo ": "; the_category(', '); echo ' | ';?>
                         <?php endif; ?>
                         <?php if (get_constructor_option('content', 'links', 'tags')) { the_tags(__('Tags', 'constructor') . ': ', ', ', ' |'); } ?>
                         <?php if (get_constructor_option('content', 'links', 'comments')) {

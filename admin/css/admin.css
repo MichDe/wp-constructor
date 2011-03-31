@@ -27,7 +27,8 @@
 	height: 28px;
 	background: url(../images/select2.png) center;
 }
-.constructor .select {
+.constructor .select,
+.constructor .checkbox {
     overflow:hidden;
 }
 .constructor .select a, .constructor .select span {
@@ -45,14 +46,30 @@
     -moz-box-shadow: 2px 2px 4px #aaa;
     -webkit-box-shadow: 2px 2px 4px #aaa
 }
+.constructor .checkbox a {
+    width:48px;
+    height:48px;
+    float:left;
+    display:block;
+    margin:0 8px 8px 0;
+    border:2px solid #ccc;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    box-shadow: 2px 2px 4px #aaa;
+    -moz-box-shadow: 2px 2px 4px #aaa;
+    -webkit-box-shadow: 2px 2px 4px #aaa
+}
 .constructor .select span {
     background-color:#ccc;
 }
-
-.constructor .select a.selected {
+.constructor .select a.selected,
+.constructor .checkbox a.checked {
     border:2px solid #21759B
 }
-.constructor .select a:hover {
+.constructor .select a:hover,
+.constructor .checkbox a:hover {
     border:2px solid #D54E21
 }
 .constructor .position a, .constructor .position span{
@@ -78,6 +95,34 @@
 	    background-position:100% 100%;
 	}
 
+    .social a {
+        background:url('../../images/social.png') no-repeat 0 0 ;
+        display:block;
+        float:right;
+        width:48px;
+        height:48px;
+        text-indent:-9999%;
+    }
+    .social a.twitter { background-position: 0 0; }
+    .social a.twitter:hover { background-position: 0 100%; }
+    .social a.facebook { background-position: -48px 0; }
+    .social a.facebook:hover { background-position: -48px 100%; }
+    .social a.delicious { background-position: -96px 0; }
+    .social a.delicious:hover { background-position: -96px 100%; }
+    .social a.reddit { background-position: -144px 0; }
+    .social a.reddit:hover { background-position: -144px 100%; }
+    .social a.vkontakte { background-position: -192px 0; }
+    .social a.vkontakte:hover { background-position: -192px 100%; }
+    .social a.digg { background-position: -240px 0; }
+    .social a.digg:hover { background-position: -240px 100%; }
+    .social a.mixx { background-position: -288px 0; }
+    .social a.mixx:hover { background-position: -288px 100%; }
+    .social a.stumbleupon { background-position: -336px 0; }
+    .social a.stumbleupon:hover { background-position: -336px 100%; }
+    .social a.google { background-position: -384px 0; }
+    .social a.google:hover { background-position: -384px 100%; }
+    .social a.memori { background-position: -432px 0; }
+    .social a.memori:hover { background-position: -432px 100%; }
 
 .constructor #slideshow a{
     width:auto !important;

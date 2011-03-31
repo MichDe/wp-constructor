@@ -27,7 +27,7 @@
 </tr>
 <tr>
     <td>
-        <input type="checkbox" id="constructor-content-links-tags" name="constructor[content][links][category]" value="1" <?php if (isset($constructor['content']['links']['tags']) && $constructor['content']['links']['tags'] == 1) echo 'checked="checked"'; ?> />
+        <input type="checkbox" id="constructor-content-links-tags" name="constructor[content][links][tags]" value="1" <?php if (isset($constructor['content']['links']['tags']) && $constructor['content']['links']['tags'] == 1) echo 'checked="checked"'; ?> />
         <label for="constructor-content-links-tags"><?php _e('List of tags', 'constructor'); ?></label>
     </td>
 </tr>
@@ -39,56 +39,37 @@
 </tr>
 
 <tr>
-    <th rowspan="5" scope="row" valign="top">
+    <th scope="row" valign="top">
         <?php _e('Sharing Icons', 'constructor'); ?><br/>
     </th>
-    <td>
-        <input type="checkbox" id="constructor-content-social-twitter" name="constructor[content][social][twitter]" value="1" <?php if (isset($constructor['content']['social']['twitter']) && $constructor['content']['social']['twitter'] == 1) echo 'checked="checked"'; ?> />
-        <label for="constructor-content-social-twitter"><?php _e('Twitter', 'constructor'); ?></label>
-        &nbsp;
-        <input type="checkbox" id="constructor-content-social-facebook" name="constructor[content][social][facebook]" value="1" <?php if (isset($constructor['content']['social']['facebook']) && $constructor['content']['social']['facebook'] == 1) echo 'checked="checked"'; ?> />
-        <label for="constructor-content-social-facebook"><?php _e('Facebook', 'constructor'); ?></label>
+    <td name="constructor-content-social" class="checkbox social">
+        <?php
+            function constructor_content_social($name, $key) {
+                global $constructor;
+                ?>
+                    <input type="hidden" id="constructor-content-social-<?php echo $key; ?>" name="constructor[content][social][<?php echo $key; ?>]" value="<?php echo $constructor['content']['social'][$key] ?>"/>
+                    <a href="#" name="<?php echo $key; ?>" class="<?php echo $key; ?> <?php echo ($constructor['content']['social'][$key]?'checked':'') ?>" title="<?php echo $name; ?>"><?php echo $name; ?></a>
+
+                <?php
+            }
+        ?>
+        <?php constructor_content_social(__('Twitter', 'constructor'), 'twitter'); ?>
+        <?php constructor_content_social(__('Facebook', 'constructor'), 'facebook'); ?>
+        <?php constructor_content_social(__('Del.icio.us', 'constructor'), 'delicious'); ?>
+        <?php constructor_content_social(__('Reddit', 'constructor'), 'reddit'); ?>
+        <?php constructor_content_social(__('Google', 'constructor'), 'google'); ?>
+        <?php constructor_content_social(__('Digg', 'constructor'), 'digg'); ?>
+        <?php constructor_content_social(__('Mixx', 'constructor'), 'mixx'); ?>
+        <?php constructor_content_social(__('StumbleUpon', 'constructor'), 'stumbleupon'); ?>
+        <?php constructor_content_social(__('VKontakte', 'constructor'), 'vkontakte'); ?>
+        <?php constructor_content_social(__('Memori', 'constructor'), 'memori'); ?>
+
     </td>
-    <td rowspan="5" valign="top" class="updated quick-links">
+    <td valign="top" class="updated quick-links">
     <?php _e('Select which service you would like to use for sharing', 'constructor')?>
     </td>
 </tr>
-<tr>
-    <td>
-        <input type="checkbox" id="constructor-content-social-delicious" name="constructor[content][social][delicious]" value="1" <?php if (isset($constructor['content']['social']['delicious']) && $constructor['content']['social']['delicious'] == 1) echo 'checked="checked"'; ?> />
-        <label for="constructor-content-social-delicious"><?php _e('Del.icio.us', 'constructor'); ?></label>
-        &nbsp;
-        <input type="checkbox" id="constructor-content-social-reddit" name="constructor[content][social][reddit]" value="1" <?php if (isset($constructor['content']['social']['reddit']) && $constructor['content']['social']['reddit'] == 1) echo 'checked="checked"'; ?> />
-        <label for="constructor-content-social-reddit"><?php _e('Reddit', 'constructor'); ?></label>
-    </td>
-</tr>
-<tr>
-    <td>
-        <input type="checkbox" id="constructor-content-social-google" name="constructor[content][social][google]" value="1" <?php if (isset($constructor['content']['social']['google']) && $constructor['content']['social']['google'] == 1) echo 'checked="checked"'; ?> />
-        <label for="constructor-content-social-google"><?php _e('Google', 'constructor'); ?></label>
-        &nbsp;
-        <input type="checkbox" id="constructor-content-social-digg" name="constructor[content][social][digg]" value="1" <?php if (isset($constructor['content']['social']['digg']) && $constructor['content']['social']['digg'] == 1) echo 'checked="checked"'; ?> />
-        <label for="constructor-content-social-digg"><?php _e('Digg', 'constructor'); ?></label>
-    </td>
-</tr>
-<tr>
-    <td>
-        <input type="checkbox" id="constructor-content-social-mixx" name="constructor[content][social][mixx]" value="1" <?php if (isset($constructor['content']['social']['mixx']) && $constructor['content']['social']['mixx'] == 1) echo 'checked="checked"'; ?> />
-        <label for="constructor-content-social-mixx"><?php _e('Mixx', 'constructor'); ?></label>
-        &nbsp;
-        <input type="checkbox" id="constructor-content-social-stumbleupon" name="constructor[content][social][stumbleupon]" value="1" <?php if (isset($constructor['content']['social']['stumbleupon']) && $constructor['content']['social']['stumbleupon'] == 1) echo 'checked="checked"'; ?> />
-        <label for="constructor-content-social-stumbleupon"><?php _e('StumbleUpon', 'constructor'); ?></label>
-    </td>
-</tr>
-<tr>
-    <td>
-        <input type="checkbox" id="constructor-content-social-vkontakte" name="constructor[content][social][vkontakte]" value="1" <?php if (isset($constructor['content']['social']['vkontakte']) && $constructor['content']['social']['vkontakte'] == 1) echo 'checked="checked"'; ?> />
-        <label for="constructor-content-social-vkontakte"><?php _e('VKontakte', 'constructor'); ?></label>
-        &nbsp;
-        <input type="checkbox" id="constructor-content-social-memori" name="constructor[content][social][memori]" value="1" <?php if (isset($constructor['content']['social']['memori']) && $constructor['content']['social']['memori'] == 1) echo 'checked="checked"'; ?> />
-        <label for="constructor-content-social-memori"><?php _e('Memori', 'constructor'); ?></label>
-    </td>
-</tr>
+
 <tr>
     <th scope="row" valign="top">
         <?php _e('Content widgets place', 'constructor'); ?><br/>

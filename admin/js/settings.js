@@ -9,6 +9,19 @@ $(document).ready(function(){
         $('#constructor-' + id).val($(this).attr('name'));
         return false;
     });
+	// Checkbox based on images
+    $('.constructor .checkbox a').click(function(){
+        $(this).toggleClass('checked');
+        var id = '#'+ $(this).parent().attr('name') +'-'+ $(this).attr('name');
+
+        if ($(this).hasClass('checked')) {
+            $(id).val(1);
+        } else {
+            $(id).val(0);
+        }
+
+        return false;
+    });
 
     // Checkbox for fieldsets
 	$('.constructor fieldset > legend > input:checkbox').bind('check-fieldset', function(){
