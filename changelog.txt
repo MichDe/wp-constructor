@@ -9,9 +9,9 @@ This is local copy of file https://code.google.com/p/wp-constructor/wiki/Constru
   * Improved options for social bookmarks
   * Added this file to repository
   * Minor changes in readme.txt
+  * Avoid validator warnings
 
-
-== 1.5.7 ==
+ == 1.5.7 ==
   * Added more options for post metainformation
   * "Social" integration
   * Change transparent properties (now is image for all browsers)

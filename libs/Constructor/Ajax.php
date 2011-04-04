@@ -80,7 +80,7 @@ class Constructor_Ajax extends Constructor_Abstract
 
         // update style file
         if (file_exists($path_old.'/style.css')) {
-            $style = file_get_contents($path_old.'/style.css');
+            $style = php_compat_file_get_contents($path_old.'/style.css');
             // match first comment /* ... */
             $style = preg_replace('|\/\*(.*)\*\/|Umis', '', $style, 1);
         } else {
@@ -106,12 +106,12 @@ Author URI: $author_uri
 
         // update files content
         // style CSS
-        if (!@file_put_contents(CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/style.css', $style)) {
+        if (!@php_compat_file_put_contents(CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/style.css', $style)) {
             $this->returnResponse(RESPONSE_KO, sprintf(__('Can\'t save file "%s".', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/style.css'));
         }
 
         // theme config
-        if (!@file_put_contents(CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/config.php', $config)) {
+        if (!@php_compat_file_put_contents(CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/config.php', $config)) {
             $this->returnResponse(RESPONSE_KO, sprintf(__('Can\'t save file "%s".', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/config.php'));
         }
 

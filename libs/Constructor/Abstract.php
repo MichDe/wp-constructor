@@ -276,7 +276,7 @@ class Constructor_Abstract
         $css .= ob_get_contents();
         ob_end_clean();
 
-        file_put_contents(CONSTRUCTOR_CUSTOM_CACHE . '/style.css', $css);
+        php_compat_file_put_contents(CONSTRUCTOR_CUSTOM_CACHE . '/style.css', $css);
     }
 
     /**

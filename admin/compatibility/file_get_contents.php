@@ -52,7 +52,9 @@ function php_compat_file_get_contents($filename, $incpath = false, $resource_con
         // tbc               
     }
 
-    if (false === $fh = fopen($filename, 'rb', $incpath)) {
+    $f_open = 'fopen';
+
+    if (false === $fh = $f_open($filename, 'rb', $incpath)) {
         user_error('failed to open stream: No such file or directory',
             E_USER_WARNING);
         return false;
@@ -153,13 +155,6 @@ function php_compat_http_get_contents_helper($filename, $opts)
 
 function php_compat_ftp_get_contents_helper($filename, $opts)
 {
-}
-
-if (!function_exists('file_get_contents')) {
-    function file_get_contents($filename, $incpath = false, $resource_context = null)
-    {
-        return php_compat_file_get_contents($filename, $incpath, $resource_context);
-    }
 }
 
 ?>
