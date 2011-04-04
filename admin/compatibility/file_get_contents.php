@@ -61,12 +61,14 @@ function php_compat_file_get_contents($filename, $incpath = false, $resource_con
     }
 
     clearstatcache();
+
+    $f_read = 'fread';
     if ($fsize = @filesize($filename)) {
-        $data = fread($fh, $fsize);
+        $data = $f_read($fh, $fsize);
     } else {
         $data = '';
         while (!feof($fh)) {
-            $data .= fread($fh, 8192);
+            $data .= $f_read($fh, 8192);
         }
     }
 
