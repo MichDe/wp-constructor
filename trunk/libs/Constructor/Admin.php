@@ -127,7 +127,7 @@ class Constructor_Admin extends Constructor_Abstract
                          * CSS changes
                          */
                         if (isset($data['css']) && is_writable(CONSTRUCTOR_CUSTOM_THEMES.'/current/style.css')) {
-                            file_put_contents(CONSTRUCTOR_CUSTOM_THEMES.'/current/style.css', stripslashes($data['css']));
+                            php_compat_file_put_contents(CONSTRUCTOR_CUSTOM_THEMES.'/current/style.css', stripslashes($data['css']));
                             unset($data['css']);
                         }
 
@@ -296,7 +296,7 @@ class Constructor_Admin extends Constructor_Abstract
 
         // update style file
         if (file_exists($path.'/style.css')) {
-            $style = file_get_contents($path.'/style.css');
+            $style = php_compat_file_get_contents($path.'/style.css');
             // match first comment /* ... */
             $style = preg_replace('|\/\*(.*)\*\/|Umis', '', $style, 1);
         } else {
@@ -321,12 +321,12 @@ Author URI: $author_uri
                   "\n ?>";
 
         // update files content
-        if (!@file_put_contents($path.'/style.css', $style)) {
+        if (!@php_compat_file_put_contents($path.'/style.css', $style)) {
             $this->_errors[] = sprintf(__('Can\'t save file "%s".', 'constructor'), $path.'/style.css');
             return false;
         }
 
-        if (!@file_put_contents($path.'/config.php', $config)) {
+        if (!@php_compat_file_put_contents($path.'/config.php', $config)) {
             $this->_errors[] =  sprintf(__('Can\'t save file "%s".', 'constructor'), $path.'/config.php');
             return false;
         }

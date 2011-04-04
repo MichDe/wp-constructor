@@ -56,8 +56,11 @@ function php_compat_file_put_contents($filename, $content, $flags = null, $resou
                 true :
                 false;
 
+
+    $f_open = 'fopen';
+
     // Open the file for writing
-    if (($fh = @fopen($filename, $mode, $use_inc_path)) === false) {
+    if (($fh = @$f_open($filename, $mode, $use_inc_path)) === false) {
         user_error('file_put_contents() failed to open stream: Permission denied',
             E_USER_WARNING);
         return false;
@@ -95,13 +98,4 @@ function php_compat_file_put_contents($filename, $content, $flags = null, $resou
 
     // Return length
     return $bytes;
-}
-
-
-// Define
-if (!function_exists('file_put_contents')) {
-    function file_put_contents($filename, $content, $flags = null, $resource_context = null)
-    {
-        return php_compat_file_put_contents($filename, $content, $flags, $resource_context);
-    }
 }
