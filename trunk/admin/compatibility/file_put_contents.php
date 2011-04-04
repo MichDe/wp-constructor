@@ -16,7 +16,7 @@ if (!defined('FILE_APPEND')) {
 
 
 /**
- * Replace file_put_contents()
+ * Replace file put contents()
  *
  * @category    PHP
  * @package     PHP_Compat
@@ -38,7 +38,7 @@ function php_compat_file_put_contents($filename, $content, $flags = null, $resou
 
     // If we don't have a string, throw an error
     if (!is_scalar($content)) {
-        user_error('file_put_contents() The 2nd parameter should be either a string or an array',
+        user_error('file put contents() The 2nd parameter should be either a string or an array',
             E_USER_WARNING);
         return false;
     }
@@ -61,7 +61,7 @@ function php_compat_file_put_contents($filename, $content, $flags = null, $resou
 
     // Open the file for writing
     if (($fh = @$f_open($filename, $mode, $use_inc_path)) === false) {
-        user_error('file_put_contents() failed to open stream: Permission denied',
+        user_error('file put contents() failed to open stream: Permission denied',
             E_USER_WARNING);
         return false;
     }
@@ -77,7 +77,7 @@ function php_compat_file_put_contents($filename, $content, $flags = null, $resou
     // Write to the file
     $bytes = 0;
     if (($bytes = @fwrite($fh, $content)) === false) {
-        $errormsg = sprintf('file_put_contents() Failed to write %d bytes to %s',
+        $errormsg = sprintf('file put contents() Failed to write %d bytes to %s',
                         $length,
                         $filename);
         user_error($errormsg, E_USER_WARNING);
@@ -89,7 +89,7 @@ function php_compat_file_put_contents($filename, $content, $flags = null, $resou
 
     // Check all the data was written
     if ($bytes != $length) {
-        $errormsg = sprintf('file_put_contents() Only %d of %d bytes written, possibly out of free disk space.',
+        $errormsg = sprintf('file put contents() Only %d of %d bytes written, possibly out of free disk space.',
                         $bytes,
                         $length);
         user_error($errormsg, E_USER_WARNING);
