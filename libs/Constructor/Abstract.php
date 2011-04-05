@@ -260,58 +260,6 @@ class Constructor_Abstract
         }
     }
 
-    /**
-     * _updateCache
-     *
-     * Update cache of style file
-     *
-     * @return  rettype  return
-     */
-    function _updateCache()
-    {
-        $css = "/*generated " . date('Y-m-d H:i') . "*/\n\n";
-
-        ob_start();
-        include_once CONSTRUCTOR_DIRECTORY . '/css.php';
-        $css .= ob_get_contents();
-        ob_end_clean();
-
-        php_compat_file_put_contents(CONSTRUCTOR_CUSTOM_CACHE . '/style.css', $css);
-    }
-
-    /**
-     * _updateOptions
-     *
-     * update constructor options
-     *
-     * @param   array    $data
-     * @return  array
-     */
-    function _updateOptions($data = array())
-    {
-        $this->_options = $this->_arrayMerge($this->_default, $data);
-
-        update_option('constructor', $this->_options);
-
-        // need update style cache
-        $this->_updateCache();
-
-    }
-
-    /**
-     * _updateAdmin
-     *
-     * update constructor admin options
-     *
-     * @param   array    $data
-     * @return  array
-     */
-    function _updateAdmin($data = array())
-    {
-        $this->_admin = $this->_arrayMerge($this->_admin, $data);
-
-        update_option('constructor_admin', $this->_admin);
-    }
 
     /**
      * array merge

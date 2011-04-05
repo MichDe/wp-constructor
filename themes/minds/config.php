@@ -15,7 +15,7 @@ return array(
     ),
     'title' =>
     array(
-        'pos' => 'left',
+        'pos' => 'left top', // - position
         'hidden' => true,
     ),
     'comments' =>

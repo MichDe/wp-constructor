@@ -3,7 +3,10 @@ This is local copy of file https://code.google.com/p/wp-constructor/wiki/Constru
 
 == 1.5.8 ==
 
-  === In progress ===
+  * Remove compatibility stuff
+  * Replace file_get/put_content with WP_Filesystem
+
+ == 1.5.8 ==
   * Added more Google face fonts
   * Fixed "tags" option for content
   * Improved options for social bookmarks

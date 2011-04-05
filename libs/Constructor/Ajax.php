@@ -78,9 +78,14 @@ class Constructor_Ajax extends Constructor_Abstract
             }
         }
 
+        require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php';
+	    require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php';
+
+        $wp_filesystem_direct = new WP_Filesystem_Direct(null);
+
         // update style file
         if (file_exists($path_old.'/style.css')) {
-            $style = php_compat_file_get_contents($path_old.'/style.css');
+            $style = $wp_filesystem_direct->get_contents($path_old.'/style.css');
             // match first comment /* ... */
             $style = preg_replace('|\/\*(.*)\*\/|Umis', '', $style, 1);
         } else {
@@ -106,12 +111,12 @@ Author URI: $author_uri
 
         // update files content
         // style CSS
-        if (!@php_compat_file_put_contents(CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/style.css', $style)) {
+        if (!$wp_filesystem_direct->put_contents(CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/style.css', $style)) {
             $this->returnResponse(RESPONSE_KO, sprintf(__('Can\'t save file "%s".', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/style.css'));
         }
 
         // theme config
-        if (!@php_compat_file_put_contents(CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/config.php', $config)) {
+        if (!$wp_filesystem_direct->put_contents(CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/config.php', $config)) {
             $this->returnResponse(RESPONSE_KO, sprintf(__('Can\'t save file "%s".', 'constructor'), CONSTRUCTOR_CUSTOM_THEMES .'/'.$theme_new.'/config.php'));
         }
 

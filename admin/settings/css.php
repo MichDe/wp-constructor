@@ -9,11 +9,11 @@ $css_file = $theme_path .'/style.css';
         <th scope="row" valign="top" class="th-full updated"><?php printf(__('<font color="red"><b>Warning!</b></font>: File "%s" is not writable.', 'constructor'), $css_file); ?></th>
     </tr>
     <tr>
-        <td class="td-full"><textarea name="null[css]" class="big" readonly="readonly"><?php echo php_compat_file_get_contents($css_file)?></textarea></td>
+        <td class="td-full"><textarea name="null[css]" class="big" readonly="readonly"><?php echo $this->readFile($css_file)?></textarea></td>
     </tr>
 <?php else: ?>
     <tr>
-        <td class="td-full" valign="top"><textarea name="constructor[css]" class="big"><?php echo php_compat_file_get_contents($css_file)?></textarea></td>
+        <td class="td-full" valign="top"><textarea name="constructor[css]" class="big"><?php echo  $this->readFile($css_file)?></textarea></td>
         <td valign="top" class="updated quick-links" width="320px">
         <h3><?php _e('Help', 'constructor'); ?></h3>
         <?php printf(__('CSS is Cascading Style Sheets - read manual for beginners <a href="%1$s">%1$s</a>', 'constructor'), 'http://www.w3schools.com/css/'); ?>
