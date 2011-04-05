@@ -1,5 +1,5 @@
 <?php __('Templates', 'constructor'); // required for correct translation
-$layouts = scandir(CONSTRUCTOR_DIRECTORY.'/layouts/');
+$layouts = list_files(CONSTRUCTOR_DIRECTORY.'/layouts/', 1);
 $layouts = array_diff($layouts, array( '.','..','.svn','.htaccess','readme.txt'));
 
 function is_php($file) {

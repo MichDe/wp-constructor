@@ -22,6 +22,10 @@ class Constructor_Admin extends Constructor_Abstract
         </form>';
 
     var $_errors = array();
+    /**
+     * @var WP_Filesystem_Direct
+     */
+    var $_wp_filesystem_direct = null;
 
     /**
      * init all hooks
@@ -33,6 +37,11 @@ class Constructor_Admin extends Constructor_Abstract
         if (!isset($_SESSION)) {
             session_start();
         }
+
+	    require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php';
+	    require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php';
+
+        $this->_wp_filesystem_direct = new WP_Filesystem_Direct(null);
 
         require_once CONSTRUCTOR_DIRECTORY .'/admin/ajax.php';
 
@@ -74,6 +83,59 @@ class Constructor_Admin extends Constructor_Abstract
         }
     }
 
+    /**
+     * _updateCache
+     *
+     * Update cache of style file
+     *
+     * @return  rettype  return
+     */
+    function _updateCache()
+    {
+        $css = "/*generated " . date('Y-m-d H:i') . "*/\n\n";
+
+        ob_start();
+        include_once CONSTRUCTOR_DIRECTORY . '/css.php';
+        $css .= ob_get_contents();
+        ob_end_clean();
+
+        $this->writeFile(CONSTRUCTOR_CUSTOM_CACHE . '/style.css', $css);
+    }
+
+    /**
+     * _updateOptions
+     *
+     * update constructor options
+     *
+     * @param   array    $data
+     * @return  array
+     */
+    function _updateOptions($data = array())
+    {
+        $this->_options = $this->_arrayMerge($this->_default, $data);
+
+        update_option('constructor', $this->_options);
+
+        // need update style cache
+        $this->_updateCache();
+
+    }
+
+    /**
+     * _updateAdmin
+     *
+     * update constructor admin options
+     *
+     * @param   array    $data
+     * @return  array
+     */
+    function _updateAdmin($data = array())
+    {
+        $this->_admin = $this->_arrayMerge($this->_admin, $data);
+
+        update_option('constructor_admin', $this->_admin);
+    }
+    
     /**
      * Process the request
      *
@@ -127,7 +189,7 @@ class Constructor_Admin extends Constructor_Abstract
                          * CSS changes
                          */
                         if (isset($data['css']) && is_writable(CONSTRUCTOR_CUSTOM_THEMES.'/current/style.css')) {
-                            php_compat_file_put_contents(CONSTRUCTOR_CUSTOM_THEMES.'/current/style.css', stripslashes($data['css']));
+                            $this->writeFile(CONSTRUCTOR_CUSTOM_THEMES.'/current/style.css', stripslashes($data['css']));
                             unset($data['css']);
                         }
 
@@ -296,7 +358,7 @@ class Constructor_Admin extends Constructor_Abstract
 
         // update style file
         if (file_exists($path.'/style.css')) {
-            $style = php_compat_file_get_contents($path.'/style.css');
+            $style = $this->readFile($path.'/style.css');
             // match first comment /* ... */
             $style = preg_replace('|\/\*(.*)\*\/|Umis', '', $style, 1);
         } else {
@@ -321,17 +383,40 @@ Author URI: $author_uri
                   "\n ?>";
 
         // update files content
-        if (!@php_compat_file_put_contents($path.'/style.css', $style)) {
+        if (!$this->writeFile($path.'/style.css', $style)) {
             $this->_errors[] = sprintf(__('Can\'t save file "%s".', 'constructor'), $path.'/style.css');
             return false;
         }
 
-        if (!@php_compat_file_put_contents($path.'/config.php', $config)) {
+        if (!$this->writeFile($path.'/config.php', $config)) {
             $this->_errors[] =  sprintf(__('Can\'t save file "%s".', 'constructor'), $path.'/config.php');
             return false;
         }
         return true;
     }
+
+    /**
+     * readFile
+     *
+     * @param  string file
+     * @return string
+     */
+    function readFile($file)
+    {
+        return $this->_wp_filesystem_direct->get_contents($file);
+    }
+    /**
+     * writeFile
+     *
+     * @param  string $file
+     * @param  string $content
+     * @return string
+     */
+    function writeFile($file, $content)
+    {
+        return $this->_wp_filesystem_direct->put_contents($file, $content, 0644);
+    }
+
 
     /**
      * @return void

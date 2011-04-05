@@ -10,12 +10,6 @@ if (CONSTRUCTOR_DEBUG || isset($_REQUEST['debug'])) {
     require_once CONSTRUCTOR_DIRECTORY .'/libs/debug.php';
 }
 
-// PHP4 compatibility
-// now I need this is code for avoid validator warnings
-//if (version_compare(phpversion(), '5.0.0', '<')) {
-    require_once CONSTRUCTOR_DIRECTORY .'/admin/compatibility.php';
-//}
-
 // init modules for admin pages
 // you can disable any
 $constructor_modules = array(

@@ -36,10 +36,30 @@ constructor_themes_list(CONSTRUCTOR_DEFAULT_THEMES, CONSTRUCTOR_DEFAULT_THEMES_U
 ?>
 <br class="clear"/>
 <?php
+
+function constructor_list_dirs($folder = '') {
+	if ( empty($folder) )
+		return false;
+
+	$dirs = array();
+	if ( $dir = @opendir( $folder ) ) {
+		while (($file = readdir( $dir ) ) !== false ) {
+			if ( in_array($file, array('.', '..') ) )
+				continue;
+			if ( is_dir( $folder . '/' . $file ) ) {
+                $dirs[] = $file;
+			}
+		}
+	}
+	@closedir( $dir );
+	return $dirs;
+}
+
+
 function constructor_themes_list($path, $uri)
 {
     global $admin;
-    $themes = scandir($path);
+    $themes = constructor_list_dirs($path);
     $themes = array_diff($themes, array(
                                        '.', '..', '.svn', '.htaccess', 'readme.txt'
                                   ));
