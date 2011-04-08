@@ -10,7 +10,7 @@ http://wp-constructor.googlecode.com/svn/trunk/themes/default/screenshot.png
 = Example (<a href="http://code.google.com/p/wp-constructor/downloads/list?can=3&q=example">Download</a>) =
 http://wp-constructor.googlecode.com/svn/trunk/themes/example/screenshot.png
 
-= Gears (<a name="gears" href="http://code.google.com/p/wp-constructor/downloads/list?can=3&q=gears">Download</a>) =
+= Gears (<a href="http://code.google.com/p/wp-constructor/downloads/list?can=3&q=gears">Download</a>) =
 http://wp-constructor.googlecode.com/svn/trunk/themes/gears/screenshot.png
 
 = Lime =
