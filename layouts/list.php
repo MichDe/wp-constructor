@@ -22,9 +22,8 @@ __('List', 'constructor'); // required for correct translation
                     <?php the_post_thumbnail( 'list-post-thumbnail', array('class' => 'thumb alignleft') ); ?>
     				<?php the_content(__('Read the rest of this entry &raquo;', 'constructor')); ?>
                 </div>
-                <div class="footer">
-                    
-                </div>
+                <?php if (is_singular()) get_constructor_social() ?>
+                <div class="footer"></div>
             </div>
         <?php get_constructor_content_widget($i) ?>
         <?php endwhile; ?>

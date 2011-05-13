@@ -11,8 +11,8 @@ __('Simple', 'constructor'); // required for correct translation
     <?php if (have_posts()) : ?>
         <div id="posts">
         <?php while (have_posts()) : the_post();?>
-            <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
-                <div class="title opacity box">
+            <div <?php post_class('simple'); ?> id="post-<?php the_ID() ?>">
+                <div class="title">
                     <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
                 </div>
                 <div class="entry">
@@ -21,6 +21,7 @@ __('Simple', 'constructor'); // required for correct translation
                         the_content('');
                     ?>
                 </div>
+                <?php if (is_singular()) get_constructor_social() ?>
                 <div class="footer"></div>
             </div>
         <?php endwhile; ?>
