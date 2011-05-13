@@ -513,6 +513,12 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img {
 }
 
 /*/Author*/
+/*Simple*/
+.simple .title {
+    border-width:0 0 1px 0;
+    border-style:solid;
+}
+/*/Simple*/
 /*Tile*/
 .tile {
     padding: 5px !important;
@@ -633,6 +639,7 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img {
 .list .title h2 {
 	background-image:url(images/alert-overlay.png);
 	background-repeat:repeat-x;
+    min-height:40px;
 }
 .list .title h2 a {
     padding:6px 12px;
@@ -819,18 +826,28 @@ table {
 	text-align: left;
 	width: 100%;
 }
+table caption {
+    font-weight:700;
+    padding-left: 24px;
+}
 th {
 	color: #888;
 	font-size: 12px;
 	font-weight: bold;
 	line-height: 18px;
-	padding: 9px 24px;
 }
 tr td {
     border-top-width:1px;
     border-top-style:solid;
-
+}
+.entry th {
+	padding: 9px 24px;
+}
+.entry tr td {
 	padding: 6px 24px;
+}
+.sidebar th {
+    text-align:center;
 }
 /*/Table*/
 /*Comments*/

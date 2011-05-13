@@ -740,6 +740,9 @@ fieldset{
 .hentry .entry img {
     border-color:{$color_border}
 }
+.simple .title {
+   border-color:{$color_border};
+}
 .list .title {
    border-color:{$color_border};
    background-color: {$color3};
