@@ -1,9 +1,25 @@
 #summary Version history
 #labels Featured
 
-== 1.5.8 ==
+== 1.5.11 ==
 
   === In progress ===
+
+== 1.5.10 ==
+  * Return PHP4 compatability
+  * Small changes in simple layout:
+    *  added social buttons
+    *  removed border around post title
+  * Fixed  issue #153 
+
+== 1.5.9 ==
+
+  * Small fixes in subthemes
+  * Removed compatibility stuff
+  * Replaced file_get/put_functions with WP functions
+
+== 1.5.8 ==
+
   * Added this file to repository
   * Minor changes in readme.txt
 
