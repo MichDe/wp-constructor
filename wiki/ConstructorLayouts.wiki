@@ -49,8 +49,16 @@ Example with two sidebars:
 //  - layout-two
 //  - layout-two-right
 //  - layout-two-left
+//
+// You can use method the_constructor_layout_class()
+//  - the_constructor_layout_class('none')
+//  - the_constructor_layout_class('right')
+//  - the_constructor_layout_class('left')
+//  - the_constructor_layout_class('two')
+//  - the_constructor_layout_class('two-right')
+//  - the_constructor_layout_class('two-left')
 ?>
-<div id="content" class="box shadow opacity layout-two">
+<div id="content" class="box shadow opacity  <?php the_constructor_layout_class('two') ?>">
     <div id="container" >
     <!-- same code -->
     </div>
