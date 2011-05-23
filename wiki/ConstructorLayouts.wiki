@@ -69,6 +69,20 @@ Example with two sidebars:
 </div>
 }}}
 
+For version 1.5.11 and higher you can use more simple way:
+
+{{{
+<?php 
+// Call method the_constructor_layout_class() with layout name
+// and call get_constructor_sidebar()
+?>
+<div id="content" class="box shadow opacity  <?php the_constructor_layout_class('two') ?>">
+    <div id="container" >
+    <!-- same code -->
+    </div>
+    <?php get_constructor_sidebar(); ?>
+</div>
+}}}
 
 You can use follows classes in your layout:
 {{{
