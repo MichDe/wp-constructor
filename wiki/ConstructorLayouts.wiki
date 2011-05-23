@@ -84,6 +84,20 @@ For version 1.5.11 and higher you can use more simple way:
 </div>
 }}}
 
+Also you can create child theme and rewrite header.php, footer.php etc:
+ # create new folder
+ # create file style.css with follows code
+ # create custom header or smth else
+{{{
+/*  
+Theme Name: My Constructor
+Description: Child theme
+Template: constructor
+*/
+@import url('../constructor/style.css');
+}}}
+
+
 You can use follows classes in your layout:
 {{{
 /* text color */
