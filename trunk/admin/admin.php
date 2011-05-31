@@ -33,55 +33,6 @@ $constructor_modules = array(
 
 require_once CONSTRUCTOR_DIRECTORY .'/libs/Constructor/Admin.php';
 
-/**
- * Replace scandir()
- *
- * @category    PHP
- * @package     PHP_Compat
- * @link        http://php.net/function.scandir
- * @author      Aidan Lister <aidan@php.net>
- * @version     $Revision: 1.18 $
- * @since       PHP 5
- * @require     PHP 4.0.0 (user_error)
- */
-if (!function_exists('scandir')) {
-    function scandir($directory, $sorting_order = 0)
-    {
-        if (!is_string($directory)) {
-            user_error('scandir() expects parameter 1 to be string, ' .
-                gettype($directory) . ' given', E_USER_WARNING);
-            return;
-        }
-
-        if (!is_int($sorting_order) && !is_bool($sorting_order)) {
-            user_error('scandir() expects parameter 2 to be long, ' .
-                gettype($sorting_order) . ' given', E_USER_WARNING);
-            return;
-        }
-
-        if (!is_dir($directory) || (false === $fh = @opendir($directory))) {
-            user_error('scandir() failed to open dir: Invalid argument', E_USER_WARNING);
-            return false;
-        }
-
-        $files = array ();
-        while (false !== ($filename = readdir($fh))) {
-            $files[] = $filename;
-        }
-
-        closedir($fh);
-
-        if ($sorting_order == 1) {
-            rsort($files);
-        } else {
-            sort($files);
-        }
-
-        return $files;
-    }
-}
-
-
 $admin = new Constructor_Admin();
 $admin -> init($constructor_modules);
  
