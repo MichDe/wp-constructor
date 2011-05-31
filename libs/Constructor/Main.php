@@ -8,6 +8,20 @@ require_once 'Abstract.php';
 class Constructor_Main extends Constructor_Abstract
 {
     /**
+     * Current layout
+     *
+     *  - none
+     *  - right
+     *  - left
+     *  - two
+     *  - two-right
+     *  - two-left
+     *
+     * @var string
+     */
+    var $_layout;
+
+    /**
      * init all hooks
      */
     function init() 
@@ -190,6 +204,8 @@ class Constructor_Main extends Constructor_Abstract
         } else {
             $sidebar = $this->_options['sidebar'];
         }
+
+        $this->_layout = $sidebar;
         return 'layout-'.$sidebar;
     }
     
@@ -364,8 +380,15 @@ class Constructor_Main extends Constructor_Abstract
      */
     function getSidebar()
     {
-        // switch statement for $this->_options['sidebar']
-        switch ($this->_options['sidebar']) {
+        // use config or template value
+        if ($this->_layout) {
+            $layout = $this->_layout;
+        } else {
+            $layout = $this->_options['sidebar'];
+        }
+
+        // switch statement for $layout
+        switch ($layout) {
             case 'left':
             case 'right':
                 get_sidebar();

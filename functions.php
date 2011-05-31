@@ -154,6 +154,7 @@ if (!is_admin()) {
      * Preview filter
      *
      * @param string $content
+     * @return string
      */
     function constructor_preview($content) {
         $link = add_query_arg(array('preview' => 1, 'template' => get_template()), '?theme-constructor=css');
@@ -251,7 +252,7 @@ if (!is_admin()) {
      * get content widget
      * 
      * @param integer $i post counter
-     * @return 
+     * @return void
      */
     function get_constructor_content_widget($i)
     {
@@ -275,6 +276,7 @@ if (!is_admin()) {
     /**
      * get avatar size
      *
+     * @param integer $size
      * @return string
      */
     function get_constructor_avatar_size($size = 32)
@@ -286,6 +288,9 @@ if (!is_admin()) {
     /**
      * get no image
      *
+     * @param integer $width
+     * @param integer $height
+     * @param string $align
      * @return string
      */
     function get_constructor_noimage($width = 320, $height = 320, $align = 'none')

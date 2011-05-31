@@ -3,6 +3,7 @@
  * @package WordPress
  * @subpackage Constructor
  */
+require_once '../scandir.php';
 class Constructor_Abstract
 {
     /**
