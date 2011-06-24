@@ -2,25 +2,25 @@
 Theme Name: Naruto
 Theme URI: http://code.google.com/p/wp-constructor/downloads/list?can=2&q=Naruto
 Description: For Naruto funs. Thx for images to <a href="http://ekoputeh.deviantart.com/">ekoputeh</a> and <a href="http://xergille.deviantart.com/">xergille</a>
-Version: 1.5.0
+Version: 1.6.0
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 */
 /*disable circles*/
-.sidebar li {
+aside li {
     list-style-type: none !important
 }
 
-.sidebar li a {
+aside li a {
     padding-left: 4px;
     border-left: 6px solid #333;
 }
 
-.sidebar li a:hover {
+aside li a:hover {
     border-left: 6px solid #FF7711;
 }
 
-.sidebar h3 {
+aside h3 {
     border-bottom: 1px solid #FF7711
 
 }
@@ -29,16 +29,18 @@ Author URI: http://anton.shevchuk.name/
     padding-bottom: 380px;
 }
 
-.title {
+article header h1,
+article header h2,
+article header h2{
     background: url(title.png) -10px 0 no-repeat;
     border: 0 !important;
     padding-left: 40px !important;
 }
 
-.title a {
+header a {
     border: 0 !important;
 }
 
-.tile .title {
+.tile header {
     padding-left: 12px !important;
 }

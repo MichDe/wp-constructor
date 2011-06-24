@@ -6,7 +6,7 @@
  * @subpackage constructor
  */
 ?>
-<div class="navigation">
+<nav class="navigation">
     <?php if (is_singular()) : // Whether is single post, is a page, or is an attachment ?>
         <div class="alignleft"><?php next_post_link('%link', '<span>&laquo;</span> %title') ?></div>
         <div class="alignright"><?php previous_post_link('%link', '%title <span>&raquo;</span>') ?></div>
@@ -16,4 +16,4 @@
         <div class="alignleft"><?php next_posts_link(__('<span>&laquo;</span> Older Entries', 'constructor')) ?></div>
         <div class="alignright"><?php previous_posts_link(__('Newer Entries <span>&raquo;</span>', 'constructor')) ?></div>
     <?php endif; ?>
-</div>
+</nav>

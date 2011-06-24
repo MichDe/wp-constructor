@@ -2,7 +2,7 @@
 Theme Name: Pinup
 Theme URI: http://code.google.com/p/wp-constructor/downloads/list?can=2&q=Pinup
 Description: Pinup. Thx for images to <a href="http://dominic-marco.deviantart.com/">Dominic Marco</a>
-Version: 1.5.0
+Version: 1.6.0
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 */
@@ -12,20 +12,20 @@ Author URI: http://anton.shevchuk.name/
 }
 
 /*disable circles*/
-.sidebar li {
+aside li {
     list-style-type: none !important
 }
 
-.sidebar li a {
+aside li a {
     padding-left: 4px;
     border-left: 6px solid #ddd;
 }
 
-.sidebar li a:hover {
+aside li a:hover {
     border-left: 6px solid #f700d6;
 }
 
-.sidebar h3 {
+aside h3 {
     border-bottom: 1px solid #f700d6
 
 }

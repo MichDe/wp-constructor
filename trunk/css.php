@@ -770,25 +770,25 @@ fieldset{
 }
 /*/Author*/
 /*Archive*/
-#posts .archive table td{
+.archive table td{
     color:{$color_text2}
 }
-#posts .archive table a{
+.archive table a{
     padding:4px;
     color:{$color_text}
 }
-#posts .archive table a:hover{
+.archive table a:hover{
     background-color: {$color2};
 }
 /*/Archive*/
 /*Sidebar*/    
-.sidebar .current_page_item a,
-.sidebar .current-cat a{
+aside .current_page_item a,
+aside .current-cat a{
     font-weight:900;
     border-color:{$color_text}
 }
-.sidebar .current_page_item li a,
-.sidebar .current-cat li a{
+aside .current_page_item li a,
+aside .current-cat li a{
     font-weight:500;
     border-color:{$color_border}
 }
@@ -853,5 +853,28 @@ fieldset{
 .wp-pagenavi a:hover, .wp-pagenavi span.current {
     border-color:{$color_border2} !important;
 }
+/*/Plugins:wp-pagenavi*/
+/*Widgets:Google Calendar Events*/
+.gce-widget-grid .gce-calendar,
+.gce-widget-grid .gce-calendar th,
+.gce-widget-grid .gce-calendar td {
+    border: 1px solid {$color_border} !important;
+}
+.gce-widget-grid .gce-calendar .gce-today {
+    background-color: {$color_bg2} !important;
+}
+.gce-widget-grid .gce-calendar .gce-has-events {
+    color:{$color1} !important;
+}
+.gce-event-info {
+    color:{$color_text} !important;
+    border: 1px solid {$color_border} !important;
+    background-color: {$color_bg} !important;
+}
+.gce-event-info .gce-tooltip-event {
+    color:{$color1} !important;
+    background-color: {$color_bg} !important;
+}
+/*/Widgets:Google Calendar Events*/
 CSS;
 ?>
