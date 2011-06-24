@@ -29,6 +29,7 @@ class Constructor_Admin extends Constructor_Abstract
 
     /**
      * init all hooks
+     * @param array $modules
      */
     function init($modules = array()) 
     {
@@ -299,9 +300,7 @@ class Constructor_Admin extends Constructor_Abstract
     function save($theme)
     {
         global $current_user, $template_uri;
-        // setup permissions for save
-        $permission = 0777;
-
+        
         // get theme options
         $constructor = $this->_options;
         $admin       = $this->_admin;
@@ -347,6 +346,18 @@ class Constructor_Admin extends Constructor_Abstract
                 }
             }
         }
+        // copy all images (*.png, *.jpeg, *.jpg, *.gif)
+        // and check it
+        $files = scandir($path_old);
+        $files = array_diff($files, array('.','..','.svn','screenshot.png','config.php','style.css'));
+        foreach ($files as $file) {
+            if (in_array(strtolower(pathinfo($file, PATHINFO_EXTENSION)), array('png', 'jpg', 'jpeg', 'gif'))
+                && @getimagesize($path_old . '/'. $file)
+                ) {
+                @copy($path_old.'/'.$file, $path.'/'.$file);
+            }
+        }
+
         // copy default screenshot (if not exist)
         if (!file_exists($path.'/screenshot.png')) {
             if (!@copy(CONSTRUCTOR_DIRECTORY.'/admin/images/screenshot.png', $path.'/screenshot.png')) {
@@ -398,7 +409,7 @@ Author URI: $author_uri
     /**
      * readFile
      *
-     * @param  string file
+     * @param  string $file
      * @return string
      */
     function readFile($file)

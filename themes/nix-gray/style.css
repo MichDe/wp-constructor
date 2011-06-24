@@ -2,7 +2,7 @@
 Theme Name: NIX Gray
 Theme URI: http://nixsolutions.com
 Description: NIX Solutions
-Version: 1.5.0
+Version: 1.6.0
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 */
@@ -53,6 +53,6 @@ Author URI: http://anton.shevchuk.name/
     border: 0 !important;
 }
 
-.title, .sidebar h3 {
+article header, aside h3 {
     background: url(divider.jpg) repeat-x left bottom;
 }

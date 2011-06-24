@@ -42,12 +42,11 @@ foreach ($AllPosts as $Post) {
 get_header(); ?>
 <div id="content" class="box shadow opacity <?php the_constructor_layout_class() ?>">
     <div id="container" >
-        <div id="posts">
         <?php while (have_posts()) : the_post(); ?>
-            <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
-                <div class="title opacity box">
+            <article <?php post_class(); ?> id="post-<?php the_ID() ?>">
+                <header class="opacity box">
                     <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1>
-                </div>
+                </header>
                 <div class="entry archive">
                     <?php the_content(__('Read the rest of this entry &raquo;', 'constructor')) ?>
                     <table>
@@ -81,18 +80,14 @@ get_header(); ?>
                         <?php endfor; ?>
                     <?php endforeach; ?>
                 </div>
-                <div class="footer">
-                    <div class="links">
+                <footer>
                     <?php if($post->post_parent) : $parent_link = get_permalink($post->post_parent); ?>
                     <a href="<?php echo $parent_link; ?>"><?php _e('Back to Parent Page', 'constructor');?></a> |
                     <?php endif; ?>
                     <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
-                    </div>
-                </div>
-            </div>
+                </footer>
+            </article>
         <?php endwhile; ?>
-        </div>
-
     </div><!-- id='container' -->
     <?php get_constructor_sidebar(); ?>
 </div><!-- id='content' -->

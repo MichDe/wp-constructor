@@ -2,11 +2,11 @@
 Theme Name: Orange
 Theme URI: 
 Description: Orange Constructor Theme
-Version: 1.5.0
+Version: 1.6.0
 Author: Anton Shevchuk
 Author URI: http://anton.shevchuk.name/
 */
-.hentry .footer {
+article footer {
     height: 80px;
     background: url(line.png) 50% 100% no-repeat
 }

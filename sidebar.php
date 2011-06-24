@@ -4,7 +4,7 @@
  * @subpackage Constructor
  */
 ?>
-<div id="sidebar" class="sidebar">
+<aside id="sidebar">
 	<ul>
 	    <?php 	    
 	    // switch statement for widget place
@@ -47,4 +47,4 @@
 	    }
 	    ?>
 	</ul>
-</div>
+</aside>

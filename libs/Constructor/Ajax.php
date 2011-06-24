@@ -66,6 +66,18 @@ class Constructor_Ajax extends Constructor_Abstract
             }
         }
 
+        // copy all images (*.png, *.jpeg, *.jpg, *.gif)
+        // and check it
+        $files = scandir($path_old);
+        $files = array_diff($files, array('.','..','.svn','screenshot.png','config.php','style.css'));
+        foreach ($files as $file) {
+            if (in_array(pathinfo($file, PATHINFO_EXTENSION), array('png', 'jpg', 'jpeg', 'gif'))
+                && @getimagesize($path_old . '/'. $file)
+                ) {
+                @copy($path_old.'/'.$file, $path_new.'/'.$file);
+            }
+        }
+
         // copy default screenshot (if not exist)
         if (!file_exists($path_new.'/screenshot.png') &&
              file_exists($path_old.'/screenshot.png')) {
@@ -77,6 +89,7 @@ class Constructor_Ajax extends Constructor_Abstract
                 $this->returnResponse(RESPONSE_KO, sprintf(__('Can\'t copy file "%s".', 'constructor'), '/admin/images/screenshot.png'));
             }
         }
+
 
         require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php';
 	    require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php';
@@ -158,6 +171,7 @@ Author URI: $author_uri
      *
      * Used for remove folders in $wp_uploads['basepath'] .'/constructor'
      *
+     * @param string $folder
      * @return void
      */
     function _clean($folder)

@@ -220,8 +220,8 @@ class Constructor_Main extends Constructor_Abstract
     {
         if (!isset($this->_options['menu']['flag']) or !$this->_options['menu']['flag']) return false;
 
-        echo '<div id="menu" class="opacity shadow">';
-        echo '<ul class="menu">';
+        echo '<nav id="menu" class="opacity shadow">';
+        echo '<ul>';
         
         // before items
         if (!empty($before)) {
@@ -322,14 +322,14 @@ class Constructor_Main extends Constructor_Abstract
             echo '</li>';
         }
         echo '</ul>';
-        echo '</div>';
+        echo '</nav>';
     }
     
     /**
      * get constructor content widget
      * 
      * @param integer $i post counter
-     * @return 
+     * @return string
      */
     function getContentWidget($i)
     {
@@ -359,8 +359,7 @@ class Constructor_Main extends Constructor_Abstract
     /**
      * get_constructor_author
      *
-     * @param  string $before
-     * @param  string $after
+     * @param  integer $size
      * @return string
      */
     function getAvatarSize($size = 32)
@@ -515,4 +514,5 @@ class Constructor_Main extends Constructor_Abstract
         return $category_class;
     }
 }
+
 ?>

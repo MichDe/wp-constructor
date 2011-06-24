@@ -1,6 +1,12 @@
 = Versions history =
 This is local copy of file https://code.google.com/p/wp-constructor/wiki/ConstructorHistory
 
+== 1.6 ==
+  * Implemented HTML5 tags: article, header, footer, section, aside
+  * Cleaned some tags and styles
+  * Removed scandir.php
+  * Added support Google Calendar Events Widget
+
 == 1.5.11 ==
   * Change logic of the_constructor_layout_class() and get_constructor_sidebar()
   * Moved function scandir to separated file (be ready for WP 3.2)

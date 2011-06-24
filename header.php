@@ -9,6 +9,9 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <title><?php wp_title('&raquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+<!--[if IE]>
+<script type="text/javascript" src="<?php echo CONSTRUCTOR_DIRECTORY_URI; ?>/js/html5forIE.js"></script>
+<![endif]-->
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url'); ?>"/>
     <link rel="stylesheet" type="text/css" media="print" href="<?php echo CONSTRUCTOR_DIRECTORY_URI; ?>/print.css" />
@@ -21,7 +24,7 @@
 	
 <div id="body">
    <div id="wrapheader" class="wrapper">
-       <div id="header">
+       <header id="header">
             <?php get_constructor_menu() ?>
             <div id="title">
 				<?php if (is_home() || is_front_page()) { ?>
@@ -31,7 +34,7 @@
 				<?php } ?>
                 <div id="description"><?php bloginfo('description');?></div>
             </div>
-       </div>
+       </header>
    </div>
    
    <div id="wrapcontent" class="wrapper">

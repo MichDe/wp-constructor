@@ -6,7 +6,7 @@
 ?>
     </div><!-- id='wrapcontent' -->
     <div id="wrapfooter" class="wrapper">
-    	<div id="footer">
+    	<footer id="footer">
     		<?php
             // check active
             if (is_active_sidebar('footer')
@@ -37,7 +37,7 @@
         	<p class="clear copy">
             	<?php get_constructor_footer();?>
         	</p>
-    	</div>
+    	</footer>
 	</div>
 </div>
 <?php wp_footer(); ?>

@@ -10,19 +10,17 @@ __('Single', 'constructor'); // required for correct translation
     <?php get_constructor_slideshow(true) ?>
 
     <?php if (have_posts()) : ?>
-        <div id="posts">
         <?php while (have_posts()) : the_post(); ?>
-            <div <?php post_class(); ?> id="post-<?php the_ID() ?>">
-                <div class="title opacity box">
+            <article <?php post_class(); ?> id="post-<?php the_ID() ?>">
+                <header class="opacity box">
                     <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1>
-                </div>
+                </header>
                 <div class="entry">
                     <?php the_content(__('Read the rest of this entry &raquo;', 'constructor')) ?>
 				    <?php wp_link_pages(array('before' => '<p class="pages"><strong>'.__('Pages', 'constructor').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
                 </div>
                 <?php get_constructor_social() ?>
-                <div class="footer">
-                    <div class="links">
+                <footer>
                         <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
                         <?php if (get_constructor_option('content', 'date')) { the_date(); echo ' | '; } ?>
                         <?php if (get_constructor_option('content', 'links', 'author')) { the_author_posts_link(); echo ' | '; } ?>
@@ -39,11 +37,9 @@ __('Single', 'constructor'); // required for correct translation
                                 __('Comments Closed', 'constructor')
                             );
                         } ?>
-                    </div>
-                </div>
-            </div>
+                </footer>
+            </article>
         <?php endwhile; ?>
-        </div>
         <?php comments_template(); ?>
         <?php get_constructor_navigation(); ?>
     <?php endif; ?>
