@@ -10,6 +10,7 @@ __('Tile', 'constructor'); // required for correct translation
     <?php get_constructor_slideshow(true) ?>
     <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
+            <div>
             <article <?php post_class('opacity shadow box'); ?> id="post-<?php the_ID() ?>">
                 <header class="title opacity">
                     <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
@@ -30,8 +31,10 @@ __('Tile', 'constructor'); // required for correct translation
                     <div class="comments"><?php comments_popup_link('0', '1', '%', 'button', '' ); ?></div>
                 </footer>
             </article>
+            </div>
         <?php endwhile; ?>
         <?php get_constructor_navigation(); ?>
     <?php endif; ?>
     </div>
+    <?php get_constructor_sidebar(); ?>
 </div><!-- id='content' -->

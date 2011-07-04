@@ -4,6 +4,7 @@ This is local copy of file https://code.google.com/p/wp-constructor/wiki/Constru
 == 1.6.1 ==
   * Fixed security issue with WP version
   * New template for layout - "Three columns"
+  * Small changes in "Tile" template
   * Replace HTML5 javascript
 
 == 1.6.0 ==
