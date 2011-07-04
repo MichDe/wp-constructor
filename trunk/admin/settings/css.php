@@ -46,18 +46,23 @@ $css_file = $theme_path .'/style.css';
     font-size:1.2em;
 }</pre>
         <?php _e('Sidebar', 'constructor');?>
-<pre>.sidebar{
+<pre>aside {
     font-size:1.4em;
 }</pre>
         <?php _e('Content', 'constructor');?>
-<pre>.hentry .title { /* post title */
+<pre>.hentry header { /* post title */
     border:0;
 }
 .hentry .entry { /* content */
     font-size:1.6em
 }
-.hentry .footer { /* footer links */
+.hentry footer { /* footer links */
     color:#ccc /* it's gray color */
+}
+</pre>
+        <?php _e('Template', 'constructor');?>
+<pre>.tile > div { /* fixed Tile layout width */
+    width:340px !important;
 }
 </pre>
         </td>

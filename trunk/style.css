@@ -523,16 +523,19 @@ article .crop img {
 /*/Simple*/
 /*Tile*/
 .tile {
-    padding: 5px !important;
+    
 }
-
-.tile article {
-    clear:none;
-    position:relative;
-    width:328px;
-    height:328px;
+.tile > div {
+    width:33.3%;
     float:left;
+    clear:none;
+}
+.tile article {
+    position:relative;
+    min-width:328px;
+    height:328px;
     margin:4px;
+    padding:0;
 }
 
 .tile header {
@@ -555,17 +558,15 @@ article .crop img {
 
 .tile .thumbnail {
     z-index:0;
-    position:absolute;
-    top:2px;
-    left:4px;
     width:320px;
-    margin:2px auto;
+    height:320px;
+    margin:4px auto;
 }
 
 .tile footer {
     z-index:10;
-    position:absolute;
     bottom:8px;
+    position:absolute;
     left:0;
     height:32px;
     width:100%;
@@ -575,7 +576,6 @@ article .crop img {
     text-indent:0.8em;
     padding:0;
     float:left;
-    width:280px;
     line-height:32px;
 }
 .tile footer .comments {
@@ -639,6 +639,7 @@ article .crop img {
 }
 .column article {
     margin:4px;
+    padding:4px;
 }
 /*/Column*/
 /*List*/
@@ -685,6 +686,7 @@ article .crop img {
     display:block;
     width:auto;
     height:32px;
+    line-height:32px;
     margin:0 20px
 }
 .wp-pagenavi {

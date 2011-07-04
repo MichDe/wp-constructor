@@ -34,7 +34,10 @@ $layouts = array_filter($layouts, 'is_php');
         <td valign="top" class="updated quick-links" width="240px">
             <h3><?php _e('Help', 'constructor'); ?></h3>
             <a href="http://code.google.com/p/wp-constructor/wiki/ConstructorLayouts" title="Create custom layout">Create custom layout</a>
-            <br/><br/>
+            <br/>
+            <strong><?php _e('Tile Template', 'constructor')?></strong>
+            <?php _e('Optimized for container with width equals to 1024px', 'constructor')?>
+            <br/>
             <dl>
                 <dt><?php _e('Homepage', 'constructor')?></dt>
                 <dd>http://domain.com</dd>
