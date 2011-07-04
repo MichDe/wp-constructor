@@ -1,7 +1,11 @@
 = Versions history =
 This is local copy of file https://code.google.com/p/wp-constructor/wiki/ConstructorHistory
 
-== 1.6 ==
+== 1.6.1 ==
+  * Fixed security issue with WP version
+  * New template for layout - "Three columns"
+
+== 1.6.0 ==
   * Implemented HTML5 tags: article, header, footer, section, aside
   * Cleaned some tags and styles
   * Removed scandir.php

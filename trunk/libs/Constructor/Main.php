@@ -37,7 +37,7 @@ class Constructor_Main extends Constructor_Abstract
      */
     function addThemeScripts() 
     {
-        wp_enqueue_script('constructor-theme',     CONSTRUCTOR_DIRECTORY_URI.'/js/ready.js', array('jquery'));
+        wp_enqueue_script('constructor-theme',     CONSTRUCTOR_DIRECTORY_URI.'/js/ready.js', array('jquery'), null);
     }
     
     /**
@@ -50,19 +50,19 @@ class Constructor_Main extends Constructor_Abstract
     {
         // load style
         if (file_exists(CONSTRUCTOR_CUSTOM_CACHE .'/style.css')) {
-            wp_enqueue_style('constructor-style',   CONSTRUCTOR_CUSTOM_CACHE_URI .'/style.css');
+            wp_enqueue_style('constructor-style',   CONSTRUCTOR_CUSTOM_CACHE_URI .'/style.css', array(), null);
         } else {
-            wp_enqueue_style('constructor-style', home_url().'/?theme-constructor=css');
+            wp_enqueue_style('constructor-style', home_url().'/?theme-constructor=css', array(), null);
         }
 
         // load constructor subtheme style
         if ($this->isDefaultTheme($this->getTheme())) {
             if (file_exists(CONSTRUCTOR_DEFAULT_THEMES.'/'.$this->getTheme().'/style.css')) {
-                wp_enqueue_style( 'constructor-theme', CONSTRUCTOR_DEFAULT_THEMES_URI .'/'.$this->getTheme().'/style.css');
+                wp_enqueue_style( 'constructor-theme', CONSTRUCTOR_DEFAULT_THEMES_URI .'/'.$this->getTheme().'/style.css', array(), null);
             }
         } else {
             if (file_exists(CONSTRUCTOR_CUSTOM_THEMES.'/'.$this->getTheme().'/style.css')) {
-                wp_enqueue_style( 'constructor-theme', CONSTRUCTOR_CUSTOM_THEMES_URI .'/'.$this->getTheme().'/style.css');
+                wp_enqueue_style( 'constructor-theme', CONSTRUCTOR_CUSTOM_THEMES_URI .'/'.$this->getTheme().'/style.css', array(), null);
             }
         }
 
@@ -93,11 +93,11 @@ class Constructor_Main extends Constructor_Abstract
     }
 
     /**
-     * get_constructor_slideshow
+     * get constructor slideshow
      *
      * @access  public
      * @param   boolean  $in In or Out of content container
-     * @return  rettype  return
+     * @return  false|string
      */
     function getSlideshow($in = false)
     {
@@ -131,7 +131,7 @@ class Constructor_Main extends Constructor_Abstract
     }
     
     /**
-     * get_constructor_default_slideshow
+     * get constructor default slideshow
      *
      * generate code for embedded slideshow
      *
@@ -144,7 +144,7 @@ class Constructor_Main extends Constructor_Abstract
         $options = $this->_options['slideshow']['advanced'];
         $options['slideshow'] = home_url().'/?theme-constructor=slideshow&w='.$width.'&h='.$height;
 //        $options['thumbPath'] = CONSTRUCTOR_DIRECTORY_URI."/libs/timthumb.php?src=";
-        $options = json_encode($options);
+        $optionsJSON = json_encode($options);
         
         echo '<div class="wp-sl"></div>';
         wp_enqueue_script('constructor-slideshow', CONSTRUCTOR_DIRECTORY_URI.'/js/jquery.wp-slideshow.js');
@@ -152,7 +152,7 @@ class Constructor_Main extends Constructor_Abstract
         echo "
         <script type='text/javascript'>
         /* <![CDATA[ */
-            var wpSl = $options;
+            var wpSl = $optionsJSON;
         /* ]]> */
         </script>";
     }

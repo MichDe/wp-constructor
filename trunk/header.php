@@ -9,9 +9,9 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <title><?php wp_title('&raquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
-<!--[if IE]>
-<script type="text/javascript" src="<?php echo CONSTRUCTOR_DIRECTORY_URI; ?>/js/html5forIE.js"></script>
-<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url'); ?>"/>
     <link rel="stylesheet" type="text/css" media="print" href="<?php echo CONSTRUCTOR_DIRECTORY_URI; ?>/print.css" />
