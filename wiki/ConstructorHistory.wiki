@@ -7,7 +7,7 @@
   * Small changes in "Tile" template
   * Replace HTML5 javascript
 
-== 1.6.0 ==
+= 1.6.0 =
   * Implemented HTML5 tags: article, header, footer, section, aside
   * Cleaned some tags and styles
   * Removed scandir.php
