@@ -1,9 +1,17 @@
 #summary Version history
 #labels Featured
 
-== 1.5.11 ==
+== 1.6.1 ==
+  * Fixed security issue with WP version
+  * New template for layout - "Three columns"
+  * Small changes in "Tile" template
+  * Replace HTML5 javascript
 
-  === In progress ===
+== 1.6.0 ==
+  * Implemented HTML5 tags: article, header, footer, section, aside
+  * Cleaned some tags and styles
+  * Removed scandir.php
+  * Added support Google Calendar Events Widget
 
 == 1.5.10 ==
   * Return PHP4 compatability
