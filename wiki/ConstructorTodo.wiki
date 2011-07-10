@@ -15,3 +15,5 @@
   # ~~"Header" tab -> Header font size options~~
   # ~~"Content" tab -> Show "comments closed" message option~~
   # Export/Import theme as ZIP archive (with all images)
+  # "Slideshow" tab -> resize previously uploaded "featured images"
+  # "Content" tab -> Show "thumbnail" option
