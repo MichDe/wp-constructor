@@ -11,7 +11,7 @@ __('Single', 'constructor'); // required for correct translation
     <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); global $post; ?>
             <article <?php post_class(); ?> id="post-<?php the_ID() ?>">
-                <header class="title opacity box">
+                <header class="opacity box">
                     <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1>
                 </header>
                 <div class="entry">

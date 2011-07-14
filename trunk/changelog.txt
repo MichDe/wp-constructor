@@ -1,6 +1,14 @@
 = Versions history =
 This is local copy of file https://code.google.com/p/wp-constructor/wiki/ConstructorHistory
 
+== 1.6.2 ==
+  * Updated Google Web Fonts
+  * Small changes in column layout
+  * Added new subtheme - "Old Newspaper" (included to default)
+  * Updated translation catalog
+  * Updated Russian translation
+  * Fixed mistake in Italian (issue #166)
+
 == 1.6.1 ==
   * Fixed security issue with WP version
   * New template for layout - "Three columns"

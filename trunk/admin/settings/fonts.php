@@ -76,6 +76,8 @@ function loadFont(font) {
             </p>
         </td>
         <td rowspan="5" valign="top" class="updated quick-links" width="320px">
+            <h3><?php _e('Google Web Fonts', 'constructor') ?></h3>
+            <p><a href="http://www.google.com/webfonts"><?php _e('Google Web Fonts lets you browse all the fonts available via the Google Web Fonts API. All fonts in the directory are available for use on your website under an open source license and are served by Google servers.', 'constructor') ?></a></p>
             <h3><?php _e('Font Weight', 'constructor') ?></h3>
             <p><?php _e('Defines from thin to thick characters. 400 is the same as "normal", and 700 is the same as "bold"', 'constructor') ?>
             </p>

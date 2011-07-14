@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constructor Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-23 15:34+0200\n"
+"POT-Creation-Date: 2011-07-14 12:36+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Anton Shevchuk <Anton.Shevchuk@gmail.com>\n"
 "Language-Team: Anton Shevchuk <AntonShevchuk@gmail.com>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: W:/www/wordpress3/wp-content/themes/constructor\n"
 
 #: W:/www/wordpress3/wp-content/themes/constructor/sidebar.php:28
-#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:24
+#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:22
 msgid "Pages"
 msgstr ""
 
@@ -27,7 +27,7 @@ msgid "Categories"
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/sidebar.php:32
-#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:32
+#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:29
 msgid "Tags"
 msgstr ""
 
@@ -43,24 +43,24 @@ msgstr ""
 msgid "Newer Entries <span>&raquo;</span>"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/template-authors.php:17
-#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:19
+#: W:/www/wordpress3/wp-content/themes/constructor/template-authors.php:16
+#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:18
 #, php-format
 msgid "Permanent Link to %s"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/template-authors.php:20
-#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:23
+#: W:/www/wordpress3/wp-content/themes/constructor/template-authors.php:19
+#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:21
 msgid "Read the rest of this entry &raquo;"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/template-authors.php:28
-#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:29
+#: W:/www/wordpress3/wp-content/themes/constructor/template-authors.php:26
+#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:26
 msgid "Back to Parent Page"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/template-authors.php:30
-#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:33
+#: W:/www/wordpress3/wp-content/themes/constructor/template-authors.php:28
+#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:30
 msgid "Edit"
 msgstr ""
 
@@ -68,19 +68,19 @@ msgstr ""
 msgid "Read more &raquo;"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:34
+#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:31
 msgid "No Comments &#187;"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:34
+#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:31
 msgid "1 Comment &#187;"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:34
+#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:31
 msgid "% Comments &#187;"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:34
+#: W:/www/wordpress3/wp-content/themes/constructor/template-monocolumn.php:31
 msgid "Comments Closed"
 msgstr ""
 
@@ -158,11 +158,11 @@ msgstr ""
 msgid "%B"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/404.php:13
+#: W:/www/wordpress3/wp-content/themes/constructor/404.php:11
 msgid "Error 404 - Not Found"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/404.php:16
+#: W:/www/wordpress3/wp-content/themes/constructor/404.php:12
 msgid "Sorry, but you are looking for something that isn&#8217;t here."
 msgstr ""
 
@@ -170,70 +170,70 @@ msgstr ""
 msgid "Header Menu"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/functions.php:293
+#: W:/www/wordpress3/wp-content/themes/constructor/functions.php:298
 msgid "No Image"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:24
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:22
 msgid "Author RSS Feed"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:24
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:22
 msgid "RSS Feed"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:30
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:36
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:27
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:33
 #, php-format
 msgid "%1$s %2$s"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:35
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:32
 msgid "Full Name"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:40
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:37
 msgid "Nickname"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:45
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:42
 msgid "Website"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:46
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:43
 msgid "Visit author website"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:50
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:47
 msgid "ICQ"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:55
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:52
 msgid "AIM"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:60
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:57
 msgid "Yahoo IM"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:65
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:62
 msgid "MSN"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:70
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:67
 msgid "About Me"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:79
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:75
 #, php-format
 msgid "Latest posts by %s"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/author.php:95
+#: W:/www/wordpress3/wp-content/themes/constructor/author.php:88
 msgid "No posts by this author."
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/template-sitemap.php:32
+#: W:/www/wordpress3/wp-content/themes/constructor/template-sitemap.php:31
 msgid "Archives"
 msgstr ""
 
@@ -251,19 +251,21 @@ msgid "Simple"
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/layouts/single.php:6
-#: W:/www/wordpress3/wp-content/themes/constructor/layouts/page.php:6
-#: W:/www/wordpress3/wp-content/themes/constructor/layouts/thumb.php:6
 msgid "Single"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/layouts/single.php:30
-#: W:/www/wordpress3/wp-content/themes/constructor/layouts/default.php:27
-#: W:/www/wordpress3/wp-content/themes/constructor/layouts/thumb.php:30
+#: W:/www/wordpress3/wp-content/themes/constructor/layouts/single.php:28
+#: W:/www/wordpress3/wp-content/themes/constructor/layouts/column.php:51
+#: W:/www/wordpress3/wp-content/themes/constructor/layouts/default.php:25
 msgid "Posted in"
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/layouts/list.php:6
 msgid "List"
+msgstr ""
+
+#: W:/www/wordpress3/wp-content/themes/constructor/layouts/column.php:6
+msgid "Column"
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/layouts/tiles.php:6
@@ -275,88 +277,86 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:21
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:16
 msgid "Themes"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:22
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:17
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/layout.php:1
 msgid "Layout"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:23
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:18
 msgid "Templates"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:24
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:19
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/header.php:1
 msgid "Header"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:25
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:120
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:20
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:122
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/css.php:52
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:1
 msgid "Content"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:26
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:21
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/comments.php:1
 msgid "Comments"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:27
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:22
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/footer.php:1
 msgid "Footer"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:28
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:23
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:1
 msgid "Fonts"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:29
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:24
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/colors.php:1
 msgid "Colors"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:30
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:25
 msgid "Design"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:31
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:26
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/css.php:1
 msgid "CSS"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:32
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:27
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/images.php:1
 msgid "Images"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:33
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:28
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:2
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:101
 msgid "Slideshow"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:34
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:29
 msgid "Save"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:35
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/clean.php:1
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:30
 msgid "Clean"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:36
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/admin.php:31
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/css.php:18
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:11
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/footer.php:6
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/images.php:2
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/images.php:110
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/images.php:111
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/help.php:1
 msgid "Help"
 msgstr ""
 
@@ -369,47 +369,55 @@ msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:79
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:98
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:109
-msgid "Font Weight"
+msgid "Google Web Fonts"
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:80
+msgid "Google Web Fonts lets you browse all the fonts available via the Google Web Fonts API. All fonts in the directory are available for use on your website under an open source license and are served by Google servers."
+msgstr ""
+
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:81
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:100
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:111
+msgid "Font Weight"
+msgstr ""
+
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:82
 msgid "Defines from thin to thick characters. 400 is the same as \"normal\", and 700 is the same as \"bold\""
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:83
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:99
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:110
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:85
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:101
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:112
 msgid "Text Decoration"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:85
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:87
 msgid "No capitalization. The text renders as it is. This is default"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:86
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:88
 msgid "Transforms the first character of each word to uppercase"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:87
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:89
 msgid "Transforms all characters to uppercase"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:88
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:90
 msgid "Transforms all characters to lowercase"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:93
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:95
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/css.php:36
 msgid "Title"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:104
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:106
 msgid "Description"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:114
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/fonts.php:116
 msgid "Headers"
 msgstr ""
 
@@ -527,6 +535,10 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/css.php:63
+msgid "Template"
+msgstr ""
+
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:28
 msgid "Enable"
 msgstr ""
@@ -584,7 +596,7 @@ msgid "Timeout between slides (ms)"
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/slideshow.php:84
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:104
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:85
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/header.php:47
 msgid "Position"
 msgstr ""
@@ -682,41 +694,41 @@ msgstr ""
 msgid "Sharing Icons"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:53
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:69
 msgid "Select which service you would like to use for sharing"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:94
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:75
 msgid "Content widgets place"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:95
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:76
 msgid "can configured with <a href=\"widgets.php\">widgets</a>, use \"After N Post\" sidebar"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:101
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:82
 msgid "Show widgets place"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:106
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:107
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:108
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:109
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:110
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:111
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:112
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:113
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:114
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:115
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:87
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:88
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:89
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:90
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:91
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:92
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:93
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:94
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:95
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:96
 #, php-format
 msgid "after %d post"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:122
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:103
 msgid "You can use short code [widgets] in your post, and can configured with <a href=\"widgets.php\">widgets</a> (use \"In Posts\" sidebar)"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:125
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/content.php:106
 msgid "Available <a href=\"http://code.google.com/p/wp-constructor/wiki/ConstructorShortcodes\" title=\"Constructor Short Codes\">short codes</a>:"
 msgstr ""
 
@@ -1070,51 +1082,59 @@ msgstr ""
 msgid "Save Theme"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/themes.php:66
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/themes.php:86
 msgid "File \"style.css\" is not exists"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/themes.php:67
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/themes.php:87
 msgid "Anonymous"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/themes.php:83
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/themes.php:103
 msgid "version"
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:17
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:39
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:42
 msgid "Homepage"
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:19
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:41
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:44
 msgid "Post"
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:21
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:43
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:46
 msgid "Page"
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:23
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:45
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:48
 msgid "Search"
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:25
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:47
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:50
 msgid "Date"
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:27
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:49
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:52
 msgid "Category"
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:29
-#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:51
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:54
 msgid "Tag"
+msgstr ""
+
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:38
+msgid "Tile Template"
+msgstr ""
+
+#: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/templates.php:39
+msgid "Optimized for container with width equals to 1024px"
 msgstr ""
 
 #: W:/www/wordpress3/wp-content/themes/constructor/admin/settings/design.php:53
@@ -1145,119 +1165,119 @@ msgstr ""
 msgid "Blur"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:240
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:256
 msgid "Home"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:279
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:295
 msgid "Search..."
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:439
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:461
 #, php-format
 msgid "%1$s and %2$s."
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:439
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:461
 msgid "Entries (RSS)"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:439
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:461
 msgid "Comments (RSS)"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:443
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Main.php:465
 #, php-format
 msgid "%d queries. %s seconds."
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:43
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:53
 msgid "Please check permissions for next directories:"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:108
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:171
 #, php-format
 msgid "File \"%s\" is not a image (jpeg, png, gif, tiff)"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:115
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:178
 #, php-format
 msgid "File \"%s\" can't be move to \"/constructor/current/\" folder"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:276
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:280
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:326
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:330
 #: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:48
 #: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:51
 #, php-format
 msgid "Directory \"%s\" is not writable."
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:294
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:344
 #, php-format
 msgid "Can't copy file \"%s\" to \"%s\"."
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:303
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:365
 #: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:63
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:73
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:77
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:85
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:89
 #, php-format
 msgid "Can't copy file \"%s\"."
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:336
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:341
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:110
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:115
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:398
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:403
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:128
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:133
 #, php-format
 msgid "Can't save file \"%s\"."
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:436
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:445
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:628
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:521
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:530
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:713
 msgid "Customize Theme"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:437
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:446
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:522
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:531
 msgid "Customize"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:468
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:553
 msgid "Standart Fonts"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:476
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:561
 msgid "Google Fonts"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:631
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:716
 msgid "If you like this theme and find it useful, help keep this theme free and actively developed by clicking the donate button (via PayPal or CC)"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:635
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:720
 msgid "Options saved."
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:644
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:729
 msgid "Some images can't be upload. Please check permissions"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:667
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Admin.php:752
 msgid "Save Changes"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:118
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:136
 msgid "Theme was saved, please reload page for view changes"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:145
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:163
 msgid "Theme was cleaned"
 msgstr ""
 
-#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:147
+#: W:/www/wordpress3/wp-content/themes/constructor/libs/Constructor/Ajax.php:165
 #, php-format
 msgid "System can&#39;t remove folder &quot;%s&quot;"
 msgstr ""
