@@ -30,24 +30,20 @@ __('Column', 'constructor'); // required for correct translation
                 the_post();
             ?>
             <article <?php post_class('opacity shadow box'); ?> id="post-<?php the_ID() ?>">
-                <header class="title opacity">
+                <header class="opacity">
                     <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
                 </header>
                 <div class="thumbnail">
                     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>">
                     <?php 
-                        // try to found post thubmnail
-                        if (!($thumb = get_the_post_thumbnail(NULL, 'tile-post-thumbnail'))) {
-                            $thumb = get_constructor_noimage();
-                        } 
-                        echo $thumb;    
+                        the_post_thumbnail('tile-post-thumbnail');
                     ?>
                     </a>
                 </div>
                 <div class="entry">
                 	<?php the_content(''); ?>
                 </div>
-                <footer class="footer">
+                <footer>
                     <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
                     <?php if (get_constructor_option('content', 'date')) { the_date(); echo ' | '; } ?>
                     <?php if (get_constructor_option('content', 'links', 'author')) { the_author_posts_link(); echo ' | '; } ?>

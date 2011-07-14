@@ -17,7 +17,7 @@ __('Default', 'constructor'); // required for correct translation
                 <div class="entry">
                 	<?php the_content(__('Read the rest of this entry &raquo;', 'constructor')); ?>
                 </div>
-                <footer class="footer">
+                <footer>
                     <?php edit_post_link(__('Edit', 'constructor'), '', ' | '); ?>
                     <?php if (get_constructor_option('content', 'date')) { the_date(); echo ' | '; } ?>
                     <?php if (get_constructor_option('content', 'links', 'author')) { the_author_posts_link(); echo ' | '; } ?>
