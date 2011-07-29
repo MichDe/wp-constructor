@@ -1,6 +1,10 @@
 = Versions history =
 This is local copy of file https://code.google.com/p/wp-constructor/wiki/ConstructorHistory
 
+== 1.6.3 ==
+  * Updated Deutch translation
+  * Fixed "line end" for all style.css
+
 == 1.6.2 ==
   * Updated Google Web Fonts
   * Small changes in column layout
