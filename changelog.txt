@@ -2,7 +2,7 @@
 This is local copy of file https://code.google.com/p/wp-constructor/wiki/ConstructorHistory
 
 == 1.6.3 ==
-  * Updated Deutch translation
+  * Added Brazilian Portugese language
   * Fixed "line end" for all style.css
 
 == 1.6.2 ==

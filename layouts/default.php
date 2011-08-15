@@ -13,6 +13,9 @@ __('Default', 'constructor'); // required for correct translation
             <article <?php post_class(); ?> id="post-<?php the_ID() ?>">
                 <header class="opacity box">
                     <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'constructor'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
+
+                    <h2 class="pagetitle">Search Result for <?php the_search_query() ?> <?php global $s; $allsearch = &new WP_Query("s=$s&showposts=-1"); $key = esc_html($s, 1); $count = $allsearch->post_count; _e(''); _e('<span class="search-terms">'); echo $key; _e('</span>'); _e(' &mdash; '); echo $count . ' '; _e('articles'); wp_reset_query(); ?>
+	</h2>
                 </header>
                 <div class="entry">
                 	<?php the_content(__('Read the rest of this entry &raquo;', 'constructor')); ?>
