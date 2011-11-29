@@ -1,19 +1,9 @@
 #summary TODO List of project
 #labels Featured
 
-
-  # ~~Slideshow with post content (like in some _premium_ themes)~~ - 0.6.0
-  # ~~Add categories to top menu (optional)~~ - 0.6.1
-  # ~~Add search form to top menu (optional)~~ - 0.6.1
-  # Include ready to use widgets (with thumbnail's)
+  # Change config format from PHP to JSON
+  # Change CSS generator to LESS
   # Need update localizations files
+  # Include ready to use widgets
 
   # Create videocast "How To?"
-  # ~~Create page with constructor themes (separately from wordpress repository)~~
-  # ~~Create list with themes examples~~
-
-  # ~~"Header" tab -> Header font size options~~
-  # ~~"Content" tab -> Show "comments closed" message option~~
-  # Export/Import theme as ZIP archive (with all images)
-  # "Slideshow" tab -> resize previously uploaded "featured images"
-  # "Content" tab -> Show "thumbnail" option
