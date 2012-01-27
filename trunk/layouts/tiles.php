@@ -32,7 +32,7 @@ __('Tile', 'constructor'); // required for correct translation
         <div class="tiles next">
             <?php next_posts_link('&rarr;') ?>
         </div>
-    <?php endif; ?>
+    <?php else: get_constructor_nothing(); endif; ?>
     </div>
     <?php get_constructor_sidebar(); ?>
 </div><!-- id='content' -->

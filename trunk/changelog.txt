@@ -1,6 +1,9 @@
 = Versions history =
 This is local copy of file https://code.google.com/p/wp-constructor/wiki/ConstructorHistory
 
+== 1.6.6 ==
+  * Fixed "blank page" for empty search results
+
 == 1.6.4 ==
   * Hotfix in default layout
 
