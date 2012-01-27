@@ -34,7 +34,7 @@ __('Tile', 'constructor'); // required for correct translation
             </div>
         <?php endwhile; ?>
         <?php get_constructor_navigation(); ?>
-    <?php endif; ?>
+    <?php else: get_constructor_nothing(); endif; ?>
     </div>
     <?php get_constructor_sidebar(); ?>
 </div><!-- id='content' -->

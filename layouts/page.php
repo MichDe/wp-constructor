@@ -37,7 +37,7 @@ __('Single', 'constructor'); // required for correct translation
             </article>
         <?php endwhile; ?>
         <?php comments_template(); ?>
-    <?php endif; ?>
+    <?php else: get_constructor_nothing(); endif; ?>
     </div><!-- id='container' -->
     <?php get_constructor_sidebar(); ?>
 </div><!-- id='content' -->

@@ -367,6 +367,14 @@ if (!is_admin()) {
         global $main;
         return $main->getCategory();
     }
+
+    /**
+     * load empty search template
+     */
+    function get_constructor_nothing()
+    {
+        include_once 'nothing.php';
+    }
     
 } else {
     require_once 'admin/admin.php';
